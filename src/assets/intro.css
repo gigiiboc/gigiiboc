@@ -1,0 +1,173 @@
+/* 인트로 */
+#background div {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  transform-origin: center center;
+  will-change: transform;
+}
+#background div.on {
+  animation: introbg 20s linear forwards;
+  -webkit-animation: introbg 20s linear forwards;
+  -moz-animation: introbg 20s linear forwards;
+  -o-animation: introbg 20s linear forwards;
+  -ms-animation: introbg 20s linear forwards;
+}
+#background div.bg01 {
+  background: url(@/assets/images/intro_bg3.jpg) no-repeat center top;
+}
+#background div.bg02 {
+  background: url(@/assets/images/intro_bg2.jpg) no-repeat center top;
+}
+#background div.bg03 {
+  background: url(@/assets/images/intro_bg.jpg) no-repeat center top;
+}
+
+/* 로고 */
+#intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  margin-left: -300px;
+  margin-top: -156px;
+  padding: 80px 0;
+  text-align: center;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease;
+  background: rgba(255, 255, 255, 0.8);
+}
+#intro.show {
+  opacity: 1;
+  visibility: visible;
+}
+#intro .logo {
+  font-family: 'NG';
+  font-size: 4.3em;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: -4px;
+  display: block;
+  color: #083352;
+  margin-bottom: 1.2em;
+  margin-left: -4px;
+}
+#intro .logo a {
+  color: #083352;
+}
+#intro li {
+  display: inline-block;
+  width: 110px;
+}
+#intro li.first {
+  animation: load 1s ease 0.3s backwards;
+  -webkit-animation: load 1s ease 0.3s backwards;
+  -moz-animation: load 1s ease 0.3s backwards;
+  -o-animation: load 1s ease 0.3s backwards;
+  -ms-animation: load 1s ease 0.3s backwards;
+}
+#intro li.second {
+  animation: load 1s ease 0.5s backwards;
+  -webkit-animation: load 1s ease 0.5s backwards;
+  -moz-animation: load 1s ease 0.5s backwards;
+  -o-animation: load 1s ease 0.5s backwards;
+  -ms-animation: load 1s ease 0.5s backwards;
+}
+#intro li a {
+  display: block;
+  font-size: 13px;
+  color: #083352;
+  opacity: 0.7;
+}
+#intro li a:hover {
+  opacity: 1;
+}
+#intro li span {
+  display: block;
+}
+#intro li .icon {
+  display: block;
+  width: 20px;
+  margin: 0 auto 0.7em;
+  height: 19px;
+}
+#intro li .icon.intro-img {
+  background: url(@/assets/images/sprite-bg.png) no-repeat -20px -60px;
+}
+#intro li .icon.portfolio-img {
+  background: url(@/assets/images/sprite-bg.png) no-repeat -40px -60px;
+}
+#intro li a:hover .icon {
+  animation: introicon 1s ease;
+  -webkit-animation: introicon 1s ease;
+  -moz-animation: introicon 1s ease;
+  -ms-animation: introicon 1s ease;
+  -o-animation: introicon 1s ease;
+}
+
+@keyframes introbg {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes introicon {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  80% {
+    transform: scale(1);
+  }
+}
+
+@media all and (max-width: 1000px) {
+  #background div.bg01 {
+    background: url(@/assets/images/intro_bg3.jpg) no-repeat 30% top;
+    background-size: 1200px auto;
+  }
+  #background div.bg02 {
+    background: url(@/assets/images/intro_bg2.jpg) no-repeat center top;
+    background-size: 1200px auto;
+  }
+  #background div.bg03 {
+    background: url(@/assets/images/intro_bg.jpg) no-repeat 50% top;
+    background-size: 1200px auto;
+  }
+
+  #intro {
+    width: 270px;
+    margin-left: -135px;
+    margin-top: -214px;
+    padding: 80px;
+  }
+  #intro li {
+    display: block;
+    width: 100%;
+    margin: 0 0 1.7em;
+    text-align: left;
+  }
+  #intro li .icon {
+    margin: 0 0.7em 0 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #intro li span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

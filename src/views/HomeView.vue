@@ -1,9 +1,17 @@
+<template>
+  <Header></Header>
+  <div class="container"><RouterView /></div>
+</template>
+
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { RouterView } from 'vue-router'
+import Header from '@/components/Header.vue'
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped>
+.container {
+  padding-left: 223px;
+  width: 100%;
+  overflow: hidden;
+}
+</style>
