@@ -14,4 +14,11 @@ import Header from '@/components/Header.vue'
   width: 100%;
   overflow: hidden;
 }
+@media all and (max-width: 1000px) {
+  .container {
+    padding-left: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+}
 </style>

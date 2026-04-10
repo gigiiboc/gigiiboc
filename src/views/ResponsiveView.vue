@@ -1,13 +1,7 @@
 <template>
-  <div class="content">
-    <h1>반응형 소개 소개</h1>
-  </div>
+  <PortfolioGrid category="responsive" heading="반응형 작업 소개" />
 </template>
 
-<style scoped>
-.content {
-  padding-left: 130px;
-  width: 100%;
-  overflow: hidden;
-}
-</style>
+<script setup lang="ts">
+import PortfolioGrid from '@/components/PortfolioGrid.vue'
+</script>

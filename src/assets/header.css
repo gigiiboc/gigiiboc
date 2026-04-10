@@ -39,13 +39,29 @@
 #gnb .menu {
   display: block;
   width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   line-height: 60px;
   font-size: 12px;
+  font-family: inherit;
   font-weight: normal;
+  text-align: center;
+  text-decoration: none;
   color: #555;
+  border: none;
   border-bottom: 1px solid #e1e1e1;
+  border-radius: 0;
   background: transparent;
   cursor: pointer;
+}
+#gnb a.menu {
+  -webkit-tap-highlight-color: transparent;
+}
+/* PC portfolio 상단: 링크/버튼 아님, 호버로 서브만 열림 */
+#gnb span.menu {
+  cursor: default;
+  user-select: none;
 }
 #gnb .activated .menu {
   color: #000;
@@ -106,7 +122,8 @@
 #gnb .activated .sub-menu .bg {
   display: block;
 }
-#gnb .sub-menu .selected a {
+#gnb .sub-menu .selected a,
+#gnb .sub-menu .hovered a {
   color: #fff;
 }
 
@@ -198,7 +215,7 @@
     -o-transform: translateY(-8px) rotate(-405deg);
   }
   #logo-bar .bg {
-    display: none;
+    display: block;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -212,6 +229,15 @@
     filter: alpha(opacity=50);
   }
 
+  .mobile-menu-backdrop-enter-active,
+  .mobile-menu-backdrop-leave-active {
+    transition: opacity 0.32s ease;
+  }
+  .mobile-menu-backdrop-enter-from,
+  .mobile-menu-backdrop-leave-to {
+    opacity: 0;
+  }
+
   /* 상위메뉴 */
   #gnb {
     position: absolute;
@@ -222,6 +248,7 @@
     overflow: hidden;
     box-shadow: 0px 2px 10px #999;
     z-index: -9;
+    transition: top 0.38s cubic-bezier(0.33, 1, 0.68, 1);
   }
   #gnb .menu {
     width: 100%;
@@ -238,11 +265,18 @@
     display: block;
   }
   #gnb .mobile-menu ul {
-    display: none;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
     background: #083352;
+    transition:
+      max-height 0.38s cubic-bezier(0.33, 1, 0.68, 1),
+      opacity 0.28s ease;
   }
   #gnb .mobile-menu ul.open {
-    display: block;
+    max-height: 200px;
+    opacity: 1;
   }
   #gnb .mobile-menu a {
     display: block;
