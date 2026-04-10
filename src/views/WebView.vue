@@ -1,13 +1,7 @@
-<template>
-  <div class="content">
-    <h1>웹 작업 소개</h1>
-  </div>
+﻿<template>
+  <PortfolioGrid category="web" heading="웹 작업 소개" />
 </template>
 
-<style scoped>
-.content {
-  padding-left: 130px;
-  width: 100%;
-  overflow: hidden;
-}
-</style>
+<script setup lang="ts">
+import PortfolioGrid from '@/components/PortfolioGrid.vue'
+</script>

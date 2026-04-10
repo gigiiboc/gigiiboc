@@ -76,6 +76,13 @@
   -o-animation: load 1s ease 0.5s backwards;
   -ms-animation: load 1s ease 0.5s backwards;
 }
+#intro li.third {
+  animation: load 1s ease 0.7s backwards;
+  -webkit-animation: load 1s ease 0.7s backwards;
+  -moz-animation: load 1s ease 0.7s backwards;
+  -o-animation: load 1s ease 0.7s backwards;
+  -ms-animation: load 1s ease 0.7s backwards;
+}
 #intro li a {
   display: block;
   font-size: 13px;
@@ -99,6 +106,9 @@
 }
 #intro li .icon.portfolio-img {
   background: url(@/assets/images/sprite-bg.png) no-repeat -40px -60px;
+}
+#intro li .icon.contact-img {
+  background: url(@/assets/images/sprite-bg.png) no-repeat 0 -60px;
 }
 #intro li a:hover .icon {
   animation: introicon 1s ease;

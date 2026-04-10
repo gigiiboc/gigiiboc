@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <h1>기타 작업 소개</h1>
+    <h1>웹 작업 소개</h1>
   </div>
 </template>
 

@@ -4,7 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import IntroductionView from '../views/IntroductionView.vue'
 import WebView from '../views/WebView.vue'
 import ResponsiveView from '../views/ResponsiveView.vue'
-import EtcView from '../views/EtcView.vue'
+import ContactUsView from '../views/ContactUsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,10 +23,10 @@ const router = createRouter({
           children: [
             { path: '/web', component: WebView },
             { path: '/responsive', component: ResponsiveView },
-            { path: '/etc', component: EtcView },
           ],
           redirect: '/web',
         },
+        { path: '/contactus', component: ContactUsView, meta: { section: 'contact' } },
       ],
       redirect: '/introduction',
     },

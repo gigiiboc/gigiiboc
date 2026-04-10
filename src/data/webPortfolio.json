@@ -1,0 +1,920 @@
+[
+  {
+    "id": "innisfree-kr-foru",
+    "category": "web",
+    "thumb": "/small/innisfreeKRforU.png",
+    "alt": "Innisfree KR ForU 컨텐츠",
+    "title": "Innisfree KR ForU 컨텐츠",
+    "date": "2022/07",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/innisfreeKRforU.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "https://www.innisfree.com/kr/ko/foruMain.do",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "lg-homin",
+    "category": "web",
+    "thumb": "/small/LG_homin.png",
+    "alt": "LG hom'in 신규사업 운영업무",
+    "title": "LG hom'in 신규사업 운영업무",
+    "date": "2021/06 ~ 2022/06",
+    "skill": "UI개발, 고객사 커뮤니케이션",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/LG_homin.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "file-list",
+        "href": "/note/LG_homin/index.html",
+        "title": "작업리스트",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "hanatour-promo",
+    "category": "web",
+    "thumb": "/small/hanatour.png",
+    "alt": "하나투어 프로모션 이벤트",
+    "title": "하나투어 프로모션 이벤트",
+    "date": "2021/05 ~ 2021/07",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/hanatour.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "file-list",
+        "href": "/note/hanatour/index.html",
+        "title": "작업리스트",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "banilaco-banila-tv",
+    "category": "web",
+    "thumb": "/small/banilaco_banilaTV.png",
+    "alt": "BANILA.COM 바닐라TV 모바일 전용 컨텐츠",
+    "title": "BANILA.COM 바닐라TV 모바일 전용 컨텐츠",
+    "date": "2020/07",
+    "skill": "UI개발(파견업무)",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/banilaco_banilaTV.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "https://www.banila.com/m/banilatv",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      },
+      {
+        "kind": "mobile-pub",
+        "href": "/note/banilaco/banilaTV/index.html",
+        "title": "퍼블리싱(mo)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "banilaco-bby-banila",
+    "category": "web",
+    "thumb": "/small/banilaco_bbyBanila.png",
+    "alt": "BANILA.COM bbyBanila 컨텐츠",
+    "title": "BANILA.COM bbyBanila 컨텐츠",
+    "date": "2020/07",
+    "skill": "UI개발(파견업무)",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/banilaco_bbyBanila.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "https://www.banila.com/brand/BbyBanila",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/banilaco/bbyBanila/pc/index.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      },
+      {
+        "kind": "mobile-pub",
+        "href": "/note/banilaco/bbyBanila/mo/index.html",
+        "title": "퍼블리싱(mo)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "banilaco-culry-studio",
+    "category": "web",
+    "thumb": "/small/banilaco_culryStudio.png",
+    "alt": "BANILA.COM culryStudio 컨텐츠",
+    "title": "BANILA.COM culryStudio 컨텐츠",
+    "date": "2020/07",
+    "skill": "UI개발(파견업무)",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/banilaco_culryStudio.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "https://www.banila.com/brand/curlyStudio",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/banilaco/culryStudio/pc/index.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      },
+      {
+        "kind": "mobile-pub",
+        "href": "/note/banilaco/culryStudio/mo/index.html",
+        "title": "퍼블리싱(mo)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "banilaco-project",
+    "category": "web",
+    "thumb": "/small/banilaco_project.png",
+    "alt": "BANILA.COM 쇼핑몰 구축 프로젝트",
+    "title": "BANILA.COM 쇼핑몰 구축 프로젝트",
+    "date": "2019/08 ~ 2020/07",
+    "skill": "UI개발(파견업무)",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/banilaco_project.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "https://www.banila.com/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/banilaco/project/guide/style_guide.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      },
+      {
+        "kind": "mobile-pub",
+        "href": "/note/banilaco/project/guide/style_guide_mobile.html",
+        "title": "퍼블리싱(mo)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "apmall-dice-motion",
+    "category": "responsive",
+    "thumb": "/small/APmall_DiceMotion.png",
+    "alt": "APMALL 'HELLO APMALL' 코덕마블 이벤트",
+    "title": "APMALL 'HELLO APMALL' 코덕마블 이벤트",
+    "date": "2019/10",
+    "skill": "UI개발, 고객사 커뮤니케이션",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/APmall_DiceMotion.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/apmall/APmall_DiceMotion/ap_ver.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "apmall-roulette-motion",
+    "category": "responsive",
+    "thumb": "/small/APmall_RouletteMotion.png",
+    "alt": "APMALL '아몰렛' 룰렛 이벤트",
+    "title": "APMALL '아몰렛' 룰렛 이벤트",
+    "date": "2019/08",
+    "skill": "UI개발, 고객사 커뮤니케이션",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/APmall_RouletteMotion.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/apmall/APmall_RouletteMotion/index.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "innisfree-jp",
+    "category": "web",
+    "thumb": "/small/innisfreeJP.png",
+    "alt": "innisfree JP 티저사이트 구축 프로젝트",
+    "title": "innisfree JP 티저사이트 구축 프로젝트",
+    "date": "2019/04 ~ 2019/08",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/innisfreeJP.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "file-list",
+        "href": "/note/innisfreeJP/index.html",
+        "title": "작업리스트",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "apmall-shooting-star-motion",
+    "category": "responsive",
+    "thumb": "/small/APmall_ShootingStarMotion.png",
+    "alt": "APMALL '설화수 별이 빛나는 6월' 이벤트",
+    "title": "APMALL '설화수 별이 빛나는 6월' 이벤트",
+    "date": "2019/06",
+    "skill": "UI개발, 고객사 커뮤니케이션",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/APmall_ShootingStarMotion.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/apmall/APmall_ShootingStarMotion/index.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "laneige-demo",
+    "category": "responsive",
+    "thumb": "/small/laneige.png",
+    "alt": "LANEIGE 시연용 사이트",
+    "title": "LANEIGE 시연용 사이트",
+    "date": "2019/03 ~ 2019/04",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/laneige.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/laneige/index.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "nike-onair",
+    "category": "web",
+    "thumb": "/small/nike_onair.png",
+    "alt": "NIKE 'on-air' 프로모션",
+    "title": "NIKE 'on-air' 프로모션",
+    "date": "2018/12 ~ 2019/03",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/nike_onair.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/nike/nike_onair/pc/index.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      },
+      {
+        "kind": "mobile-pub",
+        "href": "/note/nike/nike_onair/mo/index.html",
+        "title": "퍼블리싱(mo)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "aestura-demo",
+    "category": "web",
+    "thumb": "/small/aestura.png",
+    "alt": "AESTURA 시연용 사이트",
+    "title": "AESTURA 시연용 사이트",
+    "date": "2018/06 ~ 2018/08",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/aestura.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/aestura/index.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "etude-quick-and-easy",
+    "category": "web",
+    "thumb": "/small/etude_QuickAndEasy.png",
+    "alt": "ETUDE HOUSE 'Quick And Easy' 프로모션",
+    "title": "ETUDE HOUSE 'Quick And Easy' 프로모션",
+    "date": "2018/08",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/etude_QuickAndEasy.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/etude/QuickAndEasy/pc/index.html",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      },
+      {
+        "kind": "mobile-pub",
+        "href": "/note/etude/QuickAndEasy/mobile/index.html",
+        "title": "퍼블리싱(mo)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "etude-180713",
+    "category": "web",
+    "thumb": "/small/etude_180713.png",
+    "alt": "ETUDE HOUSE 진주알 나눠갖기 채널에뛰드 퀴즈 이벤트",
+    "title": "ETUDE HOUSE 진주알 나눠갖기 채널에뛰드 퀴즈 이벤트",
+    "date": "2018/07",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/etude_180713.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/etude/etude_180713/index.php",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "etude-180731",
+    "category": "web",
+    "thumb": "/small/etude_180731.png",
+    "alt": "ETUDE HOUSE 히든신상 달달템 투표 이벤트",
+    "title": "ETUDE HOUSE 히든신상 달달템 투표 이벤트",
+    "date": "2018/07",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/etude_180731.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "pc-pub",
+        "href": "/note/etude/etude_180731/index.php",
+        "title": "퍼블리싱(pc)",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "nike-scene-stealer",
+    "category": "web",
+    "thumb": "/small/nike_scene_stealer.png",
+    "alt": "NIKE '씬 스틸러' 프로모션",
+    "title": "NIKE '씬 스틸러' 프로모션",
+    "date": "2017/11 ~ 2018/03",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/nike_scene_stealer.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "file-list",
+        "href": "/note/nike/nike_scene_stealer/index.html",
+        "title": "작업리스트",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "nike-mypage-renewal",
+    "category": "web",
+    "thumb": "/small/nike.jpg",
+    "alt": "나이키",
+    "title": "NIKE.COM (마이페이지/고객센터 리뉴얼)",
+    "date": "2016/07",
+    "skill": "CSS / JQuery",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/nike.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "https://www.nike.com/kr/ko_kr/mypage",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      },
+      {
+        "kind": "file-list",
+        "href": "/note/nike/nike_global_renewal/index.html",
+        "title": "작업리스트",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "woori-shop",
+    "category": "web",
+    "thumb": "/small/woorishop.jpg",
+    "alt": "우리정보통신",
+    "title": "우리정보통신",
+    "date": "2016/04",
+    "skill": "Total Design / HTML / CSS / JQuery / 웹표준",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/woorishop.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://www.woori-shop.co.kr?device=pc",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "hotel-lamia",
+    "category": "web",
+    "thumb": "/small/hotellamia.jpg",
+    "alt": "호텔 라미아",
+    "title": "호텔 라미아",
+    "date": "2016/01",
+    "skill": "design / HTML / CSS / JQuery",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/hotellamia.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://www.hotellamia.com/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "pleasure-rfid",
+    "category": "web",
+    "thumb": "/small/rfid.jpg",
+    "alt": "플래져 RFID",
+    "title": "플래져 RFID",
+    "date": "2015/12",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/rfid.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://job100.townnet.kr",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "swwed",
+    "category": "web",
+    "thumb": "/small/swwed.jpg",
+    "alt": "서원국제결혼",
+    "title": "서원국제결혼",
+    "date": "2015/12",
+    "skill": "design / HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/swwed.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://swwed.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "5feel",
+    "category": "web",
+    "thumb": "/small/5feel.jpg",
+    "alt": "오필",
+    "title": "오필",
+    "date": "2015/11",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/5feel.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://www.5feel.co.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "hbitlg",
+    "category": "web",
+    "thumb": "/small/hbitlg.jpg",
+    "alt": "행복네트워크",
+    "title": "행복네트워크",
+    "date": "2015/11",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/hbitlg.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://hbitlg.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "retechtda",
+    "category": "web",
+    "thumb": "/small/retechtda.jpg",
+    "alt": "이텍티디에이",
+    "title": "이텍티디에이",
+    "date": "2015/11",
+    "skill": "design / HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/retechtda.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://retechtda.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "chungho1",
+    "category": "web",
+    "thumb": "/small/chungho1.jpg",
+    "alt": "대전청호설비",
+    "title": "대전청호설비",
+    "date": "2015/09",
+    "skill": "design / HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/chungho1.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://chunghosulbi.com/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "pogoo",
+    "category": "web",
+    "thumb": "/small/pogoo.jpg",
+    "alt": "강경포구젓갈",
+    "title": "강경포구젓갈",
+    "date": "2015/09",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/pogoo.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://www.pogoo.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "bnc-shop",
+    "category": "web",
+    "thumb": "/small/bnc-shop.jpg",
+    "alt": "비앤씨 쇼핑몰",
+    "title": "비앤씨 쇼핑몰",
+    "date": "2015/08",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/bnc-shop.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://arobishop.com/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "happy2020",
+    "category": "web",
+    "thumb": "/small/happy2020.jpg",
+    "alt": "해피2020",
+    "title": "해피2020",
+    "date": "2015/08",
+    "skill": "Total Design / HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/happy2020.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://happy2020.co.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "bnc",
+    "category": "web",
+    "thumb": "/small/bnc.jpg",
+    "alt": "비앤씨",
+    "title": "비앤씨",
+    "date": "2015/07",
+    "skill": "Total Design / HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/bnc.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://xn--9w3b29jef.com/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "hans",
+    "category": "web",
+    "thumb": "/small/hans.jpg",
+    "alt": "한스약품",
+    "title": "한스약품",
+    "date": "2015/07",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/hans.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://www.hanswon.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "figurebay",
+    "category": "web",
+    "thumb": "/small/figurebay.jpg",
+    "alt": "피규어베이",
+    "title": "피규어베이",
+    "date": "2015/06",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/figurebay.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://figurebay.co.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "afm-eng",
+    "category": "web",
+    "thumb": "/small/afm-eng.jpg",
+    "alt": "노블스(영문)",
+    "title": "노블스(영문)",
+    "date": "2015/05",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/afm-eng.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://afmph.com/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "gkjongga",
+    "category": "web",
+    "thumb": "/small/gkjongga.jpg",
+    "alt": "종가집젓갈백화점",
+    "title": "종가집젓갈백화점",
+    "date": "2015/05",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/gkjongga.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://gkjongga.co.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "fcoop",
+    "category": "web",
+    "thumb": "/small/fcoop.jpg",
+    "alt": "에너지관리협동조합",
+    "title": "에너지관리협동조합",
+    "date": "2015/04",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/fcoop.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://www.fcoop.or.kr/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "samjeonfood",
+    "category": "web",
+    "thumb": "/small/samjeonfood.jpg",
+    "alt": "삼전식품",
+    "title": "삼전식품",
+    "date": "2015/04",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/samjeonfood.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://www.samjeonfood.com/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "personal-homepage",
+    "category": "responsive",
+    "thumb": "/small/home.jpg",
+    "alt": "개인 홈페이지",
+    "title": "개인 홈페이지",
+    "date": "2015/03 ~",
+    "skill": "Design / HTML / CSS / JQuery / 웹표준",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/home.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "hellershop",
+    "category": "web",
+    "thumb": "/small/hellershop.jpg",
+    "alt": "헬러샵",
+    "title": "헬러샵",
+    "date": "2015/02",
+    "skill": "HTML / CSS",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/hellershop.jpg",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "http://www.hellershop.com/",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  }
+]

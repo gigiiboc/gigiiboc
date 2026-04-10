@@ -2,37 +2,55 @@
   <div id="header">
     <div id="logo-bar">
       <h1 class="logo">
-        <RouterLink to="/introduction" title="홈으로">whw</RouterLink>
+        <RouterLink to="/" title="홈으로">whw</RouterLink>
       </h1>
       <span class="top-open" :class="{ on: isMobileMenuOpen }" @click="toggleMobileMenu">
         <span class="line1"></span>
         <span class="line2"></span>
         <span class="line3"></span>
-        <span class="bg" v-show="isMobileMenuOpen" @click.stop="closeMobileMenu"></span>
+        <Transition name="mobile-menu-backdrop">
+          <span
+            v-show="isMobileMenuOpen"
+            class="bg"
+            aria-hidden="true"
+            @click.stop="closeMobileMenu"
+          ></span>
+        </Transition>
       </span>
     </div>
     <ul id="gnb" :style="gnbStyle">
       <li :class="{ activated: isActive('/introduction') }">
-        <button type="button" class="menu first" @click="goToIntroduction">introduction</button>
+        <RouterLink to="/introduction" class="menu" @click="closeMobileMenu">
+          introduction
+        </RouterLink>
       </li>
       <li
         :class="{ activated: isPortfolioActivated }"
         @mouseenter="onPortfolioEnter"
         @mouseleave="onPortfolioLeave"
       >
-        <button type="button" class="menu second" @click="togglePortfolio">portfolio</button>
+        <button v-if="isMobile" type="button" class="menu" @click="togglePortfolio">
+          portfolio
+        </button>
+        <span v-else class="menu">portfolio</span>
         <!-- PC 서브 메뉴 -->
         <div class="sub-menu">
-          <div ref="subMenuInnerRef" @mouseleave="syncSubMenuBgToRoute">
+          <div ref="subMenuInnerRef" @mouseleave="onSubMenuLeave">
             <ul>
-              <li :class="{ selected: isActive('/web') }" @mouseenter="onSubMenuItemEnter">
+              <li
+                :class="{ selected: isActive('/web'), hovered: hoveredSubMenuPath === '/web' }"
+                @mouseenter="onSubMenuItemEnter('/web')"
+              >
                 <RouterLink to="/web">적응형웹</RouterLink>
               </li>
-              <li :class="{ selected: isActive('/responsive') }" @mouseenter="onSubMenuItemEnter">
+              <li
+                :class="{
+                  selected: isActive('/responsive'),
+                  hovered: hoveredSubMenuPath === '/responsive',
+                }"
+                @mouseenter="onSubMenuItemEnter('/responsive')"
+              >
                 <RouterLink to="/responsive">반응형웹</RouterLink>
-              </li>
-              <li :class="{ selected: isActive('/etc') }" @mouseenter="onSubMenuItemEnter">
-                <RouterLink to="/etc">design</RouterLink>
               </li>
             </ul>
             <span class="bg" :style="subMenuBgStyle"></span>
@@ -48,12 +66,12 @@
               <li>
                 <RouterLink to="/responsive" @click="closeMobileMenu">반응형웹</RouterLink>
               </li>
-              <li>
-                <RouterLink to="/etc" @click="closeMobileMenu">design</RouterLink>
-              </li>
             </ul>
           </div>
         </div>
+      </li>
+      <li :class="{ activated: isActive('/contactus') }">
+        <RouterLink to="/contactus" class="menu" @click="closeMobileMenu">contact us</RouterLink>
       </li>
     </ul>
   </div>
@@ -61,13 +79,12 @@
 
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { RouterLink, useRoute, useRouter } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 
 const isMobileMenuOpen = ref(false)
 const isPortfolioOpen = ref(false)
 const windowWidth = ref(window.innerWidth)
 const route = useRoute()
-const router = useRouter()
 const isMobile = computed(() => windowWidth.value <= 1000)
 const handleResize = () => {
   windowWidth.value = window.innerWidth
@@ -78,9 +95,13 @@ const handleResize = () => {
 }
 const toggleMobileMenu = () => {
   if (!isMobile.value) return
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-  if (!isMobileMenuOpen.value) {
+  const opening = !isMobileMenuOpen.value
+  isMobileMenuOpen.value = opening
+  if (!opening) {
     isPortfolioOpen.value = false
+  } else if (isPortfolioRoute.value) {
+    // 포트폴리오 하위 페이지에 있을 때 햄버거를 열면 하위 메뉴도 펼침
+    isPortfolioOpen.value = true
   }
 }
 const closeMobileMenu = () => {
@@ -90,6 +111,7 @@ const closeMobileMenu = () => {
 const subMenuInnerRef = ref<HTMLElement | null>(null)
 const subMenuBgY = ref(0)
 const subMenuBgVisible = ref(false)
+const hoveredSubMenuPath = ref<string | null>(null)
 const subMenuBgStyle = computed(() => {
   return {
     transform: `translateY(${subMenuBgY.value}px)`,
@@ -109,16 +131,12 @@ const syncSubMenuBgToRoute = async () => {
   subMenuBgY.value = selectedLi.offsetTop
   subMenuBgVisible.value = true
 }
-const onSubMenuItemEnter = (e: MouseEvent) => {
-  const li = (e.currentTarget as HTMLElement | null) ?? null
-  if (!li) return
-  subMenuBgY.value = li.offsetTop
-  subMenuBgVisible.value = true
+const onSubMenuItemEnter = (path: string) => {
+  hoveredSubMenuPath.value = path
 }
-const goToIntroduction = async () => {
-  closeMobileMenu()
-  if (route.path === '/introduction') return
-  await router.push('/introduction')
+const onSubMenuLeave = () => {
+  hoveredSubMenuPath.value = null
+  syncSubMenuBgToRoute()
 }
 const togglePortfolio = () => {
   // 모바일일 때만 클릭으로 토글

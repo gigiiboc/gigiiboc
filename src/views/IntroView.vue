@@ -17,6 +17,11 @@
           <span class="icon portfolio-img"></span><span>portfolio</span>
         </RouterLink>
       </li>
+      <li class="third">
+        <RouterLink to="/contactus">
+          <span class="icon contact-img"></span><span>contact us</span>
+        </RouterLink>
+      </li>
     </ul>
   </div>
 </template>
