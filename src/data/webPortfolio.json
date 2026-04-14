@@ -1,5 +1,27 @@
 [
   {
+    "id": "udoc",
+    "category": "web",
+    "thumb": "/Thumbnail/small/udoc.png",
+    "alt": "LG 유독 운영",
+    "title": "LG 유독 운영",
+    "date": "2024/11 ~ 2026/05",
+    "skill": "UI개발 & 유지보수",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/Thumbnail/udoc.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "https://www.lguplus.com/pogg/main",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
     "id": "digitalworks",
     "category": "responsive",
     "thumb": "/Thumbnail/small/digitalworks.png",

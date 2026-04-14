@@ -19,10 +19,8 @@
       </span>
     </div>
     <ul id="gnb" :style="gnbStyle">
-      <li :class="{ activated: isActive('/introduction') }">
-        <RouterLink to="/introduction" class="menu" @click="closeMobileMenu">
-          introduction
-        </RouterLink>
+      <li :class="{ activated: isActive('/about') }">
+        <RouterLink to="/about" class="menu" @click="closeMobileMenu"> about </RouterLink>
       </li>
       <li
         :class="{ activated: isPortfolioActivated }"

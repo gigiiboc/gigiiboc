@@ -68,7 +68,7 @@ $(document).ready(function() {
 	</div>
 
 	<ul id="gnb">
-		<li><a href="/introduction.php" class="menu">introduction</a></li>
+		<li><a href="/about.php" class="menu">about</a></li>
 		<li class="activated">
 			<a href="javascript:void(0);" class="menu">portfolio</a>
 			<div class="sub-menu">

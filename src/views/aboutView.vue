@@ -1,9 +1,9 @@
 <template>
   <div class="content">
-    <div id="introduction">
+    <div id="about">
       <div class="content-box">
-        <div class="content1">
-          <h2>Introduction</h2>
+        <!-- <div class="content1">
+          <h2>about</h2>
           <div class="info">
             <dl>
               <dt>웹표준</dt>
@@ -33,7 +33,7 @@
               </dd>
             </dl>
           </div>
-        </div>
+        </div> -->
         <div class="content2">
           <h2>About me</h2>
           <div class="info">
@@ -45,13 +45,14 @@
             <dl>
               <dt>HISTORY</dt>
               <dd class="through"><span>2014.11 ~ 2016.02</span> 웹에이전시 타운넷</dd>
-              <dd><span>2016.07 ~ 2026.04</span> (주)아이뱅크 디지털웍스</dd>
+              <dd class="through"><span>2016.07 ~ 2026.04</span> (주)아이뱅크 디지털웍스</dd>
             </dl>
             <dl>
               <dt>SKILL</dt>
               <dd>html5</dd>
               <dd>CSS3</dd>
               <dd>javascript</dd>
+              <dd>vue.js</dd>
               <dd>cross browsing</dd>
             </dl>
             <dl>
@@ -85,11 +86,11 @@
 }
 
 /* 소개 */
-#introduction {
+#about {
   width: 100%;
   overflow: hidden;
 }
-#introduction:before {
+#about:before {
   content: '';
   position: fixed;
   top: 0;
@@ -99,44 +100,44 @@
   background: #f7f7f7 url(@/assets/images/intro_bg.jpg) no-repeat 0 12%;
   z-index: -1;
 }
-#introduction h2 {
+#about h2 {
   font-size: 70px;
   color: #083352;
   margin-bottom: 60px;
   letter-spacing: -3px;
   text-shadow: 1px 0px 0px #000;
 }
-#introduction dt {
+#about dt {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
   letter-spacing: -2px;
 }
-#introduction dd {
+#about dd {
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: -0.5px;
 }
-#introduction .content1,
-#introduction .content2 {
+#about .content1,
+#about .content2 {
   margin: 100px auto;
 }
-#introduction .info {
+#about .info {
   overflow: hidden;
 }
-#introduction .content1 dl {
+#about .content1 dl {
   padding: 30px 0;
   border-bottom: 1px dotted #d1d1d1;
   margin-bottom: -1px;
   box-sizing: content-box;
 }
-#introduction .content2 .title-img {
+#about .content2 .title-img {
   width: 100%;
   height: 200px;
   background: url(/img/profile.jpg) no-repeat center center;
   margin: 90px 0 40px;
 }
-#introduction .content2 dl {
+#about .content2 dl {
   min-height: 230px;
   float: left;
   width: 40%;
@@ -145,7 +146,7 @@
   margin: 0 -1px 5% 0;
   box-sizing: content-box;
 }
-#introduction .content2 dd.through {
+#about .content2 dd.through {
   text-decoration: line-through;
 }
 @media all and (max-width: 1000px) {
@@ -155,26 +156,26 @@
     padding: 40px 20px;
     min-height: 400px;
   }
-  #introduction h2 {
+  #about h2 {
     font-size: 60px;
     letter-spacing: -2px;
     margin: 30px 0 60px;
   }
 }
 @media all and (max-width: 600px) {
-  #introduction h2 {
+  #about h2 {
     font-size: 50px;
     letter-spacing: -1px;
   }
-  #introduction .content1,
-  #introduction .content2 {
+  #about .content1,
+  #about .content2 {
     margin: 60px auto;
   }
-  #introduction .content2 .title-img {
+  #about .content2 .title-img {
     width: 114%;
     margin: 90px -7% 40px;
   }
-  #introduction .content2 dl {
+  #about .content2 dl {
     min-height: inherit;
     width: 100%;
     padding: 30px 0;

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import IntroView from '../views/IntroView.vue'
 import HomeView from '../views/HomeView.vue'
-import IntroductionView from '../views/IntroductionView.vue'
+import aboutView from '../views/aboutView.vue'
 import WebView from '../views/WebView.vue'
 import ResponsiveView from '../views/ResponsiveView.vue'
 import ContactUsView from '../views/ContactUsView.vue'
@@ -16,7 +16,7 @@ const router = createRouter({
       children: [
         // 자식 경로를 absolute(/...)로 두면 URL은 짧게 유지하면서도
         // matched에는 부모(레이아웃/그룹) 라우트가 포함된다.
-        { path: '/introduction', component: IntroductionView, meta: { section: 'introduction' } },
+        { path: '/about', component: aboutView, meta: { section: 'about' } },
         {
           path: '/portfolio',
           meta: { section: 'portfolio' },
@@ -28,7 +28,7 @@ const router = createRouter({
         },
         { path: '/contactus', component: ContactUsView, meta: { section: 'contact' } },
       ],
-      redirect: '/introduction',
+      redirect: '/about',
     },
   ],
 })

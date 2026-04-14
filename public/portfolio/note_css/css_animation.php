@@ -12,7 +12,7 @@
 
 <div id="intro">
 	<ul>
-		<li class="first"><a href="introduction.php"><i class="fa fa-quote-right"></i>introduction</a></li>
+		<li class="first"><a href="about.php"><i class="fa fa-quote-right"></i>about</a></li>
 		<li class="second"><a href="web.php"><i class="fa fa-quote-right"></i>portfolio</a></li>
 		<li class="third"><a href="/bbs/board.php?bo_table=contact"><i class="fa fa-quote-right"></i>contact</a></li>	
 		<li class="fourth"><a href="/bbs/board.php?bo_table=webtip"><i class="fa fa-quote-right"></i>webtip</a></li>
