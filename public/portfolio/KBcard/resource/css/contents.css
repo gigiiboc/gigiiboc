@@ -1,0 +1,247 @@
+@charset "utf-8"; 
+
+/*=================================
+태그 초기화
+=================================*/
+#footer .copySns a.banilaCrew{display: none;}
+.jh_bromide .contents .titInfo{text-align: left;}
+.jh_bromide .contents .dotInfo{text-align: left;}
+.jh_bromide .pdt_list1 .pdtTxt{text-align: left;}
+div#evt02.p2 {padding-top: 0!important;}
+.evtConArea .navi ul li a span {display: inline-block!important;}
+html, body{width:100%;height:100%;}
+body{margin:0;font-family:"KBFGTextM";font-weight:400;font-size:14px;line-height:26px;color:#222;}
+div, iframe, h1, h2, h3, h4, h5, h6, p, button, abbr, address, blockquote, q, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr{padding:0;margin:0;}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption{display:block;padding:0;margin:0;}
+h1, h2, h3, h4, h5, h6{font-weight:400;line-height:1;}
+ol, ul, li{list-style:none;}
+table{table-layout:fixed;width:100%;border-collapse:collapse;border-spacing:0;}
+th{font-weight:400;}
+form, fieldset, iframe{border:0;}
+img{border:0;vertical-align:top;font-size:0;line-height:0;}
+button{border:0;}
+hr{border:0;}
+i, em, address{font-style:normal;}
+strong, b{font-weight:500;}
+label, button{cursor:pointer;}
+blockquote, q{quotes:none;}
+caption, legend{overflow:hidden;width:0;height:0;font-size:0;line-height:0;text-indent:-50000px;}
+input, textarea, select, button, video{padding:0;font-family:"KBFGTextM";font-weight:400;font-size:14px;color:#222;vertical-align:middle;background:none;border:0;outline:none;}
+input::-ms-clear, input::-ms-reveal{display:none;}
+a{color:#222;text-decoration:none;outline:none;}
+a:hover{text-decoration:none;}
+
+
+/*=================================
+common
+=================================*/
+@font-face {
+	font-family: "KBFGTextL";
+	font-style: normal;
+	src:
+		url(../font/KBFGTextL.woff) format("woff"),
+		url(../font/KBFGTextL.woff2) format("woff2")
+	;
+}
+@font-face {
+	font-family: "KBFGTextM";
+	font-style: normal;
+	src:
+		url(../font/KBFGTextM.woff) format("woff"),
+		url(../font/KBFGTextM.woff2) format("woff2")
+	;
+}
+@font-face {
+	font-family: "KBFGTextB";
+	font-style: normal;
+	src:
+		url(../font/KBFGTextB.woff) format("woff"),
+		url(../font/KBFGTextB.woff2) format("woff2")
+	;
+}
+@font-face {
+	font-family: "KBFGDisplayL";
+	font-style: normal;
+	src:
+		url(../font/KBFGDisplayL.woff) format("woff"),
+		url(../font/KBFGDisplayL.woff2) format("woff2")
+	;
+}
+@font-face {
+	font-family: "KBFGDisplayMI";
+	font-style: normal;
+	src:
+		url(../font/KBFGDisplayMI.woff) format("woff"),
+		url(../font/KBFGDisplayMI.woff2) format("woff2")
+	;
+}
+@font-face {
+	font-family: "KBFGDisplayM";
+	font-style: normal;
+	src:
+		url(../font/KBFGDisplayM.woff) format("woff"),
+		url(../font/KBFGDisplayM.woff2) format("woff2")
+	;
+}
+@font-face {
+	font-family: "KBFGDisplayB";
+	font-style: normal;
+	src:
+		url(../font/KBFGDisplayB.woff) format("woff"),
+		url(../font/KBFGDisplayB.woff2) format("woff2")
+	;
+}
+
+.overhidden {overflow:hidden}
+.fleft {float:left}
+.fright {float:right}
+.show {display:block}
+.hide,
+.texthidden {font-size:0;line-height:0;position:absolute;top:0;right:-9999px;display: none;}
+.clearboth {display:block;content:'';clear:both;}
+
+
+/*=================================
+contents
+=================================*/
+.viewPc{display:block;}
+.viewMo{display:none;}
+
+.contents{width: 100%;max-width: 1131px;margin: 0 auto;position: relative;}
+.contents > img{width:100%;}
+.contents .eventLink01{position: absolute;top: 30.3%;left: 27.9%;width: 44.3%;height: 0;padding-top: 5.7%;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+.contents .eventLink02{position: absolute;top: 55.94%;left: 29.8%;width: 40.5%;height: 0;padding-top: 8.3%;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+.contents .eventLink03{position: absolute;top: 75.34%;left: 28%;width: 44%;height: 0;padding-top: 9.7%;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+.contents .ytcon {position: absolute;top: 31.87%;left: 3.82%;width: 1038px;height: 0;padding-top: 584px;background: #000;}
+.contents .ytcon .vodArea {overflow:hidden;position:absolute;left:0;top:0;z-index:1;width:100%;height:100%;}
+.contents .ytcon .vodArea.playing {z-index:500;}
+
+.contents .layerPop{position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: none;z-index: 2;}
+.contents .layerPop::before{content:'';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.5);}
+.contents .layerPop .popCon{position: absolute;top: 0;left: 10%;width: 80%;margin-top: 0;z-index: 1;}
+.contents .layerPop .popCon > img{width: 100%;}
+.contents .layerPop .popCon .closeBtn{position: absolute;top: 0;right: 0;margin-top: 4.8%;margin-right: 3.3%;width: 7%;height: 0;padding-top: 7%;cursor: pointer;z-index: 1;background: #000;opacity: 0;filter: alpha(opacity:'0');}
+.contents .layerPop .popCon form{}
+.contents .layerPop .popCon fieldset{}
+.contents .layerPop .popCon .inputArea{}
+.contents .layerPop .popCon .inputArea div{position: absolute;top: 0;left: 0;width: 75%;padding-top: 7.4%;margin-left: 11.5%;line-height: 0;font-size: 0;}
+.contents .layerPop .popCon .inputArea label{position: absolute;top: 0;left: 0;width: 27%;height: 100%;}
+.contents .layerPop .popCon .inputArea input[type="text"]{position: absolute;top: 0;left: 29.8%;width: 64.3%;height: 100%;padding: 0 3%;outline: none;border:none;background: #d7d7d7;border-radius: 7px;font-size: 25px;font-family: "KBFGTextB";}
+.contents .layerPop .popCon .inputArea .inputBox01{width: 52.6%;padding-top: 3.2%;margin-top: 31%;margin-left: 33.9%;font-size: 0;line-height: 0;}
+.contents .layerPop .popCon .inputArea .inputBox01 input[type="radio"]{}
+.contents .layerPop .popCon .inputArea .inputBox01 label{background: url(../images/checkBox01.png) no-repeat left top / auto 100%;}
+.contents .layerPop .popCon .inputArea .inputBox01 label.radio01{width: 31%;margin-left: 0px;}
+.contents .layerPop .popCon .inputArea .inputBox01 label.radio02{width: 31%;margin-left: 37.3%;}
+.contents .layerPop .popCon .inputArea .inputBox01 label.radio03{width: 26%;margin-left: 75%;}
+.contents .layerPop .popCon .inputArea .inputBox01 input[type="radio"]:checked + label{background-image: url(../images/checkBox01_on.png);}
+.contents .layerPop .popCon .inputArea .inputBox02{margin-top: 39.6%;}
+.contents .layerPop .popCon .inputArea .inputBox03{margin-top: 49.5%;}
+.contents .layerPop .popCon .checkArea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11.5%;
+    padding-top: 2.95%;
+    margin-top: 63.3%;
+    margin-left: 73.4%;
+}
+.contents .layerPop .popCon .checkArea label{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url(../images/checkBox02.png) no-repeat left top / auto 100%;}
+.contents .layerPop .popCon .checkArea input{}
+.contents .layerPop .popCon .checkArea input:checked + label{background-image: url(../images/checkBox02_on.png);}
+.contents .layerPop .popCon .checkArea input:checked + label:after{background: #d1d1d1;}
+.contents .layerPop .popCon .PrivacyArea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13.5%;
+    height: 0;
+    padding-top: 4.4%;
+    margin-top: 67.8%;
+    margin-left: 72.3%;
+    overflow: hidden;
+}
+.contents .layerPop .popCon .PrivacyLink{position: absolute;top: 0;left: 0;width: 100%;height: 100%;cursor: pointer;z-index: 1;background: #000;opacity: 0;filter: alpha(opacity:'0');}
+.contents .layerPop .popCon form button{position: absolute;top: 0;left: 0;width: 24%;height: 0;padding-top: 7%;margin-top: 80%;margin-left: 65%;cursor: pointer;z-index: 1;background: #000;opacity: 0;filter: alpha(opacity:'0');}
+
+.contents .layerPop.eventPop .popCon{margin-top: 340%;}
+.contents .layerPop.eventPop .popCon .closeBtn{margin-top: 79.9%;margin-right: 3.5%;}
+.contents .layerPop.PrivacyPop .popCon{margin-top: 345%;}
+.contents .layerPop.PrivacyPop .popCon .closeBtn{margin-top: 44.7%;margin-right: 38.6%;width: 23%;padding-top: 7%;}
+.contents .layerPop.KeebPop .popCon{margin-top: 187%;}
+.contents .layerPop.KeebPop .ytcon {top: 65.5%;left: 7.2%;width: 766px;padding-top: 430px;}
+.contents .layerPop.KeebPop .ytcon .vodArea {overflow:hidden;position:absolute;left:0;top:0;z-index:1;width:100%;height:100%;}
+.contents .layerPop.KeebPop .ytcon .vodArea.playing {z-index:500;}
+.contents .layerPop.sharePop{position: fixed;top: 0;left: 50%;right: 0;bottom: 0;max-width: 1131px;transform: translateX(-50%);text-align: center;}
+.contents .layerPop.sharePop .popCon{top: 50%;transform: translateY(-50%);}
+.contents .layerPop.sharePop .popCon .closeBtn{margin-top: 2.1%;margin-right: 2.6%;}
+.contents .layerPop.sharePop .popCon .eventLink04{position: absolute;top: 0;left: 0;width: 48%;height: 0;padding-top: 13%;margin-top: 33.3%;margin-left: 24.2%;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+
+.contents .floatingBox{position: fixed;bottom: 0;left: 50%;width: 100%;max-width: 1131px;transform: translateX(-50%);z-index: 1;}
+.contents .floatingBox .floating{position: absolute;bottom: 0;left: 0;width: 100%;text-align: center;font-size: 0;line-height: 0;background: url(../images/floating.png) no-repeat left top / 100% auto;padding-bottom: calc(constant(safe-area-inset-bottom));padding-bottom: calc(env(safe-area-inset-bottom));}
+.contents .floatingBox .floating a{display: inline-block;vertical-align: middle;width: 50%;height: 0;padding-top: 84px;}
+
+
+@media all and (max-width:1130px){
+	.viewPc{display:none;}
+	.viewMo{display:block;}
+
+	.contents{}
+	.contents > img{padding-bottom: 5%;}
+	.contents .eventLink01{top: 30.06%;}
+	.contents .eventLink02{top: 55.5%;}
+	.contents .eventLink03{top: 74.7%;}
+	.contents .ytcon{top: 31.63%;left: 3.8%;width: 91.7%;padding-top: 51.7%;}
+	.contents .ytcon .vodArea{}
+	.contents .ytcon .vodArea.playing{}
+
+	.contents .layerPop{}
+	.contents .layerPop::before{}
+	.contents .layerPop .popCon{}
+	.contents .layerPop .popCon > img{}
+	.contents .layerPop .popCon .closeBtn{}
+	.contents .layerPop .popCon form{}
+	.contents .layerPop .popCon fieldset{}
+	.contents .layerPop .popCon .inputArea{}
+	.contents .layerPop .popCon .inputArea div{}
+	.contents .layerPop .popCon .inputArea label{}
+	.contents .layerPop .popCon .inputArea input{font-size: 21px;}
+	.contents .layerPop .popCon .inputArea .inputBox01{}
+	.contents .layerPop .popCon .inputArea .inputBox01 label{}
+	.contents .layerPop .popCon .inputArea .inputBox01 input[type="radio"]{}
+	.contents .layerPop .popCon .inputArea .inputBox02{}
+	.contents .layerPop .popCon .inputArea .inputBox03{}
+	.contents .layerPop .popCon .checkArea{}
+	.contents .layerPop .popCon .checkArea label{}
+	.contents .layerPop .popCon .checkArea input{}
+	.contents .layerPop .popCon .checkArea input:checked + label{}
+	.contents .layerPop .popCon .checkArea input:checked + label:after{}
+	.contents .layerPop .popCon .PrivacyArea{}
+	.contents .layerPop .popCon .PrivacyLink{}
+	.contents .layerPop .popCon form button{}
+
+	.contents .layerPop.eventPop .popCon{margin-top: 350%;}
+	.contents .layerPop.eventPop .popCon .closeBtn{}
+	.contents .layerPop.PrivacyPop .popCon{margin-top: 355%;}
+	.contents .layerPop.PrivacyPop .popCon .closeBtn{}
+	.contents .layerPop.KeebPop .popCon{margin-top: 187%;}
+	.contents .layerPop.KeebPop .ytcon{width: 84.7%;padding-top: 47.8%;}
+	.contents .layerPop.KeebPop .ytcon .vodArea{}
+	.contents .layerPop.KeebPop .ytcon .vodArea.playing{}
+	.contents .layerPop.sharePop{}
+	.contents .layerPop.sharePop .popCon{}
+	.contents .layerPop.sharePop .popCon .closeBtn{}
+	.contents .layerPop.sharePop .popCon .eventLink04{}
+
+	.contents .floatingBox{}
+	.contents .floatingBox .floating{}
+	.contents .floatingBox .floating a{padding-top: 7.5%;}
+}
+@media all and (max-width:750px){
+	.contents .layerPop .popCon .inputArea input[type="text"]{font-size: 14px;}
+}
+@media all and (max-width:375px){
+	.contents .layerPop .popCon .inputArea input[type="text"]{font-size: 11px;}
+}
+@media all and (max-width:320px){
+	.contents .layerPop .popCon .inputArea input[type="text"]{font-size:11px;}
+}

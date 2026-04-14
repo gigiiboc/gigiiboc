@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>innisfree</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="title" content="innisfree">
+	<meta name="keywords" content="innisfree">
+	<meta name="description" content="innisfree">
+	<meta property="og:title" content="innisfree">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://www.innisfree.com/">
+	<meta property="og:site_name" content="innisfree">
+	<meta property="og:description" content="innisfree">
+	<script> 
+	var userAgent = navigator.userAgent.toLowerCase();
+	/*
+	// 모바일 홈페이지 바로가기 링크 생성 
+	if(userAgent.match('iphone')) { 
+		document.write('<link rel="apple-touch-icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('ipad')) { 
+		document.write('<link rel="apple-touch-icon" sizes="72*72" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('ipod')) { 
+		document.write('<link rel="apple-touch-icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('android')) { 
+		document.write('<link rel="shortcut icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/android.png" />');
+	} */
+	</script>
+	<link rel="shortcut icon" type="image/x-icon" href="images/common/favicon.ico">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,500,700|Noto+Sans+JP:400,500,700"> -->
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/teaser.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header : S -->
+	<!-- 배경 색상이 입혀져야 할 경우 bg 클래스 추가 -->
+	<header id="header" class="bg">
+		<div class="headerIn">
+			<div class="logo_wrap">
+				<h1 class="page_ttl"><a href="#">MEMBERSHIP</a></h1>
+			</div>
+			<div class="headL">
+				<a href="#none" class="btn_gnbToggle" onclick="navi (this, '#sideNavi')">
+					<i class="ico">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</i>
+				</a>
+			</div>
+			<!-- sideNavi : S -->
+			<aside id="sideNavi" class="sideNav">
+				<a href="#none" class="gnbClose" onclick="navi (this, '#sideNavi')">
+					<i class="ico">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</i>
+				</a>
+				<div class="loginDiv">
+					<!-- 로그아웃 -->
+					<div>Log out <span>sugasuga</span></div>
+					<!-- 로그인 -->
+					<div class="on">Log in</div>
+				</div>
+				<ul class="nav">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">MEMBERSHIP</a></li>
+					<li><a href="#">INGREDIENTS</a></li>
+					<li><a href="#">PRODUCT</a></li>
+					<li><a href="#">INNIST<span>A</span>R</a></li>
+				</ul>
+				<a href="#" class="link01">BRAND SITE</a>
+				<a href="#" class="link01">MY PAGE</a>
+				<ul class="sns">
+					<li class="twitter"><a href="#"><span>twitter</span></a></li>
+					<!-- <li class="facebook"><a href="#"><span>facebook</span></a></li> -->
+					<li class="instagram"><a href="#"><span>instagram</span></a></li>
+				</ul>
+			</aside>
+			<!-- sideNavi : e -->
+		</div>
+	</header>	
+	<!-- header : E -->
+	<!-- container : S -->
+	<div id="container">
+		<div class="join">
+			<ul class="join_step">
+				<li class="on">
+					<div class="step">step 1</div>
+					<div class="ttl">基本情報</div>
+				</li>
+				<li>
+					<div class="step">step 2</div>
+					<div class="ttl">追加情報</div>
+				</li>
+				<li>
+					<div class="step">step 3</div>
+					<div class="ttl">加入完了</div>
+				</li>
+			</ul>
+			<div class="contents join_page">
+				<div class="join_form">
+					<div class="join_default">
+						<h3 class="tit">基本情報 <span class="subtit"> <em class="essential">*</em> 必須項目です</span></h3>
+						<div class="tblType_form">
+							<div class="tr">
+								<div class="th">
+									<span class="subtit">メールアドレス(ID) <em class="essential">*</em></span>
+								</div>
+								<div class="td widthfix">
+									<div class="inp_wrap hasbtn">
+										<div class="inp_text line_type">
+											<input type="text" name="" id="" placeholder="メールアドレスを入力してください">
+											<button class="btn_clear"><span>clear</span></button>
+										</div>
+										<button class="btn btn_default btnSizeM">
+											<span>確認</span>
+										</button>
+										<div class="help">
+											<p class="error">error</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tr">
+								<div class="th pdt25">
+									<span class="subtit">氏名(漢字) <em class="essential">*</em></span>
+								</div>
+								<div class="td widthfix">
+									<div class="inp_wrap inp_both">
+										<div class="inp_text line_type">
+											<input type="text" name="" id="" placeholder="姓">
+											<button class="btn_clear"><span>clear</span></button>
+										</div>
+										<div class="inp_text line_type">
+											<input type="text" name="" id="" placeholder="名">
+											<button class="btn_clear"><span>clear</span></button>
+										</div>
+										<div class="help">
+											<p class="error">error</p>
+											<p class="addDesc">全角で入力</p>
+											<p class="addDesc">漢字名がない場合、ひらがなまたはカタカナで入力してください。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tr">
+								<div class="th pdt25">
+									<span class="subtit">氏名(フリガナ) <em class="essential">*</em></span>
+								</div>
+								<div class="td widthfix">
+									<div class="inp_wrap inp_both">
+										<div class="inp_text line_type">
+											<input type="text" name="" id="" placeholder="セイ">
+											<button class="btn_clear"><span>clear</span></button>
+										</div>
+										<div class="inp_text line_type">
+											<input type="text" name="" id="" placeholder="メイ">
+											<button class="btn_clear"><span>clear</span></button>
+										</div>
+										<div class="help">
+											<p class="error">error</p>
+											<span class="addDesc">全角で入力</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tr">
+								<div class="th pdt25">
+									<span class="subtit">パスワード <em class="essential">*</em></span>
+								</div>
+								<div class="td widthfix">
+									<div class="inp_wrap">
+										<div class="inp_text line_type">
+											<input type="password" name="" id="" placeholder="英数字を組み合わせて6~12桁以内で入力してください">
+											<button class="btn_clear"><span>clear</span></button>
+										</div>
+										<div class="help">					
+											<p class="error">error</p>				
+											<p class="addDesc">パスワードは半角英数字の組み合わせで入力してください。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tr">
+								<div class="th pdt25">
+									<span class="subtit">パスワードの再確認 <em class="essential">*</em></span>
+								</div>
+								<div class="td widthfix">
+									<div class="inp_wrap">
+										<div class="inp_text line_type">
+											<input type="password" name="" id="" placeholder="入力したパスワードを再入力してください">
+											<button class="btn_clear"><span>clear</span></button>
+										</div>
+										<div class="help">
+											<p class="error">error</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tr">
+								<div class="th pdt25">
+									<span class="subtit">性別</span>
+								</div>
+								<div class="td widthfix sex">
+									<span class="inp_radio">
+										<input type="radio" name="inp_radio1" id="inp_radio1_1" checked>
+										<label for="inp_radio1_1">女性</label>
+									</span>
+									<span class="inp_radio">
+										<input type="radio" name="inp_radio1" id="inp_radio1_2">
+										<label for="inp_radio1_2">男性</label>
+									</span>
+								</div>
+							</div>
+							<div class="tr">
+								<div class="th pdt25">
+									<span class="subtit">生年月日 <em class="essential">*</em></span>
+								</div>
+								<div class="td widthfix birth">
+									<div class="inp_wrap inp_birth">
+										<div class="inp_select">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select>
+										</div>
+										<div class="inp_select">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select>
+										</div>
+										<div class="inp_select">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select>
+										</div>		
+										<div class="help">
+											<p class="error">error</p>
+											<p class="addDesc">15歳未満のお客様は会員登録できません。</p>
+											<p class="addDesc">生年月日の修正は1回のみとなります。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tr">
+								<div class="th pdt25">
+									<span class="subtit">メールマガジン配信の同意</span>
+								</div>
+								<div class="td widthfix">
+									<div class="receive_email">
+										<span class="inp_check">
+											<input type="checkbox" name="inp_check" id="inp_check4_1" checked="">
+											<label for="inp_check4_1">最新情報と特典情報を受け取る</label>
+										</span>
+										<span class="inp_check">
+											<input type="checkbox" name="inp_check" id="inp_check4_2" checked="">
+											<label for="inp_check4_2">電子レシート</label>
+										</span>
+									</div>
+									<div class="help">
+										<p class="addDesc">イニスフリーの特別なサービスや商品に関するお知らせをメールアドレスにお送りしております。ご登録の後、配信停止を希望される場合、「My Page 」お客様情報の確認・変更」より解除できます。</p>
+									</div>								
+								</div>
+							</div>
+							<div class="tr">
+								<div class="th pdt25">
+									<span class="subtit">利用規約 <em class="essential">*</em></span>
+								</div>
+								<div class="td widthfix">
+									<div class="agree">
+										<span class="inp_check" style="width: 70%;height: auto;">
+											<input type="checkbox" name="inp_check" id="inp_check5_1" checked="">
+											<label for="inp_check5_1">利用規約を確認し,その内容に同意します。</label>
+										</span>
+										<span class="click_pop"><a href="#">利用規約</a></span>
+										<!-- 이용약관 -->
+									</div>
+									<div class="agree">
+										<span class="inp_check" style="width: 70%;height: auto;">
+											<input type="checkbox" name="inp_check" id="inp_check5_2">
+											<label for="inp_check5_2">イニスフリーのプライバシーポリシーを確認し、その内容に同意します。</label>
+										</span>
+										<span class="click_pop"><a href="#">個人情報保護方針</a></span>
+										<!-- 개인정보보호방침 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="join_gift">
+						<div class="bannerArea">							
+							<div class="coupon">
+								<div class="couponBox" style="background: #fafafa;box-shadow: none;">
+									<img src="images/temp/coupon_img.png" class="coupon_img"alt="">
+									<div class="ttl">追加情報を登録すると、10%の割引コードがプレゼントされます。（￥5,000（税抜）以上のご購入で利用可能)</div>
+									<ul>
+										<li><span></span>この割引コードは8月の公式オンラインショップオープン後に利用できます。</li>
+										<li><span></span>オンラインショップご利用の際、お客様に合ったおすすめ商品や特別キャンペーンの情報提供サービスを受けることができます。</li>
+										<li><span></span>有効期限は2019.8.31までです。</li>
+									</ul>
+									<div class="ttl">※ご注意下さい※</div>
+									<ul>
+										<li><span></span>申し訳ございませんが、このページを閉じてしまいますと再度表示させることができません。</li>
+										<li><span></span>事前会員登録の特典である10％割引クーポンをご希望の方はご注意下さい。</li>
+										<li><span></span>追加情報は8/5以降に修正・追加頂ける予定ですが、クーポンはお受け取り頂けません。</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="join_default">
+						<div class="btn_wrap">
+							<a href="#" class="btn fw700 btn_default btnSizeL"><span>追加情報登録へ進む</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container : E -->
+	<!-- footer : S -->
+	<div id="quick">
+		<a href="#" class="goTop" onclick="scrollSet('#wrap');return false;"><span class="arrow">TOP</span></a>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>	
+	<!-- footer : E -->
+</div>
+<script type="text/javascript">
+</script>
+</body>
+</html>

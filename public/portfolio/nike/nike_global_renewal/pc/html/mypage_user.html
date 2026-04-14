@@ -1,0 +1,4670 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ko" xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--2016.03.23 google webmaster 트래킹 코드 -->
+<meta name="google-site-verification" content="hpYYbkgRb5gmGIkjC87ieaJQ70JUoydDKN1YFlOnZ6k" />
+<title>Nike 나이키닷컴</title>
+ <link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1/css/member.css" /> 
+
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery-1.7.2.min.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery-ui-1.10.2.custom.min.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/gnb.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery-migrate-1.1.1.min.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/popup.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/ajax.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/iframeSubmit.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/validator.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/display.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/design.js"></script> 
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/util.js"></script> 
+	<script>var s_account = "nikestorekoreaprod";</script><!-- 운영과 개발용 설정이 달라서 config 이용 -->
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/s_code_nikestorekr.js"></script>
+	
+	<!-- phase2 script 추가 -->
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jqueryUI.js"></script>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1/css/ie.css" />
+<![endif]--> 
+
+<script type="text/javascript">
+	var prop4='';   //회원 정보 변경 항목을 담을 변수........사이트 카탈리스트
+	
+	$(document).ready(function(){
+		$("body").data("setEmailYn",('Y'=='Y')?true:false );
+		$("body").data("setSmsYn",('Y'=='Y')?true:false );	
+				
+
+		textBalloon("#existingPassword","#spexistingPassword");
+		textBalloon("#changePassword","#spchangePassword");
+		textBalloon("#changePasswordCheck","#spchangePasswordCheck");
+		
+		if($("#EmailReceiveYN").val() == "Y"){
+			$("#receptionCheck").prop("checked", true);
+		}
+		var frm = document.frmInformation;
+		frm.informaionOrder.value = "0";
+		$("#informaionOrder").val("0");
+		$("#PostNo").val("");
+		$("#popupQuit").hide();
+		$("#popupQuitSuccess").hide();
+		$("#popupQuitFailure").hide();
+		$("#popupPasswordChange").hide();
+		$("#popupPasswordChangeSuccess").hide();
+		$("#deliveryRegistration").hide();
+		$("#textLengthCheck").hide();
+		$("#addressSearch").hide();
+		$("#updateAddressSearch").hide();
+		$("#deliveryUpdate").hide();
+		$("#deliveryAlert").hide();
+		
+		//나이키 사이트 카탈리스트 연락처, 휴대폰 정보 변경시 이벤트.....2013.12.05..Cesil...start
+		$("#cableTelephoneRegionNo").change(function(){ 
+			chgPhoneNumber("cable");
+		});
+		$("#cableTelephoneTelephoneExchangeNo").change(function(){  
+			chgPhoneNumber("cable");
+		});
+		$("#cableTelephoneEndNo").change(function(){    
+			chgPhoneNumber("cable");
+		});
+		$("#cellSectionNo").change(function(){
+			chgPhoneNumber("mobile");
+		});
+		$("#cellTelephoneExchangeNo").change(function(){
+			chgPhoneNumber("mobile");
+		});
+		$("#cellEndNo").change(function(){
+			chgPhoneNumber("mobile");
+		});
+		
+	});
+	
+	function chgPhoneNumber(type){
+		if(type=="cable"){  
+			if(prop4.indexOf("phone number")==-1){
+				if(prop4.length>0)  prop4 += ":";
+				prop4 += "phone number";
+				}
+		}else if(type="mobile"){
+			if(prop4.indexOf("mobile number")==-1){
+				if(prop4.length>0)  prop4 += ":";
+				prop4 += "mobile number";
+				}
+		}
+	}
+	//나이키 사이트 카탈리스트 연락처, 휴대폰 정보 변경시 이벤트.....2013.12.05..Cesil...end
+	
+	// 널값일 경우 alert 대신 말풍선
+	function textBalloon(id,disPlayId){
+		$(id).focusout(function(){
+			$(disPlayId).css("display","none");
+		
+		});
+		$(id).keypress(function(){
+			$(disPlayId).css("display","none");
+		
+		});
+		
+	}
+	function showBackground(){
+		var background = document.getElementById("login_background");
+		var totalHeight = document.getElementById("footer").offsetHeight + document.getElementById("content").offsetHeight;
+		background.style.height = totalHeight + 100 + "px";
+		background.style.visibility = "visible";
+	}
+	
+	function showParentCertificationPopup(){
+
+		$.ajax({
+			type: 'POST',
+			url: '/member/parentAgreeViewPopup.lecs',
+			cache: false,
+			data: "",
+			success: function(html){
+				showBackground();
+
+				$('#div_certificationPopup').html(html);
+				$('#div_certificationPopup').show();
+				openLayer("div_certificationPopup", {center: true, blocker: true});
+			}
+		});
+	}
+	
+	function telephonAndCellPhoneNumberCheck() {
+		var phoneFlag = 2;
+		
+		if ($('#cellSectionNo').val() === '') {
+			alert("휴대폰 정보를 입력해 주세요.");
+			$('#cellSectionNo').focus();
+			return false;
+		}
+		
+		if ($('#cellTelephoneExchangeNo').val() === '') {
+			alert("휴대폰 정보를 입력해 주세요.");
+			$('#cellTelephoneExchangeNo').focus();
+			return false;
+		}
+		
+		if ($('#cellEndNo').val() === '') {
+			alert("휴대폰 정보를 입력해 주세요.");
+			$('#cellEndNo').focus();
+			return false;
+		}
+		
+		// 연락처 번호
+		if ($("#cableTelephoneRegionNo").val() == "" && $("#cableTelephoneTelephoneExchangeNo").val() == "" && $("#cableTelephoneEndNo").val() == "") {
+			phoneFlag--;
+		} else {
+			if ($("#cableTelephoneRegionNo").val() == "") {
+				alert("연락처를 입력해 주세요.");
+				$("#cableTelephoneRegionNo").focus();
+				return false;
+			} else {
+				if ($("#cableTelephoneRegionNo").val().length < 2) {
+					alert("연락처를 정확하게 입력해 주세요.");
+					$("#cableTelephoneRegionNo").focus();
+					return false;
+				}
+			}
+			if ($("#cableTelephoneTelephoneExchangeNo").val() == "") {
+				alert("연락처를 입력해 주세요.");
+				$("#cableTelephoneTelephoneExchangeNo").focus();
+				return false;                       
+			} else {
+				if ($("#cableTelephoneTelephoneExchangeNo").val().length < 3) {
+					alert("연락처를 정확하게 입력해 주세요.");
+					$("#cableTelephoneTelephoneExchangeNo").focus();
+					return false;
+				}
+			}
+			if ($("#cableTelephoneEndNo").val() == "") {
+				alert("연락처를 입력해 주세요.");
+				$("#cableTelephoneEndNo").focus();
+				return false;                       
+			} else {
+				if ($("#cableTelephoneEndNo").val().length < 4) {
+					alert("연락처를 정확하게 입력해 주세요.");
+					$("#cableTelephoneEndNo").focus();
+					return false;
+				}
+			}
+		}
+		
+		// 휴대폰 번호
+		if ($("#cellSectionNo").val() == "" && $("#cellTelephoneExchangeNo").val() == "" && $("#cellEndNo").val() == "") {
+			phoneFlag--;
+		} else {
+			if ($("#cellSectionNo").val() == "") {
+				alert("휴대폰 번호를 입력해 주세요.");
+				$("#cellSectionNo").focus();
+				return false;
+			} else {
+				if ($("#cellSectionNo").val().length < 3) {
+					alert("휴대폰 번호를 정확하게 입력해 주세요.");
+					$("#cellSectionNo").focus();
+					return false;
+				}
+			}
+			if ($("#cellTelephoneExchangeNo").val() == "") {
+				alert("휴대폰 번호를 입력해 주세요.");
+				$("#cellSectionNo").focus();
+				return false;
+			} else {
+				if($("#cellTelephoneExchangeNo").val().length < 3){
+					alert("휴대폰 번호를 정확하게 입력해 주세요.");
+					$("#cellTelephoneExchangeNo").focus();
+					return false;                       
+				}
+			}
+			if ($("#cellEndNo").val() == "") {
+				alert("휴대폰 번호를 입력해 주세요.");
+				$("#cellEndNo").focus();
+				return false;
+			} else {
+				if($("#cellEndNo").val().length < 4){
+					alert("휴대폰 번호를 정확하게 입력해 주세요.");
+					$("#cellEndNo").focus();
+					return false;                       
+				}
+			}
+		}
+		
+		if (phoneFlag < 1) {
+			alert("연락처와 휴대폰번호 중 최소 한가지는 입력해야 합니다.");
+			return false;
+		}
+		
+		return true;
+	}
+	
+	function InfomationUpdate(){
+
+		if (!telephonAndCellPhoneNumberCheck()) {
+			return;
+		}       
+		
+		if($("#insertEmail").val() == "") {
+			alert("빈칸이 존재합니다.");
+			return;
+		}
+
+		var birthday = "";
+		if($("#birthdayDurationTimeYear").val() == "" || $("#birthdayDurationTimeMonth").val() == "" || $("#birthdayDurationTimeDay").val() == "") {
+			alert("생년월일을 입력해 주세요");
+			return false;
+		} else {
+			birthday = $("#birthdayDurationTimeYear").val();
+
+			if($("#birthdayDurationTimeMonth").val().length == 1){
+				birthday += "0" + $("#birthdayDurationTimeMonth").val();
+			} else {
+				birthday += $("#birthdayDurationTimeMonth").val();
+			}
+			
+			if($("#birthdayDurationTimeDay").val().length == 1){
+				birthday += "0" + $("#birthdayDurationTimeDay").val();
+			} else {
+				birthday += $("#birthdayDurationTimeDay").val();
+			}
+
+			$("#birthdayDurationTime").val(birthday);
+		}
+		
+		try{
+			console.log($("body").data("setEmailYn")+':'+$("#receptionCheck").is(":checked")+':'+$("body").data("setSmsYn")+':'+$("#smsReceiveYn").is(":checked"));
+		} catch(e){}
+		
+		
+		if(!confirm('저장하시겠습니까?')){
+			return;
+		}
+		
+		var emailTextVal = $("#receptionCheck").is(":checked")?"동의처리":"거부처리";
+		var smsTextVal =  $("#smsReceiveYn").is(":checked")?"동의처리":"거부처리";
+		
+		if($("body").data("setEmailYn")!=$("#receptionCheck").is(":checked")&&$("body").data("setSmsYn")!=$("#smsReceiveYn").is(":checked")){
+			alert("나이키닷컴에서는 고객님께서 2016년06월29일 요청하신 SMS 수신 "+smsTextVal+" 와 E-mail 수신 "+emailTextVal+" 요청이 정상처리 되었음을 안내 드립니다.");
+		}else if($("body").data("setEmailYn")!=$("#receptionCheck").is(":checked")){
+			alert("나이키닷컴에서는 고객님께서 2016년06월29일 요청하신 E-mail 수신 "+emailTextVal+" 요청이 정상처리 되었음을 안내 드립니다.");
+		}else if($("body").data("setSmsYn")!=$("#smsReceiveYn").is(":checked")){
+			alert("나이키닷컴에서는 고객님께서 2016년06월29일 요청하신 SMS 수신 "+smsTextVal+" 요청이 정상처리 되었음을 안내 드립니다.");
+		}
+		
+		doInformationUpdate();
+		
+	}
+
+	function chkLength(no, size){
+		var contact = ["parentContact1", "parentContact2", "parentContact3", "parentSsn1", "parentSsn2"];
+		for( var i = 0; i < contact.length; i++ ){
+			if( $("#" + contact[i] ).val() != null &&
+					$("#" + contact[i] ).val().length >= size ){
+				if( i == 2 || i == 4 )
+					return;
+				else     
+					$("#" + contact[i+1] ).focus(); 
+			}
+		}
+	}
+
+	function chkParentCertification(){
+
+		if( !$("#agree").prop("checked") ){
+			alert("고유식별정보 수집/이용 동의를 하셔야 본인인증을 할 수 있습니다.");
+			$("#agree").focus();
+			return;
+		}
+
+		if( $("#parentName").val().length < 1 ){
+			alert("법정대리인 이름을 입력해주세요.");
+			$("#parentName").focus();
+			return;
+		}
+		if( $("#parentSsn1").val().length < 6 || $("#parentSsn2").val().length < 7 ){
+			alert("법정대리인 주민등록번호를 정확히 입력해주세요.");
+			$("#parentSsn1").val("");
+			$("#parentSsn2").val("");
+			$("#parentSsn1").focus();
+			return;
+		}
+
+		// 본인확인서비스 호출
+		var url = "/member/setRealNameParamAjax.lecs";
+		var ssn = $("#parentSsn1").val() + $("#parentSsn2").val();
+		var param = "name=" + $("#parentName").val() + "&ssn=" + ssn + "&serviceCode=information";
+
+		
+		ajaxCall("post", url, param, "json", callback = function(data){
+			$("#reqInfo").val(data);
+			openPccV4Window();
+		});
+		
+	}
+
+	function openPccV4Window(){
+
+		PCCV4_window = window.open('', 'PCCV4Window', 'width=410, height=460, resizable=0, scrollbars=no, status=0, titlebar=0, toolbar=0, left=435, top=250' );
+
+		if(PCCV4_window == null){ 
+			alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		}
+
+		document.reqPCCV2Form.target = 'PCCV4Window';
+		document.reqPCCV2Form.submit();
+	}
+	
+	function closePopup(){
+		if(confirm("본인인증을 취소하시겠습니까?")){
+			hidePopup();
+		}
+		else{
+			return;
+		}
+	}
+
+	function hidePopup(){
+		document.getElementById("login_background").style.visibility="hidden";
+		$('#div_certificationPopup').hide();
+	}
+
+	function parentAuthSuccess(certGb){
+		doInformationUpdate();
+	}
+
+	function doInformationUpdate(){
+		document.frmInformation.informaionOrder.value = "1";
+		InformationFormSumit();
+	}
+	
+	function InformationFormSumit(){    
+		$("#prop4").val(prop4); 
+		var frm = $('form#frmInformation');
+		frm.attr('action', '/member/informationSubmit.lecs');
+		IframeSubmitter.submit(frm.get(0), "InformationRefresh", "submitiFrame");
+	}
+	function InformationRefresh(result){
+		//location.reload();
+		alert('저장되었습니다.');
+		
+		$("#prop4").val(result.prop4);
+		var form = document.frmInformation;
+		form.action = '/member/information.lecs';
+		form.method = 'post';
+		form.target = '_parent';
+		form.submit();  
+	}
+	function quitSuccess(){
+		//location.reload();
+		location.href = 'http://lecs.nike.co.kr//member/gate.lecs' ;
+	}
+	function firstsetting(){
+		if($("#EmailReceiveYN").val() == "Y"){
+			$("#receptionCheck").prop("checked", true);
+		}
+		var frm = document.frmInformation;
+		frm.informaionOrder.value = "0";
+		$("#informaionOrder").val("0");
+		$("#PostNo").val("");
+		$("#popupQuit").hide();
+		$("#popupQuitSuccess").hide();
+		$("#popupQuitFailure").hide();
+		$("#popupPasswordChange").hide();
+		$("#popupPasswordChangeSuccess").hide();
+		$("#deliveryRegistration").hide();
+		$("#textLengthCheck").hide();
+		$("#addressSearch").hide();
+		$("#updateAddressSearch").hide();
+		$("#deliveryUpdate").hide();
+		$("#deliveryAlert").hide();
+		hideDim();
+	}
+	function popupShow(Step){
+		firstsetting();
+		$("#existingPassword").val("");
+		$("#changePassword").val("");
+		$("#changePasswordCheck").val("");
+		
+		$("#DeliveryName").val("");
+		$("#RemiteeName").val("");
+		$("#DeliveryCableTelephoneRegionNo").val("");
+		$("#DeliveryCableTelephoneExchange").val("");
+		$("#DeliveryCableTelephoneEndNo").val("");
+		$("#addressText").val("");
+		$("#DetailAddressText").val("");
+		showDim();
+		//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil Start  --
+		if(Step=='popupPasswordChange'){
+			s.manageVars("clearVars"); 
+			var chl = "Member>ModifiInfo>PwChange(L)";
+			var pgNm = "nikestorekr>" + chl;
+			s.currencyCode="KRW";   
+			s.linkInternalFilters+=",nike.co.kr";
+			s.pageName=pgNm;
+			s.channel="Member";
+			s.prop2="nikestorekr";
+			s.prop10="commerce";
+			s.prop14="kr";
+			s.prop15="ko";
+			s.prop17="nikestorekr:Member";  
+			 s.eVar4 = "logged in"; 
+			void(s.t());
+		}else if(Step=='popupQuit'){
+			s.manageVars("clearVars"); 
+			var chl = "Member>ModifiInfo>Withdrawal(L)";
+			var pgNm = "nikestorekr>" + chl;
+			s.currencyCode="KRW";   
+			s.linkInternalFilters+=",nike.co.kr";
+			s.pageName=pgNm;
+			s.channel="Member";
+			s.prop2="nikestorekr";
+			s.prop10="commerce";
+			s.prop14="kr";
+			s.prop15="ko";
+			s.prop17="nikestorekr:Member";  
+			 s.eVar4 = "logged in"; 
+			void(s.t());    
+		}else if(Step=='popupQuitSuccess'){
+			s.manageVars("clearVars"); 
+			var chl = "Member>ModifiInfo>WithdrawComplete(L)";
+			var pgNm = "nikestorekr>" + chl;
+			s.currencyCode="KRW";   
+			s.linkInternalFilters+=",nike.co.kr";
+			s.pageName=pgNm;
+			s.channel="Member";
+			s.prop2="nikestorekr";
+			s.prop10="commerce";
+			s.prop14="kr";
+			s.prop15="ko";
+			s.prop17="nikestorekr:Member";  
+			 s.eVar4 = "logged in"; 
+			void(s.t());
+		}else if(Step=='popupQuitFailure'){
+			s.manageVars("clearVars"); 
+			var chl = "Member>ModifiInfo>WithdrawalNo(L)";
+			var pgNm = "nikestorekr>" + chl;
+			s.currencyCode="KRW";   
+			s.linkInternalFilters+=",nike.co.kr";
+			s.pageName=pgNm;
+			s.channel="Member";
+			s.prop2="nikestorekr";
+			s.prop10="commerce";
+			s.prop14="kr";
+			s.prop15="ko";
+			s.prop17="nikestorekr:Member";  
+			 s.eVar4 = "logged in"; 
+			void(s.t());
+		}
+		//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil End  --
+		$("#"+Step).show();
+		$("#"+Step).focus();
+	}
+	function quit(){
+		firstsetting();
+		alert($("#runResult").val());
+		if($("#runResult").val() == "0"){
+		popupShow("popupQuitSuccess");
+		}else{
+		popupShow("popupQuitFailure");
+		}       
+	}
+	function onlyNumber() {
+		if((event.keyCode<48)||(event.keyCode>57)){
+			event.returnValue=false;
+		}
+	}
+	function onlyPasswd(){
+		if((event.keyCode<48)||(event.keyCode>90)){
+			event.returnValue=false;
+		}
+	}
+	function receptionCheckChangeCheck(){
+		if($("#receptionCheck").prop("checked") == true && $("#EmailReceiveYN").val() == "Y"){
+		
+		} else{
+			$("#receptionCheckChange").val("Y");
+		}
+		if($("#receptionCheck").prop("checked") == false && $("#EmailReceiveYN").val() == "N"){
+	
+			} else{
+			$("#receptionCheckChange").val("Y");
+		}
+	}
+	function receptionCheckUpdate(){
+		if(($("#receptionCheck").prop("checked") == true )){
+			$("#receptionCheckChange").val("Y");
+			//나이키 사이트 카탈리스트 2차...2013.11.27...Cesil..회원가입시 이메일 수신 동의 ...작성자가 클릭한 경우
+			s.linkTrackVars='events';
+			s.linkTrackEvents='event3';
+			s.events='event3';
+			s.tl(true,'o','Custom Clicks');
+		} else {
+			$("#receptionCheckChange").val("N");
+		}       
+	}
+	function passwordCheck() {
+	
+		var f = document.frmInformation;
+		
+		if ($("#existingPassword").val() == "") {
+			$("#spexistingPassword").css("display","block");
+			$("#existingPassword").focus();
+		} else{
+			if ($("#changePassword").val() == "") {
+				$("#spchangePassword").css("display","block");
+				$("#changePassword").focus();
+			} else {
+				if ($("#changePasswordCheck").val() == "" ) {
+					$("#spchangePasswordCheck").css("display","block");
+					$("#changePasswordCheck").focus();
+				} else {
+					if ($("#changePassword").val().length < 6 || $("#changePassword").val().length > 12) {
+						alert("패스워드는 6~12 자리의 영문숫자를 조합하여야 사용 가능합니다.");
+						$("#changePassword").val("");
+						$("#changePasswordCheck").val('');
+						$("#changePassword").focus();
+					} else {
+						if (!wordCheck(f.changePassword)) {
+							$('#changePasswordCheck').val('');
+						} else {
+							if (checkDigitOnly(($('#changePassword').val()), true) || checkAlphabetOnly($('#changePassword').val())) {
+								alert("패스워드는 6~12자리의 영문, 숫자를 조합하여야 사용이 가능합니다.");
+								$("#changePassword").val("");
+								$("#changePasswordCheck").val('');
+								$("#changePassword").focus();
+							} else {
+								var email = $("#email1Address").val();
+								email = email.substring(0, email.indexOf('@'));
+								if ($("#changePassword").val().indexOf($("#loginId").val()) > -1 || $("#changePassword").val().indexOf(email) > -1) {
+									alert("패스워드는 아이디 및 이메일과 같거나 포함되면 안됩니다.");
+									$("#changePassword").val("");
+									$("#changePasswordCheck").val('');
+									$("#changePassword").focus();
+								} else {
+									if ($("#changePassword").val().length >= 6) {
+										var tempChar = "";
+										var cnt = 0;
+										for (var i = 0; i < $("#changePassword").val().length; i++) {
+											if (tempChar ==  $("#changePassword").val().charAt(i) ) {
+												cnt++;
+											} else {
+												tempChar =  $("#changePassword").val().charAt(i);
+												cnt = 0;
+											}
+											if (cnt >= 2) {
+												alert("패스워드에 연속된 3개 이상의 같은 문자, 숫자는 사용이 불가능합니다.");
+												$("#changePassword").val('');
+												$("#changePasswordCheck").val('');
+												$("#changePassword").focus();
+												break;
+											}
+										}
+										if (cnt < 2) {
+											var frm = $('form#frmInformation');
+											frm.attr('action', '/member/informationPasswordChange.lecs');
+											IframeSubmitter.submit(frm.get(0), "passwordCheckResult", "submitiFrame");
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	function passwordCheckResult(result){
+		var ch = new Object();
+		ch.bts = "1";
+		if(result.existingPasswordCheck == ch.bts){
+		 alert("비밀번호를 정확하게 입력해 주세요.");
+		}else{
+			if($("#existingPassword").val() == $("#changePassword").val() ){
+				alert("기존 패스워드와 동일합니다.");
+			}else{
+				if($("#changePassword").val() !=$("#changePasswordCheck").val()){
+					alert("변경 패스워드와 변경패스워드 확인이 일치하지 않습니다.");
+				}else{
+					var frm = $('form#frmInformation');
+					frm.attr('action', '/member/informationPasswordUpdate.lecs');
+					IframeSubmitter.submit(frm.get(0), "passwordUpdate", "submitiFrame");
+				}
+			}
+		}
+		
+	}
+	function passwordUpdate(result){
+		//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil Start  --
+		s.manageVars("clearVars"); 
+		var chl = "Member>ModifiInfo>PwComplete(L)";
+		var pgNm = "nikestorekr>" + chl;
+		s.currencyCode="KRW";   
+		s.linkInternalFilters+=",nike.co.kr";
+		s.pageName=pgNm;
+		s.channel="Member";
+		s.prop2="nikestorekr";
+		s.prop10="commerce";
+		s.prop14="kr";
+		s.prop15="ko";
+		s.prop17="nikestorekr:Member";  
+		 s.eVar4 = "logged in"; 
+		void(s.t());    
+		if(prop4.length>0)  prop4 += ":";
+		prop4 += "password";
+		//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil End  --
+		var ch = new Object();
+		ch.bts = "Success";
+		if(result.existingPasswordUpdate == ch.bts){
+			$("#popupPasswordChange").hide();
+			$("#popupPasswordChangeSuccess").show();
+		} else if(result.existingPasswordUpdate == "Fail"){ //[1118]기존 비밀번호체크. 2016.01.04. 박소라
+			alert(result.message);
+			$("#popupPasswordChange").hide();
+			firstsetting();
+		}
+	}
+	function PopupHide(PopupID){
+		$("#"+PopupID).show();
+	}
+	function MemberSecession(){
+		
+		var frm = $('form#frmInformation');
+		frm.attr('action', '/member/MemberSecession.lecs');
+		IframeSubmitter.submit(frm.get(0), "MemberSecessionResult", "submitiFrame"); 
+	}
+	function MemberSecessionResult(result){
+		/*
+		if ( result.memberOrderYN == 'Y' ) {
+			popupShow("popupQuitFailure");
+		}
+		else {
+			popupShow("popupQuitSuccess");
+		}
+		*/
+		if(result.memberScsnType == "0") { // 탈퇴
+			popupShow("popupQuitSuccess");
+		} else if(result.memberScsnType == "1") { // 탈퇴불가(주문)
+			$('#pFailure').html('회원님께서는 아직 진행중인 주문내역이 있어 탈퇴하실 수 없습니다.<br />주문내역을 확인해 주세요.');
+			$('#aFailure').attr('href', 'http://lecs.nike.co.kr/mypage/order/list.lecs');
+			popupShow("popupQuitFailure");
+		} else if(result.memberScsnType == "2") { // 탈퇴불가(클레임)
+			$('#pFailure').html('회원님께서는 아직 진행중인 교환/반품 내역이 있어 탈퇴를 하실 수 없습니다.<br />교환/반품 내역을 확인하세요.');
+			$('#aFailure').attr('href', 'http://lecs.nike.co.kr/mypage/order/listApplyClaim.lecs');
+			popupShow("popupQuitFailure");
+		} else if(result.memberScsnType == "3") { // 탈퇴불가(상담)
+			$('#pFailure').html('회원님께서는 진행중인 상담 내역이 있어 탈퇴를 하실 수 없습니다.<br />고객센터로 연락 주시면 보다 상세한 안내를 받으실 수 있습니다.');
+			$('#aFailure').attr('href', 'javascript:firstsetting();');
+			popupShow("popupQuitFailure");
+		} else if(result.memberScsnType == "4") { // 탈퇴불가(예치금)
+			$('#pFailure').html('고객님의 계정에 고객예치금/보관금이 존재하여 회원탈퇴를 하실 수 없습니다. 고객센터로 연락 주시면 보다 상세한 안내를 받으실 수 있습니다.');
+			$('#aFailure').attr('href', 'http://lecs.nike.co.kr/mypage/mypage.lecs');
+			popupShow("popupQuitFailure");
+		}
+	}
+	function addressSearchkey(){
+		if(event.keyCode==13){
+			addressSearchLayer();
+		}
+	}
+	function addressSearchLayer(){
+		
+		$("#addressSearch").hide();
+		
+		if($("#addressDong").val().length >= 2){
+			
+			var addressHtml = "";
+			var i=0;
+			var param = "addressText="+$("#addressDong").val(); //
+				ajaxCall("post", '/member/addressSearch.lecs', param, "json", callback = function(data) {
+					addressHtml += "<table>";
+					addressHtml += "<colgroup>";
+					addressHtml += "<col width='170' />";
+					addressHtml += "<col />";
+					addressHtml += "</colgroup>";
+					$(data).each(function() {
+					if ( this.postAddress.length > 0) {
+						addressHtml += "<tr>";
+						i=i+1;
+						addressHtml += "<td><a href='javascript:addressListClick(\""+this.postAddressForDelivery+"\","+this.postNo+");' id='addressList"+i+"'>";
+						addressHtml += this.postAddress;+"</a></td>";
+						addressHtml += "<td>"+this.postNoDisplay+"</td>";
+						addressHtml += "</tr>";
+						$("#addressSearch").show();
+					}else{
+						$("#addressSearch").hide();
+						alert("결과가 없습니다.");
+					}
+					} );
+					addressHtml += "<table>";
+					$("#addressSearch").html(addressHtml);
+				});
+				
+		}else{
+			alert("동(읍/면)을 2자 이상 입력 검색 하세요.\n(직접 주소를 입력하시면 처리되지 않습니다.)");
+		}
+	}
+	function updateAddressSearchkey(){
+		if(event.keyCode==13){
+			updateAddressSearchLayer();
+		}
+	}
+	function updateAddressSearchLayer(){
+		
+		$("#updateAddressSearch").hide();
+		
+		if($("#updateAddressDong").val().length >= 2){
+			
+			var addressHtml = "";
+			var i=0;
+			var param = "addressText="+$("#updateAddressDong").val(); //
+				ajaxCall("post", '/member/addressSearch.lecs', param, "json", callback = function(data) {
+					addressHtml += "<table>";
+					addressHtml += "<colgroup>";
+					addressHtml += "<col width='170' />";
+					addressHtml += "<col />";
+					addressHtml += "</colgroup>";
+					$(data).each(function() {
+					if ( this.postAddress.length > 0) {
+						addressHtml += "<tr>";
+						i=i+1;
+						addressHtml += "<td><a href='javascript:updateAddressListClick(\""+this.postAddressForDelivery+"\","+this.postNo+");' id='updateAddressList"+i+"'>";
+						addressHtml += this.postAddress;+"</a></td>";
+						addressHtml += "<td>"+this.postNoDisplay+"</td>";
+						addressHtml += "</tr>";
+						$("#updateAddressSearch").show();
+					}else{
+						$("#updateAddressSearch").hide();
+						alert("결과가 없습니다.");
+					}
+					} );
+					addressHtml += "<table>";
+					$("#updateAddressSearch").html(addressHtml);
+				});
+			
+		}else{
+			alert("동(읍/면)을 2자 이상 입력 검색 하세요.\n(직접 주소를 입력하시면 처리되지 않습니다.)");
+		}
+	}
+	function addressListClick(postAddress,step){
+		$("#addressText").val(postAddress);
+		$("#PostNo").val(step);
+		$("#addressSearch").hide();
+	}
+	function updateAddressListClick(postAddress,step){
+		$("#updateAddressText").val(postAddress);
+		$("#PostNo").val(step);
+		$("#updateAddressSearch").hide();
+	}
+	function deliveryInsert(){
+		var DeliveryCableTelephoneRegionNo_obj = document.getElementById("DeliveryCableTelephoneRegionNo");
+		var DeliveryCableTelephoneExchange_obj = document.getElementById("DeliveryCableTelephoneExchange");
+		var DeliveryCableTelephoneEndNo_obj = document.getElementById("DeliveryCableTelephoneEndNo");
+		//2016.05.26 휴대폰추가 
+		var DeliveryCellExchangeNo_obj = document.getElementById("DeliveryCellExchangeNo");
+		var DeliveryCellEndNo_obj = document.getElementById("DeliveryCellEndNo");
+		
+		var frm = document.frmInformation;
+		if($("#DeliveryName").val()=="")
+		{
+	
+			alert("배송지명을 입력해주세요");
+			$("#DeliveryName").focus();
+		}
+		else if($("#RemiteeName").val()=="" )
+		{
+			alert("받는사람을 입력해주세요");
+			 $("#RemiteeName").focus();
+		}
+		else if($("#DeliveryCableTelephoneRegionNo").val()=="" )
+		{
+			alert("지역번호를 입력해주세요");
+			 $("#DeliveryCableTelephoneRegionNo").focus();
+		}
+		else if(!isNumber(DeliveryCableTelephoneRegionNo_obj, "")) {
+			
+			alert("지역번호에 숫자만 입력해 주세요.");
+			 $("#DeliveryCableTelephoneRegionNo").focus();
+		}
+		else if($("#DeliveryCableTelephoneRegionNo").val().length < 2)
+		{
+			alert("지역번호를 정확히 입력해주세요.");
+			 $("#DeliveryCableTelephoneRegionNo").focus();
+		}
+
+		else if($("#DeliveryCableTelephoneExchange").val()=="" )
+		{
+			alert("연락처 앞자리를 입력해주세요");
+			 $("#DeliveryCableTelephoneExchange").focus();
+		}
+		else if(!isNumber(DeliveryCableTelephoneExchange_obj, "")) {
+			alert("연락처 앞자리에 숫자만 입력해 주세요.");
+			 $("#DeliveryCableTelephoneExchange").focus();
+		}
+		else if($("#DeliveryCableTelephoneExchange").val().length < 3)
+		{
+			alert("연락처 앞자리를 정확히 입력해주세요.");
+			 $("#DeliveryCableTelephoneExchange").focus();
+		}
+		else if($("#DeliveryCableTelephoneEndNo").val()=="" )
+		{
+			alert("연락처 뒷자리를 입력해주세요");
+			 $("#DeliveryCableTelephoneEndNo").focus();
+		}
+		
+		else if(!isNumber(DeliveryCableTelephoneEndNo_obj, "")) {
+			alert("연락처 뒷자리에 숫자만 입력해 주세요.");
+			 $("#DeliveryCableTelephoneEndNo").focus();
+		}
+		else if($("#DeliveryCableTelephoneEndNo").val().length < 4)
+		{
+			alert("연락처 뒷자리를 정확히 입력해주세요.");
+			 $("#DeliveryCableTelephoneEndNo").focus();
+		}
+		else if($("#DeliveryCellSectionNo").val()=="" )
+		{
+			alert("휴대폰 국번을 선택해 주세요.");
+			 $("#DeliveryCellSectionNo").focus();
+		}
+
+		else if($("#DeliveryCellExchangeNo").val()=="" )
+		{
+			alert("휴대폰 앞자리를 입력해주세요");
+			 $("#DeliveryCellExchangeNo").focus();
+		}
+		else if(!isNumber(DeliveryCellExchangeNo_obj, "")) {
+			alert("휴대폰 앞자리에 숫자만 입력해 주세요.");
+			 $("#DeliveryCellExchangeNo").focus();
+		}
+		else if($("#DeliveryCellExchangeNo").val().length < 3)
+		{
+			alert("휴대폰 앞자리를 정확히 입력해주세요.");
+			 $("#DeliveryCellExchangeNo").focus();
+		}
+		else if($("#DeliveryCellEndNo").val()=="" )
+		{
+			alert("휴대폰 뒷자리를 입력해주세요");
+			 $("#DeliveryCellEndNo").focus();
+		}
+		else if(!isNumber(DeliveryCellEndNo_obj, "")) {
+			alert("휴대폰 뒷자리에 숫자만 입력해 주세요.");
+			 $("#DeliveryCellEndNo").focus();
+		}
+		else if($("#DeliveryCellEndNo").val().length < 4)
+		{
+			alert("휴대폰 뒷자리를 정확히 입력해주세요.");
+			 $("#DeliveryCellEndNo").focus();
+		}
+		else{
+			if($("#PostNo").val()==null || $("#PostNo").val()==""){
+				alert("우편주소 검색을 하셔야 합니다.");
+			}else{
+				frm.informaionOrder.value = "2";
+				InformationFormSumit();
+			}
+		}
+	}
+	function deliveryUpdateFormShow(DeliveryName,RemiteeName,DCTRegionNo,DCTExchange,DCTEndNo,address,PostNo,DetailAddress,stnmAddress,stnmPostNo,stnmDetailAddress,addrChocSctCd,addrChkRsltCd,deliverySerialNumber,cellSectionNo,cellTelephoneExchange,cellEndNo){
+		showDim();
+		$("#updateDeliveryName").val(DeliveryName);
+		$("#updateRemiteeName").val(RemiteeName);
+		$("#updateDeliveryCableTelephoneRegionNo").val(DCTRegionNo);
+		$("#updateDeliveryCableTelephoneExchange").val(DCTExchange);
+		$("#updateDeliveryCableTelephoneEndNo").val(DCTEndNo);
+		$("#updateAddressText").val(address);
+		$("#updateDetailAddressText").val(DetailAddress);
+		$("#deliverySerialNumber").val(deliverySerialNumber);
+		
+		$("#post_addrSumUpdate").val(address+' '+DetailAddress);
+		$("#post_addrroadSumUpdate").val(stnmAddress+' '+stnmDetailAddress);
+		$("#updateStnmPostNo").val(stnmPostNo);
+		$("#updateStnmAddressText").val(stnmAddress);
+		$("#updateStnmDetailAddressText").val(stnmDetailAddress);
+		$("#updatePostNo").val(PostNo);
+		$("#updateAddressText").val(address);
+		$("#updateDetailAddressText").val(DetailAddress);
+		$("#updateAddrChocSctCd").val(addrChocSctCd);
+		$("#updateAddrChkRsltCd").val(addrChkRsltCd);
+		
+		$("#updateDeliveryCellSectionNo").val(cellSectionNo);
+		$("#updateDeliveryCellExchangeNo").val(cellTelephoneExchange);
+		$("#updateDeliveryCellEndNo").val(cellEndNo);
+		
+		document.getElementById('deliveryUpdate').style.display= "block";
+//      $("#deliveryUpdate").show();
+	}
+	function deliveryUpdate(){
+		var DeliveryCableTelephoneRegionNo_obj = document.getElementById("updateDeliveryCableTelephoneRegionNo");
+		var DeliveryCableTelephoneExchange_obj = document.getElementById("updateDeliveryCableTelephoneExchange");
+		var DeliveryCableTelephoneEndNo_obj = document.getElementById("updateDeliveryCableTelephoneEndNo");
+		
+		var DeliveryCellSectionNo_obj = document.getElementById("updateDeliveryCellSectionNo");
+		var DeliveryCellExchangeNo_obj = document.getElementById("updateDeliveryCellExchangeNo");
+		var DeliveryCellEndNo_obj = document.getElementById("updateDeliveryCellEndNo");
+		
+		var frm = document.frmInformation;
+		if($("#updateDeliveryName").val()=="")
+		{
+	
+			alert("배송지명을 입력해주세요");
+			$("#updateDeliveryName").focus();
+		}
+		else if($("#updateRemiteeName").val()=="" )
+		{
+			alert("받는사람을 입력해주세요");
+			 $("#updateRemiteeName").focus();
+		}
+		else if($("#updateDeliveryCableTelephoneRegionNo").val()=="" )
+		{
+			alert("지역번호를 입력해주세요");
+			 $("#updateDeliveryCableTelephoneRegionNo").focus();
+		}
+		else if(!isNumber(DeliveryCableTelephoneRegionNo_obj, "")) {
+			
+			alert("지역번호에 숫자만 입력해 주세요.");
+			 $("#updateDeliveryCableTelephoneRegionNo").focus();
+		}
+		else if($("#updateDeliveryCableTelephoneRegionNo").val().length < 2)
+		{
+			alert("지역번호를 정확히 입력해주세요.");
+			 $("#updateDeliveryCableTelephoneRegionNo").focus();
+		}
+
+		else if($("#updateDeliveryCableTelephoneExchange").val()=="" )
+		{
+			alert("연락처 앞자리를 입력해주세요");
+			 $("#updateDeliveryCableTelephoneExchange").focus();
+		}
+		else if(!isNumber(DeliveryCableTelephoneExchange_obj, "")) {
+			alert("연락처 앞자리에 숫자만 입력해 주세요.");
+			 $("#updateDeliveryCableTelephoneExchange").focus();
+		}
+		else if($("#updateDeliveryCableTelephoneExchange").val().length < 3)
+		{
+			alert("연락처 앞자리를 정확히 입력해주세요.");
+			 $("#updateDeliveryCableTelephoneExchange").focus();
+		}
+		else if($("#updateDeliveryCableTelephoneEndNo").val()=="" )
+		{
+			alert("연락처 뒷자리를 입력해주세요");
+			 $("#updateDeliveryCableTelephoneEndNo").focus();
+		}
+		
+		else if(!isNumber(DeliveryCableTelephoneEndNo_obj, "")) {
+			alert("연락처 뒷자리에 숫자만 입력해 주세요.");
+			 $("#updateDeliveryCableTelephoneEndNo").focus();
+		}
+		else if($("#updateDeliveryCableTelephoneEndNo").val().length < 4)
+		{
+			alert("연락처 뒷자리를 정확히 입력해주세요.");
+			 $("#updateDeliveryCableTelephoneEndNo").focus();
+		}
+		else if($("#updateDeliveryCellSectionNo").val()=="" )
+		{
+			alert("휴대폰 국번을 입력해주세요");
+			 $("#updateDeliveryCellSectionNo").focus();
+		}
+		else if(!isNumber(DeliveryCellSectionNo_obj, "")) {
+			
+			alert("휴대폰 국번에 숫자만 입력해 주세요.");
+			 $("#updateDeliveryCellSectionNo").focus();
+		}
+		else if($("#updateDeliveryCellSectionNo").val().length < 2)
+		{
+			alert("휴대폰 국번을 정확히 입력해주세요.");
+			 $("#updateDeliveryCellSectionNo").focus();
+		}
+
+		else if($("#updateDeliveryCellExchangeNo").val()=="" )
+		{
+			alert("휴대폰 앞자리를 입력해주세요");
+			 $("#updateDeliveryCellExchangeNo").focus();
+		}
+		else if(!isNumber(DeliveryCellExchangeNo_obj, "")) {
+			alert("휴대폰 앞자리에 숫자만 입력해 주세요.");
+			 $("#updateDeliveryCellExchangeNo").focus();
+		}
+		else if($("#updateDeliveryCellExchangeNo").val().length < 3)
+		{
+			alert("휴대폰 앞자리를 정확히 입력해주세요.");
+			 $("#updateDeliveryCellExchangeNo").focus();
+		}
+		
+		else if($("#updateDeliveryCellEndNo").val()=="" )
+		{
+			alert("휴대폰 뒷자리를 입력해주세요");
+			 $("#updateDeliveryCellEndNo").focus();
+		}
+		else if(!isNumber(DeliveryCellEndNo_obj, "")) {
+			alert("휴대폰 뒷자리에 숫자만 입력해 주세요.");
+			 $("#updateDeliveryCellEndNo").focus();
+		}
+		else if($("#updateDeliveryCellEndNo").val().length < 4)
+		{
+			alert("휴대폰 뒷자리를 정확히 입력해주세요.");
+			 $("#updateDeliveryCellEndNo").focus();
+		}
+		
+		else{
+			frm.informaionOrder.value = "3";
+			InformationFormSumit();
+			}
+	}
+	function addressCheck(){
+		var obj = document.all["addressCheck"]
+		var chkCnt = 0;
+		if(obj.length > 0){ // 여러건
+			for(var i=0; i<obj.length; i++){
+				if(obj[i].checked){
+					chkCnt++;
+				}
+			}
+		}else{   // 한건
+			if(obj.checked){
+				chkCnt++;
+			}
+		}
+	
+		if(chkCnt<1){
+			alert("삭제할 주소를 선택해 주세요.");
+		}else{
+			if(confirm("삭제 하시겠습니까?")){
+				var frm = document.frmInformation;
+				frm.informaionOrder.value = "4";
+				InformationFormSumit();
+			}
+		}
+	}
+	
+	function checkDigitOnly(digitChar, space) {
+		if(!space){
+			if ( digitChar == null || digitChar=='' ){
+				return false ;
+			}
+		}
+	
+		for(var i=0;i<digitChar.length;i++){
+			var c=digitChar.charCodeAt(i);
+			if( !(  0x30 <= c && c <= 0x39 ) ) {
+				return false ;
+			}
+		 }
+	
+		return true ;
+	}
+
+	function checkAlphabetOnly(value) {
+		var reg1 = /^[a-zA-Z]*$/;
+		
+		if (reg1.test(value)) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	function wordCheck(obj){
+		var pattKor = /[ㄱ-ㅎ가-힣]/gi;
+		var pattSpe = /[\~\!\@#$%\^\&\*\(\)\+\|\~\=\\\{\}\[\]\:\;\<\>\?\,\.\`\ \/]/gi;
+		
+		if(obj.value.match(pattSpe)!= null) {
+			alert('특수문자는 입력하실 수 없습니다.');
+			obj.focus();
+			obj.value = "";
+			return false;
+		} else if(obj.value.match(pattKor)!= null) {//null이면 한글없음
+			alert('한글은 입력하실 수 없습니다.');
+			obj.focus();
+			obj.value = "";
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
+	function checkEmailType(emailAddress) {
+
+		re = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+		
+		if (!re.test(emailAddress)) {
+			alert("정확한 이메일을 입력해 주세요.");
+			$('#email1Address').val('');
+			$('#email1Address').focus();
+			return false;
+		}
+		
+		return true;
+	}
+	
+	function validate(gubun) {
+		if ($("#"+gubun).val() === '') {
+			alert("이메일을 입력해 주세요");
+			return false;
+		}
+		// 이메일 중복체크 전 형식 체크
+		if (!checkEmailType($("#"+gubun).val())) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	function checkEmail(gubun) {
+
+		if (!validate(gubun)) {
+			return;
+		}
+		
+		if(checkedEmail(gubun)){
+			
+			var param = "email1Address="+$("#"+gubun).val();
+			var email = $("#"+gubun).val();
+			
+			ajaxCall("post", '/member/emailDuplicationCheckAjax.lecs', param, "json", callback = function(data) {
+				$("#validEmail").hide();
+				$("#notValidEmail").hide();
+				$("#changeEmailPop").hide();
+				if(data[0] == null || data[0] == "" || data[0] === 'AVAILABLE') {
+					$("#validEmailAddr").html(email);
+					$("#validEmail").show();
+				} else {
+					$("#notValildEmailAddr").html(email);
+					$("#notValidEmail").show();
+				}
+			});
+		}else{
+			return;
+		}
+		
+		
+	}
+	
+	function useEmail(value) {
+		
+		if("Y" == value) {
+			$("#insertEmail").val($("#validEmailAddr").html());
+			splitEmail();
+			$("#checkEmail1").val("");
+			$("#validEmailAddr").html("");
+			$("#notValildEmailAddr").html("");
+			$("#validEmail").hide();
+			$("#changeEmailPop").hide();
+		}else{
+			// 롤백
+			$("#insertEmail").val($("#orgEmail").val()+"@"+$("#orgAddress").val());
+			$("#validEmail").hide();
+		}
+		hideDim();
+		$("#validEmailAddr").html("");
+		$("#notValildEmailAddr").html("");
+	}
+	
+	function cancelEmail(id) {
+		// 롤백
+		hideDim();
+		$("#insertEmail").val($("#orgEmail").val()+"@"+$("#orgAddress").val());
+		$("#checkEmail1").val("");
+		$("#reInputEmail").val("");
+		$("#reInputAddr").val("");
+		$("#validEmailAddr").html("");
+		$("#notValildEmailAddr").html("");
+		$("#"+id).hide();
+	}
+	
+	function changeEmailPop() {
+		//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.14... Cesil Start  --
+		s.manageVars("clearVars"); 
+		var chl = "Member>ModifiInfo>EmailChange(L)";
+		var pgNm = "nikestorekr>" + chl;
+		s.currencyCode="KRW";   
+		s.linkInternalFilters+=",nike.co.kr";
+		s.pageName=pgNm;
+		s.channel="Member";
+		s.prop2="nikestorekr";
+		s.prop10="commerce";
+		s.prop12=$("#sportsProp").val();
+		s.prop14="kr";
+		s.prop15="ko";
+		s.prop17="nikestorekr:Member";  
+		 s.eVar4 = "logged in"; 
+		void(s.t());
+		if(prop4.indexOf("E-mail")==-1){
+			if(prop4.length>0)  prop4 += ":";
+				prop4 += "E-mail";
+		}
+		//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.14... Cesil End  --
+		
+		showDim();
+		$("#changeEmailPop").show();
+	}
+	function splitEmail(){
+		var str = $("#validEmailAddr").html();
+		$("#email1Address").val(str);
+	}
+	
+	function checkedEmail(gubun){
+		
+		var mail = $("#"+gubun).val();
+		
+		if(mail == "") {
+			alert("이메일을 입력해 주세요.");
+			return false;
+		}
+		if (mail.indexOf(" ") != -1){
+			alert("이메일 형식이 올바르지않습니다.");
+			return false;
+		}
+		var re=/^[a-z A-Z 0-9\-_.]+@[a-z A-Z 0-9\-]+(\.[a-z A-Z 0-9 \-]+)+$/;
+		if (!mail.match(re)){
+			alert("이메일 형식이 올바르지않습니다.");
+			return false;
+		}
+		
+		return true;
+	}
+	
+	function checkAge(){
+		  
+		if($("#birthdayDurationTimeYear").val() != ""){
+			var today = new Date();
+			var nowYear = today.getFullYear();
+			var diffAge = parseInt(nowYear) - parseInt($("#birthdayDurationTimeYear").val());
+
+			if(diffAge < 14){
+			   alert("만 14세 미만의 미성년자는 회원가입을 하실 수 없습니다. 자세한 회원가입 정책은 이용약관에서 확인하실 수 있습니다.");
+			   $("#birthdayDurationTimeYear > option[value='']").attr("selected", "true");
+			}
+		}
+	}
+	
+	function fn_valCopy(mode){
+		if(mode=='update'){
+			
+			$("#post_addrSumUpdate").val($("#post_addrSum").val());
+			$("#post_addrroadSumUpdate").val($("#post_addrroadSum").val());
+			$("#updateStnmPostNo").val($("#stnm_post_no").val());
+			$("#updateStnmAddressText").val($("#stnm_post_addr").val());
+			$("#updateStnmDetailAddressText").val($("#stnm_dtl_addr").val());
+			$("#updatePostNo").val($("#post_no").val());
+			$("#updateAddressText").val($("#post_addr").val());
+			$("#updateDetailAddressText").val($("#dtl_addr").val());
+			$("#updateAddrChocSctCd").val($("#addr_choc_sct_cd").val());
+			$("#updateAddrChkRsltCd").val($("#addr_chk_rslt_cd").val());
+		}else{
+			$("#post_addrSumAdd").val($("#post_addrSum").val());
+			$("#post_addrroadSumAdd").val($("#post_addrroadSum").val());
+			$("#stnmPostNo").val($("#stnm_post_no").val());
+			$("#stnmAddressText").val($("#stnm_post_addr").val());
+			$("#stnmDetailAddressText").val($("#stnm_dtl_addr").val());
+			$("#PostNo").val($("#post_no").val());
+			$("#addressText").val($("#post_addr").val());
+			$("#DetailAddressText").val($("#dtl_addr").val());
+			$("#addrChocSctCd").val($("#addr_choc_sct_cd").val());
+			$("#addrChkRsltCd").val($("#addr_chk_rslt_cd").val());
+		}
+	}
+	
+	//나이키 사이트 카탈리스트 2차...2013.12.05 Cesil..생년월일 변경 이벤트
+	function checkProp4Birth(){
+		if(prop4.indexOf("date of birth")==-1){
+			if(prop4.length>0)  prop4 += ":";
+			prop4 += "date of birth";
+		}
+	}
+	
+</script>
+
+
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '766707243381793');
+fbq('track', 'PageView');</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=766707243381793&ev=PageView&noscript=1"
+/></noscript>
+</head>
+
+<body>      
+	
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/link.js"></script>
+
+<!-- 나이키리뉴얼[S] -->
+<link rel="stylesheet" type="text/css"  href="http://lecs.nike.co.kr/NKS1/css/global_renewal.css"/>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/global_renewal.js"></script>
+<!-- 나이키리뉴얼[E] -->
+
+<!-- 20160503 자동 검색 쿠키 -->
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery.json-2.2.js"></script>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/cookie.js"></script>
+<!-- 20160503 자동 검색 쿠키 -->
+
+<!-- renewal phase2 -->
+	<link rel="stylesheet" type="text/css" href="../css/global_renewal_phase2.css" />
+
+<script language="javascript">
+
+$(document).ready(function() {
+	var now1955 = new Date();
+	var todayUTC = new Date(Date.UTC(now1955.getFullYear(), now1955.getMonth(), now1955.getDate()));
+	var m1955 = todayUTC.toISOString().slice(0, 10).replace(/-/g, '');
+	if (parseInt(m1955) >= 20160628) {
+		$("#converse").css("display","");
+	}
+	
+		$('.global_login').hide();
+		$('.global_user_menu').removeClass('active').hide();
+		$('.global_login_window').show();
+		$('.global_login_modal').hide();
+	
+
+	//최근검색어 ON/OFF 상태
+	if(!$.isEmptyObject($.cookie('goodsSchCookieStatus'))){
+		$("#freq_btn_fn_off_01").hide();
+		if($.cookie('goodsSchCookieStatus') == "ON"){
+			$(".freq_lst ul").show();
+			$("#freq_btn_on").show();
+			$("#freq_btn_off").hide();
+			if($.isEmptyObject($.cookie('goodsSchCookie'))){
+				$("#freq_btn_fn_off_01").show();
+			}
+		}
+		if($.cookie('goodsSchCookieStatus') == "OFF"){
+			$("#freq_btn_on").hide();
+			$("#freq_btn_off").show();
+		}
+	}
+	if($.isEmptyObject($.cookie('goodsSchCookieStatus'))){
+		$.cookie('goodsSchCookieStatus',"ON",{ expires: 10, path: '/', domain: '.nike.co.kr' });
+	};
+});
+
+//window.name = 'nikeWindow'; //로그인시 팝업에서 사용
+
+//해당 URL로 이동
+function fn_goPage (url, target) {
+
+	var uri = 'http://www.nike.co.kr/'+url;
+
+	if(uri != '' && (typeof(target) == 'undefined' || target == '_self' || target == '')) {
+		location.href = uri;
+	} else if(uri != '' && (typeof(target) != 'undefined' && target == '_blank')) {
+		window.open(uri, "", "");
+	} else if(uri != '' && (typeof(target) != 'undefined' && target == '_top')) {
+		top.window.location.href = uri;
+	} else if(uri != '' && (typeof(target) != 'undefined' && target == '_parent')) {
+		parent.window.location.href = uri;
+	}
+}
+
+var login_click_yn = false; /*더블클릭방지체크*/
+
+//휴면계정여부 체크
+function restAccountCheck(flag){
+	var url1 = (parent.document.location).toString();
+
+	if($("#returnURL_1").val() == null || $("#returnURL_1").val() == 'undefined' || $("#returnURL_1").val() == ""){
+		$("#returnURL_1").val(url1);
+	}
+	
+	var form = $('form#loginForm_' + flag);
+	if($('#loginId_'+flag).val() == ""){
+		alert("아이디를 입력해주세요.");
+		$('#loginId_'+flag).focus();
+		login_click_yn = false;
+		return;
+	}else if($('#password_'+flag).val() == ""){
+		alert("패스워드를 입력해주세요.");
+		$('#password_'+flag).focus();
+		login_click_yn = false;
+		return;
+	}
+	
+	/*더블클릭방지체크*/
+	if(login_click_yn == false){
+		login_click_yn = true;	
+	}else{
+		return;
+	}
+	
+	//휴면계정여부 조회
+	$.ajax({
+		type: 'post',
+		url: '/login/getRestAccountCheckAjax.lecs',
+		data: $('form#loginForm_'+flag).serialize(),
+		dataType: 'json',
+		cache: false,
+		success: function(result) {
+			if (result.message === 'O') { //회원정보가 있을시..
+				if(result.data.drmcProcYn === 'Y'){ //휴면계정이면..
+					// 휴면 계정 활성화 Page------>
+					showRestoreMember(result.data.prsnInfoAvalTermCode, flag);
+					// <-------휴면계정 활성화 Page
+				}else{ //휴면계정이 아니면..
+					login(flag);
+				}
+			} else { //회원정보가 없을시..
+				alert("회원 아이디 또는 패스워스가 \n일치하지 않습니다. \n확인 후 다시 입력해 주세요");
+				login_click_yn = false;/*더블클릭방지체크*/
+				location.reload();
+			}
+		},
+		fail: function(){
+			alert("오류가 발생했습니다.");
+			login_click_yn = false;/*더블클릭방지체크*/
+			location.reload();
+		}
+	});
+	
+}
+
+//복원페이지로 이동
+function showRestoreMember(prsnInfoAvalTermCode, flag){		
+	var param = "?lpsYn=Y&loginid="+$("#loginId_"+flag).val() + "&idSave="+ $('input:checkbox[name="idSave"]:checked').val() + "&returnurl="+encodeURIComponent($('#returnURL_1').val());
+	var restoreParam = "https://secure.nike.co.kr/login/getMemberRestore.lecs" + param;
+
+	var params = "?returnurl=" + encodeURIComponent(restoreParam) ;
+	
+	var secureYn = "";
+	
+	if(secureYn=="Y"){
+		gateUrl = "https://secure.nike.co.kr//member/gate.lecs" + params ;
+	}else{
+		gateUrl = 'http://lecs.nike.co.kr//member/gate.lecs' + params ;
+	}
+	
+	location.href = gateUrl;
+}
+
+function login(flag){
+	var url1 = (parent.document.location).toString();
+
+	if($("#returnURL_1").val() == null || $("#returnURL_1").val() == 'undefined' || $("#returnURL_1").val() == ""){
+		$("#returnURL_1").val(url1);
+	}
+	
+	var form = $('form#loginForm_' + flag);
+	if($('#loginId_'+flag).val() == ""){
+		login_click_yn = false; /*더블클릭방지해제*/
+		alert("아이디를 입력해주세요.");
+		$('#loginId_'+flag).focus();
+		return;
+
+	}else if($('#password_'+flag).val() == ""){
+		login_click_yn = false; /*더블클릭방지해제*/
+		alert("패스워드를 입력해주세요.");
+		$('#password_'+flag).focus();
+		return;
+
+	}
+
+	$('#lpsYn').val("Y");
+
+	IframeSubmitter.submit(form.get(0), "handleLoginUser", "submitFrame");
+
+}
+
+
+function handleLoginUser(result) {
+	var params = "" ;
+	var returnurl = result.returnUrl ;
+	var lpsYn = result.lpsYn ;
+	var secureYn = "";
+
+	if ( returnurl != null && returnurl !="" ) {
+		params = "?returnurl=" + encodeURIComponent(returnurl) ;
+	}
+
+	if (result.message == 0) {
+
+		if(secureYn=="Y"){
+			gateUrl = "https://secure.nike.co.kr//member/gate.lecs" + params ;
+		}else if(lpsYn == "Y"){
+			gateUrl = 'http://lecs.nike.co.kr//member/gate.lecs' + params ;
+		}else{
+			gateUrl = 'http://www.nike.co.kr//login/gate.lecs' + params ;
+		}
+		location.href = gateUrl;
+
+	} else {
+		login_click_yn = false;/*더블클릭방지해제*/
+		alert("회원ID 또는 패스워드가 일치하지 않습니다. 확인 후 다시 입력해 주세요.");
+
+	}
+}
+function fn_loginFlag(type)
+{
+	showDim();
+
+	var frameLogin = document.getElementById("frameLogin");
+	$("#login_Pop").css({"visibility": "hidden"});
+	$("#frameLogin").src="";
+	frameLogin.src="https://secure.nike.co.kr/member/showLogin.lecs?flag="+type;
+	document.getElementById("login_Pop").style.visibility="visible";
+	$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+}
+
+function keypressSearch(event, i, type) {
+	if (event.keyCode == '13') {
+		if(i == "findId"){
+			findId(type);
+		}else if(i == "findPasswd"){
+			findPasswd('findPasswdType1Form');
+		}else{
+			restAccountCheck(i);
+		}
+	}
+}
+
+function openLogin(){
+	 loginType("A","");
+}
+
+function loginType(arg,url){
+
+	showDim();
+
+	var frameLogin = document.getElementById("frameLogin");
+	$("#login_Pop").css({"visibility": "hidden"});
+	$("#frameLogin").src="";
+
+	// 마이페이지 메뉴에서 로그인시 메인화면으로 이동(비회원 조회중 로그인시 문제가 됨), 이외의 경우는 returnUrl을 넘기지 않아 페이지 리로딩 처리
+	returnUrl = (document.location).toString().indexOf("/mypage/") != -1 ? "&returnUrl=http://www.nike.co.kr/" : "";
+
+	if (arg=="A"){
+		frameLogin.src="https://secure.nike.co.kr/member/showLogin.lecs?lpsYn=Y" + returnUrl;
+	}else if(arg=="S"){
+		frameLogin.src="https://secure.nike.co.kr/"+url;
+	}
+
+	document.getElementById("login_Pop").style.visibility="visible";
+	$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+}
+
+function promotionCode(){
+	//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil Start  --
+	s.manageVars("clearVars");
+	var chl = "Myshop>PromotionCode>Register(L)";
+	var pgNm = "nikestorekr>" + chl;
+	s.currencyCode="KRW";
+	s.linkInternalFilters+=",nike.co.kr";
+	s.pageName=pgNm;
+	s.channel="Myshop";
+	s.prop2="nikestorekr";
+	s.prop10="commerce";
+	s.prop14="kr";
+	s.prop15="ko";
+	s.prop17="nikestorekr:Member";
+	 s.eVar4 = "logged in"; 
+	void(s.t());
+	//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil Start  --
+	showDim();
+	$("#tempCheckSubmitVal").val("");
+	$("#promotionCode").show();
+}
+function promotionClose(){
+	hideDim();
+	$("#promotionCode").hide();
+}
+
+//앞으로 로그인과 작업 -> x버튼이나 로그인되었을경우
+function loginClose(){
+	$("#login_Pop").css({"visibility": "hidden"});
+	$("#frameLogin").src="";
+}
+
+//로고Click
+function goMain(){
+	location.href = "http://www.nike.co.kr/";
+}
+
+//회원정보관리
+function goModify(){
+	//alert();
+
+	location.href = "https://secure.nike.co.kr/member/information.lecs";
+}
+//로그아웃
+function goLogOut(){
+	//alert();
+	location.href = "https://secure.nike.co.kr/member/showLogout.lecs";
+}
+
+function showDim()
+{
+
+	$(".global_login_modal").hide();
+	$('.global_right_nav').find('.global_login a').removeClass('active');
+	
+	// <-- 로긴팝업시 백그라운드 비활성화 효과   start
+	var loginBack = document.getElementById("login_background");
+
+	var totalHeight = $(window).height();
+
+	
+	loginBack.style.height=totalHeight+100+"px";
+	loginBack.style.visibility="visible";
+	//	비활성화 효과  end	-->
+
+}
+function hideDim()
+{
+  $('#login_background').css({"visibility": "hidden"});
+}
+
+//도로검색팝업추가
+function fn_rodAddr(no,mode)
+{
+	if(mode != "undefined" && mode != null && mode != "" ){
+		window.open('/mypage/popupRodAddr.lecs?display='+no+"&mode="+mode,'','scrollbars=yes,width=806,height=744');
+	}
+	else{
+		window.open('/mypage/popupRodAddr.lecs?display='+no,'','scrollbars=yes,width=806,height=744');
+	}
+}
+
+//회원가입 레이어
+function goJoinView() {
+	
+	$(".global_login_modal").hide();
+	$('.global_right_nav').find('.global_login a').removeClass('active');
+
+	var loginBack = document.getElementById("login_background");
+	loginBack.style.height=document.body.clientHeight+100+"px";
+	loginBack.style.visibility="visible";
+	//	비활성화 효과  end	-->
+
+	var frameLogin = document.getElementById("frameLogin");
+	$("#login_Pop").css({"visibility": "hidden"});
+	$("#frameLogin").src="";
+
+	if(location.href.indexOf("/secure.")!=-1){
+		frameLogin.src="https://secure.nike.co.kr/member/joinView.lecs?secureYn=Y";
+	}else{
+		frameLogin.src="https://secure.nike.co.kr/member/joinView.lecs";
+	}
+
+	document.getElementById("login_Pop").style.visibility="visible";
+	$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+	//location.href = 'https://secure.nike.co.kr//member/joinView.lecs' ;
+}
+
+function callMark(){
+
+	
+
+	var url = "http://www.nike.co.kr/display/displayShop.lecs?influx_channel_no=111528";
+	var title = "Nike 나이키닷컴";
+
+	if(window.sidebar){ //firefox
+
+		window.sidebar.addPanel(title, url, "");
+
+	}else if(window.opera && window.print){ // opera
+
+		var elem = document.createElement('a');
+		elem.setAttribute('href', url);
+		elem.setAttribute('title', title);
+		elem.setAttribute('rel', 'sidebar');
+		elem.click();
+
+	}else if(document.all){ //le
+
+		window.external.AddFavorite(url, title);
+
+	}
+
+	
+
+	ajaxCall("post", "http://lecs.nike.co.kr/member/addFavoriteMailAjax.lecs", "", "json", callback = function(data) {
+
+	});
+}
+
+	//20160503 자동 검색 script 추가
+	$(function(){
+		$('body').click(function(){
+			$('.global_search_box').find('.global_search_list').hide();
+			$('.global_search_freq').addClass('off');
+		});
+		
+		$('#research').click(function(){
+			//공백일때만 최근검색어
+			if("" == $('#research').val()){
+				//쿠기에 검색어가 존재할경우 
+				if(!$.isEmptyObject($.cookie('goodsSchCookie'))){
+					if($.cookie('goodsSchCookieStatus') == "ON"){
+						fn_cookieSchArray(false);
+					}
+				}
+				if("none" == $(".global_login_modal").css("display")){
+					$('.global_search_box').find('.global_search_list').hide();
+					$('.global_search_box').find('.global_search_freq').removeClass('off');
+				};
+			}else{
+				fn_autoSch();
+			}
+			return false;
+		});
+		$('.global_search_box input').focusout(function(){
+	
+		});
+		$('.global_search_box input').keyup(function(event){
+			fn_autoSch();
+		});
+	});
+	
+	//자동완성 레이어
+	function fn_autoSch(){
+		var thisLeng = $("#research").val().length;
+		var val = $("#research").val();
+		var liList = "";
+		
+		if (thisLeng > 0) {
+			//자동완성 검색어 조회
+			$.ajax({
+				type: 'post',
+				url: '/aws/display/getAutocompleteAjax.lecs',
+				data: "research=" + val,
+				dataType: 'json',
+				cache: false,
+				success: function(result) {
+					var cnt = 0;
+					if("none" == $(".global_login_modal").css("display")){
+						if(result.result.length > 0){
+							//검색어 진하게 표시
+							liList += "<ul>";
+							$.each(result.result, function(index, value){
+								if(value.totalcount > 0){
+									$.each(value.items, function(index, value){
+										// 10개만 
+										if(10 > cnt ){
+											var result = value.hkeyword;
+											liList += "<li><a href=\"javascript:fn_schArrayListClick('"+value.keyword+"')\">" + result + "</a></li>";
+											cnt++;
+										}
+									});
+								}
+							});
+							liList += "</ul>";
+							$(".global_search_list").html(liList);
+							$('.global_search_box').find('.global_search_list').show();
+							
+						}else{
+							$('.global_search_box').find('.global_search_list').hide();
+						}
+						$('.global_search_box').find('.global_search_freq').addClass('off');
+					}
+					
+					if("" == $('#research').val() && "none" == $(".global_login_modal").css("display")){
+						$('.global_search_box').find('.global_search_list').hide();
+						$('.global_search_box').find('.global_search_freq').removeClass('off');
+					}
+				}
+			});
+		}else {
+			if("none" == $(".global_login_modal").css("display")){
+				$('.global_search_box').find('.global_search_list').hide();
+				$('.global_search_box').find('.global_search_freq').removeClass('off');
+			}
+		}
+	}
+	
+	//최근검색어 cookie배열
+	function fn_cookieSchArray(status){
+		
+		var research = $("#research").val();
+		var liList = "";
+		
+		//최초 클릭이 아닌 경우 
+		if(status){
+			//검색 쿠기 없을시 쿠기 생성
+			if($.isEmptyObject($.cookie('goodsSchCookie'))){
+				$.cookie('goodsSchCookie',research,{ expires: 10, path: '/' , domain: '.nike.co.kr'});
+			}else{
+				
+				var removeSch = "";
+				var schlength = $.fn.cookieList("goodsSchCookie").length();
+				// 10개 넘어갔을때 삭제
+				if(schlength > 9){
+					var temp = true;
+					$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+						if(research == value){
+							removeSch = value;
+							temp = false;
+						}
+					});
+					if(temp){
+						$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+							if(index == 0){
+								removeSch = value;
+							}
+						});
+					}
+					$.fn.cookieList("goodsSchCookie").remove(removeSch);
+				}
+				
+				if(9 >= schlength){
+					$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+						if(research == value){
+							$.fn.cookieList("goodsSchCookie").remove(value);
+						}
+					});
+				}
+				$.fn.cookieList("goodsSchCookie").add(research);
+			}
+		}
+		
+		var list = $.fn.cookieList("goodsSchCookie").items();
+		
+		//생성된 배열 역순
+		list.reverse();
+		
+		//태그생성
+		$.each(list, function(index, value){
+			liList +="<li>";
+			liList +="<a href=\"javascript:fn_schArrayListClick('"+value+"')\"><em>"+value+"</em></a>";
+			liList +="<a href=\"javascript:fn_cookieSchRemove('"+value+"')\" class='bt_del'><img src='/NKS1/image/g_bt_x.gif' alt='삭제'></a>";
+			liList +="</li>";
+		});
+		
+		$("#freq_01 ul").html(liList);
+	}
+	
+	//저장된 최근검색어로 검색
+	function fn_schArrayListClick(schName) {
+		if ($.trim(schName).length <= 0) {
+			alert("검색어를 입력해 주세요") ;
+			return;
+		}
+		$("#research").val(schName);
+		if($.cookie('goodsSchCookieStatus') == "ON"){
+			fn_cookieSchArray(true);
+		}
+		searchForm.submit();
+	}
+	
+	//최근검색어 쿠키 전체 삭제
+	function fn_cookieSchArrayRemove(){
+		//쿠키가 존재할때만 클리어
+		if(!$.isEmptyObject($.cookie('goodsSchCookie'))){
+			
+			$.fn.cookieList("goodsSchCookie").clear();
+		}
+		
+		//ul 하위요소 삭제
+		$("#freq_01 ul").empty();
+		
+		//최근 검색어 없음
+		if($.cookie('goodsSchCookieStatus') == "ON"){
+			$("#freq_btn_fn_off_01").show();
+		}else{
+			$("#freq_btn_fn_off_01").hide();
+		}
+	}
+	
+	//최근검색어 쿠키 부분 삭제
+	function fn_cookieSchRemove(schName){
+		//쿠키가 존재할때
+		if(!$.isEmptyObject($.cookie('goodsSchCookie'))){
+			var removeSch = schName;
+			//배열안에 해당 검색어 찾기
+			$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+				if(value == schName){
+					removeSch = value;
+				}
+			});
+			
+			if($.fn.cookieList("goodsSchCookie").length() > 1){
+				$.fn.cookieList("goodsSchCookie").remove(removeSch);
+				$("#research").click();
+			}else{
+				$.fn.cookieList("goodsSchCookie").clear();
+				$("#freq_01 ul").empty();
+				$("#freq_btn_fn_off_01").show();
+			}
+		}
+		
+	}
+	
+	//최근검색어 저장 끄기,켜기
+	function fn_cookieSchOnOff(status){
+		//켜기 freq_btn_status
+		if(status){
+			$.cookie('goodsSchCookieStatus',"ON",{ expires: 10, path: '/', domain: '.nike.co.kr' });
+			$(".freq_lst ul").show();
+			$("#freq_btn_on").show();
+			$("#freq_btn_off").hide();
+			$("#freq_btn_fn_off_01").show();
+		//끄기
+		}else{
+			$.cookie('goodsSchCookieStatus',"OFF",{ expires: 10, path: '/', domain: '.nike.co.kr' });
+			fn_cookieSchArrayRemove();
+			$("#freq_btn_on").hide();
+			$("#freq_btn_off").show();
+		}
+	}
+	//20160513 자동 검색 script 추가
+
+
+</script>
+
+<!-- global_gnb -->
+<nav class="global_gnb">
+	<!-- global_typ_gnb_top -->
+	<div class="global_gnb_top">
+		<div class="global_left_nav">
+			<!-- 151006 수정 -->
+			<a href="http://www.nike.co.kr"><em>Nike</em></a>
+			<a href="http://lecs.nike.co.kr/helpdesk/viewFaq.lecs?ql=1700&faqNo=49339&noticeYN=Y" target="_blank" class="global_nikeplus" id="m1955"><span>Nike+</span></a>
+			<a href="#" onclick="javascript:fn_showDisplayShop({displayNo:'NK1A39'}); return false;" class="global_ico_jordan"><span>조던</span></a>
+			<!-- //151006 수정 -->
+			<!-- 20160425 컨버스 추가 -->
+			<a href="https://www.converse.co.kr" target="_blank" class="global_ico_converse" id="converse" style="display:none"><span>컨버스</span></a>
+		</div>
+		<div class="global_right_nav">
+			<ul>
+				
+					<li class="global_login_window">
+						<a href="#" class="user">
+							<span>
+							이성용 님
+							</span>
+						</a> 
+						<ul class="global_user_menu">
+							<li><a href="javascript:goInfoShop();">마이페이지</a></li>
+							<li><a href="javascript:goModify();">회원정보관리</a></li>
+							<li><a href="javascript:goMyLocker();">위시리스트</a></li>
+							<li><a href="javascript:goLogOut();">로그아웃</a></li>
+						</ul>
+					</li>
+				
+				<li class="global_help">
+					<a href="http://lecs.nike.co.kr/helpdesk/mainCustomer.lecs"><span>고객센터</span></a>
+					<ul class="global_help_menu">
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1468">주문결제</a></li>
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1462">배송</a></li>
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1464">취소/교환/반품</a></li>
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1456">회원혜택/서비스</a></li>
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1700&noticeYN=Y">공지사항</a></li>
+						<li><a href="javascript:assmtEmailLayerPop();">1:1 E-mail 문의</a></li>
+						<li><a href="http://www.nike.co.kr/display/rules.lecs?tach=2">개인정보처리방침</a></li>
+						<li><a href="http://www.nike.co.kr/display/rules.lecs?tach=1">이용약관</a></li>
+						<li class="gb_help_list_all"><a href="http://lecs.nike.co.kr//helpdesk/mainCustomer.lecs">전체보기</a></li>
+					</ul>
+				</li>
+				<li class="cart">
+					<a href="http://lecs.nike.co.kr/cart/list.lecs">
+						<span>장바구니</span>
+						
+							<span class="count">5</span>
+						
+					</a>
+				</li>
+				<li>
+					<a href="http://www.nike.com/language_tunnel" class="global_flags"><span><img src="http://lecs.nike.co.kr/NKS1/image/global/ko_flag.png" /></span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //global_typ_gnb_top -->
+	
+	<!-- global_gnb_middle -->
+	<div class="global_gnb_middle">
+		<!-- global_gnb_main -->
+		<div class="global_gnb_main">
+			<h1 class="global_gnb_logo">
+				<a href="javascript:goMain();">
+					<span>Nike. Shoes, Clothing &amp; Gear.</span>
+				</a>
+			</h1>
+			
+				<div class="global_gnb_menu">
+					
+						
+					
+						
+							<div class="global_depth1 men">
+								<span></span>
+								<a href="javascript:fn_showDisplayShop({displayNo:'NK1A49'});">
+									<span>MEN</span>
+								</a>
+							</div>
+							<div class="global_depth2 men">
+								<div>
+									<div class="global_sub_box">
+										<div class="global_sub_menu">
+												<div class="global_category_h2">
+													<div>
+														<ul>
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A02A01'});">신상품</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A02A16'});">Best Sellers</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A02A02'});">런칭 캘린더</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A02A10'});">여름 인기상품</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A02A15'});">정글 팩</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A02A17'});">페가수스 33</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A02A05'});">가격인하</a></li>
+																
+															
+																
+															
+																
+															
+																
+															
+																
+															
+														</ul>
+													</div>
+												</div>
+												
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+														<div class="global_category_h3 gb_bdLeft">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01'});">신발</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A01'});">라이프스타일</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A02'});">러닝</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A03'});">트레이닝 & 짐</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A04'});">농구</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A05'});">축구</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A06'});">스케이트보딩</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A07'});">골프</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A18'});">샌달 & 슬라이드</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A08'});">테니스</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A01A09'});">야구</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 men_apparel_2016">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A03'});">의류</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A03A06'});">숏 팬츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A03A01'});">베이스 레이어</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A03A02'});">탑 ＆ 티셔츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A03A03'});">후디 ＆ 풀오버</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A03A04'});">재킷 ＆ 베스트</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A03A05'});">팬츠 ＆ 타이츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A03A07'});">양말</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A03A08'});">액세서리 ＆ 용품</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 gb_bdLeft">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A04'});">스포츠</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A04A09'});">러닝</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A04A05'});">트레이닝 & 짐</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A04A02'});">농구</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A04A03'});">축구</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A04A04'});">스케이트보딩</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A04A06'});">골프</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A04A08'});">테니스</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A04A07'});">야구</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 men_bland_2016">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A05'});">브랜드</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A05A01'});">Nike Sportswear</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A05A03'});">NikeLab</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A49A05A02'});">Jordan</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+							<div class="global_depth1 men">
+								<span></span>
+								<a href="javascript:fn_showDisplayShop({displayNo:'NK1A50'});">
+									<span>WOMEN</span>
+								</a>
+							</div>
+							<div class="global_depth2 men">
+								<div>
+									<div class="global_sub_box">
+										<div class="global_sub_menu">
+												<div class="global_category_h2">
+													<div>
+														<ul>
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A01A01'});">신상품</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A01A18'});">Best Sellers</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A01A02'});">런칭 캘린더</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A01A08'});">여름 인기상품</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A01A17'});">정글 팩</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A01A19'});">페가수스 33</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A01A04'});">여름 스타일 가이드</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A01A06'});">가격인하</a></li>
+																
+															
+																
+															
+																
+															
+																
+															
+																
+															
+														</ul>
+													</div>
+												</div>
+												
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+														<div class="global_category_h3 gb_bdLeft">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A02'});">신발</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A02A01'});">라이프스타일</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A02A02'});">러닝</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A02A03'});">트레이닝 & 짐</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A02A05'});">골프</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A02A11'});">샌달 & 슬라이드</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A02A06'});">테니스</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 ">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03'});">의류</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A06'});">팬츠 & 타이츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A01'});">스포츠 브라</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A02'});">베이스 레이어</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A03'});">탑 & 티셔츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A07'});">숏 팬츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A04'});">후디 & 풀오버</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A05'});">재킷 & 베스트</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A08'});">스커트 & 드레스</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A09'});">양말</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A03A10'});">액세서리 & 용품</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 gb_bdLeft">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A04'});">스포츠</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A04A01'});">러닝</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A04A02'});">트레이닝 & 짐</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A04A03'});">골프</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A04A04'});">테니스</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 women_bland_2016">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A05'});">브랜드</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A05A01'});">Nike Sportswear</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A50A05A02'});">NikeLab</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="global_depth1 men">
+								<span></span>
+								<a href="javascript:fn_showDisplayShop({displayNo:'NK1A51'});">
+									<span>BOYS</span>
+								</a>
+							</div>
+							<div class="global_depth2 men">
+								<div>
+									<div class="global_sub_box">
+										<div class="global_sub_menu">
+												<div class="global_category_h2">
+													<div>
+														<ul>
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A01A01'});">신상품</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A01A13'});">키즈 여름 샌달</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A01A10'});">키즈 스니커즈</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A01A08'});">주니어 축구 컬렉션</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A01A11'});">나이키 프리</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A01A02'});">가격인하</a></li>
+																
+															
+																
+															
+																
+															
+																
+															
+																
+															
+														</ul>
+													</div>
+												</div>
+												
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+														<div class="global_category_h3 gb_bdLeft">
+															<div>
+																<div class="global_category_stit">
+																	
+																		
+																		<em>연령별</em><span class="ico"></span>
+																	
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A04A01'});">베이비 (0-3세) </a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A04A02'});">리틀키즈 (3-8세) </a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A04A03'});">주니어 (8-15세) </a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 boy_shoe_2016">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A02'});">신발</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A02A01'});">라이프스타일</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A02A02'});">러닝</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A02A04'});">축구</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A02A03'});">농구</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A02A10'});">샌달 & 슬라이드</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 gb_bdLeft">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A03'});">의류</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A03A01'});">베이스 레이어</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A03A02'});">탑 & 티셔츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A03A03'});">후디 & 풀오버</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A03A04'});">재킷 & 베스트</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A03A05'});">팬츠 & 타이츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A03A06'});">숏 팬츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A03A07'});">양말</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A03A08'});">액세서리 & 용품</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 boy_sports_2016">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A05'});">스포츠</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A05A01'});">러닝</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A05A03'});">축구</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A05A02'});">농구</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A51A05A05'});">트레이닝 & 짐</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+							<div class="global_depth1 men">
+								<span></span>
+								<a href="javascript:fn_showDisplayShop({displayNo:'NK1A52'});">
+									<span>GIRLS</span>
+								</a>
+							</div>
+							<div class="global_depth2 men">
+								<div>
+									<div class="global_sub_box">
+										<div class="global_sub_menu">
+												<div class="global_category_h2">
+													<div>
+														<ul>
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A01A01'});">신상품</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A01A12'});">키즈 여름 샌달</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A01A09'});">키즈 스니커즈</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A01A10'});">나이키 프리</a></li>
+																
+															
+																
+																	<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A01A02'});">가격인하</a></li>
+																
+															
+																
+															
+																
+															
+																
+															
+																
+															
+														</ul>
+													</div>
+												</div>
+												
+													
+											
+													
+											
+													
+											
+													
+											
+													
+											
+													
+														<div class="global_category_h3 gb_bdLeft">
+															<div>
+																<div class="global_category_stit">
+																	
+																		
+																		<em>연령별</em><span class="ico"></span>
+																	
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A04A01'});">베이비 (0-3세)</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A04A02'});">리틀키즈 (3-8세) </a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A04A03'});">주니어 (8-15세) </a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 girl_shoe_2016">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A02'});">신발</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A02A01'});">라이프스타일</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A02A02'});">러닝</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A02A03'});">농구</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A02A06'});">트레이닝 & 짐</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A02A10'});">샌달 & 슬라이드</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 gb_bdLeft">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A03'});">의류</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A03A01'});">스포츠 브라</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A03A02'});">베이스 레이어</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A03A04'});">후디 & 풀오버</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A03A05'});">재킷 & 베스트</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A03A06'});">팬츠 & 타이츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A03A07'});">숏 팬츠</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A03A09'});">양말</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A03A10'});">액세서리 & 용품</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+													
+														<div class="global_category_h3 girl_sports_2016">
+															<div>
+																<div class="global_category_stit">
+																	
+																	
+																		<a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A05'});">스포츠</a><span class="ico"></span>
+																	
+																</div>
+																<ul>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A05A01'});">러닝</a></li>
+																	
+																		<li><a href="javascript:fn_showDisplayShop({displayNo:'NK1A52A05A02'});">트레이닝 & 짐</a></li>
+																	
+																</ul>
+															</div>
+														</div>
+													
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+						
+					
+				</div>
+			
+			<!-- subnav end -->
+		
+		</div>
+		<!-- global_gnb_main -->
+			
+		<div class="global_search_box">
+			<div>
+				<form name="searchForm" id="searchForm" action="http://www.nike.co.kr//search/showSearch.lecs" method="get" onsubmit="return false">
+					<div class="searchArea">
+						<label class="hidden" for="research">검색어 입력</label>
+						<input type="text" class="research" id="research" name="research"  value="" autocomplete="off"/>
+					</div>
+					
+					<a href="javascript:searchPopWrdBtn();" class="searchBtn"></a>
+					
+					<!-- 20160513 자동 검색 추가 -->
+					<div class="global_search_list"></div>
+					<div class="global_search_freq off">
+						<div class="freq_tab">
+							<ul>
+								<li class="active" style="width: 100%; border-bottom: 1px solid #e1e1e1;"><a href="javascript:;" data-lnk="#freq_01" class="bt_tab">최근검색어</a></li>
+<!-- 								<li><a href="javascript:;" data-lnk="#freq_02" class="bt_tab">인기 검색어</a></li> -->
+							</ul>
+						</div>
+						<div id="freq_01" class="freq_lst active">
+							<ul></ul>
+							<div class="freq_btn fn_off" id="freq_btn_fn_off_01">
+								<p class="t">최근 검색어가 없습니다.</p>
+							</div>
+							<div class="freq_btn" id="freq_btn_on">
+								<a href="javascript:fn_cookieSchArrayRemove();">전체삭제</a>
+								<a href="javascript:fn_cookieSchOnOff(false)">검색어저장 끄기</a>
+							</div>
+
+							<div class="freq_btn fn_off" id="freq_btn_off" style="display: none;">
+								<p class="t">검색어 저장 기능이 꺼져있습니다.</p>
+								<a href="javascript:fn_cookieSchOnOff(true)">검색어저장 켜기</a>
+							</div>
+						</div>
+					</div>
+					<!-- //20160513 자동 검색 추가 -->
+					
+				</form>
+				<!-- ceres-7033 -->
+				<!-- 150127 : str -->
+				 <script type="text/javascript" charset="utf-8">
+					var research_arr = [
+										
+										
+											
+												
+													"에어맥스",
+												
+												
+											
+												
+													"에어포스",
+												
+												
+											
+												
+													"허라치",
+												
+												
+											
+												
+													"루나에픽",
+												
+												
+											
+												
+													"플라이니트",
+												
+												
+											
+												
+													"스포츠브라",
+												
+												
+											
+												
+													"타이츠",
+												
+												
+											
+												
+													"조던",
+												
+												
+											
+												
+												
+													"풋살화"
+												
+											
+										
+																			
+									  ];
+					
+					var research_timer = 5000;
+					$('#research')
+						.data("value", research_arr)
+						.data("timer", research_timer);
+				</script>
+			</div>
+		</div>
+	</div>
+	<!-- //global_gnb_middle -->
+	
+	<!-- global_login_modal -->
+	<form id="loginForm_1" action="https://secure.nike.co.kr/member/doLogin.lecs" method="post" onkeypress="keypressSearch(event,1);">
+		<input type="hidden" name="returnUrl" id="returnURL_1" value="" />
+		<input type="hidden" name="flag" id="loginFlag_1" value="" />
+		<input type="hidden" name="lpsYn" id="lpsYn" value="" />
+	
+		<div class="global_login_modal">
+			<div class="gb_register_cont">
+				<div class="gb_login_tit">회원가입</div>
+				<p>나이키 회원이 되시면 다양한 혜택을 누리실 수 있습니다.</p>
+				<ul>
+					<li>다양한 프로모션 코드를 통한 할인 혜택</li>
+					<!-- <li>MVP달성 시 5% 추가 할인 혜택</li> -->
+				</ul>
+				<a href="javascript:goJoinView();" class="global_btn_type1">회원가입</a>
+			</div>
+			<div class="gb_login_cont">
+				<div class="gb_login_tit">로그인</div>
+				<!-- 2015-12-15 수정 -->
+				<div class="place_input">
+					
+					<label for="loginId_1" class="gb_login_label">아이디를 입력하세요</label><input type="text" id="loginId_1" name="loginId" value="" />
+				</div>
+				<div class="place_input">
+					<label for="password_1" class="gb_login_label">비밀번호를 입력하세요</label><input type="password" id="password_1"  name="password"/>
+				</div>
+				<!--// 2015-12-15 수정 -->
+				<div class="global_id_pass_info">
+					<span><input type="checkbox" id="ck" name="idSave"  value="Y" /><label for="ck">아이디 저장</label></span>
+					<div>
+						<span><a href="javascript:fn_loginFlag('6');">아이디 찾기 ㅣ</a></span>
+						<span><a href="javascript:fn_loginFlag('7');">패스워드 찾기</a></span>
+					</div>
+				</div>
+				<a href="javascript:restAccountCheck('1');" class="global_btn_type1"><span>로그인</span></a>
+			</div>
+			<a href="#" onclick="return false;" class="global_modal_close">닫기</a>
+		</div>
+	</form>
+	<!-- //global_login_modal -->
+	
+	<div  id="login_background" style="visibility:hidden;width:2000px;height:100%;position:absolute; top:-100px; left:0px; z-index:499;background:black;filter:alpha(opacity=70); opacity:0.7; -moz-opacity:0.7"  ></div>
+</nav>
+<!-- //global_gnb -->
+
+<div class="layerArea" id="login_Pop" >
+	<iframe title="로그인 팝업" src=""  allowTransparency="false"  id="frameLogin" name="login" width="860px" height="400px" frameborder="0" marginwidth="0" scrolling="no"></iframe>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	var query = "";
+	if(query != '' && query != null){
+		$("#research").val(query) ;
+	}
+
+	
+		$("#cartBubble").css("display","block");
+	
+
+});
+
+$("#research").keydown(function(e){
+	$('#frontSearchKeyword').val('');
+	if(e.keyCode == 13){
+		fn_showSearchNavi();
+	}
+});
+
+// ceres-7033
+// 검색어입력란의 돋보기 클릭시
+function searchPopWrdBtn() {
+	$('#frontSearchKeyword').val('');
+	fn_showSearchNavi();
+}
+
+// 통합 검색
+function fn_showSearchNavi () {
+	
+	if(!($('#frontSearchKeyword').val() != null && $('#frontSearchKeyword').val() != 'undefined' && $('#frontSearchKeyword').val() != ''))
+	{
+
+		var keyword = $("#research").val() ;
+		$.trim($('#keyword').val());
+		if($.trim(keyword) == "" || keyword == "무엇을 찾고 계신가요?" ) {
+			alert("검색어를 입력해 주세요") ;
+			$("#research").val("") ;
+			$('#research').focus();
+		}else {
+			if($.cookie('goodsSchCookieStatus') == "ON"){
+				fn_cookieSchArray(true);
+			}
+			document.searchForm.submit();
+		}
+	}
+
+}
+
+function fn_gnbSearchBtn () {
+	$('#frontSearchKeyword').val('');
+	 fn_showSearchNavi ();
+}
+
+function fn_fn_showPopularSearchWord ( keyval ) {
+	$('#searchForm input[name="research"]').val(keyval);
+	document.searchForm.submit();
+}
+
+
+function onSubmit(flag){
+
+	var msg = "검색어를 입력해 주세요.";
+
+	if(flag=="1"){
+
+		if($("#research").val().length < 1){
+			alert(msg);
+			return false;
+		}
+
+		$("#searchStatus").val( "research" );
+	}
+
+	var optionArr = new Array;
+	var optionCount = 0;
+	for( var i = 0; i < 7; i++ ){
+		if( $("#sale_" + i).prop("checked") ){
+			optionArr[optionCount] = i;
+			optionCount++;
+		}
+	}
+	$("#optionArr").val( optionArr );
+
+	document.searchForm.submit();
+}
+
+
+function showPopularSearchWord(str){
+	$("#SRCHFIELD").val( "TOTAL" );
+	$("#research").val(str);
+	onSubmit(1);
+}
+
+function setSLHT_CDFilter(str){
+	$("#SLHT_CD").val(str);
+	setPaging(0);
+}
+function setSPORTSFilter(str){
+	$("#SPORTS").val(str);
+	setPaging(0);
+}
+function setSIZESFilter(str){
+	$("#SIZES").val(str);
+	setPaging(0);
+}
+function setCOLORFilter(str){
+	$("#COLOR").val(str);
+	setPaging(0);
+}
+function setBESTFORFilter(str){
+	$("#BESTFOR").val(str);
+	setPaging(0);
+}
+function setCOLLFilter(str){
+	$("#COLL").val(str);
+	setPaging(0);
+}
+function setFITFilter(str){
+	$("#FIT").val(str);
+	setPaging(0);
+}
+function setP_TYPEFilter(str){
+	$("#P_TYPE").val(str);
+	setPaging(0);
+}
+function setGENDERFilter(str){
+	$("#GENDER").val(str);
+	setPaging(0);
+}
+
+
+function setPaging(str){
+
+	if("prev"==str){
+		str = $("#prev").val();
+	}
+	if("next"==str){
+		str = $("#next").val();
+	}
+	$("#pageIndex").val(str);
+
+	onSubmit();
+}
+
+function setSortType(str){
+	var sortField = [ "DATE,1", "RANK,1", "TOT_REVIEW_CNT,1", "DISP_PRICE,0", "DISP_PRICE,1"];
+	var str_sub = str;
+	
+	$("#SORT_FIELD").val( sortField[str_sub] );
+
+	if(99!=str){
+		setPaging(0);
+		onSubmit();
+	}
+}
+</script>
+
+
+				 <!-- // aside -->
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 		<script type="text/javascript">
+		//<![CDATA[
+		
+			var hFrameOBj = document.getElementById( 'hFrame' ) ;
+			
+			url = 'http://lecs.nike.co.kr/' ;
+			
+			if ( location.href.indexOf( 'https' ) > -1  ) {
+				url = 'https://secure.nike.co.kr/' ;
+			}
+			/**
+			 * 회원영역 페이지에서는 검색기능 불필요하므로 ark.js 사용하지 않음.
+			 * [2012-03-06][박상현]
+			 */
+			if ( location.href.indexOf( '/member/' ) == -1 ){
+				hFrameOBj.src = url + '/search/ark_ifram.lecs?autoGubun=' ;
+			}
+
+//			alert( '# hFrameOBj.src [' + hFrameOBj.src + '] ' ) ;
+
+			//]]>
+		</script> -->
+
+<script language="javascript">
+
+//eventLockerCount('num')
+//eventCartCount('num')
+
+//myLocker
+function goMyLocker(){
+	var id = 'rheesy73';
+
+	if(id!=''){
+		//alert(id);
+		location.href = "http://www.nike.co.kr/myLocker/myLockerList.lecs";
+	}else{
+		//alert("null");
+		loginType("S","member/showLogin.lecs?lpsYn=Y&secureYn=Y&returnUrl=http://www.nike.co.kr/myLocker/myLockerList.lecs");
+	}
+}
+	//my쇼핑정보
+function goInfoShop(){
+	var id = 'rheesy73';
+	
+	if(id!=''){
+		//alert(id);
+		location.href = "http://lecs.nike.co.kr/mypage/order/list.lecs";
+	}else{
+		loginType("S","member/showLogin.lecs?flag=2&lpsYn=Y&secureYn=Y&returnUrl=http://lecs.nike.co.kr/mypage/order/list.lecs");	
+	}
+}
+	
+//카트이동
+function goCart(){
+	//alert("cart");
+	
+	location.href = "http://lecs.nike.co.kr/cart/list.lecs ";
+}
+
+//스피드서치 이동
+function goSpeedSearch(){
+	//alert("스피드서치");
+	
+	location.href = "http://www.nike.co.kr/search/showSpeedSearch.lecs";
+	
+}
+
+//통합검색이동
+function callSearch(txt){
+	//alert("http://www.nike.co.kr//search/showSearch.lecs"+txt);
+	
+	location.href = "http://www.nike.co.kr/search/showSearch.lecs?research="+txt;
+}
+
+//플래시로 보내기
+function thisMovie(movieName) {    
+	
+	if (navigator.appName.indexOf("Microsoft") != -1) { 
+			return window[movieName]    
+ 
+	}    else {         
+			//alert(document[movieName]);
+		return document[movieName]     
+	}
+}
+
+//플래시로 보내기 최근본상품
+function callRecentList(){
+	var url ="http://www.nike.co.kr/";
+	//var b=a.split('http://');
+	//alert(a);
+	thisMovie("tnb").send_req(url+"display/headerData.lecs");
+}
+
+//플래시로 보내기 최근 카트정보
+function callRecentCart(){
+	var url ="http://www.nike.co.kr/";
+	var dt="20160629102622";
+	thisMovie("tnb").callRecentCart(url+"goods/getCartNewGoodsInfo.lecs?dt="+dt);
+}
+
+
+//카트담은상품 주문하기
+function goOrderPage(){
+	var url ="https://secure.nike.co.kr/";	
+	location.href = url+"order/list.lecs";
+	
+}
+
+//플래시 사이즈조절	
+function resizeFlashArea( nHeight, Id )
+{
+	//alert(Id);
+	if(Id != null){
+		var oFlash  = document.getElementById(Id) ;
+		var notIe_oFlash = document.getElementById("notIe_"+Id) ;
+	}else{
+		var oFlash  = document.getElementById('coordiDetail') ;
+	}
+	oFlash.height = nHeight ;
+	notIe_oFlash.height = nHeight ;
+	//<a href="javascript:resizeFlashArea('1', 'coordiDetail')">Chage Height</a>
+	//nation.swf 국가 레이어
+}
+
+
+//푸터 링크 아이디확인
+
+//푸터 : MY쇼핑정보
+// ceres-6551 : 나이키 푸터 수정요청 건 으로 추가함.
+function goMyShoppingInfo() {
+	var id = 'rheesy73';
+
+	if(id != '') {
+		location.href = "http://lecs.nike.co.kr/mypage/order/list.lecs";
+	} else {
+		loginType("S","member/showLogin.lecs?flag=2&lpsYn=Y&secureYn=Y&returnUrl=http://lecs.nike.co.kr/mypage/order/list.lecs");
+		$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+	}
+}
+	
+//주문내역조회 화면이동
+function goInfoShopDetail(){
+	var id = 'rheesy73';
+
+	if(id!=''){
+		//var bb=;
+		//alert(bb); 주문번호 없음
+		location.href = "http://lecs.nike.co.kr/mypage/order/list.lecs";
+	}else{
+		loginType("S","member/showLogin.lecs?flag=2&lpsYn=Y&secureYn=Y&returnUrl=http://lecs.nike.co.kr/mypage/order/list.lecs");
+		$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+	}
+}
+	
+
+//배송조회 화면이동
+function goInfoDeliveryDetail(){
+	var id = 'rheesy73';
+
+	if(id!=''){
+		//alert(id);
+		location.href = "http://lecs.nike.co.kr/mypage/order/list.lecs";
+	}else{
+		loginType("S","member/showLogin.lecs?flag=2&lpsYn=Y&secureYn=Y&returnUrl=http://lecs.nike.co.kr/mypage/order/list.lecs");
+		$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);	
+	}
+}
+
+//교환/반품 조회 화면이동
+function goInfoExchangeDetail(){
+	var id = 'rheesy73';
+
+	if(id!=''){
+		//alert(id);
+		location.href = "https://secure.nike.co.kr/mypage/order/listApplyClaim.lecs";
+	}else{
+		//alert("null");
+		loginType("S","member/showLogin.lecs?flag=2&lpsYn=Y&secureYn=Y&returnUrl=https://secure.nike.co.kr/mypage/order/listApplyClaim.lecs");
+		$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+	}
+}
+
+//영수증 신청/발급 화면이동
+function goInfoReceiptDetail(){
+	var id = 'rheesy73';
+
+	if(id!=''){
+		//alert(id);
+		location.href = "https://secure.nike.co.kr/mypage/applyReceipt.lecs";
+	}else{
+		//alert("null");
+		loginType("S","member/showLogin.lecs?flag=2&lpsYn=Y&secureYn=Y&returnUrl=https://secure.nike.co.kr/mypage/applyReceipt.lecs");
+		$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+	}
+}
+
+//1:1문의하기///////////////////////////////////////////////////
+function assmtEmailLayerPop(){
+	var id = 'rheesy73';
+
+	if(id!=''){
+		//alert(id);
+		assmtEmailLayerPopUp();
+	}else{
+		loginType("S","member/showLogin.lecs?flag=1&lpsYn=Y&secureYn=Y&returnUrl=https://secure.nike.co.kr/helpdesk/listFaq.lecs?ql=1500");	
+		$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);								
+	}
+}//로그인후 1:1문의하기 띠우기 남았음.리턴Url이 function도 담을수 있나 확인후 작업하자~!!
+
+function assmtEmailLayerPopUp(){
+	//1:1이메일문의가 팝업에서 페이지로 변경됨
+	location.href = "https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1500";
+/* 		$('#emailForm').get(0).submit();
+	$('#emailDiv').show(); 
+	openLayer('emailDiv', {center: true, blocker: true}); */
+}
+//1:1문의하기 닫기
+function closeLayerOneEmail(){
+	$('#emailDiv').hide();
+	$("html, body").animate({ scrollTop: $("#emailDiv").attr("offsetTop")-45 }, 0);	
+}
+//이메일 캠페인 팝업 호출
+function openEmailCampaintPopup(returnurl){
+	
+	var protocol = (returnurl.indexOf("https://") != -1) ? "https://" : "http://";
+	
+	if(protocol == "https://") {
+		window.open("https://secure.nike.co.kr//member/showEmailCampainPopup.lecs?nolayout=yes","EmailCampainPopup","menubar=no,width=450p,height=420" );
+	}else{
+		if(returnurl.indexOf("http://lecs") != -1) {
+			window.open("http://lecs.nike.co.kr//member/showEmailCampainPopup.lecs?nolayout=yes","EmailCampainPopup","menubar=no,width=450p,height=420" );
+		}else{
+			window.open("/member/showEmailCampainPopup.lecs?nolayout=yes","EmailCampainPopup","menubar=no,width=450p,height=420" );	
+		}
+	}
+}
+//회원정보변경 호출
+function goMemberInformation(protocal) {
+	location.href = "https://secure.nike.co.kr//member/information.lecs";
+}
+</script>
+			<!-- // header -->
+			
+				
+ <form method="post" name="frmInformation" id="frmInformation" action="/member/information.lecs">
+	<input type = "hidden" id="loginId" name="loginId" value="rheesy73"/>
+	<input type = "hidden" id="informaionOrder" name="informaionOrder" value="0"/>
+	<input type = "hidden" id="runResult" name="runResult" value="1" />
+	<input type = "hidden" id="memberNo" name="memberNo" value="000000003333637" />
+	<input type = "hidden" id="EmailReceiveYN" name="EmailReceiveYN" value="Y" />
+	<input type = "hidden" id="receptionCheckChange" name="receptionCheckChange" value="Y" />
+	<input type = "hidden" id="EmailAddress" name="EmailAddress" value="rheesy73@naver.com" />
+	<input type = "hidden" id="orgEmail" value="rheesy73@naver.com" />
+	<input type = "hidden" id="orgAddress" value="" />
+	<input type = "hidden" id="EmailDupleYn" value="N"/>
+	<input type = "hidden" id="deliverySerialNumber" name="deliverySerialNumber"/>
+	<input type = "hidden" id="adultSectionCode" name="adultSectionCode" value="19" />
+	<input type = "hidden" id="Email" name="Email" value ="" />
+	<input type = "hidden" id="Address" name="Address"  value ="" />
+	<input type = "hidden" id="birthdayDurationTime" name="birthdayDurationTime" />
+	<input type = "hidden" id="smsReceiveYnFlag" name="smsReceiveYnFlag" value="Y" />
+	
+	<input type="hidden" id="post_addrSum" value="" />
+	<input type="hidden" id="post_addrroadSum" value="" />
+	<input type="hidden" id="stnm_post_no" value="" />
+	<input type="hidden" id="stnm_post_addr" value=""/>
+	<input type="hidden" id="stnm_dtl_addr" value=""/>
+	<input type="hidden" id="post_no" value="" />
+	<input type="hidden" id="post_addr" value=""/>
+	<input type="hidden" id="dtl_addr" value=""/>
+	<input type="hidden" id="addr_choc_sct_cd" value=""/>
+	<input type="hidden" id="addr_chk_rslt_cd" value=""/>   
+	<input type="hidden" id="prop4" name="prop4" /> 
+	
+<!-- phase2 lnb / user, global_content class 추가 -->
+
+<div id="wrap">
+  <div class="contents global_content">
+	<div class="global_mypage_lnb">
+		<div class="global_nav_tit">
+			<h2><span>일반</span><strong>이루나</strong>님</h2>
+		</div>
+		<ul>
+			<li><a href="http://lecs.nike.co.kr/mypage/order/list.lecs">주문배송</a></li>
+			<li><a href="https://secure.nike.co.kr/mypage/order/listApplyClaim.lecs">취소/교환/반품</a></li>
+			<li><a href="#">매장재고 예약 서비스</a></li>
+			<li><a href="http://lecs.nike.co.kr/myshop/showRsvpList.lecs">THE DRAW 응모내역</a></li>
+		</ul>
+
+		<ul>
+			<li><a href="http://www.nike.co.kr/myLocker/myLockerList.lecs">위시리스트</a></li>
+			<li><a href="http://lecs.nike.co.kr/mypage/showMileInfo.lecs">나의 MiLE</a></li>
+			<li><a href="http://lecs.nike.co.kr/mypage/showMileInfo.lecs">나의 예치금</a></li>
+			<li><a href="http://lecs.nike.co.kr/mypage/showEventInfo.lecs">나의 프로모션 코드</a></li>
+			<li><a href="http://lecs.nike.co.kr/myshop/goodsReviewList.lecs">나의 상품리뷰</a></li>
+			<li><a href="https://secure.nike.co.kr/mypage/applyReceipt.lecs">영수증 신청/발급</a></li>
+		</ul>
+
+		<ul>
+			<li><a href="https://secure.nike.co.kr/myshop/emailCounselList.lecs">1:1 E-mail 문의</a></li>
+		</ul>
+
+		<ul>
+			<li><a href="https://secure.nike.co.kr/member/information.lecs" class="active">회원정보관리</a></li>
+		</ul>
+	</div>
+
+	<div class="cat_order">
+
+		<div class="mycat">
+		<h1><img src="../common/images/myshop/tit_tex01.gif" alt="my쇼핑정보"></h1>
+		</div>
+		<h2 class="tit3" style="text-align:left"><img src="../image/web/global/g_tit_tex18.gif" alt="상품리뷰내역" /></h2>
+		<ul class="tabN">
+			<li><a href="/myshop/goodsReviewList.lecs?tabSubMenu=review"><img src="../image/web/global/g_btn_tab_re08_ov.gif" class="imgover" alt="기본정보관리"></a></li>
+			<li><a href="/myshop/goodsReviewList.lecs?tabSubMenu=noReview"><img src="../image/web/global/g_btn_tab_re09.gif" class="imgover" alt="배송지관리" hsrc="../image/web/global/g_btn_tab_re09_ov.gif"></a></li>
+			<li><a href="/myshop/goodsReviewList.lecs?tabSubMenu=scription"><img src="../image/web/global/g_btn_tab_re10.gif" class="imgover" alt="계좌관리"
+			hsrc="../image/web/global/g_btn_tab_re10_ov.gif"
+			></a></li>
+		</ul>
+
+
+
+
+
+	<div class="contentBox bgM1_1">
+
+		<div class="memberInfo">
+		<div class="infoBox">
+			<div class="data clx">
+		 
+				<div class="basic">
+				<!-- phase2 title 삭제
+				<h4>기본 정보</h4> -->
+				<fieldset>
+				  <legend>회원 기본정보 관리 폼</legend>
+				  <div class="infoInput mt20 borN">
+					<table summary="회원 기본정보 관리에 필요한 이름 이메일주소 아이디 패스워드 재발급 생년월일 성별 연락처 휴대폰 입력 관리 폼">
+					  <caption>회원 기본정보 관리</caption>
+					  <colgroup>
+					  	<!-- phase2 width 변경 -->
+						<col width="150" />
+						<col width="*" />
+					  </colgroup>
+					  <tbody>
+						<tr>
+						  <th scope="row"><p>이름</p></th>
+						  <td>이성용</td>
+						</tr>
+						<tr>
+							<!-- phase2 E-mail 변경 -->
+						  <th scope="row" class="verT"><label for="email1Address" class="layerLabel02">E-mail 주소</label></th>
+						  <td>
+							<input type="text" id="email1Address" name="email1Address" value="rheesy73@naver.com" size="25" readonly="readonly" />
+							<!-- phase2 버튼 label 변경 -->
+							<a class="btn-type6 btn-black ml03" href="#" onclick="changeEmailPop();"><span class="right">변경</span></a>
+							<p class="mt10"><input type="checkbox" id="receptionCheck" onclick="javascript:receptionCheckUpdate();"  /><label class="checkType01" for="receptionCheck">NIKE.COM 서비스 및 이벤트 소식이 담긴 이메일을 수신하겠습니다.</label></p>
+							<p class="pointTxt mt05">패스워드 분실 시 본 이메일 주소로 임시 패스워드를 발급해 드립니다.</p>
+						  </td>
+						</tr>
+						<tr>
+						  <th scope="row"><p>아이디</p></th>
+						  <td>rheesy73</td>
+						</tr>
+						<tr>
+						  <th scope="row"><p>패스워드</p></th>
+						  <!-- phase2 버튼 label 변경 -->
+						  <td><a class="btn-type6 btn-black" href="#" onclick="popupShow('popupPasswordChange');"><span class="right">변경</span></a></td>
+						  <!-- //phase2 버튼 label 변경 -->
+						</tr>
+						<tr>
+						  <th scope="row" class="verT"><p>생년월일</p></th>
+						  <td>
+							<div class="mb10">
+							  <input type="radio" name="lunarAndSolarSectionCode" id="solar"  value="S"  checked="checked"  /><label class="radioType" for="solar">양력</label>
+							  <input type="radio" name="lunarAndSolarSectionCode" id="lunar" value="L" class="ml05"  /><label class="radioType" for="lunar">음력</label>
+							</div>
+								
+								
+								 <label class="hidden" for="birthdayDurationTimeYear">년도 선택</label>
+								 <select id="birthdayDurationTimeYear" name="birthdayDurationTimeYear" onchange="checkAge(this.value);checkProp4Birth();" class="selectType01" title="년도 선택">
+									<option value="" >년</option>
+									 
+									
+										<option value="2016" >2016</option>
+										 
+									
+										<option value="2015" >2015</option>
+										 
+									
+										<option value="2014" >2014</option>
+										 
+									
+										<option value="2013" >2013</option>
+										 
+									
+										<option value="2012" >2012</option>
+										 
+									
+										<option value="2011" >2011</option>
+										 
+									
+										<option value="2010" >2010</option>
+										 
+									
+										<option value="2009" >2009</option>
+										 
+									
+										<option value="2008" >2008</option>
+										 
+									
+										<option value="2007" >2007</option>
+										 
+									
+										<option value="2006" >2006</option>
+										 
+									
+										<option value="2005" >2005</option>
+										 
+									
+										<option value="2004" >2004</option>
+										 
+									
+										<option value="2003" >2003</option>
+										 
+									
+										<option value="2002" >2002</option>
+										 
+									
+										<option value="2001" >2001</option>
+										 
+									
+										<option value="2000" >2000</option>
+										 
+									
+										<option value="1999" >1999</option>
+										 
+									
+										<option value="1998" >1998</option>
+										 
+									
+										<option value="1997" >1997</option>
+										 
+									
+										<option value="1996" >1996</option>
+										 
+									
+										<option value="1995" >1995</option>
+										 
+									
+										<option value="1994" >1994</option>
+										 
+									
+										<option value="1993" >1993</option>
+										 
+									
+										<option value="1992" >1992</option>
+										 
+									
+										<option value="1991" >1991</option>
+										 
+									
+										<option value="1990" >1990</option>
+										 
+									
+										<option value="1989" >1989</option>
+										 
+									
+										<option value="1988" >1988</option>
+										 
+									
+										<option value="1987" >1987</option>
+										 
+									
+										<option value="1986" >1986</option>
+										 
+									
+										<option value="1985" >1985</option>
+										 
+									
+										<option value="1984" >1984</option>
+										 
+									
+										<option value="1983" >1983</option>
+										 
+									
+										<option value="1982" >1982</option>
+										 
+									
+										<option value="1981" >1981</option>
+										 
+									
+										<option value="1980" >1980</option>
+										 
+									
+										<option value="1979" >1979</option>
+										 
+									
+										<option value="1978" >1978</option>
+										 
+									
+										<option value="1977" >1977</option>
+										 
+									
+										<option value="1976" >1976</option>
+										 
+									
+										<option value="1975" >1975</option>
+										 
+									
+										<option value="1974" >1974</option>
+										 
+									
+										<option value="1973" selected>1973</option>
+										 
+									
+										<option value="1972" >1972</option>
+										 
+									
+										<option value="1971" >1971</option>
+										 
+									
+										<option value="1970" >1970</option>
+										 
+									
+										<option value="1969" >1969</option>
+										 
+									
+										<option value="1968" >1968</option>
+										 
+									
+										<option value="1967" >1967</option>
+										 
+									
+										<option value="1966" >1966</option>
+										 
+									
+										<option value="1965" >1965</option>
+										 
+									
+										<option value="1964" >1964</option>
+										 
+									
+										<option value="1963" >1963</option>
+										 
+									
+										<option value="1962" >1962</option>
+										 
+									
+										<option value="1961" >1961</option>
+										 
+									
+										<option value="1960" >1960</option>
+										 
+									
+										<option value="1959" >1959</option>
+										 
+									
+										<option value="1958" >1958</option>
+										 
+									
+										<option value="1957" >1957</option>
+										 
+									
+										<option value="1956" >1956</option>
+										 
+									
+										<option value="1955" >1955</option>
+										 
+									
+										<option value="1954" >1954</option>
+										 
+									
+										<option value="1953" >1953</option>
+										 
+									
+										<option value="1952" >1952</option>
+										 
+									
+										<option value="1951" >1951</option>
+										 
+									
+										<option value="1950" >1950</option>
+										 
+									
+										<option value="1949" >1949</option>
+										 
+									
+										<option value="1948" >1948</option>
+										 
+									
+										<option value="1947" >1947</option>
+										 
+									
+										<option value="1946" >1946</option>
+										 
+									
+										<option value="1945" >1945</option>
+										 
+									
+										<option value="1944" >1944</option>
+										 
+									
+										<option value="1943" >1943</option>
+										 
+									
+										<option value="1942" >1942</option>
+										 
+									
+										<option value="1941" >1941</option>
+										 
+									
+										<option value="1940" >1940</option>
+										 
+									
+										<option value="1939" >1939</option>
+										 
+									
+										<option value="1938" >1938</option>
+										 
+									
+										<option value="1937" >1937</option>
+										 
+									
+										<option value="1936" >1936</option>
+										 
+									
+										<option value="1935" >1935</option>
+										 
+									
+										<option value="1934" >1934</option>
+										 
+									
+										<option value="1933" >1933</option>
+										 
+									
+										<option value="1932" >1932</option>
+										 
+									
+										<option value="1931" >1931</option>
+										 
+									
+										<option value="1930" >1930</option>
+										 
+									
+										<option value="1929" >1929</option>
+										 
+									
+										<option value="1928" >1928</option>
+										 
+									
+										<option value="1927" >1927</option>
+										 
+									
+										<option value="1926" >1926</option>
+										 
+									
+										<option value="1925" >1925</option>
+										 
+									
+										<option value="1924" >1924</option>
+										 
+									
+										<option value="1923" >1923</option>
+										 
+									
+										<option value="1922" >1922</option>
+										 
+									
+										<option value="1921" >1921</option>
+										 
+									
+										<option value="1920" >1920</option>
+										 
+									
+										<option value="1919" >1919</option>
+										 
+									
+										<option value="1918" >1918</option>
+										 
+									
+										<option value="1917" >1917</option>
+										 
+									
+										<option value="1916" >1916</option>
+										 
+									
+										<option value="1915" >1915</option>
+										 
+									
+										<option value="1914" >1914</option>
+										 
+									
+										<option value="1913" >1913</option>
+										 
+									
+										<option value="1912" >1912</option>
+										 
+									
+										<option value="1911" >1911</option>
+										 
+									
+										<option value="1910" >1910</option>
+										 
+									
+										<option value="1909" >1909</option>
+										 
+									
+										<option value="1908" >1908</option>
+										 
+									
+										<option value="1907" >1907</option>
+										 
+									
+										<option value="1906" >1906</option>
+										 
+									
+										<option value="1905" >1905</option>
+										 
+									
+										<option value="1904" >1904</option>
+										 
+									
+										<option value="1903" >1903</option>
+										 
+									
+										<option value="1902" >1902</option>
+										 
+									
+										<option value="1901" >1901</option>
+										 
+									
+										<option value="1900" >1900</option>
+										 
+									
+								</select> <span class="bir">년</span> 
+								<label class="hidden" for="birthdayDurationTimeMonth">월 선택</label>
+								<select id="birthdayDurationTimeMonth" name="birthdayDurationTimeMonth" class="selectType02" title="월 선택" onchange="checkProp4Birth();">
+									<option value="" >월</option>
+									
+										<option value="1" > 1 </option>
+									
+										<option value="2" > 2 </option>
+									
+										<option value="3" selected> 3 </option>
+									
+										<option value="4" > 4 </option>
+									
+										<option value="5" > 5 </option>
+									
+										<option value="6" > 6 </option>
+									
+										<option value="7" > 7 </option>
+									
+										<option value="8" > 8 </option>
+									
+										<option value="9" > 9 </option>
+									
+										<option value="10" > 10 </option>
+									
+										<option value="11" > 11 </option>
+									
+										<option value="12" > 12 </option>
+									
+								</select> <span class="bir">월</span>
+								<label class="hidden" for="birthdayDurationTimeDay">일 선택</label>
+								<select id="birthdayDurationTimeDay" name="birthdayDurationTimeDay" class="selectType02" title="일 선택" onchange="checkProp4Birth();">
+									<option value="" >일</option>
+									
+										<option value="1" selected> 1 </option>
+									
+										<option value="2" > 2 </option>
+									
+										<option value="3" > 3 </option>
+									
+										<option value="4" > 4 </option>
+									
+										<option value="5" > 5 </option>
+									
+										<option value="6" > 6 </option>
+									
+										<option value="7" > 7 </option>
+									
+										<option value="8" > 8 </option>
+									
+										<option value="9" > 9 </option>
+									
+										<option value="10" > 10 </option>
+									
+										<option value="11" > 11 </option>
+									
+										<option value="12" > 12 </option>
+									
+										<option value="13" > 13 </option>
+									
+										<option value="14" > 14 </option>
+									
+										<option value="15" > 15 </option>
+									
+										<option value="16" > 16 </option>
+									
+										<option value="17" > 17 </option>
+									
+										<option value="18" > 18 </option>
+									
+										<option value="19" > 19 </option>
+									
+										<option value="20" > 20 </option>
+									
+										<option value="21" > 21 </option>
+									
+										<option value="22" > 22 </option>
+									
+										<option value="23" > 23 </option>
+									
+										<option value="24" > 24 </option>
+									
+										<option value="25" > 25 </option>
+									
+										<option value="26" > 26 </option>
+									
+										<option value="27" > 27 </option>
+									
+										<option value="28" > 28 </option>
+									
+										<option value="29" > 29 </option>
+									
+										<option value="30" > 30 </option>
+									
+										<option value="31" > 31 </option>
+									
+								</select><span class="bir">일</span>
+						  </td>
+						</tr>
+						<tr>
+						  <th scope="row"><p>성별</p></th>
+						  <td>      
+							<input type="radio" name="genderSectionCode" id="female" value="F" checked="checked"/><label class="radioType" for="female">여성</label>
+							<input type="radio" name="genderSectionCode" id="male" class="ml05" value="M"  /><label class="radioType" for="male">남성</label>
+						  </td>
+						</tr>
+						<tr>
+						  <th scope="row"><label for="cableTelephoneRegionNo" class="layerLabel02">연락처</label></th>
+						  <td class="num">
+							<input type="text" maxlength="4"  id = "cableTelephoneRegionNo" class="inputType03 fir" title="지역번호"  name = "cableTelephoneRegionNo"  value ="" onkeypress="javascript:onlyNumber();"/> - 
+							<input type="text" maxlength="4" id = "cableTelephoneTelephoneExchangeNo"  class="inputType03" title="연락처 앞자리"  name = "cableTelephoneTelephoneExchangeNo"value ="" onkeypress="javascript:onlyNumber();"/> -
+							<input type="text" maxlength="4" id = "cableTelephoneEndNo"  class="inputType03" title="연락처 뒷자리"  name = "cableTelephoneEndNo"  value ="" onkeypress="javascript:onlyNumber();"/>
+					 
+						  </td>
+						</tr>
+						<tr>
+						  <th scope="row" class="verT"><label for="cellSectionNo" class="layerLabel02">휴대폰</label></th>
+						  <td class="num">                          
+							<input type="text" maxlength="4" id = "cellSectionNo" name = "cellSectionNo" class="inputType03 fir" title="통신사번호" value ="010" onkeypress="javascript:onlyNumber();"/> -
+							<input type="text" maxlength="4" id = "cellTelephoneExchangeNo" name = "cellTelephoneExchangeNo" class="inputType03" title="휴대폰 앞자리" value ="4910" onkeypress="javascript:onlyNumber();"/> -
+							<input type="text" maxlength="4" id = "cellEndNo" name = "cellEndNo" class="inputType03" title="휴대폰 뒷자리"  value ="0443" onkeypress="javascript:onlyNumber();"/>
+							<p class="mt10"><input type="checkbox" id="smsReceiveYn" name="smsReceiveYn" checked="checked" /><label class="checkType01" for="smsReceiveYn">SMS 정보를 수신하겠습니다.</label></p>
+							<p class="pointTxt mt05">패스워드 분실 시 확인 받을 수 있는 휴대폰 번호를 입력해 주세요.</p>
+						  </td>
+						</tr>
+						<!-- 150709 : str -->
+						<tr>
+						  <th scope="row" class="verT"><p class="lh18">개인정보 보관<br>기간 설정</p></th>
+						  <td class="num">
+							<!-- phase2 br 수정 -->
+							<input type="radio" id="year01" name="prsnInfoAvalTermCode" checked="checked" value="01" /><label class="radioType" for="year01">1년</label>
+							<input type="radio" id="year02" name="prsnInfoAvalTermCode"  class="ml05" value="02" /><label class="radioType" for="year02">3년</label>
+							<input type="radio" id="year03" name="prsnInfoAvalTermCode"  class="ml05" value="03" /><label class="radioType" for="year03">영구</label>
+							<p class="checkType01 mt10 lh18">- 정보통신망 이용촉진 및 정보 보호 등에 관한 법률 제29조 제2항에 따라 설정된 개인정보 보관 기간 동안 NIKE.COM의 사용이력이 없는 경우 휴면계정으로 되며, <br> &nbsp; 휴면계정의 개인정보는 안전하게 분리 보관 처리됩니다.</p>
+							<p class="checkType01 mt05 lh18">- 개인정보 보관 기간 설정은 회원정보관리에서 수정 가능합니다.</p>
+							<p class="checkType01 mt05 lh18">- NIKE.COM 사용 이력이 없어 휴면계정이 된 경우 계정 활성화 요청에 의해 활성화 가능합니다.</p>
+						  </td>
+						</tr>
+						<!-- //150709 : end -->
+						<!-- phase2 버튼 위치 수정
+						<tr>
+						  <th scope="row"><p class="hidden">저장 취소 버튼</p></th>
+						  <td class="pt20">
+							<a class="btn-type1 btn-orange" href="#" onclick="InfomationUpdate();"><span class="right lh39">저장</span></a>
+							<a class="btn-type1 btn-gray ml03" href="http://www.nike.co.kr/"><span class="right lh39">취소</span></a>
+						  </td>
+						</tr> -->
+					  </tbody>
+					</table>
+						<!-- phase2 버튼 위치 수정 -->
+						<div class="btnAlign">
+							<a class="btn-type1 btn-orange" href="#" onclick="InfomationUpdate();"><img src="../image/web/global/g_btn_save.gif" alt="저장"></a>
+							<a class="btn-type1 btn-gray ml03" href="http://www.nike.co.kr/"><img src="../image/web/global/g_btn_cancle2.gif" alt="취소"></a>
+						</div>
+						<!-- //phase2 버튼 위치 수정 -->
+					</div>
+				</fieldset>
+			</div>
+
+
+			  <!-- phase2 삭제 - page 분리
+			  <div class="address">
+				<h4>주소 정보</h4>
+				<fieldset>
+					<legend>배송지 선택 폼</legend>
+				  <dl class="info">
+					<dt>배송지관리</dt>
+					<dd class="mt06">
+					  <p class="mb16 lh18">자주 사용하시는 배송지 정보를 등록해 두시면 구매 시 <br />편리하게 이용하실 수 있습니다.</p>
+					  <a class="btn-type6 btn-black" href="javascript:popupShow('deliveryRegistration');"><span class="right">배송지 등록</span></a>
+					  <a class="btn-type6 btn-black ml03" href="javascript:addressCheck();"><span class="right">선택 삭제</span></a>
+					</dd>
+					<dd class="mt20">
+						
+						
+							<div class="dataTable">
+							 <p class="add">
+								<a class="btn-tbl-type2 btn-black ml03" href="javascript:deliveryUpdateFormShow('이성용','이성용','010','4910','0443','서울 도봉구 도봉동','01320','87번지 삼환아파트 1동 1108호','서울 도봉구 도봉로180길','01320','6-83, 1동 1108호 (도봉동,삼환아파트)','01','I','4532720','010','4910','0443');"><span class="right">수정</span></a>
+								
+								<input type="checkbox" id="addCheck1" name="addressCheck" value="4532720" /><label for="addCheck1" class="checkType03"> (이성용) 이성용 / 010-4910-0443 / 서울 도봉구 도봉동</label> 
+							</p>
+							</div>
+						
+				   
+					</dd>
+				  </dl>
+				</fieldset>
+			  </div> -->
+		 
+		 
+		 
+		  </div>
+		</div>
+	  </div><!-- // .memberInfo -->
+	  <div class="memberInfo mt20 pb40"> <!-- 20131028 class(pb40)추가 -->
+		<div class="infoBox">
+			<div class="data type02">
+				<a href="javascript:popupShow('popupQuit');" class="withdraw">회원탈퇴</a>
+		  </div>
+		</div>
+	  </div><!-- // .memberInfo -->
+
+						
+					<div>
+						<div id="div_certificationPopup" style="position:absolute; top:450px; left:600px; z-index:500;top:100px; left:0px; display:none;"></div>
+					</div>
+	  </div><!-- // .contentBox --> 
+	</div>
+  </div><!-- // .content -->
+			
+
+
+
+<div class="panel">
+	
+	<!-- STORE FOOTER FROM BO START -->
+	<div class="global_footer"id="footerF">
+		<!-- footer --><!-- 20160401 footer style 추가 -->
+<style type="text/css">
+.global_footer_link_list .global_link1 h4 a {font-size:16px; color:#8d8d8d; font-weight:bold;}
+h4.global_footer_link_tit a {margin-bottom:20px; font-size:16px; font-weight:bold; color:#fff;}
+.global_social_link > .global_footer_link_tit {padding-top:0;}</style>
+<!-- footer --><div class="global_footer" id="footerF">
+	<div class="global_footer_link">
+		<div class="global_footer_link_inner">
+			<div class="global_footer_link_list">
+				<ul class="global_link1" id="forGenFooter">
+					<li>
+						<a href="#">매장안내</a></li>
+					<li>
+						<a href="#">로그아웃</a></li>
+				</ul>
+				<ul class="global_link2">
+<!-- 20160331 마크업 오류 수정 -->					<li>
+						<h4 class="global_footer_link_tit">
+							<a href="http://lecs.nike.co.kr/helpdesk/mainCustomer.lecs">고객센터</a></h4>
+					</li>
+					<li>
+						<a href="https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1468">주문결제</a></li>
+					<li>
+						<a href="https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1462">배송</a></li>
+					<li>
+						<a href="javascript:goInfoShopDetail();">주문배송조회</a></li>
+					<li>
+						<a href="https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1456">회원혜택/서비스</a></li>
+					<li>
+						<a href="https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1700&amp;noticeYN=Y">공지사항</a></li>
+					<li>
+						<a href="javascript:assmtEmailLayerPop();">1:1 E-mail 문의</a></li>
+					<li>
+						<a href="http://www.nike.co.kr/display/rules.lecs?tach=1">이용약관</a></li>
+					<li>
+						<a href="http://www.nike.co.kr/display/rules.lecs?tach=2">개인정보처리방침</a></li>
+				</ul>
+				<ul class="global_link3">
+<!-- 20160331 마크업 오류 수정 -->					<li>
+						<h4 class="global_footer_link_tit">
+							<a href="javascript:nikeAbout()" title="회사소개">회사소개</a></h4>
+					</li>
+				</ul>
+				<div class="global_social_link">
+					<h4 class="global_footer_link_tit global_tdgB">
+						<a>SOCIAL</a></h4>
+					<div>
+<!-- 151112 수정 -->						<a class="global_link_twitter" href="https://twitter.com/nikecom_kr" target="_blank" title="새창열림">Twitter</a> <!-- end//151112 수정 --><a class="global_link_facebook" href="https://www.facebook.com/nike" target="_blank" title="새창열림">Facebook</a> <a class="global_link_youtube" href="https://www.youtube.com/user/nike" target="_blank" title="새창열림">Youtube</a> <a class="global_link_insta" href="https://instagram.com/nike" target="_blank" title="새창열림">Instagram</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="global_footer_info">
+		<div class="global_info_cont">
+			<ul class="global_info_left">
+				<li>
+					<a href="http://www.nike.com/language_tunnel" title="대한민국"><img alt="대한민국" src="https://simage.nike.co.kr/global/ko_flag.png" /> <span>&nbsp;&nbsp;대한민국</span> </a></li>
+				<li class="copy-write">
+					&copy;2016 NIKE, Inc. All Rights Reserved.</li>
+			</ul>
+			<ul class="global_info_right">
+				<li>
+					<a href="http://www.nike.co.kr/display/rules.lecs?tach=1">이용약관</a></li>
+				<li>
+					<a href="http://www.nike.co.kr/display/rules.lecs?tach=2">ㅣ&nbsp;&nbsp;개인정보처리방침</a></li>
+			</ul>
+		</div>
+		<div class="global_info_cont2">
+			<div class="global_info_cont2_inner">
+				<ul>
+					<li>
+						(유)나이키코리아 대표 : 데이빗욱환송 서울시 강남구 테헤란로 152 (역삼동, 강남파이낸스센터 31층)<!-- 150716 text 수정 --></li>
+					<li>
+						통신판매업신고번호 : 2011-서울강남-03461&nbsp;&nbsp;/&nbsp;&nbsp;등록번호 : 220-88-09068 <a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank" title="새창열림">사업자정보확인</a></li>
+					<li>
+						개인정보관리책임자 : 정순호&nbsp;&nbsp;&nbsp;&nbsp;정보보호최고책임자 : 이희준&nbsp;&nbsp;&nbsp;&nbsp;대표번호 : 080-022-0182</li>
+					<li>
+						FAX : 02-6744-5880&nbsp;&nbsp;&nbsp;&nbsp;E-mail : service@nike.co.kr&nbsp;&nbsp;&nbsp;&nbsp;호스팅서비스사업자 : ㈜롯데닷컴</li>
+				</ul>
+				<ul>
+					<li>
+						나이키 공식 온라인스토어는 롯데닷컴 LECS를 사용하고 있습니다.</li>
+					<li>
+						KSNET 구매안전 서비스 <a href="javascript:popUp02();">ㅣ 서비스가입사실 확인</a></li>
+					<li>
+						안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 KSNET의 구매안전 서비스<br />
+						(채무지급보증)를 이용하실 수 있습니다.<!-- 151006 추가 및 수정 --></li>
+					<li class="global_content_guide_list">
+						온라인디지털콘텐츠사업발전법에 의한 콘텐츠보호안내 <a class="btn_content_guide" href="#">자세히보기</a> <!-- global_content_guide_box -->
+						<div class="global_content_guide_box">
+							<div class="global_guide_layer">
+								<div class="global_guide_inner">
+									<h4>
+										콘텐츠산업진흥법에 의한 표시</h4>
+									<div>
+										<p>
+											콘텐츠의 명칭 : 상품정보 및 이벤트 정보등</p>
+										<p>
+											콘텐츠의 제작 연월일 : 2002년 01월 14일(또는, 콘텐츠가 업그레이드된 경우 그 갱신일)</p>
+										<p>
+											콘텐츠의 제작자 : ㈜롯데닷컴 서울시 중구 을지로 158 10층(을지로4가 삼풍빌딩)<br />
+											<span style="padding-left: 88px">TEL : 02-3668-8500, FAX : 02-3668-8501</span></p>
+										<p>
+											<span>㈜롯데닷컴 홈페이지 내의 모든 콘텐츠는「콘텐츠산업 진흥법」에 따라 제작일 또는</span><br />
+											<span>그 갱신일로부터 5년간 보호됩니다.(동의 없는 무단 복제를 금함)</span></p>
+									</div>
+									<a class="global_ly_close" href="#"><span>닫기</span></a></div>
+							</div>
+						</div>
+<!-- 151006 추가 및 수정 -->					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // footer -->
+	</div>
+	<!-- STORE FOOTER FROM BO FINISH -->
+	
+	
+	
+	
+<!-- // footer -->
+			
+			
+						
+<script language="javascript">
+
+// A/S 배송서비스 자세히보기
+ function popUp01(){
+	var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes,width=723';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+	window.open( "http://lecs.nike.co.kr/dispop/popList.lecs?popUpNo=01","pop",a);
+	
+ }
+ //서비스 가입사실 확인
+ function popUp02(){
+	 var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes,width=658, height=723';
+		
+		//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+	 window.open( "http://lecs.nike.co.kr/dispop/popList.lecs?popUpNo=02","pop",a);
+ }
+
+//나이키닷컴 ARS 서비스
+ function popUp03(){
+	 var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=no,resizable=yes,width=600, height=568';
+		
+		//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+	 window.open( "http://lecs.nike.co.kr/dispop/popList.lecs?popUpNo=03","pop",a);
+ }
+ 
+//언어변경
+function languageReset(){
+	var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+// 	window.open( 'http://store.nike.com/nikestore/web/language_country.html?reset=true',"language");
+	
+	window.open( 'http://www.nike.com/language_tunnel',"language");
+}
+
+//매장안내
+function nikeInfoShop(){
+	var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+	window.open( 'http://info.nike.co.kr/os/store/s.jsp?s=',"pop",a);
+	
+}
+//회사소개
+function nikeAbout(){
+	var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+	window.open( 'http://about.nike.com/',"about");
+	
+}
+//사업자정보 확인
+function nikeInfoSeller(){
+	//var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes';
+	
+
+	window.open( 'http://www.ftc.go.kr/info/bizinfo/communicationList.jsp',"사업자정보"); // 150708 url 변경
+}
+//매장 고객 안내
+function fnCustomerPopup(){
+	var customerP='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes,width=900,height=460';
+	window.open( 'http://info.nike.co.kr/os/customer/index_web.html',"pop",customerP);
+}
+
+//로그인 레이어
+function showLogin() {
+	$('.global_login_modal').show();
+	$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+}
+
+</script>
+<script>
+   //검색어 자동완성 플래쉬CallBack함수 
+	function checkChangeValue_flash(str) {
+		//alert('checkChangeValue_flash:'+str);
+		document.frames['hFrame'].checkChangeValue_in_iframe(str,1);
+	}
+	function checkChangeValue_html(str) {
+		//alert('checkChangeValue_html:'+str);
+		document.frames['hFrame'].checkChangeValue_in_iframe(str,2);
+	}	
+	
+</script>
+
+</div>
+		<!-- // footerBox -->
+
+</div><!-- // .wrap -->
+
+
+						<!-- // 이메일 중복 확인 pop -->
+ <div class="popLayer typeS" id="changeEmailPop" style="display:none; ">
+	<div class="layerBox clx">
+	<div class="contents">
+		<h4>이메일 중복확인</h4>
+	  <p class="txt05 mt17"><span>변경하고자 하는 이메일 주소를 입력하신 후, <br />중복확인 버튼을 클릭해 주세요.</span></p>
+	  <div class="formBox mt16">
+		<div class="speech type04"><span class="over">이메일을 입력해 주세요<span class="arr"></span></span></div>
+		<label for="checkEmail1" class="hidden">이메일 주소</label><input type="text" class="inputType06 verT" id="checkEmail1"/>
+		<a class="btn-type6 btn-black ml02" href="#" onclick="checkEmail('checkEmail1');"><span class="right">중복확인</span></a>
+	  </div>
+	  <div class="btnAlign">
+		<a class="btn-type1 btn-black" href="#" onclick="cancelEmail('changeEmailPop');"><span class="right">닫기</span></a>
+	  </div>
+	  <a href="#" onclick="cancelEmail('changeEmailPop');" class="close">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer -->
+
+
+ <div class="popLayer typeS"  id="notValidEmail" style="display:none; ">
+	<div class="layerBox clx">
+	<div class="contents">
+		<h4>이메일 중복확인</h4>
+	  <p class="txt05 mt17"><span>입력하신 <strong id="notValildEmailAddr"></strong> 은(는) 사용중인 이메일입니다.<br />다른 이메일 주소를 입력해 주세요.</span></p>
+	  <div class="formBox mt16">
+		<label for="reInputEmail" class="hidden">이메일 주소</label><input type="text" class="inputType06 verT" id="reInputEmail" />
+		<a class="btn-type6 btn-black ml02" href="#" onclick="checkEmail('reInputEmail');"><span class="right">검색</span></a>
+	  </div>
+	  <div class="btnAlign">
+		<a class="btn-type1 btn-black" href="#"  onclick="cancelEmail('notValidEmail');"><span class="right">닫기</span></a>
+	  </div>
+	  <a href="#" onclick="cancelEmail('notValidEmail');" class="close">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer -->
+
+
+ <div class="popLayer typeS"  id="validEmail" style="display:none; ">
+	<div class="layerBox clx">
+	<div class="contents">
+		<h4>이메일 중복확인</h4>
+	  <p class="txt05 mt17"><span>입력하신 <strong id="validEmailAddr"></strong> 은(는) 사용 가능한 이메일입니다.<br />사용하시겠습니까?</span></p>
+	  <div class="btnAlign">
+		<a class="btn-type1 btn-orange" href="#" onclick="useEmail('Y');"><span class="right">사용하기</span></a>
+		<a class="btn-type1 btn-gray ml03" href="#" onclick="cancelEmail('validEmail');"><span class="right">취소</span></a>
+	  </div>
+	  <a href="#" onclick="cancelEmail('validEmail');" class="close">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer -->
+  
+						<!-- // 이메일 중복 확인 pop -->
+						<!-- 패스워드 변경 pop-->
+
+<!-- phase2 style 변경 typeS 클래스 추가 -->
+ <div class="popLayer typeS" id="popupPasswordChange" style="display:none; ">
+	<div class="layerBox clx">
+	<div class="contents">
+		<!-- phase2 클래스 추가 -->
+		<div class="sectionL user_form">
+		<!-- phase2 클래스 추가 -->
+		<h4>패스워드 변경</h4>
+		<div class="clx">
+			<fieldset>
+				<legend>패스워드 변경 관련 입력 폼</legend>
+				<!-- phase2 div 순서 변경 -->
+				<div class="formBox mt23">
+				  <label for="existingPassword" class="layerLabel type03">기존 패스워드</label><input type="password" id="existingPassword" name="existingPassword" maxlength="12" class="inputType05" />
+				  <div class="speech type07" id="spexistingPassword"><span class="over">기존 패스워드를 입력해주세요<span class="arr"></span></span></div>
+				</div>
+				<!-- phase2 div 순서 변경 -->
+
+				<!-- phase2 formBox 인스타일 추가 , div 순서 변경 -->
+				<div class="formBox mt05" style="border-top:none;margin-top:0 !important;">
+				  <label for="changePassword" class="layerLabel type03">변경 패스워드</label><input type="password" id="changePassword" name="changePassword" maxlength="12" class="inputType05"/>
+				  <div class="speech type07" id="spchangePassword"><span class="over">변경 패스워드를 입력해주세요<span class="arr"></span></span></div>
+				</div>
+				<!-- phase2 formBox 인스타일 추가 , div 순서 변경 -->
+
+				<!-- phase2 formBox 인스타일 추가 , div 순서 변경 -->
+				<div class="formBox mt05" style="border-top:none;margin-top:0 !important;">
+				  <label for="changePasswordCheck" class="layerLabel type03">변경 패스워드 확인</label><input type="password" id="changePasswordCheck" name="changePasswordCheck" maxlength="12" class="inputType05" />
+				  <div class="speech type07" id="spchangePasswordCheck"><span class="over">변경 패스워드 확인을 입력해주세요<span class="arr"></span></span></div>
+				</div>
+				<!-- phase2 formBox 인스타일 추가 , div 순서 변경 -->
+			</fieldset>
+		  <div class="btnAlign">
+		  	<!-- phase2 btn style 변경 -->
+			<a href="#" onclick="passwordCheck();"><img src="../image/web/global/g_btn_ok.gif" alt="확인"></a>
+			<a class="ml05" href="#" onclick="firstsetting();"><img src="../image/web/global/g_btn_cancle2.gif" alt="취소"></a>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="sectionR">  <!-- phase2 pb40 클래스 삭제 -->
+		<h4>패스워드 변경 TIP</h4>
+		<div class="desc"> <!-- phase2 mt20 클래스 삭제 -->
+		  <ul>
+			<li>6~12자의 영문숫자를 조합해서 정해주십시오.</li>
+			<li>아이디 및 이메일 등과 같거나 포함하면 안됩니다.</li>
+			<li>단일 문자열, 연속 문자열 등 쉬운 패스워드는 안됩니다.</li>
+			<li>기타 일반 정보 등으로 부터 추측이 용이한 패스워드는 피해주십시오.</li>
+			<li>특수문자와 띄워쓰기는 허용하지 않습니다.</li>
+		  </ul>
+		</div>
+	  </div><!-- // .sectionR -->
+	  
+	  <a href="#" onclick="firstsetting();" class="close">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer -->
+<!-- // 패스워드 변경 pop-->
+						
+						<!-- 패스워드 변경 완료  pop-->
+ <div class="popLayer" id="popupPasswordChangeSuccess" style="display:none; ">
+	<div class="layerBox clx">
+	<div class="contents">
+	
+		<div class="sectionL">
+		<h4>패스워드 변경</h4>
+		<p class="txt type02">패스워드 변경이 완료되었습니다.</p>
+		<div class="alL mt40">
+			<a href="#" onclick="quitSuccess();" class="btn-type1 btn-black"><span class="right">확인</span></a>
+		</div>
+	  </div><!-- // .sectionL -->      
+	  <div class="sectionR">
+		<h4>패스워드 변경 TIP</h4>
+		<div class="desc mt20">
+		  <ul>
+			<li>6~12자의 영문숫자를 조합해서 정해주십시오.</li>
+			<li>아이디 및 이메일 등과 같거나 포함하면 안됩니다.</li>
+			<li>단일 문자열, 연속 문자열 등 쉬운 패스워드는 안됩니다.</li>
+			<li>기타 일반 정보 등으로 부터 추측이 용이한 패스워드는<br />피해주십시오.</li>
+			<li>특수문자와 띄워쓰기는 허용하지 않습니다.</li>
+		  </ul>
+		</div>
+	  </div><!-- // .sectionR -->   
+	  <a href="#" onclick="firstsetting();" class="close">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer -->
+ <!-- // 패스워드 변경 완료 pop-->  
+ 
+ 
+		<!-- 회원탈퇴 pop-->
+ <div class="popLayer" id="popupQuit" style="display:none; ">
+	<div class="layerBox clx">
+	<div class="contents">   
+		<div class="sectionL">
+		<h4>회원탈퇴</h4>
+		<p class="txt type02">NIKE 회원탈퇴 시 탈퇴 안내 사항을 <br />반드시 확인해 주십시오</p>
+	  </div><!-- // .sectionL -->      
+	  <div class="sectionR">
+		<h4>탈퇴시 안내사항</h4>
+		<div class="desc mt20">
+		  <ul>
+			<li>회원정보는 탈퇴 시 즉시 삭제됩니다.</li>
+			<li>회원탈퇴 후 30일간은 서비스 부정이용 방지를 위하여<br />재가입이 불가합니다.</li>
+			<li>전자상거래 이용 후 탈퇴 시 주문정보는 교환/반품/환불<br />및 사후처리(A/S) 등을 위하여 전자상거래 등에서의<br />소비자 보호에 관한 법률에 의거, 일반정보보호정책에<br />따라 관리됩니다.</li>
+			<li>탈퇴 이후에는 어떠한 방법으로도 삭제된 회원정보를<br />복원할 수 없습니다.</li>
+		  </ul>
+		</div>
+		<div class="mt20 alR">
+		  <a href="#" class="btn-type6 btn-black" onclick="MemberSecession();"><span class="right">탈퇴</span></a>
+		  <a href="#" class="btn-type6 btn-gray ml02" onclick="firstsetting();"><span class="right">취소</span></a>
+		</div>
+	  </div><!-- // .sectionR -->      
+	  <a href="#" class="close" onclick="firstsetting();">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer -->
+		<!-- // 회원탈퇴 pop-->
+
+		<!-- 회원탈퇴 완료 pop-->
+ <div class="popLayer"  id="popupQuitSuccess" style="display:none; ">
+	<div class="layerBox clx">
+	<div class="contents">
+		<div class="sectionL">
+		<h4>회원탈퇴</h4>
+		<p class="txt type02">탈퇴가 완료되었습니다.<br />그동안 이용해주셔서 감사합니다.</p>
+		<div class="alL mt40">
+			<a class="btn-type1 btn-black" href="#" onclick="quitSuccess();"><span class="right">확인</span></a>
+		</div>
+	  </div><!-- // .sectionL -->    
+	  <div class="sectionR">
+		<h4>탈퇴시 안내사항</h4>
+		<div class="desc mt20">
+		  <ul>
+			<li>회원정보는 탈퇴 시 즉시 삭제됩니다.</li>
+			<li>회원탈퇴 후 30일간은 서비스 부정이용 방지를 위하여<br />재가입이 불가합니다.</li>
+			<li>전자상거래 이용 후 탈퇴 시 주문정보는 교환/반품/환불<br />및 사후처리(A/S) 등을 위하여 전자상거래 등에서의<br />소비자 보호에 관한 법률에 의거, 일반정보보호정책에<br />따라 관리됩니다.</li>
+			<li>탈퇴 이후에는 어떠한 방법으로도 삭제된 회원정보를<br />복원할 수 없습니다.</li>
+		  </ul>
+		</div>
+	  </div><!-- // .sectionR -->    
+	  <a href="#" class="close"  onclick="firstsetting();">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer -->
+
+		<!-- // 회원탈퇴 완료 pop-->
+		
+		<!-- 회원탈퇴 실패 pop-->
+ <div class="popLayer"  id="popupQuitFailure" style="display:none; ">
+	<div class="layerBox clx">
+	<div class="contents">
+		<div class="sectionL">
+		<h4>회원탈퇴</h4>
+		<p id="pFailure" class="txt type02">회원님께서는 아직 진행중인 주문내역이 있어 탈퇴하실 수 없습니다.<br />주문내역을 확인해 주세요.</p>
+		<div class="alL mt40">
+			<a id="aFailure" class="btn-type1 btn-black" href="http://lecs.nike.co.kr/mypage/order/list.lecs"><span class="right">확인</span></a>
+		</div>
+	  </div><!-- // .sectionL -->    
+	  <div class="sectionR">
+		<h4>탈퇴시 안내사항</h4>
+		<div class="desc mt20">
+		  <ul>
+			<li>회원정보는 탈퇴 시 즉시 삭제됩니다.</li>
+			<li>회원탈퇴 후 30일간은 서비스 부정이용 방지를 위하여<br />재가입이 불가합니다.</li>
+			<li>전자상거래 이용 후 탈퇴 시 주문정보는 교환/반품/환불<br />및 사후처리(A/S) 등을 위하여 전자상거래 등에서의<br />소비자 보호에 관한 법률에 의거, 일반정보보호정책에<br />따라 관리됩니다.</li>
+			<li>탈퇴 이후에는 어떠한 방법으로도 삭제된 회원정보를<br />복원할 수 없습니다.</li>
+		  </ul>
+		</div>
+	  </div><!-- // .sectionR -->    
+	  <a href="#" class="close"  onclick="firstsetting();">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer -->
+
+		<!-- // 회원탈퇴 실패 pop-->
+
+
+
+				
+<!-- 배송지 등록 pop-->
+ <div class="popLayer typeS" id="deliveryRegistration" style="display:none;">
+	<div class="layerBox clx">
+	<div class="contents">
+		<h4>배송지등록</h4>
+	  <div>
+			<fieldset>
+				<legend>배송지 등록 입력 폼</legend>
+				<div class="formBox mt23">
+				  <label for="DeliveryName" class="layerLabel type02">배송지명</label><input type="text" id="DeliveryName" name="DeliveryName" class="inputType01" /><span>&nbsp;예)&nbsp;집,&nbsp;회사</span>
+				</div>
+				<div class="formBox mt05">
+				  <label for="RemiteeName" class="layerLabel type02">받는사람</label><input type="text" id="RemiteeName" name="RemiteeName" class="inputType01" />
+				</div>
+				<div class="formBox mt05">
+				  <label for="DeliveryCableTelephoneRegionNo" class="layerLabel type02">전화번호</label><input type="text" class="inputType03 fir" id="DeliveryCableTelephoneRegionNo" name="DeliveryCableTelephoneRegionNo" maxlength="4" onkeypress="javascript:onlyNumber();"title="지역번호" />
+				   - <input type="text" id="DeliveryCableTelephoneExchange" name="DeliveryCableTelephoneExchange" maxlength="4" onkeypress="javascript:onlyNumber();" class="inputType03" title="연락처 앞자리" />
+					- <input type="text" id="DeliveryCableTelephoneEndNo" name="DeliveryCableTelephoneEndNo" maxlength="4" onkeypress="javascript:onlyNumber();" class="inputType03" title="연락처 뒷자리" />
+				</div>
+				<!--160526 휴대폰번호 추가-->
+				<div class="formBox mt05">
+				  <label for="DeliveryCellSectionNo" class="layerLabel type02">휴대폰번호</label><select name="DeliveryCellSectionNo" title="휴대폰번호 첫째자리" id="DeliveryCellSectionNo" style="width:83px; padding:4px 4px 4px 0; border:1px solid #ccc; height:26px; color:#666; font-family:'돋움'; letter-spacing:-1px; vertical-align:middle;">
+						<option value="">선택</option>
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+				  </select>
+				   - <input type="text" id="DeliveryCellExchangeNo" name="DeliveryCellExchangeNo" maxlength="4" onkeypress="javascript:onlyNumber();" class="inputType03" title="휴대폰 앞자리" />
+					- <input type="text" id="DeliveryCellEndNo" name="DeliveryCellEndNo" maxlength="4" onkeypress="javascript:onlyNumber();" class="inputType03" title="휴대폰 뒷자리" />  
+				</div>
+				<!--//160526 휴대폰번호 추가-->
+				<div class="formBox mt05">
+					<label for="post_addrSumAdd" class="layerLabel type02">지번주소</label><input type="text" class="inputType02" id="post_addrSumAdd" readonly="readonly"/>
+					<a class="btn-type6 btn-black ml01" href="#" onclick="fn_rodAddr('0','add');return false;"><span class="right">검색</span></a>
+				</div>   
+				<div class="formBox mt05">
+					<label for="post_addrroadSumAdd" class="layerLabel type02">도로명주소</label><input type="text" class="inputType02" id="post_addrroadSumAdd" readonly="readonly"/>
+					<a class="btn-type6 btn-black ml01" href="#" onclick="fn_rodAddr('1','add');return false;"><span class="right">검색</span></a>
+				</div>
+
+				<input type="hidden" id="stnmPostNo" name="stnmPostNo" value="" />
+				<input type="hidden" id="stnmAddressText" name="stnmAddressText" value=""/>
+				<input type="hidden" id="stnmDetailAddressText" name="stnmDetailAddressText" value=""/>
+				<input type="hidden" id="PostNo" name="PostNo" value="" />
+				<input type="hidden" id="addressText" name="addressText" value=""/>
+				<input type="hidden" id="DetailAddressText" name="DetailAddressText" value=""/>
+				<input type="hidden" id="addrChocSctCd" name="addrChocSctCd" value=""/>
+				<input type="hidden" id="addrChkRsltCd" name="addrChkRsltCd" value=""/>     
+									
+			</fieldset>
+	  </div>   
+	  <div class="btnAlign">
+		<a class="btn-type1 btn-orange" href="javascript:deliveryInsert();"><span class="right">등록</span></a>
+		<a class="btn-type1 btn-gray ml03" href="javascript:firstsetting();"><span class="right">취소</span></a>
+	  </div>
+   
+	  <a href="#" class="close"  onclick="firstsetting();">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer --> 
+						<!-- // 배송지 등록 pop-->
+
+						
+						<!-- 배송지 수정 pop-->
+ <div class="popLayer typeS" id="deliveryUpdate" style="display:none;">
+	<div class="layerBox clx">
+	<div class="contents">
+		<h4>배송지수정</h4>
+	  <div>
+			<fieldset>
+				<legend>배송지 수정 입력 폼</legend>
+				<div class="formBox mt23">
+				  <label for="updateDeliveryName" class="layerLabel type02">배송지명</label><input type="text" id="updateDeliveryName" name="updateDeliveryName" class="inputType01" /><span>&nbsp;예)&nbsp;집,&nbsp;회사</span>
+				</div>
+				<div class="formBox mt05">
+				  <label for="updateRemiteeName" class="layerLabel type02">받는사람</label><input type="text" id="updateRemiteeName" name="updateRemiteeName" class="inputType01" />
+				</div>
+				<div class="formBox mt05">
+				  <label for="updateDeliveryCableTelephoneRegionNo" class="layerLabel type02">전화번호</label><input type="text" class="inputType03 fir" id="updateDeliveryCableTelephoneRegionNo" name="updateDeliveryCableTelephoneRegionNo" maxlength="4" onkeypress="javascript:onlyNumber();"title="지역번호" />
+				   - <input type="text" id="updateDeliveryCableTelephoneExchange" name="updateDeliveryCableTelephoneExchange" maxlength="4" onkeypress="javascript:onlyNumber();" class="inputType03" title="연락처 앞자리" />
+					- <input type="text" id="updateDeliveryCableTelephoneEndNo" name="updateDeliveryCableTelephoneEndNo" maxlength="4" onkeypress="javascript:onlyNumber();" class="inputType03" title="연락처 뒷자리" />
+				</div>
+				<!--160428 휴대폰번호 추가-->
+				<div class="formBox mt05">
+				  <label for="updateDeliveryCellSectionNo" class="layerLabel type02">휴대폰번호</label><input type="text" class="inputType03 fir" id="updateDeliveryCellSectionNo" name="updateDeliveryCellSectionNo" maxlength="4" onkeypress="javascript:onlyNumber();"title="통신사번호" />
+				   - <input type="text" id="updateDeliveryCellExchangeNo" name="updateDeliveryCellExchangeNo" maxlength="4" onkeypress="javascript:onlyNumber();" class="inputType03" title="휴대폰 앞자리" />
+					- <input type="text" id="updateDeliveryCellEndNo" name="updateDeliveryCellEndNo" maxlength="4" onkeypress="javascript:onlyNumber();" class="inputType03" title="휴대폰 뒷자리" />  
+				</div>
+				<!--//160428 휴대폰번호 추가-->
+				<div class="formBox mt05">
+					<label for="post_addrSumUpdate" class="layerLabel type02">지번주소</label><input type="text" class="inputType02" id="post_addrSumUpdate" readonly="readonly"/>
+					<a class="btn-type6 btn-black ml01" href="#" onclick="fn_rodAddr('0','update');return false;"><span class="right">검색</span></a>
+				</div>     
+				<div class="formBox mt05">
+					<label for="post_addrroadSumUpdate" class="layerLabel type02">도로명주소</label><input type="text" class="inputType02" id="post_addrroadSumUpdate" readonly="readonly"/>
+					<a class="btn-type6 btn-black ml01" href="#" onclick="fn_rodAddr('1','update');return false;"><span class="right">검색</span></a>
+				</div>
+ 
+				
+				
+				<input type="hidden" id="updateStnmPostNo" name="updateStnmPostNo" value="" />
+				<input type="hidden" id="updateStnmAddressText" name="updateStnmAddressText" value=""/>
+				<input type="hidden" id="updateStnmDetailAddressText" name="updateStnmDetailAddressText" value=""/>
+				<input type="hidden" id="updatePostNo" name="updatePostNo" value="" />
+				<input type="hidden" id="updateAddressText" name="updateAddressText" value=""/>
+				<input type="hidden" id="updateDetailAddressText" name="updateDetailAddressText" value=""/>
+				<input type="hidden" id="updateAddrChocSctCd" name="updateAddrChocSctCd" value=""/>
+				<input type="hidden" id="updateAddrChkRsltCd" name="updateAddrChkRsltCd" value=""/>     
+			</fieldset>
+	  </div>   
+	  <div class="btnAlign">
+		<a class="btn-type1 btn-orange" href="javascript:deliveryUpdate();"><span class="right">수정</span></a>
+		<a class="btn-type1 btn-gray ml03" href="javascript:firstsetting();"><span class="right">취소</span></a>
+	  </div>
+   
+	  <a href="#" class="close"  onclick="firstsetting();">레이어팝업 닫기</a>
+	</div><!-- // .content -->
+  </div><!-- // .layerBox -->
+ </div><!-- // .popLayer --> 
+
+						<!-- // 배송지 수정 pop-->
+						
+	</form>
+
+			
+	<form name="reqPCCV2Form" id="reqPCCV2Form" method="post" action="https://name.siren24.com/pccV4/jsp/pccV4_j10.jsp">
+		<input type="hidden" name="reqInfo" id="reqInfo" />
+		<input type="hidden" name="retUrl"  id="retUrl"  value="22http://lecs.nike.co.kr/member/parentAgreeViewResult.lecs?nolayout=yes" />
+	</form>
+				
+<iframe name="submitiFrame" style="width:0;height:0" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+<iframe name="downloadFrame" style="width:0;height:0" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+</body>
+</html>

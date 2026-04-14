@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://hiweb.kr/html/kbs/html/ -->
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="http://whweb.cafe24.com/note/js/jquery-1.11.3.min.js"></script>
+
+	<title>나이키</title>
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/jquery-latest.js"> -->
+	<style type="text/css">
+		html, body {margin:0; padding:0;}
+		body, td {font:.9em "맑은 고딕",dotum, "돋움", Sans-Serif; color:#6b6b6b;}
+		table {border-collapse: collapse; border-spacing: 0;}
+		#g_header h1 {height:60px; line-height:60px;padding-left:28px;margin-top:0;color:#fff;background:#488fc3;}
+		#g_body {padding:0 30px;}
+		.guide_table {width:100%;}
+		.guide_table thead th {background:#f1f1f1; padding:3px; border:solid 1px #dadada;}
+		.guide_table tbody td {padding:3px; border:solid 1px #dadada;}
+		.guide_table tbody td ul {margin:0;}
+		.guide_table tbody td.filelink a {text-decoration:none; color:#0177bd;}
+		.guide_table tr.dep01 td {border-top:solid 2px #dadada;}
+		.guide_table td.filelink a {}
+		.guide_table caption {height:30px;line-height:30px;font-weight:bold;color:#fff;background:#488fc3;}
+		#g_footer {padding:30px; text-align:right;}
+		td {text-align:left;}
+		td.center {text-align:center;}
+		tr:hover {background:#f0f0f0;}
+		.red {color:red}
+		.contents {padding-bottom:100px}
+		.borderT {border-top:2px solid #6b6b6b;}
+	</style>
+</head>
+
+<body>
+	<div id="g_header">
+		<h1>나이키</h1>
+	</div>
+	<div id="g_body">
+		<div class="contents">	
+			<div>
+				<div class="toggle">
+					<p class="toggle-button">
+						<strong style="text-decoration:underline;cursor: pointer;">171010 신규 수정사항 주석문 : customer_171010</strong> <span>+</span>
+					</p>
+					<p class="toggle-content" style="display:none;">
+						<span style="color:red">mo/css/customer_renewal_m.css 업데이트<br> mo/image/arrow_right.jpg 추가<br> mo/image/arrow_left.jpg 추가</span><br><br>
+						- MO 공지사항 리스트 제목, 내용에 링크 태그 추가<br>
+						- MO 공지사항 리스트 '더 보기' 버튼 제외, 페이징 처리
+					</p>
+				</div>
+				<div class="toggle">
+					<p class="toggle-button">
+						<strong style="text-decoration:underline;cursor: pointer;">171018 신규 수정사항(이미지 교체)</strong> <span>+</span>
+					</p>
+					<p class="toggle-content" style="display:none;">
+						<span style="color:red">mo/image/img01.jpg 업데이트</span><br><br>
+						- MO 메인 스니커즈 로고 들어간 배너 이미지 업데이트
+					</p>
+				</div>
+				<div class="toggle">
+					<p class="toggle-button">
+						<strong style="text-decoration:underline;cursor: pointer;">171030 FAQ TYPE2 업데이트</strong> <span>+</span>
+					</p>
+					<p class="toggle-content" style="display:none;">
+						- 171030 FAQ TYPE2 업데이트(사이즈차트, SNKRS 런칭캘린더, THE DRAW 내용 누락 제외)
+					</p>
+				</div>
+				<div class="toggle">
+					<p class="toggle-button">
+						<strong style="text-decoration:underline;cursor: pointer;">171106 css 업데이트 주석문 : customer_171106 </strong> <span>+</span>
+					</p>
+					<p class="toggle-content" style="display:none;">
+						<span style="color:red">pc/css/customer_renewal.css 업데이트<br>mo/css/customer_renewal_m.css 업데이트</span><br><br>
+						- pc/css/customer_renewal.css FAQ 본문 부분 삭제<br>
+						- mo/css/customer_renewal_m.css FAQ 본문 부분 수정/삭제
+					</p>
+				</div>
+				<script>
+					$(document).ready(function(){
+						var title = $(".toggle > .toggle-button");
+						var info = $(".toggle > .toggle-content");
+				
+						$(title).find("span").html("+")
+				
+						$(title).click(function(){
+							if("block" == $(this).next(info).css("display")){
+								$(this).find("span").html("+")
+								$(this).next(info).stop().slideUp(300)
+							}else{
+								$(this).find("span").html("-")
+								$(this).next(info).stop().slideDown(300)
+							}
+						})
+					});
+				</script>
+				<p><a href="customer_renewal_171106.zip">전체파일 다운로드(171106)</a></p>
+				<p><a href="pc/css/customer_renewal.css" download>PC css 다운로드(171106)</a></p>
+				<p><a href="mo/css/customer_renewal_m.css" download>MO css 다운로드(171106)</a></p><!-- 
+				<p><a href="pc/js/customer_renewal.js" download>PC js 다운로드(171018)</a></p>
+				<p><a href="mo/js/customer_renewal_m.js" download>MO js 다운로드(171018)</a></p> -->
+			</div>
+			<table class="guide_table" id="guide_table">
+				<caption>고객센터 - WEB</caption>
+				<colgroup>
+					<col width="15%" />
+					<col width="15%" />
+					<col width="*" />
+					<col width="35%" />
+				</colgroup>
+				<thead>
+				<tr style="background-color: rgb(245, 245, 245);">
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">퍼블리싱 보기</th>
+					<th scope="col">참고</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr><td colspan="6" style="color:red;padding:20px 15px"><strong>주석 : customer_1708</strong></td></tr>
+					<tr>
+						<td>고객센터 - 메인</td>
+						<td>메인</td>
+						<td class="filelink">
+							<a href="pc/main.html" target="_blank">main.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - 공지사항</td>
+						<td>목록</td>
+						<td class="filelink">
+							<a href="pc/notice.html" target="_blank">notice.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>본문</td>
+						<td class="filelink">
+							<a href="pc/notice_view.html" target="_blank">notice_view.html</a>
+						</td>
+						<td></td>
+					</tr><!-- 
+					<tr>
+						<td>고객센터 - FAQ(TYPE01)</td>
+						<td></td>
+						<td class="filelink">
+							<a href="pc/faq_view_type01_01.html" target="_blank">faq_view_type01_01.html</a>
+						</td>
+						<td>
+						</td>
+					</tr> -->
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>교환/반품</td>
+						<td class="filelink">
+							<a href="pc/faq_view_type02_01.html" target="_blank">faq_view_type02_01.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>배송</td>
+						<td class="filelink">
+							<a href="pc/faq_view_type02_02.html" target="_blank">faq_view_type02_02.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>주문/결제</td>
+						<td class="filelink">
+							<a href="pc/faq_view_type02_03.html" target="_blank">faq_view_type02_03.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>사이즈차트 안내</td>
+						<td class="filelink">
+							<a href="javascript:boid();" target="_blank" style="text-decoration: line-through;cursor: default;">faq_view_type02_04.html</a>
+						</td>
+						<td>카테고리 바로가기 링크로 처리
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>SNKRS 런칭 캘린더</td>
+						<td class="filelink">
+							<a href="javascript:boid();" target="_blank" style="text-decoration: line-through;cursor: default;">faq_view_type02_05.html</a>
+						</td>
+						<td>카테고리 바로가기 링크로 처리
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>THE DRAW 안내</td>
+						<td class="filelink">
+							<a href="pc/faq_view_type02_06.html" target="_blank">faq_view_type02_06.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>회원혜택</td>
+						<td class="filelink">
+							<a href="pc/faq_view_type02_07.html" target="_blank">faq_view_type02_07.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>기타</td>
+						<td class="filelink">
+							<a href="pc/faq_view_type02_08.html" target="_blank">faq_view_type02_08.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>a/s</td>
+						<td class="filelink">
+							<a href="pc/faq_view_type02_09.html" target="_blank">faq_view_type02_09.html</a>
+						</td>
+						<td>
+						</td>
+					</tr><!-- 
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>회원가입/회원정보 변경</td>
+						<td class="filelink">
+							<a href="pc/faq_view_type02_10.html" target="_blank">faq_view_type02_10.html</a>
+						</td>
+						<td>
+						</td>
+					</tr> -->
+					<tr>
+						<td>고객센터 - E-mail</td>
+						<td>E-mail</td>
+						<td class="filelink">
+							<a href="pc/email.html" target="_blank">email.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="guide_table" id="guide_table">
+				<caption>고객센터 - MOBILE</caption>
+				<colgroup>
+					<col width="15%" />
+					<col width="15%" />
+					<col width="*" />
+					<col width="35%" />
+				</colgroup>
+				<thead>
+				<tr style="background-color: rgb(245, 245, 245);">
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">퍼블리싱 보기</th>
+					<th scope="col">참고</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr><td colspan="6" style="color:red;padding:20px 15px"><strong>주석 : customer_1708</strong></td></tr>
+					<tr>
+						<td>고객센터 - 메인</td>
+						<td>메인</td>
+						<td class="filelink">
+							<a href="mo/main.html" target="_blank">main.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - 공지사항</td>
+						<td>목록</td>
+						<td class="filelink">
+							<a href="mo/notice.html" target="_blank">notice.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>본문</td>
+						<td class="filelink">
+							<a href="mo/notice_view.html" target="_blank">notice_view.html</a>
+						</td>
+						<td></td>
+					</tr><!-- 
+					<tr>
+						<td>고객센터 - FAQ(TYPE01)</td>
+						<td></td>
+						<td class="filelink">
+							<a href="mo/faq_view_type01_01.html" target="_blank">faq_view_type01_01.html</a>
+						</td>
+						<td>
+						</td>
+					</tr> -->
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>교환/반품</td>
+						<td class="filelink">
+							<a href="mo/faq_view_type02_01.html" target="_blank">faq_view_type02_01.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>배송</td>
+						<td class="filelink">
+							<a href="mo/faq_view_type02_02.html" target="_blank">faq_view_type02_02.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>주문/결제</td>
+						<td class="filelink">
+							<a href="mo/faq_view_type02_03.html" target="_blank">faq_view_type02_03.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>사이즈차트 안내</td>
+						<td class="filelink">
+							<a href="mo/faq_view_type02_04.html" target="_blank">faq_view_type02_04.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>SNKRS 런칭 캘린더</td>
+						<td class="filelink">
+							<a href="javascript:boid();" target="_blank" style="text-decoration: line-through;cursor: default;">faq_view_type02_05.html</a>
+						</td>
+						<td>카테고리 바로가기 링크로 처리
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>THE DRAW 안내</td>
+						<td class="filelink">
+							<a href="mo/faq_view_type02_06.html" target="_blank">faq_view_type02_06.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>회원혜택</td>
+						<td class="filelink">
+							<a href="mo/faq_view_type02_07.html" target="_blank">faq_view_type02_07.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>기타</td>
+						<td class="filelink">
+							<a href="mo/faq_view_type02_08.html" target="_blank">faq_view_type02_08.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>a/s</td>
+						<td class="filelink">
+							<a href="mo/faq_view_type02_09.html" target="_blank">faq_view_type02_09.html</a>
+						</td>
+						<td>
+						</td>
+					</tr><!-- 
+					<tr>
+						<td>고객센터 - FAQ(TYPE02)</td>
+						<td>회원가입/회원정보 변경</td>
+						<td class="filelink">
+							<a href="mo/faq_view_type02_10.html" target="_blank">faq_view_type02_10.html</a>
+						</td>
+						<td>
+						</td>
+					</tr> -->
+					<tr>
+						<td>고객센터 - E-mail</td>
+						<td>TYPE01</td>
+						<td class="filelink">
+							<a href="mo/email.html" target="_blank">email.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>TYPE02</td>
+						<td class="filelink">
+							<a href="mo/email_2.html" target="_blank">email_2.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="guide_table" id="guide_table">
+				<caption>ETC</caption>
+				<colgroup>
+					<col width="15%" />
+					<col width="15%" />
+					<col width="*" />
+					<col width="35%" />
+				</colgroup>
+				<thead>
+				<tr style="background-color: rgb(245, 245, 245);">
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">퍼블리싱 보기</th>
+					<th scope="col">참고</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr><td colspan="6" style="color:red;padding:20px 15px"><strong>주석 : etc_1708</strong></td></tr>
+					<tr>
+						<td>PC</td>
+						<td>FOOTER</td>
+						<td class="filelink">
+							<a href="etc/pc_footer.html" target="_blank">pc_footer.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td>MO</td>
+						<td>GNB</td>
+						<td class="filelink">
+							<a href="etc/mo_gnb.html" target="_blank">mo_gnb.html</a>
+						</td>
+						<td>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- <script src='//js.zapjs.com/js/download.js'></script> -->
+	<!--<script>
+	$(function(){
+		$('a.all_fileDownload').click(function(){
+			var _fileLink = $(this).attr('href');
+			var _fileName = $(this).attr('data-name');
+		});
+		$('a.download').click(function(){
+			var _fileLink = $(this).parents('tr').find('.filelink a').attr('href');
+			var _fileName = $(this).parents('tr').find('.filelink a').text();
+			console.log(_fileName);
+			$.ajax({
+				url: _fileLink,
+				success: download.bind(true, "text/html", _fileName)
+			});
+			return false;
+		});
+	});
+	 // download(document.body.outerHTML, 'mobile/display/pdp_m.html', 'text/html')
+	</script>-->
+</body>
+</html>

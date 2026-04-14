@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>2018 JUST DO IT: '나의 #미친존재감'을 발견하라</title>
+    <link rel="shortcut icon" href="http://image.nike.co.kr//nike_favicon.ico" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<!-- 180108 응모 페이지 // s -->
+	<style type="text/css">
+		@font-face {
+		  font-family: "NG";
+		  font-style: normal;
+		  font-weight: 400;
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format("embedded-opentype"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format("woff2"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format("woff"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format("truetype");
+		}
+		@font-face {
+		  font-family: "NG";
+		  font-style: normal;
+		  font-weight: 700;
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot);
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format("embedded-opentype"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format("woff2"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format("woff"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format("truetype");
+		}
+		@font-face {
+		  font-family: "NG";
+		  font-style: normal;
+		  font-weight: 800;
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot);
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot?#iefix) format("embedded-opentype"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff2) format("woff2"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff) format("woff"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.ttf) format("truetype");
+		 }
+		
+		
+		/*=================================
+		reset
+		=================================*/
+		* {list-style:none;padding:0;margin:0;}
+		html {font-size:12px;font-family:'NG';line-height:1;word-break:break-all;-ms-word-break:break-all;}
+		body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button {outline:none;}
+		input[type="radio"], input[type="image"], img, fieldset, iframe {border:0 none;vertical-align:middle}
+		table {border-spacing:0;border-style:none;border-collapse:collapse;}
+		input[type="text"], input[type="password"], input[type="file"], textarea {border:1px solid #d1d1d1;}
+		a, a:hover, a:link, a:visited, a:active {text-decoration:none;}
+		hr {display:none;}
+		h1, h2, h3, h4, h5, h6 {font-size:1em}
+		
+		
+		/*=================================
+		ì‘ëª¨íŽ˜ì´ì§€
+		=================================*/
+		.texthidden {visibility:hidden; overflow:hidden; position:absolute; top:0; left:0; width:1px; height:1px; font-size:0; line-height:0;}
+		
+		body {position:relative;}
+		.CDP_CDP{width:100%;overflow:hidden}
+		.CDP_CDP .bg{width:100%; display:block}
+		.sec01 .txtArea {text-align:center;padding: 50px 0;}
+		.sec02 {padding:45px 0;border-top: 1px solid #e1e1e1;border-bottom: 1px solid #e1e1e1;}
+		.sec02 .imgArea {text-align:center;}
+		
+		.sec03{position:relative;padding:45px 0;}
+		.sec03 * {font-size: 13px;color: #111;letter-spacing: -0.4px;line-height:16px}
+		.sec03 form {width: 643px;margin: 0 auto;}
+		.sec03 .box {}
+		.sec03 .line {padding: 5.5px 0;/* border-top: 1px solid #ebebeb; */}
+		.sec03 .inline_top {display: inline-block;vertical-align: top;}
+		.sec03 .inline_top.left {width: 24%;padding: 12px 0 12px 2%;font-weight:700;}
+		.sec03 .inline_top.right {width: 74%;}
+		.sec03 .inline_top.right * {font-size:12px}
+		.sec03 .inline_middle {display: inline-block;vertical-align: middle;}
+		.sec03 .inline_middle.left {width: 24%;padding: 12px 0 12px 2%;font-weight:700;}
+		.sec03 .inline_middle.right {width: 74%;}
+		.sec03 .inline_middle.right * {font-size:12px}
+		.sec03 .inline_middle input[type="text"] {width: 95%;padding: 11px 0;text-indent: 7px;border: 1px solid #ccc;/* 180109 ìŠ¤íƒ€ì¼ ì¶”ê°€ s */height: auto;/* 180109 ìŠ¤íƒ€ì¼ ì¶”ê°€ e */}
+		.sec03 .inline_middle input[type="radio"] {}
+		.sec03 input[type="text"]::-webkit-input-placeholder {color:#adadad;letter-spacing:0;}
+		.sec03 input[type="text"]::-moz-placeholder {color:#adadad;letter-spacing:0;}
+		.sec03 input[type="text"]:-ms-input-placeholder {color:#adadad;letter-spacing:0;}
+		.sec03 .inline_middle select {width: 95%;height: 40px;line-height: 40px;text-indent: 7px;border: 1px solid #ccc;}
+		.sec03 .inline_middle select option {}
+		.sec03 .inline_middle .join_link {margin-top: 5px;border-bottom: 1px solid #333;letter-spacing: 0;}
+		.sec03 .selectbox {position:relative;text-align:left;width: 95%;border: 1px solid #ccc;}
+		.sec03 .selectbox .ipt {display:block;padding: 11px 0 11px 7px;/* border: 1px solid #ccc; */}
+		.sec03 .selectbox .ipt.default {}
+		.sec03 .selectbox .select_icon {position:absolute;top:50%;margin-top: -3.5px;right: 15px;color:#fff;background: url(images/selectbox_icon.png) no-repeat left top;width: 10px;height: 7px;}
+		.sec03 .selectbox ul {display:none;position:absolute;top:100%;left: -1px;width: 100%;border-right: 1px solid #ccc;border-left: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+		.sec03 .selectbox ul li a {display:block;padding: 10px 0 10px 7px;background-color: #fff;}
+		.sec03 .privacy_box {padding: 10px 25px;border: 1px solid #e1e1e1;background: #fbfbfb;margin-top: 20px;}
+		.sec03 .privacy_box > div {margin: 10px -40px 10px 0;padding-left: 6px;background: url(images/dot_icon.png) no-repeat left 7px;}
+		.sec03 .privacy_box > div > p {font-size: 12px;}
+		.sec03 .privacy_box > div > p .radio_style01 {}
+		.sec03 .privacy_box > div > p .radio_style01 > input[type="radio"] {}
+		.sec03 .privacy_box > div > p .radio_style01 > input[type="radio"] + label {}
+		.sec03 .privacy_box > div > p .radio_style01 > input[type="radio"] + label:hover {}
+		.sec03 .privacy_box > div > p .radio_style01 > input[type="radio"]:checked + label {}
+		.sec03 .privacy_box .btn_privacy {display: inline-block;vertical-align: middle;font-size: 12px;/* border-bottom: 1px solid #111; */text-decoration: underline;margin-left: 10px;}
+		.sec03 .btn_submit {text-align: center;margin-top: 20px;}
+		.sec03 .btn_submit a {display: inline-block;margin: 20px auto;}
+		.sec03 .btn_submit img {}
+		.sec03 #partner_form .partner_ttl {background: #fbfbfb;margin-bottom: 5px;padding: 16px 0 16px 2%;font-weight: 700;border-bottom: 1px solid #ebebeb;}
+		.sec03 #partner_form .partner_ttl .borderTop {}
+		.sec03 #partner_form .partner_ttl .borderBottom {}
+		.sec03 #partner_form .box {border: 1px solid #ebebeb;padding: 0 0 5px;margin: 10px 0 0;}
+		.sec03 #partner_form .line {padding: 5px 0;}
+		.sec03 #partner_form .inline_top {}
+		.sec03 #partner_form .inline_top.left {}
+		.sec03 #partner_form .inline_top.right {}
+		.sec03 #partner_form .inline_middle {}
+		.sec03 #partner_form .inline_middle.left {}
+		.sec03 #partner_form .inline_middle.right {}
+		.sec03 #partner_form .inline_middle input[type="text"] {}
+		.sec03 #partner_form .inline_middle input[type="radio"] {}
+		.sec03 #partner_form .inline_middle select {}
+		.sec03 #partner_form .inline_middle select option {}
+		.sec03 #partner_form .inline_middle .join_link {}
+		.sec03 .radio_style01 {position:relative;}
+		.sec03 .radio_style01 > input[type="radio"] {visibility:hidden; overflow:hidden; position:absolute; top:0; left:0; width:1px; height:1px; font-size:0; line-height:0;}
+		.sec03 .radio_style01 > input[type="radio"] + label{display:inline-block;cursor:pointer;padding-left: 18px;margin-right: 40px;background: url(images/radio_icon.png) no-repeat left center;color: #111;}
+		.sec03 .radio_style01 > input[type="radio"] + label:hover{}
+		.sec03 .radio_style01 > input[type="radio"]:checked + label{background: url(images/radio_icon_on.png) no-repeat left center;}
+		.sec03 .radio_style02 {position:relative;}
+		.sec03 .radio_style02 > input[type="radio"] {visibility:hidden; overflow:hidden; position:absolute; top:0; left:0; width:1px; height:1px; font-size:0; line-height:0;}
+		.sec03 .radio_style02 > input[type="radio"] + label{display:inline-block;vertical-align: middle;width: 47%;margin: 0 1% 0 0;padding: 11px 0;text-align: center;border: 1px solid #e5e5e5;border-radius: 3px;color:#999;cursor:pointer;}
+		.sec03 .radio_style02 > input[type="radio"] + label span {display:none;}
+		.sec03 .radio_style02 > input[type="radio"] + label:hover{color:#666; border-color:#666;}
+		.sec03 .radio_style02 > input[type="radio"]:checked + label{border-color: #000;color: #000;}
+		.sec03 .radio_style02 > input[type="radio"]:checked + label span {display:inline-block;width:11px;height:8px;background: url(images/radio_icon2.png) no-repeat left top;margin-right: 3px;}
+		
+		.sec04{padding:30px 0 40px;background-color:#fbfbfb;border-top:1px solid #e1e1e1;}
+		.sec04 .notice{max-width: 643px;margin:0 auto;position: relative;}
+		.sec04 .notice .tel_link{position: absolute;left: 390px;top: 210px;padding-top: 1.9%;width: 11.4%;background: #000;opacity: 0;filter: alpha(opacity:'0');}
+		
+		.submit_popup {display:none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.8);z-index: 9999;text-align: center;}
+		.submit_popup > span {display: inline-block;vertical-align: middle;height:100%;}
+		.submit_popup > div {display: inline-block;vertical-align: middle;width: 393px;position: relative;}
+		.submit_popup > div img {width: 100%;}
+		.submit_popup > div .link01 {position: absolute;top: 20px;right: 20px;width: 13px;}
+		.submit_popup > div .link02 {position: absolute;bottom: 44px;left: 50%;width: 120px;margin-left: -60px;}
+		
+		.privacy_popup {display:none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.8);z-index: 9999;text-align: center;color: #111;}
+		.privacy_popup > span {display: inline-block;vertical-align: middle;height:100%;}
+		.privacy_popup > div {display: inline-block;vertical-align: middle;width: 500px;max-height: 480px;overflow-y: auto;text-align: left;padding: 50px 30px 30px;background: #fff;position: relative;}
+		.privacy_popup > div .link01 {position: absolute;top: 30px;right: 30px;width: 13px;}
+		.privacy_popup > div .link01 img {}
+		.privacy_popup > div h2 {font-weight:700;margin-bottom:20px;font-size: 13px;}
+		.privacy_popup > div h3 {font-weight: 700;margin: 10px 0;}
+		.privacy_popup > div p {line-height: 20px;}
+		.privacy_popup > div p a {color: #111;}
+		.privacy_popup > div table {font-size: 12px;margin: 10px 0;text-align: center;border-top: 1px solid #d1d1d1;border-left: 1px solid #d1d1d1;line-height: 16px;}
+		.privacy_popup > div table caption {padding: 10px;background: #d1d1d1;font-weight: 700;}
+		.privacy_popup > div table tr {}
+		.privacy_popup > div table th {padding: 10px;border-right: 1px solid #d1d1d1;border-bottom: 1px solid #d1d1d1;}
+		.privacy_popup > div table td {padding: 10px;border-right: 1px solid #d1d1d1;border-bottom: 1px solid #d1d1d1;}
+	</style>
+	<div class="CDP_CDP">
+		<div class="sec01">	
+			<div class="imgArea">
+				<img alt="bg" class="bg" src="images/180108_CDP_p1_bg.png">
+			</div>
+			<div class="txtArea">
+				<p class="tit" style="margin-bottom:30px;"><img alt="2018 JUST DO IT:나의 #미친존재감을 발견하라" src="images/180108_sub_CDP_p1_tit.png"></p>
+				<p class="tail" style="margin-bottom:40px;"><img alt="인생의 새로운 시기를 준비하고 있는 세상의 모든 새내기들을 위해 나이키에서 새롭게 선보이는 #미친존재감 just do it 캠페인. 전 세계 최초로 공개되는 2018 나이키의 새로운 이노베이션 그리고 디지털과 러닝의 특별한 결합을 통해 '나의 #미친존재감'을 발견할 수 있는 기회를 놓치지 마세요!" src="images/180108_sub_CDP_p1_tail.png"></p>
+				<p class="tail" style="margin-bottom:25px;"><img alt="대 상  #미친존재감을 꿈꾸는 세상의 모든 새내기 및 동반 1인 혜 택  나이키 신제품 경험 및 전세계 최초 우선 구매 응모 장 소  동대문 디자인 플라자 알림 2관 일 시  2018년 1월 19일(금) - 1월 20일(토)" src="images/180108_sub_CDP_p1_tail2.png"></p>
+				<p class="tail"><img alt="12:00 - 14:00 (100명) 14:00 - 16:00 (100명) 16:00 - 18:00 (100명)" src="images/180108_sub_CDP_p1_tail3.png"></p>
+			</div>
+		</div>
+		<div class="sec02">
+			<div class="imgArea">
+				<img src="images/180108_sub_CDP_p2_tit.png" alt="참가자 정보 기입 사항">
+			</div>
+		</div>
+		<div class="sec03">
+			<form name="" method="" action="">
+				<fieldset>
+					<legend class="texthidden">참가자 정보 기입 사항</legend>
+					<div class="box">
+						<div class="line">
+							<div class="inline_middle left">
+								행사 참가일
+							</div
+							><div class="inline_middle right radio_style01">
+								<input type="radio" name="entry_day" id="entry_day_0119" class="" value=""><label for="entry_day_0119">1월 19일(금)</label
+								><input type="radio" name="entry_day" id="entry_day_0120" class="" value=""><label for="entry_day_0120">1월 20일(토)</label>
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_middle left">
+								<label for="entry_time">행사 시간</label>
+							</div
+							><div class="inline_middle right">
+								<!-- 셀렉트 박스 변경 s -->
+								<div class="selectbox">
+									<input name="category" type="hidden" value="" required="">
+									<a href="javascript:void(0)" class="ipt default">행사 참가일을 선택해 주세요.</a>
+									<span class="select_icon"></span>
+									<ul>
+										<li><a href="javascript:void(0)" data-target="a">12:00 - 14:00</a></li>
+										<li><a href="javascript:void(0)" data-target="b">14:00 - 16:00</a></li>
+										<li><a href="javascript:void(0)" data-target="c">16:00 - 18:00</a></li>
+									</ul>
+								</div>
+								<script>
+									$(".selectbox").click(function(){
+										$(this).children('ul').slideToggle(100);
+									}); 
+									$(".selectbox").mouseleave(function(){
+										$(this).children('ul').fadeOut(200); 
+									}); 
+									$(".selectbox ul li a").click(function(){
+										$(this).parents('ul').siblings('.default').html($(this).text());
+										$(this).parents('ul').siblings('input').val($(this).attr('data-target'));
+									});
+								</script>
+								<!-- 셀렉트 박스 변경 e -->
+
+								<!-- 셀렉트 박스 변경 // 기존 삭제
+								<select name="entry_time" id="entry_time">									
+									<option selected>행사 참가일을 우선 선택해 주세요.</option>									
+									<option value="12:00 - 14:00">12:00 - 14:00</option>
+									<option value="14:00 - 16:00">14:00 - 16:00</option>
+									<option value="16:00 - 18:00">16:00 - 18:00</option>
+								</select>
+								-->
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_middle left" style="vertical-align:top;">
+								<label for="entry_ID">NIKE.COM ID</label>
+							</div
+							><div class="inline_middle right" style="vertical-align:top;">
+								<input type="text" name="entry_ID" id="entry_ID" class="inline_middle" value="" placeholder="" size="" maxlength="">
+								<a href="https://secure.nike.co.kr/member/joinView.lecs" target="_blank" class="inline_middle join_link">신규 NIKE.COM 멤버 가입하기</a>
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_middle left">
+								<label for="entry_name">이름</label>
+							</div
+							><div class="inline_middle right">
+								<input type="text" name="entry_name" id="entry_name" class="" value="" placeholder="" size="" maxlength="">
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_middle left">
+								성별
+							</div
+							><div class="inline_middle right radio_style02">
+								<input type="radio" name="entry_sex" id="entry_sex_men" class="" value=""><label for="entry_sex_men"><span></span>남성</label
+								><input type="radio" name="entry_sex" id="entry_sex_woman" class="" value=""><label for="entry_sex_woman"><span></span>여성</label>
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_middle left">
+								<label for="entry_birth">생년월일</label>
+							</div
+							><div class="inline_middle right">
+								<input type="text" name="entry_birth" id="entry_birth" class="" value="" placeholder="8자리로 입력해 주세요. 예시) 19990118" size="" maxlength="8">
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_middle left">
+								<label for="entry_phone">핸드폰 번호</label>
+							</div
+							><div class="inline_middle right">
+								<input type="text" name="entry_phone" id="entry_phone" class="" value="" placeholder="- 를 제외한 번호로 입력해 주세요." size="" maxlength="">
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_middle left">
+								<label for="entry_email">이메일 주소</label>
+							</div
+							><div class="inline_middle right">
+								<input type="text" name="entry_email" id="entry_email" class="" value="" placeholder="" size="" maxlength="">
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_middle left">
+								<label for="entry_size">발 사이즈</label>
+							</div
+							><div class="inline_middle right">
+								<input type="text" name="entry_size" id="entry_size" class="" value="" placeholder="" size="" maxlength="">
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_middle left">
+								<label for="entry_instaID">인스타그램 ID</label>
+							</div
+							><div class="inline_middle right">
+								<input type="text" name="entry_instaID" id="entry_instaID" class="" value="" placeholder="필수 기입 사항은 아니지만, 인스타그램 ID 입력시, 참가 당첨 확률이 올라갑니다." size="" maxlength="">
+							</div>
+						</div>
+						<div class="line">
+							<div class="inline_top left">
+								동반인 참가 여부
+							</div
+							><div class="inline_top right radio_style02">
+								<input type="radio" name="entry_acco" id="entry_acco1" value="" onclick="partner_on()"><label for="entry_acco1"><span></span>참가</label
+								><input type="radio" name="entry_acco" id="entry_acco2" value="" onclick="partner_off()"><label for="entry_acco2"><span></span>불참</label>	
+								<p class="entry_privacy">
+									<p style="padding: 5px 0 0 6px;font-size: 12px;width: 95%;box-sizing: border-box;line-height: 16px;background: url(images/dot_icon.png) no-repeat left 12px;">본 이벤트 등록 시 귀하가 제공하는 동반자에 대한 개인정보에 대해서는동반자의 동의를 얻어 제공한 것으로 간주합니다.</p>
+								</p>
+							</div>
+						</div>
+						<!-- 동반자 참가 시 // s -->
+						<div id="partner_form">
+						</div>
+						<!-- 동반자 참가 시 // e -->
+
+						<div class="privacy_box">
+							<!-- 180112 s -->
+							<p style="font-size: 12px;margin: 10px 0 20px;padding-left: 6px;background: url(images/dot_icon.png) no-repeat left 7px;">해당 이벤트 참가 신청을 위해 아래 항목에 대한 동의가 필요합니다.</p>
+							<!-- 180112 e -->
+							<div>
+								<p class="inline_middle" style="width:60%">서비스 이용 약관에 동의합니다.<!-- 약관수정 s --><a href="javascript:popup_onoff('#privacy_popup01')" class="btn_privacy" target="_blank">자세히보기</a><!-- 약관수정 e --></p
+								><p class="inline_middle radio_style01" style="width:40%;text-align:right;">
+									<input type="radio" name="privacy1" id="privacy1_a" class="" value=""><label for="privacy1_a"><span></span>동의함</label><input type="radio" name="privacy1" id="privacy1_b" class="" value=""><label for="privacy1_b"><span></span>동의하지 않음</label>
+								</p>
+							</div>
+							<div>
+								<p class="inline_middle" style="width:60%">개인정보를 위한 이용자 부분에 동의합니다.<!-- 약관수정 s --><a href="javascript:popup_onoff('#privacy_popup02')" class="btn_privacy" target="_blank">자세히보기</a><!-- 약관수정 e --></p
+								><p class="inline_middle radio_style01" style="width:40%;text-align:right;">
+									<input type="radio" name="privacy2" id="privacy2_a" class="" value=""><label for="privacy2_a"><span></span>동의함</label><input type="radio" name="privacy2" id="privacy2_b" class="" value=""><label for="privacy2_b"><span></span>동의하지 않음</label>
+								</p>
+							</div>
+							<div>
+								<p class="inline_middle" style="width:60%">개인정보 국외 이전에 대해 동의합니다.<!-- 약관수정 s --><a href="javascript:popup_onoff('#privacy_popup03')" class="btn_privacy" target="_blank">자세히보기</a><!-- 약관수정 e --></p
+								><p class="inline_middle radio_style01" style="width:40%;text-align:right;">
+									<input type="radio" name="privacy3" id="privacy3_a" class="" value=""><label for="privacy3_a"><span></span>동의함</label><input type="radio" name="privacy3" id="privacy3_b" class="" value=""><label for="privacy3_b"><span></span>동의하지 않음</label>
+								</p>
+							</div>
+							<div>
+								<p class="inline_middle" style="width:60%">개인정보 취급 위탁에 동의합니다.<!-- 약관수정 s --><a href="javascript:popup_onoff('#privacy_popup04')" class="btn_privacy" target="_blank">자세히보기</a><!-- 약관수정 e --></p
+								><p class="inline_middle radio_style01" style="width:40%;text-align:right;">
+									<input type="radio" name="privacy4" id="privacy4_a" class="" value=""><label for="privacy4_a"><span></span>동의함</label><input type="radio" name="privacy4" id="privacy4_b" class="" value=""><label for="privacy4_b"><span></span>동의하지 않음</label>
+								</p>
+							</div>
+							<!-- 약관수정 s -->
+							<div>
+								<p class="inline_middle" style="width:60%">참가자 면책에 동의합니다.<a href="javascript:popup_onoff('#privacy_popup05')" class="btn_privacy" target="_blank">자세히보기</a></p
+								><p class="inline_middle radio_style01" style="width:40%;text-align:right;">
+									<input type="radio" name="privacy5" id="privacy5_a" class="" value=""><label for="privacy5_a"><span></span>동의함</label><input type="radio" name="privacy5" id="privacy5_b" class="" value=""><label for="privacy5_b"><span></span>동의하지 않음</label>
+								</p>
+							</div>
+							<div>
+								<p style="font-size: 12px;margin: 10px 0">만약, 본인이 미성년자인 경우에는 부모/보호자 참가 동의서(<a href="/assets/upload/agree.zip" style="text-decoration: underline;">다운로드</a>)를 제출하겠습니다.</p>
+							</div>
+							<!-- 약관수정 e -->
+						</div>
+						<!-- 180112 s -->
+						<div style="margin-top: 16px;">
+							<p style="padding-left: 6px;background: url(images/dot_icon.png) no-repeat left 7px;font-size: 12px;">해당 양식 작성 후 수정이 불가하오니 본인/동반인 관련 내용 입력 시 정확한 기입을 부탁 드립니다.</p>
+							<p style="padding-left: 6px;background: url(images/dot_icon.png) no-repeat left 7px;font-size: 12px;">기입 정보 수정이 필요하신 경우에는 1/14 24:00까지 운영 사무국(<a href="mailto:nikerunning@nike.co.kr">nikerunning@nike.co.kr</a> 또는 <a href="tel:1666-6453">1666-6453</a>)으로 문의 바랍니다.</p>
+						</div>
+						<!-- 180112 e -->
+					</div>
+					<div class="btn_submit">
+						<a href="#none" onclick="popup_onoff('.submit_popup')" title="등록하기"><img src="images/180108_sub_CDP_p4_btnsubmit.jpg" alt=""></a>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div class="sec04">
+			<div class="notice">		
+				<img src="images/180108_sub_CDP_p4_notice.png" alt="꼭 읽어보세요! · 해당 행사는 선착순 접수가 아닌 추첨을 통해 진행됩니다.(본인의 인스타그램 계정 정보 기입 시, 참가 당첨 확률이 높아집니다.)<br />· 이벤트에 참석할 동반인도 나이키닷컴 가입이 필수입니다. <br />· 동반 1인 없이 이벤트 당첨자 본인만 참석도 가능합니다.<br />· 해당 행사 참가에 대한 양도는 불가합니다.<br />· 행사 참가에 선정되지 않은 분들께는 MMS가 발송되지 않을 수 있습니다.<br />· 1월 19일(금)-1월 20일(토) 현장에서 신분증 확인을 통해 본인 및 동반인 인증 확인 절차를 진행할 예정입니다.<br />· 1월 19일(금)-1월 20일(토) 현장에서 공개될 나이키 신제품에 대한 우선 구매 응모는 현장에서 진행될 예정입니다.<br />또한, 우선 구매 응모 당첨자 공지는 별개로 진행될 예정입니다. <br />· 해당 행사 관련하여 추가적으로 궁금하신 사항은 해당 이벤트 관련 사무국(1666-6453)으로 문의 부탁 드립니다.">
+				<a href="tel:1666-6453" class="tel_link"></a>
+			</div>
+		</div>
+	</div>
+	<div class="submit_popup">
+		<span></span>
+		<div>
+			<img src="images/popup_bg.png" alt="">
+			<a href="javascript:popup_onoff('.submit_popup')" class="link01"><img src="images/popup_close.png" alt=""></a>
+			<a href="http://www.nike.co.kr" target="_blank" class="link02"><img src="images/popup_btn.png" alt=""></a>
+		</div>
+	</div>
+	<!-- 약관수정 s -->
+	<div class="privacy_popup" id="privacy_popup01">
+		<span></span>
+		<div>
+			<a href="javascript:popup_onoff('#privacy_popup01')" class="link01"><img src="images/popup_close.png" alt=""></a>
+			<h2>[개인정보 수집 및 이용 동의]</h2>
+			<p>아래는 ‘나이키 미친존재감 JUSTDOIT 이벤트’(이하 “이벤트”) 참가 신청, 이벤트 진행 및 이벤트 관련 안내를 위한 연락을 목적으로 사용되는 개인 정보에 대한 수집 / 이용 동의 확인 절차로, 나이키는 참가자의 개인정보보호를 소중하게 생각하고 이를 보호하기 위하여 항상 최선을 다해 노력하고 있습니다. 나이키는 개인정보보호 관련 법률규정을 준수하고 있습니다. <br>(유)나이키코리아는 이벤트의 원활한 진행을 위해 신청 시 <a href="http://www.nike.co.kr" target="_blank">NIKE.COM</a>, <a href="http://event.nike.co.kr" target="_blank">event.nike.co.kr</a> 를 통해 아래와 같은 내용을 수집하고 사용합니다.</p>
+			<table>
+				<caption>[필수] 개인정보 수집·이용 동의</caption>
+				<colgroup>
+					<col width="33%" />
+					<col width="33%" />
+					<col width="34%" />
+				</colgroup>
+				<thead>
+				<tr>
+					<th>목적</th>
+					<th>항목</th>
+					<th>보유기간</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>이용자 식별 및 본인여부 확인</td>
+						<td>행사 참가일, 행사 시간, NIKE.COM ID, 비밀번호, 이름, 성별, 생년월일, 핸드폰 번호, 이메일 주소, 발 사이즈, 인스타그램 ID, 동반인 이름, 동반인 성별, 동반인 생년월일, 동반인 핸드폰 번호, 동반인 이메일 주소</td>
+						<td>등록일로부터 3개월까지</td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="font-weight:700;margin-top:5px">※ 동의 거부 권리 및 동의 거부 시 불이익:  필수 정보의 수집이〮용에 관한 동의를 거부 하실 수 있으며, 다만 필수 정보는 “이벤트”참가를 위해서 필요한 최소한의 개인정보이므로 동의를 해 주셔야 “이벤트” 참가가 가능합니다.</p>
+		</div>
+	</div>
+	<div class="privacy_popup" id="privacy_popup02">
+		<span></span>
+		<div>
+			<a href="javascript:popup_onoff('#privacy_popup02')" class="link01"><img src="images/popup_close.png" alt=""></a>
+			<h2>[개인정보 제3자 제공에 대한 동의]</h2>
+			<table>
+				<caption>[선택] 개인정보 제3자 제공에 대한 동의</caption>
+				<colgroup>
+					<col width="25%" />
+					<col width="25%" />
+					<col width="25%" />
+					<col width="25%" />
+				</colgroup>
+				<thead>
+				<tr>
+					<th>제공 받는자</th>
+					<th>목적</th>
+					<th>항목</th>
+					<th>보유기간</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>KB손해보험</td>
+						<td>참가자 보험 가입 등 연계</td>
+						<td>성명, 법정 생년월일, 휴대전화번호</td>
+						<td>등록일로부터 3개월까지</td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="font-weight:700;margin-top:5px">※ 동의를 거부하시는 경우에도 이벤트 참가는 하실 수 있습니다. 다만 본인여부 확인 제한에 따른 불이익은 당사자가 부담합니다</p>
+		</div>		
+	</div>
+	<div class="privacy_popup" id="privacy_popup03">
+		<span></span>
+		<div>
+			<a href="javascript:popup_onoff('#privacy_popup03')" class="link01"><img src="images/popup_close.png" alt=""></a>
+			<h2>[개인 정보의 국외이전에 대한 동의]</h2>
+			<p><a href="http://event.nike.co.kr" target="_blank">event.nike.co.kr</a> 를 통해 제공하신 정보 중 일부는 상위 이벤트 참가 자료 및 자료 BACK-UP 등의 목적으로 국외에 위치하고 있는 서버에 저장될 수 있습니다. 다국적 기업인 NIKE Inc.는 전세계에 걸쳐 많은 이용자를 보유하고 있으며, 이용자의 개인정보에 대한 관리는 한국에서의 보호 정책만큼 엄격하게 처리되고 있습니다.</p>
+		</div>		
+	</div>
+	<div class="privacy_popup" id="privacy_popup04">
+		<span></span>
+		<div>
+			<a href="javascript:popup_onoff('#privacy_popup04')" class="link01"><img src="images/popup_close.png" alt=""></a>
+			<h2>[개인정보 취급 위탁에 대한 고지]</h2>
+			<p>(유)나이키코리아는 이벤트 진행을 위해 참가자의 개인 정보를 외부에 위탁하여 처리하고 있으며, 관계법령에 따라 위탁 계약 시 개인정보가 안전하게 관리될 수 있도록 규정하고 있습니다. 동 이벤트의 개인정보취급 수탁자와 그 업무의 내용은 아래와 같습니다.</p>
+			<table>
+				<colgroup>
+					<col width="50%" />
+					<col width="50%" />
+				</colgroup>
+				<thead>
+				<tr>
+					<th>수탁자</th>
+					<th>목적</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>㈜ 스포츠링크, ㈜사일로랩, ㈜아이뱅크, ㈜롯데닷컴, ㈜커스토머인사이트</td>
+						<td>이벤트 진행 대행 및 시스템 데이터 관리</td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="font-weight:700;margin-top:5px">※ (유)나이키코리아의 상세한 개인정보취급(처리)방침은 <a href="http://www.nike.co.kr" target="_blank">www.nike.co.kr</a> 에서 확인하실 수 있습니다.</p>
+		</div>		
+	</div>
+	<div class="privacy_popup" id="privacy_popup05">
+		<span></span>
+		<div>
+			<a href="javascript:popup_onoff('#privacy_popup05')" class="link01"><img src="images/popup_close.png" alt=""></a>
+			<h2>참가자 면책</h2>
+			<p>본 “참가자 면책 양식”에 있어 “행사”는 본인이 참가하는 ‘나이키 미친존재감 JUSTDOIT 이벤트’를 의미하며, 해당 행사 장소 간의 이동과 행사의 일환으로 진행하는 제품 테스트, 기타 행사와 관련된 모든 행위들 및 본인의 행사 참가행위 등을 모두 포괄합니다. 본 행사에 참여함에 있어 본인은 다음의 내용에 대해 인지하고 동의합니다.</p>
+			<h3>1. 위험에 대한 인지</h3>
+			<p>행사에 참여하거나 참관하는 것은 사고나 개인적인 신체 부상(사망 포함) 및 재산의 손실이나 손해가 발생할 수 있다는 위험이 잠재되어 있다는 점을 의미합니다. 이러한 위험의 결과는 본인의 행동이나 부작위, 타인의 행동이나 부작위, 경기 규칙, 시설물이나 장비의 상태에 따라 야기될 수 있습니다. 또한 지금 본인에게 알려지지 않았거나 지금 예측하기 힘든 기타 위험들이 있을 수 있습니다. 본인은 본 행사에 잠재되어 있는 위험의 성격이나 범위에 대해 충분히 심사숙고 하였고, 자발적으로 모든 위험을 감수하기로 선택하였으며, 본인의 인지 여부를 불문하고, 해당 위험이 면책 상대방(아래에서 정의됨)이나 제3자의 과실에 의하여 야기된 경우에도 마찬가지로 모든 책임은 행사에 참가한 본인의 책임으로 의제하기로 합니다. 본인은 비상시나 특정 상황이 발생했을 때, 현장에 직접적인 목격자가 의료 시술의 필요성을 느낀다는 판단을 할 때 이를 동의합니다. 또한 본인은 이와 같은 모든 의료 행위와 관련된 모든 비용에 대한 지불에 동의하며, 면책 상대방을 의료 행위와 관련하여 발생하는 모든 비용 및 분쟁으로부터 완전히 면책하고 모든 손실로부터 면책 상대방들이 손해를 입지 않게 할 것을 동의합니다.</p>
+			<h3>2. 법적 책임으로부터 면책</h3>
+			<p>본인은 스스로 그리고 본인의 상속인, 재산관리인, 보험회사, 승계인, 양수인을 대신해 Nike, Inc. 및 Nike, Inc.의 계열사와 자회사 및 이에 속해 있는  각 임원, 이사, 주주, 피고용자, 하도급자, 유통업자, 대리인, 계약자, 승계인, 양수인, 보증인, 모든 행사 후원자, 직원, 봉사자, 그리고 행사와 관련된 부동산의 소유자 또는 임대인(포괄하여 “면책 상대방”)들을 포함해 본인이 받는 어떠한 개인적 손상이나 신체의 장애, 부상, 사망 혹은 어떤 방향으로든 행사와 연관된 인적 또는 재산적 손실 혹은 손해에 관한 피해를 포함해, 그것이 면책 상대방 일부나 전부의 과실에서 비롯된 것인지 여부에 상관 없이, 법률이 허용하는 최대한도까지, 면책 상대방을 완전하고 영구적으로 면책합니다. </p>
+			<h3>3. 기록과 기록의 사용, 이름 그리고 행사정보에 대한 권한</h3>
+			<p>본인은 Nike Inc., 그 계열사, 자회사, 승계인, 양수인, 저작권자(포괄하여 “나이키”)에게 필름, 사진, 동영상촬영과 혹은 본인의 이미지와 목소리, 아바타, 이름, 생물학적인 데이터, 실루엣, 신체 치수, 외형, 자세, 그리고 행사에서의 기타 다른 상황에 대한 기록(포괄하여 “기록”)을 기록 할 수 있는 권리를 부여합니다. 또한 본인은 나이키에게 전 세계적으로, 또 영구적으로, 모든 미디어와 현재 사용되거나 미래에 발전될 어떠한 방식으로든, 행사와 관련 여부를 떠나, 이에 대한 어떤 추가적 보상 없이, 부분적이거나 전체적인 결과물(또는 그 재생산물)의 사용을 위하여 저작권 등록, 사용, 타인의 사용을 위한 양도 내지 라이센스 부여에 관한 권리를 부여합니다. 본인은 본인의 이름이나 본인에 관련된 기록을 수정하거나 기록하는 것에 관한 어떠한 권한이나 허가와 법적인 권리도 없음을 선언합니다. 나이키는 본인이 부여한 권리를 사용할 어떠한 의무도 없습니다. 본인은 이 내용에 관련하여 나이키가 제 3자로부터 승인을 얻거나 제3자에게 비용을 지급할 필요가 없음을 보증합니다.</p>
+			<h3>4. 논평, 피드백 그리고 의견의 사용 대한 허가</h3>
+			<p>본인은 나이키에게 모든 논평, 피드백 그리고 본인이 나이키와 공유할 수 있는 의견에 관하여, 본인에 대한 어떠한 통지, 보상, 승인 없이, 개발, 제조, 제품과 서비스에 대한 홍보, 창조, 수정, 제품 및 서비스에 대한 개선을 포함하여 이에 한정되지 않는 어떠한 목적을 위하여 사용할 수 있는 모든 권리를 영구적으로 부여합니다.</p>
+			<h3>5. 분쟁 해결</h3>
+			<p>본인과 어떤 면책 상대방(상기 정의)간에 어떠한 분쟁이 생길 경우에, 이와 같은 분쟁은 양측 당사자가 다른 관할에 합의하지 않는 한 서울중앙지방법원을 그 관할 법원으로 합니다.</p>
+			<h3>6. 비밀유지</h3>
+			<p>본인은 행사에 참여하는 동안 개발, 직물 공정, 혁신적인 소재, 도면, 영업 및 홍보 전략, 판매 데이터, 생체역학적, 운동 생리학적 연구 중에 있는 신발, 의류, 장비 디자인을 포함한 의견, 디자인, 발견, 발명, 영업 비밀에 노출될 수 있음을 이해하였습니다. 본인은 모든 나이키의 서류, 데이터, 정보는 나이키의 재산이거나 나이키의 재산으로 귀속 될 것임에 동의하며, 이에 나이키의 사전 서면 동의 없이 제3자에게 사용되거나 복제 또는 배포되지 않는 것에 동의합니다.</p>
+			<h3>7. 보험</h3>
+			<p>본인은 나이키가 본인의 어떠한 이익을 위하여 어떠한 보험을 준비 또는 가입하지 않는 것을 이해하였으며, 본인이 행사에 참여하는 동안 입을 수 있는 상해 또는 손실과 관련한 어떠한 건강, 생명, 여행, 상해, 재산 또는 다른 보험에 대한 지급 및 보상에 관하여 본인에게 단독으로 책임이 있음을 이해하였습니다.</p>
+			<p style="font-weight:700;margin-top:5px">본인은 이 참가자 면책양식을 읽었으며, 법적으로 성인이며, 완벽히 이해하였고 이 조건에 대해 동의하며 본인이 이것을 동의함으로써 당사자의 권리를 포기하는 것을 이해하였습니다. 본인은 이 참가자 면책양식을 자유롭게, 자발적으로 어떤 유인과 강제 없이 동의하였습니다. (만약, 본인이 미성년자인 경우에는 부모/보호자 참가 동의서를 제출하겠습니다.)</p>
+		</div>		
+	</div>
+	<!-- 약관수정 e -->
+
+	<script>
+		var onoff = true;
+
+		function partner_on(){
+			if (onoff){
+				$('#partner_form').html('<div class="box"><div class="partner_ttl"><span class="borderTop"></span>동반인 정보<span class="borderBottom"></span></div><div class="line"><div class="inline_middle left"><label for="partner_name">이름</label></div><div class="inline_middle right"><input type="text" name="partner_name" id="partner_name" class="" value="" placeholder="" size="" maxlength=""></div></div><div class="line"><div class="inline_middle left">성별</div><div class="inline_middle right radio_style02"><input type="radio" name="partner_sex" id="partner_sex_men" class="" value=""><label for="partner_sex_men"><span></span>남성</label><input type="radio" name="partner_sex" id="partner_sex_woman" class="" value=""><label for="partner_sex_woman"><span></span>여성</label></div></div><div class="line"><div class="inline_middle left"><label for="partner_phone">핸드폰 번호</label></div><div class="inline_middle right"><input type="text" name="partner_phone" id="partner_phone" class="" value="" placeholder="- 를 제외한 번호로 입력해 주세요." size="" maxlength=""></div></div><div class="line"><div class="inline_middle left"><label for="partner_birth">생년월일</label></div><div class="inline_middle right"><input type="text" name="partner_birth" id="partner_birth" class="" value="" placeholder="8자리로 입력해 주세요. 예시) 19990118" size="" maxlength="8"></div></div><div class="line"><div class="inline_middle left"><label for="partner_email">이메일 주소</label></div><div class="inline_middle right"><input type="text" name="partner_email" id="partner_email" class="" value="" placeholder="" size="" maxlength=""></div></div></div>');			
+				onoff = false
+			}
+		}
+
+		function partner_off(){
+			if (!onoff){
+				$('#partner_form .box').detach();
+				onoff = true
+			}
+		}
+
+		function popup_onoff (e){
+			if ($(e).css('display') == 'none'){
+				$(e).show();
+				$('body').css({height:'100%',overflow:'hidden'});
+			} else {		
+				$(e).hide();
+				$('body').css({height:'auto',overflow:'visible'});
+			}
+		}
+	</script>
+	<!-- 180108 응모 페이지 // e -->
+</body>
+</html>

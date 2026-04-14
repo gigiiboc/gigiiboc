@@ -1,0 +1,32 @@
+@charset "utf-8";
+/*
+<UPLEAT> UI Dev Team
+{Oh Young Ju}, {An Se Jung}, {Lee Yun Hee}, Hwang Mi Ae, Kim So Young, Cho Han Sol, {Kang Young Sun}
+commnet : pc ent
+ */
+.event_list_wrap{overflow:hidden;margin-left:-25px}
+.event_list_wrap ul{overflow:hidden}
+.event_list_wrap li{float:left;width:320px;height:306px;margin-left:25px;position:relative;margin-bottom:20px}
+.event_list_wrap li .img, .event_list_wrap li .img img{width:320px;height:250px;display:block}
+.event_list_wrap li .text_wrap{position:absolute;top:186px;left:22px;right:0;height:120px;background-color:#fff;padding:15px 20px;margin:0}
+.event_list_wrap li .text_wrap .item_title{margin-top:0;line-height:24px}
+.event_list_wrap li .item_title + .item_text{margin-top:5px;line-height:24px;font-size:13px;color:#666}
+.event_list_wrap li .item_text em{display:inline-block;margin-left:5px}
+.event_detail_wrap img{margin:0 auto 50px;display:block;width:1200px}
+
+.tbl.ent table.type1 thead th{padding:15px;border-right:1px solid transparent;border-bottom:1px solid #ddd;background-color:#fff;font-size:17px}
+.tbl.ent table.type1 td{font-size:13px;color:#888}
+.tbl.ent table.type1 td strong{font-size:15px;color:#111;font-weight:600}
+.terms_wrap{border:1px solid #eaeaea;padding:10px 30px 0;margin-bottom:30px}
+.terms_wrap .text_wrap{margin-bottom:15px}
+.lypop_body .terms_wrap{border:none;padding:0;letter-spacing:-1px}
+.terms_wrap .form_wrap{height:60px;background-color:#f7f7f7;margin:0 -30px;padding:20px 30px;margin-top:25px}
+.lypop_body .terms_wrap .form_wrap{margin:20px 0 0 0}
+.reply_list_wrap{margin-top:40px;border-bottom:1px solid #eaeaea;padding-bottom:40px}
+.reply_list_wrap ul{margin-top:20px;border:1px solid #eaeaea;border-top:2px solid #111;padding:0 20px}
+.reply_list_wrap li{border-top:1px solid #eaeaea;padding:20px 50px 25px 0;position:relative}
+.reply_list_wrap li:first-child{border-top:none}
+.reply_list_wrap li .btn{position:absolute;top:20px;right:0}
+.reply_list_wrap .item_text{color:#666}
+
+.tbl.ent table .btn_share{font-size:0}

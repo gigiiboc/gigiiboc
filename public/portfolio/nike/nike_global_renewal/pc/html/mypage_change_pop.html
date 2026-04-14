@@ -1,0 +1,2198 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <title>Nike 나이키닷컴</title>
+	
+	<link rel="shortcut icon" href="/NKS1/image/nike_favicon.ico" />
+	
+	<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1/css/order.css"/>
+	<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1/css/display.css"/>
+	
+	<!-- //주문,결제 -->
+	
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery-1.7.2.min.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jcarousellite_1.0.1.min.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery.currency.min.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/common.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery.json-2.2.js" ></script>	
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/validator.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/iframeSubmit.js" ></script>	
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/lnb_layer_ipa.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/calendar.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/ajax.js" ></script>
+    <script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery.form.js"></script>
+	<script type="text/javascript">
+		var secureRoot = "http://lecs.nike.co.kr:8443/";
+		var lecsRoot = "http://lecs.nike.co.kr/";
+		//도로검색팝업추가
+		function fn_rodAddr(no,mode) 
+		{
+			if(mode != "undefined" && mode != null && mode != "" ){
+				window.open('/mypage/popupRodAddr.lecs?display='+no+"&mode="+mode,'','scrollbars=yes,width=806,height=744');
+			}
+			else{
+				window.open('/mypage/popupRodAddr.lecs?display='+no,'','scrollbars=yes,width=806,height=744');
+			}
+		}
+	</script>
+    
+<script>
+	var CARD_REFUND_YN = 'N';
+	var LPS_ROOT = 'http://lecs.nike.co.kr:8443/';
+	var CREDIT_TRANSFER_URL = '210.181.28.114/store/KSPayWebV1.3/bank/fnbc/fnbc_cert_utf8.jsp';
+
+	var PG_STOREID_CREDITCARD = '2999199999';
+	var PG_STOREID_CREDITTRANSFER = '2999199996';
+	var PG_STOREID_WITHOUTBANKBOOK_MEMBER = '2999199994';
+	var PG_STOREID_WITHOUTBANKBOOK_NOMEMBER = '2999199996';
+	
+	var PAY_MEAN_CODE_CREDIT_CARD = '04';
+	var PAY_MEAN_CODE_CREDIT_TRANSFER = '02';
+	var PAY_MEAN_CODE_CELL_PHONE = '06';
+	var CREDIT_CARD_USE_YN = 'N';
+	var WITHOUT_A_BANKBOOK_USE_YN = 'N';
+	var CREDIT_TRANSFER_USE_YN = 'N';
+	var NO_INTEREST_INFO_STR = '';
+	var MEMBER_YN = 'Y';
+	var CONST_CUD_TYPE_CREATE = "C";
+	var CONST_CUD_TYPE_READ = "R";
+	var CONST_CUD_TYPE_UPDATE = "U";
+
+	// ISP 카드사 번호 세팅
+	var VAR_ORD_DTL_CARD_CD_1 = "01";
+	var VAR_ORD_DTL_CARD_CD_2 = "02";
+	var VAR_ORD_DTL_CARD_CD_14 = "14";
+	
+	//무이자 할인정보
+	var cardNoInterestListJson = '[]';
+	cardNoInterestListJson = eval("list="+ cardNoInterestListJson +";");
+	
+	//가맹점 정보
+	var membersListJson = '[{"membersNo":"71","membersName":"[PG]나이키 비씨카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"01","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99},{"membersNo":"72","membersName":"[PG]나이키 국민카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"02","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99},{"membersNo":"73","membersName":"[PG]나이키 외환카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"03","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99},{"membersNo":"74","membersName":"[PG]나이키 삼성카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"04","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99},{"membersNo":"75","membersName":"[PG]나이키 엘지카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"05","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99},{"membersNo":"76","membersName":"[PG]나이키 JCB카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"07","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99},{"membersNo":"77","membersName":"[PG]나이키 다이너스카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"08","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99},{"membersNo":"78","membersName":"[PG]나이키 아멕스카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"09","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99},{"membersNo":"79","membersName":"[PG]나이키 신한카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"10","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99},{"membersNo":"80","membersName":"[PG]나이키 롯데백화점카드 가맹점","onOffLineSectionCode":"10","membersSectionCode":"10","noInterestUseYn":"Y","ccPointUseYn":"N","acquirerCode":"11","ksnetTerminalId":"2999199999","useYn":"Y","paymentServiceTypeCode":"01","saleSubCode":"02","storeNo":99}]';
+	membersListJson = eval("list="+ membersListJson +";");
+	paymentServiceTypeCode = membersListJson[0].paymentServiceTypeCode;
+</script>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/design.js"></script>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/mypagePay.js"></script>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/mypageOrder.js"></script>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/mypage.js"></script>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/popup.js"></script>
+
+<script type="text/javascript" src="https://www.vpay.co.kr/eISP/Wallet_popup_VP.js"></script>
+<script language=javascript src="https://kspay.ksnet.to/popmpi/js/kspf_pop_mpi.js"></script>
+
+<script src="https://mcash.mobilians.co.kr/js/ext/ext_inc_comm.js" charset="euc-kr"></script>
+<script language=javascript src="https://www.bankpay.or.kr/BankPayEFT_UTF8_SSL.js"></script>
+<script language=javascript>InstallCertManager();</script>
+<script language=javascript>SmartUpdate();</script>
+<script>var s_account = "nikestorekoreadev";</script><!-- 운영과 개발용 설정이 달라서 config 이용 -->
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/s_code_nikestorekr.js"></script>
+
+
+<!-- renewal phase2 -->
+<script type="text/javascript" src="../js/global_renewal_phase2.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/global_renewal_phase2.css" />
+<!-- renewal phase2 -->
+
+<script type="text/javascript">
+<!--
+var isChanged = 1;
+function setUpQty(num, pkgNo){
+	var oldQty = Number($('#claimQuantity_'+num).val());
+	var quantity = Number($('#availClaimQty_'+num).val());
+	
+	if (oldQty < quantity) {
+		//재고체크 
+		if(checkInvQty(num, oldQty+1)) {
+			$('#claimQuantity_'+num).val(oldQty+1);
+				
+			isChanged = 1;
+			$('#chk_'+num).prop("checked", true);
+			
+			if($('#chk_'+num).is(":checked")) {
+				if($('#claimPossibilityYn_' + num).val() == 'N') {
+					alert("이미 진행중인 셋트상품 반품건이 존재합니다.\n반품완료 후 접수 가능합니다");
+					$('#chk_'+num).prop("checked", false);
+					$('#claimQuantity_'+num).val(0);
+					return false;
+				}
+
+				if(Number($('#amountChangeOptionSaleCount_' + num).val()) > 0) {
+					alert("옵션할인 가격변경 이력이 있는 주문은 교환이 불가능합니다.");
+					$('#chk_'+num).prop("checked", false);
+					$('#claimQuantity_'+num).val(0);
+					return false;
+				}
+	
+				if($('#exchangeReturnGoodsPossibilityYn_' + num).val() == 'N') {
+					alert("선택하신 상품은 반품 및 교환이 불가한 상품입니다.\n1:1고객문의나 고객센터(080-022-5512)로 문의주시기 바랍니다.");
+					$('#chk_'+num).prop("checked", false);
+					$('#claimQuantity_'+num).val(0);
+					return false;
+				}
+				
+			}
+		}
+	}
+	if (pkgNo != '') {
+		pkgCheck(pkgNo, $('#claimQuantity_'+num).val());
+	}
+	return true;
+}
+
+function setDownQty(num, pkgNo){
+	var oldQty = Number($('#claimQuantity_'+num).val());
+
+	if (oldQty > 0) {
+		$('#claimQuantity_'+num).val(oldQty-1);
+		isChanged = 1;
+		
+		if($('#claimQuantity_'+num).val() > 0) {
+			$('#chk_'+num).prop("checked", true);
+		} else {
+			$('#chk_'+num).prop("checked", false);
+		}
+	}
+	if (pkgNo != '') {
+		pkgCheck(pkgNo, $('#claimQuantity_'+num).val());
+	}
+	return true;
+}
+
+// 재고체크
+function checkInvQty(num, changeQty, invQty) {
+	var invMgmtYn = $('#inventoryManagementYn_' + num).val();
+	if(invQty == undefined) {
+		invQty = $('#inventoryQty_'+num).val();
+	} else {
+		$('#inventoryQty_'+num).val(invQty);
+	}
+	
+	if(invMgmtYn == "Y") {
+		isChanged = 1;
+
+		if(Number(invQty) < Number(changeQty)) {
+			alert("재고가 부족합니다.");
+			return false;
+		}
+	}
+	return true;
+}
+
+function pkgCheck(pkgNo, qty){
+	var objs = $(':input[name='+pkgNo+']');
+	for(var i=0; i< objs.size(); i++) {
+		if (qty > 0) {
+			$('#claimQuantity_'+objs.eq(i).val()).val(qty);
+			$('#chk_'+objs.eq(i).val()).prop("checked", true);
+		} else if(qty == 0){
+			$('#claimQuantity_'+objs.eq(i).val()).val(qty);
+			$('#chk_'+objs.eq(i).val()).prop("checked", false);
+		}
+	}
+}
+
+function setCancelQty(num, pkgNo){
+	var id = 'claimQuantity_'+num;
+	var qty = Number($('#'+id).val());
+	var quantity = Number($('#availClaimQty_'+num).val());
+	
+	if (qty >= 0 && qty <= quantity) {
+		$('#'+id).val('');
+		$('#'+id).val(qty);
+		//재고체크 
+		if(!checkInvQty(num, qty)) {
+			$('#'+id).val(0);
+		}
+	} else {
+		$('#'+id).val(0);
+	}
+	isChanged = 1;
+	if($('#claimQuantity_'+num).val() > 0) {
+		$('#chk_'+num).prop("checked", true);
+	} else {
+		$('#chk_'+num).prop("checked", false);
+	}
+
+	if (pkgNo != '') {
+		pkgCheck(pkgNo, $('#claimQuantity_'+num).val());
+	}
+}
+
+//주문번호, 회원배송지일련번호, 배송메세지, 주문,교환,반품 주소(01:주문배송지, 02:교환배송지, 03:반품지)
+function deliveryChange(orderNo, deliveryType){
+	$.ajax({
+		type: 'POST',
+		url: '/mypage/order/deliveryPlaceChange.save.lecs?nolayout=yes',
+		cache: false,
+		data: 'orderNo='+orderNo+'&deliveryType='+deliveryType,
+		success: function(html){
+			$('#DCLayer').html('');
+			$('#DCLayer').html(html);
+			openLayer('changeDelivery', {center: true, blocker: true});
+			}
+		});
+}
+/**
+ * 교환상품선택 버튼 클릭
+ */
+function selectGoods() {
+	if($(":input[name=chkList]:checked").size() > 0) {
+    	for(var chkI=1; chkI<= $(":input[name=chkList]").size(); chkI++) {
+    		if($('#chk_'+chkI).is(":checked")) {
+				if(Number($('#availClaimQty_'+chkI).val()) >= Number($('#claimQuantity_'+chkI).val())){
+					if($('#claimQuantity_'+chkI).val() < 1) {
+						alert("수량을 선택하여 주시기 바랍니다.");
+						return false;
+					}
+				}else {
+					alert("주문수량보다 적게 입력하시기 바랍니다.");
+					return false;
+				}
+				if($('#claimCauseCode_'+ chkI).val() == "") {
+					alert("교환사유를 선택하여 주십시오");
+					return false;
+				}
+    		}
+    	}
+		var goodsCnt = 0;
+	    var formObj = $("#exchangeForm");
+	    initGoodsData(formObj);
+	    for(var i=1; i<=$(":input[name=chkList]").size(); i++) {
+	        if($('#chk_'+i).is(":checked")) {
+	            goodsCnt++;
+
+	            var inputObj1 = $("<input type=\"hidden\"/>").attr("name", "index").attr("id", "index"+goodsCnt).val($('#index_'+i).val());
+	            var inputObj2 = $("<input type=\"hidden\"/>").attr("name", "storeNo").attr("id", "storeNo"+goodsCnt).val($('#storeNo_'+i).val());
+	            var inputObj3 = $("<input type=\"hidden\"/>").attr("name", "siteNo").attr("id", "siteNo"+goodsCnt).val($('#siteNo_'+i).val());
+	            var inputObj4 = $("<input type=\"hidden\"/>").attr("name", "itemNo").attr("id", "itemNo"+goodsCnt).val($('#itemNo_'+i).val());
+	            var inputObj5 = $("<input type=\"hidden\"/>").attr("name", "itemName").attr("id", "itemName"+goodsCnt).val($('#itemName_'+i).val());                
+	            var inputObj6 = $("<input type=\"hidden\"/>").attr("name", "orderDetailSn").attr("id", "orderDetailSn"+goodsCnt).val($('#orderDetailSn_'+i).val());
+	            var inputObj7 = $("<input type=\"hidden\"/>").attr("name", "goodsNo").attr("id", "goodsNo"+goodsCnt).val($('#goodsNo_'+i).val());
+	            var inputObj8 = $("<input type=\"hidden\"/>").attr("name", "goodsName").attr("id", "goodsName"+goodsCnt).val($('#goodsName_'+i).val());
+	            var inputObj9 = $("<input type=\"hidden\"/>").attr("name", "memberNo").attr("id", "memberNo"+goodsCnt).val($('#memberNo_'+i).val());
+	            var inputObj10 = $("<input type=\"hidden\"/>").attr("name", "goodsTypeCode").attr("id", "goodsTypeCode"+goodsCnt).val($('#goodsTypeCode_'+i).val());
+	            var inputObj11 = $("<input type=\"hidden\"/>").attr("name", "enterpriseNo").attr("id", "enterpriseNo"+goodsCnt).val($('#enterpriseNo_'+i).val());
+	            var inputObj12 = $("<input type=\"hidden\"/>").attr("name", "enterpriseContractNo").attr("id", "enterpriseContractNo"+goodsCnt).val($('#enterpriseContractNo_'+i).val());
+	            var inputObj13 = $("<input type=\"hidden\"/>").attr("name", "lowestEnterpriseNo").attr("id", "lowestEnterpriseNo"+goodsCnt).val($('#lowestEnterpriseNo_'+i).val());
+	            var inputObj14 = $("<input type=\"hidden\"/>").attr("name", "claimQuantity").attr("id", "claimQuantity"+goodsCnt).val($('#claimQuantity_'+i).val());
+	            var inputObj15 = $("<input type=\"hidden\"/>").attr("name", "claimCauseCode").attr("id", "claimCauseCode"+goodsCnt).val($('#claimCauseCode_'+i).val());
+	            var inputObj16 = $("<input type=\"hidden\"/>").attr("name", "salePrice").attr("id", "salePrice"+goodsCnt).val($('#salePrice_'+i).val());
+	
+	            var inputObj17 = $("<input type=\"hidden\"/>").attr("name", "corporationGoodsNo").attr("id", "corporationGoodsNo"+goodsCnt).val($('#corporationGoodsNo_'+i).val());
+	            var inputObj18 = $("<input type=\"hidden\"/>").attr("name", "corporationGoodsReferenceNo").attr("id", "corporationGoodsReferenceNo"+goodsCnt).val($('#corporationGoodsReferenceNo_'+i).val());
+	            var inputObj19 = $("<input type=\"hidden\"/>").attr("name", "customerGoodsClassNo").attr("id", "customerGoodsClassNo"+goodsCnt).val($('#customerGoodsClassNo_'+i).val());
+	            var inputObj20 = $("<input type=\"hidden\"/>").attr("name", "customerGoodsClassName").attr("id", "customerGoodsClassName"+goodsCnt).val($('#customerGoodsClassName_'+i).val());
+	
+	            var inputObj21 = $("<input type=\"hidden\"/>").attr("name", "oldItemNo").attr("id", "oldItemNo"+goodsCnt).val($('#oldItemNo_'+i).val());
+	            var inputObj22 = $("<input type=\"hidden\"/>").attr("name", "oldItemName").attr("id", "oldItemName"+goodsCnt).val($('#oldItemName_'+i).val());
+
+	            var inputObj23 = $("<input type=\"hidden\"/>").attr("name", "packageGoodsYN").attr("id", "packageGoodsYN"+goodsCnt).val($('#packageGoodsYN_'+i).val());
+	            var inputObj24 = $("<input type=\"hidden\"/>").attr("name", "packageGoodsNo").attr("id", "packageGoodsNo"+goodsCnt).val($('#packageGoodsNo_'+i).val());
+	            var inputObj25 = $("<input type=\"hidden\"/>").attr("name", "packageGoodsQty").attr("id", "packageGoodsQty"+goodsCnt).val($('#packageGoodsQty_'+i).val());
+	            var inputObj26 = $("<input type=\"hidden\"/>").attr("name", "goodsCompositionCode").attr("id", "goodsCompositionCode"+goodsCnt).val($('#goodsCompositionCode_'+i).val());
+	            var inputObj27 = $("<input type=\"hidden\"/>").attr("name", "goodsTypeName").attr("id", "goodsTypeName"+goodsCnt).val($('#goodsTypeName_'+i).val());
+
+	            var inputObj28 = $("<input type=\"hidden\"/>").attr("name", "merchandiserGoodsGroupNo").attr("id", "merchandiserGoodsGroupNo"+goodsCnt).val($('#merchandiserGoodsGroupNo_'+i).val());
+
+	            var inputObj29 = $("<input type=\"hidden\"/>").attr("name", "corperationItemNo").attr("id", "corperationItemNo"+goodsCnt).val($('#corperationItemNo_'+i).val());
+
+	            inputObj1.appendTo(formObj);
+	         	inputObj2.appendTo(formObj);
+	         	inputObj3.appendTo(formObj);
+	         	inputObj4.appendTo(formObj);
+	         	inputObj5.appendTo(formObj);
+	         	inputObj6.appendTo(formObj);
+	         	inputObj7.appendTo(formObj);
+	         	inputObj8.appendTo(formObj);
+	         	inputObj9.appendTo(formObj);
+	         	inputObj10.appendTo(formObj);
+	         	inputObj11.appendTo(formObj);
+	         	inputObj12.appendTo(formObj);
+	         	inputObj13.appendTo(formObj);
+	         	inputObj14.appendTo(formObj);
+	         	inputObj15.appendTo(formObj);
+	         	inputObj16.appendTo(formObj);
+	         	inputObj17.appendTo(formObj);
+	         	inputObj18.appendTo(formObj);
+	         	inputObj19.appendTo(formObj);
+	         	inputObj20.appendTo(formObj);
+	         	inputObj21.appendTo(formObj);
+	         	inputObj22.appendTo(formObj);
+	         	inputObj23.appendTo(formObj);
+	         	inputObj24.appendTo(formObj);
+	         	inputObj25.appendTo(formObj);
+	         	inputObj26.appendTo(formObj);
+	         	inputObj27.appendTo(formObj);
+	         	inputObj28.appendTo(formObj);
+	         	inputObj29.appendTo(formObj);
+	         	
+	         }
+	     }
+	    if(goodsCnt > 0) {
+	        $("#totGoodsCnt").val(goodsCnt);
+	        // 배송비 계산
+	        searchDeliveryPaymentMethod();
+	    } else {
+	        // 상품이 없을 경우 값 지우기.
+	        $("#totGoodsCnt").val(0);
+	        $('#div_delivery').html('');
+	    }
+	} else {
+		alert("교환처리 대상상품을 선택하시기 바랍니다.");
+        return false;
+	}
+	return true;
+}
+
+function initGoodsData(formObj) {
+	formObj.find(":input[name=index]").remove();
+	formObj.find(":input[name=storeNo]").remove();
+	formObj.find(":input[name=siteNo]").remove();
+	formObj.find(":input[name=itemNo]").remove();
+	formObj.find(":input[name=itemName]").remove();
+	formObj.find(":input[name=orderDetailSn]").remove();
+	formObj.find(":input[name=goodsNo]").remove();
+	formObj.find(":input[name=goodsName]").remove();
+	formObj.find(":input[name=memberNo]").remove();
+	formObj.find(":input[name=goodsTypeCode]").remove();
+	formObj.find(":input[name=enterpriseNo]").remove();
+	formObj.find(":input[name=enterpriseContractNo]").remove();
+	formObj.find(":input[name=lowestEnterpriseNo]").remove();
+	formObj.find(":input[name=claimQuantity]").remove();
+	formObj.find(":input[name=claimCauseCode]").remove();
+	formObj.find(":input[name=salePrice]").remove();
+	formObj.find(":input[name=corporationGoodsNo]").remove();
+	formObj.find(":input[name=corporationGoodsReferenceNo]").remove();
+	formObj.find(":input[name=customerGoodsClassNo]").remove();
+	formObj.find(":input[name=customerGoodsClassName]").remove();
+	formObj.find(":input[name=oldItemNo]").remove();
+	formObj.find(":input[name=oldItemName]").remove();
+	formObj.find(":input[name=packageGoodsYN]").remove();
+	formObj.find(":input[name=packageGoodsNo]").remove();
+	formObj.find(":input[name=packageGoodsQty]").remove();
+	formObj.find(":input[name=goodsCompositionCode]").remove();
+	formObj.find(":input[name=goodsTypeName]").remove();
+	formObj.find(":input[name=merchandiserGoodsGroupNo]").remove();
+	formObj.find(":input[name=corperationItemNo]").remove();
+}
+
+function selectDeliveryPaymentMethod() {
+	var formObj = $("#exchangeForm");
+	initDeliveryData(formObj);
+	var deliveryCnt = 0;
+    for(var i=1; i<=$("#deliveryLength").val(); i++) {
+		deliveryCnt++;
+		var deliveryObj1 = $("<input type=\"hidden\"/>").attr("name", "deliveryTypeCode").attr("id", "deliveryTypeCode"+i).val($("#deliveryTypeCode_"+deliveryCnt).val());
+		var deliveryObj2 = $("<input type=\"hidden\"/>").attr("name", "deliveryTypeName").attr("id", "deliveryTypeName"+i).val($("#deliveryTypeName_"+deliveryCnt).val());
+		var deliveryObj3 = $("<input type=\"hidden\"/>").attr("name", "deliveryName").attr("id", "deliveryName"+i).val($("#deliveryName_"+deliveryCnt).val());
+		var deliveryObj4 = $("<input type=\"hidden\"/>").attr("name", "deliveryAmount").attr("id", "deliveryAmount"+i).val($("#deliveryAmount_"+deliveryCnt).val());
+		// 결제가 성공일 경우 ( 프론트에서는 결제 하므로 01  로);
+		var deliveryObj5 = $("<input type=\"hidden\"/>").attr("name", "deliveryCheckExemption").attr("id", "deliveryCheckExemption"+i).val("1");
+		var deliveryObj6 = $("<input type=\"hidden\"/>").attr("name", "deliveryExemption").attr("id", "deliveryExemption"+i).val($("#deliveryExemption_"+deliveryCnt).val());
+		var deliveryObj7 = $("<input type=\"hidden\"/>").attr("name", "deliveryDiscountAmount").attr("id", "deliveryDiscountAmount"+i).val($("#deliveryDiscountAmount_"+deliveryCnt).val());
+		var deliveryObj8 = $("<input type=\"hidden\"/>").attr("name", "deliveryPaymentAmount").attr("id", "deliveryPaymentAmount"+i).val($("#deliveryPaymentAmount_"+deliveryCnt).val());
+		var deliveryObj9 = $("<input type=\"hidden\"/>").attr("name", "deliveryEnterpriseNo").attr("id", "deliveryEnterpriseNo"+i).val($("#deliveryEnterpriseNo_"+deliveryCnt).val());
+		var deliveryObj10 = $("<input type=\"hidden\"/>").attr("name", "deliveryEnterpriseContractNo").attr("id", "deliveryEnterpriseContractNo"+i).val($("#deliveryEnterpriseContractNo_"+deliveryCnt).val());
+		var deliveryObj11 = $("<input type=\"hidden\"/>").attr("name", "deliveryLowestEnterpriseNo").attr("id", "deliveryLowestEnterpriseNo"+i).val($("#deliveryLowestEnterpriseNo_"+deliveryCnt).val());
+		var deliveryObj12 = $("<input type=\"hidden\"/>").attr("name", "deliveryMeansCode").attr("id", "deliveryMeansCode"+i).val($("#deliveryMeansCode_"+deliveryCnt).val());
+		var deliveryObj13 = $("<input type=\"hidden\"/>").attr("name", "deliveryPolicyNo").attr("id", "deliveryPolicyNo"+i).val($("#deliveryPolicyNo_"+deliveryCnt).val());
+		var deliveryObj14 = $("<input type=\"hidden\"/>").attr("name", "deliveryProcessTypeCode").attr("id", "deliveryProcessTypeCode"+i).val($("#deliveryProcessTypeCode_"+deliveryCnt).val());
+		
+        deliveryObj1.appendTo(formObj);
+      	deliveryObj2.appendTo(formObj);
+      	deliveryObj3.appendTo(formObj);
+      	deliveryObj4.appendTo(formObj);
+      	deliveryObj5.appendTo(formObj);
+      	deliveryObj6.appendTo(formObj);
+      	deliveryObj7.appendTo(formObj);
+      	deliveryObj8.appendTo(formObj);
+      	deliveryObj9.appendTo(formObj);
+      	deliveryObj10.appendTo(formObj);
+      	deliveryObj11.appendTo(formObj);
+      	deliveryObj12.appendTo(formObj);
+      	deliveryObj13.appendTo(formObj);
+      	deliveryObj14.appendTo(formObj);
+	}
+	return true;
+}
+
+function initDeliveryData(formObj) {
+	formObj.find(":input[name=deliveryTypeCode]").remove();
+	formObj.find(":input[name=deliveryTypeName]").remove();
+	formObj.find(":input[name=deliveryName]").remove();
+	formObj.find(":input[name=deliveryAmount]").remove();
+	formObj.find(":input[name=deliveryCheckExemption]").remove();
+	formObj.find(":input[name=deliveryExemption]").remove();
+	formObj.find(":input[name=deliveryDiscountAmount]").remove();
+	formObj.find(":input[name=deliveryPaymentAmount]").remove();
+	formObj.find(":input[name=deliveryEnterpriseNo]").remove();
+	formObj.find(":input[name=deliveryEnterpriseContractNo]").remove();
+	formObj.find(":input[name=deliveryLowestEnterpriseNo]").remove();
+	formObj.find(":input[name=deliveryMeansCode]").remove();
+	formObj.find(":input[name=deliveryPolicyNo]").remove();
+	formObj.find(":input[name=deliveryProcessTypeCode]").remove();
+}
+
+function searchDeliveryPaymentMethod() {
+	var paramEnterpriseNo = "";
+    var paramEnterpriseContractNo = "";
+    var paramLowestEnterpriseNo = "";
+    $("#exchangeForm :input[name=enterpriseNo]").each(function(n){
+    	paramEnterpriseNo = paramEnterpriseNo + (n==0?"":",") + this.value ;
+    });
+    $("#exchangeForm :input[name=enterpriseContractNo]").each(function(n){
+    	paramEnterpriseContractNo = paramEnterpriseContractNo + (n==0?"":",") + this.value ;
+    });
+    $("#exchangeForm :input[name=lowestEnterpriseNo]").each(function(n){
+    	paramLowestEnterpriseNo = paramLowestEnterpriseNo + (n==0?"":",") + this.value ;
+    });
+    $("input[name=paramEnterpriseNo]").val(paramEnterpriseNo);
+    $("input[name=paramEnterpriseContractNo]").val(paramEnterpriseContractNo);
+    $("input[name=paramLowestEnterpriseNo]").val(paramLowestEnterpriseNo);
+    
+	var action = "/mypage/order/showDeliveryPaymentMethod.lecs?nolayout=yes";
+	var params = $("#exchangeForm").serialize();
+	//alert(params);
+	$.post(action, params, function(result){
+		//alert("선택이 완료되었습니다.");
+		$('#div_delivery').html(result);
+		showPayment();
+		selectDeliveryPaymentMethod();
+		isChanged = 0;
+		//  배송비 재 계산시 보조 결제에서 금액 체크를 위한 데이터 셋팅
+		$('#tempTotalPaymentAmount').val($('#exchangeDeliveryPayment').val());
+		clearSubPayment();
+		initCardInfo();
+	});
+
+}
+
+// 교환배송지 선택시 값 셋팅
+function setExchangeReuseForm() {
+	$('#exchangeForm :input[name=remiteeName]').val($('#saveForm :input[name=remiteeName]').val());
+	$('#exchangeForm :input[name=postNo]').val($('#saveForm :input[name=postNo]').val());
+	$('#exchangeForm :input[name=postAddress]').val($('#saveForm :input[name=postAddress]').val());
+	$('#exchangeForm :input[name=detailAddress]').val($('#saveForm :input[name=detailAddress]').val());
+	$('#exchangeForm :input[name=stnmPostNo]').val($('#saveForm :input[name=stnmPostNo]').val());
+	$('#exchangeForm :input[name=stnmPostAddress]').val($('#saveForm :input[name=stnmPostAddress]').val());
+	$('#exchangeForm :input[name=stnmDetailAddress]').val($('#saveForm :input[name=stnmDetailAddress]').val());
+	$('#exchangeForm :input[name=addrChocSctCd]').val($('#saveForm :input[name=addrChocSctCd]').val());
+	$('#exchangeForm :input[name=addrChkRsltCd]').val($('#saveForm :input[name=addrChkRsltCd]').val());	
+	$('#exchangeForm :input[name=cableTelephoneRegionNo]').val($('#saveForm :input[name=cableTelephoneRegionNo]').val());
+	$('#exchangeForm :input[name=cableTelephoneExchange]').val($('#saveForm :input[name=cableTelephoneExchange]').val());
+	$('#exchangeForm :input[name=cableTelephoneEndNo]').val($('#saveForm :input[name=cableTelephoneEndNo]').val());
+	$('#exchangeForm :input[name=cellSectionNo]').val($('#saveForm :input[name=cellSectionNo]').val());
+	$('#exchangeForm :input[name=cellTelephoneExchange]').val($('#saveForm :input[name=cellTelephoneExchange]').val());
+	$('#exchangeForm :input[name=cellEndNo]').val($('#saveForm :input[name=cellEndNo]').val());
+}
+
+// 반품 배송지 값 셋팅
+function setReturnReuseForm() {
+
+	$('#exchangeForm :input[name=collRemiteeName]').val($('#saveForm :input[name=remiteeName]').val());
+	$('#exchangeForm :input[name=collPostNo]').val($('#saveForm :input[name=postNo]').val());
+	$('#exchangeForm :input[name=collPostAddress]').val($('#saveForm :input[name=postAddress]').val());
+	$('#exchangeForm :input[name=collDetailAddress]').val($('#saveForm :input[name=detailAddress]').val());
+	$('#exchangeForm :input[name=collStnmPostNo]').val($('#saveForm :input[name=stnmPostNo]').val());
+	$('#exchangeForm :input[name=collStnmPostAddress]').val($('#saveForm :input[name=stnmPostAddress]').val());
+	$('#exchangeForm :input[name=collStnmDetailAddress]').val($('#saveForm :input[name=stnmDetailAddress]').val());
+	$('#exchangeForm :input[name=collAddrChocSctCd]').val($('#saveForm :input[name=addrChocSctCd]').val());
+	$('#exchangeForm :input[name=collAddrChkRsltCd]').val($('#saveForm :input[name=addrChkRsltCd]').val());	
+	$('#exchangeForm :input[name=collCableTelephoneRegionNo]').val($('#saveForm :input[name=cableTelephoneRegionNo]').val());
+	$('#exchangeForm :input[name=collCableTelephoneExchange]').val($('#saveForm :input[name=cableTelephoneExchange]').val());
+	$('#exchangeForm :input[name=collCableTelephoneEndNo]').val($('#saveForm :input[name=cableTelephoneEndNo]').val());
+	$('#exchangeForm :input[name=collCellSectionNo]').val($('#saveForm :input[name=cellSectionNo]').val());
+	$('#exchangeForm :input[name=collCellTelephoneExchange]').val($('#saveForm :input[name=cellTelephoneExchange]').val());
+	$('#exchangeForm :input[name=collCellEndNo]').val($('#saveForm :input[name=cellEndNo]').val());
+}
+
+function showPayment() {
+	if($('#exchangeDeliveryPayment').val() <= 0) {
+		$('#div_payment').hide();
+	} else {
+		$('#div_payment').show();
+	}
+	
+}
+
+//옵션 변경
+function optionChange(idx, orderDetailSn, itemNo){
+	$('div[id^="div_optionChg_"]').each(function() {
+		$(this).hide();
+	});
+		var orderNo = '1606230007369NK';
+		$.ajax({
+			type: 'POST',
+			url: '/mypage/order/listOptionChange.lecs?nolayout=yes',
+			cache: false,
+			data: 'orderNo='+orderNo+'&orderDetailSn='+orderDetailSn+'+&itemNo='+itemNo+'&qty='+$('#claimQuantity_'+idx).val(),
+			success: function(html){
+				$('#div_optionChg_'+orderNo+'_'+idx).html('');
+				$('#div_optionChg_'+orderNo+'_'+idx).html(html);
+				$('#div_optionChg_'+orderNo+'_'+idx +' #txt_option_goodsNm').html($('#spn_goodsNm_'+orderNo+'_'+idx).html());
+				$('#div_optionChg_'+orderNo+'_'+idx).show();
+				}
+			});
+
+		closeOptionChange = function() {
+			$('#div_optionChg_'+orderNo+'_'+idx).hide();
+		}
+
+		saveOptionChage = function (data) {
+			if(confirm("선택하신 옵션으로 주문을 변경하시겠습니까?")) {
+				$('#itemNo_'+idx).val(data.itemNo);
+				$('#itemName_'+idx).val(data.itemName);
+				$('#spn_exchangeOption_'+idx).html(data.itemName);
+				// 재고수량
+				checkInvQty(idx, $('#claimQuantity_'+idx).val(), data.invQty);
+				closeOptionChange();
+			}
+			// 자동 계산하기.
+			if(parseInt($("#totGoodsCnt").val()) > 0) {
+				selectGoods();
+			}
+		}
+}
+
+StartSmartUpdate();
+
+function processKey() { 
+	if((event.ctrlKey == true && (event.keyCode == 8 || event.keyCode == 78 || event.keyCode == 82)) 
+		|| ((typeof(event.srcElement.type) == "undefined" || typeof(event.srcElement.name) == "undefined" || event.srcElement.type != "text" || event.srcElement.name != "sndEmail") && event.keyCode >= 112 && event.keyCode <= 123)) {
+		event.keyCode = 0; 
+		event.cancelBubble = true; 
+		event.returnValue = false; 
+	} 
+	if(event.keyCode == 8 && typeof(event.srcElement.value) == "undefined") {
+		event.keyCode = 0; 
+		event.cancelBubble = true; 
+		event.returnValue = false; 
+	} 
+}
+
+function right(e) {
+	if(navigator.appName=='Netscape'&&(e.which==3||e.which==2)){
+		alert('마우스 오른쪽 버튼을 사용할수 없습니다.');
+		return;
+	}else if(navigator.appName=='Microsoft Internet Explorer'&&(event.button==2||event.button==3)) {
+		alert('마우스 오른쪽 버튼을 사용할수 없습니다.');
+		return;
+	}
+}
+
+function changeReason(num, pkgNo){
+	var value = $('#claimCauseCode_'+num).val();
+	if(value == "") {
+		return false;
+	}
+	
+	var useYn = $('#claimCauseCode_'+num + ' option:selected').attr('useYn');	
+	if(useYn != 'Y') {
+		if(confirm("해당 사유로는 교환접수를 할 수 없습니다.\n1:1문의로 이동하시겠습니까?") == true) {
+			viewLayerOneEmail();
+			//self.close();
+		}
+		$('#claimCauseCode_'+num).val('');
+	}
+	
+	//패키지 취소사유 변경
+	if(pkgNo != null) {
+		$('[name=slt_'+pkgNo+']').val(value);
+	}
+
+	isChanged = 1;
+	return true;
+}
+
+function checkClick(){
+	if($('#href_exchange_receipt').attr('onClick') != 'return false;') {
+		doPay();
+	}
+	$('#href_exchange_receipt').attr('onClick', 'return false;');
+}
+
+// 결제
+function doPay() {
+	
+	if(parseInt($("#totGoodsCnt").val()) < 1) {
+        alert("교환처리 대상 상품을 먼저 선택하시기 바랍니다.");
+        return false;
+    }
+
+	var totPayAmount = $('#exchangeDeliveryPayment').val();
+	var mainPayAmount = totPayAmount - getTotalSubPayment();
+	$('#totalPaymentAmount').val(totPayAmount);
+	// TODO : 총 결제액 = 보조 결제액일때 바로 교환접수로..
+	if(totPayAmount == 0 || mainPayAmount == 0){
+		saveExchangeRequest();
+		return false;
+	}
+	// TODO : 총 결제액 - 보조 결제액으로 수정 필요
+	return processPay(mainPayAmount);
+}
+
+//교환 접수 
+function saveExchangeRequest() { 
+	//var form = $("#exchangeForm").get(0);
+	//form.action = "/mypage/order/saveExchangeRequest.lecs";
+
+	//IframeSubmitter.submit(form, "handleSendExchangeRequest", "submitFrame");
+	
+	//중복 파라미터로 인한 값 초기화(금강원 계좌이체 인증용 파라미터)
+ 	$('#creditTransferCellSectionNo').val('');	
+ 	$('#creditTransferCellTelephoneExchangeNo').val('');	
+ 	$('#creditTransferCellEndNo').val('');	
+ 	
+	var params = $(".payForm").serialize();
+	//alert(params);
+	$("#btn_exchange_receipt").prop("disabled",true);
+	$.post("/mypage/order/saveExchangeRequest.lecs", params, function(result) {
+		handleSendExchangeRequest(result);
+	});
+
+	return true;
+}
+
+function handleSendExchangeRequest(result) {
+	if (result == true) {
+		// call back 함수 호출 추가 
+		closeLayer('receipt');
+		openLayer('receiptOK', {center: true});	
+		//나이키 사이트 카탈리스트...반품/교환접수 팝업
+		s.manageVars("clearVars"); 
+		var chl = "Myshop>ClaimList>Exchange(P)";
+		var pgNm = "nikestorekr>" + chl;
+		s.currencyCode="KRW";	
+		s.linkInternalFilters+=",nike.co.kr";
+		s.pageName=pgNm;
+		s.channel="Myshop";
+		s.prop2="nikestorekr";
+		s.prop10="commerce";
+		s.prop12=$("#sportsProp").val();
+		s.prop14="kr";
+		s.prop15="ko";
+		s.prop17="nikestorekr:MyPage";	
+		 s.eVar4 = "logged in"; 
+		void(s.t());	
+	} else if(result == 'false') {
+		alert("교환상품 재고가 부족합니다.");
+	} else if (result != "") {
+		alert(result);
+	} else {
+		alert("접수 중 오류가 발생했습니다.");
+	}
+	$("#btn_exchange_receipt").prop("disabled",false);
+}
+
+function validateExchange() {
+
+	if(isChanged == 1) {
+		alert("교환수량을 저장하여 주시기 바랍니다");
+		return false;
+	}
+	
+	if(parseInt($("#totGoodsCnt").val()) < 1) {
+        alert("교환처리 대상상품을 선택하시기 바랍니다.");
+        return false;
+    }
+
+	if($("input[name=ra_delivery]:checked").val() == null) {
+		alert("수거방법을 선택하여 주시기 바랍니다.");
+		return false;
+	}
+	
+	totPayAmount = $('#exchangeDeliveryPayment').val();
+	var mainPayAmount = totPayAmount - getTotalSubPayment();
+	/*$('#exchangeForm :input[id^="deliveryPaymentAmount"]').each( function () {
+		totPayAmount = 	Number($(this).val()) + Number(totPayAmount);
+	});*/
+	if( totPayAmount > 0 && mainPayAmount > 0) {
+		if(!creditCardValidataionCheck()){
+			return false;
+		}
+// 		if(!creditTransferValidationCheck()){
+// 			return false;
+// 		}
+	}
+	if(!$('#assent').is(":checked")) {
+		alert("교환 내용 확인 후 동의하셔야 교환비 결제 및 교환 접수가 가능합니다.");		
+		return;	
+	}		
+	openLayer('receipt', {center: true});
+	return true;
+}
+
+function changeCard() {
+	if(isChanged == 1) {
+		alert("먼저 교환수량을 저장하여 주시기 바랍니다");
+		$("#selectcard").val("0");
+		return false;
+	}
+	
+	initCardInfo();
+}
+
+function initCardInfo() {
+	$("#payAmount").val($('#exchangeDeliveryPayment').val());
+	fn_CreditCardSel();
+}
+
+$(document).ready(function(){
+	// 직접 반품 클릭시 배송비 안내 내용 삭제. ( 10 : 롯데수거, 20:업체수거, 30:고객반품)
+	$("input[name=ra_delivery]").click(function() {
+		if($("input[name=ra_delivery]:checked").val() == "30") {
+			$("#selPickUpTypeCode").val($(this).val());
+			$('div.orderList table').find('tbody tr td:last-child').each(function(){
+				$(this).children('span').hide();
+				$('#delivery_30').show();
+			});
+			$('#divPaymentInformation').hide();
+		} else {
+			$("#selPickUpTypeCode").val($(this).val());
+			$('div.orderList table').find('tbody tr td:last-child').each(function(){
+				$(this).children('span').show();
+				$('#delivery_30').hide();
+			});
+			$('#divPaymentInformation').show();
+		}
+
+		// 자동 계산하기.
+		if(parseInt($("#totGoodsCnt").val()) > 0) {
+			selectGoods();
+		}
+	});
+
+	//결제 수단에 따른 DIV노출 여부 결정
+	$(':radio[name="paysel"]').click(function(){
+		var paysel = $(':radio[name="paysel"]:checked').val();
+		if(paysel == '04'){
+			$('#payMeanCreditCard').show();
+			$('#payMeanCreditTransfer').hide();		
+			$('#payMeanCellPhone').hide();
+		}else if(paysel == '02'){
+			$('#payMeanCreditCard').hide();
+			$('#payMeanCreditTransfer').show();
+			$('#payMeanCellPhone').hide();
+		}else if(paysel == '06'){
+			$('#payMeanCreditCard').hide();
+			$('#payMeanCreditTransfer').hide();
+			$('#payMeanCellPhone').show();
+		}
+		
+	});
+
+	if('' != '') {
+		var chkOrderDetailSn = ''.split(",");
+		for(var i=0; i<chkOrderDetailSn.length; i++) {
+			$('#claimQuantity_'+$('#'+chkOrderDetailSn[i]).val()).val(1);
+			$('#chk_'+$('#'+chkOrderDetailSn[i]).val()).prop("checked", true);
+		}
+
+		selectGoods();
+	}
+
+	$("input[name=chkList]").click(function() {
+		isChanged = 1;
+		var count = $(this).val();
+		if($('#chk_'+count).is(":checked")) {
+			if($('#claimPossibilityYn_' + count).val() == 'N') {
+				alert("이미 진행중인 셋트상품 반품건이 존재합니다.\n반품완료 후 접수 가능합니다");
+				$(this).prop("checked", false);
+			}
+
+			if(Number($('#amountChangeOptionSaleCount_' + count).val()) > 0) {
+				alert("옵션할인 가격변경 이력이 있는 주문은 교환이 불가능합니다.");
+				$(this).prop("checked", false);
+			}
+			
+			if($('#exchangeReturnGoodsPossibilityYn_' + count).val() == 'N') {
+				alert("선택하신 상품은 반품 및 교환이 불가한 상품입니다.\n1:1고객문의나 고객센터(080-022-5512)로 문의주시기 바랍니다.");
+				$(this).prop("checked", false);
+			}
+		}
+	});
+	
+});
+
+function viewLayerOneEmail(){
+	$('#emailForm').submit();
+	$('#emailDiv').show();
+	openLayer('emailDiv', {center: true, blocker: true});
+	//assmtEmailLayerPopUp();
+} 
+
+function layerClose() {
+	$('#emailDiv').hide();
+}
+
+function assmtEmailLayerPopUp(){
+	//1:1이메일문의가 팝업에서 페이지로 변경됨
+	location.href = "http://lecs.nike.co.kr:8443//helpdesk/listFaq.lecs?ql=1500";
+
+}
+
+function setMcashPaymentInfo(Mode, Phoneid, Svcid, Mrchid, Tradeid, Prdtnm, Prdtprice, Mobilid, Userid, Userip, MSTR, Email, Emailflag, Recordkey, ReqOpt, Prdtcd, Item, Cpcd, Sellernm, Sellertel, Commid, No, Socialno) {
+	
+	// 폼에 값 세팅
+	$("#mc_Mode").val(Mode);
+	$("#mc_Phoneid").val(Phoneid);
+	$("#mc_Svcid").val(Svcid);
+	$("#mc_Mrchid").val(Mrchid);
+	$("#mc_Tradeid").val(Tradeid);
+	$("#mc_Prdtnm").val(Prdtnm);
+	$("#mc_Prdtprice").val(Prdtprice);
+	$("#mc_Mobilid").val(Mobilid);
+	$("#mc_Userid").val(Userid);
+	$("#mc_Userip").val(Userip);
+	$("#mc_MSTR").val(MSTR);
+	$("#mc_Email").val(Email);
+	$("#mc_Emailflag").val(Emailflag);
+	$("#mc_Recordkey").val(Recordkey);
+	$("#mc_ReqOpt").val(ReqOpt);
+	$("#mc_Prdtcd").val(Prdtcd);
+	$("#mc_Item").val(Item);
+	$("#mc_Cpcd").val(Cpcd);
+	$("#mc_Sellernm").val(Sellernm);
+	$("#mc_Sellertel").val(Sellertel);
+	$("#mc_Commid").val(Commid);
+	$("#mc_No").val(No);
+	$("#mc_Socialno").val(Socialno);
+	
+}
+
+function submitAuthMcashPayment() {
+	
+	saveExchangeRequest();
+	
+}
+
+//-->
+</script>
+<!-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil Start  -->
+<script type="text/javascript">
+	window.onload = function doCatalyst(){	
+		var chl = "Myshop>ClaimRegister>ExchangeRegi(P)";
+		var pgNm = "nikestorekr>" + chl;
+		s.currencyCode="KRW";	
+		s.linkInternalFilters+=",nike.co.kr";
+		s.pageName=pgNm;
+		s.channel="Myshop";
+		s.prop2="nikestorekr";
+		s.prop10="commerce";
+		s.prop12=$("#sportsProp").val();
+		s.prop14="kr";
+		s.prop15="ko";
+		s.prop17="nikestorekr:MyPage";	
+		 s.eVar4 = "logged in"; 
+		s.t();	
+	}
+</script>	
+
+	
+
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready( function (){
+		$(document.body).prepend("<div id='stageWarning'><div style='display:table-cell; vertical-align:middle; height:30px;'><b>현재 STAGING에 접속 중입니다. <\/b><\/div><\/div>");
+		$("#stageWarning")
+			.css("background-color","#009900")
+			.css("color","white");
+		setTimeout( "$('#stageWarning').hide();",5000 );
+	});
+//]]>
+</script>
+
+</head>
+
+<body id="pop" >
+
+
+<iframe title="submitFrame" name="submitFrame" style="display:none" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+<iframe title="downloadFrame" name="downloadFrame" style="display:none" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+
+	
+<form id="exchangeForm" name="exchangeForm" method="post" class="payForm">
+		<input type="hidden" name="totGoodsCnt" id="totGoodsCnt" value="0"/>
+		<input type="hidden" id="orderNo" name="orderNo" value="1606230007369NK" />
+		<input type="hidden" id="selPickUpTypeCode" name="selPickUpTypeCode" />
+		<input type="hidden" id="acceptChannelCode" name="acceptChannelCode" value="03" />
+		<input type="hidden" name="totalPaymentAmount" id="totalPaymentAmount" value="0" />
+		<input type="hidden" name="tempTotalPaymentAmount" id="tempTotalPaymentAmount" value="0" />
+		<input type="hidden" name="payAmount" id="payAmount" value="0" />
+		
+		<input type="hidden" name="paramEnterpriseNo" /><!-- 거래처 코드-->
+		<input type="hidden" name="paramEnterpriseContractNo" /><!-- 거래처 거래처계약코드-->
+		<input type="hidden" name="paramLowestEnterpriseNo" /><!-- 하위거래처 코드-->
+		
+		<!-- 교환 배송지 -->
+		<input type="hidden" id="remiteeName" name="remiteeName" value="빈정샘" />
+		<input type="hidden" id="postNo" name="postNo" value="13441" />
+		<input type="hidden" id="postAddress" name="postAddress" value="경상북도 예천군 용문면" />
+		<input type="hidden" id="detailAddress" name="detailAddress" value="비봉리 73" />
+		<input type="hidden" id="stnmPostNo" name="stnmPostNo" value="13441"/>
+		<input type="hidden" id="stnmPostAddress" name="stnmPostAddress" value="인천광역시 남구 인하로236번길"/>
+		<input type="hidden" id="stnmDetailAddress" name="stnmDetailAddress" value="11-26"/>
+		<input type="hidden" id="addrChocSctCd" name="addrChocSctCd" value="01"/>
+		<input type="hidden" id="addrChkRsltCd" name="addrChkRsltCd" value="I"/>
+		<input type="hidden" id="cableTelephoneRegionNo" name="cableTelephoneRegionNo" value="549" />
+		<input type="hidden" id="cableTelephoneExchange" name="cableTelephoneExchange" value="990" />
+		<input type="hidden" id="cableTelephoneEndNo" name="cableTelephoneEndNo" value="4014" />
+		<input type="hidden" id="cellSectionNo" name="cellSectionNo" value="010" />
+		<input type="hidden" id="cellTelephoneExchange" name="cellTelephoneExchange" value="4000" />
+		<input type="hidden" id="cellEndNo" name="cellEndNo" value="5594" />
+		<input type="hidden" id="deliveryPlaceName" name="deliveryPlaceName" value="집">
+		
+		<!-- 반품 배송지 -->
+		<input type="hidden" id="collRemiteeName" name="collRemiteeName" value="빈정샘" />
+		<input type="hidden" id="collPostNo" name="collPostNo" value="13441" />
+		<input type="hidden" id="collPostAddress" name="collPostAddress" value="경상북도 예천군 용문면" />
+		<input type="hidden" id="collDetailAddress" name="collDetailAddress" value="비봉리 73" />
+		<input type="hidden" id="collStnmPostNo" name="collStnmPostNo" value="13441"/>
+		<input type="hidden" id="collStnmPostAddress" name="collStnmPostAddress" value="인천광역시 남구 인하로236번길"/>
+		<input type="hidden" id="collStnmDetailAddress" name="collStnmDetailAddress" value="11-26"/>
+		<input type="hidden" id="collAddrChocSctCd" name="collAddrChocSctCd" value="01"/>
+		<input type="hidden" id="collAddrChkRsltCd" name="collAddrChkRsltCd" value="I"/>		
+		<input type="hidden" id="collCableTelephoneRegionNo" name="collCableTelephoneRegionNo" value="549" />
+		<input type="hidden" id="collCableTelephoneExchange" name="collCableTelephoneExchange" value="990" />
+		<input type="hidden" id="collCableTelephoneEndNo" name="collCableTelephoneEndNo" value="4014" />
+		<input type="hidden" id="collCellSectionNo" name="collCellSectionNo" value="010" />
+		<input type="hidden" id="collCellTelephoneExchange" name="collCellTelephoneExchange" value="4000" />
+		<input type="hidden" id="collCellEndNo" name="collCellEndNo" value="5594" />
+		<input type="hidden" id="collDeliveryPlaceName" name="collDeliveryPlaceName" value="집">
+		
+		<input type="hidden" id="PdeliveryPlaceSn" name="PdeliveryPlaceSn" value="7989618">
+</form>
+<div id="popTop"> 
+		<img src="http://lecs.nike.co.kr/NKS1/image/web/pre/category/pop_tit.gif" alt="nike" /> 
+	</div> 
+	<!--//{"date":"2013. 7. 18.","user":"jCompany","as-is":"","to-be":"style='background:#e1e5e6' 삭제"}//-->
+	<!-- Start -->
+	<!-- phase2 mypage_cancle, popup2 클래스 추가 -->
+	<div id="popContent" class="mypage_cancle popup2">
+	<!-- phase2 mypage_cancle, popup2 클래스 추가 끝 -->
+	<!-- End --> 
+			<div class="pop_cp">
+				<!-- phase2 title 클래스 추가 -->
+				<h2 class="title">교환신청</h2> 
+				<!-- phase2 title 클래스 추가 -->
+				<!-- phase2 교환수량저장 버튼 이동 -->
+				<p class="tits">주문번호 : <strong>1606230007369NK</strong>&nbsp; <span class="hidden">교환할 상품의 수량을 변경하신 후 클릭하세요.</span><span>상품하자/오배송으로 인한 교환은 고객센터(080-022-5512)나 1:1 E-mail 문의로 접수해 주세요</span></p> 
+				<!-- phase2 교환수량저장 버튼 이동 -->
+			</div> 
+			
+			<div class="orderList" style="margin-top:5px;"> 
+				<table summary="상품수량, 교환반품수환, 신청일자사유, 배송비, 진행상태에 따른 교환접수 내역 정보"><!-- #nike -->
+					<caption >교환접수 내역 정보</caption><!-- #nike -->
+					<!-- phase2 colgroup 변경 -->
+					<colgroup>
+						<col width="10%">
+						<col width="*">
+						<col width="7%">
+						<col width="8%">
+						<col width="12%">
+						<col width="17%">
+						<col width="15%">
+					</colgroup>
+					<!-- phase2 colgroup 변경 끝 -->
+					<thead>
+					<tr> 
+						<th scope="col"></th> 
+						<th scope="col">상품</th> 
+						<th scope="col">주문수량</th>
+						<th scope="col">교환수량</th>  
+						<th scope="col">옵션변경</th> 
+						<th scope="col">교환사유</th> 
+						<th scope="col">비고</th>
+					</tr>		
+					</thead>					
+					<tbody>		
+					
+					<div id="div_optionChg_1606230007369NK_1" style="z-index:10;text-align:left;position:absolute;top:-90px;left:-210px;"></div>
+					
+						
+												
+						
+						
+					<tr>
+						<td class="lns01"><label for="chk_1" class="hidden">제품선택</label><input type="checkbox" class="chk" id='chk_1' name="chkList"/></td>
+						<td class="lns02"> 
+							<div class="ms dummy45"><img src="../image/web/global/tmp_100.jpg" alt="" onerror="this.src='/NKS1//image/web/no-img/55x55.gif'"/></div> 
+							<div class="ms"> 
+								<strong><span id="spn_goodsNm_1606230007369NK_1">코어 NSW JDI 티 유스</span></strong>
+								<span> COLOR:다크 그레이 헤더/비비드 오렌지 SIZE:75(L)</span>
+								<p>29,000원</p> 
+							</div>								
+						</td> 
+						<td class="lns03"><strong>1개</strong></td> 
+						<td class="lns03">
+							<input type="hidden" id="1_NK31068855003" value="1"/>
+							<div> <label class="hidden" for="claimQuantity_1">교환수량</label><input type="text" style="margin-left:-3px;" value="0" id='claimQuantity_1' onkeyup="javascript:setCancelQty('1', '')" onkeypress="javascript:setCancelQty('1', '')"/></div> 
+							<div class="be"> 
+								<a href="#" onclick="setUpQty('1', '');"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/order/btn_n01.gif"  alt="수량증가"  /></a>
+								<a href="#" onclick="setDownQty('1', '');"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/order/btn_n02.gif"  alt="수량감소"  /></a>
+							</div> 
+						</td> 
+						<td class="lns03"> 
+							<!-- phase2 삭제 
+							<span style="display:block;  padding:0 4px 10px; " id="spn_exchangeOption_1"></span><br />
+							-->
+							<!-- phase2 버튼 변경 -->
+							<a href="javascript:optionChange('1', '1', 'NK31068855003')" class="popup2-btn1" onclick="g_layer_show('g_option_change');return false;">교환상품<br/>컬러/사이즈 변경</a>
+							<!-- phase2 버튼 변경 -->						
+						</td> 
+						<td class="lns12">
+							<select id="claimCauseCode_1" name="claimCauseCode" onchange="changeReason('1', '');" title="교환사유 선택">
+								<option value="">교환사유를 선택하세요</option>								
+								<option value="0301" useYn="Y">고객변심(기간이내)</option>								
+								<option value="0311" useYn="Y">고객변심(기간초과)</option>								
+								<option value="0302" useYn="N">상품정보 상이</option>								
+								<option value="0303" useYn="N">품질불만</option>								
+								<option value="0304" useYn="N">상품하자/파손(맞교환)</option>								
+								<option value="0305" useYn="N">가품/중고품 의심</option>								
+								<option value="0307" useYn="N">오배송(맞교환)</option>								
+								<option value="0308" useYn="N">가격변동</option>								
+								<option value="0309" useYn="N">포장불만</option>								
+								<option value="0310" useYn="Y">사이즈불만</option>									
+						</select>
+						</td>
+						
+						<td class="lns13" style="line-height:18px" >
+							<span>
+							반품수거비: 0원<br /> 
+							</span>
+							교환발송비: 0원<br /> 
+						</td> 
+						
+					</tr>
+					
+					<input type="hidden" name="index" id="index_1" value="1"/>
+					<input type="hidden" name="storeNo" id="storeNo_1" value="2"/>
+					<input type="hidden" name="siteNo" id="siteNo_1" value="14218"/>
+					<input type="hidden" name="itemNo" id="itemNo_1" value="NK31068855003"/>
+					<input type="hidden" name="itemName" id="itemName_1" value=" COLOR:다크 그레이 헤더/비비드 오렌지 SIZE:75(L)"/>
+					<input type="hidden" name="oldItemNo" id="oldItemNo_1" value="NK31068855003" />
+					<input type="hidden" name="oldItemName" id="oldItemName_1" value=" COLOR:다크 그레이 헤더/비비드 오렌지 SIZE:75(L)" />
+					<input type="hidden" name="orderDetailSn" id="orderDetailSn_1" value="1"/>
+					<input type="hidden" name="goodsNo" id="goodsNo_1" value="NK31068855"/>
+					<input type="hidden" name="goodsName" id="goodsName_1" value="코어 NSW JDI 티 유스"/>
+					<input type="hidden" name="memberNo" id="memberNo_1" value="000000003889522"/>
+					<input type="hidden" name="goodsTypeCode" id="goodsTypeCode_1" value="10"/>
+					<input type="hidden" name="enterpriseNo" id="enterpriseNo_1" value="436272"/><!-- 거래처 코드-->
+					<input type="hidden" name="enterpriseContractNo" id="enterpriseContractNo_1" value="234481"/><!-- 거래처 거래처계약코드-->
+					<input type="hidden" name="lowestEnterpriseNo" id="lowestEnterpriseNo_1" value="1"/>
+					<input type="hidden" name="availClaimQty" id="availClaimQty_1" value="1"/>
+					<input type="hidden" name="salePrice" id="salePrice_1" value="29000"  /><!--  판매가 -->
+					
+					<input type="hidden" name="corporationGoodsNo" id="corporationGoodsNo_1" value="807433"  /><!--업체상품번호 -->
+					<input type="hidden" name="corporationGoodsReferenceNo" id="corporationGoodsReferenceNo_1" value=""  /><!-- 업체상품참조번호 -->
+					<input type="hidden" name="customerGoodsClassNo" id="customerGoodsClassNo_1"  value="29" /><!--고객사상품분류코드 -->
+					<input type="hidden" name="customerGoodsClassName" id="customerGoodsClassName_1" value="SHORT SLEEVE T-SHIRT"  /><!--고객사상품분류코드 -->
+					<input type="hidden" name="merchandiserGoodsGroupNo" id="merchandiserGoodsGroupNo_1" value="5153"  /><!-- MD상품그룹코드 -->
+					
+					<input type="hidden" name="packageGoodsYN" id="packageGoodsYN_1"  value="N" />
+					<input type="hidden" name="packageGoodsNo"  id="packageGoodsNo_1" value=""/>
+					<input type="hidden" name="packageGoodsQty" id="packageGoodsQty_1" value="0"/>
+					<input type="hidden" name="goodsCompositionCode" id="goodsCompositionCode_1" value="50"/>
+					<input type="hidden" name="goodsTypeName" id="goodsTypeName_1" value=""/>
+					
+					<input type="hidden" id="claimPossibilityYn_1" 		value="Y"/>
+					<input type="hidden" id="amountChangeCount_1" 		value="0"/>
+					<input type="hidden" id="amountChangeOptionSaleCount_1" 		value="0"/>
+					<input type="hidden" id="exchangeReturnGoodsPossibilityYn_1" 		value="Y"/>
+					<input type="hidden" id="inventoryManagementYn_1" 		value="Y"/>
+					<input type="hidden" id="inventoryQty_1" 		value="5"/>
+					
+					<input type="hidden" name="corperationItemNo" id="corperationItemNo_1" value="03807433063  075"  />
+					
+					</tbody>
+				</table>
+				<!-- phase2 교환수량저장 버튼 이동 -->
+				<div style="padding: 25px 18px;line-height: 1;border-bottom: 1px solid #e1e1e1;background: #fafafa;"><a href="#" onclick="selectGoods(); return false;" class="btn_cn_save"><img class="vm" src="../image/web/pre/order/btn_ne12.gif" alt="교환수량 저장" /></a></div>
+				<!-- phase2 교환수량저장 버튼 이동 -->
+			</div> 
+			<!-- // cat_order -->
+		
+			<span id="DCLayer"></span>
+			<div id="deliveryRegionDiv" style="position: absolute;top:200px;"></div>
+			<div class="pop_cp">
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 -->
+				<h3 class="title2">반품상품 수거주소</h3>
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 끝 -->
+			</div> 
+			<div class="order_no" style="margin-top:8px;"> 
+					<table summary="주소지 정보에 따른 반품지 주소"><!-- #nike -->
+					<caption>반품지 주소</caption><!-- #nike -->
+					<colgroup>
+						<col style="width:170px;" /> <!-- phase2 width값 변경 -->
+						<col />
+					</colgroup>
+					<tbody><!-- tbody추가 #nike -->
+					<tr class="tns3"> 
+						<th rowspan="2" scope="row">주소지</th> 
+						<td> 
+							택배 기사가 방문하여 상품을 수거합니다. 방문할 주소를 확인해 주세요 
+							<p><span class="returnReuseDiv" id="newReturnReuseDiv">빈정샘(010-4000-5594)</span></p> 
+							<p>
+							
+		                    
+		                    
+		                    <p>
+							<span>지번주소 : </span> <span  id="returnDeliveriJibun">경상북도 예천군 용문면 비봉리 73</span> &nbsp;&nbsp;<!-- phase2 삭제 <a href="#" onclick="deliveryChange('1606230007369NK','03'); return false;"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_n09.gif" class="vm" alt="변경" /></a> --></p> 
+							<p>
+							  
+								  
+										<span>도로명주소 :</span> <span id="returnDeliveriRoad">인천광역시 남구 인하로236번길 11-26</span>
+								
+								
+														
+ 								&nbsp;&nbsp;<a href="#" onclick="deliveryChange('1606230007369NK','03'); return false;"><img src="../image/web/pre/myshop/btn_n09.gif" class="vm" alt="변경" /></a> 
+							</p>
+							
+						
+						</td> 
+					</tr> 
+					<tr class="tns3"> 
+						<td> 
+							지정한 택배사를 이용하지 않고 고객님께서 직접 반품을 원하실 경우, &lt;직접반품&gt;을 선택해시고 안내된 주소로 상품을 보내주시기 바랍니다. 
+							<p class="delivery"><input type="radio" name="ra_delivery" id="specified" value="20" /><label for="specified">지정 택배사로 반품</label> 
+								<input type="radio" name="ra_delivery" id="directly" value="30" /><label for="directly">직접 반품</label> 
+							</p> 
+							<span id="delivery_30" style="display:none"><p></p></span>
+						</td> 
+					</tr> 
+					</tbody><!-- // tbody추가 #nike -->
+				</table> 
+			</div> 
+			
+			<div class="pop_cp">
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 -->
+				<h3 class="title2">교환상품 배송주소</h3>
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 끝 -->
+			</div> 
+			<div class="order_no" style="margin-top:8px;"> 
+				<table summary="주소지 정보에 따른 반품상품 수거주소"><!-- #nike -->
+				<caption>반품상품 수거주소</caption><!-- #nike -->
+					<colgroup> 
+						<col style="width:170px;" /> <!-- phase2 width값 변경 -->
+						<col /> 
+					</colgroup> 
+					<tbody><!-- tbody추가 #nike -->
+					<tr class="tns3"> 
+						<th scope="row">받으실 분</th> 
+						<td> 
+							<p class="nd"><span class="exchangeReuseDiv" id="newExchangeReuseDiv"><strong>빈정샘</strong> 님 010-4000-5594</span>  
+							</p>
+							<p>
+							
+                            
+                            
+                            <p>
+							<span>지번주소 : </span> <span id="exchangeDeliveriJibun">경상북도 예천군 용문면 비봉리 73</span>&nbsp;&nbsp;<!-- phase2 삭제 <a href="#" onclick="deliveryChange('1606230007369NK','02'); return false;"><img src="../image/web/pre/myshop/btn_n09.gif" class="vm" alt="변경" /></a>--></p> 
+							<p>
+							  
+								  
+										<span>도로명주소 :</span> <span id="exchangeDeliveriRoad">인천광역시 남구 인하로236번길 11-26</span>
+								
+								
+														
+ 								&nbsp;&nbsp;<a href="#" onclick="deliveryChange('1606230007369NK','02'); return false;"><img src="../image/web/pre/myshop/btn_n09.gif" class="vm" alt="변경" /></a> 
+							</p>
+							
+						
+						</td> 
+					</tr> 
+					</tbody><!-- // tbody추가 #nike -->
+				</table> 
+			</div> 
+ 
+			
+			<div class="pop_cp"> 
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 -->
+				<h3 class="title2">연락처</h3>
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 끝 -->
+			</div> 
+			<div class="order_no" style="margin-top:8px;"> 
+				<table summary="주소지 정보에 따른 교환상품 배송주소"><!-- #nike -->
+				<caption>교환상품 배송주소</caption><!-- #nike -->
+					<colgroup> 
+						<col style="width:170px;" /> <!-- phase2 width값 변경 -->
+						<col /> 
+					</colgroup>
+					 <tbody><!-- tbody추가 #nike -->
+					<tr class="tns3"> 
+						<th scope="row">연락처</th> 
+						<td> 
+							휴대전화와 이메일로 진행상황을 알려드립니다.
+							<p><strong>빈정샘</strong> 님  552-4000-5594 &nbsp;&nbsp;|&nbsp;&nbsp;  LECSTEST@lotte.com &nbsp;</p> 
+						</td> 
+					</tr> 
+					</tbody>
+				</table> 
+			</div> 
+			
+			<form name="KSPayAuthForm" method="post" id="KSPayAuthForm" class="payForm">			
+			<div class="orderTmx6" id="div_delivery"></div>
+			<div id="divPaymentInformation" style="display:"> 
+			<div class="pop_cp">			
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 -->
+				<h3 class="title2">결제정보 선택</h3>
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 끝 -->
+			</div> 
+			<div class="order_no" style="margin-top: 5px;border-top: 1px solid #333;border-bottom: 1px solid #ebebeb;">  <!-- phase2 인스타일 추가 -->
+				<table summary="결제정보 선택"><!-- #nike --> 
+					<caption>결제정보 선택</caption><!-- #nike --> 
+					<colgroup> 
+						<col style="width:70%;" />
+						<col style="width:30%;" /> <!-- 추가 20140718 --> 
+					</colgroup>
+					<tbody>
+					
+					
+
+
+
+<div class="panel">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+
+function checkSubPay(checkYn, editable, payType) {
+	
+	// 금액체크 각 페이지에 temp 태그 만들어서 체크할것.(교환/추가결제)
+	
+	if(parseInt($('#tempTotalPaymentAmount').val()) <= 0) {
+		alert("교환수량을 먼저 저장하여 주시기 바랍니다.");
+		$('#' + payType + 'Chk').removeAttr("checked");
+		return;
+	}
+
+	if(checkYn) {
+		$('#' + payType + 'UseYn').val('Y');
+		
+		if (editable) {
+			$('#' + payType + 'Amount').removeAttr("readonly");
+			
+		} else {
+			var payAmount = parseInt($('#tempTotalPaymentAmount').val()) - getTotalSubPayment();
+			if ($('#' + payType + 'AmountLimit').val() > payAmount) {
+				$('#' + payType + 'Amount').val(payAmount);
+			} else {
+				$('#' + payType + 'Amount').val($('#' + payType + 'AmountLimit').val());
+			}
+		}
+	} else {
+		$('#' + payType + 'UseYn').val("N");
+		$('#' + payType + 'Amount').val("0");
+		$('#' + payType + 'Amount').attr("readonly", true);
+	}
+
+	chkOnlySubPayment();
+}
+
+function validateSubPay(payType, minUnit) {
+
+	
+	if (!isNumberVal($('#' + payType + 'Amount').val())){
+		alert("숫자만 입력해 주십시오.");
+		$('#' + payType + 'Amount').val("0");
+	}
+	
+	else if (parseInt($('#' + payType + 'Amount').val()) % minUnit > 0) {
+		alert(minUnit + "원단위로만 사용하실 수 있습니다.");
+		$('#' + payType + 'Amount').val("0");
+	}
+
+	else if (parseInt($('#' + payType + 'Amount').val()) > parseInt($('#' + payType + 'AmountLimit').val())) {
+		alert("사용가능 금액을 초과 입력하셨습니다.");
+		$('#' + payType + 'Amount').val("0");
+	}
+
+	else if (getTotalSubPayment() > parseInt($('#tempTotalPaymentAmount').val())) {
+		alert("결제금액보다 초과로 입력하셨습니다.");
+		$('#' + payType + 'Amount').val("0");
+	}
+
+	if(parseInt($('#' + payType + 'Amount').val())>0){
+		$('#' + payType + 'UseYn').val('Y');
+	}
+		
+	chkOnlySubPayment();
+}
+
+function chkOnlySubPayment() {
+	
+	if(parseInt($('#tempTotalPaymentAmount').val()) <= 0) {
+		return false;
+	}
+	
+	if (getTotalSubPayment() == $('#tempTotalPaymentAmount').val()) {
+		$("#radioPayMeanBox").hide();
+		$('#payMeanCreditCard').hide();
+		$('#payMeanCreditTransfer').hide();
+		
+		$(':radio[name=paysel]').each(function() {
+			$(this).prop("disabled", true);
+		});
+	} else {
+		$("#radioPayMeanBox").show();
+		var paysel = $(':radio[name=paysel]:checked').val();
+		if(paysel == '04'){
+			$('#payMeanCreditCard').show();
+			$('#payMeanCreditTransfer').hide();		
+			
+		}else if(paysel == '02'){
+			$('#payMeanCreditCard').hide();
+			$('#payMeanCreditTransfer').show();
+		}
+		$(':radio[name=paysel]').each(function() {
+			$(this).prop("disabled",false);
+		});
+	}
+}
+
+function getTotalSubPayment() {
+	subPayTotalAmount =
+		 parseInt($('#custodyMoneyAmount').val()) ;
+	return subPayTotalAmount;
+}
+
+function clearSubPayment() {
+	
+	$('#custodyMoneyUseYn').val("N");
+	$('#custodyMoneyAmount').val("0");
+	
+	
+	$('#custodyMoneyAmount').attr("readonly", true);
+	$('#custodyMoneyChk').removeAttr("checked");
+	
+	chkOnlySubPayment();
+}
+
+function valtemp() {
+	if (!Validator.validate(document.KSPayAuthForm)) return;
+	$("form:[id=KSPayAuthForm]").find(":input[name=subPayCheck]").each(function() {
+		alert(1);
+	});	
+}
+
+//조회한 포인트 셋팅
+function setPointInfo(point, amount) {
+	$('#' + point + 'AmountLimit').val(amount);
+	$('#' + point + 'Content').html($.currency(amount, 0));
+	$('#' + point + 'Tr').show();
+}
+
+//회원혜택 정보 콜백
+function handleMemberBenefit(result){
+	$('#loadingMemberBenefit').hide();
+	if (result.LOTTEPOINT > 1000) $('#lottePointTr').show();
+	if (result.LPOINT > 100) setPointInfo("lPoint", result.LPOINT);
+	if (result.CUSTODYMONEY > 100) setPointInfo("custodyMoney", result.CUSTODYMONEY);
+	if (result.LOTTEDEPOSIT > 100) setPointInfo("deposit", result.LOTTEDEPOSIT);
+
+	if (parseInt(result.LOTTEPOINT) 
+			+ parseInt(result.LPOINT) 
+			+ parseInt(result.CUSTODYMONEY) 
+			+ parseInt(result.LOTTEDEPOSIT) <= 0){
+		$('#loadingMemberBenefitContent').html("사용가능한 포인트/보관금이 없습니다.");
+		$('#loadingMemberBenefit').show();
+	}
+}
+
+
+//회원혜택 정보 가져오기
+function getMemberBenefitInfo() {
+	var action = "/mypage/order/getMemberBenefitAjax.lecs?memberNo=";
+	$.post(action, function(result){
+		handleMemberBenefit(result);
+	}, "json");
+}
+
+$(function() {
+   $(".btn_deposits").click(function(n){
+     n.preventDefault();
+     $(".deposits_pop").show();
+   });
+   $(".pop_btn .deposits_close").click(function(n){
+     n.preventDefault();
+     $(".deposits_pop").hide();
+   });
+ });
+  
+getMemberBenefitInfo();
+
+
+
+/**
+ * TYPE 3. 고객예치금 안내 레이어
+ * a 태그 onclick에 달아주는 function
+ */
+var fn_depositHelpLayer = function (target) {
+    if (!$(target).data("focusLayer"))
+        fn_focusLayerEventSetting(target,false); // 가운데 띄우는 레이어면 true, 사용자 설정으로 하려면 false (사용자 설정일 경우 css 또는 하드코딩으로 레이어 위치를 맞춰주세요)
+        
+    $(target).data("openDelay", true); // 해당요소의 정방향 탭키 비활성화
+    target.showLayer(); // 레이어 보여주기 (toggleLayer 호출시 비활성화된 탭키 활성화됨)
+    
+    return false;
+};
+
+
+
+//-->
+</script>
+
+
+<tr id="loadingMemberBenefit">
+	 <!-- phase2 인스타일 추가 --><td colspan="2" id="loadingMemberBenefitContent" style="padding:15px;">사용가능한 포인트/보관금을 조회 중입니다. </td>
+</tr>
+
+<tr id="custodyMoneyTr" style="display:none;">
+	
+	<td>
+		<input type="hidden" id="custodyMoneyUseYn" name="settingCustodyMoney" value="" />
+		<input  id="custodyMoneyAmountLimit" name="custodyMoneyAmountLimit" type="hidden" value="0"/>
+		<input type="checkbox" id="custodyMoneyChk" class="card" name="subPayCheck" onclick="checkSubPay(this.checked, false, 'custodyMoney')" title="고객예치금"/>
+		<label class="card" for="deposits">고객예치금 (<span id="custodyMoneyContent">0</span>점 사용가능) <a href="#" class="btn_deposits ml05"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/order/ico_deposits.gif" alt="고객예치금 안내"></a>
+		<!-- 레이어팝업 s -->
+		<div class="deposits_pop">
+		<div class="layer_pop_new">
+		<div class="layer_bg">
+		<h3 class="tit">고객예치금 안내</h3>
+		<div class="txt_box">
+		<ul>
+		<li> 환불수단 미등록 등으로 인한 환불보류금액입니다. </li>
+		<li>주문시 즉시 사용이 가능하며, my쇼핑정보에서 환불받기 버튼을 클릭하시거나 고객센터(080-022-0182)로 요청시 본인확인 후 즉시환불이 가능합니다</li>
+		</ul>
+		</div>
+		<div class="pop_btn">
+		<a href="#" class="deposits_close"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_lay_close3.gif" alt="닫기"></a>
+		</div>
+		</div><!--// layer_bg -->
+		</div>
+		</div>
+		<!-- 레이어팝업 e -->
+	</td>
+	<td>
+		<input  id="custodyMoneyAmount" name="custodyMoneyAmount" type="text" value="0"  style="padding:0; height:20px; width:100px" readonly="readonly" title="고객예치금 입력"/> 원
+	</td>
+</tr>
+
+
+
+</div>
+					<tr> 
+						<td colspan="2" style="padding:15px;"><!-- colspan 추가 20140718 -->
+							
+								
+									<input type="radio" class="card" name="paysel" id="paysel02" value="02"  /><label for="paysel02">실시간계좌이체</label>
+								
+							
+								
+									<input type="radio" class="card" name="paysel" id="paysel04" value="04" checked="checked" /><label for="paysel04">신용카드</label>
+								
+							
+								
+									<input type="radio" class="card" name="paysel" id="paysel06" value="06"  /><label for="paysel06">휴대폰결제</label>
+								
+							
+							
+						</td> 
+					</tr> 
+					</tbody>
+				</table> 
+			</div> 
+			
+			<div class="pop_cp" id="payMeanCreditCard" name="payMeanCreditCard">
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 -->
+				<p class="title2">결제수단정보 : <strong>신용카드 결제</strong></p>
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 끝 -->
+				
+				 <!-- phase2 인스타일 추가 --><div class="order_no" style="margin-top:5px;border-top: 1px solid #333;border-bottom:1px solid #ebebeb">
+					 <!-- phase2 인스타일 변경 --><table summary="신용카드 결제 수단정보" style="width:600px;"><!-- #nike --> 
+						<caption>카드 종류 표</caption><!-- #nike --> 
+						<colgroup>
+							<col width="160"/>
+							<col />
+						</colgroup>
+						<tbody>
+							<tr class="first">
+								 <!-- phase2 인스타일 추가 -->
+								 <th scope="row" style="background: #fafafa;padding:5px 0;border-right:1px solid #ebebeb;border-bottom:1px solid #ebebeb">카드종류</th>
+								 <!-- phase2 인스타일 추가 -->
+								 <td style="background: #fff;padding:15px 30px;border-right:1px solid #ebebeb;border-bottom:1px solid #ebebeb">
+									<select name="selectcard" id="selectcard" style="width:185px;" title="카드종류" onChange="javascript:changeCard();">
+										<option value="0">카드선택</option>
+										
+											<option value="5" ref1="09" ref2="09">롯데카드</option>
+										
+											<option value="6" ref1="05" ref2="05">신한카드  </option>
+										
+											<option value="" ref1="01" ref2="01">비씨카드</option>
+										
+											<option value="" ref1="02" ref2="02">국민카드</option>
+										
+											<option value="2" ref1="04" ref2="04">삼성카드      </option>
+										
+											<option value="4" ref1="08" ref2="08">현대카드      </option>
+										
+											<option value="11" ref1="24" ref2="01">하나카드    </option>
+										
+											<option value="1" ref1="03" ref2="03">하나카드(구 외환)</option>
+										
+											<option value="14" ref1="15" ref2="01">농협NH카드</option>
+										
+											<option value="7" ref1="26" ref2="01">씨티카드  </option>
+										
+											<option value="" ref1="14" ref2="01">우리카드</option>
+										
+											<option value="" ref1="12" ref2="05">수협카드      </option>
+										
+											<option value="" ref1="18" ref2="05">전북카드      </option>
+										
+											<option value="13" ref1="16" ref2="05">제주카드      </option>
+										
+											<option value="" ref1="17" ref2="05">광주카드    </option>
+										
+									</select>
+									<p class="mgt10">* 카드에 BC마크가 있는 경우, 발급은행과 관계없이 BC카드를 선택</p>
+									<p>* 구LG카드는 신한카드를 선택</p>
+<!--									[2012-12-31] ceres-3422 : [나이키키엘] 무이자 할부서비스 종료에 따른 변경-->
+<!--										 PG 결제일 경우 문구 노출 -->
+<!--										<p>* NH카드, 하나카드로 5만원 이상 일반할부 2~3개월 결제 시 자동 무이자 할부 적용</p>-->
+<!--									-->
+								</td>
+							</tr>
+							<tr name="tr_inst_sel" id="tr_inst_sel" style="display:;">
+								 <!-- phase2 인스타일 추가 -->
+								 <th scope="row" style="background: #fafafa;padding:5px 0;border-right:1px solid #ebebeb;border-bottom:1px solid #ebebeb">할부선택</th>
+								 <!-- phase2 인스타일 추가 -->
+								 <td id="td_inst_rdo" class="card-install" style="background: #fff;padding:15px 30px;border-right:1px solid #ebebeb;border-bottom:1px solid #ebebeb">
+									<input type="radio" id="rd_inst_sngl" name="rd_inst" class="chk"  onclick="javascript:fn_InstSel();" checked value="0"/><label for="rd_inst_sngl">일시불</label>
+									<input type="radio" id="rd_inst_free" name="rd_inst" class="chk" onclick="javascript:fn_InstSel();" disabled value="2"/><label for="rd_inst_free">무이자할부</label>
+									<input type="radio" id="rd_inst_intr" name="rd_inst" class="chk"  onclick="javascript:fn_InstSel();" disabled value="1"/><label for="rd_inst_intr">일반할부</label>
+								</td>
+							</tr>
+							<tr name="tr_inst_term" id="tr_inst_term" style="display:;">
+								 <!-- phase2 인스타일 추가 -->
+								 <th id="th_inst_mm_cnt" name="th_inst_mm_cnt" scope="row" style="background: #fafafa;padding:5px 0;border-right:1px solid #ebebeb;border-bottom:none">할부기간</th>
+								<input type="hidden" name="inst_mm_cnt" id="inst_mm_cnt" value="0" />
+								 <!-- phase2 인스타일 추가 -->
+								 <td id="td_inst_mm_cnt" name="td_inst_mm_cnt" style="background: #fff;padding:15px 30px;border-right:1px solid #ebebeb;border-bottom:none">
+									<select name="sel_inst_mm_cnt" id="sel_inst_mm_cnt"  title="할부기간" onChange="javascript:fn_setInstMmCnt();" style="display:;" disabled>
+										<option value="">개월수 선택</option>
+									</select>
+								</td>
+							</tr>
+							
+							<tr id="tr_card_point" name="tr_card_point" style="display:none">
+								<th scope="row">포인트 </th>
+								<td class="card-point">
+									<p>
+										<input type="radio" id="card_point" name="card_point" value="Y" class="chk"/>
+										<label for="card_point" id="card_point_name"></label>
+										<a href="#none" onclick="show_ly('card_point_cont','block')">
+											<img src="https://simage.lotte.com/lotte/images/order/ico_help.gif" alt="도움말" />
+										</a>
+									</p>
+									<!-- 포인트설명 -->
+									<div class="layerpop" id="card_point_cont" style="display:none;width:300px;left:50px">
+										<div class="shadow">
+											<div class="layerpop-in">
+												<div class="pop-cont pdt30">
+													<ul class="blt1" id="card_point_cont_text">
+													</ul>
+												</div>
+												<div class="pop-footer">
+													<img src="http://lecs.nike.co.kr/NKS1/image/web/pre/order/pop_close.gif" class="pop-close" alt="CLOSE" onclick="show_ly('card_point_cont','none')" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //포인트설명 -->
+									<p>
+										<input type="radio" id="card_point_none" name="card_point" value="none" class="chk" checked/>
+										<label for="card_point_none">사용안함</label>
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					 <!-- phase2 인스타일 추가 -->
+					 <div class="texTN" style="height: 164px;width: 322px;right: 20px;top: 20px;right:20px;">
+						<공인인증/신용카드 인증서비스 안내><br /><br /> 
+						30만원 이상 결제시 신용카드용<br /> 공인인증서가 필요합니다.<br /><br /> 
+						공인인증서가 없는 경우, 무통장입금 으로 주문하신 후 고객센터(080-022-5512)으로 연락주시면 신용카드 결제로 변경하실 수 있습니다. <br /><br /> 
+						[자세히]<br /> 
+ 
+						금융결제원 공인인증 발급신청(무료)<br /> 
+ 
+						안심클릭/인터넷안전결제(ISP) 자세히보기<br /> 
+ 
+						증빙발급안내<br /> 
+						부가세법 시행령에 따라 신용카드영수증으로 부가세신고가 가능합니다. (세금계산서 미발급)
+					</div>
+				</div> 
+			</div>
+			</div>
+			
+			<div class="pop_cp" id="payMeanCreditTransfer" style="display:none;">
+				<!-- phase2 클래스 추가 -->
+				<p class="tits title2">결제수단정보 : <strong>실시간 계좌이체 결제</strong></p> 
+				<!-- phase2 클래스 추가 끝 -->				
+				<div class="order_no" style="margin-top:5px;border-top: 1px solid #333;border-bottom:1px solid #ebebeb"> <!-- phase2 인스타일 추가 -->
+					<table style="width:600px; height:84px;" summary="결제수단정보 실시간 계좌이체 결제"> <!-- phase2 인스타일 추가 -->
+						<caption>결제 은행 표</caption> 
+						<colgroup> 
+							<col width="80" /> 
+							<col /> 
+						</colgroup>
+						<tbody> 
+						<tr>
+							 <!-- phase2 인스타일 추가 -->
+							 <td colspan="2" style="background:#fafafa;border:none;height:148px;padding:0px 100px 0px 30px;">[교환접수] 버튼을 클릭하면  KSNet의 계좌이체 결제 창으로 연결되며 결제 창에서 결제정보(은행/계좌번호)를 입력하실 수 있습니다.</td>
+						</tr>
+						</tbody>
+					</table> 
+					
+					<div class="texTN" style="height: 91px;width: 322px;right: 20px;top: 20px;right:20px;"> <!-- phase2 인스타일 추가 -->
+						&lt;실시간 계좌이체 결제시 안내&gt;<br /><br />
+						실시간 계좌이체는 고객님 계좌에서 나이키로<br /> 결제금액이 바로 입금되는 방식을 말하며, 별도  <br /><br />
+						[자세히]<br />
+						금융결제원 공인인증 발급신청(무료)<br />
+						안심클릭/인터넷안전결제(ISP) 자세히보기<br />
+						증빙발급안내<br />
+						부가세법 시행령에 따라 신용카드영수증으로 부가세신고가 가능합니다. (세금계산서 미발급)<br /><br />
+						&lt;구매안전서비스 안내&gt;<br />
+						고객님은 안전한 거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 KSNET의 구매안전서비스 (채무지급보증)를 이용하실 수 있습니다.
+					</div> 
+				</div> 
+			</div>
+			
+			<!-- 20140415 휴대폰 결제 -->
+			<div class="pop_cp" id="payMeanCellPhone" style="display:none;">
+				<!-- phase2 title2 클래스 추가 및 인스타일 제거 -->
+		        <p class="tits title2">결제수단정보 : <strong>휴대폰 결제</strong></p>
+				<!-- phase2 title2 클래스 추가 및 인스타일 제거 끝 -->
+		        
+		        <div class="order_no" style="margin-top: 5px;border-top: 1px solid #333;border-bottom: 1px solid #ebebeb;"> <!-- phase2 인스타일 추가 -->
+		          <table style="width:600px;"> <!-- phase2 인스타일 변경 -->
+		            <colgroup>
+		              <col width="100" />
+		              <col />
+		            </colgroup>
+		            <tr>
+						<!-- phase2 인스타일 추가 -->
+						<td style="background:#fafafa;border:none;height:148px;padding:0 100px 0 30px;"> [교환접수] 버튼 클릭시, 휴대폰 결제 화면으로 연결되어 결제정보를 입력하실 수 있습니다.</td>
+		            </tr>
+		          </table>
+				<!-- phase2 인스타일 추가 -->
+		          <div class="texTN" style="height: 91px;width: 322px;right: 20px;top: 20px;right:20px;">
+		            <strong>[휴대폰결제 안내]</strong><br />
+		          휴대폰결제는 부정사용방지를 위해 가입자 명의의 휴대폰인 경우에만 결제가 가능합니다.<br />
+		          [나이키닷컴]에서는 월 최대 50만원까지 휴대폰결제가 가능합니다.<br />
+		          [나이키닷컴]의 휴대폰결제 한도와 별도로, 사용하시는 통신사의 가입기간 및 이용요금제 등에 따라 결제 및 한도가 제한될 수 있습니다.<br /><br />
+		
+		          <strong>[이용시 주의사항]</strong><br />
+		          고객님이 사용하시는 이동통신사의 신용등급에 따라 결제한도 및 이용이 제한될 수 있습니다.<br />
+		          휴대폰 요금 청구시 가맹점 란에는 모빌리언스로 기재되며, 결제상세내역은 모빌리언스 홈페이지에서 조회 가능합니다. (http://mcash.co.kr, 문의:1600-0523)<br /><br />
+		
+		          <strong>[증빙발급안내]</strong><br />
+		          휴대폰결제분에 대한 현금영수증은 휴대폰 요금을 현금으로 납부하는 경우에 한하여 발급되며, 발급문의는 이용하시는 이동통신사로 문의하여 주시기 바랍니다<br />
+		        </div>
+		      </div>
+		      <!-- // 20140415 휴대폰 결제 -->
+		
+		</div>
+			
+			<div class="alert_vew12c" id="receipt" style="display:none;"> 
+				<div class="png_bg" style="border-width: 1px;border-color: #bbbbbb;border-style: solid;"> 
+					<div class="tex"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/ln_tex_e14.gif" alt="선택하신 상품을 교환접수하시겠습니까?" /></div> 
+					<div class="tit"> 
+						<a href="" onclick="checkClick(); return false;" class="btn_close12" id="href_exchange_receipt"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_lay_ok.gif" alt="확인" id="btn_exchange_receipt"/></a> 
+						<img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_lay_close1.gif" alt="취소" onclick="$('#href_return_receipt').attr('onClick', 'checkClick(); return false;'); closeLayer('receipt');" style="cursor: pointer;"/>
+					</div> 
+				</div> 
+			</div> 
+			
+			<div class="alert_vew12e" id="receiptOK" style="display:none;"> 
+				<div class="png_bg">
+					 
+					<div class="tex"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/ln_tex_e15.gif" alt="신청하신 내용이 접수되었습니다.교환/반품내역 조회의 안내에 따라 교환하실 상품을 보내주시기 바랍니다." /></div>
+					
+					 
+					<div class="tit"> 
+						<a href="#none" onclick="parentReplace(lecsRoot + 'mypage/order/listAcceptClaim.lecs', 'secure'); return false;" class="btn_close12"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_lay_my.gif" alt="교환/접수" /></a> 
+						 
+						<a href="" onclick="self.close();" class="btn_close12"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_lay_close4.gif" alt="닫기" /></a> 
+					</div> 
+				</div> 
+			</div>
+			<!-- 120820추가:주문동의 s -->
+			 <!-- phase2 인스타일 추가 -->
+			<fieldset class="odagree_type02" style="padding:0;margin-top: 5px;">
+				<strong class="od_title title2">주문동의<span> | 교환내용을 확인해 주세요.</span></strong>
+				 <!-- phase2 인스타일 추가 -->
+				 <p style="background: #fafafa;border-top: 1px solid #333;border-bottom: 1px solid #ebebeb;">
+					<span>교환비 가격을 확인하였으며, 해당 상품 교환비 결제에 동의하시겠습니까?</span>
+					<input type="checkbox"  id="assent" name="assent" style="margin-right:5px;" /><label for="assent"><strong>동의합니다.</strong>(전자상거래법 제8조 제2항)</label>
+				</p>
+			</fieldset>
+			<!-- 120820추가:주문동의 e -->
+			
+			<div class="pop_bn"> 
+				<a href="" onclick="validateExchange(); return false;" class="claer-btn">교환신청</a> 
+				<a href="" onclick="self.close();" class="cancle-btn">취소</a> 
+			</div> 
+			
+	<input type="hidden" name="orderMediumCode" value="1"/>
+	<input type="hidden" name="orderTypeCode" value="01"/>
+	<input type="hidden" name="ordererSectionCode" value="03"/>
+	<input type="hidden" name="memberGradeCode" value=""/>
+	<!-- 배송비 결제이므로 두개 값을 필요 없을것 같음 -->
+	<input type="hidden" name="directPurchaseYN" value=""/>
+	<input type="hidden" name="cartSectionCode" value=""/>
+	
+	<!--기본-------------------------------------------------------------->
+	<input type="hidden" name="storeid"    			value="2999199999">
+	<input type="hidden" name="storepasswd" 			value="">
+	<input type="hidden" name="authty" 				value="1000">
+	<input type="hidden" name="certitype" 			value="M">
+	<input type="hidden" name="acct_type" 			value="">
+	
+	<!--일반신용카드------------------------------------------------------>
+	<input type=hidden name="expdt"					value="">
+	<input type=hidden name="email"					value="">
+	<input type=hidden name="phoneno"				value="">
+	<input type=hidden name="interest"				value="1">
+	<input type=hidden name="interesttype"			value="NONE">
+	<input type=hidden name="ordernumber"			value="">
+	<input type=hidden name="ordername"				value="">
+	<input type=hidden name="idnum"					value="">
+	<input type=hidden name="goodname"				value="">
+	<input type=hidden name="amount"				value="">
+	<input type=hidden name="currencytype"			value="WON">
+	
+	<input type=hidden name="cardno"				value="">
+	<!--Visa3d---------------------------------------------------------------->
+	<input type="hidden" name="xid"					value="">
+	<input type="hidden" name="eci"					value="">
+	<input type="hidden" name="cavv"				value="">
+	<!--Visa3d---------------------------------------------------------------->
+	
+	<!--ISP------------------------------------------------------------>
+	<input type=hidden name=KVP_PGID 				value="A0029">			<!-- PG -->
+	<input type=hidden name=KVP_SESSIONKEY 			value="">  	    		<!-- 세션키  --> 
+	<input type=hidden name=KVP_ENCDATA 			value="">     			<!-- 암호된데이터 -->
+	<input type=hidden name=KVP_CURRENCY 			value="WON"> 			<!-- 지불 화폐 단위 (WON/USD) : 한화 - WON, 미화 - USD-->
+	<input type=hidden name=KVP_NOINT 				value="">       		<!-- 무이자구분(1:무이자,0:일반) -->
+	<input type=hidden name=KVP_QUOTA 				value="">       		<!-- 할부 -->
+	<input type=hidden name=KVP_CARDCODE 			value="">    			<!-- 카드코드 -->
+	<input type=hidden name=KVP_CONAME 				value="">      			<!-- 카드명 -->
+	<input type=hidden name=KVP_RESERVED1			value="">   			<!-- 예비1 -->
+	<input type=hidden name=KVP_RESERVED2			value="">   			<!-- 예비2 -->
+	<input type=hidden name=KVP_RESERVED3			value="">   			<!-- 예비3 -->
+	<input type=hidden name=KVP_IMGURL 				value="">
+	<input type=hidden name=KVP_QUOTA_INF 			value="0:2:3:4:5:6:7:8:9:10:11:12">			<!--할부값-->
+	<input type=hidden name=KVP_GOODNAME 			value="배송비">				<!--상품명-->
+	<input type=hidden name=KVP_PRICE 				value="">				<!--금액-->
+	<input type=hidden name=KVP_NOINT_INF 			value="NONE">			<!--일반, 무이자-->
+	<!--ISP------------------------------------------------------------>
+	
+	<!-- 계좌이체 -->
+	<input type="hidden" 																name="ordererEmailAddress" 			value="LECSTEST@lotte.com" />
+	<input type="hidden" id="creditTransferCellSectionNo"					name="transfer_cellSectionNo" 					value="552" />
+	<input type="hidden" id="creditTransferCellTelephoneExchangeNo"	name="cellTelephoneExchangeNo" 				value="4000" />
+	<input type="hidden" id="creditTransferCellEndNo"							name="transfer_cellEndNo" 						value="5594" />
+	<input type="hidden" id="creditTransferPaymentAmount" 				name="creditTransferPayment.paymentAmount" 	value="0"/>
+	<input type="hidden" id="creditTransferPaymentTradeNo" 				name="creditTransferPayment.tradeNo" 				value=""/>
+	<input type="hidden" id="creditTransferPaymentTradeDurationTime"name="creditTransferPayment.tradeDurationTime" value=""/>
+	<input type="hidden" id="creditTransferPaymentConferNo" 				name="creditTransferPayment.conferNo" 			value=""/>
+	<input type="hidden" id="creditTransferPaymentSelectbank" 			name="creditTransferPayment.selectbank" 			value="" />
+	<input type="hidden" id="creditTransferPaymentStoreId" 				name="creditTransferPayment.storeid" 				value="2999199996"/>
+	<input type="hidden" id="creditTransferPaymentEmail" 					name="creditTransferPayment.email"					value="" />
+	<input type="hidden" id="creditTransferPaymentPhoneno" 				name="creditTransferPayment.phoneno"				value="" />
+	<input type="hidden" 																name="creditTransferPayment.interest"				value="1" />
+	<input type="hidden" 																name="creditTransferPayment.interesttype"			value="1" />
+	<input type="hidden" id="creditTransferPaymentOrdernumber" 		name="creditTransferPayment.ordernumber"		value="" />
+	<input type="hidden" id="creditTransferPaymentOrdername" 			name="creditTransferPayment.ordername"			value="" />
+	<input type="hidden" id="creditTransferPaymentIdnum" 					name="creditTransferPayment.idnum"					value="" />
+	<input type="hidden" id="creditTransferPaymentGoodname" 			name="creditTransferPayment.goodname"			value="" />
+	<input type="hidden" id="creditTransferPaymentInjanm" 				name="creditTransferPayment.injanm"					value="" />
+	<input type="hidden" id="creditTransferPaymentTrno" 					name="creditTransferPayment.trno"					value="" />	<!--  거래 번호	-->
+	<input type="hidden" id="creditTransferPaymentBanktrno" 				name="creditTransferPayment.banktrno"				value="" />	<!--	중복방지 일렬번호	-->
+	<input type="hidden" 																name="creditTransferPayment.currencytype"		value="WON" />
+	<!-- 계좌이체 -->
+
+	<!-- 금결원기본정보 -->
+	<input type="hidden" 																name="hd_pre_msg_type"	value="EFT"				/><!-- 전자 지갑의 결제 유형을 설정한다. EFT로 고정 -->
+	<input type="hidden" 																name="hd_msg_code"		value="0200"				/><!-- 결제 요청 페이지에서는 0200 으로 고정 -->
+	<input type="hidden" 																name="hd_msg_type"		value="EFT"				/><!-- 계좌이체는 EFT로 입력 -->
+	<input type="hidden" id="creditTransferPaymentHd_ep_type"			name="hd_ep_type"			value="SECUCERT"		/><!-- 계좌이체는 SECUCERT -->
+	<input type="hidden" id="creditTransferPaymentHd_pi"					name="hd_pi"					value=""						/><!-- 공백으로 고정 -->
+	<input type="hidden" 																name="hd_approve_no"		value="20000066"						/><!-- 업체의 승인 번호 : 금융결제원으로부터 부여받은 승인번호 8 자리를 기입한다.  -->
+	<input type="hidden" id="creditTransferPaymentHd_serial_no"			name="hd_serial_no"			value=""						/><!-- 결제 요청 전문의 대한 일련번호 7자리 : 이 페이지가 호출될 경우마다 새로운 번호를 기입한다. 중복거래를 방지 하기위함 -->
+	<input type="hidden" id="creditTransferPaymentHd_firm_name" 		name="hd_firm_name"		value=""						/><!-- 전자지갑에 표시될 기관명을 세팅한다. -->
+	<input type="hidden" id="creditTransferPaymentTx_amount" 			name="tx_amount"			value=""						/><!-- 실제로 결제할 금액을 기입한다. -->
+	<input type="hidden" id="creditTransferPaymentTx_user_define" 		name="tx_user_define"		value=""						/><!-- 예비 필드 80바이트(통장인자용업체명약칭^사업자등록번호^업체명^대표전화번호) -->
+	<input type="hidden" 																name="hd_timeout_yn"		value="Y"					/><!-- 전자지갑 타임아웃 설정: 거래 없이 일정시간 지나면 종료되도록 하는 옵션임 -->
+	<input type="hidden" 																name="hd_timeout"			value="300000"						/><!-- 전자지갑 타임아웃 시간 설정: 단위는 ms임(디폴트 300000(5분)) -->
+	<input type="hidden" id="creditTransferPaymentTx_email_addr"		name="tx_email_addr"		value=""						/><!-- 결제내역이 전송될 이메일주소 : DB에서 고객의 이메일주소를 불러와서 쓸 경우에만 입력, 기본적으로는 사용자가 전자지갑에서 입력하도록 되어있음 --> 
+	<input type="hidden" 																name="tx_receipt_acnt"   value="10291000359405"/>
+	<input type="hidden" 																name="hd_input_option"	value="22"					/><!-- 입력옵션 : 결제정보 입력 시 화면에 표시되는 방법에 대한 옵션  -->
+	<input type="hidden" 																name="hd_ep_option"		value="222"				/><!-- 출력옵션 : 결제결과가 표시되는 방법에 대한 옵션  -->
+	
+	<input type=hidden name=lastidnum value="">
+	<input type=hidden name=passwd value="">
+			
+	<input type="hidden" id="noint_month" name="noint_month" value="" />
+	<input type="hidden" id="int_month" name="int_month" value="" />
+	
+	<!-- 신용카드 결제 -->
+	<input type="hidden" id="creditCardPaymentAmount" name="creditCardPayment.paymentAmount" value="0"/>
+	<input type="hidden" id="creditCardPaymentConferResultCode" name="creditCardPayment.paymentConferResultCode" value=""/>
+	<input type="hidden" id="creditCardPaymentTradeNo" name="creditCardPayment.tradeNo" value=""/>
+	<input type="hidden" id="creditCardPaymentTradeDurationTime" name="creditCardPayment.tradeDurationTime" value=""/>
+	<input type="hidden" id="creditCardPaymentCardNo" name="creditCardPayment.cardNo" value=""/>
+	<input type="hidden" id="creditCardPaymentCardAvailableTermYearMonth" name="creditCardPayment.cardAvailableTermYearMonth" value=""/>
+	<input type="hidden" id="creditCardPaymentCardIssueCompanyCode" name="creditCardPayment.cardIssueCompanyCode" value=""/>
+	<input type="hidden" id="creditCardPaymentInstallmentMonthCount" name="creditCardPayment.installmentMonthCount" value=""/>
+	<input type="hidden" id="creditCardPaymentCardPointUseYn" name="creditCardPayment.cardPointUseYn" value=""/>
+	<input type="hidden" id="creditCardPaymentMersNo" name="creditCardPayment.mersNo" value=""/>
+	<input type="hidden" id="creditCardPaymentConferNo" name="creditCardPayment.conferNo" value=""/>
+	<input type="hidden" id="creditCardPaymentConferResultCd" name="creditCardPayment.conferResultCd" value=""/>
+	<input type="hidden" id="creditCardPaymentAcquirerCode" name="creditCardPayment.acquirerCode" value=""/>
+	<input type="hidden" id="creditCardPaymentNoInterestInstallmentYn" name="creditCardPayment.noInterestInstallmentYn" value=""/>
+	<input type="hidden" id="creditCardPaymentCavv" name="creditCardPayment.cavv" value=""/>
+	<input type="hidden" id="creditCardPaymentXid" name="creditCardPayment.xid" value=""/>
+	<input type="hidden" id="creditCardPaymentEci" name="creditCardPayment.eci" value=""/>
+	<input type="hidden" id="creditCardPaymentCardno" name="creditCardPayment.cardno" value=""/>
+	<input type="hidden" id="creditCardPaymentOnlineSaveApplyYn" name="creditCardPayment.onlineSaveApplyYn" value=""/><!-- 안심클릭 return.jsp에서 넘어오는 parameter hsamt : 세이브 결제여부  -->
+	<input type="hidden" id="creditCardPaymentAuthty" name="creditCardPayment.authty" value=""/>
+	<input type="hidden" id="creditCardPaymentCertitype" name="creditCardPayment.certitype" value=""/>
+	<input type="hidden" id="creditCardPaymentInstallment" name="creditCardPayment.installment" value=""/>
+	<input type="hidden" id="creditCardPaymentInterest" name="creditCardPayment.interest" value=""/>
+	<input type="hidden" id="creditCardPaymentExpdt" name="creditCardPayment.expdt" value="4912"/>
+	<input type="hidden" id="creditCardPaymentStoreId" name="creditCardPayment.storeid" value="2999199999"/>
+	
+	<input type="hidden" id="creditCardPaymentKVP_NOINT" name="creditCardPayment.KVP_NOINT" value=""/>
+	<input type="hidden" id="creditCardPaymentKVP_QUOTA" name="creditCardPayment.KVP_QUOTA" value=""/>
+	<input type="hidden" id="creditCardPaymentKVP_PGID" name="creditCardPayment.KVP_PGID" value="A0029"/>
+	<input type="hidden" id="creditCardPaymentKVP_CARDCODE" name="creditCardPayment.KVP_CARDCODE" value=""/>
+	<input type="hidden" id="creditCardPaymentKVP_SESSIONKEY" name="creditCardPayment.KVP_SESSIONKEY" value=""/>
+	<input type="hidden" id="creditCardPaymentKVP_ENCDATA" name="creditCardPayment.KVP_ENCDATA" value=""/>
+
+	<!-- 무통장 -->
+	<input type="hidden" id="withoutBankbookPaymentAmount" name="withoutBankbookPayment.paymentAmount" value="0"/>
+	<input type="hidden" id="withoutBankbookBankCode" name="withoutBankbookPayment.bankCode" value=""/>
+	<input type="hidden" id="withoutBankbookOwnnerOfAccountName" name="withoutBankbookPayment.ownnerOfAccountName" value=""/>
+	
+	<!-- 롯데포인트 -->
+	<input type="hidden" id="lottePointPaymenttAmount" name="lottePointPayment.paymentAmount" value="0"/>
+	
+		
+	<input type="hidden" 	id="cellPhonePaymentAmount" 	name="cellPhonePayment.paymentAmount" 	value="0"/>
+	
+	<input type="hidden"    	id="mc_Mode"  	       	name="cellPhonePayment.mc_Mode"  	        value-"" />
+	<input type="hidden" 		id="mc_Phoneid"        	name="cellPhonePayment.mc_Phoneid"     		value-"" />
+	<input type="hidden"    	id="mc_Svcid"          	name="cellPhonePayment.mc_Svcid"        	value-"" />
+	<input type="hidden" 		id="mc_Mrchid"         	name="cellPhonePayment.mc_Mrchid"      		value-"" />
+	<input type="hidden" 		id="mc_Tradeid"        	name="cellPhonePayment.mc_Tradeid"     		value-"" />
+	<input type="hidden" 		id="mc_Prdtnm"         	name="cellPhonePayment.mc_Prdtnm"      		value-"" />
+	<input type="hidden"    	id="mc_Prdtprice"      	name="cellPhonePayment.mc_Prdtprice"    	value-"" />
+	<input type="hidden" 		id="mc_Mobilid"        	name="cellPhonePayment.mc_Mobilid"     		value-"" />
+	<input type="hidden" 		id="mc_Userid"         	name="cellPhonePayment.mc_Userid"      		value-"" />
+	<input type="hidden" 		id="mc_Userip"         	name="cellPhonePayment.mc_Userip"      		value-"" />
+	<input type="hidden" 		id="mc_MSTR"           	name="cellPhonePayment.mc_MSTR"        		value-"" />
+	<input type="hidden"    	id="mc_Email"          	name="cellPhonePayment.mc_Email"        	value-"" />
+	<input type="hidden"    	id="mc_Emailflag"      	name="cellPhonePayment.mc_Emailflag"    	value-"" />
+	<input type="hidden"    	id="mc_Recordkey"      	name="cellPhonePayment.mc_Recordkey"    	value-"" />
+	<input type="hidden" 		id="mc_ReqOpt"         	name="cellPhonePayment.mc_ReqOpt"      		value-"" />
+	<input type="hidden" 		id="mc_Prdtcd"         	name="cellPhonePayment.mc_Prdtcd"      		value-"" />
+	<input type="hidden" 		id="mc_Item"           	name="cellPhonePayment.mc_Item"        		value-"" />
+	<input type="hidden" 		id="mc_Cpcd"           	name="cellPhonePayment.mc_Cpcd"        		value-"" />
+	<input type="hidden" 		id="mc_Sellernm"       	name="cellPhonePayment.mc_Sellernm"    		value-"" />
+	<input type="hidden"    	id="mc_Sellertel"      	name="cellPhonePayment.mc_Sellertel"    	value-"" />
+	<input type="hidden" 		id="mc_Commid"         	name="cellPhonePayment.mc_Commid"      		value-"" />
+	<input type="hidden" 		id="mc_No"             	name="cellPhonePayment.mc_No"          		value-"" />
+	<input type="hidden" 		id="mc_Socialno"       	name="cellPhonePayment.mc_Socialno"    		value-"" />
+	
+	<!-- 결제시 필요한 Param -->		
+	</form>
+	</div>
+	<div id="popFooter"> 
+		<img src="http://lecs.nike.co.kr/NKS1/image/web/pre/category/pop_copy.gif" alt="&copy; nike, all rights reserved" /> 
+	</div> 
+	
+	
+	
+	
+<!------------------------------------ ILK Modification --------------------------------------------->
+<!--
+	중요!!!
+	IFrame의 src를 내용이 아무것도 없는 dummy.jsp로 주는 것은 https 즉 SSL로 결제가 이루어지는 경우
+	현재 페이지 로드시 보안관련 메시지가 뜨는 것을 방지하기 위함이다.
+	이 부분 삭제시 "보안되지 않는 항목도 표시하시겠습니까?" 라는 메시지가 뜨므로 주의.
+-->
+
+<!--Visa3d인증에 사용될 인자들-->
+<IFRAME id=ILKFRAME name=ILKFRAME style="display:none" src="https://kspay.ksnet.to/totmpi/dummy.jsp"></IFRAME>
+<div style="display:none"> 
+<form name="Visa3d" action="https://kspay.ksnet.to/totmpi/veri_host.jsp"  target="ILKFRAME" method=post>
+   <INPUT type="hidden"		name="pan"				value=""						size="19" 	maxlength="19"	>
+   <INPUT type="hidden"		name="expiry"				value=""						size="6"  	maxlength="6"	>
+   <INPUT type="hidden"		name=purchase_amount	value=""						size="20" 	maxlength="20"	>
+   <INPUT type="hidden"		name=amount				value=""						size="20" 	maxlength="20"	>
+   <INPUT type="hidden"		name=description		value=""						size="80" 	maxlength="80"	>
+   <INPUT type="hidden"		name=currency			value=""						size="3"  	maxlength="3"	>
+   <INPUT type="hidden"		name=recur_frequency	value=""						size="4"  	maxlength="4"	>
+   <INPUT type="hidden"		name=recur_expiry		value=""						size="8"  	maxlength="8"	>
+   <INPUT type="hidden"		name=installments		value=""						size="4"  	maxlength="4"	>
+   <INPUT type="hidden"		name=device_category	value=""						size="20" 	maxlength="20"	>
+   
+		
+   		
+   			<INPUT type="hidden"		name=name				value="%B3%AA%C0%CC%C5%B0%B4%E5%C4%C4"		size="20"	>	<!--회사명을 영어로 넣어주세요(최대20byte)-->
+   		
+	
+   <INPUT type="hidden"		name=url				value="http://www.store.com"						size="20"					>	<!-- 회사 도메인을 http://를 포함해서 넣어주세요-->
+   <INPUT type="hidden"		name=country			value="410"						size="20"					>
+    <label class="hidden" for="dummypassword">비밀번호</label> <INPUT type="password"   name=dummy	id="dummypassword"			value=""													>
+   <INPUT type="hidden"		name=returnUrl			value="http://lecs.nike.co.kr:8443/order/getCreditCardReturnPage.lecs"													>	<!--Visa3d인증후 결과값을받을 페이지-->
+   <input type="hidden"		name=cardcode			value=""													>
+   <input type="hidden"		name=merInfo			value="2999199999"													>
+   <input type="hidden"		name=bizNo				value="2208809068"													>
+   <input type="hidden"		name=instType			value=""													>
+</form>
+</div>
+<!--계좌이체에 사용될 인자들-->
+<div style="display:none"> 
+<form name=BankFrm method=post action="">
+	<!--기본-------------------------------------------------------------->
+	<input type="hidden" name="storeid"    			value="2999199996">
+	<input type="hidden" name="acct_type" 			value="5">
+	<input type="hidden" name="email"					value="">
+	<input type="hidden" name="phoneno"				value="">
+	<input type="hidden" name="ordernumber"		value="">
+	<input type="hidden" name="ordername"  		value="빈정샘" />
+	<input type="hidden" name="idnum"				value="">
+	<input type="hidden" name="goodname"   		value="배송비" />
+	<input type="hidden" name="amount"				value="">
+	<input type="hidden" name="injanm"				value="">
+	<input type="hidden" name="trno"					value="">
+	<input type="hidden" name="banktrno"			value="">
+	
+	
+		
+   		
+   			<input type="hidden"		name="print_msg"				value="나이키닷컴"		size="20"/><!--회사명을 영어로 넣어주세요(최대20byte)-->
+   		
+	
+</form>
+<form name="tempBankForm" method="post" action="">
+	<!-- 금결원기본정보 -->
+	<input type="hidden" 																name="hd_pre_msg_type"	value="EFT"				/><!-- 전자 지갑의 결제 유형을 설정한다. EFT로 고정 -->
+	<input type="hidden" 																name="hd_msg_code"		value="0200"				/><!-- 결제 요청 페이지에서는 0200 으로 고정 -->
+	<input type="hidden" 																name="hd_msg_type"		value="EFT"				/><!-- 계좌이체는 EFT로 입력 -->
+	<input type="hidden" id="tempBankFormHd_ep_type"						name="hd_ep_type"			value="SECUCERT"		/><!-- 계좌이체는 SECUCERT -->
+	<input type="hidden" id="tempBankFormHd_pi"								name="hd_pi"					value=""						/><!-- 공백으로 고정 -->
+	<input type="hidden" 																name="hd_approve_no"		value="20000066"						/><!-- 업체의 승인 번호 : 금융결제원으로부터 부여받은 승인번호 8 자리를 기입한다.  -->
+	<input type="hidden" id="tempBankFormHd_serial_no"					name="hd_serial_no"			value=""						/><!-- 결제 요청 전문의 대한 일련번호 7자리 : 이 페이지가 호출될 경우마다 새로운 번호를 기입한다. 중복거래를 방지 하기위함 -->
+	<input type="hidden" id="tempBankFormHd_firm_name" 				name="hd_firm_name"		value=""						/><!-- 전자지갑에 표시될 기관명을 세팅한다. -->
+	<input type="hidden" id="tempBankFormTx_amount" 						name="tx_amount"			value=""						/><!-- 실제로 결제할 금액을 기입한다. -->
+	<input type="hidden" id="tempBankFormTx_user_define" 				name="tx_user_define"		value=""						/><!-- 예비 필드 80바이트(통장인자용업체명약칭^사업자등록번호^업체명^대표전화번호) -->
+	<input type="hidden" 																name="hd_timeout_yn"		value="Y"					/><!-- 전자지갑 타임아웃 설정: 거래 없이 일정시간 지나면 종료되도록 하는 옵션임 -->
+	<input type="hidden" 																name="hd_timeout"			value="300000"						/><!-- 전자지갑 타임아웃 시간 설정: 단위는 ms임(디폴트 300000(5분)) -->
+	<input type="hidden" id="tempBankFormTx_email_addr"					name="tx_email_addr"		value=""						/><!-- 결제내역이 전송될 이메일주소 : DB에서 고객의 이메일주소를 불러와서 쓸 경우에만 입력, 기본적으로는 사용자가 전자지갑에서 입력하도록 되어있음 --> 
+	<input type="hidden" 																name="tx_receipt_acnt"   value="10291000359405"/>
+	<input type="hidden" 																name="hd_input_option"	value="22"					/><!-- 입력옵션 : 결제정보 입력 시 화면에 표시되는 방법에 대한 옵션  -->
+	<input type="hidden" 																name="hd_ep_option"		value="222"				/><!-- 출력옵션 : 결제결과가 표시되는 방법에 대한 옵션  -->
+</form>
+</div>
+
+<input type="hidden" id="totPayAmount" value=""/>	
+</div>
+
+<form id="diliveryRegionForm" name="diliveryRegionForm">
+	<input type="hidden" id="postNo" name="postNo" />
+	
+		<input type="hidden" id="goodsNo_1" name="goodsNo" value="NK31068855"/>
+	
+</form>
+
+<form name="orderCompleteForm" method="post">
+	<input type="hidden" name="orderNo" value=""/>
+</form>
+
+
+
+<form name="payForm" id="payForm" method="post" accept-charset="euc-kr">
+	
+	<input type="hidden" 	name="CASH_GB" 			id="CASH_GB" 			value="MC" />
+	<input type="hidden" 	name="MC_SVCID" 		id="MC_SVCID" 			value="140306060001" />
+	<input type="hidden" 	name="Prdtprice" 		id="Prdtprice" 			value="" />
+	<input type="hidden" 	name="PAY_MODE" 		id="PAY_MODE" 			value="00" />
+	<input type="hidden" 	name="Okurl" 			id="Okurl" 				value="http://lecs.nike.co.kr:8443/order/cellPhonePaymentReturnPage.lecs" />
+	<input type="hidden" 	name="Prdtnm" 			id="Prdtnm" 			value="배송비" />
+	<input type="hidden" 	name="Siteurl" 			id="Siteurl" 			value="http://www.lotte.com" />
+	<input type="hidden" 	name="Tradeid" 			id="Tradeid" 			value="" />
+	<input type="hidden" 	name="LOGO_YN" 			id="LOGO_YN" 			value="N" />
+	
+	
+	<input type="hidden" 	name="MC_AUTHPAY" 		id="MC_AUTHPAY" 		value="Y" />
+	<input type="hidden" 	name="MC_AUTOPAY" 		id="MC_AUTOPAY" 		value="N" />
+	<input type="hidden" 	name="MC_PARTPAY" 		id="MC_PARTPAY" 		value="N" />
+	<input type="hidden" 	name="MC_No" 			id="MC_No" 				value="" />
+	<input type="hidden" 	name="MC_FIXNO" 		id="MC_FIXNO" 			value="N" />
+	<input type="hidden" 	name="MC_DEFAULTCOMMID" id="MC_DEFAULTCOMMID" 	value="" />
+	<input type="hidden" 	name="Payeremail" 		id="Payeremail" 		value="" />
+	<input type="hidden" 	name="Userid" 			id="Userid" 			value="" />
+	<input type="hidden" 	name="Item" 			id="Item" 				value="" />
+	<input type="hidden" 	name="Prdtcd" 			id="Prdtcd" 			value="" />
+	<input type="hidden" 	name="MC_Cpcode" 		id="MC_Cpcode" 			value="" />
+	<input type="hidden" 	name="Notiemail" 		id="Notiemail" 			value="" />
+	<input type="hidden" 	name="Notiurl" 			id="Notiurl" 			value="" />
+	<input type="hidden" 	name="Closeurl" 		id="Closeurl" 			value="" />
+	<input type="hidden" 	name="Failurl" 			id="Failurl" 			value="" />
+	<input type="hidden" 	name="MSTR" 			id="MSTR" 				value="" />
+
+	
+	<input type="hidden" 	name="CALL_TYPE" 		id="CALL_TYPE" 			value="P" />
+	
+	
+	<input type="hidden" 	name="Cryptyn" 			id="Cryptyn" 			value="Y" />
+	<input type="hidden" 	name="Cryptstring" 		id="Cryptstring" 		value="" />
+
+	<input type="hidden" 	name="orgPrdtprice" 	id="orgPrdtprice" 		value="" />
+	<input type="hidden" 	name="orgOkurl" 		id="orgOkurl" 			value="http://lecs.nike.co.kr:8443/order/cellPhonePaymentReturnPage.lecs" />
+</form>
+
+
+<div id="emailDiv" style="position:absolute;z-index:500;display:none;border:0px;">
+<iframe title="email_Iframe" id="email_Iframe" name="email_Iframe" style="border:0px;width:590px;height:730px;" src="about:blank" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</div> 
+<form id="emailForm" action="http://lecs.nike.co.kr:8443/voc/viewNikeOneononeIframe.lecs" method="POST" target="email_Iframe"></form>
+
+<!-- phase2 옵션변경레이어 추가 -->
+	<div class="g_option_change">
+		<h2>컬러/사이즈 변경</h2>
+		<div class="prod_area">
+			<span class="img">
+				<a href="#"><img src="../image/web/global/tmp_180.jpg" alt=""></a>
+				<a href="#" class="lnk">상품 상세보기</a>
+			</span>
+			<p class="t"><a href="#">나이키 에어맥스</a></p>
+			<p class="d">Color : 블랙/화이트/차콜</p>
+			<p class="d">사은품 ***증정</p>
+			<p class="price"><strong>90,000</strong> 원</p>
+
+			<div class="global_sect_menu small">
+				<a href="#" class="global_sect_field"><span class="">사이즈 : 선택하세요</span></a>
+				<ul class="global_sect_menu_list" style="display: none;">
+				<li class="active"><a href="#none">240</a></li>
+				<li><a href="#none">245</a></li>
+				<li><a href="#none">250</a></li>
+				<li><a href="#none">255</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="opt_slide">
+			<a href="#" class="bt-prev"><span class="hidden">이전</span></a>
+			<div class="slide_con">
+				<ul style="width: 630px; margin-left: 0px;">
+				<li><a href="#"><img src="../image/web/global/tmp_80.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../image/web/global/tmp_80.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../image/web/global/tmp_80.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../image/web/global/tmp_80.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../image/web/global/tmp_80.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../image/web/global/tmp_80.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../image/web/global/tmp_80.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<a href="#" class="bt-next"><span class="hidden">다음</span></a>
+		</div>
+
+		<div class="btn_area">
+			<a href="#" class="g_btn_type3">변경</a>
+			<a href="#" class="g_btn_type1" onclick="g_layer_close('g_option_change');return false;">취소</a>
+		</div>
+
+		<a href="#" class="btn_close" onclick="g_layer_close('g_option_change');return false;"><img src="../image/web/global/btn_x.gif" alt="닫기"></a>
+	</div>
+	<span class="bg_cover"></span>
+
+	<script type="text/javascript">
+	function oc_layer_close(){
+		$('.bg_cover').hide();
+		$('.g_option_change').hide();
+	}
+
+	// slide
+	var opt_slide = {
+		param : {
+			curr : 0,
+			slide_len : $('.opt_slide').find('ul li').length
+		},
+		init : function(){
+			opt_slide.param.curr = 0;
+			// alert(opt_slide.param.slide_len)
+			// opt_slide.pos();
+			$('.opt_slide').find('ul').css({width : 90*opt_slide.param.slide_len, marginLeft : 0});
+			$('.bt-prev').click(function(){
+				opt_slide.prev();
+				return false;
+			});
+			$('.bt-next').click(function(){
+				opt_slide.next();
+				return false;
+			});
+		},
+		pos : function(){
+			// opt_slide.param.curr
+			$('.opt_slide').find('ul').stop(true, false).animate({marginLeft : - opt_slide.param.curr*90}, 350);
+		},
+		prev : function(){
+			if(opt_slide.param.curr === 0){
+				alert('처음입니다.');
+			} else {
+				opt_slide.param.curr--
+				opt_slide.pos();
+			}
+		},
+		next : function(){
+			console.log('click');
+			if(opt_slide.param.slide_len - opt_slide.param.curr < 6){
+				alert('마지막입니다.');
+			} else {
+				opt_slide.param.curr++
+				opt_slide.pos();
+			}
+		}
+	}
+	opt_slide.init();
+	</script>
+<!-- phase2 옵션변경레이어 추가 -->
+</body>
+<!-- from: lecs20stg1 -->
+</html>

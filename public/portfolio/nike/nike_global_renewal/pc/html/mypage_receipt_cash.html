@@ -1,0 +1,453 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie ie6" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://ogp.me/ns/fb#" ><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ko" xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/util.js"></script>
+<script type="text/javascript">
+
+
+	function receiptProcess(){
+		var form = document.getElementById('KSPayAuthForm');
+		form.action = '/mypage/createReceiptForCash.lecs';
+	
+		if(fn_cachRcptInptChk()) {	// 현금영수증 관련
+			return;
+		}
+		fn_setCachRcptInptVal();	//현금영수증 발급신청관련 입력값 저장필드에 셋팅
+	
+		IframeSubmitter.submit(form, 'handleReceiptProcess', 'submitFrame');
+	}
+	
+	function handleReceiptProcess(result){
+		if (result.success) {
+			parent.location.reload();
+		} else if (result.message) {
+			alert(result.message);
+			//2015.12.21 추가
+			closePopup();
+		} else {
+			alert(result.message);
+		}
+	}
+	
+	//현금 영수증 라디오 박스 이벤트
+	function fn_cachRcptIssuGb() {
+		with(document.KSPayAuthForm) {
+			var selVal = getRadiosValue(cash);
+			if(selVal == "") {
+				cr_issu_mean_sct_cd.disabled = true;
+				cr_issu_mean_sct_cd_bman.disabled = true;
+				var v_cr_issu_mean_sct_cd = cr_issu_mean_sct_cd.value;
+				cr_issu_mean_sct_cd.value = "";
+				cr_issu_mean_sct_cd_bman.value = "";
+	
+				document.getElementById("span_cr_issu_0").style.display = "none";
+				document.getElementById("span_cr_issu_1").style.display = "none";
+				document.getElementById("span_cr_issu_2").style.display = "none";
+				document.getElementById("span_cr_issu_3").style.display = "none";
+				document.getElementById("span_cr_issu_4").style.display = "none";
+	
+				fn_initCrIssuMeanNo();	// 입력란 초기화
+			} else {
+				if(selVal == "0") {	// 개인
+					document.getElementById("div_cr_issu_mean_sct_cd_bman").style.display = "none";
+					document.getElementById("div_cr_issu_mean_sct_cd").style.display = "inline";
+					document.KSPayAuthForm.cr_issu_mean_sct_cd.selectedIndex = 1;
+				} else if(selVal == "1") {	// 사업자
+					document.getElementById("div_cr_issu_mean_sct_cd").style.display = "none";
+					document.getElementById("div_cr_issu_mean_sct_cd_bman").style.display = "inline";
+					document.KSPayAuthForm.cr_issu_mean_sct_cd_bman.selectedIndex = 1;
+				}
+	
+				cr_issu_mean_sct_cd.disabled = false;
+				cr_issu_mean_sct_cd_bman.disabled = false;
+				fn_cashRcptSel();	// 입력란 셋팅
+			}
+		}
+	}
+	
+	//현금영수증 발급수단별 입력필드 셋팅
+	function fn_cashRcptSel() {
+		var f = document.KSPayAuthForm;
+		with(f) {
+			document.getElementById("span_cr_issu_0").style.display = "none";
+			document.getElementById("span_cr_issu_1").style.display = "none";
+			document.getElementById("span_cr_issu_2").style.display = "none";
+			document.getElementById("span_cr_issu_3").style.display = "none";
+			document.getElementById("span_cr_issu_4").style.display = "none";
+	
+			fn_initCrIssuMeanNo();	// 입력란 초기화
+	
+			var selVal = getRadiosValue(f.cash);
+			var sel_mean_sct_cd = "";
+			if(selVal == "0") {	// 개인
+				sel_mean_sct_cd = cr_issu_mean_sct_cd.value;
+			} else if(selVal == "1") {	// 사업자
+				sel_mean_sct_cd = cr_issu_mean_sct_cd_bman.value;
+			}
+	
+			if(sel_mean_sct_cd != "") {
+				document.getElementById("span_cr_issu_" + sel_mean_sct_cd).style.display = "inline";
+			}
+		}
+	}
+	
+	//현금영수증 발급 신청번호 초기화
+	function fn_initCrIssuMeanNo() {
+		with(document.KSPayAuthForm) {
+			cr_issu_mean_no_ssn1.value = "";
+			cr_issu_mean_no_ssn2.value = "";
+	
+			cr_issu_mean_no_bman1.value = "";
+			cr_issu_mean_no_bman2.value = "";
+			cr_issu_mean_no_bman3.value = "";
+	
+			cr_issu_mean_no_phone1.value = "";
+			cr_issu_mean_no_phone2.value = "";
+			cr_issu_mean_no_phone3.value = "";
+	
+			cr_issu_mean_no_credit_crd1.value = "";
+			cr_issu_mean_no_credit_crd2.value = "";
+			cr_issu_mean_no_credit_crd3.value = "";
+			cr_issu_mean_no_credit_crd4.value = "";
+	
+			cr_issu_mean_no_rcpt_crd1.value = "";
+			cr_issu_mean_no_rcpt_crd2.value = "";
+			cr_issu_mean_no_rcpt_crd3.value = "";
+			cr_issu_mean_no_rcpt_crd4.value = "";
+	
+			creditRecordedIssueMeansNo.value = "";
+		}
+	}
+	
+	//현금영수증 발급신청관련 입력값 저장필드에 셋팅
+	function fn_setCachRcptInptVal() {
+		with(document.KSPayAuthForm) {
+			var selGb = getRadiosValue(cash);
+			if(selGb == "") {	// 현금영수증 신청안함
+				return;
+			}
+	
+			var v_cr_issu_mean_sct_cd = "";
+			if(selGb == "0") {	// 개인
+				v_cr_issu_mean_sct_cd = cr_issu_mean_sct_cd.value;
+				creditRecordedUseSectionCode.value = selGb;
+			} else if(selGb == "1") {	// 사업자
+				v_cr_issu_mean_sct_cd = cr_issu_mean_sct_cd_bman.value;
+				creditRecordedUseSectionCode.value = selGb;
+			}
+	
+			if(v_cr_issu_mean_sct_cd == "") {
+				return;
+			}
+	
+			if(v_cr_issu_mean_sct_cd == "0") {
+				creditRecordedIssueMeansNo.value = cr_issu_mean_no_ssn1.value + cr_issu_mean_no_ssn2.value;
+			} else if(v_cr_issu_mean_sct_cd == "1") {
+				creditRecordedIssueMeansNo.value = cr_issu_mean_no_bman1.value + cr_issu_mean_no_bman2.value + cr_issu_mean_no_bman3.value;
+			} else if(v_cr_issu_mean_sct_cd == "3") {
+				creditRecordedIssueMeansNo.value = cr_issu_mean_no_phone1.value + cr_issu_mean_no_phone2.value + cr_issu_mean_no_phone3.value;
+			} else if(v_cr_issu_mean_sct_cd == "2") {
+				creditRecordedIssueMeansNo.value = cr_issu_mean_no_credit_crd1.value + cr_issu_mean_no_credit_crd2.value + cr_issu_mean_no_credit_crd3.value + cr_issu_mean_no_credit_crd4.value;
+			} else if(v_cr_issu_mean_sct_cd == "4") {
+				creditRecordedIssueMeansNo.value = cr_issu_mean_no_rcpt_crd1.value + cr_issu_mean_no_rcpt_crd2.value + cr_issu_mean_no_rcpt_crd3.value + cr_issu_mean_no_rcpt_crd4.value;
+			}
+			creditRecordedIssueMeansSectionCode.value = v_cr_issu_mean_sct_cd;
+		}
+	}
+	
+	//현금 영수증 사용자 구분코드 클릭 이벤트
+	function chgCreditRecordedUseSectionCode(){
+	
+		//소득공제용 선택시
+		if($('#pers').prop("checked") == true){
+			$('#crdtRecdIssueMeansSecCode').prop("disabled", false);
+			$('#crdtRecdIssueMeansNo').prop("disabled", false);
+	
+		//지출증빙용 선택시
+		}else if($('#co').prop("checked") == true){
+	
+		//신청안함 선택시
+		}else if($('#not').prop("checked") == true){
+			$('#crdtRecdIssueMeansSecCode').val('1');
+			$('#crdtRecdIssueMeansNo').val('');
+			$('#crdtRecdIssueMeansSecCode').prop("disabled", true);
+			$('#crdtRecdIssueMeansNo').prop("disabled", true);
+		}
+	}
+	
+	//현금 영수증 발급신청관련 입력값 체크
+	function fn_cachRcptInptChk() {
+		with(document.KSPayAuthForm) {
+			var selVal = getRadiosValue(cash);
+			if(selVal == "") {	// 현금영수증 신청안함
+				return false;
+			}
+	
+			var v_cr_issu_mean_sct_cd = "";
+			if(selVal == "0") {	// 개인
+				v_cr_issu_mean_sct_cd = cr_issu_mean_sct_cd.value;
+	
+				if(v_cr_issu_mean_sct_cd == "") {
+					alert("현금영수증 발급수단을 입력해주세요.");
+					cr_issu_mean_sct_cd.focus();
+					return true;
+				}
+			} else if(selVal == "1") {	// 사업자
+				v_cr_issu_mean_sct_cd = cr_issu_mean_sct_cd_bman.value;
+				if(v_cr_issu_mean_sct_cd == "") {
+					alert("현금영수증 발급수단을 입력해주세요.");
+					cr_issu_mean_sct_cd_bman.focus();
+					return true;
+				}
+			}
+	
+			if(v_cr_issu_mean_sct_cd == "0") {
+				if(isNotValidPID(cr_issu_mean_no_ssn1, cr_issu_mean_no_ssn2)) {
+					return true;
+				}
+			} else if(v_cr_issu_mean_sct_cd == "1") {
+				if(isNotValidBID(cr_issu_mean_no_bman1, cr_issu_mean_no_bman2, cr_issu_mean_no_bman3)) {
+					return true;
+				}
+			} else if(v_cr_issu_mean_sct_cd == "3") {
+				if(cr_issu_mean_no_phone1.value == "") {
+					alert("핸드폰번호 앞자리를 입력해주세요.");
+					cr_issu_mean_no_phone1.focus();
+					return true;
+				}
+				if(isEmpty(cr_issu_mean_no_phone2, "핸드폰번호를 입력해주세요.")) {
+					return true;
+				}
+				if(isEmpty(cr_issu_mean_no_phone3, "핸드폰번호를 입력해주세요.")) {
+					return true;
+				}
+				if(!isNumber(cr_issu_mean_no_phone2, "핸드폰번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+				if(!isNumber(cr_issu_mean_no_phone3, "핸드폰번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+				if( cr_issu_mean_no_phone2.value.length < 3 ){
+					alert("핸드폰번호가 올바르지 않습니다.");
+					cr_issu_mean_no_phone2.value = "";
+					cr_issu_mean_no_phone2.focus();
+					return true;
+				}
+				if( cr_issu_mean_no_phone3.value.length < 4 ){
+					alert("핸드폰번호가 올바르지 않습니다.");
+					cr_issu_mean_no_phone3.value = "";
+					cr_issu_mean_no_phone3.focus();
+					return true;
+				}
+			} else if(v_cr_issu_mean_sct_cd == "2") {
+				if(isEmpty(cr_issu_mean_no_credit_crd1, "신용카드번호를 입력해주세요.")) {
+					return true;
+				}
+				if(isEmpty(cr_issu_mean_no_credit_crd2, "신용카드번호를 입력해주세요.")) {
+					return true;
+				}
+				if(isEmpty(cr_issu_mean_no_credit_crd3, "신용카드번호를 입력해주세요.")) {
+					return true;
+				}
+				if(isEmpty(cr_issu_mean_no_credit_crd4, "신용카드번호를 입력해주세요.")) {
+					return true;
+				}
+				if(!isNumber(cr_issu_mean_no_credit_crd1, "신용카드번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+				if(!isNumber(cr_issu_mean_no_credit_crd2, "신용카드번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+				if(!isNumber(cr_issu_mean_no_credit_crd3, "신용카드번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+				if(!isNumber(cr_issu_mean_no_credit_crd4, "신용카드번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+	
+			} else if(v_cr_issu_mean_sct_cd == "4") {
+				if(isEmpty(cr_issu_mean_no_rcpt_crd1, "현금영수증카드번호를 입력해주세요.")) {
+					return true;
+				}
+				if(isEmpty(cr_issu_mean_no_rcpt_crd2, "현금영수증카드번호를 입력해주세요.")) {
+					return true;
+				}
+				if(isEmpty(cr_issu_mean_no_rcpt_crd3, "현금영수증카드번호를 입력해주세요.")) {
+					return true;
+				}
+				if(isEmpty(cr_issu_mean_no_rcpt_crd4, "현금영수증카드번호를 입력해주세요.")) {
+					return true;
+				}
+	
+				if(!isNumber(cr_issu_mean_no_rcpt_crd1, "현금영수증카드번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+				if(!isNumber(cr_issu_mean_no_rcpt_crd2, "현금영수증카드번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+				if(!isNumber(cr_issu_mean_no_rcpt_crd3, "현금영수증카드번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+				if(!isNumber(cr_issu_mean_no_rcpt_crd4, "현금영수증카드번호는 숫자로만 기입해 주세요!")) {
+					return true;
+				}
+			}
+			return false;
+		}
+	}
+</script>
+<!-- renewal phase2 -->
+	<link rel="stylesheet" type="text/css" href="../css/global_renewal_phase2.css" />
+
+</head>
+
+<body>
+<form action="" method="post" name="KSPayAuthForm" id="KSPayAuthForm">
+<input type="hidden" name="creditRecordedSuggestSectionCode"/>
+<input type="hidden" name="creditRecordedApplicationSectionCode"/>
+<input type="hidden" name="creditRecordedApplicationMemberNo"/>
+<input type="hidden" name="creditRecordedUseSectionCode"/>
+<input type="hidden" name="creditRecordedIssueMeansNo"/> 
+<input type="hidden" name="creditRecordedIssueMeansSectionCode"/>
+<input type="hidden" name="orderNo" value="1603080005131NK"/>
+<input type="hidden" name="asAcceptNo" value=""/>
+
+
+
+
+<div class="layerpop mypage_receipt_cash"><!-- phase2 인스타일 삭제, 클래스 추가 -->
+
+	<!--  현금영수증 신청 pop  -->
+	<div class="alert_vew14"><!-- phase2 인스타일 삭제 -->
+		<div class="png_bg">
+			<div class="tq">
+				<div class="tq01">
+					<!-- phase2 이미지 경로 변경 -->
+					<img src="../image/web/pre/myshop/ln_tex_n01.gif"  alt="현금영수증 신청" />
+				</div>
+
+				<div class="tq03">
+					<ul>
+						<li>2007년 3월 1일부터 현금영수증 자진 발급제가 시행됨에 따라 현금결제 후 별도로 신청을 하지 않으셔도 현금영수증이 자동 발급됩니다.</li>
+						<li>
+							별도로 신청하지 않고 자동 발급된 현금영수증을 본인의 것으로 전환하고 싶으실 경우 &lt;국세청 사이트&gt;에서 신청하시면 됩니다.<br />
+							<a href="http://www.taxsave.go.kr/servlets/AAServlet?tc=tss.web.aa.ntc.cmd.RetrieveMainPageCmd" target="_blank">
+							<!-- crossbrowsing 국세청 현금영수증 사이트 바로가기 img > text 변경 -->
+							<span style="display:block;margin:5px 0;text-decoration: underline;">국세청 현금영수증 사이트 바로가기 ></span>
+							<!-- crossbrowsing 국세청 현금영수증 사이트 바로가기 img > text 변경 -->
+						</a>
+						</li>
+						<li>현금영수증을 신청하시거나 다른분의 명의로 신청하시려면 아래 정보를 입력해 주세요</li>
+						<li>정보통신망 이용촉진 및 정보보호 등에 관한 법률 개정으로 인해 2012년 8월 18일부터 주민등록번호 사용이 제한됩니다.</li>
+					</ul>
+					<div class="op">
+						<input type="radio" id="pers" name="cash" value="0" class="chk" onClick="javascript:fn_cachRcptIssuGb();" checked/> <label for="pers">소득공제용</label> &nbsp;&nbsp;
+						<input type="radio" id="co" name="cash" value="1" class="chk" onClick="javascript:fn_cachRcptIssuGb();" /><label for="co">지출증빙용(사업자)</label>
+						<div class="write-bottom">
+							<div id="div_cr_issu_mean_sct_cd" style="display:inline;" >
+								<label class="hidden" for="cr_issu_mean_sct_cd">휴대폰 통신사 선택</label>
+								<select name="cr_issu_mean_sct_cd" id="cr_issu_mean_sct_cd" onchange="fn_cashRcptSel()" title="휴대폰 통신사 선택">
+								<option value=''>선택</option><option value='3'>휴대폰번호</option>
+								</select>
+								<script type="text/javascript">
+								<!--
+								document.KSPayAuthForm.cr_issu_mean_sct_cd.selectedIndex = 1;
+								//-->
+								</script>													
+							</div>
+							<div id="div_cr_issu_mean_sct_cd_bman" style="display:none;" >
+								<label class="hidden" for="cr_issu_mean_sct_cd_bman">지출증빙용 선택</label>
+								<select name="cr_issu_mean_sct_cd_bman" id="cr_issu_mean_sct_cd_bman" onchange="fn_cashRcptSel()" >
+								<option value=''>선택</option><option value='1'>사업자번호</option>
+								</select>
+							</div>
+							<!-- phase2 input width값 28 > 45로 변경 -->
+							<span id="span_cr_issu_0" style="display:none;">
+								<label for="cr_issu_mean_no_ssn1" class="hidden">주민번호앞자리</label><input type="text" id="cr_issu_mean_no_ssn1" name="cr_issu_mean_no_ssn1" onkeyup="javascript:goNextField(cr_issu_mean_no_ssn1,cr_issu_mean_no_ssn2, 6);" maxlength="6" class="txt pdl2" title="주민번호앞자리" style="width:42px; "/> -
+								<label for="cr_issu_mean_no_ssn2" class="hidden">주민번호뒷자리</label><input type="password" id="cr_issu_mean_no_ssn2" name="cr_issu_mean_no_ssn2" maxlength="7" class="txt pdl2" title="주민번호뒷자리" style="width:70px; " />
+								</span>
+								<span id="span_cr_issu_1" style="display:none;">
+								<label for="cr_issu_mean_no_bman1" class="hidden">사업자번호앞자리</label><input type="text" id="cr_issu_mean_no_bman1"  name="cr_issu_mean_no_bman1" maxlength="3" onkeyup="javascript:goNextField(cr_issu_mean_no_bman1,cr_issu_mean_no_bman2, 3);"  class="txt pdl2" title="사업자번호앞자리" style="width:21px; "/> -
+								<label for="cr_issu_mean_no_bman2" class="hidden">사업자번호중간자리</label><input type="text" id="cr_issu_mean_no_bman2"  name="cr_issu_mean_no_bman2" maxlength="2" onkeyup="javascript:goNextField(cr_issu_mean_no_bman2,cr_issu_mean_no_bman3, 2);" class="txt pdl2" title="사업자번호중간자리" style="width:14px; " /> -
+								<label for="cr_issu_mean_no_bman3" class="hidden">사업자번호뒷자리</label><input type="text" id="cr_issu_mean_no_bman3"  name="cr_issu_mean_no_bman3" maxlength="5" class="txt pdl2" title="사업자번호뒷자리" style="width:35px; " />
+							</span>
+							<span id="span_cr_issu_3" style="display:inline;">
+								<label class="hidden" for="cr_issu_mean_no_phone1">전화번호앞자리</label> 
+								<select name="cr_issu_mean_no_phone1" id="cr_issu_mean_no_phone1" title="전화번호앞자리"  >
+								<option value=''>선택</option><option value='010'>010</option><option value='011'>011</option><option value='016'>016</option><option value='017'>017</option><option value='018'>018</option><option value='019'>019</option>
+								</select> -
+								<label for="cr_issu_mean_no_phone2" class="hidden">전화번호중간자리</label><input type="text" id="cr_issu_mean_no_phone2" name="cr_issu_mean_no_phone2" maxlength="4" onkeyup="javascript:goNextField(cr_issu_mean_no_phone2,cr_issu_mean_no_phone3, 4);" class="txt pdl2" title="전화번호중간자리" style="width:45px; " /> -
+								<label for="cr_issu_mean_no_phone3" class="hidden">전화번호뒷자리</label><input type="text" id="cr_issu_mean_no_phone3" maxlength="4" class="txt pdl2" title="전화번호뒷자리" style="width:45px; " />
+							</span>
+							<span id="span_cr_issu_2" style="display:none;">
+								<label for="cr_issu_mean_no_credit_crd1" class="hidden">신용카드번호첫째자리</label><input type="text" id="cr_issu_mean_no_credit_crd1" name="cr_issu_mean_no_credit_crd1" maxlength="4" onkeyup="javascript:goNextField(cr_issu_mean_no_credit_crd1,cr_issu_mean_no_credit_crd2, 4);" class="txt pdl2" title="신용카드번호첫째자리" style="width:45px; " />-
+								<label for="cr_issu_mean_no_credit_crd2" class="hidden">신용카드번호둘째자리</label><input type="text" id="cr_issu_mean_no_credit_crd2"  name="cr_issu_mean_no_credit_crd2" maxlength="4" onkeyup="javascript:goNextField(cr_issu_mean_no_credit_crd2,cr_issu_mean_no_credit_crd3, 4);" class="txt pdl2" title="신용카드번호둘째자리" style="width:45px; " />-
+								<label for="cr_issu_mean_no_credit_crd3" class="hidden">신용카드번호셋째자리</label><input type="text" id="cr_issu_mean_no_credit_crd3"  name="cr_issu_mean_no_credit_crd3" maxlength="4" onkeyup="javascript:goNextField(cr_issu_mean_no_credit_crd3,cr_issu_mean_no_credit_crd4, 4);" class="txt pdl2" title="신용카드번호셋째자리" style="width:45px; " />-
+								<label for="cr_issu_mean_no_credit_crd4" class="hidden">신용카드번호넷째자리</label><input type="text" id="cr_issu_mean_no_credit_crd4"  name="cr_issu_mean_no_credit_crd4" maxlength="4" class="txt pdl2" title="신용카드번호넷째자리" style="width:45px; " />
+							</span>
+							<span id="span_cr_issu_4" style="display:none;">
+								<label for="cr_issu_mean_no_rcpt_crd1" class="hidden">현금영수증카드번호첫째자리</label><input type="text" id="cr_issu_mean_no_rcpt_crd1"  name="cr_issu_mean_no_rcpt_crd1" maxlength="4" onkeyup="javascript:goNextField(cr_issu_mean_no_rcpt_crd1,cr_issu_mean_no_rcpt_crd2, 4);" class="txt pdl2" title="현금영수증카드번호첫째자리" style="width:45px; " />-
+								<label for="cr_issu_mean_no_rcpt_crd2" class="hidden">현금영수증카드번호둘째자리</label><input type="text" id="cr_issu_mean_no_rcpt_crd2"   name="cr_issu_mean_no_rcpt_crd2" maxlength="4" onkeyup="javascript:goNextField(cr_issu_mean_no_rcpt_crd2,cr_issu_mean_no_rcpt_crd3, 4);" class="txt pdl2" title="현금영수증카드번호둘째자리" style="width:45px; " />-
+								<label for="cr_issu_mean_no_rcpt_crd3" class="hidden">현금영수증카드번호셋째자리</label><input type="text" id="cr_issu_mean_no_rcpt_crd3"   name="cr_issu_mean_no_rcpt_crd3" maxlength="4" onkeyup="javascript:goNextField(cr_issu_mean_no_rcpt_crd3,cr_issu_mean_no_rcpt_crd4, 4);" class="txt pdl2" title="현금영수증카드번호셋째자리" style="width:45px; " />-
+								<label for="cr_issu_mean_no_rcpt_crd4" class="hidden">현금영수증카드번호넷째자리</label><input type="text" id="cr_issu_mean_no_rcpt_crd4"   name="cr_issu_mean_no_rcpt_crd4" maxlength="4" class="txt pdl2" title="현금영수증카드번호넷째자리" style="width:45px; " />
+							</span>
+							<!-- // phase2 input width값 28 > 45로 변경 -->
+						</div>
+					</div>
+
+					<p class="ti01">
+						<!-- phase2 img > 텍스트로 변경 -->
+						현금영수증 제도란?
+						<!-- <a href="#"><img src="/NKS1//image/web/pre/myshop/btn_n11.gif"  class="vm" alt="자세히 보기" /></a> -->
+					</p>
+					<p class="ti02">2005년1월 1일부터 현금영수증 가맹점에서 물건을 구입할 때 소비자가 현금과 함께 카드(적립식카드, 신용카드 등), 핸드폰번호등을 제시하면 가맹점은 현금영수증 발급장치를 통해 현금영수증을 발급하고 현금결제 건별 내역은 국세청에 통보되는 제도입니다. </p>
+				</div>
+
+				<div class="tq04">
+					<a href="#none" style="display:inline-block;">
+					<!-- phase2 이미지 경로 변경 -->
+						<img src="../image/web/global/btn_ok.gif"  alt="확인" onclick="receiptProcess();"/>
+					</a>
+					<a href="#" class="btn_close14" style="display:inline-block;">
+					<!-- phase2 이미지 경로 변경 -->
+						<img src="../image/web/global/btn_cancle.gif"  alt="취소" onclick="closePopup();"/>
+					</a>
+				</div>
+			</div>
+
+
+			<!--  팝업위치변경 -->
+<!-- 			<div class="btn_close">
+				<a href="#"  title="현금영수증 신청 레이어 팝업" onclick="closePopup();">
+					<img src="/NKS1//image/web/pre/category/btn_lay_close.gif"  alt="닫기" />
+				</a>
+			</div> -->
+		</div>
+	</div>
+	<div class="alert_vew07" style="top:500px;display:none">
+		<div class="png_bg">
+			<div class="tex">현금영수증 신청이 완료되었습니다. 이용해 주셔서 감사합니다.</div>
+			<div class="tq">
+				<a href="#" class="btn_close7">
+					<!-- phase2 이미지 경로 변경 -->
+					<img src="../image/web/global/btn_ok_small.gif" alt="확인" onclick="closePopup();"/>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</form>
+</body>
+</html>

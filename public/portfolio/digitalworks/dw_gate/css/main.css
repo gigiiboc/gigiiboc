@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+.hide {visibility: hidden;overflow: hidden;position: absolute;top: 0;left: 0;width: 1px;height: 1px;font-size: 0;line-height: 0;}
+
+.container {background-image: url('../images/bg.jpg');background-repeat: repeat;background-position: center top;width: 100%;height: 100%;position: relative;}
+.logo{position: absolute;top: 53px;left: 66px;width: 89px;height: 23px;background: url(../images/logo.png) no-repeat center top;}
+.section {position: absolute;top: 50%;width: 640px;height: 740px;border-radius: 30px;border: 1px solid #000;transform: translateY(-50%);}
+.content {display: flex;width: 100%;height: 100%;align-items: center;justify-content: center;}
+.section.ibank-section {background: url('../images/section_bg.jpg') repeat center top;margin-left: -702px;left: 50%;}
+.section.ibank-section .content-logo{width: 325px;}
+.section.ibank-section .content-logo .content-logo-bg{background: url('../images/ibank_logo.png') no-repeat center top / 100% auto;padding-top: 25.7%;}
+.section.digitalworks-section {background: url(../images/section_bg.jpg) repeat center top;margin-right: -702px;right: 50%;}
+.section.digitalworks-section .content-logo{width: 397px;}
+.section.digitalworks-section .content-logo .content-logo-bg{background: url(../images/dw_logo.png) no-repeat center top / 100% auto;padding-top: 20%;}
+.section .arrow-button {position: absolute;bottom: 70px;right: 70px;width: 120px;height: 120px;background: url(../images/btn.png) no-repeat center top / 100% auto;}
+
+@media all and (max-width: 1800px) {
+	.container {}
+	.logo {}
+	.section {width: 512px;height: 592px;}
+	.section.ibank-section {margin-left: -562px;}
+	.section.ibank-section .content-logo {}
+	.section.digitalworks-section {margin-right: -562px;}
+	.section.digitalworks-section .content-logo {}
+	.section .arrow-button {bottom: 50px;right: 50px;}
+}
+@media all and (max-width: 1400px) {
+	.container {}
+	.logo {}
+	.section {width: 384px;height: 444px;}
+	.section.ibank-section {margin-left: -412px;}
+	.section.ibank-section .content-logo {width: 80%;}
+	.section.digitalworks-section {margin-right: -412px;}
+	.section.digitalworks-section .content-logo {width: 80%;}
+	.section .arrow-button {bottom: 35px;right: 35px;width: 50px;height: 50px;}
+}
+@media all and (max-width: 1000px) {
+	.container {}
+	.logo {}
+	.section {width: 320px;height: 370px;}
+	.section.ibank-section {margin-left: -352px;}
+	.section.ibank-section .content-logo {width: 162.5px;}
+	.section.digitalworks-section {margin-right: -352px;}
+	.section.digitalworks-section .content-logo {width: 198.5px;}
+	.section .arrow-button {}
+}
+@media all and (max-width: 750px) {
+	.container {height: auto;padding: 25px 25px 50px 25px;box-sizing: border-box;background-image: url(../images/bg_mo.jpg);background-size: 100% auto;}
+	.logo {position: static;}
+	.section {position: static;width: 100%;height: 375px;transform: translateY(0);}
+	.section.ibank-section {margin-left: 0;margin-top: 25px;}
+	.section.digitalworks-section {margin-left: 0;margin-top: 25px;}
+	.section .arrow-button {}
+}
+@media all and (max-width: 500px) {
+	.container {}
+	.logo {}
+	.section {height: calc(50vh - 76px);}
+	.section.ibank-section {}
+	.section.digitalworks-section {}
+	.section .arrow-button {}
+}

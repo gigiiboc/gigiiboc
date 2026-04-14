@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>2018 JUST DO IT: '나의 #미친존재감'을 발견하라</title>
+    <link rel="shortcut icon" href="http://image.nike.co.kr//nike_favicon.ico" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<!-- 180124 등록 페이지 // s -->
+    <link href="entry_mo.css" rel="stylesheet" />
+	<div class="wrap">
+		<img src="images/bg.png" class="bg" alt="">
+		<div class="formBox">
+			<img src="images/ttl.png" class="ttl" alt="">
+			<form>
+				<fieldset>
+					<legend class="texthidden">응모자 정보 기입 사항</legend>
+					<div class="box">
+						<div class="line">
+							<div class="labelBox"><label for="entryPhone">휴대폰 번호</label></div
+							><div class="inputBox">
+								<input type="text" name="entryPhone" id="entryPhone" class="" value="" placeholder="- 를 제외한 번호로 입력해 주세요." size="" maxlength="">
+							</div>
+						</div>
+						<div class="privacy_box">
+							<p><input type="checkbox" name="privacy1" value="" id="privacy1" class="texthidden"><label for="privacy1"></label><a href="javascript:popup_onoff('#privacy_popup01')" class="btn_privacy" target="_blank">개인정보 취급 방침</a>에 동의합니다.</p>
+							<p><input type="checkbox" name="privacy4" value="" id="privacy4" class="texthidden"><label for="privacy4"></label><a href="javascript:popup_onoff('#privacy_popup04')" class="btn_privacy" target="_blank">개인정보 취급 위탁</a>에 동의합니다.</p>
+						</div>
+					</div>
+					<div class="btn_submit">
+						<a href="#none" title="등록하기"><img src="images/submit_btn.png" alt=""></a>
+					</div>
+				</fieldset>
+			</form>
+		</div>		
+		<!-- 180126 추가 s -->
+		<div class="notice">
+			<img src="images/notice.png" alt="">
+		</div>
+		<!-- 180126 추가 e -->
+	</div>
+	<div class="privacy_popup" id="privacy_popup01">
+		<span></span>
+		<div>
+			<a href="javascript:popup_onoff('#privacy_popup01')" class="link01"><img src="images/popup_close_m.png" alt=""></a>
+			<h2>[개인정보 수집 및 이용 동의]</h2>
+			<p><span style="font-weight:700;">[광고]</span> 문구로 인해 스팸 메시지로 본류 될 수 있습니다.<br>
+			<span style="font-weight:700;">개인정보 수집 이용목적</span> : 이벤트 진행 SMS 알림<br>
+			<span style="font-weight:700;">수집되는 개인정보</span> : 휴대전화번호<br>
+			<span style="font-weight:700;">보유기간</span> : 알림받기 문자 수신 이후 30일 까지.<br><br>
+			
+			본 동의는 거부 할 수 있으며, 그 경우 이벤트 시작일에 대한 공지를 우선적으로 전달받을 수 없습니다. 통신사의 사정으로 인한 발송 오류, 스팸 문자 등록 등으로 인해 SMS가 전달되지 않을 경우에는 나이키 코리아 및 위탁업체에서 책임지지 않습니다.</p>
+		</div>
+	</div>
+	<div class="privacy_popup" id="privacy_popup04">
+		<span></span>
+		<div>
+			<a href="javascript:popup_onoff('#privacy_popup04')" class="link01"><img src="images/popup_close_m.png" alt=""></a>
+			<h2>[개인정보 취급 위탁에 대한 고지]</h2>
+			<p>(유)나이키코리아는 이벤트 진행을 위해 참가자의 개인 정보를 외부에 위탁하여 처리하고 있으며, 관계법령에 따라 위탁 계약 시 개인정보가 안전하게 관리될 수 있도록 규정하고 있습니다. 동 이벤트의 개인정보취급 수탁자와 그 업무의 내용은 아래와 같습니다.</p>
+			<table>
+				<colgroup>
+					<col width="50%" />
+					<col width="50%" />
+				</colgroup>
+				<thead>
+				<tr>
+					<th>수탁자</th>
+					<th>목적</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>㈜ 스포츠링크, ㈜아이뱅크, ㈜롯데닷컴, ㈜커스토머인사이트</td>
+						<td>이벤트 진행 대행 및 시스템 데이터 관리</td>
+					</tr>
+				</tbody>
+			</table>
+			<p style="font-weight:700;margin-top:5px">※ (유)나이키코리아의 상세한 개인정보취급(처리)방침은 <a href="http://www.nike.co.kr" target="_blank">www.nike.co.kr</a> 에서 확인하실 수 있습니다.</p>
+		</div>		
+	</div>
+
+	<script>
+		function popup_onoff (e){
+			if ($(e).css('display') == 'none'){
+				$(e).show();
+				$('body').css({height:'100%',overflow:'hidden'});
+			} else {		
+				$(e).hide();
+				$('body').css({height:'auto',overflow:'visible'});
+			}
+		}
+	</script>
+	<!-- 180124 등록 페이지 // e -->
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" >
+	<title></title>
+	<link rel="stylesheet" href="../reset.css">
+	<script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+
+		<div id="layout__content">
+			<!-- https://lghomin.com/promotion/exh/1000012 -->
+			<link rel="stylesheet" href="./dwrk_event_211022_1.css">
+			<!-- S: 컨텐츠 영역(해당 주석 안의 내용 복사바랍니다.) -->
+			<div class="dwrk_event_211022_1">
+				<img src="./images/dwrk_event_211022_1_bgStyle_220103.jpg" alt="">
+				<div id="dwrk_ttlArea" class="dwrk_viewAnim" anime-stlye="1">
+					<p class="dwrk_ttlText01"><span class="hidden">홈인이 처음인 당신을 위해</span></p>
+					<p class="dwrk_ttlText02"><span class="hidden">홈인 회원 전용 혜택</span></p>
+				</div>
+				<span class="particle01"></span>
+				<span class="particle02"></span>
+				<a class="dwrk_cttLink01" href="https://www.mylgid.com/userweb/signup/idp?affSvcId=SVC0000026&amp;affSvcKey=R-SVC0000026-0b031752-8025-4a54-aa26-aaf8958e22f9&amp;plusInfo=96f765502c2a4ddba45887176c88224c,passYn:N&amp;rtnUrl=https://foapi.lghomin.com/mylgid/login" target="_blank"><span class="hidden">신규 가입하고 혜택받기</span></a>
+				<a class="dwrk_cttLink02" href="https://play.google.com/store/apps/details?id=com.lguplus.homin&amp;hl=ko&amp;gl=US" target="_blank"><span class="hidden">구글 플레이</span></a>
+				<a class="dwrk_cttLink03" href="https://apps.apple.com/kr/app/Homin/id1540228823" target="_blank"><span class="hidden">앱 스토어</span></a>
+				<a class="dwrk_cttLink04" href="https://lghomin.com/promotion/event/1000019" target="_blank"><span class="hidden">멤버십 혜택 자세히 보기</span></a>
+				<a class="dwrk_cttLink05" href="https://lghomin.com/submain/cleaning" target="_blank"><span class="hidden">홈클리닝 서비스 자세히 보기</span></a>
+				<a class="dwrk_cttLink06" href="https://lghomin.com/submain/dailySupplies" target="_blank"><span class="hidden">더 많은 생활용품 상품 보기</span></a>
+			</div>
+			<script>
+				function dwrk_viewAnim (target){
+					$(target).each(function(){
+						var targetTop = $(this).offset().top;
+
+						if ($(this).attr('anime-stlye') == 1){ // 화면에 나타날때 노출, 유지
+							if ($(window).scrollTop() >= targetTop - ($(window).height()/2)){
+								$(this).addClass('on')
+							} else {
+								//$(this).removeClass('on')					
+							}
+						} else if ($(this).attr('anime-stlye') == 2){ // 화면에 나타날때 노출되며, 화면에서 가려질때 비노출됨.
+							if ($(window).scrollTop() >= targetTop - ($(window).height()/2) && $(window).scrollTop() < targetTop + $(window).height()){
+								$(this).addClass('on')
+							} else {
+								$(this).removeClass('on')
+							}
+						}
+					})
+				}
+				dwrk_viewAnim('.dwrk_viewAnim')
+				$(window).scroll(function(){
+					dwrk_viewAnim('.dwrk_viewAnim')
+				})			
+			</script>
+			<!-- E: 컨텐츠 영역(해당 주석 안의 내용 복사바랍니다.) -->
+		</div>
+	</div>
+</body>
+</html>

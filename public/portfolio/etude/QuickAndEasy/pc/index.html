@@ -1,0 +1,367 @@
+<!-- <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>QuickAndEasy</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<script src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/js/jquery-1.11.3.min.js"></script>
+	<script src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/js/TweenMax.min.js"></script>
+	<script src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/js/slick.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/css/layout.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36124454-9"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-36124454-9');
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 본문 -->
+		<div class="main">
+			<div class="firstPage">				
+				<span class="firstPage_bg1"></span>
+				<span class="firstPage_bg2"></span>
+				<span class="firstPage_ttl1"></span>
+				<span class="firstPage_ttl2"></span>
+				<a href="#none" class="openTab" onclick="openTab()"></a>
+			</div>
+			<div class="tabBox">
+				<ul>
+					<li class="tab tab1 on"><a href="#none" data-target="ctt1">tab1</a></li>
+					<li class="tab tab2"><a href="#none" data-target="ctt2">tab2</a></li>
+					<li class="tab tab3"><a href="#none" data-target="ctt3">tab3</a></li>
+				</ul>
+			</div>
+			<ul class="cttBox">
+				<li class="ctt ctt1">
+					<ul class="ctt1Slide">		
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt1_slide1_img1.png" alt="" />
+							<a href="#none" onclick="popupOn('.ctt1_popup','/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt1_popup_img1.jpg', 'http://www.coupang.com/vp/promotions/15003/event')" class="prdLink01"></a>
+						</li>
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt1_slide1_img2.png" alt="" />
+							<a href="#none" onclick="popupOn('.ctt1_popup','/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt1_popup_img2.jpg', 'http://www.coupang.com/vp/promotions/15003/event')" class="prdLink02"></a>
+						</li>
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt1_slide1_img3.png" alt="" />
+							<a href="#none" onclick="popupOn('.ctt1_popup','/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt1_popup_img3.jpg', 'http://www.coupang.com/vp/promotions/15003/event')" class="prdLink03"></a>
+						</li>
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt1_slide1_img4.png" alt="" />
+							<a href="#none" onclick="popupOn('.ctt1_popup','/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt1_popup_img4.jpg', 'http://www.coupang.com/vp/promotions/15003/event')" class="prdLink04"></a>
+						</li>
+					</ul>
+				</li>
+				<li class="ctt ctt2">				
+					<ul>
+						<li>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store1_1.png" alt="" class="store1_1 viewAnim" anime-stlye="1"/>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store1_2.png" alt="" class="store1_2 viewAnim" anime-stlye="1"/>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store1_3.png" alt="" class="store1_3 viewAnim" anime-stlye="1"/>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store1_4.png" alt="" class="store1_4 viewAnim" anime-stlye="1"/>
+							<div class="store1_5 viewAnim" anime-stlye="1">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store1_5.png" alt="" />
+								<a href="#none" class="storeLink01" onclick="popupOn('.ctt2_popup','/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt2_popup_img1.jpg', 'http://www.coupang.com/vp/promotions/15003/event')"></a>
+							</div>
+						</li>
+						<li>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store2_1.png" alt="" class="store2_1 viewAnim" anime-stlye="1"/>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store2_2.png" alt="" class="store2_2 viewAnim" anime-stlye="1"/>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store2_3.png" alt="" class="store2_3 viewAnim" anime-stlye="1"/>
+							<div class="store2_4 viewAnim" anime-stlye="1">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store2_4.png" alt="" />
+								<a href="#none" class="storeLink02" onclick="popupOn('.ctt2_popup','/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt2_popup_img2.jpg', 'http://www.coupang.com/vp/promotions/15003/event')"></a>
+							</div>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store2_5.png" alt="" class="store2_5 viewAnim" anime-stlye="1"/>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store2_6.png" alt="" class="store2_6 viewAnim" anime-stlye="1"/>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store2_7.png" alt="" class="store2_7"/>
+						</li>
+						<li>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store3_1.png" alt="" class="store3_1 viewAnim" anime-stlye="1"/>
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store3_2.png" alt="" class="store3_2 viewAnim" anime-stlye="1"/>
+							<div class="store3_3 viewAnim" anime-stlye="1">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store3_3.png" alt="" />
+								<a href="#none" class="storeLink03" onclick="popupOn('.ctt2_popup','/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt2_popup_img3.jpg', 'http://www.coupang.com/vp/promotions/15003/event')"></a>
+							</div>
+						</li>
+					</ul>
+					<a href="http://event.seoulstore.com/?no=359" class="store_more viewAnim" target="_blank" anime-stlye="1">
+						<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/store_more.png" alt="" />
+					</a>
+				</li>
+				<li class="ctt ctt3">
+					<ul>
+						<li>
+							<a href="#none" onclick="popupOn('#review01','', '')" class="review01">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/review01.jpg" alt="" />
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none" onclick="popupOn('#review02','', '')" class="review02">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/review02.jpg" alt="" />
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none" onclick="popupOn('#review03','', '')" class="review03">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/review03.jpg" alt="" />
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none" onclick="popupOn('#review04','', '')" class="review04">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/review04.jpg" alt="" />
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none" onclick="popupOn('#review05','', '')" class="review05">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/review05.jpg" alt="" />
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none" onclick="popupOn('#review06','', '')" class="review06">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/review06.jpg" alt="" />
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none" onclick="popupOn('#review07','', '')" class="review07">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/review07.jpg" alt="" />
+								<span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none" onclick="popupOn('#review08','', '')" class="review08">
+								<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/review08.jpg" alt="" />
+								<span></span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<!-- PRODUCT 팝업 -->
+		<div class="ctt1_popup">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>
+					<div><img src="" alt="" class="img"></div>
+					<a href="http://www.coupang.com/vp/promotions/15003/event" class="shopBtn" target="_blank">쇼핑하러 가기</a>
+					<a href="#none" class="close" onclick="popupOff('.ctt1_popup')">닫기</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- LOOKS 팝업 -->
+		<div class="ctt2_popup">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>
+					<div><img src="" alt="" class="img"></div>
+					<a href="http://www.coupang.com/vp/promotions/15003/event" class="shopBtn" target="_blank" alt="">쇼핑하러 가기</a>
+					<a href="#none" class="close" onclick="popupOff('.ctt2_popup')" alt="">닫기</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- REVEIW 팝업 -->
+		<div class="ctt3_popup" id="review01">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>				
+					<ul class="ctt3Slide">		
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide1_img1.jpg" alt="" />
+						</li>
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide1_img2.jpg" alt="" />
+						</li>
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide1_img3.jpg" alt="" />
+						</li>
+					</ul>
+					<a href="#none" class="close" onclick="popupOff('#review01')" alt="">닫기</a>
+				</div>
+			</div>
+		</div>
+		<div class="ctt3_popup" id="review02">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>				
+					<ul class="ctt3Slide">		
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide2_img2.jpg" alt="" />
+						</li>
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide2_img1.jpg" alt="" />
+						</li>
+					</ul>
+					<a href="#none" class="close" onclick="popupOff('#review02')" alt="">닫기</a>
+				</div>
+			</div>
+		</div>
+		<div class="ctt3_popup" id="review03">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>				
+					<ul class="ctt3Slide">		
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide3_img1.jpg" alt="" />
+						</li>
+					</ul>
+					<a href="#none" class="close" onclick="popupOff('#review03')" alt="">닫기</a>
+				</div>
+			</div>
+		</div>
+		<div class="ctt3_popup" id="review04">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>				
+					<ul class="ctt3Slide">		
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide4_img2.jpg" alt="" />
+						</li>	
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide4_img1.jpg" alt="" />
+						</li>
+					</ul>
+					<a href="#none" class="close" onclick="popupOff('#review04')" alt="">닫기</a>
+				</div>
+			</div>
+		</div>
+		<div class="ctt3_popup" id="review05">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>				
+					<ul class="ctt3Slide">		
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide5_img2.jpg" alt="" />
+						</li>	
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide5_img1.jpg" alt="" />
+						</li>
+					</ul>
+					<a href="#none" class="close" onclick="popupOff('#review05')" alt="">닫기</a>
+				</div>
+			</div>
+		</div>
+		<div class="ctt3_popup" id="review06">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>				
+					<ul class="ctt3Slide">		
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide6_img1.jpg" alt="" />
+						</li>
+					</ul>
+					<a href="#none" class="close" onclick="popupOff('#review06')" alt="">닫기</a>
+				</div>
+			</div>
+		</div>
+		<div class="ctt3_popup" id="review07">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>				
+					<ul class="ctt3Slide">		
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide7_img1.jpg" alt="" />
+						</li>
+					</ul>
+					<a href="#none" class="close" onclick="popupOff('#review07')" alt="">닫기</a>
+				</div>
+			</div>
+		</div>
+		<div class="ctt3_popup" id="review08">
+			<span class="popupBg">배경</span>
+			<div class="popupCtt">
+				<div>
+					<span class="topBg"></span>
+					<span class="bottomBg"></span>				
+					<ul class="ctt3Slide">		
+						<li class="slide">
+							<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/ctt3_slide8_img1.jpg" alt="" />
+						</li>
+					</ul>
+					<a href="#none" class="close" onclick="popupOff('#review08')" alt="">닫기</a>
+				</div>
+			</div>
+		</div>
+
+		
+
+		<!-- 인트로 -->
+		<div class="loadSection">
+			<div class="textBox first"><div class="text-overflow"><div class="title-wrapper"><p class="text"></p></div></div></div>
+			<div class="bg"></div>
+			<div class="textBox end"><div class="text-overflow"><div class="title-wrapper"><p class="text"></p></div></div><div><a href="#none" class="mainOpenBtn" onclick="loadEnd()">OPEN</a></div></div>
+		</div>
+
+
+		<script src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/js/layout.js"></script>	
+		<script type="text/javascript">
+			$('.loadSection .title-wrapper .text').html('Quick & easy')
+			loadStart()
+			
+			$(document).ready(function(){	
+				$(".ctt1Slide").slick({
+					dots: true,
+					infinite: true
+				});	
+			});			
+			$(document).ready(function(){	
+				$(".ctt3Slide").slick({
+					dots: true,
+					infinite: true
+				});	
+			});
+			$(window).load(function(){
+				viewAnim('.viewAnim')
+			})	
+			$(window).scroll(function(){
+				viewAnim('.viewAnim')
+			})
+		</script>
+	</div>
+
+	<!-- <div align="center">
+		<img src="/gigiiboc/portfolio/etude/QuickAndEasy/resource/pc/images/common/logo.png" /><br/>
+		<a href="#" onclick="goLink();"><img src="http://thumbnail13.coupangcdn.com/thumbnails/remote/300x300ex/image/product/image/vendoritem/2016/05/24/3017954948/487fbd33-bfe0-4dd0-b6bd-bfa488500b9d.jpg" /></a>
+	</div>
+
+	<script type="text/javascript">
+		function goLink() {
+			location.href = "http://www.coupang.com/vp/products/2558695?itemId=11816903&vendorItemId=3017954948";
+		}
+	</script> -->
+
+</body>
+</html>

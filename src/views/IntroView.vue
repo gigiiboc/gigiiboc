@@ -8,8 +8,8 @@
     <h1 class="logo"><RouterLink to="/" title="홈으로">whw</RouterLink></h1>
     <ul>
       <li class="first">
-        <RouterLink to="/introduction">
-          <span class="icon intro-img"></span><span>introduction</span>
+        <RouterLink to="/about">
+          <span class="icon intro-img"></span><span>about</span>
         </RouterLink>
       </li>
       <li class="second">

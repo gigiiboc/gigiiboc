@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Pinchzoom.js Demo</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/resource/css/style.css">
+	<script src="/gigiiboc/portfolio/resource/js/jquery-1.11.3.min.js"></script>
+	<script src="/gigiiboc/portfolio/resource/js/jquery.easings.min.js"></script>
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script type="text/javascript" src="../js/pinchzoom.js"></script>
+    <script type="text/javascript" src="swipe.js"></script>
+    <style type="text/css">		
+		.page {margin: 10% auto;max-width: 300px;position: relative;text-align: left;}
+		.pinch-zoom {position: relative;}
+        .pinch-zoom,
+        .pinch-zoom img {width: 100%;-webkit-user-drag: none;}
+		.pinch-zoom h1 {position: absolute;top:0;left:0;color:#fff;}
+		.pinch-zoom a {position: absolute;bottom:0px;right:0px;color:#fff;}
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div id='slider'>
+            <ul>
+                <li>
+					<div class="pinch-zoom">
+						<h1>h1 tag</h1>
+						<img src="../frog.jpg"/>
+						<a class="image" href="#none" target="_blank">a tag</a>
+					</div>
+				</li>
+                <li>
+					<div class="pinch-zoom">
+						<h1>h1 tag</h1>
+						<img src="../frog.jpg"/>
+						<a class="image" href="#none" target="_blank">a tag</a>
+					</div>
+				</li>
+                <li>
+					<div class="pinch-zoom">
+						<h1>h1 tag</h1>
+						<img src="../frog.jpg"/>
+						<a class="image" href="#none" target="_blank">a tag</a>
+					</div>
+				</li>
+            </ul>
+		</div>
+		<script type="text/javascript">
+			$(function () {
+				$('div.pinch-zoom').each(function () {
+					new RTP.PinchZoom($(this), {});
+				});
+				window.mySwipe = new Swipe(document.getElementById('slider'), {
+					speed: 400,
+					continuous: true
+				});
+			})
+		</script>
+    </div>
+</body>
+</html>
