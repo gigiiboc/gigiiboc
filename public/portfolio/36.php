@@ -4,7 +4,7 @@
 	<title>::: note :::</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
-	<link rel="stylesheet" type="text/css" href="/note/resource/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/resource/css/reset.css">
 	<style>
 	.banilaTV{position: fixed;top: 0;left: 0;width: 100%;height: 100%;overflow: auto;overflow-x: hidden;line-height: 0;font-size: 0;}
 	.blTvWrap{}
@@ -33,27 +33,27 @@
 			<div class="blTvArea">
 				<div class="blTvBox">
 					<div class="background:#222;">
-						<!-- <video class="videoCtt" muted controls autoplay playsinline><source src="/note/resource/video/banilaTV01.mp4" type="video/mp4"></video> -->
+						<!-- <video class="videoCtt" muted controls autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/banilaTV01.mp4" type="video/mp4"></video> -->
 					</div>
 				</div>
 				<div class="blTvBox">
 					<div class="background:#333;">
-						<!-- <video class="videoCtt" muted controls autoplay playsinline><source src="/note/resource/video/banilaTV02.mp4" type="video/mp4"></video> -->
+						<!-- <video class="videoCtt" muted controls autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/banilaTV02.mp4" type="video/mp4"></video> -->
 					</div>
 				</div>
 				<div class="blTvBox">
 					<div class="background:#444;">
-						<!-- <video class="videoCtt" muted controls autoplay playsinline><source src="/note/resource/video/banilaTV03.mp4" type="video/mp4"></video> -->
+						<!-- <video class="videoCtt" muted controls autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/banilaTV03.mp4" type="video/mp4"></video> -->
 					</div>
 				</div><!-- 
 				<div class="blTvBox">
 					<div>
-						<video class="videoCtt" muted controls autoplay playsinline><source src="/note/resource/video/banilaTV04.mp4" type="video/mp4"></video>
+						<video class="videoCtt" muted controls autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/banilaTV04.mp4" type="video/mp4"></video>
 					</div>
 				</div>
 				<div class="blTvBox">
 					<div>
-						<video class="videoCtt" muted controls autoplay playsinline><source src="/note/resource/video/banilaTV05.mp4" type="video/mp4"></video>
+						<video class="videoCtt" muted controls autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/banilaTV05.mp4" type="video/mp4"></video>
 					</div>
 				</div> -->
 			</div>

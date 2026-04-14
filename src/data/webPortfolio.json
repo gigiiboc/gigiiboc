@@ -1,5 +1,72 @@
 [
   {
+    "id": "digitalworks",
+    "category": "responsive",
+    "thumb": "/Thumbnail/small/digitalworks.png",
+    "alt": "디지털웍스 홈페이지 리뉴얼",
+    "title": "디지털웍스 홈페이지 리뉴얼",
+    "date": "2024/10 ~ 2024/10",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "home",
+        "href": "https://www.digitalworks.co.kr/dgMain.do",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      },
+      {
+        "kind": "file-list",
+        "href": "/portfolio/digitalworks/index.html",
+        "title": "작업리스트",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "samhwaNews",
+    "category": "responsive",
+    "thumb": "/Thumbnail/small/samhwa.png",
+    "alt": "삼화페인트 뉴스레터",
+    "title": "삼화페인트 뉴스레터",
+    "date": "2024/06 ~ 2024/08",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/Thumbnail/samhwa.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "https://spsamhwa.com/paints/newsletter",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "id": "hansolpns",
+    "category": "responsive",
+    "thumb": "/Thumbnail/small/hansol.png",
+    "alt": "한솔PNS 구축 프로젝트",
+    "title": "한솔PNS 구축 프로젝트",
+    "date": "2024/01 ~ 2024/05",
+    "skill": "UI개발",
+    "links": [
+      {
+        "kind": "big-img",
+        "href": "/Thumbnail/hansol.png",
+        "title": "크게 보기"
+      },
+      {
+        "kind": "home",
+        "href": "https://www.hansolpns.com/main.do",
+        "title": "홈페이지 바로가기",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
     "id": "innisfree-kr-foru",
     "category": "web",
     "thumb": "/Thumbnail/small/innisfreeKRforU.png",
@@ -37,7 +104,7 @@
       },
       {
         "kind": "file-list",
-        "href": "/note/LG_homin/index.html",
+        "href": "/portfolio/LG_homin/index.html",
         "title": "작업리스트",
         "target": "_blank"
       }
@@ -59,7 +126,7 @@
       },
       {
         "kind": "file-list",
-        "href": "/note/hanatour/index.html",
+        "href": "/portfolio/hanatour/index.html",
         "title": "작업리스트",
         "target": "_blank"
       }
@@ -87,7 +154,7 @@
       },
       {
         "kind": "mobile-pub",
-        "href": "/note/banilaco/banilaTV/index.html",
+        "href": "/portfolio/banilaco/banilaTV/index.html",
         "title": "퍼블리싱(mo)",
         "target": "_blank"
       }
@@ -115,13 +182,13 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/banilaco/bbyBanila/pc/index.html",
+        "href": "/portfolio/banilaco/bbyBanila/pc/index.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       },
       {
         "kind": "mobile-pub",
-        "href": "/note/banilaco/bbyBanila/mo/index.html",
+        "href": "/portfolio/banilaco/bbyBanila/mo/index.html",
         "title": "퍼블리싱(mo)",
         "target": "_blank"
       }
@@ -149,13 +216,13 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/banilaco/culryStudio/pc/index.html",
+        "href": "/portfolio/banilaco/culryStudio/pc/index.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       },
       {
         "kind": "mobile-pub",
-        "href": "/note/banilaco/culryStudio/mo/index.html",
+        "href": "/portfolio/banilaco/culryStudio/mo/index.html",
         "title": "퍼블리싱(mo)",
         "target": "_blank"
       }
@@ -183,13 +250,13 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/banilaco/project/guide/style_guide.html",
+        "href": "/portfolio/banilaco/project/guide/style_guide.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       },
       {
         "kind": "mobile-pub",
-        "href": "/note/banilaco/project/guide/style_guide_mobile.html",
+        "href": "/portfolio/banilaco/project/guide/style_guide_mobile.html",
         "title": "퍼블리싱(mo)",
         "target": "_blank"
       }
@@ -211,7 +278,7 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/apmall/APmall_DiceMotion/ap_ver.html",
+        "href": "/portfolio/apmall/APmall_DiceMotion/ap_ver.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       }
@@ -233,7 +300,7 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/apmall/APmall_RouletteMotion/index.html",
+        "href": "/portfolio/apmall/APmall_RouletteMotion/index.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       }
@@ -255,7 +322,7 @@
       },
       {
         "kind": "file-list",
-        "href": "/note/innisfreeJP/index.html",
+        "href": "/portfolio/innisfreeJP/index.html",
         "title": "작업리스트",
         "target": "_blank"
       }
@@ -277,7 +344,7 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/apmall/APmall_ShootingStarMotion/index.html",
+        "href": "/portfolio/apmall/APmall_ShootingStarMotion/index.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       }
@@ -299,7 +366,7 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/laneige/index.html",
+        "href": "/portfolio/laneige/index.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       }
@@ -321,13 +388,13 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/nike/nike_onair/pc/index.html",
+        "href": "/portfolio/nike/nike_onair/pc/index.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       },
       {
         "kind": "mobile-pub",
-        "href": "/note/nike/nike_onair/mo/index.html",
+        "href": "/portfolio/nike/nike_onair/mo/index.html",
         "title": "퍼블리싱(mo)",
         "target": "_blank"
       }
@@ -349,7 +416,7 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/aestura/index.html",
+        "href": "/portfolio/aestura/index.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       }
@@ -371,13 +438,13 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/etude/QuickAndEasy/pc/index.html",
+        "href": "/portfolio/etude/QuickAndEasy/pc/index.html",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       },
       {
         "kind": "mobile-pub",
-        "href": "/note/etude/QuickAndEasy/mobile/index.html",
+        "href": "/portfolio/etude/QuickAndEasy/mobile/index.html",
         "title": "퍼블리싱(mo)",
         "target": "_blank"
       }
@@ -399,7 +466,7 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/etude/etude_180713/index.php",
+        "href": "/portfolio/etude/etude_180713/index.php",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       }
@@ -421,7 +488,7 @@
       },
       {
         "kind": "pc-pub",
-        "href": "/note/etude/etude_180731/index.php",
+        "href": "/portfolio/etude/etude_180731/index.php",
         "title": "퍼블리싱(pc)",
         "target": "_blank"
       }
@@ -443,7 +510,7 @@
       },
       {
         "kind": "file-list",
-        "href": "/note/nike/nike_scene_stealer/index.html",
+        "href": "/portfolio/nike/nike_scene_stealer/index.html",
         "title": "작업리스트",
         "target": "_blank"
       }
@@ -471,7 +538,7 @@
       },
       {
         "kind": "file-list",
-        "href": "/note/nike/nike_global_renewal/index.html",
+        "href": "/portfolio/nike/nike_global_renewal/index.html",
         "title": "작업리스트",
         "target": "_blank"
       }

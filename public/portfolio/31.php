@@ -4,12 +4,12 @@
 	<title>::: note :::</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
-	<link rel="stylesheet" type="text/css" href="/note/resource/css/reset.css">
-	<script src="/note/resource/js/jquery-1.11.3.min.js"></script>
-	<script src="/note/resource/js/jquery.easings.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/note/note_js_plugin/slick/slick.css">
-	<script src="/note/note_js_plugin/slick/slick.min.js"></script>
-	<script src="/note/note_js_plugin/inview/jquery.inview.js"></script>
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/resource/css/reset.css">
+	<script src="/gigiiboc/portfolio/resource/js/jquery-1.11.3.min.js"></script>
+	<script src="/gigiiboc/portfolio/resource/js/jquery.easings.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/note_js_plugin/slick/slick.css">
+	<script src="/gigiiboc/portfolio/note_js_plugin/slick/slick.min.js"></script>
+	<script src="/gigiiboc/portfolio/note_js_plugin/inview/jquery.inview.js"></script>
 </head>
 <body>
 	<style>
@@ -106,8 +106,8 @@
 		.pdt_con .sec1 img._c {top: 1157px;left: 50%;width: 1200px;margin-left:-600px;
 			-webkit-transform:translateY(40px);transform:translateY(40px);
 		}
-		.pdt_con .sec2 {overflow: hidden;background: url(/note/images/aestura/pdt_sec02_bg.png) no-repeat fixed center center;}
-		.pdt_con .sec2 p {min-width: 1200px;height: 540px;text-align: center;font-size: 28px;line-height: 540px;color: #fff;background: url(/note/images/aestura/pdt_sec02_bg.png) no-repeat fixed center center;background-size: cover;}
+		.pdt_con .sec2 {overflow: hidden;background: url(/gigiiboc/portfolio/images/aestura/pdt_sec02_bg.png) no-repeat fixed center center;}
+		.pdt_con .sec2 p {min-width: 1200px;height: 540px;text-align: center;font-size: 28px;line-height: 540px;color: #fff;background: url(/gigiiboc/portfolio/images/aestura/pdt_sec02_bg.png) no-repeat fixed center center;background-size: cover;}
 		.pdt_con .sec3 {position:relative;overflow: hidden;max-width: 1200px;margin: 0 auto;}
 		.pdt_con .sec3 ul {position: relative;height: 1640px;}
 		.pdt_con .sec3 ul li img {display: block;position: absolute;max-width: 100%;
@@ -134,9 +134,9 @@
 		}
 		.pdt_con .sec3 .video_section {position: relative;width: 1074px;height: 604px;margin: 0 auto;}
 		.pdt_con .sec3 .video_section video {position: absolute;left:0;top:0;width:100%;height:100%;}
-		.pdt_con .sec3 .video_section .play_btn {display:none;position: absolute;left:0;top:0;width:100%;height:100%;background:url(/note/images/aestura/pdt_sec03_video.jpg) no-repeat center;}
+		.pdt_con .sec3 .video_section .play_btn {display:none;position: absolute;left:0;top:0;width:100%;height:100%;background:url(/gigiiboc/portfolio/images/aestura/pdt_sec03_video.jpg) no-repeat center;}
 		.pdt_con .sec3 .video_section .pause_btn {display:none;position: absolute;left:0;top:0;width:100%;height:100%;background:#000;filter:alpha(opacity:'0');opacity:0;}
-		.pdt_con .sec3 .video_section .thumb {position: absolute;left:0;top:0;width:100%;height:100%;background:url(/note/images/aestura/pdt_sec03_video.jpg) no-repeat center;}
+		.pdt_con .sec3 .video_section .thumb {position: absolute;left:0;top:0;width:100%;height:100%;background:url(/gigiiboc/portfolio/images/aestura/pdt_sec03_video.jpg) no-repeat center;}
 		.pdt_con .sec3 .video_section.play .play_btn {display:none;}
 		.pdt_con .sec3 .video_section.play .pause_btn {display:block;}
 		.pdt_con .sec3 .video_section.play .thumb {display:none;}
@@ -151,14 +151,14 @@
 		.pdt_con .sec4 {position:relative;width: 100%;height: 1522px;border-bottom: 1px solid #f2f4fa;background: #fff;
 			-webkit-transition: .5s ease-in;transition: .5s ease-in
 		}
-		.pdt_con .sec4 .bg {display:block;position:absolute;right:0;bottom:0;width:100%;height:100%;background: url(/note/images/aestura/pdt_sec04_bg01_test.png) repeat;filter:alpha(opacity:'5');
+		.pdt_con .sec4 .bg {display:block;position:absolute;right:0;bottom:0;width:100%;height:100%;background: url(/gigiiboc/portfolio/images/aestura/pdt_sec04_bg01_test.png) repeat;filter:alpha(opacity:'5');
 			-webkit-transition: .5s ease-in;transition: .5s ease-in;
 			-webkit-opacity:0.05;opacity:0.05;
 		}
-		.pdt_con .sec4 .bg2 {display:block;position:absolute;right:0;bottom:0;width:460px;height:796px;background: url(/note/images/aestura/pdt_sec04_bg02.png) no-repeat right bottom;
+		.pdt_con .sec4 .bg2 {display:block;position:absolute;right:0;bottom:0;width:460px;height:796px;background: url(/gigiiboc/portfolio/images/aestura/pdt_sec04_bg02.png) no-repeat right bottom;
 			-webkit-transition: .5s ease-in;transition: .5s ease-in
 		}
-		.pdt_con .sec4 .ctt {display:block;width: 100%;height: 100%;margin: 0 auto;background: url(/note/images/aestura/pdt_sec04_ctt.png) no-repeat center;z-index: 1;
+		.pdt_con .sec4 .ctt {display:block;width: 100%;height: 100%;margin: 0 auto;background: url(/gigiiboc/portfolio/images/aestura/pdt_sec04_ctt.png) no-repeat center;z-index: 1;
 			-webkit-transition: 0.8s ease-out;transition: 0.8s ease-out
 		}
 
@@ -175,44 +175,44 @@
 		.pdt_con .sec3 ul li img._e.on {-webkit-transform:translateY(0px);transform:translateY(0px);}
 		.pdt_con .sec3 ul li img._f.on {-webkit-transform:translateY(0px);transform:translateY(0px);}
 		.pdt_con .sec4.on {background: #879bd0;}
-		.pdt_con .sec4.on .bg {background: url(/note/images/aestura/pdt_sec04_bg01_test_on.png) repeat;filter:alpha(opacity:'10');
+		.pdt_con .sec4.on .bg {background: url(/gigiiboc/portfolio/images/aestura/pdt_sec04_bg01_test_on.png) repeat;filter:alpha(opacity:'10');
 			-webkit-opacity:0.1;opacity:0.1;
 		}
-		.pdt_con .sec4.on .bg2 {background: url(/note/images/aestura/pdt_sec04_bg02_on.png) no-repeat right bottom;}
-		.pdt_con .sec4.on .ctt {background: url(/note/images/aestura/pdt_sec04_ctt_on.png) no-repeat center;}
+		.pdt_con .sec4.on .bg2 {background: url(/gigiiboc/portfolio/images/aestura/pdt_sec04_bg02_on.png) no-repeat right bottom;}
+		.pdt_con .sec4.on .ctt {background: url(/gigiiboc/portfolio/images/aestura/pdt_sec04_ctt_on.png) no-repeat center;}
 	</style>
 	<div id="wrap">
 		<header>
-			<h1><a href="#"><img src="/note/resource/images/aestura/logo.png" alt="AESTURA"></a></h1>
+			<h1><a href="#"><img src="/gigiiboc/portfolio/resource/images/aestura/logo.png" alt="AESTURA"></a></h1>
 			<ul class="gnb">
-				<li><a href="#"><img src="/note/resource/images/aestura/gnb1.png" alt="PRODUCT"></a></li>
-				<li><a href="#"><img src="/note/resource/images/aestura/gnb2.png" alt="BRAND"></a></li>
-				<li><a href="#"><img src="/note/resource/images/aestura/gnb3.png" alt="A-JOURNAL"></a></li>
-				<li><a href="#"><img src="/note/resource/images/aestura/gnb4.png" alt="EVENT&NEWS"></a></li>
+				<li><a href="#"><img src="/gigiiboc/portfolio/resource/images/aestura/gnb1.png" alt="PRODUCT"></a></li>
+				<li><a href="#"><img src="/gigiiboc/portfolio/resource/images/aestura/gnb2.png" alt="BRAND"></a></li>
+				<li><a href="#"><img src="/gigiiboc/portfolio/resource/images/aestura/gnb3.png" alt="A-JOURNAL"></a></li>
+				<li><a href="#"><img src="/gigiiboc/portfolio/resource/images/aestura/gnb4.png" alt="EVENT&NEWS"></a></li>
 			</ul>
-			<span class="util"><img src="/note/resource/images/aestura/util.jpg" alt=""></span>
+			<span class="util"><img src="/gigiiboc/portfolio/resource/images/aestura/util.jpg" alt=""></span>
 		</header>
 		<div id="container">
 			<div class="pdtView">
 				<div class="pdt_visual">
 					<div class="topVisual">
 						<div class="visualImg">
-							<div class="item" style="background-image: url(/note/images/aestura/img_main1.jpg)"></div>
-							<div class="item" style="background-image: url(/note/images/aestura/img_main2.jpg)"></div>
-							<div class="item" style="background-image: url(/note/images/aestura/img_main3.jpg)"></div>
+							<div class="item" style="background-image: url(/gigiiboc/portfolio/images/aestura/img_main1.jpg)"></div>
+							<div class="item" style="background-image: url(/gigiiboc/portfolio/images/aestura/img_main2.jpg)"></div>
+							<div class="item" style="background-image: url(/gigiiboc/portfolio/images/aestura/img_main3.jpg)"></div>
 						</div>
 						<div class="visualThumb">
 							<ul>
-								<li><button class="on" data-index="1"><img src="/note/resource/images/aestura/img_Thumb1.png" alt=""></button></li>
-								<li><button data-index="2"><img src="/note/resource/images/aestura/img_Thumb2.png" alt=""></button></li>
-								<li><button data-index="3"><img src="/note/resource/images/aestura/img_Thumb3.png" alt=""></button></li>
+								<li><button class="on" data-index="1"><img src="/gigiiboc/portfolio/resource/images/aestura/img_Thumb1.png" alt=""></button></li>
+								<li><button data-index="2"><img src="/gigiiboc/portfolio/resource/images/aestura/img_Thumb2.png" alt=""></button></li>
+								<li><button data-index="3"><img src="/gigiiboc/portfolio/resource/images/aestura/img_Thumb3.png" alt=""></button></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="pdt_order">
 					<div class="pdt_ttl01">아토베리어<br> 인텐시브 크림</div>
-					<div class="pdt_ttl02"><img src="/note/resource/images/aestura/pdt_order_ttl02.png" alt="ATOBARRIER INTENSIVE CREAM"></div>
+					<div class="pdt_ttl02"><img src="/gigiiboc/portfolio/resource/images/aestura/pdt_order_ttl02.png" alt="ATOBARRIER INTENSIVE CREAM"></div>
 					<div class="pdt_tag"><span>극건성</span><span>민감성</span><span>낯/밤</span></div>
 					<p class="pdt_p">손상된 피부 장벽 기능을 강화시켜주는 <br>밤 타입의 집중보습제</p>
 					<div class="pdt_ml">100ml</div>
@@ -226,9 +226,9 @@
 			</div>
 			<div class="pdt_con">
 				<div class="sec1">
-					<img src="/note/resource/images/aestura/pdt_sec01_bg01.jpg" class="big _a viewAnim" data-time="1" alt="">
-					<img src="/note/resource/images/aestura/pdt_sec01_bg02.jpg" class="big _b viewAnim" data-time="1" alt="">
-					<img src="/note/resource/images/aestura/pdt_sec01_bg03.jpg" class="big _c viewAnim" data-time="1" alt="">
+					<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec01_bg01.jpg" class="big _a viewAnim" data-time="1" alt="">
+					<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec01_bg02.jpg" class="big _b viewAnim" data-time="1" alt="">
+					<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec01_bg03.jpg" class="big _c viewAnim" data-time="1" alt="">
 				</div>
 				<div class="sec2">
 					<p>“손상된 피부 장벽 기능을 강화시켜주는 밤 타입의 집중보습제”</p>
@@ -236,25 +236,25 @@
 				<div class="sec3">
 					<ul>
 						<li>
-							<img src="/note/resource/images/aestura/pdt_sec03_txt01.png" class="_a viewAnim" data-time="1" alt="건강한 피부장벽 강화를 위한 고보습 크림, 손상된 피부 장벽기능 강화에 도움을 주며, 건조함과 그로인한 가려움을 케어해주는 보습크림 입니다.">
-							<img src="/note/resource/images/aestura/pdt_sec03_img01.gif" class="_b viewAnim" data-time="1" alt="">
+							<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec03_txt01.png" class="_a viewAnim" data-time="1" alt="건강한 피부장벽 강화를 위한 고보습 크림, 손상된 피부 장벽기능 강화에 도움을 주며, 건조함과 그로인한 가려움을 케어해주는 보습크림 입니다.">
+							<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec03_img01.gif" class="_b viewAnim" data-time="1" alt="">
 						</li>
 						<li>
-							<img src="/note/resource/images/aestura/pdt_sec03_txt02.png" class="_c viewAnim" data-time="1" alt="피부 지질과 유사한 구조의 더마온(DermaON®)소프트 캡슐 기술이 피부속으로 깊게 흡수를 도와줍니다.">
-							<img src="/note/resource/images/aestura/pdt_sec03_img02.png" class="_d viewAnim" data-time="1" alt="">
+							<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec03_txt02.png" class="_c viewAnim" data-time="1" alt="피부 지질과 유사한 구조의 더마온(DermaON®)소프트 캡슐 기술이 피부속으로 깊게 흡수를 도와줍니다.">
+							<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec03_img02.png" class="_d viewAnim" data-time="1" alt="">
 						</li>
 						<li>
-							<img src="/note/resource/images/aestura/pdt_sec03_txt03.png" class="_e viewAnim" data-time="1" alt="손상된 피부 장벽 기능을 강화시켜주는 밤 타입의 집중보습제">
-							<img src="/note/resource/images/aestura/pdt_sec03_img03.png" class="_f viewAnim" data-time="1" alt="">
+							<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec03_txt03.png" class="_e viewAnim" data-time="1" alt="손상된 피부 장벽 기능을 강화시켜주는 밤 타입의 집중보습제">
+							<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec03_img03.png" class="_f viewAnim" data-time="1" alt="">
 						</li>
 					</ul>
 					<div class="video_section">
-						<video id="player"><source src="/note/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
+						<video id="player"><source src="/gigiiboc/portfolio/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
 						<a href="#none" class="play_btn" onclick="videoPlay()"></a>
 						<a href="#none" class="pause_btn" onclick="videoPause()"></a>
 						<a href="#none" class="thumb" onclick="videoPlay()"></a>
 					</div>
-					<img src="/note/resource/images/aestura/pdt_sec03_bg.jpg" class="big" alt="">
+					<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec03_bg.jpg" class="big" alt="">
 				</div>
 				<div class="sec4 viewAnim" data-time="2">
 					<span class="ctt"></span>
@@ -262,7 +262,7 @@
 					<span class="bg2"></span>
 				</div>
 				<div class="sec5">
-					<img src="/note/resource/images/aestura/pdt_sec05_bg.png" class="big" alt="">				
+					<img src="/gigiiboc/portfolio/resource/images/aestura/pdt_sec05_bg.png" class="big" alt="">				
 				</div>
 			</div>
 		</div>

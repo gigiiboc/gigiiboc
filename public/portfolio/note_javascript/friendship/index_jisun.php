@@ -4,10 +4,10 @@
 	<title>회비청구</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
-	<script src="/note/resource/js/jquery-1.11.3.min.js"></script>
+	<script src="/gigiiboc/portfolio/resource/js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-	<link rel="stylesheet" type="text/css" href="/note/note_javascript/friendship/friendship.css">
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/note_javascript/friendship/friendship.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
 	<div class="wrap">
@@ -54,7 +54,7 @@
 	</div>
 	<div id="hereInDOM"></div>
 
-	<script src="/note/note_javascript/friendship/friendship_jisun.js"></script>
+	<script src="/gigiiboc/portfolio/note_javascript/friendship/friendship_jisun.js"></script>
 </body>
 
 </html>

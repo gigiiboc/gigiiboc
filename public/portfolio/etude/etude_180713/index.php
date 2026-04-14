@@ -4,9 +4,9 @@
 	<title>::: note :::</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
-	<link rel="stylesheet" type="text/css" href="/note/resource/css/style.css">
-	<script src="/note/resource/js/jquery-1.11.3.min.js"></script>
-	<script src="/note/resource/js/jquery.easings.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/resource/css/style.css">
+	<script src="/gigiiboc/portfolio/resource/js/jquery-1.11.3.min.js"></script>
+	<script src="/gigiiboc/portfolio/resource/js/jquery.easings.min.js"></script>
 </head>
 <body>
 <style type="text/css">
@@ -51,14 +51,14 @@
 </style>
 <div id="event">
 	<div class="sec1">
-		<img src="/note/etude/etude_180713/images/index.jpg" alt="" />
+		<img src="/gigiiboc/portfolio/etude/etude_180713/images/index.jpg" alt="" />
 		<a href="#none" class="popup_link" onclick="onoff('#quiz1')">문제풀기</a>
 
 		<!-- O 팝업 -->
 		<div class="popup" id="true_popup">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/true_popup.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/true_popup.png" alt="" />
 				<a href="#none" class="nextBtn" onclick="nextQuiz()" alt="" />다음 문제 풀기</a>
 				<a href="#none" class="close" onclick="quizClose('#true_popup')" alt="" />닫기</a>
 			</div>
@@ -67,7 +67,7 @@
 		<div class="popup" id="false_popup">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/false_popup.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/false_popup.png" alt="" />
 				<a href="#none" class="resetBtn" onclick="quizReset()" alt="" />처음부터 풀기</a>
 				<a href="#none" class="close" onclick="quizClose('#false_popup')" alt="" />닫기</a>
 			</div>
@@ -76,7 +76,7 @@
 		<div class="popup" id="quiz1">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz1.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz1.png" alt="" />
 				<a href="#none" class="question_1" onclick="quizCheck('1')">보기1</a>
 				<a href="#none" class="question_2" onclick="quizCheck('0')">보기2</a>
 				<a href="#none" class="question_3" onclick="quizCheck('0')">보기3</a>
@@ -87,7 +87,7 @@
 		<div class="popup" id="quiz2">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz2.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz2.png" alt="" />
 				<div class="videoArea">
 					<div id="player0" class="vodplayer"></div>
 				</div>
@@ -101,7 +101,7 @@
 		<div class="popup" id="quiz3">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz3.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz3.png" alt="" />
 				<div class="videoArea">
 					<div id="player1" class="vodplayer"></div>
 				</div>
@@ -115,7 +115,7 @@
 		<div class="popup" id="quiz4">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz4.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz4.png" alt="" />
 				<div class="videoArea">
 					<div id="player2" class="vodplayer"></div>
 				</div>
@@ -129,7 +129,7 @@
 		<div class="popup" id="quiz5">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz5.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz5.png" alt="" />
 				<a href="#none" class="question_1" onclick="quizCheck('1')">보기1</a>
 				<a href="#none" class="question_2" onclick="quizCheck('0')">보기2</a>
 				<a href="#none" class="question_3" onclick="quizCheck('0')">보기3</a>
@@ -140,7 +140,7 @@
 		<div class="popup" id="quiz6">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz6.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz6.png" alt="" />
 				<div class="videoArea">
 					<div id="player3" class="vodplayer"></div>
 				</div>
@@ -154,7 +154,7 @@
 		<div class="popup" id="quiz7">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz7.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz7.png" alt="" />
 				<div class="videoArea">
 					<div id="player4" class="vodplayer"></div>
 				</div>
@@ -168,7 +168,7 @@
 		<div class="popup" id="quiz8">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz8.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz8.png" alt="" />
 				<div class="videoArea">
 					<div id="player5" class="vodplayer"></div>
 				</div>
@@ -182,7 +182,7 @@
 		<div class="popup" id="quiz9">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz9.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz9.png" alt="" />
 				<a href="#none" class="question_1" onclick="quizCheck('1')">보기1</a>
 				<a href="#none" class="question_2" onclick="quizCheck('0')">보기2</a>
 				<a href="#none" class="question_3" onclick="quizCheck('0')">보기3</a>
@@ -193,7 +193,7 @@
 		<div class="popup" id="quiz10">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz10.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz10.png" alt="" />
 				<div class="videoArea">
 					<div id="player6" class="vodplayer"></div>
 				</div>
@@ -207,7 +207,7 @@
 		<div class="popup" id="quiz11">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz11.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz11.png" alt="" />
 				<div class="videoArea">
 					<div id="player7" class="vodplayer"></div>
 				</div>
@@ -221,7 +221,7 @@
 		<div class="popup" id="quiz12">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/quiz12.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/quiz12.png" alt="" />
 				<div class="videoArea">
 					<div id="player8" class="vodplayer"></div>
 				</div>
@@ -235,7 +235,7 @@
 		<div class="popup" id="coupon">
 			<span></span>
 			<div>
-				<img src="/note/etude/etude_180713/images/coupon.png" alt="" />
+				<img src="/gigiiboc/portfolio/etude/etude_180713/images/coupon.png" alt="" />
 				<a href="#none" class="close" onclick="quizClose('#coupon')" alt="" />닫기</a>
 			</div>
 		</div>

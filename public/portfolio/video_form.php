@@ -4,9 +4,9 @@
 	<title>::: note :::</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
-	<link rel="stylesheet" type="text/css" href="/note/resource/css/reset.css">
-	<script src="/note/resource/js/jquery-1.11.3.min.js"></script>
-	<script src="/note/resource/js/jquery.easings.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/resource/css/reset.css">
+	<script src="/gigiiboc/portfolio/resource/js/jquery-1.11.3.min.js"></script>
+	<script src="/gigiiboc/portfolio/resource/js/jquery.easings.min.js"></script>
 </head>
 <body>
 	<style>
@@ -14,9 +14,9 @@
 		.pdt_con .sec3 .videoItem {position: relative;width: 100%;/* padding-top:56%; */height:300px;margin: 0 auto;}
 		.pdt_con .sec3 .videoItem video {position: absolute;left:0;top:0;width:100%;height:100%;object-fit: cover;}
 		.pdt_con .sec3 .videoItem video[poster] {}
-		.pdt_con .sec3 .videoItem .play_btn {display:none;position: absolute;left:0;top:0;width:100%;height:100%;background:url(/note/images/aestura/pdt_sec03_video.jpg) no-repeat center;}
+		.pdt_con .sec3 .videoItem .play_btn {display:none;position: absolute;left:0;top:0;width:100%;height:100%;background:url(/gigiiboc/portfolio/images/aestura/pdt_sec03_video.jpg) no-repeat center;}
 		.pdt_con .sec3 .videoItem .pause_btn {display:none;position: absolute;left:0;top:0;width:100%;height:100%;background:#000;filter:alpha(opacity:'0');opacity:0;}
-		.pdt_con .sec3 .videoItem .thumb {position: absolute;left:0;top:0;width:100%;height:100%;background:url(/note/images/aestura/pdt_sec03_video.jpg) no-repeat center;}
+		.pdt_con .sec3 .videoItem .thumb {position: absolute;left:0;top:0;width:100%;height:100%;background:url(/gigiiboc/portfolio/images/aestura/pdt_sec03_video.jpg) no-repeat center;}
 		.pdt_con .sec3 .videoItem.play .play_btn {display:none;}
 		.pdt_con .sec3 .videoItem.play .pause_btn {display:block;}
 		.pdt_con .sec3 .videoItem.play .thumb {display:none;}
@@ -28,46 +28,46 @@
 		.pdt_con .sec3 .videoItem.end .thumb {display:block;}
 	</style>
 	<!--		
-		1. ¿ÀÅäÇÃ·¹ÀÌ´Â muted(À½¼Ò°Å) ¼³Á¤ÀÌ ÀâÇô¾ß ¸ð¹ÙÀÏ¿¡¼­ Àç»ýµÊ 
-		2. ¾ÆÀÌÆù µ¿¿µ»ó ÄÚµù½Ã, ¿ÀÅäÇÃ·¹ÀÌ ¼³Á¤À» Àâ¾ÆÁà¾ß ½æ³×ÀÏÀÌ º¸ÀÌ¸ç, playsinline ¼³Á¤ÀÌ ÀâÇô¾ß ¿µ¿ª ³»¿¡¼­ Àç»ýµÊ.
-		3. video ÅÂ±×¿¡ -o-object-fit: cover;object-fit: cover; ¼Ó¼ºÀ» ³ÖÀ¸¸é background:cover Ã³·³ µÊ.
+		1. ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½Ì´ï¿½ muted(ï¿½ï¿½ï¿½Ò°ï¿½) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ 
+		2. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½, playsinline ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+		3. video ï¿½Â±×¿ï¿½ -o-object-fit: cover;object-fit: cover; ï¿½Ó¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ background:cover Ã³ï¿½ï¿½ ï¿½ï¿½.
 	-->
 	<div id="wrap">
 		<div id="container">
 			<div class="pdt_con">		
 				<div class="sec3">
 					<div class="videoItem dwrk_viewAnim" anime-stlye="1">
-						<video class="videoCtt" id="player01" muted autoplay playsinline poster="https://ssl.pstatic.net/tveta/libs/1303/1303623/87734eecf2139bd0aa1f_20200907112650236.png"><source src="/note/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
+						<video class="videoCtt" id="player01" muted autoplay playsinline poster="https://ssl.pstatic.net/tveta/libs/1303/1303623/87734eecf2139bd0aa1f_20200907112650236.png"><source src="/gigiiboc/portfolio/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
 						<a href="#none" class="play_btn" onclick="videoPlay('#player01')"></a>
 						<a href="#none" class="pause_btn" onclick="videoPause('#player01')"></a>
 						<a href="#none" class="thumb" onclick="videoPlay('#player01')"></a>
 					</div>
 					<div class="videoItem dwrk_viewAnim" anime-stlye="1">
-						<video class="videoCtt" id="player02" muted autoplay playsinline><source src="/note/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
+						<video class="videoCtt" id="player02" muted autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
 						<a href="#none" class="play_btn" onclick="videoPlay('#player02')"></a>
 						<a href="#none" class="pause_btn" onclick="videoPause('#player02')"></a>
 						<a href="#none" class="thumb" onclick="videoPlay('#player02')"></a>
 					</div>
 					<div class="videoItem dwrk_viewAnim" anime-stlye="1">
-						<video class="videoCtt" id="player03" muted autoplay playsinline><source src="/note/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
+						<video class="videoCtt" id="player03" muted autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
 						<a href="#none" class="play_btn" onclick="videoPlay('#player03')"></a>
 						<a href="#none" class="pause_btn" onclick="videoPause('#player03')"></a>
 						<a href="#none" class="thumb" onclick="videoPlay('#player03')"></a>
 					</div>
 					<div class="videoItem dwrk_viewAnim" anime-stlye="1">
-						<video class="videoCtt" id="player04" muted autoplay playsinline><source src="/note/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
+						<video class="videoCtt" id="player04" muted autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
 						<a href="#none" class="play_btn" onclick="videoPlay('#player04')"></a>
 						<a href="#none" class="pause_btn" onclick="videoPause('#player04')"></a>
 						<a href="#none" class="thumb" onclick="videoPlay('#player04')"></a>
 					</div>
 					<div class="videoItem dwrk_viewAnim" anime-stlye="1">
-						<video class="videoCtt" id="player05" muted autoplay playsinline><source src="/note/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
+						<video class="videoCtt" id="player05" muted autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
 						<a href="#none" class="play_btn" onclick="videoPlay('#player05')"></a>
 						<a href="#none" class="pause_btn" onclick="videoPause('#player05')"></a>
 						<a href="#none" class="thumb" onclick="videoPlay('#player05')"></a>
 					</div>
 					<div class="videoItem dwrk_viewAnim" anime-stlye="1">
-						<video class="videoCtt" id="player06" muted autoplay playsinline><source src="/note/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
+						<video class="videoCtt" id="player06" muted autoplay playsinline><source src="/gigiiboc/portfolio/resource/video/Aestura_1080p.mp4" type="video/mp4"></video>
 						<a href="#none" class="play_btn" onclick="videoPlay('#player06')"></a>
 						<a href="#none" class="pause_btn" onclick="videoPause('#player06')"></a>
 						<a href="#none" class="thumb" onclick="videoPlay('#player06')"></a>
@@ -81,10 +81,10 @@
 			$(target).each(function(){
 				var targetTop = $(this).offset().top;
 
-				if ($(this).attr('anime-stlye') == 1){ // È­¸é¿¡ ³ªÅ¸³¯¶§ ³ëÃâ, À¯Áö
+				if ($(this).attr('anime-stlye') == 1){ // È­ï¿½é¿¡ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½
 					if ($(window).scrollTop() >= targetTop - ($(window).height()/2)){
 						$(this).addClass('on')
-						// ¿µ»óÀÖÀ»°æ¿ì
+						// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						if ($(this).hasClass('videoItem') && !$(this).hasClass('end')){
 							$(this).removeClass('pause', 'end').addClass('play').find('.videoCtt').get(0).play();
 						}

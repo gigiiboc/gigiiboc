@@ -155,8 +155,8 @@
 	</div>
 	<!-- container -->
 	<!-- javascript -->
-	<script src="/note/banilaTV/jquery-3.3.1.min.js"></script>
-	<script src="/note/banilaTV/jquery-ui.min.js"></script>
+	<script src="/gigiiboc/portfolio/banilaTV/jquery-3.3.1.min.js"></script>
+	<script src="/gigiiboc/portfolio/banilaTV/jquery-ui.min.js"></script>
 	<script>
 		"use strict";
 		var tvCntWidth = $('.blTvBox').width(),//document.body.clientHeight*0.87,

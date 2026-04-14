@@ -4,7 +4,7 @@
 	<title>::: note :::</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
-	<link rel="stylesheet" type="text/css" href="/note/resource/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/resource/css/reset.css">
 	<style>
 	.video{
 		width: 100%; 
@@ -26,7 +26,7 @@
 <body>
 <div class="video">
     <video width="100%" poster="https://ssl.pstatic.net/tveta/libs/1303/1303623/87734eecf2139bd0aa1f_20200907112650236.png" autoplay loop controls>
-      <source src="/note/resource/video/Aestura_1080p.mp4" type="video/mp4">
+      <source src="/gigiiboc/portfolio/resource/video/Aestura_1080p.mp4" type="video/mp4">
     </video>
 </div>
 </body>
