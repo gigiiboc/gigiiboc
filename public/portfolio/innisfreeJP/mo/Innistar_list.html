@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>innisfree</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="title" content="innisfree">
+	<meta name="keywords" content="innisfree">
+	<meta name="description" content="innisfree">
+	<meta property="og:title" content="innisfree">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://www.innisfree.com/">
+	<meta property="og:site_name" content="innisfree">
+	<meta property="og:description" content="innisfree">
+	<script> 
+	var userAgent = navigator.userAgent.toLowerCase();
+	/*
+	// 모바일 홈페이지 바로가기 링크 생성 
+	if(userAgent.match('iphone')) { 
+		document.write('<link rel="apple-touch-icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('ipad')) { 
+		document.write('<link rel="apple-touch-icon" sizes="72*72" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('ipod')) { 
+		document.write('<link rel="apple-touch-icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('android')) { 
+		document.write('<link rel="shortcut icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/android.png" />');
+	} */
+	</script>
+	<link rel="shortcut icon" type="image/x-icon" href="images/common/favicon.ico">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,500,700|Noto+Sans+JP:400,500,700"> -->
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/teaser.css">
+</head>
+<body>
+<div class="loader"></div>
+<div id="wrap">
+	<!-- header : S -->
+	<header id="header">
+		<div class="headerIn">
+			<div class="logo_wrap">
+				<h1 class="page_ttl"><a href="#">INNIST<span>A</span>R</a></h1>
+			</div>
+			<div class="headL">
+				<a href="#none" class="btn_gnbToggle" onclick="navi (this, '#sideNavi')">
+					<i class="ico">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</i>
+				</a>
+			</div>
+			<div class="headR">
+				<a href="#none" onclick="showLayerJp('guidePopup02');return false;"></a>
+			</div>
+			<!-- sideNavi : S -->
+			<aside id="sideNavi" class="sideNav">
+				<a href="#none" class="gnbClose" onclick="navi (this, '#sideNavi')">
+					<i class="ico">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</i>
+				</a>
+				<div class="loginDiv">
+					<!-- 로그아웃 -->
+					<div>Log out <span>sugasuga</span></div>
+					<!-- 로그인 -->
+					<div class="on">Log in</div>
+				</div>
+				<ul class="nav">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">MEMBERSHIP</a></li>
+					<li><a href="#">INGREDIENTS</a></li>
+					<li><a href="#">PRODUCT</a></li>
+					<li><a href="#" onclick="showLayerJp('guidePopup01');return false;">INNIST<span>A</span>R</a></li>
+				</ul>
+				<a href="#" class="link01">BRAND SITE</a>
+				<a href="#" class="link01">MY PAGE</a>
+				<ul class="sns">
+					<li class="twitter"><a href="#"><span>twitter</span></a></li>
+					<!-- <li class="facebook"><a href="#"><span>facebook</span></a></li> -->
+					<li class="instagram"><a href="#"><span>instagram</span></a></li>
+				</ul>
+			</aside>
+			<!-- sideNavi : e -->
+		</div>
+	</header>	
+	<!-- header : E -->
+	<!-- container : S -->
+	<div id="container">
+		<div class="review_wrap">
+			<div class="bestReviewList">
+				<div class="list_ttl"><span class="first">FIRST PLACE</span></div>
+				<div class="list_ctt firstPlace">
+					<ul>
+						<li>
+							<a href="#none" class="thumbnail nosebum" onclick="showLayerJp('bestReviewPopup');return false;" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+							<div href="#none" class="userDiv">
+								<a class="ts_user"><span class="icon" style="background:#36b1bf">i</span><span class="name">innisfree_influencer</span></a>
+							</div>
+							<a href="#none" class="ts_zzim02">124</a>
+							<a href="#none" class="ts_cmt" onclick="showLayerJp('commentView');return false;">124</a>
+						</li>
+					</ul>
+				</div>
+				<div class="list_ttl"><span class="second">SECOND GROUP</span></div>
+				<div class="list_ctt">
+					<ul>
+						<li>
+							<a href="#none" class="thumbnail nosebum" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail greentea" style="background-image: url(images/temp/list_thumbnail03.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail vivid" style="background-image: url(images/temp/list_thumbnail04.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail nosebum" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail greentea" style="background-image: url(images/temp/list_thumbnail03.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail vivid" style="background-image: url(images/temp/list_thumbnail04.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+					</ul>
+				</div>
+				<div class="list_ttl"><span class="third">THIRD GROUP</span></div>
+				<div class="list_ctt">
+					<ul>
+						<li>
+							<a href="#none" class="thumbnail nosebum" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail greentea" style="background-image: url(images/temp/list_thumbnail03.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail vivid" style="background-image: url(images/temp/list_thumbnail04.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail nosebum" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail greentea" style="background-image: url(images/temp/list_thumbnail03.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+						<li>
+							<a href="#none" class="thumbnail vivid" style="background-image: url(images/temp/list_thumbnail04.jpg);"></a>
+							<a href="#none" class="ts_zzim">124</a>
+						</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="reviewList">	
+				<div class="videoBox">
+					<div class="swiper-container js_video_tab video_tab">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide nosebum"><a href="#none" onclick="videoPopOn('productVideo', '340855763');return false;"><img src="images/temp/video_nosebum.jpg" alt=""><span class="video_play"></span></a></div>
+							<div class="swiper-slide greentea"><a href="#none" onclick="videoPopOn('productVideo', '340860518');return false;"><img src="images/temp/video_greentea.jpg" alt=""><span class="video_play"></span></a></div>
+							<div class="swiper-slide vivid"><a href="#none" onclick="videoPopOn('productVideo', '340892278');return false;"><img src="images/temp/video_vivid.jpg" alt=""><span class="video_play"></span></a></div>
+							<div class="swiper-slide bija"><a href="#none" onclick="videoPopOn('productVideo', '340892300');return false;"><img src="images/temp/video_bija.jpg" alt=""><span class="video_play"></span></a></div>
+							<div class="swiper-slide volcanic"><a href="#none" onclick="videoPopOn('productVideo', '340892136');return false;"><img src="images/temp/video_volcanic.jpg" alt=""><span class="video_play"></span></a></div>
+						</div>
+					</div>
+				</div>
+				<div class="listBox">			
+					<div class="swiper-container list_tab js_list_tab">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<input type="radio" id="listCheck01" name="listCheck" value="" checked>
+								<label for="listCheck01" class="all">ALL</label>
+							</div>
+							<div class="swiper-slide">
+								<input type="radio" id="listCheck02" name="listCheck" value="">
+								<label for="listCheck02" class="nosebum">NO-SEBUM</label>
+							</div>
+							<div class="swiper-slide">
+								<input type="radio" id="listCheck03" name="listCheck" value="">
+								<label for="listCheck03" class="greentea">GREEN TEA</label>
+							</div>
+							<div class="swiper-slide">
+								<input type="radio" id="listCheck04" name="listCheck" value="">
+								<label for="listCheck04" class="vivid">VIVID COTTON INK</label>
+							</div>
+							<div class="swiper-slide">
+								<input type="radio" id="listCheck05" name="listCheck" value="">
+								<label for="listCheck05" class="bija">BIJA</label>
+							</div>
+							<div class="swiper-slide">
+								<input type="radio" id="listCheck06" name="listCheck" value="">
+								<label for="listCheck06" class="volcanic">VOLCANIC</label>
+							</div>
+						</div>
+					</div>
+					<div class="list_ctt">
+						<!-- 
+						개발 시 참고바랍니다.
+						1. 찜개수 가장 많은 것에 'zzim_target' 클래스 추가
+						2. li.zzim_target 항목을 제외한 리스트 중 첫번째와 두번째에 list01, list02 클래스 추가
+						-->
+						<ul>
+							<li class="list01">
+								<a href="#none" class="thumbnail nosebum" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li class="list02">
+								<a href="#none" class="thumbnail greentea" style="background-image: url(images/temp/list_thumbnail03.jpg);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li>
+								<a href="#none" class="thumbnail vivid" style="background-image: url(images/temp/list_thumbnail04.jpg);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li>
+								<a href="#none" class="thumbnail bija" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li class="zzim_target">
+								<a href="#none" class="thumbnail volcanic" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li>
+								<a href="#none" class="thumbnail all" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li>
+								<a href="#none" class="thumbnail all" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li>
+								<a href="#none" class="thumbnail all" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li>
+								<a href="#none" class="thumbnail all" style="background-image: url(images/temp/list_thumbnail02.jpg);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li>
+								<a href="#none" class="thumbnail volcanic noimage" style="background-image: url(images/common/logo.png);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+							<li>
+								<a href="#none" class="thumbnail bija noimage" style="background-image: url(images/common/logo.png);"></a>
+								<a href="#none" class="ts_zzim">124</a>
+							</li>
+						</ul>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- container : E -->
+	<!-- footer : S -->
+	<div class="writeBtn"><a href="#none" onclick="showLayerJp('reviewWritePopup');return false;"></a></div>
+	<div id="quick"><a href="#" class="goTop" onclick="scrollSet('#wrap');return false;"><span class="arrow">TOP</span></a></div>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/swiper.jquery.js"></script>
+	<script type="text/javascript" src="js/clipboard.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<!-- footer : E -->
+	<!-- 이벤트 가이드 레이어 팝업(6/17 부터 노출되는 이벤트 안내 레이어팝업) : S -->
+	<div id="guidePopup02" class="lyPopArea teaser guidePopup">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();return false;"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p01">イニスフリーオンラインショップオープン記念</p>
+					<p class="popUp_p02">BE INNIST<span>A</span>R!</p>
+					<p class="popUp_p03">5種類の人気商品のレビューを書いて、「いいね」をたくさん集めると、最大10,000ポイントがもらえます。</p>
+				</div>
+				<div class="teaser_lyctt"><img src="images/temp/guide_popup.jpg" alt=""></div>
+				<div class="teaser_lyfoot">
+					<div class="box02">
+						<p class="ttl">申込方法</p>
+						<div class="ctt"><img src="images/temp/guide_popup02.jpg" alt=""></div>
+					</div>
+					<div class="box03">
+						<p class="ttl">参加資格</p>
+						<ul>
+							<li><span></span>イニスフリー新規会員（2019.06.10~07.15の期間中に新規会員登録を行ったお客様）</li>
+							<li><span></span>旧イニスフリーブランドサイトの会員（2019.06.10~ 07.15の期間中に利用規約への同意及び個人情報更新を行ったお客様)</li>
+						</ul>
+						<p class="ttl">投稿期間</p>
+						<ul>
+							<li><span></span>2019.6.17~2019.7.17</li>
+						</ul>
+						<p class="ttl">結果発表</p>
+						<ul>
+							<li><span></span>2019.07.22に「いいね」数ランキングが発表される予定で、最上位を獲得したお客様にはご登録のメールアドレスにお知らせメールが送信されます。</li>
+							<li><span></span>2019.07.22「innist★r > ベストレビュー」より選定された人気レビューを確認できます。</li>
+						</ul>
+						<p class="ttl">注意事項</p>
+						<ul class="ctt">
+							<li><span></span>レビューの「いいね」はレビュー1件につき、お1人様1回限りです。</li>
+							<li><span></span>「いいね」数は各投稿に集まった「いいね」が多い順に集計されます。レビューを2件投稿しても合算されません。</li>
+							<li><span></span>1p=￥1として、イニスフリーのオンラインショップ及び店舗でご利用頂けます。（アマゾンは除く）</li>
+							<li><span></span>投稿されたレビューは、公式オンラインショップの商品レビューページにも掲載される場合があります。</li>
+						</ul>
+					</div>
+					<div class="box04">
+						<div class="snsBtn"><a href="#none" onclick="onoff(this, '.js_guidePopupSns')"><span>シェア</span></a></div>
+						<ul class="sns js_guidePopupSns">
+							<li class="twitter"><a href="#"><span>twitter</span></a></li>
+							<!-- <li class="facebook"><a href="#"><span>facebook</span></a></li> -->
+							<li class="sns01"><a href="#"><span>sns01</span></a></li>
+							<li class="url" id="copy" data-clipboard-action="copy" data-clipboard-target=".url a"><a href="#none">http://www.innisfree.com/</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 이벤트 가이드 레이어 팝업(6/17 부터 노출되는 이벤트 안내 레이어팝업) : E -->
+	<!-- 베스트 리뷰어 공고 팝업(07.22 0시부터 노출되는 팝업) : S -->
+	<div id="bestReviewNotice" class="lyPopArea teaser bestReviewNotice">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();return false;"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p01">INNIST<span>A</span>R ベストレビュー発表 </p>
+					<p class="popUp_p02">おめでとうございます！</p>
+					<p class="popUp_p03">ランキング上位1~3位を発表します。付与されたポイントは8月5日以降公式オンラインショップの「My page > ポイント情報」より確認できます。</p>
+				</div>
+				<div class="teaser_lyctt">
+					<div>
+						<p class="ttl first">FIRST PLACE</p>
+						<p class="ctt">ポイント : 10,000P</p>
+						<table>
+							<tbody>
+								<tr>
+									<th>メールアドレス</th>
+									<th>コミュニティID</th>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>		
+					<div>
+						<p class="ttl second">SECOND GROUP</p>
+						<p class="ctt">ポイント : 5,000P</p>
+						<table>
+							<tbody>
+								<tr>
+									<th>メールアドレス</th>
+									<th>コミュニティID</th>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>		
+					<div>
+						<p class="ttl third">THIRD GROUP</p>
+						<p class="ctt">ポイント : 1,000P</p>
+						<table>
+							<tbody>
+								<tr>
+									<th>メールアドレス</th>
+									<th>コミュニティID</th>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 베스트 리뷰어 공고 팝업(07.22 0시부터 노출되는 팝업) : E -->
+	<!-- 동영상레이어 : S -->
+	<div id="productVideo" class="lyPopArea VideoLayer">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="videoPopOff('productVideo');"><span>CLOSED</span></button>
+				<div class="teaser_lyctt">
+					<div class="vodCon1"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 동영상레이어 : E -->
+	<!-- 리뷰작성 : S -->
+	<div id="reviewWritePopup" class="lyPopArea reviewWritePopup">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();return false;"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">レビューを書く</p>
+				</div>
+				<div class="teaser_lyctt">
+					<div class="box01">
+						<p style="font-size:11px;color:#767676;position:relative;margin: 0 0 15px;"><span style="position:ausolute;top:0;left:0;color:#d10000">* </span>必須項目です</p>
+						<div class="ttl">ラインの選択 <span></span></div>
+						<div class="inp_wrap error">
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_1">
+								<label for="inp_radio1_1">No Sebum</label>
+							</span>
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_3">
+								<label for="inp_radio1_3">Green Tea</label>
+							</span>
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_2">
+								<label for="inp_radio1_2">Vivid Cotton Ink</label>
+							</span>
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_5">
+								<label for="inp_radio1_5">Bija Cica</label>
+							</span>
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_4">
+								<label for="inp_radio1_4">Volcanic</label>
+							</span>
+							<div class="help">
+								<p class="error">ラインを選択してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box02">
+						<div class="ttl">商品選択 <span></span></div>
+						<div class="inp_wrap error">
+							<div class="inp_select">
+								<select name="" id="">
+									<option value="">並び替え</option>
+									<option value="">並び替え2</option>
+									<option value="">並び替え3</option>
+								</select>
+							</div>
+							<div class="help">
+								<p class="error">商品を選択してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box03">
+						<div class="ttl">商品評価 <span></span></div>
+						<p>タップして商品の評価点数を付けてください。</p>
+						<div class="inp_wrap error">
+							<div class="rating_star_large">
+								<div class="pointArea">
+									<span class="pointBg" style="width: 100%;">이 제품은 <em>0</em>점입니다.</span>
+									<span class="starPoint">
+										<button>1.0</button>
+										<button>2.0</button>
+										<button>3.0</button>
+										<button>4.0</button>
+										<button>5.0</button>
+									</span>
+								</div>
+								<span class="innerPoint">5.0</span>
+							</div>
+							<div class="help">
+								<p class="error">商品を評価してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box04">
+						<div class="ttl">レビュータイトル <span></span></div>
+						<div class="inp_wrap error">
+							<div class="inp_text line_type">
+								<input type="text" name="" id="" placeholder="大30文字以内で入力してください">
+								<span class="charCnt"><em>0</em>/30</span>
+								<button class="btn_clear"><span>clear</span></button>
+							</div>
+							<div class="help">
+								<p class="error">タイトルを入力してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box05">
+						<div class="ttl">レビュー本文 <span></span></div>
+						<div id="innerImg" class="innerImg">
+							<ul>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""><span class="firstThum">代表イメージ</span></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li class="fileUpload"><input type="file" name="" id="file_id"><label for="file_id"><span>イメージ登録</span></label></li>
+							</ul>
+						</div>
+						<div class="cmt"><span>Tip. イメージを登録してレビューを投稿すると「いいね」をもっともらえる可能性が高くなります。</span><br>*4MB 以下のイメージを最大4枚まで登録できます。(gif, jpg, jpeg, bmp, pngのみ)</div>
+						<div class="inp_wrap error">
+							<div class="textWrap">
+								<textarea data-autoresize="" placeholder="本文の内容は最大1,000文字以内で入 力してください" class="textArea"></textarea>
+								<span class="charCnt"><em>0</em>/1000</span>
+							</div>
+							<div class="help">
+								<p class="error">10文字以上で入力してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box06">
+						<div class="ttl">注意事項</div> 
+						<ul class="ctt">
+							<li><span></span>この掲示板は作成したレビューを全会員と共有する場所であるため、全て公開することを原則とします。</li>
+							<li><span></span>必須入力項目（*）を全て入力すると、レビュー投稿が完了します。</li>
+							<li><span></span>他人の書いた文章を盗用するなど、正しくない方法でレビューを作成、またはこの掲示板に相応しくないレビューは任意に削除される場合があります。（同じ内容の繰り返し、意味不明な内容、広告を目的とした内容、他人を誹謗中傷する内容、低俗・下品な内容、出所不明の記事など）</li>
+							<li><span></span>投稿されたレビューは、公式オンラインショップの商品レビューページにも掲載される場合があります。</li>
+						</ul>						
+					</div>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap bChild2">
+						<a href="#" class="btn btn_primary btnSizeL"><span>キャンセル</span></a>
+						<a href="#" class="btn btn_default btnSizeL"><span>修正</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<!-- 리뷰작성 : E -->
+	<!-- 베스트 리뷰 팝업 : S -->
+	<div id="bestReviewPopup" class="lyPopArea bestReviewPopup">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();return false;"><span>CLOSED</span></button>
+				<div class="teaser_lyctt">
+					<div class="detailArea">
+						<div class="userDiv">
+							<span class="ts_user"><span class="icon" style="background:#a1c181">i</span><span class="name">innisfree_influencer</span></span>
+						</div>
+						<div class="bestRevieImgBoxType02 nosebum">
+							<div class="swiper-container js_bestRevieImgType02 bestRevieImg">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(images/temp/list_thumbnail02.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/temp/list_thumbnail03.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/temp/list_thumbnail04.jpg)"></div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<div class="rating_star_large">
+							<div class="pointArea">
+								<span class="pointBg" style="width: 100%;">이 제품은 <em>5</em>점입니다.</span>
+							</div>
+							<span class="innerPoint">5.0</span>
+						</div>
+						<p class="detail_p01">スーパーヴォルカニックポアクレイマスク</p>
+						<p class="detail_p02">良質なクレイマスク!</p>
+						<p class="detail_p03">階ホ金属シレフ後無ふけトよ禁間ネ能然かふ転雪あ草フつなり氏年とんを景教死作げかて楽国ハセクコ隔スレトサ外督ワシ点入ニチ受陸ノハネミ人倫剖わトひイ。際25公リぽや感球で田発ナホ映達ょぽスち輝再話へリゅ由口真ぶぽ本戸め棚5同半セ質周びよ</p>
+						<a href="#none" class="cmtText" onclick="">全10件のコメントを表示</a>
+						<a href="#none" class="ts_zzim02">124</a>
+						<a href="#none" class="ts_cmt" onclick="">124</a>
+						<a href="#" onclick="" class="moding">
+							<span class="span01"></span>
+							<span class="span02"></span>
+							<span class="span03"></span>
+						</a>
+					</div>
+					<div class="cmtArea">
+						<div class="commentWrite">
+							<span class="ts_user"><span class="icon" style="background:#36b1bf">i</span></span>
+							<div class="inp_wrap">
+								<div class="inp_text">
+									<input type="text" name="" id="" placeholder="コメントを入力してください">
+									<button class="btn_clear"><span>clear</span></button>
+								</div>
+								<button class="btn"><span>登録</span></button>
+								<div class="help"><p class="error">コメントの内容を入力してください。</p></div>
+							</div>
+						</div>
+						<div class="commentBox">
+							<ul>
+								<li>
+									<div class="ts_user"><span class="icon" style="background:#36b1bf">i</span></div>
+									<div class="cmt_ctt">
+										<div class="p01">aoyama_3223f</div>
+										<div class="p02">良質なクレイマスク!</div>
+										<div class="p03">2019.06.19</div>
+									</div>
+									<span class="close"></span>
+								</li>
+								<li>
+									<div class="ts_user"><span class="icon" style="background:#a1c181">i</span></div>
+									<div class="cmt_ctt">
+										<div class="p01">aoyama_3223f</div>
+										<div class="p02">良質なクレイマスク!</div>
+										<div class="p03">2019.06.19</div>
+									</div>
+									<a href="#none" class="close"><span class="span01"></span><span class="span02"></span><span class="hide">close</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<!-- 베스트 리뷰 팝업 : E -->
+	<!-- 댓글 전체보기 : S -->
+	<div id="commentView" class="lyPopArea commentView">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose()"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">コメント一覧</p>
+				</div>
+				<div class="teaser_lyctt">
+					<div class="cmtArea">
+						<div class="commentWrite">
+							<span class="ts_user"><span class="icon" style="background:#36b1bf">i</span></span>
+							<div class="inp_wrap">
+								<div class="inp_text">
+									<input type="text" name="" id="" placeholder="コメントを入力してください">
+									<button class="btn_clear"><span>clear</span></button>
+								</div>
+								<button class="btn"><span>登録</span></button>
+								<div class="help"><p class="error">コメントの内容を入力してください。</p></div>
+							</div>
+						</div>
+						<div class="commentBox">
+							<ul>
+								<li>
+									<div class="ts_user"><span class="icon" style="background:#36b1bf">a</span></div>
+									<div class="cmt_ctt">
+										<div class="p01">aoyama_3223f</div>
+										<div class="p02">良質なクレイマスク!</div>
+										<div class="p03">2019.06.19</div>
+									</div>
+									<a href="#none" class="close"><span class="span01"></span><span class="span02"></span><span class="hide">close</span></a>
+								</li>
+								<li>
+									<div class="ts_user"><span class="icon" style="background:#a1c181">a</span></div>
+									<div class="cmt_ctt">
+										<div class="p01">aoyama_3223f</div>
+										<div class="p02">良質なクレイマスク!</div>
+										<div class="p03">2019.06.19</div>
+									</div>
+									<a href="#none" class="close"><span class="span01"></span><span class="span02"></span><span class="hide">close</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<!-- 댓글 전체보기 : E -->
+</div>
+<script type="text/javascript">
+    var swiper = new Swiper('.js_bestRevieImgType02', {
+		pagination: '.js_bestRevieImgType02 > .swiper-pagination',
+		paginationClickable: true,
+    });
+	var swiper = new Swiper('.js_list_tab', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		spaceBetween: 10,
+	});
+	var swiper = new Swiper('.js_video_tab', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		spaceBetween: 7.5,
+	});
+	$(".loader").fadeOut("slow");
+	$(function(){
+		var clipboard = new Clipboard('#copy');
+		clipboard.on('success', function(e){
+			alert('클립보드에 복사되었어요!')
+		});
+		clipboard.on('error', function(e){
+			alert('선택된 영역을 복사해 주세요!')
+		});
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>innisfree</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="title" content="innisfree">
+	<meta name="keywords" content="innisfree">
+	<meta name="description" content="innisfree">
+	<meta property="og:title" content="innisfree">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://www.innisfree.com/">
+	<meta property="og:site_name" content="innisfree">
+	<meta property="og:description" content="innisfree">
+	<script> 
+	var userAgent = navigator.userAgent.toLowerCase();
+	/*
+	// 모바일 홈페이지 바로가기 링크 생성 
+	if(userAgent.match('iphone')) { 
+		document.write('<link rel="apple-touch-icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('ipad')) { 
+		document.write('<link rel="apple-touch-icon" sizes="72*72" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('ipod')) { 
+		document.write('<link rel="apple-touch-icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('android')) { 
+		document.write('<link rel="shortcut icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/android.png" />');
+	} */
+	</script>
+	<link rel="shortcut icon" type="image/x-icon" href="images/common/favicon.ico">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,500,700|Noto+Sans+JP:400,500,700"> -->
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/teaser.css">
+	<style type="text/css">
+		.popuphtml button {display: inline-block;height:25px;line-height:25px;text-align: center;padding:0 10px;margin:0  20px 10px 0;border: 1px solid #000;}
+	</style>
+</head>
+<body>
+<div id="wrap" class="main_wrap">
+	<!-- container : S -->
+	<div id="container">
+		<div class="popuphtml" style="width:90%;margin:200px auto 0;">
+			<button type="button" onclick="showLayerJp('guidePopup01');">이벤트 가이드팝1</button>
+			<button type="button" onclick="showLayerJp('guidePopup02');">이벤트 가이드팝2</button>
+			<button type="button" onclick="showLayerJp('bestReviewNotice');">베스트리뷰어 공고</button>
+			<button type="button" onclick="showLayerJp('findPw');">비번찾기</button>
+			<button type="button" onclick="showLayerJp('sendPw');">임시비밀번호발송</button>
+			<button type="button" onclick="showLayerJp('addInfo');">로그인-부가정보입력혜택</button>
+			<button type="button" onclick="showLayerJp('addInfo2');">회원가입2dep-부가정보입력혜택</button>
+			<button type="button" onclick="showLayerJp('comMember');">회원전환</button>
+			<button type="button" onclick="videoPopOn('productVideo', '63149691');return false;">동영상</button>
+			<button type="button" onclick="showLayerJp('productGuide');">제품 가이드 팝업</button>
+			<button type="button" onclick="showLayerJp('complePopup');">신청 완료 팝업</button>
+			<button type="button" onclick="showLayerJp('cancelPopup');">신청 취소 팝업</button>
+			<button type="button" onclick="showLayerJp('bestReviewPopup');">베스트 리뷰 팝업</button>
+			<button type="button" onclick="showLayerJp('reviewWritePopup');">리뷰작성</button>
+			<button type="button" onclick="showLayerJp('commentView');">댓글 전체보기</button>
+		</div>
+	</div>
+	<!-- container : E -->
+	<!-- footer : S -->
+
+	<!-- 이벤트 가이드 레이어 팝업(06.10 ~ 06.16 까지 gnb, 메인에서 이니스타 진입시 노출) : S -->
+	<div id="guidePopup01" class="lyPopArea teaser guidePopup">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p01">イニスフリーオンラインショップオープン記念</p>
+					<p class="popUp_p02">BE INNIST<span>A</span>R!</p>
+					<p class="popUp_p03">イニスフリーのベストセラー商品5種のレビューを書いて、「いいね」をたくさん集めると、最大10,000ポイントがもらえます。</p>
+				</div>
+				<div class="teaser_lyctt"><img src="images/temp/guide_popup.jpg" alt=""></div>
+				<div class="teaser_lyfoot">
+					<div class="box01">
+						<p class="ttl">イベント期間</p>
+						<div class="ctt">2019.6.17 – 2019.7.17</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 이벤트 가이드 레이어 팝업(06.10 ~ 06.16 까지 gnb, 메인에서 이니스타 진입시 노출) : E -->
+
+	<!-- 이벤트 가이드 레이어 팝업(6/17 부터 노출되는 이벤트 안내 레이어팝업) : S -->
+	<div id="guidePopup02" class="lyPopArea teaser guidePopup">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p01">イニスフリーオンラインショップオープン記念</p>
+					<p class="popUp_p02">BE INNIST<span>A</span>R!</p>
+					<p class="popUp_p03">5種類の人気商品のレビューを書いて、「いいね」をたくさん集めると、最大10,000ポイントがもらえます。</p>
+				</div>
+				<div class="teaser_lyctt"><img src="images/temp/guide_popup.jpg" alt=""></div>
+				<div class="teaser_lyfoot">
+					<div class="box02">
+						<p class="ttl">参加方法</p>
+						<div class="ctt"><img src="images/temp/guide_popup02.jpg" alt=""></div>
+					</div>
+					<div class="box03">
+						<p class="ttl">参加資格</p>
+						<ul>
+							<li><span></span>イニスフリー新規会員（2019.06.10~07.15の期間中に新規会員登録を行ったお客様）</li>
+							<li><span></span>旧イニスフリーブランドサイトの会員（2019.06.10~ 07.15の期間中に利用規約への同意及び個人情報更新を行ったお客様)</li>
+						</ul>
+						<p class="ttl">登録期間</p>
+						<ul>
+							<li><span></span>2019.6.17~2019.7.17</li>
+						</ul>
+						<p class="ttl">受賞者の発表</p>
+						<ul>
+							<li><span></span>2019.07.22に「いいね」数ランキングが発表される予定で、最上位を獲得したお客様にはご登録のメールアドレスにお知らせメールが送信されます。</li>
+							<li><span></span>2019.07.22「innist★r > ベストレビュー」より選定された人気レビューを確認できます。</li>
+						</ul>
+						<p class="ttl">留意事項</p>
+						<ul class="ctt">
+							<li><span></span>レビューの「いいね」はレビュー1件につき、一人１回に限定されます。</li>
+							<li><span></span>1~3位の「いいね」数に同率がある場合、イニスフリーの人気レビューを基準に選定されます。</li>
+							<li><span></span>「いいね」数は各投稿に集まった「いいね」が多い順に集計されます。レビューを2件投稿しても合算されません。</li>
+							<li><span></span>1P=￥1として、商品ご購入の際、現金と同様に利用できます。</li>
+							<li><span></span>投稿されたレビューは、公式オンラインショップの商品レビューページにも掲載される場合があります。</li>
+						</ul>
+					</div>
+					<div class="box04">
+						<div class="snsBtn"><a href="#none" onclick="onoff(this, '.js_guidePopupSns')"><span>シェア</span></a></div>
+						<ul class="sns js_guidePopupSns">
+							<li class="twitter"><a href="#"><span>twitter</span></a></li>
+							<li class="facebook"><a href="#"><span>facebook</span></a></li>
+							<li class="sns01"><a href="#"><span>sns01</span></a></li>
+							<li class="url" id="copy" data-clipboard-action="copy" data-clipboard-target=".url a"><a href="#none">http://www.innisfree.com/</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 이벤트 가이드 레이어 팝업(6/17 부터 노출되는 이벤트 안내 레이어팝업) : E -->
+
+	<!-- 베스트 리뷰어 공고 팝업(07.22 0시부터 노출되는 팝업) : S -->
+	<div id="bestReviewNotice" class="lyPopArea teaser bestReviewNotice">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">INNIST<span>A</span>R BEST REVIEW</p>
+					<p class="popUp_p03">おめでとうございます! ランキング上位1～~3位を発表します。付与されたポイントは8月5日から公式オンラインショップの「My Page > ポイント情報」より確認できます。</p>
+				</div>
+				<div class="teaser_lyctt">
+					<div>
+						<p class="ttl first">FIRST PLACE</p>
+						<p class="ctt">ポイント : 10,000P</p>
+						<table>
+							<tbody>
+								<tr>
+									<th>メールアドレス</th>
+									<th>コミュニティID</th>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>		
+					<div>
+						<p class="ttl second">SECOND GROUP</p>
+						<p class="ctt">ポイント : 5,000P</p>
+						<table>
+							<tbody>
+								<tr>
+									<th>メールアドレス</th>
+									<th>コミュニティID</th>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>		
+					<div>
+						<p class="ttl third">THIRD GROUP</p>
+						<p class="ctt">ポイント : 1,000P</p>
+						<table>
+							<tbody>
+								<tr>
+									<th>メールアドレス</th>
+									<th>コミュニティID</th>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+								<tr>
+									<td>inni111@email.com</td>
+									<td>イニスフリー111</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 베스트 리뷰어 공고 팝업(07.22 0시부터 노출되는 팝업) : E -->
+
+	<!-- 비번찾기 : S -->
+	<div id="findPw" class="lyPopArea teaser findPw">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">パスワードをお忘れですか？</p>
+				</div>
+				<div class="teaser_lyctt">
+					<p>下記にメールアドレスを入力してください。<br>新しいパスワードをお送りします。</p>		
+					<div class="inp_wrap">
+						<div class="inp_text line_type">
+							<input type="email" name="" id="" placeholder="メールアドレスを入力してください">
+							<button class="btn_clear"><span>clear</span></button>
+							<div class="help">
+								<p class="error">有効なメールアドレスを入力してください。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap bChild2">
+						<a href="#" class="btn btn_primary btnSizeL"><span>キャンセル</span></a>
+						<a href="#" class="btn btn_default btnSizeL"><span>送信</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 비번찾기 : E -->
+
+	<!-- 임시비밀번호 발송 : S -->
+	<div id="sendPw" class="lyPopArea teaser sendPw">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">パスワードをお忘れですか？</p>
+				</div>
+				<div class="teaser_lyctt">
+					<p>パスワードを送信しました。 <br>しばらくしてからご確認ください。</p>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap bChild2">
+						<a href="#" class="btn btn_primary btnSizeL"><span>いいえ</span></a>
+						<a href="#" class="btn btn_default btnSizeL"><span>はい</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 임시비밀번호 발송 : E -->	
+
+	<!-- 로그인-부가정보입력혜택 : S -->
+	<div id="addInfo" class="lyPopArea teaser addInfo">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">イニスフリー公式オンラインシ<br>ョップ利用規約への同意</p>
+					<p class="popUp_p03">8月にイニスフリーブランドサイトが公式オンラインショップとして、 リニューアルオープンします。</p>
+					<p class="popUp_p04">改定された利用規約及びプライバシーポリシーに同意し、追加情報を登録すると、 8月にオープンする公式オンラインショップで利用可能な割引コードをプレゼントします。</p>
+				</div>
+				<div class="teaser_lyctt">
+					<div class="coupon">
+						<div class="couponBox" style="margin: 0 20px 30px;">
+							<img src="images/temp/coupon_img.png" class="coupon_img"alt="">
+							<ul>
+								<li><span></span>8月の公式オンラインショップオープン後に利用できます。</li>
+								<li><span></span>オンラインショップより￥5,000（税抜）以上のご購入で利用できます。</li>
+								<li><span></span>オンラインショップご利用の際、お客様に合ったおすすめ商品や特別キャンペーンの情報提供サービスを受けることができます。</li>
+								<li><span></span>有効期限は2019.8.31までです。</li>
+							</ul>
+							<div class="ttl">※ご注意下さい※</div>
+							<ul>
+								<li><span></span>申し訳ございませんが、このページを閉じてしまいますと再度表示させることができません。</li>
+								<li><span></span>事前会員登録の特典である10％割引クーポンをご希望の方はご注意下さい。</li>
+								<li><span></span>追加情報は8/5以降に修正・追加頂ける予定ですが、クーポンはお受け取り頂けません。</li>
+							</ul>
+						</div>
+						<span class="bg"></span>
+					</div>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap">
+						<a href="#" class="btn btn_default btnSizeL"><span>利用規約同意へ進む</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 로그인-부가정보입력혜택 : E -->
+
+	<!-- 회원가입2dep-부가정보입력혜택 : S -->
+	<div id="addInfo2" class="lyPopArea teaser addInfo2">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">追加情報登録特典のご案内</p>
+					<p class="popUp_p03">お客様はまだ全ての追加情報を登録していません。今すぐ追加情報を登録し、お得な特典をお楽しみください。</p>
+				</div>
+				<div class="teaser_lyctt"><img src="images/temp/login_eventimg.jpg" alt=""></div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap">
+						<a href="#" class="btn btn_primary btnSizeL"><span>追加情報を登録しない</span></a>
+						<a href="#" class="btn btn_default btnSizeL"><span>付加情報を登録してクーポンをもらう</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 회원가입2dep-부가정보입력혜택 : E -->
+
+	<!-- 회원전환 : S -->
+	<div id="comMember" class="lyPopArea teaser comMember">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">イニスフリー公式オンラインシ<br>ョップへの会員情報移行</p>
+				</div>
+				<div class="teaser_lyctt">
+					<p>お客様の会員情報を新規オープン予定の公式オンラインショップへ移行しない場合、ティザーサイトイベントの申し込みや特典の利用はできません。公式オンラインショップへの会員情移行をキャンセルしますか？</p>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap bChild2">
+						<a href="#" class="btn btn_primary btnSizeL"><span>いいえ</span></a>
+						<a href="#" class="btn btn_default btnSizeL"><span>はい</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 회원전환 : E -->
+
+	<!-- 동영상 팝업 S -->
+	<div id="productVideo" class="lyPopArea VideoLayer">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="videoPopOff('productVideo');"><span>CLOSED</span></button>
+				<div class="teaser_lyctt">
+					<div class="vodCon1"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 동영상 팝업 E -->
+
+	<!-- 제품 가이드 팝업 S -->
+	<div id="productGuide" class="lyPopArea productGuide">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02" style="font-weight:700">PRODUCT PAGE GUIDE</p>
+					<p class="popUp_p03">イニスフリーショッピングモールオープン記念!</p>
+					<p class="popUp_p02">スペシャルセット<br>予約申し込みイベント</p>
+					<p class="popUp_p03" style="font-size:13px">参加者が増えるほど割引額はアップ</p>
+				</div>
+				<div class="slideBox">
+					<p class="ttl">製品</p>
+					<div class="ctt">							
+						<div class="swiper-container js_productGuideSlide productGuideSlide">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide01.png" alt=""></div>
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide02.png" alt=""></div>
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide03.png" alt=""></div>
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide04.png" alt=""></div>
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide05.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="teaser_lyctt">
+					<div class="merit">
+						<p class="ttl">申込特典</p>
+						<div class="ctt">
+							<dl><dt><span>100人</span>達成時</dt><dd>スペシャルセット販売確定<br>+送料無料&ギフトラッピング<br>+1段階割引</dd></dl>
+							<img src="images/temp/merit_img.jpg" alt="" style="width:100%;display:block;margin: 8px 0;">
+							<dl><dt><span>200人</span>達成時</dt><dd>+2段階割引</dd></dl>
+							<dl><dt><span>300人</span>達成時</dt><dd>+3段階割引</dd></dl>
+						</div>
+					</div>
+					<div class="StepBox">
+						<p class="ttl">参加方法</p>
+						<div class="ctt">
+							<ul>
+								<li class="step01"><span>Step 1</span>原料を選択</li>
+								<li class="step02"><span>Step 2</span>「申込む」<br>をタップ</li>
+								<li class="step03"><span>Step 3</span>申し込み完了</li>
+							</ul>
+						</div>
+					</div>
+					<div class="textBox">
+						<p class="ttl">参加資格</p>
+						<ul>
+							<li><span></span>イニスフリー新規会員(2019.06. 10-2019.07.15の期間中に新規会員登録を行ったお客様）</li>
+							<li><span></span>旧イニスフリーブランドサイトの会員(2019.06. 10-2019.07.15の期間中に利用規約への同意及び個人情報更新を行ったお客様)</li>
+						</ul>
+						<p class="ttl">イベント期間</p>
+						<ul>
+							<li><span></span>2019.6.10–2019.7.15</li>
+						</ul>
+						<p class="ttl">申込結果</p>
+						<ul>
+							<li><span></span>7月15日のイベント終了後、お申込み済みのお客様のみ、最終的に適用される週別イベントの割引特典をメールでご案内いたします。</li>
+						</ul>
+						<p class="ttl">商品の購入方法</p>
+						<ul class="ctt">
+							<li><span></span>8月5日の公式オンラインショップオープン後、イベントページより商品を割引価格でご購入いただけます。</li>
+						</ul>
+						<p class="ttl">注意事項</p>
+						<ul class="ctt">
+							<li><span></span>お申込期限前でも300名の定員に達し次第、受付終了となります。</li>
+							<li><span></span>メンバーシップイベント特典(¥540割引)は適用できません。</li>
+							<li><span></span>8.5~8.31の期間内にご購入いただけます。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 제품 가이드 팝업 E -->
+
+	<!-- 신청 완료 팝업 S -->
+	<div id="complePopup" class="lyPopArea complePopup">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">お申込みが完了しました。</p>
+				</div>
+				<div class="teaser_lyctt">
+					<p>最終的に適用される割引特典は各イベント終了後、<br>その都度メールにてご案内します。</p>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap">
+						<a href="#" class="btn btn_default btnSizeL"><span>はい</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 신청 완료 팝업 e -->
+
+	<!-- 신청 취소 팝업 S -->
+	<div id="cancelPopup" class="lyPopArea cancelPopup">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">お申込みをキャンセルしますか？</p>
+				</div>
+				<div class="teaser_lyctt">
+					<p>キャンセルした後、再度申込みできますが、<br>その後のキャンセルはできません。</p>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap bChild2">
+						<a href="#" class="btn btn_primary btnSizeL"><span>いいえ</span></a>
+						<a href="#" class="btn btn_default btnSizeL"><span>はい</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 신청 취소 팝업 e -->
+
+	<!-- 베스트 리뷰 팝업 : S -->
+	<div id="bestReviewPopup" class="lyPopArea bestReviewPopup">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyctt">
+					<div class="detailArea">
+						<div class="userDiv">
+							<span class="ts_user"><span class="icon" style="background:#a1c181">i</span><span class="name">innisfree_influencer</span></span>
+						</div>
+						<div class="bestRevieImgBoxType02 nosebum">
+							<div class="swiper-container js_bestRevieImgType02 bestRevieImg">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image:url(images/temp/list_thumbnail02.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/temp/list_thumbnail03.jpg)"></div>
+									<div class="swiper-slide" style="background-image:url(images/temp/list_thumbnail04.jpg)"></div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<div class="rating_star_large">
+							<div class="pointArea">
+								<span class="pointBg" style="width: 100%;">이 제품은 <em>5</em>점입니다.</span>
+							</div>
+							<span class="innerPoint">5.0</span>
+						</div>
+						<p class="detail_p01">スーパーヴォルカニックポアクレイマスク</p>
+						<p class="detail_p02">良質なクレイマスク!</p>
+						<p class="detail_p03">階ホ金属シレフ後無ふけトよ禁間ネ能然かふ転雪あ草フつなり氏年とんを景教死作げかて楽国ハセクコ隔スレトサ外督ワシ点入ニチ受陸ノハネミ人倫剖わトひイ。際25公リぽや感球で田発ナホ映達ょぽスち輝再話へリゅ由口真ぶぽ本戸め棚5同半セ質周びよ</p>
+						<a href="#none" class="cmtText">全10件のコメントを表示</a>
+						<a href="#none" class="ts_zzim02">124</a>
+						<a href="#none" class="ts_cmt">124</a>
+						<a href="#" class="moding">
+							<span class="span01"></span>
+							<span class="span02"></span>
+							<span class="span03"></span>
+						</a>
+					</div>
+					<div class="cmtArea">
+						<div class="commentWrite">
+							<span class="ts_user"><span class="icon" style="background:#36b1bf">i</span></span>
+							<div class="inp_wrap">
+								<div class="inp_text">
+									<input type="text" name="" id="" placeholder="コメントを入力してください。">
+									<button class="btn_clear"><span>clear</span></button>
+								</div>
+								<button class="btn"><span>登録</span></button>
+								<div class="help"><p class="error">コメントの内容を入力してください。</p></div>
+							</div>
+						</div>
+						<div class="commentBox">
+							<ul>
+								<li>
+									<div class="ts_user"><span class="icon" style="background:#36b1bf">i</span></div>
+									<div class="cmt_ctt">
+										<div class="p01">aoyama_3223f</div>
+										<div class="p02">良質なクレイマスク!</div>
+										<div class="p03">2019.06.19</div>
+									</div>
+									<span class="close"></span>
+								</li>
+								<li>
+									<div class="ts_user"><span class="icon" style="background:#a1c181">i</span></div>
+									<div class="cmt_ctt">
+										<div class="p01">aoyama_3223f</div>
+										<div class="p02">良質なクレイマスク!</div>
+										<div class="p03">2019.06.19</div>
+									</div>
+									<a href="#none" class="close"><span class="span01"></span><span class="span02"></span><span class="hide">close</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<!-- 베스트 리뷰 팝업 : E -->
+
+	<!-- 리뷰작성 : S -->
+	<div id="reviewWritePopup" class="lyPopArea reviewWritePopup">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">レビューを書く</p>
+				</div>
+				<div class="teaser_lyctt">
+					<div class="box01">
+						<p style="font-size:11px;color:#767676;position:relative;margin: 0 0 15px;"><span style="position:ausolute;top:0;left:0;color:#d10000">* </span>必須項目ですので, 全て入力してください</p>
+						<div class="ttl">ラインの選択 <span></span></div>
+						<div class="inp_wrap error">
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_1">
+								<label for="inp_radio1_1">No Sebum</label>
+							</span>
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_3">
+								<label for="inp_radio1_3">Green Tea</label>
+							</span>
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_2">
+								<label for="inp_radio1_2">Vivid Cotton Ink</label>
+							</span>
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_5">
+								<label for="inp_radio1_5">Bija Cica</label>
+							</span>
+							<span class="inp_radio">
+								<input type="radio" name="inp_radio1" id="inp_radio1_4">
+								<label for="inp_radio1_4">Jeju Volcanic</label>
+							</span>
+							<div class="help">
+								<p class="error">ラインを選択してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box02">
+						<div class="ttl">商品選択 <span></span></div>
+						<div class="inp_wrap error">
+							<div class="inp_select">
+								<select name="" id="">
+									<option value="">並び替え</option>
+									<option value="">並び替え2</option>
+									<option value="">並び替え3</option>
+								</select>
+							</div>
+							<div class="help">
+								<p class="error">商品を選択してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box03">
+						<div class="ttl">商品評価 <span></span></div>
+						<p>タップして商品の評価点数を付けてください。</p>
+						<div class="inp_wrap error">
+							<div class="rating_star_large">
+								<div class="pointArea">
+									<span class="pointBg" style="width: 100%;">이 제품은 <em>0</em>점입니다.</span>
+									<span class="starPoint">
+										<button>1.0</button>
+										<button>2.0</button>
+										<button>3.0</button>
+										<button>4.0</button>
+										<button>5.0</button>
+									</span>
+								</div>
+								<span class="innerPoint">5.0</span>
+							</div>
+							<div class="help">
+								<p class="error">商品を評価してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box04">
+						<div class="ttl">レビュータイトル <span></span></div>
+						<div class="inp_wrap error">
+							<div class="inp_text line_type">
+								<input type="text" name="" id="" placeholder="大30文字以内で入力してください">
+								<span class="charCnt"><em>0</em>/30</span>
+								<button class="btn_clear"><span>clear</span></button>
+							</div>
+							<div class="help">
+								<p class="error">タイトルを入力してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box05">
+						<div class="ttl">レビュー本文 <span></span></div>
+						<div id="innerImg" class="innerImg">
+							<ul>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""><span class="firstThum">代表写真</span></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li>
+									<div class="imgBox"><img src="images/temp/file_thumbnail.png" alt=""></div>
+									<div class="close"><a href="#none">削除する</a></div>
+								</li>
+								<li class="fileUpload"><input type="file" name="" id="file_id"><label for="file_id"><span>写真添付</span></label></li>
+							</ul>
+						</div>
+						<div class="inp_wrap error">
+							<div class="textWrap">
+								<textarea data-autoresize="" placeholder="本文の内容は最大1,000文字以内で入 力してください" class="textArea"></textarea>
+								<span class="charCnt"><em>0</em>/1000</span>
+							</div>
+							<div class="help">
+								<p class="error">10文字以上で入力してください。</p>
+							</div>
+						</div>
+					</div>
+					<div class="box06">
+						<div class="ttl">注意事項</div> 
+						<ul class="ctt">
+							<li><span></span>この掲示板は作成したレビューを全会員と共有する場所であるため、全て公開することを原則とします。</li>
+							<li><span></span>必須入力項目（*）を全て入力すると、レビュー投稿が完了します。</li>
+							<li><span></span>他人の書いた文章を盗用するなど、正しくない方法でレビューを作成、またはこの掲示板に相応しくないレビューは任意に削除される場合があります。（同じ内容の繰り返し、意味不明な内容、広告を目的とした内容、他人を誹謗中傷する内容、低俗・下品な内容、出所不明の記事など）</li>
+						</ul>						
+					</div>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap bChild2">
+						<a href="#" class="btn btn_primary btnSizeL"><span>キャンセル</span></a>
+						<a href="#" class="btn btn_default btnSizeL"><span>投稿</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<!-- 리뷰작성 : E -->
+
+	<!-- 댓글 전체보기 : S -->
+	<div id="commentView" class="lyPopArea commentView">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">コメント一覧</p>
+				</div>
+				<div class="teaser_lyctt">
+					<div class="cmtArea">
+						<div class="commentWrite">
+							<span class="ts_user"><span class="icon" style="background:#36b1bf">i</span></span>
+							<div class="inp_wrap">
+								<div class="inp_text">
+									<input type="text" name="" id="" placeholder="コメントを入力してください。">
+									<button class="btn_clear"><span>clear</span></button>
+								</div>
+								<button class="btn"><span>登録</span></button>
+								<div class="help"><p class="error">コメントの内容を入力してください。</p></div>
+							</div>
+						</div>
+						<div class="commentBox">
+							<ul>
+								<li>
+									<div class="ts_user"><span class="icon" style="background:#36b1bf">a</span></div>
+									<div class="cmt_ctt">
+										<div class="p01">aoyama_3223f</div>
+										<div class="p02">良質なクレイマスク!</div>
+										<div class="p03">2019.06.19</div>
+									</div>
+									<a href="#none" class="close"><span class="span01"></span><span class="span02"></span><span class="hide">close</span></a>
+								</li>
+								<li>
+									<div class="ts_user"><span class="icon" style="background:#a1c181">a</span></div>
+									<div class="cmt_ctt">
+										<div class="p01">aoyama_3223f</div>
+										<div class="p02">良質なクレイマスク!</div>
+										<div class="p03">2019.06.19</div>
+									</div>
+									<a href="#none" class="close"><span class="span01"></span><span class="span02"></span><span class="hide">close</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<!-- 댓글 전체보기 : E -->
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/circle-progress.js"></script>
+	<script type="text/javascript" src="js/swiper.jquery.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<!-- footer : E -->
+</div>
+<script type="text/javascript">
+</script>
+</body>
+</html>

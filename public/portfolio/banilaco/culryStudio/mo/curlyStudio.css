@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* 태그초기화 */
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+html, body{width:100%;height:100%;}
+body{margin:0;font-family:'noto','맑은고딕',sans-serif;font-weight:400;font-size:13px;line-height:21px;color:#222;}
+div, iframe, h1, h2, h3, h4, h5, h6, p, button, abbr, address, blockquote, q, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr{margin:0; padding:0;}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption{display:block;margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6{font-weight:400;font-size:1rem;line-height:1;}
+ol, ul, li{list-style:none;}
+table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+form, fieldset, iframe{border:0;}
+img{border:0;vertical-align:top;font-size:0;line-height:0;}
+button{border:0;}
+hr{height:0;border:0;}
+i, em, address{font-style:normal;}
+u{text-decoration:none;}
+strong, b{font-weight:600;}
+label, button{cursor:pointer;}
+blockquote, q{quotes:none;}
+input, textarea, select, button{padding:0;font-family:'noto','맑은고딕',sans-serif;font-size:13px;font-weight:400;vertical-align:top;background:none;border:0;outline:none;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+select::-ms-expand{display:none;}
+a{color:#222;text-decoration:none;outline:none;}
+a:hover{text-decoration:none;}
+img{max-width:100%;vertical-align:top;}
+img, input, textarea, fieldset{border:none;outline:none;border-radius:0;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{-webkit-appearance:none;}
+
+/* slick */
+.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent;}
+.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0;}
+.slick-list:focus{outline:none;}
+.slick-list.dragging{cursor:pointer;cursor:hand;}
+.slick-slider .slick-track,
+.slick-slider .slick-list{-webkit-transform:translate3d(0, 0, 0);-moz-transform:translate3d(0, 0, 0);-ms-transform:translate3d(0, 0, 0); -o-transform:translate3d(0, 0, 0);	transform:translate3d(0, 0, 0);}
+.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto;}
+.slick-track:before,
+.slick-track:after{display:table;content:'';}
+.slick-track:after{clear:both;}
+.slick-loading .slick-track{visibility:hidden;}
+.slick-slide{display:none;float:left;height:100%;min-height:1px;}
+[dir='rtl'] .slick-slide{float:right;}
+.slick-slide img{display:block;}
+.slick-slide.slick-loading img{display:none;}
+.slick-slide.dragging img{pointer-events:none;}
+.slick-initialized .slick-slide{display:block;}
+.slick-loading .slick-slide{visibility:hidden;}
+.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent;}
+.slick-arrow.slick-hidden{display:none;}
+
+/* content */
+#wrap.brand.curly_studio{padding-top: 0;position: relative;background: #bee0f2;}
+#curly_content01 {text-align:center;}
+
+.curly_viewArea{position: relative;z-index: 1; color: #fff;}
+.curly_viewArea > span{display: block;width: 100%;height: 100vh;}
+
+.curly_ttlCon {position: fixed;top: 0;left:0;width:100%;margin-top: 20vw;}
+.curly_ttlCon img{width:100%;}
+.curly_ttlCon.on {}
+.curly_ttlCon.on img{}
+
+.curly_viewCon{overflow: hidden;position: fixed;top: 0;left: 0;width: 100%;height: 0;padding-top: 132%;margin-top: 85vw;}
+.curly_viewCon .curly_viewImg{display:none;position: absolute;top: 0;left: 0;}
+.curly_viewCon .curly_viewImg.on{display:block;}
+.curly_viewCon .curly_viewImg img{width:100%;}
+.curly_viewCon span.curly_leftPd{position:absolute;background:#bee0f2;top:0;left:0;height:100%;width:16%;}
+.curly_viewCon span.curly_rightPd{position:absolute;background:#bee0f2;top:0;right:0;height:100%;width:16%;}
+.curly_viewCon.on{}
+.curly_viewCon.on .curly_viewImg{}
+.curly_viewCon.on .curly_viewImg.on{}
+.curly_viewCon.on .curly_viewImg img{}
+.curly_viewCon.on span.curly_leftPd{}
+.curly_viewCon.on span.curly_rightPd{}
+
+.curly_cttArea{position: relative;z-index: 2;}
+.curly_cttBox{}
+.curly_BgArea{position: relative;background: #fff;padding-bottom: 200px;}
+.curly_textCon{position:relative;padding-top:45px;}
+.curly_textCon p span{display:inline-block;vertical-align:middle;font-size:27px;color:#98c5dc;font-weight:600;line-height:42px;}
+.curly_textCon p img{display:inline-block;vertical-align:middle;width:57px;margin:0 6px;font-size:0;line-height:0;}
+.curly_videoCon{position:relative;display: block;width: calc(100% - 24px);margin: 40px auto 0;overflow: hidden;}
+.curly_videoCon .curly_videoBox{position: relative;height: 0;padding-top: 56.3%;z-index: 2;}
+.curly_videoCon .curly_videoBox video{position:absolute;top:0;left:0;width:100%;height:100%;}
+.curly_videoCon .curly_videoBox video source{position:absolute;top:0;left:0;width:100%;height:100%;}
+.curly_videoCon .curly_videoBox a.curly_thumb{position:absolute;left:0;top:0;width:100%;height:100%;}
+.curly_videoCon .curly_videoBox.play a.curly_thumb{display:none;}
+.curly_videoCon .curly_video_img{width:100%;}
+.curly_videoCon .curly_video_gif{position:absolute;top:50%;left:50%;display:inline-block;background:#2f2725;border-radius:50%;margin:-30px 0 0 -30px;}
+.curly_videoCon .curly_video_gif img{width:40px;padding:10px;}
+.curly_video_text{position: relative;z-index: 2;display: block;text-align:center;width:100%;font-size:13px;font-weight:600;line-height:18px;margin-top: 15px;}
+.curly_videoBg{position:absolute;bottom:0;left:0;width:100%;height:0;background:#2f2725;transition: 0.5s all;z-index:1;}
+.curly_pdtTextCon{padding:63px 0 54px;text-align:center;background: #f3f3f3;}
+.curly_slide{height:0;padding-top:100%;}
+.curly_slide .slick-list{position:absolute;top:0;left:0;width:100%;height:100%;}
+.curly_slide .slick-slide > div{position:relative;}
+.curly_slide .slick-slide > div img{width:100%;}
+.curly_slide .slick-slide > div .text{position:absolute;bottom:29px;left:21px;width:223px;}
+.curly_slide .slick-dots{position:absolute;bottom:-23px;left:0;text-align:center;width:100%;font-size:0;line-height:0;}
+.curly_slide .slick-dots li{display:inline-block;overflow:hidden;width:8px;height:8px;background:rgba(255,255,255,0.5);border-radius:50%;margin:0 4px;}
+.curly_slide .slick-dots li button{font-size:0;text-indent:-9999px;}
+.curly_slide .slick-dots li.slick-active{background:rgba(255,255,255,1);}
+.curly_slide .slick-dots li.slick-active button{}
+.curly_info{padding:59px 21px 62px;text-align:left;}
+.curly_info p{font-weight:600;color:#fff;}
+.curly_info .p1{font-size:21px;line-height:27px;}
+.curly_info .p2{font-size:11px;line-height:16px;margin-top:7px;}
+.curly_info .p3{font-size:14px;line-height:16px;margin-top:9px;}
+.curly_info ul{margin-top:17px;}
+.curly_info li{position:relative;padding-left:14px;margin-top:7px;font-size:11px;line-height:15px;color:#fff;background:url('../pc/images/curly_info.png') no-repeat left 4px / 7px auto;}
+.curly_info a{display:inline-block;text-align:center;margin-top:24px;width:86px;font-size:11px;line-height:26px;font-weight:600;color:#fff;border:2px solid #fff;}
+.curly_info.black p{color:#2f2725;}
+.curly_info.black li{color:#2f2725;background:url('../pc/images/curly_info_black.png') no-repeat left 4px / 7px auto;}
+.curly_info.black a{color:#2f2725;border:2px solid #2f2725;}
+
+.curly_cttArea.on{}
+.curly_cttBox{}
+.curly_textCon{}
+.curly_textCon p span{}
+.curly_textCon p img{}
+.curly_videoCon{}
+.curly_videoCon .curly_videoBox{}
+.curly_videoCon .curly_videoBox video{}
+.curly_videoCon .curly_videoBox video source{}
+.curly_videoCon .curly_videoBox a.curly_thumb{}
+.curly_videoCon .curly_video_img{}
+.curly_videoCon .curly_video_gif{}
+.curly_videoCon .curly_video_gif img{}
+.curly_video_text{}
+.curly_pdtTextCon{}
+.curly_slide{}
+.curly_slide .slick-list{}
+.curly_slide .slick-slide > div{}
+.curly_slide .slick-slide > div img{}
+.curly_slide .slick-slide > div .text{}
+.curly_slide .slick-dots{}
+.curly_slide .slick-dots li{}
+.curly_slide .slick-dots li button{}
+.curly_slide .slick-dots li.slick-active{}
+.curly_slide .slick-dots li.slick-active button{}
+.curly_info{}
+.curly_info p{}
+.curly_info .p1{}
+.curly_info .p2{}
+.curly_info .p3{}
+.curly_info ul{}
+.curly_info li{}
+.curly_info a{}
+.curly_info.black p{}
+.curly_info.black li{}
+.curly_info.black a{}
+.curly_videoBg{}

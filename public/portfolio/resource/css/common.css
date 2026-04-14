@@ -1,0 +1,12 @@
+@charset 'utf-8'; 
+
+/* 로더 */
+.loader {position:fixed; top:0; left:0; right:0; bottom:0; background:url(/img/ajax-loader.gif) no-repeat center center;}
+
+.overhidden {overflow:hidden}
+.fleft {float:left}
+.fright {float:right}
+.show {display:block}
+.hide {display:none}
+.texthidden {font-size:0}
+.blind {visibility:hidden; overflow:hidden; position:absolute; top:0; left:0; width:1px; height:1px; font-size:0; line-height:0;}

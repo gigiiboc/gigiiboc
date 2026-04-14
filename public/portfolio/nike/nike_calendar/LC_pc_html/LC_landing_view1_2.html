@@ -1,0 +1,2888 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie ie6" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://ogp.me/ns/fb#" ><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ko" xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+<head>
+	
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<meta name="description" content="나이키닷컴" />
+	<meta name="keywords" content="NIKE, 나이키닷컴, 나이키" />
+	<!--2016.03.23 google webmaster 트래킹 코드 -->
+	<meta name="google-site-verification" content="hpYYbkgRb5gmGIkjC87ieaJQ70JUoydDKN1YFlOnZ6k" />
+	
+	<meta name="google-site-verification" content="Eao1ZcYq1bOiWxneeO4VHNh0QUMc6ooqKENQon3KuQI" />
+
+	<title>Nike 나이키닷컴</title>
+	<link rel="shortcut icon" href="http://image.nike.co.kr//nike_favicon.ico" /> 
+	<link rel="stylesheet" type="text/css"  href="http://www.nike.co.kr/com/css/display.css"/> 
+
+	<script type="text/javascript" src="http://www.nike.co.kr/com/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/com/js/jquery-ui-1.10.2.custom.min.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/com/js/jquery-migrate-1.1.1.min.js"></script>
+	<!-- <script type="text/javascript" src="http://www.nike.co.kr/com/js/gnb.js"></script> -->
+	<script type="text/javascript" src="http://www.nike.co.kr/com/js/display.js"></script>
+	
+	<!-- 나이키리뉴얼 Fiona S -->
+	<link rel="stylesheet" type="text/css"  href="http://www.nike.co.kr/css/global_renewal.css"/> 
+	<script type="text/javascript" src="http://www.nike.co.kr/js/global_renewal.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/js/jquery.bxslider.min.js"></script>
+	<!-- 나이키리뉴얼 Fiona E -->
+
+	<!-- lc_170517 ; 추가 -->
+	<link rel="stylesheet" type="text/css"  href="../css/lc_layout.css"/> 
+	<script type="text/javascript" src="../js/lc_layout.js"></script>
+	<!-- // lc_170517 ; 추가 -->
+
+	<script type="text/javascript" src="http://www.nike.co.kr/com/js/iframeSubmit.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+
+
+
+
+	
+	
+	
+	
+	
+
+
+</head>
+
+<body>
+
+
+	
+	<dl id="skipnavigation">
+		<dt><strong>바로가기 메뉴</strong></dt>
+		<dd><a href="#gnb">메인메뉴 바로가기</a></dd>
+		<dd><a href="#footerF">하단메뉴 바로가기</a></dd>
+	</dl>
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://www.nike.co.kr/com/js/link.js"></script>
+<script type="text/javascript" src="http://www.nike.co.kr/com/js/ajax.js"></script>
+<script type="text/javascript" src="http://www.nike.co.kr/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://www.nike.co.kr/js/jquery.json-2.2.js"></script>
+<script type="text/javascript" src="http://www.nike.co.kr/js/cookie.js"></script>
+
+<script language="javascript">
+$(document).ready(function() {
+	
+	
+	//최근검색어 ON/OFF 상태
+	if(!$.isEmptyObject($.cookie('goodsSchCookieStatus'))){
+		$("#freq_btn_fn_off_01").hide();
+		if($.cookie('goodsSchCookieStatus') == "ON"){
+			$(".freq_lst ul").show();
+			$("#freq_btn_on").show();
+			$("#freq_btn_off").hide();
+			if($.isEmptyObject($.cookie('goodsSchCookie'))){
+				$("#freq_btn_fn_off_01").show();
+			}
+		}
+		if($.cookie('goodsSchCookieStatus') == "OFF"){
+			$("#freq_btn_on").hide();
+			$("#freq_btn_off").show();
+		}
+	}
+	if($.isEmptyObject($.cookie('goodsSchCookieStatus'))){
+		$.cookie('goodsSchCookieStatus',"ON",{ expires: 10, path: '/', domain: '.nike.co.kr' });
+	};
+});
+
+window.name = 'nikeWindow'; //로그인시 팝업에서 사용
+//[AWS LPS API : 2015.09] => myLockerRN.js 참조
+var LECS_URL = "http://lecs.nike.co.kr/";
+
+//상품별 로딩BG 이미지 하얀색으로 초기화
+function fn_cleanBG(objID) {
+	try {
+		var obj = $("#"+objID);
+		var objA = $("#A"+objID+"A");
+		objA.css({background:"url(http://image.nike.co.kr/web/ico/whiteloading.gif) no-repeat"});
+	}catch(e){
+		//혹시 에러나면 걍 무시
+	}
+}
+
+var login_click_yn = false;/*더블클릭방지체크*/
+
+//휴면계정여부 체크
+function restAccountCheck(flag){
+	
+	var url1 = (parent.document.location).toString();
+
+	if($("#returnURL_1").val() == null || $("#returnURL_1").val() == 'undefined' || $("#returnURL_1").val() == ""){
+		$("#returnURL_1").val(url1);
+	}
+	
+	var form = $('form#loginForm_'+flag);
+	
+	if($('#loginId_'+flag).val() == ""){
+		alert("아이디를 입력해주세요.");
+		$('#loginId_'+flag).focus();
+		return;
+	}else if($('#password_'+flag).val() == ""){
+		alert("패스워드를 입력해주세요.");
+		$('#password_'+flag).focus();
+		return;
+	}
+	
+	/*더블클릭방지체크*/
+	if(login_click_yn == false){
+		login_click_yn = true;	
+	}else{
+		return;
+	}
+	
+	//휴면계정여부 조회
+	$.ajax({
+		type: 'post',
+		url: 'https://secure.nike.co.kr//aws/login/getNikeRestAccountCheckAjax.lecs',
+		//url: '/login/getNikeRestAccountCheckAjax.lecs',
+		data: $('form#loginForm_'+flag).serialize(),
+		dataType: 'jsonp',
+		jsonp: "callback",
+		cache: false,
+		success: function(result) {
+			if (result.message === 'O') { //회원정보가 있을시..
+				if(result.data.drmcProcYn === 'Y'){ //휴면계정이면..
+					// 휴면 계정 활성화 Page------>
+					showRestoreMember(result.data.prsnInfoAvalTermCode, flag);
+					// <-------휴면계정 활성화 Page
+				}else{ //휴면계정이 아니면..
+					login(flag);
+				}
+			} else { //회원정보가 없을시..
+				login_click_yn = false; /*더블클릭방지체크*/
+				alert("회원 아이디 또는 패스워스가 \n일치하지 않습니다. \n확인 후 다시 입력해 주세요");
+				location.reload();
+			}
+		},
+		fail: function(){
+			login_click_yn = false; /*더블클릭방지체크*/
+			alert("오류가 발생했습니다.");
+			location.reload();
+		}
+	});
+	
+}
+
+//복원페이지로 이동
+function showRestoreMember(prsnInfoAvalTermCode, flag){		
+	var param = "?lpsYn=Y&loginid="+$("#loginId_"+flag).val() + "&idSave="+ $('input:checkbox[name="idSave"]:checked').val() + "&returnurl="+encodeURIComponent($('#returnURL_1').val());
+	location.href= "https://secure.nike.co.kr/login/getMemberRestore.lecs" + param;
+}
+
+//복원페이지로 이동
+function showRestoreMember(prsnInfoAvalTermCode, flag){
+	var param = "?lpsYn=Y&loginid="+$("#loginId_"+flag).val() + "&idSave="+ $('input:checkbox[name="idSave"]:checked').val() + "&returnurl="+encodeURIComponent($('#returnURL_1').val());
+	var restoreParam = "https://secure.nike.co.kr/login/getMemberRestore.lecs" + param;
+
+	var params = "?returnurl=" + encodeURIComponent(restoreParam) ;
+	
+	var secureYn = "";
+	
+	if(secureYn=="Y"){
+		gateUrl = "https://secure.nike.co.kr//member/gate.lecs" + params;
+	}else if($("#lpsYn").val() == "Y"){
+		gateUrl = 'http://lecs.nike.co.kr//member/gate.lecs' + params;
+	}else{
+		gateUrl = 'http://www.nike.co.kr//login/gate.lecs' + params ;
+	}
+	location.href = gateUrl;
+}
+
+function login(flag){
+	var url1 = (parent.document.location).toString();
+	if($("#returnURL_1").val() == null || $("#returnURL_1").val() == 'undefined' || $("#returnURL_1").val() == ""){
+		$("#returnURL_1").val(url1);
+	}
+	var form = $('form#loginForm_'+flag);
+	if($('#loginId_'+flag).val() == ""){
+		login_click_yn = false; /*더블클릭방지체크*/
+		alert("아이디를 입력해주세요.");
+		$('#loginId_'+flag).focus();
+		return;
+
+	}else if($('#password_'+flag).val() == ""){
+		login_click_yn = false; /*더블클릭방지체크*/
+		alert("패스워드를 입력해주세요.");
+		$('#password_'+flag).focus();
+		return;
+	}
+
+	IframeSubmitter.submit(form.get(0), "handleLoginUser", "submitFrame");
+
+}
+
+
+function handleLoginUser(result) {
+	var params = "" ;
+	var returnurl = result.returnUrl ;
+	var lpsYn = result.lpsYn ;
+	var secureYn = "";
+
+
+	if ( returnurl != null && returnurl !="" ) {
+		params = "?returnurl=" + encodeURIComponent(returnurl) ;
+	}
+
+	if (result.message == 0) {
+		if(secureYn=="Y"){
+			gateUrl = "https://secure.nike.co.kr//member/gate.lecs" + params ;
+		}else if(lpsYn == "Y"){
+			gateUrl = 'http://lecs.nike.co.kr//member/gate.lecs' + params ;
+		}else{
+			gateUrl = 'http://www.nike.co.kr//login/gate.lecs' + params ;
+		}
+		location.href = gateUrl;
+	} else {
+		login_click_yn = false; /*더블클릭방지체크*/
+		alert("회원ID 또는 패스워드가 일치하지 않습니다. 확인 후 다시 입력해 주세요.");
+	}
+}
+function fn_loginFlag(type)
+{
+	showDim();
+
+	var frameLogin = document.getElementById("frameLogin");
+	$("#login_Pop").css({"visibility": "hidden"});
+	$("#frameLogin").src="";
+	frameLogin.src="https://secure.nike.co.kr/member/showLogin.lecs?flag="+type;
+	document.getElementById("login_Pop").style.visibility="visible";
+	$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+
+}
+
+function keypressSearch(event, i, type) {
+	if (event.keyCode == '13') {
+		if(i == "findId"){
+			findId(type);
+		}else if(i == "findPasswd"){
+			findPasswd('findPasswdType1Form');
+		}else{
+			restAccountCheck(i);
+		}
+	}
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//앞으로 로그인과 작업 -> 로그인버튼 클릭시 이벤트시작
+function openLogin(){
+	 loginType("A","");
+}
+
+function loginType(arg,url){
+
+	showDim();
+
+	var frameLogin = document.getElementById("frameLogin");
+	$("#login_Pop").css({"visibility": "hidden"});
+	$("#frameLogin").src="";
+	if (arg=="A"){
+		frameLogin.src="https://secure.nike.co.kr/member/showLogin.lecs";
+	}else if(arg=="S"){
+		frameLogin.src="https://secure.nike.co.kr/"+url;
+	}
+
+	document.getElementById("login_Pop").style.visibility="visible";
+	$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+}
+
+function showDim()
+{
+
+	$(".global_login_modal").hide();
+	$('.global_right_nav').find('.global_login a').removeClass('active');
+	
+	// <-- 로긴팝업시 백그라운드 비활성화 효과   start
+	var loginBack = document.getElementById("login_background");
+	var totalHeight = $(window).height(); 	//document.getElementById("footerF").offsetHeight+offSetHeight;
+
+	
+	loginBack.style.height=totalHeight+100+"px";
+	loginBack.style.visibility="visible";
+	//	비활성화 효과  end	-->
+
+}
+
+function hideDim()
+{
+	$('#login_background').css({"visibility": "hidden"});
+}
+//앞으로 로그인과 작업 -> x버튼이나 로그인되었을경우
+function loginClose(){
+	$("#login_Pop").css({"visibility": "hidden"});
+	$("#frameLogin").src="";
+}
+
+//로고Click
+function goMain(){
+	location.href = "http://www.nike.co.kr/";
+}
+
+//회원정보관리
+function goModify(){
+	location.href = "https://secure.nike.co.kr/member/information.lecs";
+}
+
+//로그아웃
+function goLogOut(){
+	location.href = "https://secure.nike.co.kr/member/showLogout.lecs" + "?returnurl=" + encodeURIComponent(document.location.toString());
+}
+
+//상하좌우크기조절
+function resizeFlashAreaGnb(nWidth, nHeight) {
+	if(nWidth!= null || nHeight!=null){
+		var oFlash  = document.getElementById("gnb") ;
+		var notIe_oFlash  = document.getElementById("notIe_gnb") ;
+
+		oFlash.height = nHeight ;
+		oFlash.width = nWidth;
+
+		notIe_oFlash.height = nHeight ;
+		notIe_oFlash.width = nWidth;
+	}
+}
+
+//플래시주고받기
+function gnbLinkDepth(url){
+	if((url.indexOf("/os/store/s.jsp?s")) > 0 ){
+		window.open(url);
+	}else if( url.indexOf( "target=" ) > 0 ){
+		// [Ceres 3535][나이키]  매장관리 타겟 새창연결 오류
+		// [Ceres 3690] 전시매장 연결 새창 또는 페이지 이동 구분 파라미터로 처리
+		if( url.substring( url.indexOf( "target=" ) + 7 ).indexOf( "blank") == 0 )
+		{
+			window.open(url);
+		}
+		else
+		{
+			location.href = url;
+		}
+	//3290 남성컬렉션AF1 XXX COLLECTION - 새창으로 열기
+	}else if((url.indexOf("NK1A02A03A75")) > 0){
+		window.open(url);
+	// [Ceres:3437] 전시매장 연결 새창연결 기능에 문제가 있어 하드코딩으로
+	}else if((url.indexOf("/store/AIRMAX2013/intro.html")) > 0){
+		window.open(url);
+	}else if((url.indexOf("/store/MERCURIAL/intro.html")) > 0){ //ceres 3534
+	  window.open(url);
+	}else{
+		location.href = url;
+	}
+}
+
+function callMark(){
+	// 즐겨찾기 기능 구현
+	var url = "http://www.nike.co.kr/display/displayShop.lecs?influx_channel_no=111528";
+	var title = "Nike 나이키닷컴";
+
+	if(window.sidebar){ //firefox
+
+		window.sidebar.addPanel(title, url, "");
+
+	}else if(window.opera && window.print){ // opera
+
+		var elem = document.createElement('a');
+		elem.setAttribute('href', url);
+		elem.setAttribute('title', title);
+		elem.setAttribute('rel', 'sidebar');
+		elem.click();
+
+	}else if(document.all){ //le
+
+		window.external.AddFavorite(url, title);
+
+	}
+
+	
+
+	ajaxCall("post", "http://www.nike.co.kr/event/addFavoriteMailAjax.lecs", "", "json", callback = function(data) {
+
+	});
+
+}
+
+//GNB 장바구니 레이어 노출
+function globalNewCart()  {
+	// 170112_수정 ; GNB 장바구니 레이어 열기
+	$(".global_newCartArea").animate({ top : "100px"}, 2000);
+	
+}
+
+
+/* 170112_수정 ; GNB 장바구니 레이어 닫기 */
+
+function fn_setCartLayerRecommGoodsTracking(isMobile, trackingCode){
+	//var tracking = (isMobile?'m':'pc')+'_pdp_cartRecomm_';
+	//tracking = tracking+trackingCode;
+	//setTclick(tracking);
+}	
+function globalNewCartClose()  {
+	fn_setCartLayerRecommGoodsTracking(false, '1');
+	$(".global_newCartArea").animate({ top : "-800px"}, 2000, 'linear');
+	//$("#recommendList").css('display', 'none');
+}
+
+/* 170112_수정 ; 레이어 창 제외하고 빈공간 클릭시 레이어 닫기 */
+$("body").on('click', function(e){
+	if( $(".global_newCartArea").css("top") == "100px" ) {
+		if(!$(".global_newCartArea").has(e.target).length){
+			globalNewCartClose();
+		};
+	};	
+});
+
+
+	// header.jsp 스크립트
+	 function goMyLocker(){
+		var id = $("#memberIdForGen").val();
+		if(id!=''){
+			location.href = "http://www.nike.co.kr/myLocker/myLockerList.lecs";
+		}else{
+			loginType("S","member/showLogin.lecs?returnUrl=http://www.nike.co.kr/myLocker/myLockerList.lecs");
+		}
+	}
+  
+	//my쇼핑정보
+	function goInfoShop(){
+		var id = $("#memberIdForGen").val();//'';
+		if(id!=''){
+			//location.href = "http://lecs.nike.co.kr/mypage/order/list.lecs";
+			location.href = "http://lecs.nike.co.kr/mypage/mypage.main.lecs";
+		}else{
+			//loginType("S","member/showLogin.lecs?flag=2&returnUrl=http://lecs.nike.co.kr/mypage/order/list.lecs");
+			loginType("S","member/showLogin.lecs?flag=2&returnUrl=http://lecs.nike.co.kr/mypage/mypage.main.lecs");
+		}
+	}
+
+	//장바구니이동
+	function goCart(){
+		location.href = "http://lecs.nike.co.kr/cart/list.lecs ";
+	}
+
+	//스피드서치 이동
+	function goSpeedSearch(){
+		location.href = "http://www.nike.co.kr/search/showSpeedSearch.lecs";
+
+	}
+
+	//통합검색이동
+	function callSearch(txt){
+		location.href = "http://www.nike.co.kr/search/showSearch.lecs?research="+txt;
+	}
+
+	//플래시로 보내기
+	function thisMovie(movieName) {
+
+		if (navigator.appName.indexOf("Microsoft") != -1) {
+				return window[movieName];
+
+		}    else {
+			return document[movieName];
+		}
+	}
+
+	//플래시로 보내기 최근본상품
+	function callRecentList(){
+		var url ="http://www.nike.co.kr/";
+		thisMovie("tnb").send_req(url+"display/headerData.lecs");
+	}
+
+	// 최근 장바구니정보
+	function callRecentCart(){
+
+		var url = "/display/getNewCartInfoAjax.lecs";
+
+		$.ajax({
+			type : 'get',
+			url : url,
+			dataType : 'html',
+			cache : false,
+			success : function(data) {
+				$('#newCartArea').html(data);
+				globalNewCart();
+			},
+			error : function() {
+				alert('<spring:message code="05011"/>');
+			}
+		});
+	}
+
+	//장바구니담은상품 주문하기
+	function goOrderPage() {
+		var url = "https://secure.nike.co.kr/";
+		location.href = url + "order/list.lecs";
+	}
+
+	//플래시 사이즈조절	2011-06-09 웹표준 관련 플래쉬 제어
+	function resizeFlashArea(nHeight, Id) {
+		if (Id != null) {
+			var oFlash = document.getElementById(Id);
+			var notIe_oFlash = document.getElementById("notIe_" + Id);
+
+		} else {
+			var oFlash = document.getElementById('coordiDetail');
+		}
+		oFlash.height = nHeight;
+		notIe_oFlash.height = nHeight;
+		//<a href="javascript:resizeFlashArea('1', 'coordiDetail')">Chage Height</a>
+		//nation.swf 국가 레이어
+	}
+
+	//푸터 링크 아이디확인
+
+	//푸터 : MY쇼핑정보
+	// ceres-6551 : 나이키 푸터 수정요청 건 으로 추가함.
+	function goMyShoppingInfo() {
+		var id = $("#memberIdForGen").val();//'';
+
+		if (id != '') {
+			location.href = "http://lecs.nike.co.kr/mypage/order/list.lecs";
+		} else {
+			loginType(
+					"S",
+					"member/showLogin.lecs?flag=2&returnUrl=http://lecs.nike.co.kr/mypage/order/list.lecs");
+			$("html, body").animate({
+				scrollTop : $("#login_Pop").attr("offsetTop") - 45
+			}, 0);
+		}
+	}
+	
+	//주문내역조회 화면이동
+	function goInfoShopDetail() {
+		var id = $("#memberIdForGen").val();//'';
+
+		if (id != '') {
+			location.href = "http://lecs.nike.co.kr/mypage/order/list.lecs";
+		} else {
+			loginType(
+					"S",
+					"member/showLogin.lecs?flag=2&returnUrl=http://lecs.nike.co.kr/mypage/order/list.lecs");
+			$("html, body").animate({
+				scrollTop : $("#login_Pop").attr("offsetTop") - 45
+			}, 0);
+		}
+	}
+
+	//배송조회 화면이동
+	function goInfoDeliveryDetail() {
+		var id = $("#memberIdForGen").val();
+
+		if (id != '') {
+			location.href = "http://lecs.nike.co.kr/mypage/order/list.lecs";
+		} else {
+			loginType(
+					"S",
+					"member/showLogin.lecs?flag=2&returnUrl=http://lecs.nike.co.kr/mypage/order/list.lecs");
+			$("html, body").animate({
+				scrollTop : $("#login_Pop").attr("offsetTop") - 45
+			}, 0);
+		}
+	}
+
+	//교환/반품 조회 화면이동
+	function goInfoExchangeDetail() {
+		var id = $("#memberIdForGen").val();
+
+		if (id != '') {
+			location.href = "https://secure.nike.co.kr/mypage/order/listApplyClaim.lecs";
+		} else {
+			loginType(
+					"S",
+					"member/showLogin.lecs?flag=2&returnUrl=https://secure.nike.co.kr/mypage/order/listApplyClaim.lecs");
+			$("html, body").animate({
+				scrollTop : $("#login_Pop").attr("offsetTop") - 45
+			}, 0);
+		}
+	}
+
+	//영수증 신청/발급 화면이동
+	function goInfoReceiptDetail() {
+		var id = $("#memberIdForGen").val();
+
+		if (id != '') {
+			//alert(id);
+			location.href = "https://secure.nike.co.kr/mypage/applyReceipt.lecs";
+		} else {
+			//alert("null");
+			loginType(
+					"S",
+					"member/showLogin.lecs?flag=2&returnUrl=https://secure.nike.co.kr/mypage/applyReceipt.lecs");
+			$("html, body").animate({
+				scrollTop : $("#login_Pop").attr("offsetTop") - 45
+			}, 0);
+		}
+	}
+
+	//1:1문의하기///////////////////////////////////////////////////
+	function assmtEmailLayerPop() {
+		var id = $("#memberIdForGen").val();//'';
+
+		if (id != '') {
+			assmtEmailLayerPopUp();
+		} else {
+			loginType("S","member/showLogin.lecs?flag=1&returnUrl=https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1500");
+			//$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+		}
+	}//로그인후 1:1문의하기 띠우기 남았음.리턴Url이 function도 담을수 있나 확인후 작업하자~!!
+
+	function assmtEmailLayerPopUp() {
+		//1:1이메일문의가 팝업에서 페이지로 변경됨
+		location.href = "https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1500";
+		/* 		$('#emailForm').get(0).submit();
+		 $('#emailDiv').show();
+		 openLayer('emailDiv', {center: true, blocker: true}); */
+	}
+	//1:1문의하기 닫기
+	function closeLayerOneEmail() {
+		$('#emailDiv').hide();
+		$("html, body").animate({
+			scrollTop : $("#emailDiv").attr("offsetTop") - 45
+		}, 0);
+	}
+	//이메일 캠페인 팝업 호출
+	function openEmailCampaintPopup(returnurl) {
+
+		var protocol = (returnurl.indexOf("https://") != -1) ? "https://"
+				: "http://";
+
+		if (protocol == "https://") {
+			window
+					.open(
+							"https://secure.nike.co.kr//member/showEmailCampainPopup.lecs?nolayout=yes",
+							"EmailCampainPopup",
+							"menubar=no,width=450p,height=420");
+		} else {
+			if (returnurl.indexOf("http://lecs") != -1) {
+				window
+						.open(
+								"http://lecs.nike.co.kr//member/showEmailCampainPopup.lecs?nolayout=yes",
+								"EmailCampainPopup",
+								"menubar=no,width=450p,height=420");
+			} else {
+				window
+						.open(
+								"/member/showEmailCampainPopup.lecs?nolayout=yes",
+								"EmailCampainPopup",
+								"menubar=no,width=450p,height=420");
+			}
+		}
+	}
+	//회원정보변경 호출
+	function goMemberInformation() {
+		location.href = "https://secure.nike.co.kr//member/information.lecs";
+	}
+
+	//회원가입 레이어
+	function goJoinView() {
+		
+		$(".global_login_modal").hide();
+		$('.global_right_nav').find('.global_login a').removeClass('active');
+
+		var loginBack = document.getElementById("login_background");
+		loginBack.style.height = document.body.clientHeight + 100 + "px";
+		loginBack.style.visibility = "visible";
+		//	비활성화 효과  end	-->
+		var frameLogin = document.getElementById("frameLogin");
+		$("#login_Pop").css({
+			"visibility" : "hidden"
+		});
+		$("#frameLogin").src = "";
+		frameLogin.src = "https://secure.nike.co.kr/member/joinView.lecs";
+
+		document.getElementById("login_Pop").style.visibility = "visible";
+		$("html, body").animate({
+			scrollTop : $("#login_Pop").attr("offsetTop") - 45
+		}, 0);
+		//location.href = 'https://secure.nike.co.kr//member/joinView.lecs' ;
+	}
+	
+	
+	function openLoginPop(){
+		var ref = document.referrer;
+		var adr = location.href;
+		
+		try{
+			if(ref.indexOf("gate.lecs")==-1 && adr.indexOf("openLoginPopYn=Y") != -1 ){
+			
+				loginType("S","member/showLogin.lecs?flag=2&returnUrl=http://www.nike.co.kr/");
+			}
+		}catch(e){}
+		
+	}
+	
+	// 20160503 자동 검색 script 추가
+	$(function(){
+		$('body').click(function(){
+			$('.global_search_box').find('.global_search_list').hide();
+			$('.global_search_freq').addClass('off');
+		});
+		$('#research').click(function(){
+			//인기검색어조회
+			fn_trendsSch();
+			//공백일때만 최근검색어
+			if("" == $('#research').val()){
+				//쿠기에 검색어가 존재할경우 
+				if(!$.isEmptyObject($.cookie('goodsSchCookie'))){
+					if($.cookie('goodsSchCookieStatus') == "ON"){
+						fn_cookieSchArray(false);
+					}
+				}else{
+					$('.global_search_freq').removeClass('off');
+					$("#bt_tab_01").removeClass('active');
+					$("#bt_tab_02").addClass('active');
+
+					$('.global_search_freq').find('.freq_lst').hide();
+					$("#freq_02").show();
+				}
+				if("none" == $(".global_login_modal").css("display")){
+					$('.global_search_box').find('.global_search_list').hide();
+					$('.global_search_box').find('.global_search_freq').removeClass('off');
+				}
+			}else{
+				fn_autoSch();
+			}
+			/*170112_수정 S ; 검색창 눌렀을때도 닫힘*/
+			if( $(".global_newCartArea").css("top") == "100px" ) {
+				globalNewCartClose();
+			};	
+			/*170112_수정 E*/			
+			return false;
+		});
+		$('.global_search_box input').focusout(function(){
+
+		});
+		$('.global_search_box input').keyup(function(event){
+			fn_autoSch();
+		});
+
+		// 최근 검색어, 인기 검색어 tab
+		$('.global_search_freq').find('.freq_tab li a.bt_tab').click(function(){
+			$('.global_search_box input').focus();
+			$('.global_search_freq').removeClass('off');
+			var curr = $(this).attr('data-lnk');
+			$('.freq_tab li').removeClass('active');
+			$(this).parent('li').addClass('active');
+
+			$('.global_search_freq').find('.freq_lst').hide();
+			$(curr).show();
+
+			return false;
+		});
+		
+	});
+	
+	//자동완성 레이어
+	function fn_autoSch(){
+		var thisLeng = $("#research").val().length;
+		var val = $("#research").val();
+		var liList = "";
+		if (thisLeng > 0) { 
+			//자동완성 검색어 조회
+			$.ajax({
+				type: 'post',
+				url: '/search/getAutocompleteAjax.lecs',
+				data: "research="+val,
+				dataType: 'json',
+				cache: false,
+				success: function(result) {
+					var cnt = 0;
+					if("none" == $(".global_login_modal").css("display")){
+						if(result.result.length > 0){
+							//검색어 진하게 표시
+							liList += "<ul>";
+							$.each(result.result, function(index, value){
+								if(value.totalcount > 0){
+									$.each(value.items, function(index, value){
+										// 10개만 
+										if(10 > cnt ) {
+											var result = value.hkeyword;
+											liList += "<li><a href=\"javascript:fn_schArrayListClick('"+value.keyword+"')\">" + result + "</a></li>";
+											cnt++;
+										}
+									});
+								}
+							});
+							liList += "</ul>";
+							$(".global_search_list").html(liList);
+							$('.global_search_box').find('.global_search_list').show();
+							
+						}else{
+							$('.global_search_box').find('.global_search_list').hide();
+						}
+						$('.global_search_box').find('.global_search_freq').addClass('off');
+					}
+					
+					if("" == $('#research').val() && "none" == $(".global_login_modal").css("display")){
+						$('.global_search_box').find('.global_search_list').hide();
+						$('.global_search_box').find('.global_search_freq').removeClass('off');
+					}
+				}
+			});
+		}else {
+			if("none" == $(".global_login_modal").css("display")){
+				$('.global_search_box').find('.global_search_list').hide();
+				$('.global_search_box').find('.global_search_freq').removeClass('off');
+			}
+		}
+	}
+	
+	//최근검색어 cookie배열
+	function fn_cookieSchArray(status){
+		
+		var research = $("#research").val();
+		var liList = "";
+		
+		//최초 클릭이 아닌 경우 
+		if(status){
+			//검색 쿠기 없을시 쿠기 생성
+			if($.isEmptyObject($.cookie('goodsSchCookie'))){
+				$.cookie('goodsSchCookie',research,{ expires: 10, path: '/' , domain: '.nike.co.kr'});
+			}else{
+				var removeSch = "";
+				var schlength = $.fn.cookieList("goodsSchCookie").length();
+				// 10개 넘어갔을때 삭제
+				if(schlength > 9){
+					var temp = true;
+					$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+						if(research == value){
+							removeSch = value;
+							temp = false;
+						}
+					});
+					if(temp){
+						$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+							if(index == 0){
+								removeSch = value;
+							}
+						});
+					}
+					$.fn.cookieList("goodsSchCookie").remove(removeSch);
+				}
+				
+				if(9 >= schlength && schlength > 1){
+					$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+						if(research == value){
+							$.fn.cookieList("goodsSchCookie").remove(value);
+						}
+					});
+				}
+				$.fn.cookieList("goodsSchCookie").add(research);
+				
+				
+			}
+		}
+		
+		var list = $.fn.cookieList("goodsSchCookie").items();
+		
+		//생성된 배열 역순
+		list.reverse();
+		
+		//태그생성
+		$.each(list, function(index, value){
+			liList +="<li>";
+			liList +="<a href=\"javascript:fn_schArrayListClick('"+value+"')\"><em>"+value+"</em></a>";
+			liList +="<a href=\"javascript:fn_cookieSchRemove('"+value+"')\" class='bt_del'><img src='http://image.nike.co.kr/g_bt_x.gif' alt='삭제'></a>";
+			liList +="</li>";
+		});
+		
+		$("#freq_01 ul").html(liList);
+	}
+	
+	//저장된 최근검색어로 검색
+	function fn_schArrayListClick(schName) {		
+		if ($.trim(schName).length <= 0) {
+			alert("검색어를 입력해 주세요") ;
+			return;
+		}
+		$("#research").val(schName);
+		if($.cookie('goodsSchCookieStatus') == "ON"){
+			fn_cookieSchArray(true);
+		}
+		
+		// 2016.07.14. [smartchecker - 1866] 리다이렉트 검색어
+		//searchForm.submit();
+		if (chkRedirectSearchWord(schName)) {
+			searchForm.submit();
+		} else {
+			return;
+		}
+
+	}
+	
+	//최근검색어 쿠키 전체 삭제
+	function fn_cookieSchArrayRemove(){
+		//쿠키가 존재할때만 클리어
+		if(!$.isEmptyObject($.cookie('goodsSchCookie'))){
+			$.fn.cookieList("goodsSchCookie").clear();
+		}
+		
+		//ul 하위요소 삭제
+		$("#freq_01 ul").empty();
+		
+		//최근 검색어 없음
+		if($.cookie('goodsSchCookieStatus') == "ON"){
+			$("#freq_btn_fn_off_01").show();
+		}else{
+			$("#freq_btn_fn_off_01").hide();
+		}
+		
+	}
+	
+	//최근검색어 쿠키 부분 삭제
+	function fn_cookieSchRemove(schName){
+		//쿠키가 존재할때
+		if(!$.isEmptyObject($.cookie('goodsSchCookie'))){
+			var removeSch = schName;
+			//배열안에 해당 검색어 찾기
+			$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+				if(value == schName){
+					removeSch = value;
+				}
+			});
+			
+			if($.fn.cookieList("goodsSchCookie").length() > 1){
+				$.fn.cookieList("goodsSchCookie").remove(removeSch);
+				$("#research").click();
+			}else{
+				$.fn.cookieList("goodsSchCookie").clear();
+				$("#freq_01 ul").empty();
+				$("#freq_btn_fn_off_01").show();
+			}
+		}
+		
+	}
+	
+	//최근검색어 저장 끄기,켜기
+	function fn_cookieSchOnOff(status){
+		//켜기 freq_btn_status
+		if(status){
+			$.cookie('goodsSchCookieStatus',"ON",{ expires: 10, path: '/', domain: '.nike.co.kr' });
+			$(".freq_lst ul").show();
+			$("#freq_btn_on").show();
+			$("#freq_btn_off").hide();
+			$("#freq_btn_fn_off_01").show();
+		//끄기
+		}else{
+			$.cookie('goodsSchCookieStatus',"OFF",{ expires: 10, path: '/', domain: '.nike.co.kr' });
+			fn_cookieSchArrayRemove();
+			$("#freq_btn_on").hide();
+			$("#freq_btn_off").show();
+		}
+	}
+	
+	//인기검색어
+	function fn_trendsSch(){
+		
+		//자동완성 검색어 조회
+		$.ajax({
+			type: 'post',
+			url: "http://lecs.nike.co.kr/aws/display/getBestKeywordAjax.lecs",
+			dataType: 'jsonp',
+			jsonp: "callback",
+			cache: false,
+			success: function(result) {
+				var temp = "";
+				if(result.length > 0){
+					$.each(result, function(index, value){
+						temp += "<li><a href=\"javascript:fn_schArrayListClick('"+value.kwd_nm+"')\"><em>"+(index+1)+". "+value.kwd_nm+"</em></a></li>";
+					});
+				}else{
+					temp = "<li><em>인기검색어가 없습니다.</em></li>";
+				}
+				$("#freq_02").find("ul").html(temp);
+			}
+		});
+	}
+	
+	function fn_setTracking(tracking){
+		setTclick(tracking);
+		var goUrl = "";
+		if(tracking=='pc_brandbar_02'){
+			goUrl = "https://www.nike.com/kr/ko_kr/p/activity?tracking="+tracking
+		}else if(tracking=='pc_brandbar_04'){
+			goUrl = "https://www.converse.co.kr/landing/nike?tracking="+tracking
+		}
+		window.open(goUrl);
+	}
+	
+</script>
+	
+<!-- global_gnb -->
+<nav class="lc_gnb">
+	<!-- global_typ_gnb_top -->
+	<div class="global_gnb_top">
+		<div class="global_left_nav">
+			<!-- lc_170712 ; 추가 -->
+			<a href=""><span>< </span>Back to Nike.com</a>
+			<!-- // lc_170712 ; 추가 -->
+			<!-- lc_170712 ; 삭제
+			<a href="http://www.nike.co.kr?tracking=pc_brandbar_01"><em>Nike</em></a>
+			<a href="#" onclick="javascript:fn_setTracking('pc_brandbar_02');" class="global_nikeplus"><span>Nike+</span></a>
+			<a href="#" onclick="javascript:fn_showDisplayShop({displayNo:'NK1A39'}); return false;" class="global_ico_jordan"><span>조던</span></a>
+			<a href="#" onclick="javascript:fn_setTracking('pc_brandbar_04');" class="global_ico_converse"><span>컨버스</span></a> 
+			-->
+		</div>
+		<div class="global_right_nav">
+			<ul>
+				
+				<li class="global_login">
+						<a href="#" ><span>회원가입 / 로그인</span></a>
+				</li>
+				
+				<li class="global_help">
+					<a href="http://lecs.nike.co.kr/helpdesk/mainCustomer.lecs"><span>고객센터</span></a>
+					<ul class="global_help_menu">
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1468">주문결제</a></li>
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1462">배송</a></li>
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1464">취소/교환/반품</a></li>
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1456">회원혜택/서비스</a></li>
+						<li><a href="http://lecs.nike.co.kr//helpdesk/listFaq.lecs?ql=1700&noticeYN=Y">공지사항</a></li>
+						<li><a href="javascript:assmtEmailLayerPop();">1:1 이메일문의</a></li>
+						<li><a href="http://www.nike.co.kr/display/rules.lecs?tach=2">개인정보취급(처리)방침</a></li>
+						<li><a href="http://www.nike.co.kr/display/rules.lecs?tach=1">이용약관</a></li>
+						<li class="gb_help_list_all"><a href="http://lecs.nike.co.kr//helpdesk/mainCustomer.lecs">전체보기</a></li>
+					</ul>
+				</li>
+				<li class="cart">
+					<a href="http://lecs.nike.co.kr/cart/list.lecs">
+						<span>장바구니</span>
+						<span class="count" id="cartBubble" style="display:none;">0</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.nike.com/language_tunnel" class="global_flags"><span><img src="http://image.nike.co.kr/global/ko_flag.png"></span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //global_typ_gnb_top -->
+	
+	<!-- lc_170517 ; gnb -->
+	<!-- lc_gnb_middle -->
+	<div class="lc_gnb_middle">
+		<!-- lc_gnb_main -->
+		<div class="lc_gnb_main">
+			<h1 class="lc_gnb_logo">
+				<a href="http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A41">
+					<span>SNKRS</span>
+				</a>
+			</h1>
+			
+			<div class="lc_gnb_menu">
+				<div class="lc_menu_tab">
+					<a href="#">
+						<span>FEED</span>
+					</a>
+				</div>
+				<div class="lc_menu_tab">
+					<a href="#">
+						<span>IN STOCK</span>
+					</a>
+				</div>
+				<div class="lc_menu_tab">
+					<a href="#">
+						<span>UPCOMING</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- lc_gnb_main -->
+	</div>
+	<!-- //lc_gnb_middle -->
+	<!-- //lc_170517 ; gnb-->
+	
+	<!-- global_login_modal -->
+	<form id="loginForm_1" action="https://secure.nike.co.kr/member/doLogin.lecs" method="post" onkeypress="keypressSearch(event,1);">
+		<input type="hidden" name="returnUrl" id="returnURL_1" value="" />
+		<input type="hidden" name="flag" id="loginFlag_1" value="" />
+		<input type="hidden" name="lpsYn" id="lpsYn" value="" />
+	
+		<div class="global_login_modal">
+			<div class="gb_register_cont">
+				<div class="gb_login_tit">회원가입</div>
+				<p>나이키 회원이 되시면 다양한 혜택을 누리실 수 있습니다.</p>
+				<ul>
+					<li>다양한 프로모션 코드를 통한 할인 혜택</li>
+					<!-- <li>MVP달성 시 5% 추가 할인 혜택</li> -->
+				</ul>
+				<a href="javascript:goJoinView();" class="global_btn_type1">회원가입</a>
+			</div>
+			<div class="gb_login_cont">
+				<div class="gb_login_tit">로그인</div>
+				<!-- 2015-12-15 수정 -->
+				<div class="place_input">
+					<label for="loginId_1" class="gb_login_label" id="id_text">아이디를 입력하세요</label><input type="text" id="loginId_1" name="loginId" value="" />
+				</div>
+				<div class="place_input">
+					<label for="password_1" class="gb_login_label" id="pw_text">비밀번호를 입력하세요</label><input type="password" id="password_1" name="password" />
+				</div> 
+				<!--// 2015-12-15 수정 -->
+				<div class="global_id_pass_info">
+					<span><input type="checkbox" id="ck" name="idSave"  value="Y" /><label for="ck">아이디 저장</label></span>
+					<div>
+						<span><a href="javascript:fn_loginFlag('6');">아이디 찾기 ㅣ</a></span>
+						<span><a href="javascript:fn_loginFlag('7');">패스워드 찾기</a></span>
+					</div>
+				</div>
+				<a href="javascript:restAccountCheck('1');" class="global_btn_type1"><span>로그인</span></a>
+			</div>
+			<a href="#" onclick="return false;" class="global_modal_close">닫기</a>
+		</div>
+	</form>
+	<!-- //global_login_modal -->
+	
+	<div  id="login_background" style="visibility:hidden;width:2000px;height:100%;position:absolute; top:-100px; left:0px; z-index:499;background:black;filter:alpha(opacity=70); opacity:0.7; -moz-opacity:0.7"  ></div>
+</nav>
+<!-- //global_gnb -->
+
+<!-- 2016-01-05 global_newCartArea -->
+<div class="global_newCartArea">
+	<div class="right-area">
+		<div id="newCartArea" class="subnav cart" data-subnav-title="cart">
+			
+		</div>
+	</div>
+</div>
+<!--// 2016-01-05 global_newCartArea -->
+	
+	
+
+<input type="hidden" id="memberIdForGen" value="" />
+<input type="hidden" id="memberNoForGen" value="" />
+<input type="hidden" id="chkLoginYn" name="chkLoginYn" value="X" />
+<input type="hidden" id="gaData" name="gaData" value="X" /><!-- ga에서 사용하는 정보 -->
+<!-- <script type="text/javascript" src="http://www.nike.co.kr/js/htmlLogInOut.js"></script> -->
+
+<div class="layerArea" id="login_Pop">
+	<iframe src=""  allowTransparency=false  id="frameLogin" name="login" width="840px" height="400px" frameborder="0" marginwidth="0" scrolling="no"></iframe>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+$(document).ready(function(){
+
+	// imgPath("http://image.nike.co.kr");
+
+	var query = "";
+	if(query != '' && query != null){
+		$("#research").val(query) ;
+	}
+
+	
+	
+});
+
+$("#research").keydown(function(e){
+	$('#frontSearchKeyword').val('');
+	if(e.keyCode == 13){
+		fn_showSearchNavi();
+	}
+});
+
+//ceres-7033
+//검색어입력란의 돋보기 클릭시
+function searchPopWrdBtn() {
+	$('#frontSearchKeyword').val('');
+	fn_showSearchNavi();
+}
+
+//통합 검색
+function fn_showSearchNavi () {
+	
+	if(!($('#frontSearchKeyword').val() != null && $('#frontSearchKeyword').val() != 'undefined' && $('#frontSearchKeyword').val() != ''))
+	{
+
+		var keyword = $("#research").val() ;
+		$.trim($('#keyword').val());
+		if($.trim(keyword) == "" || keyword == "무엇을 찾고 계신가요?" ){
+			alert("검색어를 입력해 주세요") ;
+			$("#research").val("") ;
+			$('#research').focus();
+		}else {
+			if($.cookie('goodsSchCookieStatus') == "ON"){
+				fn_cookieSchArray(true);
+			}
+			
+			// 2016.07.14. [smartchecker - 1866] 리다이렉트 검색어
+			// document.searchForm.submit();
+			if (chkRedirectSearchWord(keyword)) {
+				document.searchForm.submit();
+			} else {
+				return;
+			}
+		}
+	}
+
+}
+
+function fn_gnbSearchBtn () {
+	$('#frontSearchKeyword').val('');
+	 fn_showSearchNavi ();
+}
+
+function fn_fn_showPopularSearchWord ( keyval ) {
+	$('#searchForm input[name="research"]').val(keyval);
+	document.searchForm.submit();
+}
+
+function onSubmit(flag){
+
+	var msg = "검색어를 입력해 주세요.";
+
+	if(flag=="1"){
+
+		if($("#research").val().length < 1){
+			alert(msg);
+			return false;
+		}
+
+		$("#searchStatus").val( "research" );
+	}
+
+	var optionArr = new Array;
+	var optionCount = 0;
+	for( var i = 0; i < 7; i++ ){
+		if( $("#sale_" + i).prop("checked") ){
+			optionArr[optionCount] = i;
+			optionCount++;
+		}
+	}
+	$("#optionArr").val( optionArr );
+
+	document.searchForm.submit();
+}
+
+
+function showPopularSearchWord(str){
+	$("#SRCHFIELD").val( "TOTAL" );
+	$("#research").val(str);
+	onSubmit(1);
+}
+
+function setSLHT_CDFilter(str){
+	$("#SLHT_CD").val(str);
+	setPaging(0);
+}
+function setSPORTSFilter(str){
+	$("#SPORTS").val(str);
+	setPaging(0);
+}
+function setSIZESFilter(str){
+	$("#SIZES").val(str);
+	setPaging(0);
+}
+function setCOLORFilter(str){
+	$("#COLOR").val(str);
+	setPaging(0);
+}
+function setBESTFORFilter(str){
+	$("#BESTFOR").val(str);
+	setPaging(0);
+}
+function setCOLLFilter(str){
+	$("#COLL").val(str);
+	setPaging(0);
+}
+function setFITFilter(str){
+	$("#FIT").val(str);
+	setPaging(0);
+}
+function setP_TYPEFilter(str){
+	$("#P_TYPE").val(str);
+	setPaging(0);
+}
+function setGENDERFilter(str){
+	$("#GENDER").val(str);
+	setPaging(0);
+}
+
+
+function setPaging(str){
+
+	if("prev"==str){
+		str = $("#prev").val();
+	}
+	if("next"==str){
+		str = $("#next").val();
+	}
+	$("#pageIndex").val(str);
+
+	$('#research').val('');
+	onSubmit();
+}
+
+function setSortType(str){
+	$('#research').val('');
+	var sortField = [ "DATE,1", "RANK,1", "TOT_REVIEW_CNT,1", "DISP_PRICE,0", "DISP_PRICE,1"];
+	var str_sub = str;
+	$("#SORT_FIELD").val( sortField[str_sub] );
+	if(99!=str){
+		setPaging(0);
+		onSubmit();
+	}
+}
+
+//2016.07.14. [smartchecker - 1866] 리다이렉트 검색어
+function chkRedirectSearchWord(keyword) {
+
+
+		var chkWord = false;
+		
+			var redirectWord	= "골프할인";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A06A02A57A08";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "맥스 95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "맥스95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "볼캡";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A03A08A04";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "로얄티";
+			var redirectUrl		= "http://www.nike.co.kr/goods/showGoodsDetail.lecs?goodsNo=NK00068214&colorOptionValueCode=308497-032";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "플라이니트 레이서";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A28 ";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "런칭";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A41";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "런칭캘린더";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A41";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "이벤트";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A62A01A01";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "launch";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A41";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어맥스";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A56A01B24&listSortCode=11&currentPage=1&lastPage=3&autoPageIndex=0&imgSize=180&allYn=";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "yoga";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A50A09A80";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "NikeLab";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A60";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "나이키랩";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A60";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "골프 프로모션";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A06A02A57A08";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "골프행사";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A06A02A57A08";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "머큐리얼 슈퍼플라이";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B59";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "티엠포 레전드";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B60";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "티엠포 피를로";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B60";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어맥스95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어조던 XXXI";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B70";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어조던 xxxi";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B70";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어조던31";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B70";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "테크";
+			var redirectUrl		= "http://www.nike.co.kr/search/showSearch.lecs?research=%ED%85%8C%ED%81%AC%ED%8C%A9";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "Tech";
+			var redirectUrl		= "http://www.nike.co.kr/search/showSearch.lecs?research=%ED%85%8C%ED%81%AC%ED%8C%A9";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "Draw";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "The draw";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "draw";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "the draw";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "더 드로우";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "더드로우";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "드로우";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "응모";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "jordarn";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A05A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어맥스 95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "tech";
+			var redirectUrl		= "http://www.nike.co.kr/search/showSearch.lecs?research=%ED%85%8C%ED%81%AC%ED%8C%A9";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "나이키에어맥스95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "요가";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A50A09A80";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "트레이닝바지";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A03A05";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "맥스97";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어맥스97";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "프리런 디스턴스2";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A22";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "프리 런 디스턴스 2";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A22";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "골프 클럽 컬렉션";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A20  ";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "골프클럽";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A20  ";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "베이비";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A51A04A05";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "YOGA";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A50A09A80";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "로열티";
+			var redirectUrl		= "http://www.nike.co.kr/goods/showGoodsDetail.lecs?goodsNo=NK00068214&colorOptionValueCode=308497-032";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "플라이니트레이서";
+			var redirectUrl		= "http://www.nike.co.kr/goods/showGoodsDetail.lecs?goodsNo=NK00071240&colorOptionValueCode=526628-012";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어 조던 5 레트로 PRM";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?storeNo=2&siteNo=14218&displayMallNo=NK1&displayNo=NK1A80A30&intpromo=LC_Airjordan5retroprmTAKEFLIGHT_IMG_170206";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+		if (chkWord) return true;
+	
+	
+	
+	
+}
+//]]>
+</script>
+
+<!-- NEMO, FACEBOOK LIKE BUTTON PLUG IN : START -->
+<!-- NEMO, FACEBOOK LIKE BUTTON PLUG IN : FINISH -->
+
+<!-- NEMO, TWITTER FOLLOW BUTTON PLUG IN : START -->
+<!-- NEMO, TWITTER FOLLOW BUTTON PLUG IN : FINISH -->
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="all" href="http://www.nike.co.kr/com/css/launch.css"/>
+<script type="text/javascript" src="http://www.nike.co.kr/js/launchCalendar/jquery.superslide.js"></script>
+
+
+
+
+
+
+
+<!-- lc_170517 ; view-->
+<div class="lc-view">
+	<div class="lcv-top"><img src="../images/pc/temp/view01.jpg" alt=""></div>
+	<div class="lcv-con">
+		<div class="img">
+			<ul>
+			<li><a href="#"><img src="../images/pc/temp/img_840X840.png" alt=""></a></li>
+			<li><a href="#"><img src="../images/pc/temp/img_840X840.png" alt=""></a></li>
+			<li><a href="#"><img src="../images/pc/temp/img_840X840.png" alt=""></a></li>
+			<li><a href="#"><img src="../images/pc/temp/img_840X840.png" alt=""></a></li>
+			<li><a href="#"><img src="../images/pc/temp/img_840X840.png" alt=""></a></li>
+			<li><a href="#"><img src="../images/pc/temp/img_840X840.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="lcv-con-layer">
+			<!-- lc_170728 ; 마크업 수정 -->
+			<div class="slickCon">
+				<div><img src="../images/pc/temp/img_840X840.png" alt=""></div>
+				<div><img src="../images/pc/temp/img_840X840.png" alt=""></div>
+				<div><img src="../images/pc/temp/img_840X840.png" alt=""></div>
+				<div><img src="../images/pc/temp/img_840X840.png" alt=""></div>
+				<div><img src="../images/pc/temp/img_840X840.png" alt=""></div>
+				<div><img src="../images/pc/temp/img_840X840.png" alt=""></div>
+			</div>
+			<!-- // lc_170728 ; 마크업 수정 -->
+			<a href="#" class="lcv-layer-close"><img src="../images/pc/btn_layer_close.gif" alt="닫기"></a>
+		</div>
+		<div class="con">
+			<p class="desc">에어 조던 7 레트로</p>
+			<p class="name">UNIVERSITY BLUE</p>
+			<p class="price">229,000원</p>
+			<!-- lc_170717 출시정보 추가 -->
+			<p class="date">출시정보 : 2017년 05월 06일 오전 10시</p>
+			<!-- // lc_170717 출시정보 추가 -->
+			<p class="info">
+				1992년 에어 조던 VII의 출시는 마이클 조던이 떠오르는 스타에서 전설적인 <br>
+				선수로 탈바꿈한 순간과 그 시기를 같이합니다. 두 번째 영광의 타이틀을 위해 <br>
+				에어 조던 VII를 신고 세계 무대로 나아간 마이클 조던은, 농구계에서 알아주는 <br>
+				선수에서 이름만 들으면 누구나 다 아는 전설적인 인물로 다시 태어났습니다. <br>
+				이번 시즌, 2010년 이후 그 모습을 감추었던 레트로 컬러웨이와 <br>
+				마이클 조던의 모교를 상징하는 유니버시티 블루 컬러의 갑피로 <br>
+				그 모든 영광을 같이했던 오리지널의 부활을 기념합니다.
+			</p>	
+			<!-- // lc_170712 자세히보기 버튼 삭제 -->
+			<div class="btn-area">
+				<p class="lcBtn"><!-- lc_170726 ; a태그에서 span태그로 변경 --><span class="def_btn_alpha pad20"><!-- lc_170904 ; 문구변경 -->COMING SOON<!-- // lc_170904 ; 문구변경 --></span><!-- // lc_170726 ; a태그에서 span태그로 변경 --></p>
+			</div>
+			<div class="service-area">
+				<div class="service-area-box">
+					<!-- lc_170717 매장상품 확인 · 예약 서비스 제거 
+					<div class="alarm">
+						<a href="#none" onclick="win_open()"><img src="../images/pc/ico_lc_cart.gif" alt=""><span class="btn-stock">매장상품 확인 · 예약 서비스</span></a>
+						<a href="#none" target="_blank"><img src="../images/pc/ico_lc_guide.gif" alt=""></a>
+					</div> 
+					// lc_170717 매장상품 확인 · 예약 서비스 제거 -->
+					<div class="alarm">
+						<a href="#none" onclick="win_open2()"><img src="../images/pc/ico_lc_message.gif" alt=""><span class="btn-smsService">입고알림 문자받기</span></a>
+						<!-- lc_170717 target 추가 --><a href="#none" target="_blank"><img src="../images/pc/ico_lc_guide.gif" alt=""></a><!-- // lc_170717 target 추가 -->
+					</div>
+					<script type="text/javascript">
+						function win_open() {
+							window.open("LC_storestock_popup.html", "_blank", "top=0,left=0,width=500,height=750");
+						}
+						function win_open2() {
+							window.open("LC_sms.html", "_blank", "top=0,left=0,width=500,height=750");
+						}
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- lc_170728 ; 추가 -->
+	<script src="../js/slick.min.js" type="text/javascript"></script>
+	<!-- // lc_170728 ; 추가 -->
+	<script>
+	$(function(){
+		var _conH = $('.lc-view .lcv-con .con').height();
+		var _conBox = $('.lc-view .lcv-con .img').height();
+		var _winH = $(window).height();
+		var _conOT = $('.lcv-con').offset().top;
+		var _winST = $(window).scrollTop();
+
+		var _pt = (_winH - _conH)/2;
+		$('.lc-view .lcv-con .con').css({'paddingTop': _pt, 'paddingBottom': _pt});
+		$(window).load(function(){
+			posCon();
+		});
+		$(window).scroll(function(){
+			posCon();
+		});
+		$(window).resize(function(){
+			posCon();
+		});
+		function posCon(){
+			_conH = $('.lc-view .lcv-con .con').height();
+			_conBox = $('.lc-view .lcv-con .img').height();
+			_winH = $(window).height();
+			_conOT = $('.lcv-con').offset().top;
+			_winST = $(window).scrollTop();
+
+			_pt = (_winH - _conH)/2;
+			$('.lc-view .lcv-con .con').css({'paddingTop': _pt, 'paddingBottom': _pt});
+			if(_winST > _conOT && _winST < _conOT + _conBox - _winH){
+				$('.lcv-con').find('.con').addClass('fix').css({'top': 0});
+				// $('.lcv-con').find('.con').css('top', _winST - _conOT);
+			} else if(_winST > _conOT + _conBox - _winH){
+				$('.lcv-con').find('.con').removeClass('fix').css('top', _conBox - _conH - _winH/2);
+			} else {
+				$('.lcv-con').find('.con').removeClass('fix').css('top', 0);
+			}
+		}
+		$('.lcv-con').find('.img a').click(function(){
+			// console.log($(this).parent('li').index());
+			var _idx = $(this).parent('li').index();
+			$('body').addClass('no-scroll');
+			// lc_170728 ; 스크립트 수정 s
+			$('.lcv-con-layer').css({
+				zIndex: '102',
+				visibility: 'visible'
+			});
+			_slick.slick('slickGoTo', _idx)
+			// lc_170728 ; 스크립트 수정 e
+
+			return false;
+		});
+
+		$('.lcv-con-layer').find('.lcv-layer-close').click(function(){
+			$('body').removeClass('no-scroll');
+			// lc_170728 ; 스크립트 수정 s		
+			$('.lcv-con-layer').css({
+				zIndex: '-102',
+				visibility: 'hidden'
+			});
+			// lc_170728 ; 스크립트 수정 e
+			return false;
+		});
+
+		// lc_170728 ; 스크립트 수정 s	
+		var _slick = $('.lcv-con-layer').find('.slickCon').slick({
+			infinite: false,
+			dots: true,
+			arrows: true,
+			fade: true,
+			speed: 200
+		});
+		// lc_170728 ; 스크립트 수정 e
+	});
+	</script>
+	<div class="lcv-bottom">
+		<ul>
+		<li>
+			<img src="../images/pc/temp/view02.jpg" alt="">
+		</li>
+		<li>
+			<img src="../images/pc/temp/view03.jpg" alt="">
+		</li>
+		<li>
+			<img src="../images/pc/temp/view04.jpg" alt="">
+			<div class="prdt">
+				<p class="t">UNIVERSITY BLUE</p>
+				<p class="d">에어 조던 13 로우</p>
+				<p class="info">
+					노스 캐롤라이나에 챔피언 영광을 가져온 그의 게임에서 우승 한 마이클 조던은<br>
+					농구 의식의 선두에 서있었습니다. 그는 1985 년에 원래 Air Jordan I을<br>
+					입고 법원에 출두하여 전 세계 팬들의 상상력을 포착하면서<br>
+					리그 규칙과 상대방의 의지를 깨 버렸습니다.
+				</p>
+			</div>
+		</li>
+		<!-- 키즈
+		<li>
+			<img src="../images/pc/temp/view17.jpg" alt="">
+			<div class="prdt">
+				<p class="d">틴에이져 에어조던 7</p>
+				<p class="t">UNIVERSITY BLUE</p>
+				<p class="price">69,000원</p>
+				<p class="link"><a href="#">자세히보기</a></p>
+				<div class="purchase">
+					<div class="btn-group clx" id="itemBtnArea2">
+						<p class="lcBtn"><a href="#" class="def_btn_alpha pad20">출시 예정</a></p>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/pc/temp/view18.jpg" alt="">
+			<div class="prdt">
+				<p class="d">어린이 에어조던 7</p>
+				<p class="t">UNIVERSITY BLUE</p>
+				<p class="price">59,000원</p>
+				<p class="link"><a href="#">자세히보기</a></p>
+				<div class="purchase">
+					<div class="btn-group clx" id="itemBtnArea3">
+						<p class="lcBtn"><a href="#" class="def_btn_alpha pad20">출시 예정</a></p>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/pc/temp/view19.jpg" alt="">
+			<div class="prdt">
+				<p class="d">영유아 에어조던 7</p>
+				<p class="t">UNIVERSITY BLUE</p>
+				<p class="price">59,000원</p>
+				<p class="link"><a href="#">자세히보기</a></p>
+				<div class="purchase">
+					<div class="btn-group clx" id="itemBtnArea4">
+						<p class="lcBtn"><a href="#" class="def_btn_alpha pad20">출시 예정</a></p>
+					</div>
+				</div>
+			</div>
+		</li>
+		-->
+		<!-- 
+		<li>		
+			<div class="benefits">
+				<p class="t">혜택</p>
+				<ul>
+				<li>풀 그레인 가죽 구조로 안전하고 편안한 착용감 제</li>
+				<li>응답 성 완충을위한 Zoom Air 장치가 장착 된 전장 Phylon 밋 도솔</li>
+				<li>견인력과 내구성을위한 헤링본 패턴이있는 고무 아웃솔</li>
+				</ul>
+			</div>
+		</li> -->
+		</ul>
+	</div>
+	<!-- lc_170717 상품정보고시 제거
+	<div class="ProInformation"><a href="#">상품정보고시 확인 ></a></div>
+	// lc_170717 상품정보고시 제거 -->
+	<!-- lc_170712 이미지 태그 span.img 로 감싸고, 패딩이미지일 경우 span에 pd-size 추가 -->
+	<div class="lcv-resent">
+		<p class="title">연관 상품</p>
+		<ul><!--
+		--><li>
+			<a href="#">
+				<span class="img pd-size"><img src="../images/pc/temp/img_840X840.png" alt=""></span>
+				<span class="d">에어 조던 XXXI</span>
+				<span class="t">FLIGHT GUY</span>
+			</a>
+		</li><!--
+		--><li>
+			<a href="#">
+				<span class="img"><img src="../images/pc/temp/img_821X924.jpg" alt=""></span>
+				<span class="d">에어 조던 I</span>
+				<span class="t">ROYAL</span>
+			</a>
+		</li><!--
+		--><li>
+			<a href="#">
+				<span class="img"><img src="../images/pc/temp/img_821X924.jpg" alt=""></span>
+				<span class="d">에어 조던 4</span>
+				<span class="t">MOTORSPORTS</span>
+			</a>
+		</li><!--
+		--><li>
+			<a href="#">
+				<span class="img pd-size"><img src="../images/pc/temp/img_840X840.png" alt=""></span>
+				<span class="d">에어 조던 11 로우</span>
+				<span class="t">UNIVERSITY BLUE</span>
+			</a>
+		</li><!--
+		--><li>
+			<a href="#">
+				<span class="img pd-size"><img src="../images/pc/temp/img_840X840.png" alt=""></span>
+				<span class="d">에어 조던 XXXI</span>
+				<span class="t">FLIGHT GUY</span>
+			</a>
+		</li><!--
+		--><li>
+			<a href="#">
+				<span class="img"><img src="../images/pc/temp/img_821X924.jpg" alt=""></span>
+				<span class="d">에어 조던 I</span>
+				<span class="t">ROYAL</span>
+			</a>
+		</li><!--
+		--><li>
+			<a href="#">
+				<span class="img"><img src="../images/pc/temp/img_821X924.jpg" alt=""></span>
+				<span class="d">에어 조던 4</span>
+				<span class="t">MOTORSPORTS</span>
+			</a>
+		</li><!--
+		--><li>
+			<a href="#">
+				<span class="img pd-size"><img src="../images/pc/temp/img_840X840.png" alt=""></span>
+				<span class="d">에어 조던 11 로우</span>
+				<span class="t">UNIVERSITY BLUE</span>
+			</a>
+		</li>
+		</ul>
+	</div>
+	<!-- // lc_170712 이미지 태그 span.img 로 감싸고, 패딩이미지일 경우 span에 pd-size 추가 -->
+</div>
+
+<script>
+$(function(){
+	$('.size-area').find('.btn-pdp-type1').click(function(){
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			$(this).parent('.size-area').find('.size-list').fadeOut(350);
+		} else {
+			$(this).addClass('active');
+			$(this).parent('.size-area').find('.size-list').fadeIn(350);
+		}
+		return false;
+	});
+});
+</script>
+<!-- // lc_170517 ; view-->
+
+
+
+<!-- 타이틀 텍스트 코너 S -->
+<!-- <div class="nav-gap"></div> -->
+<!-- <section class="page_title">
+	<div class="tit_box">
+		<h1 class="tit">나이키 SB 덩크 로우 엘리트 ‘OSKI’</h1>
+	</div>
+</section> -->
+<!--// 타이틀 텍스트 코너 S -->
+
+<!-- 이미지배너 코너 S -->
+
+<!--// 이미지배너 코너 S -->
+
+	<!-- //end lcv_pro_area -->
+	<!-- //end lcv_side_area -->
+<script type="text/javascript">
+function getDisplayNo() {
+	var rtnDisplayNo;
+	
+	var searchParam = document.location.search.replace("?", "");
+	var  searchList = searchParam.split("&");
+	for (var i = 0; i < searchList.length; i++) {
+		var  splitVals = searchList[i].split("=");
+		
+		if (splitVals[0] == 'displayNo') {
+			rtnDisplayNo = splitVals[1] ;
+		}
+	}
+	
+	return rtnDisplayNo;
+}
+
+function goLaunchMain() {
+	var displayNo = getDisplayNo();
+	var mainDisplayNo = displayNo.substring(0, displayNo.length - 3);
+	document.location.href = 'http://www.nike.co.kr/display/displayShop.lecs?displayNo='+ mainDisplayNo;
+}
+
+/* add 20140603 */
+$(document).ready(function(){
+	var displayNo = getDisplayNo();
+	
+	// 트위터 버튼 세팅
+	$('.twitter-share-button').attr('data-url', document.href);
+	$('.twitter-share-button').attr('data-text', '나이키 SB 덩크 로우 엘리트 ‘OSKI’\n');
+	
+	// 페이스북 버튼 세팅
+	$('.fb-like').attr('data-href', 'http://www.nike.co.kr/display/displayShop.lecs?displayNo=' + displayNo + '&fb=Y&nolayout=yes');
+	
+	$(".lcv_slider .lcv_bd li").first().before( $(".lcv_slider .lcv_bd li").last());
+	$(".lcv_slider").hover(function(){
+		$(this).find(".arrow");
+	});
+	$(".lcv_slider").slide({ titCell:".lcv_hd ul", mainCell:".lcv_bd ul", effect:"leftLoop",autoPlay:true, vis:2, autoPage:true, trigger:"click"});
+});
+</script>
+					
+
+	<!-- footer -->
+	
+
+
+
+
+
+
+
+
+
+
+
+<!-- 2017.01.09. [smartchecker-2804] 어도비 장바구니 내 추천상품 클릭시 - 장바구니 추천상품 referer 비교 -->
+
+
+
+<!-- footer -->
+
+ <div class="global_footer" id="footerF" >
+<!-- footer --><!-- 20160401 footer style 추가 -->
+<style type="text/css">
+.global_footer_link_list .global_link1 H4 A {
+	FONT-SIZE: 16px; FONT-WEIGHT: bold; COLOR: #8d8d8d
+}
+H4.global_footer_link_tit A {
+	MARGIN-BOTTOM: 20px; FONT-SIZE: 16px; FONT-WEIGHT: bold; COLOR: #fff
+}
+.global_social_link > .global_footer_link_tit {
+	PADDING-TOP: 0px
+}</style>
+<!-- footer --><div class="global_footer" id="footerF">
+	<div class="global_footer_link">
+		<div class="global_footer_link_inner">
+			<div class="global_footer_link_list">
+				<ul class="global_link1" id="forGenFooter">
+					<li>
+						<a href="javascript:nikeInfoShop();">매장안내</a></li>
+					<li>
+						<a href="javascript:showLogin();">로그인</a></li>
+					<li>
+						<a href="javascript:showLogin();">회원가입</a></li>
+				</ul>
+				<ul class="global_link2">
+<!-- 20160331 마크업 오류 수정 -->					<li>
+						<h4 class="global_footer_link_tit">
+							<a href="http://lecs.nike.co.kr/helpdesk/mainCustomer.lecs">고객센터</a><br />
+							<span style="letter-spacing: 0px; font-size: 14px">080-022-0182</span></h4>
+<!--161014_고객센터번호추가-->					</li>
+					<li>
+						<a href="https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1468">주문결제</a></li>
+					<li>
+						<a href="https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1462">배송</a></li>
+					<li>
+						<a href="javascript:goInfoShopDetail();">주문배송조회</a></li>
+					<li>
+						<a href="https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1456">회원혜택/서비스</a></li>
+					<li>
+						<a href="https://secure.nike.co.kr//helpdesk/listFaq.lecs?ql=1700&amp;noticeYN=Y">공지사항</a></li>
+					<li>
+						<a href="javascript:assmtEmailLayerPop();">1:1 이메일문의</a></li>
+					<li>
+						<a href="http://www.nike.co.kr/display/rules.lecs?tach=1">이용약관</a></li>
+					<li>
+						<a href="http://www.nike.co.kr/display/rules.lecs?tach=2">개인정보취급(처리)방침</a></li>
+				</ul>
+				<ul class="global_link3">
+<!-- 20160331 마크업 오류 수정 -->					<li>
+						<h4 class="global_footer_link_tit">
+							<a href="javascript:nikeAbout()" title="회사소개">회사소개</a></h4>
+					</li>
+				</ul>
+				<div class="global_social_link">
+					<h4 class="global_footer_link_tit global_tdgB">
+						<a>SOCIAL</a></h4>
+					<div>
+<!-- 151112 수정 -->						<a class="global_link_twitter" href="https://twitter.com/nikecom_kr" target="_blank" title="새창열림">Twitter</a> <!-- end//151112 수정 --><a class="global_link_facebook" href="https://www.facebook.com/nike" target="_blank" title="새창열림">Facebook</a> <a class="global_link_youtube" href="https://www.youtube.com/user/nike" target="_blank" title="새창열림">Youtube</a> <a class="global_link_insta" href="https://instagram.com/nike" target="_blank" title="새창열림">Instagram</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="global_footer_info">
+		<div class="global_info_cont">
+			<ul class="global_info_left">
+				<li>
+					<a href="http://www.nike.com/language_tunnel" title="대한민국"><img alt="대한민국" src="http://image.nike.co.kr/global/ko_flag.png" /> <span>&nbsp;&nbsp;대한민국</span> </a></li>
+				<li class="copy-write">
+					&copy;2017 NIKE, Inc. All Rights Reserved.</li>
+			</ul>
+			<ul class="global_info_right">
+				<li>
+					<a href="http://www.nike.co.kr/display/rules.lecs?tach=1">이용약관</a></li>
+				<li>
+					<a href="http://www.nike.co.kr/display/rules.lecs?tach=2">ㅣ&nbsp;&nbsp;개인정보처리방침</a></li>
+			</ul>
+		</div>
+		<div class="global_info_cont2">
+			<div class="global_info_cont2_inner">
+				<ul>
+					<li>
+						(유)나이키코리아 대표 : 데이빗욱환송 서울시 강남구 테헤란로 152 (역삼동, 강남파이낸스센터 31층)<!-- 150716 text 수정 --></li>
+					<li>
+						통신판매업신고번호 : 2011-서울강남-03461&nbsp;&nbsp;/&nbsp;&nbsp;등록번호 : 220-88-09068 <a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank" title="새창열림">사업자정보확인</a></li>
+					<li>
+						개인정보관리책임자 : 정순호&nbsp;&nbsp;&nbsp;&nbsp;정보보호최고책임자 : 이희준&nbsp;&nbsp;&nbsp;&nbsp;고객센터 전화문의 : 080-022-0182</li>
+<!--161014_고객센터번호추가-->					<li>
+						FAX : 02-6744-5880&nbsp;&nbsp;&nbsp;&nbsp;E-mail : service@nike.co.kr&nbsp;&nbsp;&nbsp;&nbsp;호스팅서비스사업자 : ㈜롯데닷컴</li>
+				</ul>
+				<ul>
+					<li>
+						나이키 공식 온라인스토어는 롯데닷컴 LECS를 사용하고 있습니다.</li>
+					<li>
+						KSNET 구매안전 서비스 <a href="javascript:popUp02();">ㅣ 서비스가입사실 확인</a></li>
+					<li>
+						안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 KSNET의 구매안전 서비스<br />
+						(채무지급보증)를 이용하실 수 있습니다.<!-- 151006 추가 및 수정 --></li>
+					<li class="global_content_guide_list">
+						온라인디지털콘텐츠사업발전법에 의한 콘텐츠보호안내 <a class="btn_content_guide" href="#">자세히보기</a> <!-- global_content_guide_box -->
+						<div class="global_content_guide_box">
+							<div class="global_guide_layer">
+								<div class="global_guide_inner">
+									<h4>
+										콘텐츠산업진흥법에 의한 표시</h4>
+									<div>
+										<p>
+											콘텐츠의 명칭 : 상품정보 및 이벤트 정보등</p>
+										<p>
+											콘텐츠의 제작 연월일 : 2002년 01월 14일(또는, 콘텐츠가 업그레이드된 경우 그 갱신일)</p>
+										<p>
+											콘텐츠의 제작자 : ㈜롯데닷컴 서울시 중구 을지로 158 10층(을지로4가 삼풍빌딩)<br />
+											<span style="padding-left: 88px">TEL : 02-3668-8500, FAX : 02-3668-8501</span></p>
+										<p>
+											<span>㈜롯데닷컴 홈페이지 내의 모든 콘텐츠는「콘텐츠산업 진흥법」에 따라 제작일 또는</span><br />
+											<span>그 갱신일로부터 5년간 보호됩니다.(동의 없는 무단 복제를 금함)</span></p>
+									</div>
+									<a class="global_ly_close" href="#"><span>닫기</span></a></div>
+							</div>
+						</div>
+<!-- 151006 추가 및 수정 -->					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 -->
+		
+		
+		<script type="text/javascript">
+				$('.global_content_guide_list').find('.btn_content_guide').on({
+					mouseenter : function(){
+						showContentGuide();
+					},
+					click : function(e){
+						e.preventDefault();
+						if($('.global_content_guide_list').hasClass('on')){
+							hideContentGuide();
+						} else{
+							showContentGuide();
+						}
+					}
+				});
+
+				/* $('.global_content_guide_list').on('mouseleave', function(){
+					hideContentGuide();
+				}); */
+
+				$('.global_content_guide_list').find('.global_ly_close').on('click', function(e){
+					e.preventDefault();
+					hideContentGuide();
+				});
+
+
+				function showContentGuide(){
+					$('.global_content_guide_list').addClass('on');
+					$('.global_content_guide_box').show();
+				}
+
+				function hideContentGuide(){
+					$('.global_content_guide_list').removeClass('on');
+					$('.global_content_guide_box').hide();
+				}
+			</script>
+	
+	<input type="hidden" id="pgName" name="pgName" value="launchcalendar>NIKE SB DUNK LOW ELITE OSKI:MEN:FW:SB" />
+	<input type="hidden" id="sportsProp" name="sportsProp" value="" />
+	<input type="hidden" id="pgType" name="pgType" value="Launch Calendar" />
+	<input type="hidden" id="searchWord" name="searchWord" value="" />
+	<input type="hidden" id="pgResult" name="pgResult" value="" />
+	<input type="hidden" id="eventResult" name="eventResult" value="" />
+	<input type="hidden" id="event" name="event" value="" />
+	<input type="hidden" id="evar14" name="evar14" value="" />
+	<input type="hidden" id="evar69" name="evar69" value="" />
+	<input type="hidden" id="eventNone" name="eventNone" value="" />
+	<input type="hidden" id="prop1" name="prop1" value="" />
+	<input type="hidden" id="prop20" name="prop20" value="" />
+	<input type="hidden" id="prop28" name="prop28" value="" />
+	<input type="hidden" id="evar20" name="evar20" value="" />
+	<input type="hidden" id="evar26" name="evar26" value="" />
+	<input type="hidden" id="evar32" name="evar32" value="" />
+	<input type="hidden" id="evar27" name="evar27" value="" />
+	<input type="hidden" id="evar32" name="evar32" value="" />
+	<input type="hidden" id="event38" name="event38" value="" />
+	<input type="hidden" id="scOpen" name="scOpen" value="" />
+	<input type="hidden" id="prop8" name="prop8" value=":" /> 
+	<input type="hidden" id="currDisplayNo" name="currDisplayNo" value="NK1A80B09" /> 
+	<input type="hidden" id="currListSortCode" name="currListSortCode" value="" /> 
+
+</div> 
+	<!-- // footer -->
+<!-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.10.29... Cesil Start  -->
+<!-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.10.29... Cesil end  -->		
+						
+<script type="text/javascript">
+
+// A/S 배송서비스 자세히보기
+function popUp01(){
+	var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes,width=665,height=723';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+	window.open( 'http://www.nike.co.kr/dispop/popList.lecs?popUpNo=01',"pop",a);
+	
+}
+//서비스 가입사실 확인
+function popUp02(){
+	var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=no,width=658, height=723';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+	window.open('http://www.nike.co.kr/dispop/popList.lecs?popUpNo=02',"pop",a);
+	
+}
+
+//나이키 스토어 ARS 서비스
+function popUp03(){
+	var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=no,resizable=yes,width=600, height=568';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+	window.open('http://www.nike.co.kr/dispop/popList.lecs?popUpNo=03',"pop",a);
+	
+}
+
+//언어변경
+function languageReset(){
+	//var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+// 	window.open( 'http://store.nike.com/nikestore/web/language_country.html?reset=true',"language");
+	window.open( 'http://www.nike.com/language_tunnel',"language");
+	
+}
+
+//매장안내 backup
+function nikeInfoShopBackup(){
+	
+	var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+	//사이트 카탈리스트 매장안내
+	s.linkTrackEvents='event7';
+	s.events='event7';
+	s.tl(true,'o','Store Locator');
+	
+	window.open( 'http://info.nike.co.kr/os/store/s.jsp?s=',"pop",a);
+	
+}
+//매장안내
+function nikeInfoShop(){
+	//사이트 카탈리스트 매장안내. 추가(hjko) 2016.11.10
+	s.linkTrackEvents='event7';
+	s.events='event7';
+	s.tl(true,'o','Store Locator');
+
+	// 기존 링크 
+	location.href = "http://lecs.nike.co.kr/findstore/findStoreView.lecs";
+	
+}
+//회사소개
+function nikeAbout(){
+	//var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes';
+	
+	//showWindowsPopup('http://www.nike.co.kr/os/store/s.jsp?s=', 100,200,"toolbar=no ,location=no,status=no");
+
+	window.open( 'http://about.nike.com/',"about");
+	
+}
+//사업자정보 확인
+function nikeInfoSeller(){
+	//var a='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes';
+	
+
+	window.open( 'http://www.ftc.go.kr/info/bizinfo/communicationList.jsp',"사업자정보"); // 150708 url 변경
+}
+
+//로그인 레이어
+function showLogin() {
+	$('.global_login_modal').show();
+	$("html, body").animate({ scrollTop: $("#login_Pop").attr("offsetTop")-45 }, 0);
+}
+
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript" >
+	function goTwitter(){
+		//alert("트위터2");
+		window.open( "http://twitter.com/nikestore_kr","_blank");
+	}
+	function goFaceBook(){
+		//alert("페이스북");
+		window.open( "http://www.facebook.com/NikeStore.kr","_blank");
+	}
+	function goMVPex(){
+		//alert("이동하자 MVP설명");
+		location.href ="http://www.nike.co.kr/display/mvpExplanation.lecs";
+	}
+	//매장 고객 안내
+	function fnCustomerPopup(){
+		var customerP='toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes,width=900,height=460';
+		window.open( 'http://info.nike.co.kr/os/customer/index_web.html',"pop",customerP);
+	}
+		
+</script>
+
+
+
+
+	
+
+<!-- 사스 스크립트라고 추가해보라고 함 -->
+<!--웹로그 수집 스크립트 추가 -->
+<!-- 페이별 클릭수 등 트래픽 관련 분석 코드 htmlLoginOut.js에 추가-->	
+
+<!-- Google Code for &#47532;&#47560;&#52992;&#54021; &#53468;&#44536; Remarketing List-->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+
+
+
+<!--2016.03.23 TTD이용자 데이터 수집 스크립트  -->
+
+	<!-- // footer -->
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<!-- from: ip-10-149-226-76 -->
+</html>

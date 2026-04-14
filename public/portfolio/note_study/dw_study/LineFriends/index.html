@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, width=device-width">
+	<title>LineFriends burger&amp;chips</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script src="js/jquery-2.2.2.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <!--[D] 탭활성화 할시 : on 추가-->
+            <div class="buger_tab">
+                <em class="blind">burger&amp;chips menu</em>
+                <a class="tab_burger" onClick="$('.buger_tab').addClass('on');"></a>
+                <div class="dim" onClick="$('.buger_tab').removeClass('on');"></div>
+                <div class="box_tab">
+                    <ul class="tab_list">
+                        <li><a href="javascript:moveTo(1); $('.buger_tab').removeClass('on');">HOME</a></li>
+                        <li><a href="javascript:moveTo(2); $('.buger_tab').removeClass('on');">ABOUT</a></li>
+                        <li><a href="javascript:moveTo(3); $('.buger_tab').removeClass('on');">FASHION & ACC</a></li>
+                        <li><a href="javascript:moveTo(4); $('.buger_tab').removeClass('on');">APPAREL</a></li>
+                        <li><a href="javascript:moveTo(5);  $('.buger_tab').removeClass('on');">PROMOTION</a></li>
+                        <li class="line"><a href="http://www.linefriends.com/#store" target="_blank">STORE LOCATOR</a></li>
+                        <li><a href="http://store.linefriends.com" target="_blank">ONLINE STORE</a></li>
+                    </ul>
+                    <div class="lk_bottom ">
+                        <em>SHARE</em>
+                        <ul>
+                            <li><a class="facebook">facebook</a></li>
+                            <li><a class="twitter">twitter</a></li>
+                            <li><a class="weibo">weibo</a></li>
+                        </ul>
+                    </div>
+                    <a href="javascript:return;" onClick="$('.buger_tab').removeClass('on');" class="buger_tab_close">메뉴 닫기</a>
+                    <div class="box_icon">
+                        <span class="tab_icon"></span>
+                        <span class="tab_icon2"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav on">
+                <ul>
+                    <!-- [D] 활성화 시 nav_dot 클래스에 on 추가 필요 -->
+                    <li class="nav_dot"><a href="javascript:moveTo(1);"><span class="blind">1</span></a></li>
+                    <li class="nav_dot"><a href="javascript:moveTo(2);"><span class="blind">2</span></a></li>
+                    <li class="nav_dot"><a href="javascript:moveTo(3);"><span class="blind">3</span></a></li>
+                    <li class="nav_dot"><a href="javascript:moveTo(4);"><span class="blind">4</span></a></li>
+                    <li class="nav_dot"><a href="javascript:moveTo(5);"><span class="blind">5</span></a></li>
+                    <li class="nav_dot"><a href="javascript:moveTo(6);"><span class="blind">6</span></a></li>
+                </ul>
+            </div>
+
+            <!-- [D] 스크롤 시 content에 off 클래서 순차적으로 적용 -->
+            <!-- [D] 스크롤 역방향 시 content에 off 클래서 순차적으로 삭제 -->
+            <div class="content" id="section1" style="z-index:10">
+                <div class="content_one ">
+                    <!--[D] 언어선택시 on 추가 -->
+                    <div class="lang_share">
+                        <!-- [D] 선택된 클래스로 text변경 필요 (en or kr) -->
+                        <a href="#" class="lang_select" id="chooseLang">한국어</a>
+                        <ul class="dropbox">
+                            <li><a href="?lang=ko">한국어</a></li>
+                            <li><a href="?lang=en">ENGLISH</a></li>
+                            <li><a href="?lang=zh_CN">中文(简体)</a></li>
+                        </ul>
+                    </div>
+                    <div class="video_box">
+                        <video id="burgerVideo" width="100%" height="100%" autoplay muted loop>
+                       <!--[D] 영상 url 입력 부탁드리겠습니다. 임시로 전 작업물에서 영상 url 넣어 놓았습니다. -->
+                        <source src="https://www.linefriends.com/img/burger/bnc1.mp4">
+                        </video>
+                    </div>
+                    <div class="spot_content">
+                        <a class="btn_play_link pop_layer"> 
+	                    <img src="https://www.linefriends.com/img/burger/spot_center_v1.png" width="500" height="292" alt=""> 
+	                    <span class="btn_text">PLAY MOVIE</span> 
+	                    </a>
+                    </div>
+                </div>
+                <a href="javascript:moveTo(2)" class="btn_scoll_down"><span class="blind">scroll down</span></a>
+                <!--[D] 활성화 시 display:block -->
+                <div class="movie_dim" style="display:block"></div>
+            </div>
+            <!-- [D] 스크롤 시 content에 off 클래서 순차적으로 적용 -->
+            <!-- [D] 스크롤 역방향 시 content에 off 클래서 순차적으로 삭제 -->
+            <div class="content " id="section2" style="z-index:9">
+                <div class="content_sec bg1">
+                    <span class="blind">snack party on</span>
+                    <h2 class="blind">burger&amp;chips</h2>
+                    <p class="blind">
+                        맛있는 건 계속 맛있었으면 좋겠어!
+                    </p>
+                </div>
+            </div>
+            <!-- [D] 스크롤 시 content에 off 클래서 순차적으로 적용 -->
+            <div class="content" id="section3" style="z-index:8;">
+                <div class="intro_sec">
+                    <strong class="blind">burger &amp; chips 소개 이미지</strong>
+                    <div class="insta_area">
+                        <div class="img_cube">
+                            <ul>
+                                <!--[D] 안보이는 컨텐츠는 :display:none추가 class="img"에 브라우저 화면이 높이값 인라인으로 속성 추가 부탁드리겠습니다. -->
+                                <li class="img" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page3_v2.jpg)">
+                                    <span class="blind">이미지 1</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="img_cube">
+                            <div class="lower_text">
+                                <!-- [D] 화면 전환에 따른 카운트 값 변경 필요 -->
+                                <span class="num_count" id="slickPage1">
+                              <span>1</span> <span>/</span> <span>9</span>
+                                </span>
+                            </div>
+                            <div class="bind_image" id="slickImg1">
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page2_rgt.jpg)">
+                                    <span class="blind">이미지 1</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page2_rgt2.jpg)">
+                                    <span class="blind">이미지 2</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page2_rgt3.jpg)">
+                                    <span class="blind">이미지 3</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page2_rgt4.jpg)">
+                                    <span class="blind">이미지 4</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page2_rgt5.jpg)">
+                                    <span class="blind">이미지 5</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page2_rgt6.jpg)">
+                                    <span class="blind">이미지 6</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page2_rgt7.jpg)">
+                                    <span class="blind">이미지 7</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page2_rgt8.jpg)">
+                                    <span class="blind">이미지 8</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page3/img_page2_rgt9.jpg)">
+                                    <span class="blind">이미지 9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [D] 스크롤 역방향 시 content에 off 클래서 순차적으로 삭제 -->
+            <div class="content " id="section4" style="z-index:7;">
+                <div class="intro_sec2">
+                    <strong class="blind">burger &amp; chips 소개이미지</strong>
+                    <div class="insta_area">
+                        <div class="img_cube">
+                            <div class="lower_text">
+                                <!-- [D] 화면 전환에 따른 카운트 값 변경 필요 -->
+                                <span class="num_count" id="slickPage2">
+					              <span>1</span> <span>/</span> <span>12</span>
+                                </span>
+                            </div>
+                            <div class="bind_image" id="slickImg2">
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img.jpg)">
+                                    <span class="blind">이미지 1</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img2.jpg)">
+                                    <span class="blind">이미지 2</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img3.jpg)">
+                                    <span class="blind">이미지 3</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img4.jpg)">
+                                    <span class="blind">이미지 4</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img5.jpg)">
+                                    <span class="blind">이미지 5</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img6.jpg)">
+                                    <span class="blind">이미지 6</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img7.jpg)">
+                                    <span class="blind">이미지 7</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img8.jpg)">
+                                    <span class="blind">이미지 8</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img9.jpg)">
+                                    <span class="blind">이미지 9</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img10.jpg)">
+                                    <span class="blind">이미지 10</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img11.jpg)">
+                                    <span class="blind">이미지 11</span>
+                                </div>
+                                <div class="img2" style="background-image:url(https://www.linefriends.com/img/burger/page4/img12.jpg)">
+                                    <span class="blind">이미지 12</span>
+                                </div>
+                            </div>
+                            <a href="#" class="swiper-button-prev"></a>
+                            <a href="#" class="swiper-button-next"></a>
+                        </div>
+                        <div class="img_cube">
+                            <ul>
+                                <li class="img" style="background-image: url(https://www.linefriends.com/img/burger/page4/img_page4_v2.jpg)"><span class="blind">이미지 1</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [D] 스크롤 시 content에 off 클래서 순차적으로 적용 -->
+            <!-- [D] 스크롤 시 content에 off 클래서 순차적으로 적용 -->
+            <!-- [D] 스크롤 역방향 시 content에 off 클래서 순차적으로 삭제 -->
+            <div class="content" id="section5" style="z-index:6;">
+                <div class="intro_sec3">
+                    <strong class="blind">burger &amp; chips 소개이미지</strong>
+                    <div class="insta_area">
+                        <div class="img_cube">
+                            <ul>
+                                <!--[D] 안보이는 컨텐츠는 :display:none추가-->
+                                <li class="img" style="background-image:url(https://www.linefriends.com/img/burger/page5/img_page5_v2.jpg)">
+                                    <span class="blind">이미지 1</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="img_cube">
+                            <div class="lower_text">
+                                <!-- [D] 화면 전환에 따른 카운트 값 변경 필요 -->
+                                <span class="num_count" id="slickPage3">
+                                       <!-- <span>1</span> <span>/</span> <span>2</span> -->
+                                </span>
+                            </div>
+                            <ul class="bind_image" id="slickImg3">
+                                <li class="img2 bg_pack"><span class="blind">이미지 1</span></li>
+                                <li class="img2 bg_pack2"><span class="blind">이미지 1</span></li>
+                                <li class="img2 bg_pack3"><span class="blind">이미지 1</span></li>
+                            </ul>
+                            <a href="#" class="swiper-button-prev"></a>
+                            <a href="#" class="swiper-button-next"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [D] 마지막 영역은 content에 off 미적용 -->
+            <div class="content" id="section6" style="z-index:5">
+                <div class="thumb_sec">
+                    <h2 class="blind">images</h2>
+                    <div class="wallpaper_view">
+                        <div class="box_slide">
+                            <!--<a href="#" class="slick-prev swiper-button-prev"></a>-->
+                            <ul class="thumb_image_area" style="">
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img1.jpg)" data-num="1"><a href="#">image1</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img2.jpg)" data-num="2"><a href="#">image2</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img3.jpg)" data-num="3"><a href="#">image3</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img4.jpg)" data-num="4"><a href="#">image4</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img5.jpg)" data-num="5"><a href="#">image5</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img6.jpg)" data-num="6"><a href="#">image6</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img7.jpg)" data-num="7"><a href="#">image7</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img8.jpg)" data-num="8"><a href="#">image8</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img9.jpg)" data-num="9"><a href="#">image9</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img10.jpg)" data-num="10"><a href="#">image10</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img11.jpg)" data-num="11"><a href="#">image11</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img12.jpg)" data-num="12"><a href="#">image12</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img13.jpg)" data-num="13"><a href="#">image13</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img14.jpg)" data-num="14"><a href="#">image14</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img15.jpg)" data-num="15"><a href="#">image15</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img16.jpg)" data-num="16"><a href="#">image16</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img17.jpg)" data-num="17"><a href="#">image17</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img18.jpg)" data-num="18"><a href="#">image18</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img19.jpg)" data-num="19"><a href="#">image19</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img20.jpg)" data-num="20"><a href="#">image20</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img21.jpg)" data-num="21"><a href="#">image21</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img22.jpg)" data-num="22"><a href="#">image22</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img23.jpg)" data-num="23"><a href="#">image23</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img24.jpg)" data-num="24"><a href="#">image24</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img25.jpg)" data-num="25"><a href="#">image25</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img26.jpg)" data-num="26"><a href="#">image26</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img27.jpg)" data-num="27"><a href="#">image27</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img28.jpg)" data-num="28"><a href="#">image28</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img29.jpg)" data-num="29"><a href="#">image29</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img30.jpg)" data-num="30"><a href="#">image30</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img31.jpg)" data-num="31"><a href="#">image31</a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img32.jpg)" data-num="32"><a href="#">image32</a></li>
+                            </ul>
+                        </div>
+                        <div class="box_slide">
+                            <ul class="thumb_image_area" style="">
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img33.jpg)" data-num="33"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img34.jpg)" data-num="34"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img35.jpg)" data-num="35"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img36.jpg)" data-num="36"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img37.jpg)" data-num="37"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img38.jpg)" data-num="38"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img39.jpg)" data-num="39"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img40.jpg)" data-num="40"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img41.jpg)" data-num="41"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img42.jpg)" data-num="42"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img43.jpg)" data-num="43"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img44.jpg)" data-num="44"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img45.jpg)" data-num="45"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img46.jpg)" data-num="46"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img47.jpg)" data-num="47"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img48.jpg)" data-num="48"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img49.jpg)" data-num="49"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img50.jpg)" data-num="50"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img51.jpg)" data-num="51"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img52.jpg)" data-num="52"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img53.jpg)" data-num="53"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img54.jpg)" data-num="54"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img55.jpg)" data-num="55"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img56.jpg)" data-num="56"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img57.jpg)" data-num="57"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img58.jpg)" data-num="58"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img59.jpg)" data-num="59"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img60.jpg)" data-num="60"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img61.jpg)" data-num="61"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img62.jpg)" data-num="62"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img63.jpg)" data-num="63"><a><span class="img_dimmed"></span></a></li>
+                                <li style="background-image:url(https://www.linefriends.com/img/burger/imgbox/img64.jpg)" data-num="64"><a><span class="img_dimmed"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottom_bar">
+                        <a href="http://www.linefriends.com/#store" class="lk_store">STORE LOCATOR</a>
+                        <a href="http://store.linefriends.com" class="lk_store">ONLINE STORE</a>
+                        <div class="box_lk">
+                            <ul>
+                                <li><a class="facebook">facebook</a></li>
+                                <li><a class="twitter">twitter</a></li>
+                                <li><a class="weibo">weibo</a></li>
+                            </ul>
+                            <p>© 2016 LINEFRIENDS, CORP. ALL RIGHTS RESERVED</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--[D] 레이어팝업 활성화 시 :on 추가-->
+            <div class="box_gallery">
+                <div class="dim"></div>
+                <div class="burger_layer">
+                    <img src="https://www.linefriends.com/img/burger/biglayer/img.jpg" height="100%" alt="">
+                    <a class="btn_close_layer" style="cursor:pointer"></a>
+                </div>
+            </div>
+            <div class="layer_loading">
+                <div class="box_loading">
+                    <img src="https://www.linefriends.com/img/burger/loading.gif" width="164" height="40" alt="loading">
+                </div>
+            </div>
+
+        </div>
+    </div>
+	
+	<!-- 영상 레이어 팝업 -->
+    <!-- [D] 팝업 노출시 display:block 으로 변경 필요 -->
+    <!-- [D] 팝업 미노출시 display:none 으로 변경 필요 -->
+    <div class="dim" style="display:none"></div>
+    <div class="lypop mv_pop" style="display:none">
+        <div class="mv_area">
+            <a class="btn_lypop_close pop_layer"><span class="blind">닫기</span></a>
+            <div class="mv_cnt" style="display:block">
+				<!-- 동영상 노출영역 -->
+                <iframe width="948" height="532" src="https://www.youtube.com/embed/62ZmWjhiofM" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!--[D] 아래 코드는 테스트용으로 작성한 스크립트 입니다. 개발시 제외/삭제부탁드립니다  -->
+    <script src="js/slick.js"></script>
+    <script>
+        $(".thumb_image_area > li").on("click", function() {
+            $(".box_gallery").addClass("on");
+            //var bgimg = "background-image:url(https://www.linefriends.com/img/burger/biglayer/img"+$(this).data("num")+".jpg)";
+            var bgimg = "https://www.linefriends.com/img/burger/biglayer/img" + $(this).data("num") + ".jpg";
+            $(".burger_layer img").attr("src", bgimg);
+            $(".burger_layer").attr("style", "width : " + $('.burger_layer img').width() + "px");
+        });
+        $(window).resize(function() {
+            $(".burger_layer").attr("style", "width : " + $('.burger_layer img').width() + "px");
+        });
+        $(".btn_close_layer").on("click", function() {
+            $(".box_gallery").removeClass("on");
+        });
+        var movie_source = $(".mv_cnt").html();
+
+        /////////////////////////// slick
+        // slick page3
+        $('#slickImg1').slick({});
+        $('#slickImg1').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+            $("#slickPage1").html("<span>" + (currentSlide + 1) + "</span> <span>/</span> <span>10</span>");
+        });
+        // slick page4	
+        $('#slickImg2').slick({});
+        $('#slickImg2').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+            $("#slickPage2").html("<span>" + (currentSlide + 1) + "</span> <span>/</span> <span>12</span>");
+        });
+        // slick page5 
+        $('#slickImg3').slick({});
+        // $('#slickImg3').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+        //     $("#slickPage3").html("<span>"+(currentSlide+1)+"</span> <span>/</span> <span>2</span>");
+        //  });
+        // slick page6
+        $('.wallpaper_view').slick({});
+        /////////////////////////// slick
+        /////////////////////////// layer popup
+        $('.pop_layer').on("click", function() {
+            event.preventDefault();
+            $('.mv_pop').toggle();
+            $('.dim').toggle();
+            if ($('.mv_pop').css("display") == "none") {
+                $("#burgerVideo")[0].play();
+                $(".mv_cnt").html(movie_source);
+            } else {
+                $("#burgerVideo")[0].pause();
+            }
+        });
+        /////////////////////////// layer popup
+        /////////////////////////// scroller move
+        var tempScroll = 0;
+        var currentSection = 1;
+        var isScrolling = true;
+        var scrollId;
+        var controlPressed;
+        var wheelMoveId;
+        var scrollings = [];
+        var canScroll = true;
+        var $window = $(window);
+        var $document = $(document);
+        var keydownId;
+        var isWindowFocused = true;
+        // 이벤트 바인딩이 필요함
+        // 이벤트는 휠과 keyDown
+        function bindEvents() {
+            $document
+                //Sliding with arrow keys, both, vertical and horizontal
+                .keydown(keydownHandler)
+                //to prevent scrolling while zooming
+                .keyup(keyUpHandler)
+            /**
+             * Applying normalScroll elements.
+             * Ignoring the scrolls over the specified selectors.
+             */
+            $document.on('mouseenter', function() {
+                setMouseWheelScrolling(true);
+            });
+            $document.on('mouseleave', function() {
+                setMouseWheelScrolling(false);
+            });
+        }
+        // 휠은 페이지에 마우스가 위치할때만이다.
+        function setMouseWheelScrolling(value) {
+            if (value) {
+                addMouseWheelHandler();
+                //    addMiddleWheelHandler();
+            } else {
+                removeMouseWheelHandler();
+                // removeMiddleWheelHandler();
+            }
+        }
+        function addMouseWheelHandler() {
+            var prefix = '';
+            var _addEventListener;
+            if (window.addEventListener) {
+                _addEventListener = "addEventListener";
+            } else {
+                _addEventListener = "attachEvent";
+                prefix = 'on';
+            }
+            // detect available wheel event
+            var support = 'onwheel' in document.createElement('div') ? 'wheel' : // Modern browsers support "wheel"
+                document.onmousewheel !== undefined ? 'mousewheel' : // Webkit and IE support at least "mousewheel"
+                'DOMMouseScroll'; // let's assume that remaining browsers are older Firefox
+            if (support == 'DOMMouseScroll') {
+                document[_addEventListener](prefix + 'MozMousePixelScroll',
+                    MouseWheelHandler, false);
+            }
+            //handle MozMousePixelScroll in older Firefox
+            else {
+                document[_addEventListener](prefix + support,
+                    MouseWheelHandler, false);
+            }
+        }
+
+        /**
+         * Removes the auto scrolling action fired by the mouse wheel and trackpad.
+         * After this function is called, the mousewheel and trackpad movements won't scroll through sections.
+         */
+        function removeMouseWheelHandler() {
+            if (document.addEventListener) {
+                document.removeEventListener('mousewheel', MouseWheelHandler,
+                    false); //IE9, Chrome, Safari, Oper
+                document.removeEventListener('wheel', MouseWheelHandler, false); //Firefox
+                document.removeEventListener('MozMousePixelScroll',
+                    MouseWheelHandler, false); //old Firefox
+            } else {
+                document.detachEvent('onmousewheel', MouseWheelHandler); //IE 6/7/8
+            }
+        }
+        // key 관련 설정
+        function keyUpHandler(e) {
+            if (isWindowFocused) { //the keyup gets fired on new tab ctrl + t in Firefox
+                controlPressed = e.ctrlKey;
+            }
+        }
+        //Sliding with arrow keys, both, vertical and horizontal
+        function keydownHandler(e) {
+            clearTimeout(keydownId);
+            var activeElement = $(':focus');
+            if (!activeElement.is('textarea') && !activeElement.is('input') &&
+                !activeElement.is('select')) {
+                var keyCode = e.which;
+                //preventing the scroll with arrow keys & spacebar & Page Up & Down keys
+                var keyControls = [40, 38, 32, 33, 34];
+                if ($.inArray(keyCode, keyControls) > -1) {
+                    e.preventDefault();
+                }
+                controlPressed = e.ctrlKey;
+                keydownId = setTimeout(function() {
+                    onkeydown(e);
+                }, 150);
+            }
+        }
+        var prevTime = new Date().getTime();
+        // wheelflag 이벤트가 0.5초 이상 안들어 온다음에 이벤트 먹게 수정
+        function MouseWheelHandler(e) {
+            if ($('.buger_tab').hasClass("on"))
+                return;
+            var curTime = new Date().getTime();
+            //autoscrolling and not zooming?
+            if (!controlPressed) {
+                clearTimeout(wheelMoveId);
+                // cross-browser wheel delta
+                e = e || window.event;
+                var value = e.wheelDelta || -e.deltaY || -e.detail ||
+                    e.wheelDeltaY;
+                var delta = Math.max(-1, Math.min(1, value));
+                var horizontalDetection = typeof e.wheelDeltaX !== 'undefined' ||
+                    typeof e.deltaX !== 'undefined';
+                var isScrollingVertically = (Math.abs(e.wheelDeltaX) < Math
+                        .abs(e.wheelDelta)) ||
+                    (Math.abs(e.deltaX) < Math.abs(e.deltaY) || !horizontalDetection);
+                //Limiting the array to 150 (lets not waste memory!)
+                if (scrollings.length > 149) {
+                    scrollings.shift();
+                }
+                //keeping record of the previous scrollings
+                scrollings.push(Math.abs(value));
+                //time difference between the last scroll and the current one
+                var timeDiff = curTime - prevTime;
+                prevTime = curTime;
+                //haven't they scrolled in a while?
+                //(enough to be consider a different scrolling action to scroll another section)
+                if (timeDiff > 200) {
+                    //emptying the array, we dont care about old scrollings for our averages
+                    scrollings = [];
+                }
+                if (canScroll) {
+                    var averageEnd = getAverage(scrollings, 10);
+                    var averageMiddle = getAverage(scrollings, 70);
+                    var isAccelerating = averageEnd >= averageMiddle;
+                    //to avoid double swipes...
+                    if (isAccelerating && isScrollingVertically) {
+                        //scrolling down?
+                        if (delta < 0) {
+                            //scrolling('down', scrollable);
+                            wheelMoveId = setTimeout(function() {
+                                moveSectionDown();
+                            }, 150);
+                            //scrolling up?
+                        } else {
+                            wheelMoveId = setTimeout(function() {
+                                moveSectionUp();
+                            }, 150);
+                        }
+                    }
+                }
+                return false;
+            }
+        }
+        /**
+         * Gets the average of the last `number` elements of the given array.
+         */
+        function getAverage(elements, number) {
+            var sum = 0;
+            //taking `number` elements from the end to make the average, if there are not enought, 1
+            var lastElements = elements.slice(Math.max(
+                elements.length - number, 1));
+            for (var i = 0; i < lastElements.length; i++) {
+                sum = sum + lastElements[i];
+            }
+            return Math.ceil(sum / number);
+        }
+
+        /**
+         * Keydown event
+         */
+        function onkeydown(e) {
+            if ($('.buger_tab').hasClass("on"))
+                return;
+            var shiftPressed = e.shiftKey;
+            switch (e.which) {
+                //up
+                case 38:
+                case 33:
+                    moveSectionUp();
+                    break;
+                    //down
+                case 32: //spacebar
+                    if (shiftPressed) {
+                        moveSectionUp();
+                        break;
+                    }
+                case 40:
+                case 34:
+                    moveSectionDown();
+                    break;
+                    //Home
+                case 36:
+                    moveTo(1);
+                    break;
+                    //End
+                case 35:
+                    moveTo(6);
+                    break;
+                    //left
+                default:
+                    return; // exit this handler for other keys
+            }
+        }
+        function scrolling(type, scrollable) {
+            if (!isScrollAllowed.m[type]) {
+                return;
+            }
+            var check, scrollSection;
+            if (type == 'down') {
+                check = 'bottom';
+                scrollSection = moveSectionDown;
+            } else {
+                check = 'top';
+                scrollSection = moveSectionUp;
+            }
+            if (scrollable.length > 0) {
+                //is the scrollbar at the start/end of the scroll?
+                if (options.scrollOverflowHandler.isScrolled(check, scrollable)) {
+                    scrollSection();
+                } else {
+                    return true;
+                }
+            } else {
+                // moved up/down
+                scrollSection();
+            }
+        }
+        var current;
+        moveSectionDown = function() {
+            if (currentSection == 6)
+                return;
+
+            $(".nav_dot").removeClass("on");
+            $("#section" + currentSection).addClass("off");
+            currentSection += 1;
+            $("#section" + currentSection).removeClass("off");
+            $($(".nav_dot")[currentSection - 1]).addClass("on");
+            if (currentSection == 2) {
+                animateTimer = setInterval(animate, 300);
+            } else {
+                clearTimeout(animateTimer);
+            }
+            $(".movie_dim").hide();
+
+            setTimeout(function() {
+                flag = true;
+            }, 500);
+
+        };
+        moveSectionUp = function() {
+            if (currentSection == 1)
+                return;
+
+            $(".nav_dot").removeClass("on");
+            currentSection -= 1;
+            $(".movie_dim").hide();
+            if (currentSection == 2) {
+                animateTimer = setInterval(animate, 300);
+            } else {
+                clearTimeout(animateTimer);
+            }
+            if (currentSection == 1) {
+                $(".movie_dim").show();
+            }
+            $($(".nav_dot")[currentSection - 1]).addClass("on");
+            $("#section" + currentSection).removeClass("off");
+
+        };
+
+        function moveTo(sectionNum) {
+            // 1번이면 ==> 전부 off
+            // 2번이면 ==> 1번만 off
+            // 3번이면 ==> 2번까지 off
+            $(".content").removeClass("off");
+            $(".movie_dim").hide();
+            for (var i = 1; i < sectionNum; i++) {
+                $("#section" + i).addClass("off");
+            }
+            $(".nav_dot").removeClass("on");
+            $($(".nav_dot")[sectionNum - 1]).addClass("on");
+            currentSection = sectionNum;
+            if (currentSection == 2) {
+                var animateTimer = setInterval(animate, 300);
+            } else {
+                clearTimeout(animateTimer);
+            }
+            if (currentSection == 1) {
+                $(".movie_dim").show();
+            }
+        }
+        var dropboxId;
+        $("#chooseLang").on("click", function() {
+            clearTimeout(dropboxId);
+            $(".lang_share").addClass("on");
+            dropboxId = setTimeout(function() {
+                $(".lang_share").removeClass('on');
+            }, 1000);
+        });
+        $(".lang_share").on("mouseout", function() {
+            clearTimeout(dropboxId);
+            dropboxId = setTimeout(function() {
+                $(".lang_share").removeClass('on');
+            }, 1000);
+        });
+        $(".lang_share").on("mousemove", function() {
+            clearTimeout(dropboxId);
+        });
+        ////////// 전체 높이 조절
+        $(".img2").css("height", document.documentElement.clientHeight + 'px');
+        $(".img2").css("width", (document.documentElement.clientWidth / 2) + 'px');
+        $(".thumb_image_area").css("height", (document.documentElement.clientHeight - 71) + "px");
+        $(window).resize(function() {
+            $(".img2").css("height", document.documentElement.clientHeight + 'px');
+            $(".img2").css("width", (document.documentElement.clientWidth / 2) + 'px');
+            $(".thumb_image_area").css("height", (document.documentElement.clientHeight - 71) + "px");
+        });
+        //////////전체 높이 조절
+        /// 2page 애니메이션 이미지
+        var animateList = [1, 2, 3, 2, 1];
+        var aniCur = 0;
+        var animateTimer = "";
+        function animate() {
+            if (aniCur > animateList.length - 2) aniCur = 0;
+            $('.content_sec').switchClass("bg" + animateList[aniCur], "bg" + animateList[aniCur + 1], 300, "easeInOutQuad");
+            aniCur++;
+        }
+        /// 2page 애니메이션 이미지
+        /*
+         * SNS 퍼가기 기능 > 페이스 북
+         */
+        var lineCont = "우리랑 맛있는 거 보러 가자~ #LINEFRIENDS #BurgerandChips #Snackparty\n라인프렌즈 버거앤칩스 에디션";
+        var twCont = "우리랑 맛있는 거 보러 가자~ #LINEFRIENDS #BurgerandChips #Snackparty\n라인프렌즈 버거앤칩스 에디션";
+        var weiboCont = "和我们一起去享受美味的东西吧! #LINEFRIENDS##BurgerandChips##零食派对#\nLINE FRIENDS Burger&Chips Edition";
+        var linkUrl = "http://www.linefriends.com/snackparty";
+        var title = "LINE FRIENDS Burger&Chips Edition";
+        $(".facebook").on("click", function(event) {
+            event.preventDefault();
+            // ga('send', 'event', 'share', 'facebook');
+            var facebookURL = "https://www.facebook.com/sharer.php?u=" + encodeURIComponent(linkUrl) + "&t=" + encodeURIComponent(title);
+            window.open(facebookURL, "FACEBOOK");
+        });
+        /*
+         * SNS 퍼가기 기능 > 트위터
+         */
+        $(".twitter").on("click", function(event) {
+            event.preventDefault();
+            // ga('send', 'event', 'share', 'twitter');
+            var twitterURL = "http://twitter.com/intent/tweet?text=" + encodeURIComponent(twCont) + " " + encodeURIComponent(linkUrl);
+            window.open(twitterURL, "TWITTER");
+        });
+        $(".weibo").on("click", function(event) {
+            event.preventDefault();
+            var weiboUrl = 'http://v.t.qq.com/share/share.php?title=' + encodeURIComponent(weiboCont) + '&url=' + encodeURIComponent(linkUrl);
+            window.open(weiboUrl, "weibo", 'width=450, height=400');
+        });
+        ////// 이미지 로딩
+        var images = new Array();
+        ////// 이미지 로딩
+        function preload() {
+            for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i]
+            }
+        }
+        window.onload = function() {
+            setTimeout(function() {
+                preload(
+                    "https://www.linefriends.com/img/burger/1.jpg",
+                    "https://www.linefriends.com/img/burger/2.jpg",
+                    "https://www.linefriends.com/img/burger/3.jpg",
+                    "https://www.linefriends.com/img/burger/en1.jpg",
+                    "https://www.linefriends.com/img/burger/en2.jpg",
+                    "https://www.linefriends.com/img/burger/en3.jpg",
+                    "https://www.linefriends.com/img/burger/ch1.jpg",
+                    "https://www.linefriends.com/img/burger/ch2.jpg",
+                    "https://www.linefriends.com/img/burger/ch3.jpg",
+                    "https://www.linefriends.com/img/burger/page3/img_page3_hover_v2.jpg",
+                    "https://www.linefriends.com/img/burger/page4/img_page4_hover_v2.jpg",
+                    "https://www.linefriends.com/img/burger/page5/img_page5_hover_v2.jpg"
+                );
+                bindEvents();
+                setMouseWheelScrolling(true);
+                $(".layer_loading").addClass("off");
+            }, "1000");
+        }
+    </script>
+    <!-- //[D] 아래 코드는 테스트용으로 작성한 스크립트 입니다. 개발시 제외/삭제부탁드립니다  -->
+</body>
+</html>

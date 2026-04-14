@@ -1,0 +1,940 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <title>Nike 나이키닷컴</title>
+	
+	<link rel="shortcut icon" href="http://lecs.nike.co.kr/NKS1/image/nike_favicon.ico" />
+	
+	<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1/css/order.css"/>
+	<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1/css/display.css"/>
+	
+	<!-- //주문,결제 -->
+	
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery-1.7.2.min.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jcarousellite_1.0.1.min.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery.currency.min.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/common.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery.json-2.2.js" ></script>	
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/validator.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/iframeSubmit.js" ></script>	
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/lnb_layer_ipa.js" ></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/calendar.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/ajax.js" ></script>
+    <script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery.form.js"></script>
+	<script type="text/javascript">
+		var secureRoot = "http://lecs.nike.co.kr:8443/";
+		var lecsRoot = "http://lecs.nike.co.kr/";
+		//도로검색팝업추가
+		function fn_rodAddr(no,mode) 
+		{
+			if(mode != "undefined" && mode != null && mode != "" ){
+				window.open('/mypage/popupRodAddr.lecs?display='+no+"&mode="+mode,'','scrollbars=yes,width=806,height=744');
+			}
+			else{
+				window.open('/mypage/popupRodAddr.lecs?display='+no,'','scrollbars=yes,width=806,height=744');
+			}
+		}
+	</script>
+    
+<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1/css/mypage.css"/>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/design.js"></script>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/mypage.js"></script>
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/popup.js" ></script>
+
+<!-- renewal phase2 -->
+<link rel="stylesheet" type="text/css" href="../css/global_renewal_phase2.css" />
+<!-- renewal phase2 -->
+
+<script type="text/javascript">
+<!--
+var isChanged = 1;
+var isPayment = 0;
+function setUpQty(num, pkgNo){
+	var oldQty = Number($('#claimQuantity_'+num).val());
+	var quantity = Number($('#availClaimQty_'+num).val());
+	
+	if (oldQty < quantity) {
+		$('#claimQuantity_'+num).val(oldQty+1);
+			
+		isChanged = 1;
+		$('#chk_'+num).prop("checked", true);
+
+		if($('#chk_'+num).is(":checked")) {
+			if($('#claimPossibilityYn_' + num).val() == 'N') {
+				alert("이미 진행중인 셋트상품 반품건이 존재합니다.\n반품완료 후 접수 가능합니다");
+				$('#chk_'+num).prop("checked", false);
+				$('#claimQuantity_'+num).val(0);
+				return false;
+			}
+			
+			if($('#exchangeReturnGoodsPossibilityYn_' + num).val() == 'N') {
+				alert("선택하신 상품은 반품 및 교환이 불가한 상품입니다.\n1:1고객문의나 고객센터(080-022-5512)로 문의주시기 바랍니다.");
+				$('#chk_'+num).prop("checked", false);
+				$('#claimQuantity_'+num).val(0);
+				return false;
+			}
+		}
+	}
+	if (pkgNo != '') {
+		pkgCheck(pkgNo, $('#claimQuantity_'+num).val());
+	}
+	return true;
+}
+
+function setDownQty(num, pkgNo){
+	var oldQty = Number($('#claimQuantity_'+num).val());
+
+	if (oldQty > 0) {
+		$('#claimQuantity_'+num).val(oldQty-1);
+		isChanged = 1;
+		
+		if($('#claimQuantity_'+num).val() > 0) {
+			$('#chk_'+num).prop("checked", true);
+		} else {
+			$('#chk_'+num).prop("checked", false);
+		}
+	}
+	if (pkgNo != '') {
+		pkgCheck(pkgNo, $('#claimQuantity_'+num).val());
+	}
+}
+
+function pkgCheck(pkgNo, qty){
+	var objs = $(':input[name='+pkgNo+']');
+	for(var i=0; i< objs.size(); i++) {
+		if (qty > 0) {
+			$('#claimQuantity_'+objs.eq(i).val()).val(qty);
+			$('#chk_'+objs.eq(i).val()).prop("checked", true);
+		} else if(qty == 0){
+			$('#claimQuantity_'+objs.eq(i).val()).val(qty);
+			$('#chk_'+objs.eq(i).val()).prop("checked", false);
+		}
+	}
+}
+
+function setCancelQty(num, pkgNo){
+	var id = 'claimQuantity_'+num;
+	var qty = Number($('#'+id).val());
+	var quantity = Number($('#availClaimQty_'+num).val());
+	
+	if (qty >= 0 && qty <= quantity) {
+		$('#'+id).val('');
+		$('#'+id).val(qty);
+	} else {
+		$('#'+id).val(0);
+	}
+	isChanged = 1;
+	if($('#claimQuantity_'+num).val() > 0) {
+		$('#chk_'+num).prop("checked", true);
+	} else {
+		$('#chk_'+num).prop("checked", false);
+	}
+
+	if (pkgNo != '') {
+		pkgCheck(pkgNo, $('#claimQuantity_'+num).val());
+	}
+}
+
+function changeReason(num, pkgNo){
+	var value = $('#claimCauseCode_'+num).val();
+	if(value == "") {
+		return false;
+	}
+	
+	var useYn = $('#claimCauseCode_'+num + ' option:selected').attr('useYn');	
+	if(useYn != 'Y') {
+		if(confirm("해당 사유로는 반품접수를 할 수 없습니다.\n1:1문의로 이동하시겠습니까?") == true) {
+			viewLayerOneEmail();
+			//self.close();
+		}
+		$('#claimCauseCode_'+num).val('');
+	}
+	
+	//패키지 취소사유 변경
+	if(pkgNo != null) {
+		$('[name=slt_'+pkgNo+']').val(value);
+	}
+	
+	isChanged = 1;
+	
+	return true;
+}
+
+//주문번호, 회원배송지일련번호, 배송메세지, 주문,교환,반품 주소(01:주문배송지, 02:교환배송지, 03:반품지)
+function deliveryChange(orderNo, deliveryType){
+	$.ajax({
+		type: 'POST',
+		url: '/mypage/order/deliveryPlaceChange.save.lecs?nolayout=yes',
+		cache: false,
+		data: 'orderNo='+orderNo+'&deliveryType='+deliveryType,
+		success: function(html){
+			$('#DCLayer').html('');
+			$('#DCLayer').html(html);
+		
+			openLayer('changeDelivery', {center: true, blocker: true});
+			}
+		});
+}
+function validateReturn(){
+
+	if(isChanged == 1) {
+		alert("반품수량을 저장하여 주시기 바랍니다");
+		return false;
+	}
+	
+	if(parseInt($("#totGoodsCnt").val()) < 1) {
+        alert("반품처리 대상 상품을 먼저 선택하시기 바랍니다.");
+        return false;
+    }
+
+	if($("input[name=ra_delivery]:checked").val() == null) {
+		alert("수거방법을 선택하여 주시기 바랍니다.");
+		return false;
+	}
+
+	if(!$('#assent').is(":checked")) {
+		alert("반품 내용 확인 후 동의하셔야 반품비 결제 및 반품 접수가 가능합니다.");		
+		return false;	
+	}	
+	
+	// 환불 예상금액 조회
+    calcReturnAmount();
+//	openLayer('return', {center: true});
+    return true;
+}
+function selectGoods() {
+	// 선택한 주문취소 상품내역을 가지고 환불금액 생성
+    if($(":input[name=chkList]:checked").size() > 0) {
+    	for(var chkI=1; chkI<= $(":input[name=chkList]").size(); chkI++) {
+    		if($('#chk_'+chkI).is(":checked")) {
+				if(Number($('#availClaimQty_'+chkI).val()) >= Number($('#claimQuantity_'+chkI).val())){
+					if($('#claimQuantity_'+chkI).val() < 1) {
+						alert("수량을 선택하여 주시기 바랍니다.");
+						return false;
+					}
+				}else {
+					alert("주문수량보다 적게 입력하시기 바랍니다.");
+					return false;
+				}
+				if($('#claimCauseCode_'+ chkI).val() == "") {
+					alert("반품사유를 선택하여 주십시오");
+					return false;
+				}
+    		}
+    	}
+
+        var goodsCnt = 0;
+        var formObj = $("#returnInfoForm");
+        initReturnGoodsData(formObj);
+        for(var i = 1; i<= $(":input[name=chkList]").size(); i++) {
+            if($('#chk_'+i).is(":checked")) {
+                goodsCnt++;
+
+                var inputObj1 = $("<input type=\"hidden\"/>").attr("name", "storeNo").attr("id", "storeNo"+goodsCnt).val($('#storeNo_'+i).val());
+                var inputObj2 = $("<input type=\"hidden\"/>").attr("name", "siteNo").attr("id", "siteNo"+goodsCnt).val($('#siteNo_'+i).val());
+                var inputObj3 = $("<input type=\"hidden\"/>").attr("name", "orderNo").attr("id", "orderNo"+goodsCnt).val($('#orderNo_'+i).val());
+                var inputObj4 = $("<input type=\"hidden\"/>").attr("name", "orderDetailSn").attr("id", "orderDetailSn"+goodsCnt).val($('#orderDetailSn_'+i).val());
+                var inputObj5 = $("<input type=\"hidden\"/>").attr("name", "goodsNo").attr("id", "goodsNo"+goodsCnt).val($('#goodsNo_'+i).val());
+                var inputObj6 = $("<input type=\"hidden\"/>").attr("name", "itemNo").attr("id", "itemNo"+goodsCnt).val($('#itemNo_'+i).val());
+                var inputObj7 = $("<input type=\"hidden\"/>").attr("name", "memberNo").attr("id", "memberNo"+goodsCnt).val($('#memberNo_'+i).val());
+                var inputObj8 = $("<input type=\"hidden\"/>").attr("name", "acceptChannelCode").attr("id", "acceptChannelCode"+goodsCnt).val("03");
+                var inputObj9 = $("<input type=\"hidden\"/>").attr("name", "claimTypeCode").attr("id", "claimTypeCode"+goodsCnt).val("02");
+                var inputObj10 = $("<input type=\"hidden\"/>").attr("name", "enterpriseNo").attr("id", "enterpriseNo"+goodsCnt).val($('#enterpriseNo_'+i).val());
+                var inputObj11 = $("<input type=\"hidden\"/>").attr("name", "enterpriseContractNo").attr("id", "enterpriseContractNo"+goodsCnt).val($('#enterpriseContractNo_'+i).val());
+                var inputObj12 = $("<input type=\"hidden\"/>").attr("name", "lowestEnterpriseNo").attr("id", "lowestEnterpriseNo"+goodsCnt).val($('#lowestEnterpriseNo_'+i).val());
+                var inputObj13 = $("<input type=\"hidden\"/>").attr("name", "claimQuantity").attr("id", "claimQuantity"+goodsCnt).val($('#claimQuantity_'+i).val());
+                var inputObj14 = $("<input type=\"hidden\"/>").attr("name", "claimCauseCode").attr("id", "claimCauseCode"+goodsCnt).val($('#claimCauseCode_'+i).val());
+                var inputObj15 = $("<input type=\"hidden\"/>").attr("name", "deliberationReturnGoodsYn").attr("id", "deliberationReturnGoodsYn"+goodsCnt).val("N");
+                var inputObj16 = $("<input type=\"hidden\"/>").attr("name", "deliveryExpensePolicyNo").attr("id", "deliveryExpensePolicyNo"+goodsCnt).val($('#deliveryExpensePolicyNo_'+i).val());
+                var inputObj17 = $("<input type=\"hidden\"/>").attr("name", "deliveryPolicyNo").attr("id", "deliveryPolicyNo"+goodsCnt).val($('#deliveryPolicyNo_'+i).val());
+                var inputObj18 = $("<input type=\"hidden\"/>").attr("name", "deliveryProcessTypeCode").attr("id", "deliveryProcessTypeCode"+goodsCnt).val($('#deliveryProcessTypeCode_'+i).val());
+                var inputObj19 = $("<input type=\"hidden\"/>").attr("name", "salePrice").attr("id", "salePrice"+goodsCnt).val($('#salePrice_'+i).val());
+                    
+               	inputObj1.appendTo(formObj);
+               	inputObj2.appendTo(formObj);
+               	inputObj3.appendTo(formObj);
+               	inputObj4.appendTo(formObj);
+               	inputObj5.appendTo(formObj);
+               	inputObj6.appendTo(formObj);
+               	inputObj7.appendTo(formObj);
+               	inputObj8.appendTo(formObj);
+               	inputObj9.appendTo(formObj);
+               	inputObj10.appendTo(formObj);
+               	inputObj11.appendTo(formObj);
+               	inputObj12.appendTo(formObj);
+               	inputObj13.appendTo(formObj);
+               	inputObj14.appendTo(formObj);
+               	inputObj15.appendTo(formObj);
+               	inputObj16.appendTo(formObj);
+               	inputObj17.appendTo(formObj);
+               	inputObj18.appendTo(formObj);
+               	inputObj19.appendTo(formObj);
+            }
+        }
+
+        if(goodsCnt > 0) {
+        	$("#totGoodsCnt").val(goodsCnt);
+
+        	isChanged = 0;
+
+        	//반품수거비 계산
+        	setReturnDeliveryNote();
+        }
+    }else{
+        alert("반품처리 대상상품을 선택하시기 바랍니다.");
+        return false;
+    }
+    return true;
+}
+
+function setReturnDeliveryNote(){
+	var returnDeliveryNote = 0;
+	var preDeliveryPolicyNo = "";
+	for(var i = 1; i<= $(":input[name=chkList]").size(); i++) {
+        if($('#chk_'+i).is(":checked")) {
+            if(preDeliveryPolicyNo != $('#deliveryPolicyNo_'+i).val()) {
+        	 	returnDeliveryNote += Number($('#returnDeliveryNote_'+$('#deliveryPolicyNo_'+i).val()).val());
+        	 	preDeliveryPolicyNo = $('#deliveryPolicyNo_'+i).val();
+            }
+        }
+	}
+	if($("input[name=ra_delivery]:checked").val() != "30") {
+		$('#spn_returnDelivery').html('(-) '+$.currency(returnDeliveryNote, 0)+'원');
+	} else {
+		$('#spn_returnDelivery').html($.currency(0, 0)+'원');
+	}
+		
+}
+
+function initReturnGoodsData(formObj) {
+	formObj.find(":input[name=storeNo]").remove();
+	formObj.find(":input[name=siteNo]").remove();
+	formObj.find(":input[name=orderNo]").remove();
+	formObj.find(":input[name=orderDetailSn]").remove();
+	formObj.find(":input[name=goodsNo]").remove();
+	formObj.find(":input[name=itemNo]").remove();
+	formObj.find(":input[name=memberNo]").remove();
+	formObj.find(":input[name=acceptChannelCode]").remove();
+	formObj.find(":input[name=claimTypeCode]").remove();
+	formObj.find(":input[name=enterpriseNo]").remove();
+	formObj.find(":input[name=enterpriseContractNo]").remove();
+	formObj.find(":input[name=lowestEnterpriseNo]").remove();
+	formObj.find(":input[name=claimQuantity]").remove();
+	formObj.find(":input[name=claimCauseCode]").remove();
+	formObj.find(":input[name=deliberationReturnGoodsYn]").remove();
+	formObj.find(":input[name=deliveryExpensePolicyNo]").remove();
+	formObj.find(":input[name=deliveryPolicyNo]").remove();
+	formObj.find(":input[name=deliveryProcessTypeCode]").remove();
+	formObj.find(":input[name=salePrice]").remove();
+}
+
+//반품 접수
+function saveReturnRequest() {
+	
+	if(parseInt($("#totGoodsCnt").val()) < 1) {
+        alert("반품처리 대상상품을 선택하시기 바랍니다.");
+        return false;
+    }
+
+	saveReturn();
+
+	return true;
+}
+
+function saveReturn() {
+	if($('#href_return_receipt').attr('onClick') != 'return false;') {
+		var formObj = $("#returnInfoForm").get(0);
+		formObj.action = "/mypage/order/saveReturnsRequest.lecs";
+		$("#btn_return_receipt").prop("disabled",true);
+		IframeSubmitter.submit(formObj, "handleSaveReturn", "submitFrame");	
+	}
+	
+	$('#href_return_receipt').attr('onClick', 'return false;');
+}
+
+function handleSaveReturn(result) {
+	if (result.success) {
+		// call back 함수 호출 추가
+		closeLayer('return');
+		if(isPayment == 0 ) { 
+			openLayer('returnOk', {center: true});
+		} else {
+			goRefundPopup('1606230007369NK');
+			self.close();
+		}
+	} else if (result.message) {
+		alert(result.message);
+	} else {
+		alert("저장 중 오류가 발생했습니다.");
+	}
+	$("#href_return_receipt").prop("disabled",false);
+}
+
+function calcReturnAmount() {
+	// 환불정보조회를 위해 취소정보 Form을 조회 Service에 연결.
+	var action = "/mypage/order/listExpectRefundAmount.lecs";
+	var params = $("#returnInfoForm").serialize();
+	
+	$.post(action, params, function(result){
+		if (result.code == '') {
+			alert("조회중 오류가 발생하였습니다");
+		} else if (result.code == '01') {
+			//성공
+			showExpectRefundAmount(result);
+		} else {
+			//실패
+			alert("조회중 오류가 발생하였습니다");
+		} 
+	}, "json");
+}
+
+function showExpectRefundAmount(result){
+	var data = result.content.data;
+	var totalRefundAmount;
+	$(data).each(function(){
+		totalRefundAmount = this.totalRefundAmount;
+	});
+	
+	if(Number(totalRefundAmount) < 0) {
+		if(confirm("반품 수거비로 인하여 추가결제가 필요합니다.\n반품접수 후 추가결제를 하셔야 반품이 진행됩니다.") == true ) {
+			openLayer('return', {center: true});
+			isPayment = 1;
+			return true;
+		}else {
+			return false;
+		}
+	} else {
+		isPayment = 0;
+		openLayer('return', {center: true});
+		return true;		
+	} 
+}
+//반품 배송지 값 셋팅
+function setReturnReuseForm() {
+	$('#returnInfoForm :input[name=pickUpPostNo]').val($('#saveForm :input[name=postNo]').val());
+	$('#returnInfoForm :input[name=pickUpPostAddress]').val($('#saveForm :input[name=postAddress]').val());
+	$('#returnInfoForm :input[name=pickUpDetailAddress]').val($('#saveForm :input[name=detailAddress]').val());
+	$('#returnInfoForm :input[name=pickUpStnmPostNo]').val($('#saveForm :input[name=stnmPostNo]').val());
+	$('#returnInfoForm :input[name=pickUpStnmPostAddress]').val($('#saveForm :input[name=stnmPostAddress]').val());
+	$('#returnInfoForm :input[name=pickUpStnmDetailAddress]').val($('#saveForm :input[name=stnmDetailAddress]').val());
+	$('#returnInfoForm :input[name=pickUpAddrChocSctCd]').val($('#saveForm :input[name=addrChocSctCd]').val());
+	$('#returnInfoForm :input[name=pickUpAddrChkRsltCd]').val($('#saveForm :input[name=addrChkRsltCd]').val());	
+	$('#returnInfoForm :input[name=pickUpCableTelephoneRegionNo]').val($('#saveForm :input[name=cableTelephoneRegionNo]').val());
+	$('#returnInfoForm :input[name=pickUpCableTelephoneExchange]').val($('#saveForm :input[name=cableTelephoneExchange]').val());
+	$('#returnInfoForm :input[name=pickUpCableTelephoneEndNo]').val($('#saveForm :input[name=cableTelephoneEndNo]').val());
+	$('#returnInfoForm :input[name=pickUpCellSectionNo]').val($('#saveForm :input[name=cellSectionNo]').val());
+	$('#returnInfoForm :input[name=pickUpCellTelephoneExchange]').val($('#saveForm :input[name=cellTelephoneExchange]').val());
+	$('#returnInfoForm :input[name=pickUpCellEndNo]').val($('#saveForm :input[name=cellEndNo]').val());
+	$('#returnInfoForm :input[name=remiteeName]').val($('#saveForm :input[name=remiteeName]').val());
+	$('#returnInfoForm :input[name=deliveryName]').val($('#saveForm :input[name=deliveryName]').val());
+
+	// 자동 계산하기.
+	if(parseInt($("#totGoodsCnt").val()) > 0) {
+		selectGoods();
+	}
+}
+
+$(document).ready(function(){
+
+	// 직접 반품 클릭시 배송비 안내 내용 삭제. ( 10 : 롯데수거, 20:업체수거, 30:고객반품)
+	$("input[name=ra_delivery]").click(function() {
+		if($("input[name=ra_delivery]:checked").val() == "30") {
+			$("#pickUpTypeCode").val($(this).val());
+			$('#returnDeliveryAddr').css('display','block');
+			$('#tagetGoodsListTable').find('tr td[class=lns13]').each(function(){
+				$(this).children('span').hide();
+			});
+		} else {
+			$("#pickUpTypeCode").val($(this).val());
+			$('#returnDeliveryAddr').css('display','none');
+			$('#tagetGoodsListTable').find('tr td[class=lns13]').each(function(){
+				$(this).children('span').show();
+			});
+			
+		}
+
+		// 자동 계산하기.
+		if(parseInt($("#totGoodsCnt").val()) > 0) {
+			selectGoods();
+		}
+	});
+
+	if('' != '') {
+		var chkOrderDetailSn = ''.split(",");
+		for(var i=0; i<chkOrderDetailSn.length; i++) {
+			$('#claimQuantity_'+$('#'+chkOrderDetailSn[i]).val()).val(1);
+			//$('#chk_'+(i+1)).prop("checked", true);
+			$('#chk_'+$('#'+chkOrderDetailSn[i]).val()).prop("checked", true);
+		}
+		selectGoods();
+	}
+
+	$("input[name=chkList]").click(function() {
+		isChanged = 1;
+		var count = $(this).val();
+		if($('#chk_'+count).is(":checked")) {
+			if($('#claimPossibilityYn_' + count).val() == 'N') {
+				alert("이미 진행중인 셋트상품 반품건이 존재합니다.\n반품완료 후 접수 가능합니다");
+				$(this).prop("checked", false);
+			}
+			
+			if($('#exchangeReturnGoodsPossibilityYn_' + count).val() == 'N') {
+				alert("선택하신 상품은 반품 및 교환이 불가한 상품입니다.\n1:1고객문의나 고객센터(080-022-5512)로 문의주시기 바랍니다.");
+				$(this).prop("checked", false);
+			}
+		}
+	});
+	
+});
+
+
+function viewLayerOneEmail(){
+	$('#emailForm').submit();
+	$('#emailDiv').show();
+	openLayer('emailDiv', {center: true, blocker: true});
+} 
+
+function layerClose() {
+	$('#emailDiv').hide();
+}
+
+//-->
+</script>
+<!-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil Start  -->
+<script>var s_account = "nikestorekoreadev";</script><!-- 운영과 개발용 설정이 달라서 config 이용 -->
+<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/s_code_nikestorekr.js"></script>	
+<script type="text/javascript">
+	window.onload = function doCatalyst(){	
+		var chl = "Myshop>ClaimRegister>ReturnRegi(P)";
+		var pgNm = "nikestorekr>" + chl;
+		s.currencyCode="KRW";	
+		s.linkInternalFilters+=",nike.co.kr";
+		s.pageName=pgNm;
+		s.channel="Myshop";
+		s.prop2="nikestorekr";
+		s.prop10="commerce";
+		s.prop12=$("#sportsProp").val();
+		s.prop14="kr";
+		s.prop15="ko";
+		s.prop17="nikestorekr:MyPage";	
+		 s.eVar4 = "logged in"; 
+		s.t();	
+	}
+</script>	
+
+	
+
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready( function (){
+		$(document.body).prepend("<div id='stageWarning'><div style='display:table-cell; vertical-align:middle; height:30px;'><b>현재 STAGING에 접속 중입니다. <\/b><\/div><\/div>");
+		$("#stageWarning")
+			.css("background-color","#009900")
+			.css("color","white");
+		setTimeout( "$('#stageWarning').hide();",5000 );
+	});
+//]]>
+</script>
+
+</head>
+
+<body id="pop" >
+
+
+<iframe title="submitFrame" name="submitFrame" style="display:none" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+<iframe title="downloadFrame" name="downloadFrame" style="display:none" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+
+	
+
+<form name="returnInfoForm" id="returnInfoForm">
+	<input type="hidden" name="totGoodsCnt" id="totGoodsCnt" value="0"/>
+	<input type="hidden" name="pickUpTypeCode" id="pickUpTypeCode" value=""/>
+	<input type="hidden" name="returnDeliverySerialNumber" id="returnDeliverySerialNumber" value=""/>
+	
+	<input type="hidden" name="pickUpPostNo" id="pickUpPostNo" value="13441"/>
+	<input type="hidden" name="pickUpPostAddress" id="pickUpPostAddress" value="경상북도 예천군 용문면"/>
+	<input type="hidden" name="pickUpDetailAddress" id="pickUpDetailAddress" value="비봉리 73"/>
+	<input type="hidden" name="pickUpStnmPostNo" id="pickUpStnmPostNo" value="13441"/>
+	<input type="hidden" name="pickUpStnmPostAddress" id="pickUpStnmPostAddress" value="인천광역시 남구 인하로236번길"/>
+	<input type="hidden" name="pickUpStnmDetailAddress" id="pickUpStnmDetailAddress" value="11-26"/>
+	<input type="hidden" name="pickUpAddrChocSctCd" id="pickUpAddrChocSctCd" value="01"/>
+	<input type="hidden" name="pickUpAddrChkRsltCd" id="pickUpAddrChkRsltCd" value="I"/>	
+	<input type="hidden" name="pickUpCableTelephoneRegionNo" id="pickUpCableTelephoneRegionNo" value="549"/>
+	<input type="hidden" name="pickUpCableTelephoneExchange" id="pickUpCableTelephoneExchange" value="990"/>
+	<input type="hidden" name="pickUpCableTelephoneEndNo" id="pickUpCableTelephoneEndNo" value="4014"/>
+	<input type="hidden" name="pickUpCellSectionNo" id="pickUpCellSectionNo" value="010"/>
+	<input type="hidden" name="pickUpCellTelephoneExchange" id="pickUpCellTelephoneExchange" value="4000"/>
+	<input type="hidden" name="pickUpCellEndNo" id="pickUpCellEndNo" value="5594"/>
+	<input type="hidden" name="remiteeName" id="remiteeName" value="빈정샘"/>
+	<input type="hidden" name="deliveryName" id="deliveryName" value="집"/>
+	
+	<input type="hidden" id="PdeliveryPlaceSn" name="PdeliveryPlaceSn" value="7989618">
+</form>
+
+<!--  환불 할때 필요 정보 -->
+<input type="hidden" id="dlexCnclCausCd" value="" />
+<input type="hidden" id="deliveryPolicyNo" value="" />
+<input type="hidden" id="deliveryExpenseTypeCode" value="" />
+<input type="hidden" id="freeDeliveryPolicyNo" value="" />
+
+	<div id="popTop">
+		<img src="http://lecs.nike.co.kr/NKS1/image/web/pre/category/pop_tit.gif" alt="nike" />
+	</div>
+	
+	<!--//{"date":"2013. 7. 18.","user":"jCompany","as-is":"","to-be":"style='background:#e1e5e6' 삭제"}//-->
+	<!-- Start -->
+	<div id="popContent" class="mypage_cancle popup3">
+	<!-- End -->
+			
+			<div class="pop_cp"> 
+				<!-- phase2 클래스 추가 -->
+				<h2 class="title">반품신청</h2>
+				<!-- phase2 클래스 추가 끝 -->
+				<p class="tits">주문번호 : <strong>1606230007369NK</strong> &nbsp; 
+				<!-- phase2 반품수량저장 버튼이동 -->
+				<!--<span class="btn_save"><a href="" onclick="selectGoods(); return false;"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_n24.gif " class="vm" alt="반품수량 저장" /></a></span> --> 
+				<!-- phase2 반품수량저장 버튼이동 끝 -->
+				<span>반품할 상품의 수량을 변경하신 후 클릭하세요.</span></p>
+			</div>
+			
+			<div class="orderList" style="margin-top:5px;">
+				<table id="tagetGoodsListTable"summary="상품수량, 주문수량,반품수량, 반품사유 비고에 따른 반품접수 내역 정보"><!-- #nike -->
+					<caption>반품접수 내역 정보</caption><!-- #nike -->
+					<!-- phase2 colgroup 변경 -->
+					<colgroup>
+						<col width="10%">
+						<col width="*">
+						<col width="10%">
+						<col width="12%">
+						<col width="17%">
+						<col width="15%">
+					</colgroup>
+					<!-- phase2 colgroup 변경 끝 -->
+          			<thead><!-- thead추가 #nike -->
+					<tr>
+           			   <th scope="col"><label for="check" class="hidden">선택</label><input type="checkbox" id="check" /></th><!-- #nike -->
+						<th scope="col">상품</th>
+						<th scope="col">주문수량</th>
+						<th scope="col">반품수량</th>
+						<th scope="col">반품사유</th>
+						<th scope="col">비고</th>
+					</tr>
+					</thead><!-- // thead추가 #nike -->
+					<tbody><!-- tbody추가 #nike -->
+					
+					
+					
+							
+					
+						
+					
+					<input type="hidden" value="1"/>
+					
+						
+							
+								
+								
+								
+							
+							<tr>
+								<td class="lns01"><span><label for="chk_1" class="hidden">제품선택</label><input type="checkbox" class="chk" id='chk_1' name="chkList" value="1"/></span></td>
+								<td class="lns02">
+									<div class="ms dummy45"><img src="../image/web/global/tmp_100.jpg" alt="" onerror="this.src='/NKS1//image/web/no-img/55x55.gif'" /></div>
+									<div class="ms"><!-- phase2 width 인스타일 삭제 -->
+										<strong>코어 NSW JDI 티 유스</strong>
+										<span> COLOR:다크 그레이 헤더/비비드 오렌지 SIZE:75(L)</span> 
+										<p>29,000원</p>
+									</div>	
+								</td>
+								<td class="lns03"><strong>1개</strong></td>
+								<td class="lns04">
+									<div>
+										<input type="hidden" id="1" value="1"/>
+										<label for="claimQuantity_1" class="hidden">반품수량입력</label><input type="text" class="qty" value="0" id='claimQuantity_1' onkeyup="javascript:setCancelQty('1', '')" onkeypress="javascript:setCancelQty('1', '')">
+									</div>
+									<div class="be">
+									<span class="qty-btn">
+										<a href="#" onclick="setUpQty('1', '');" ><img alt="수량증가" src="http://lecs.nike.co.kr/NKS1/image/web/pre/order/btn_n01.gif" ></a>
+										<a href="#" onclick="setDownQty('1', '');" ><img alt="수량감소" src="http://lecs.nike.co.kr/NKS1/image/web/pre/order/btn_n02.gif" ></a>
+									</span>
+									</div>
+								</td>
+								<td class="lns12">
+									<select id="claimCauseCode_1" name="claimCauseCode" onchange="changeReason('1', '');" title="반품사유 선택">
+										<option value="">반품사유를 선택하세요</option>
+										
+											<option value="0201" useYn="Y">고객변심(기간이내)</option>
+										
+											<option value="0211" useYn="Y">고객변심(기간초과)</option>
+										
+											<option value="0202" useYn="N">상품정보 상이</option>
+										
+											<option value="0203" useYn="N">품질불만</option>
+										
+											<option value="0204" useYn="N">상품하자/파손</option>
+										
+											<option value="0205" useYn="N">가품/중고품 의심</option>
+										
+											<option value="0206" useYn="N">배송지연</option>
+										
+											<option value="0207" useYn="N">오배송</option>
+										
+											<option value="0208" useYn="N">가격변동</option>
+										
+											<option value="0209" useYn="N">포장불만</option>
+										
+											<option value="0210" useYn="Y">사이즈불만</option>
+										
+											<option value="0212" useYn="Y">구성품/사은품 누락</option>
+										
+											<option value="0213" useYn="Y">본품누락</option>
+											
+									</select>
+								</td>
+		
+								
+											
+										
+									
+								
+								
+								
+									
+								<td class="lns13" style="line-height:18px" rowspan="1">
+									<input type="hidden" id="returnDeliveryNote_1042" 	value="0"/>
+									<span>반품수거비: 0</span><br />
+								</td>		
+											
+							</tr>						
+						
+							
+							<input type="hidden" id="storeNo_1" 				value="2"/>
+							<input type="hidden" id="siteNo_1" 					value="14218"/>
+							<input type="hidden" id="orderNo_1" 				value="1606230007369NK"/>
+							<input type="hidden" id="orderDetailSn_1" 			value="1"/>
+							<input type="hidden" id="goodsNo_1" 				value="NK31068855"/>
+							<input type="hidden" id="itemNo_1" 					value="NK31068855003"/>
+							<input type="hidden" id="memberNo_1" 				value="000000003889522"/>
+							<input type="hidden" id="enterpriseNo_1" 			value="436272"/>
+							<input type="hidden" id="enterpriseContractNo_1" 	value="234481"/>
+							<input type="hidden" id="lowestEnterpriseNo_1" 		value="1"/>
+							<input type="hidden" id="deliveryExpensePolicyNo_1" value="503706"/>
+							<input type="hidden" id="deliveryPolicyNo_1" 		value="1042"/>
+							<input type="hidden" id="deliveryProcessTypeCode_1" 		value="3"/>						
+							<input type="hidden" id="availClaimQty_1" 		value="1"/>
+							<input type="hidden" id="claimPossibilityYn_1" 		value="Y"/>
+							<input type="hidden" id="amountChangeCount_1" 		value="0"/>	
+							<input type="hidden" id="exchangeReturnGoodsPossibilityYn_1" 		value="Y"/>
+							<input type="hidden" id="salePrice_1" 		value="29000"/>				
+							
+					
+					</tbody>
+				</table>
+				<!-- phase2 반품수량저장 버튼 이동 -->
+				<div style="padding: 25px 18px;line-height: 1;border-bottom: 1px solid #e1e1e1;background: #fafafa;"><span class="btn_save"><a href="" onclick="selectGoods(); return false;"><img src="../image/web/pre/myshop/btn_n24.gif " class="vm" alt="반품수량 저장" /></a></span> <span style="margin-left:10px;">반품할 상품의 수량을 변경하신 후 클릭하세요.</span></div>
+				<!-- phase2 반품수량저장 버튼 이동 -->
+			</div>
+			<!-- // cat_order -->
+			<!-- phase2 삭제 -->
+			<!-- <div class="btn_order"><a href="" onclick="selectGoods(); return false;"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_n24.gif " class="vm" alt="반품수량 저장" /></a></div> -->
+			<!-- phase2 삭제 끝 -->
+		
+			<span id="DCLayer"></span>	
+			<div class="pop_cp"> 
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 -->
+				<h3 class="title2">반품상품 수거주소</h3>
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 끝 -->
+			</div>
+			<div class="order_no" style="margin-top:8px;">
+				<table summary="주소지 정보에 따른 반품지 주소"><!-- #nike -->
+					<caption>반품지 주소</caption><!-- #nike -->
+					<colgroup>
+						<col style="width:170px;" /><!-- phase2 width값 변경 -->
+						<col />
+					</colgroup>
+					<tbody><!-- tbody추가 #nike -->
+					<tr class="tns3">
+						<th rowspan="2" scope="row">주소지</th>
+						<td>
+							택배 기사가 방문하여 상품을 수거합니다. 방문할 주소를 확인해 주세요 
+							<p>
+							<span class="returnReuseDiv">
+								<span class="change" id="newReturnReuseDiv">
+									빈정샘(010-4000-5594)
+								</span>
+							</span>
+							</p>
+							
+		                    
+		                    
+							<p>
+							<span class="change">
+							<span>지번주소 : </span> <span id="returnDeliveriJibun"> 경상북도 예천군 용문면 비봉리 73</span>
+							</span>
+							<!-- phase2 삭제 <a href="#" onclick="deliveryChange('1606230007369NK','03'); return false;" title="반품상품 수거주소" >&nbsp;&nbsp;<img src="/NKS1//image/web/pre/myshop/btn_n09.gif" alt="변경" /></a> -->
+							</p>
+							<p>
+							 
+							
+								  
+										<span class="change"> 
+										<span>도로명주소 :</span> <span id="returnDeliveriRoad">인천광역시 남구 인하로236번길 11-26</span>
+										</span>
+								
+								
+									
+ 								&nbsp;&nbsp;
+								<!-- phase2 이미지 경로 변경 -->
+								<a href="#" onclick="deliveryChange('1606230007369NK','03'); return false;"><img src="../image/web/pre/myshop/btn_n09.gif" class="vm" alt="변경" /></a> 
+							</p>
+							
+								
+						</td>
+					</tr>
+					<tr class="tns3">
+						<td>
+							지정한 택배사를 이용하지 않고 고객님께서 직접 반품을 원하실 경우, &lt;직접반품&gt;을 선택해시고 안내된 주소로 상품을 보내주시기 바랍니다. 
+							<p class="delivery">
+								<input type="radio" class="chk" name="ra_delivery" value="20" id="company"/><label for="company" class="mgr7">지정 택배사로 반품</label>
+								<input type="radio" class="chk" name="ra_delivery" value="30" id="self"/><label for="self">직접 반품</label>
+							</p>
+							<p style="display:none;" id="returnDeliveryAddr"> <c:if test='false'>(반품담당자 : )</c:if></p>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //반품상품 수거주소 배송주소 -->
+			<!-- //반품상품 수거주소 배송주소 정보 -->
+			
+			<div class="pop_cp">
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 -->
+				<h3 class="title2">연락처</h3>
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 끝 -->
+			</div>
+			<div class="order_no" style="margin-top:8px;">
+				<table summary="반품 진행 상황을 전달받을 연락처 정보"><!-- #nike -->
+				<caption>연락처 정보</caption><!-- #nike -->
+					<colgroup>
+						<col style="width:170px;" /><!-- phase2 width값 변경 -->
+						<col />
+					</colgroup>
+					<tbody><!-- tbody추가 #nike -->
+					<tr class="tns3">
+						<th scope="row">연락처</th>
+						<td>
+							<p style="letter-spacing:0.5px; font-size:11px;" >
+								<strong style="font-size:12px;">빈정샘</strong> 님 <span style="letter-spacing:0px;">552-4000-5594</span> &nbsp;&nbsp;|&nbsp;&nbsp;  LECSTEST@lotte.com &nbsp;
+								<!-- <a href="#"><img src="/NKS1//image/web/pre/myshop/btn_n09.gif" class="vm" alt="변경" /></a> -->
+							</p>
+							
+		                    
+		                    
+						</td>
+					</tr>
+					</tbody><!-- // tbody추가 #nike -->
+				</table>
+			</div>
+			
+			<div class="pop_cp"> 
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 -->
+				<h3 class="title2">배송비 결제정보<strong>(환불금액에서 아래 배송비가 차감됩니다.)</strong></h3>
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 끝 -->
+			</div>
+			<div class="orderTmx7">
+				<table summary="반품 접수로 인한 배송비 결제 정보"><!-- #nike -->
+				<caption>배송비 결제 정보</caption><!-- #nike -->
+					<colgroup>
+						<col width="85%" />
+						<col width="15%" />
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">반품 수거비</th>
+						<td id="spn_returnDelivery">0원</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			
+		<!--//{"date":"2013. 7. 16.","user":"jCompany","as-is":"","to-be":"마크업순서변경 img 클릭을 a 태그로 대체 및 a 태그 타이틀 "}//-->
+			<!-- Start -->
+			<!--  신청 완료 pop-->
+			<div class="alert_vew05" id="return" style="display:none;">
+				<div class="png_bg">
+					<div class="tex"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/ln_tex_q03.gif" alt="선택하신 상품을 반품접수하시겠습니까?" /></div>
+					<div class="tit">
+						<a href="#" title="반품접수" onclick="saveReturnRequest(); return false;" id="href_return_receipt" ><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/order/btn_cont.gif" alt="확인"  id="btn_return_receipt"/></a>
+						<a href="#" class="btn_close5" title="반품접수" onclick="$('#href_return_receipt').attr('onClick', 'saveReturnRequest(); return false;'); closeLayer('return');" ><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/category/ln_btn_t103.gif" alt="취소" /></a>
+					</div>
+				</div>
+			</div>
+			<!-- End -->	
+			
+			<div class="alert_vew12" id="returnOk" style="display:none;">
+				<div class="png_bg">
+					<div class="tex"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/ln_tex_q04.gif" alt="신청하신 내용이 접수되었습니다. 교환/반품내역 조회의 안내에 따라 반품하실 상품을 보내주시기 바랍니다." /></div>
+					<div class="tit">
+						
+						<a href="#none" onclick="parentReplace(lecsRoot + 'mypage/order/listAcceptClaim.lecs', 'secure'); return false;"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_lay_my.gif" alt="교환/반품조회" /></a>
+						
+						
+						<a href="#none" class="btn_close12"><img src="http://lecs.nike.co.kr/NKS1/image/web/pre/myshop/btn_lay_close2.gif" alt="닫기" onclick="self.close();" /></a>				
+					</div>
+				</div>
+			</div>
+			<!-- // 신청 완료 pop-->
+			
+			<!-- 120820추가:주문동의 s -->
+			<fieldset class="odagree_type02">
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 -->
+				<strong class="title2 od_title">주문동의<strong>반품내용을 확인해 주세요.</strong></strong>
+				<!-- phase2 title2 클래스 추가 및 마크업 변경 끝 -->
+				<p>
+					<span>반품비 가격을 확인하였으며, 해당 상품 반품비 결제에 동의하시겠습니까?</span>
+					<input type="checkbox"  id="assent" name="assent" style="margin-right:5px;" /><label for="assent"><strong>동의합니다.</strong>(전자상거래법 제8조 제2항)</label>
+				</p>
+			</fieldset>
+			<!-- 120820추가:주문동의 e -->
+			
+			<div class="pop_bn">
+				<a href="" onclick="validateReturn(); return false;" class="claer-btn">반품접수</a>
+				<a href="" onclick="self.close();" class="cancle-btn">취소</a>
+			</div>
+			
+			
+	</div>
+	
+	<div id="popFooter">
+		<img src="/NKS1//image/web/pre/category/pop_copy.gif" alt="&copy; nike, all rights reserved" />
+	</div>
+<div id="emailDiv" style="position:absolute;z-index:500;display:none;border:0px;">
+<iframe title="email_Iframe"  id="email_Iframe" name="email_Iframe" style="border:0px;width:590px;height:730px;" src="about:blank" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</div> 
+<form id="emailForm" action="http://lecs.nike.co.kr:8443/voc/viewNikeOneononeIframe.lecs" method="POST" target="email_Iframe"></form>	
+
+
+
+
+
+
+					
+
+		
+		
+
+
+</body>
+<!-- from: lecs20stg1 -->
+</html>

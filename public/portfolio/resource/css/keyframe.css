@@ -1,0 +1,245 @@
+/* 인트로 배경 */
+@keyframes introbg {
+	100% {
+		transform:scale(1.1);
+		-webkit-transform:scale(1.1);
+		-moz-transform:scale(1.1);
+		-o-transform:scale(1.1);
+	}
+}
+@-webkit-keyframes introbg {
+	100% {
+		transform:scale(1.1);
+		-webkit-transform:scale(1.1);
+		-moz-transform:scale(1.1);
+		-o-transform:scale(1.1);
+	}
+}
+@-moz-keyframes introbg {
+	100% {
+		transform:scale(1.1);
+		-webkit-transform:scale(1.1);
+		-moz-transform:scale(1.1);
+		-o-transform:scale(1.1);
+	}
+}
+@-o-keyframes introbg {
+	100% {
+		transform:scale(1.1);
+		-webkit-transform:scale(1.1);
+		-moz-transform:scale(1.1);
+		-o-transform:scale(1.1);
+	}
+}
+
+/* 인트로 아이콘 로드 */
+@keyframes load {
+	0% {
+		transform:scale(0);
+		-webkit-transform:scale(0);
+		-moz-transform:scale(0);
+		-o-transform:scale(0);
+	}
+	100% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+}
+@-webkit-keyframes load {
+	0% {
+		transform:scale(0);
+		-webkit-transform:scale(0);
+		-moz-transform:scale(0);
+		-o-transform:scale(0);
+	}
+	100% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+}
+@-moz-keyframes load {
+	0% {
+		transform:scale(0);
+		-webkit-transform:scale(0);
+		-moz-transform:scale(0);
+		-o-transform:scale(0);
+	}
+	100% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+}
+@-o-keyframes load {
+	0% {
+		transform:scale(0);
+		-webkit-transform:scale(0);
+		-moz-transform:scale(0);
+		-o-transform:scale(0);
+	}
+	100% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+}
+
+/* 인트로 아이콘 hover시 */
+@keyframes introicon {
+	0% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+	40% {
+		transform:scale(1.2);
+		-webkit-transform:scale(1.2);
+		-moz-transform:scale(1.2);
+		-o-transform:scale(1.2);
+	}
+	50% {
+		transform:scale(0.8);
+		-webkit-transform:scale(0.8);
+		-moz-transform:scale(0.8);
+		-o-transform:scale(0.8);
+	}
+	60% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+	70% {
+		transform:scale(0.9);
+		-webkit-transform:scale(0.9);
+		-moz-transform:scale(0.9);
+		-o-transform:scale(0.9);
+	}
+	80% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+}
+@-webkit-keyframes introicon {
+	0% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+	40% {
+		transform:scale(1.2);
+		-webkit-transform:scale(1.2);
+		-moz-transform:scale(1.2);
+		-o-transform:scale(1.2);
+	}
+	50% {
+		transform:scale(0.8);
+		-webkit-transform:scale(0.8);
+		-moz-transform:scale(0.8);
+		-o-transform:scale(0.8);
+	}
+	60% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+	70% {
+		transform:scale(0.9);
+		-webkit-transform:scale(0.9);
+		-moz-transform:scale(0.9);
+		-o-transform:scale(0.9);
+	}
+	80% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+}
+@-moz-keyframes introicon {
+	0% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+	40% {
+		transform:scale(1.2);
+		-webkit-transform:scale(1.2);
+		-moz-transform:scale(1.2);
+		-o-transform:scale(1.2);
+	}
+	50% {
+		transform:scale(0.8);
+		-webkit-transform:scale(0.8);
+		-moz-transform:scale(0.8);
+		-o-transform:scale(0.8);
+	}
+	60% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+	70% {
+		transform:scale(0.9);
+		-webkit-transform:scale(0.9);
+		-moz-transform:scale(0.9);
+		-o-transform:scale(0.9);
+	}
+	80% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+}
+@-o-keyframes introicon {
+	0% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+	40% {
+		transform:scale(1.2);
+		-webkit-transform:scale(1.2);
+		-moz-transform:scale(1.2);
+		-o-transform:scale(1.2);
+	}
+	50% {
+		transform:scale(0.8);
+		-webkit-transform:scale(0.8);
+		-moz-transform:scale(0.8);
+		-o-transform:scale(0.8);
+	}
+	60% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+	70% {
+		transform:scale(0.9);
+		-webkit-transform:scale(0.9);
+		-moz-transform:scale(0.9);
+		-o-transform:scale(0.9);
+	}
+	80% {
+		transform:scale(1);
+		-webkit-transform:scale(1);
+		-moz-transform:scale(1);
+		-o-transform:scale(1);
+	}
+}

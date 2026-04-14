@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>::: note :::</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
+	<link rel="stylesheet" type="text/css" href="/note/resource/css/style.css">
+	<script src="/note/resource/js/jquery-1.11.3.min.js"></script>
+	<script src="/note/resource/js/jquery.easings.min.js"></script>
+</head>
+<body>
+
+
+<!-- 시작 -->	
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<div id="event">
+		<div class="section01">
+			<div class="pc" style="background:url(./images/bg.jpg) repeat-x center top">
+				<div style="height:1234px;background:url(./images/pc01.jpg) no-repeat center top"></div>
+				<div style="height:2060px;background:url(./images/pc02.jpg) no-repeat center top"></div>
+				<div style="height:1313px;background:url(./images/pc03.jpg) no-repeat center top"></div>
+				<div style="height:1301px;background:url(./images/pc04.jpg) no-repeat center top"></div>
+			</div>
+			<div class="mo">
+				<img src="./images/mo01.jpg" class="section_img" alt="">
+				<img src="./images/mo02.jpg" class="section_img" alt="">
+				<img src="./images/mo03.jpg" class="section_img" alt="">
+				<img src="./images/mo04.jpg" class="section_img" alt="">
+			</div>
+			<div class="starBox">				
+				<span class="bg"></span>
+				<img src="./images/product.png" alt="" class="product">
+			</div>  
+			<div class="night night01"><div class="shooting_star"></div></div>
+			<div class="night night02"><div class="shooting_star"></div></div>
+			<div class="night night03"><div class="shooting_star"></div></div>
+			<div class="night night04"><div class="shooting_star"></div></div>
+			<div class="night night05"><div class="shooting_star"></div></div>
+			<div class="night night06"><div class="shooting_star"></div></div>
+			<div class="night night07"><div class="shooting_star"></div></div>
+		</div>
+		<a href="https://www.amorepacificmall.com/kr/ko/product/detail?onlineProdSn=24925&onlineProdCode=111170000339" class="link01" >설화수 스타세럼 보러가기</a>
+		<a href="https://www.instagram.com/sulwhasoo.official/" class="link02" >팔로잉</a>
+		<a href="https://www.instagram.com/sulwhasoo.official/"><img src="./images/son.png" alt="" class="son"></a>
+		<a href="https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=1353" class="link03" >설화수 브랜드위크</a>
+	</div> 
+	<script type="text/javascript">
+		var maxTime = 11;
+		var crntlTime = 0;
+		var myTimer;
+
+		function graphAction(target){
+			crntlTime = target;
+			for (i=0; i <= maxTime; i++){
+				$('.starBox').removeClass('graph'+i)
+			}
+			$('.starBox').addClass('graph'+target)
+		}
+		function graphOn(){
+			myTimer = setInterval(function(){
+				graphAction(crntlTime)
+				console.log(crntlTime)
+				crntlTime < maxTime ? crntlTime++ : crntlTime = 0
+				//crntlTime = Math.floor(Math.random()*7)
+			}, 1000)			
+		}
+		function graphOff(){
+			clearInterval(myTimer)		
+		}
+		
+		graphOn()
+	</script>
+<!-- 끝 -->
+
+
+
+
+
+
+
+
+
+</body>
+</html>

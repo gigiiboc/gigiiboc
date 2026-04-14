@@ -1,0 +1,125 @@
+body {height: 100vh;margin: 0;display: flex;align-items: center;justify-content: center;}
+.frame {width: 500px;height: 500px;position: relative;}
+.heart {display: block;width: 150px;height: 150px;margin-top: -97.5px;margin-left: -75px;position: absolute;top: 50%;left: 50%;transform: rotate(45deg);transform-origin: 50% 50% 0px;cursor: pointer;}
+.heart .heart_figure {background: #b4c1ca;display: block;position: absolute;width: 100px;height: 100px;right: 0;bottom: 0;}
+.heart .heart_figure::before {background: #b4c1ca;display: block;position: absolute;width: 100px;height: 100px;border-radius: 50%;content: "";margin-left: -50px;}
+.heart .heart_figure::after {background: #b4c1ca;display: block;position: absolute;width: 100px;height: 100px;border-radius: 50%;content: "";margin-top: -50px;}
+.heart .circle_1 {display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;transform: translate(60%,60%);}
+.heart .circle_1 span {position: absolute;top: 0;left: 0;width: 0;height: 0;transform: translate(-50%,-50%);border-radius: 50%;background:rgba(244,67,85,1);}
+.heart .circle_2 {display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;transform: translate(60%,60%);}
+.heart .circle_2 span {position: absolute;top: 0;left: 0;width: 0;height: 0;transform: translate(-50%,-50%);border-radius: 50%;background:rgba(255,255,255,1);}
+.heart .dot_box {position: absolute;transform: translate(55%,55%);top: 0;left: 0;width: 100%;height: 100%;}
+.heart .dot {position: absolute;top: 0;left: 0;width: 0;height: 0;}
+.heart .dot::before {content:'';position:absolute;top:0;left:0;width:0;height:0;border-radius:50%;}
+.heart .dot::after {content:'';position:absolute;top:0;left:0;width:0;height:0;border-radius:50%;}
+.heart .dot._1 {transform: translate(-50%,-50%) rotate(0deg);}
+.heart .dot._1::before {background: #c16600;}
+.heart .dot._1::after {background: #64cc60;}
+.heart .dot._2 {transform: translate(-50%,-50%) rotate(51.4deg);}
+.heart .dot._2::before {background: #8acfb4;}
+.heart .dot._2::after {background: #958ee7;}
+.heart .dot._3 {transform: translate(-50%,-50%) rotate(102.8deg);}
+.heart .dot._3::before {background: #f4e9e9;}
+.heart .dot._3::after {background: #858a5e;}
+.heart .dot._4 {transform: translate(-50%,-50%) rotate(154.2deg);}
+.heart .dot._4::before {background: #562456;}
+.heart .dot._4::after {background: #c52f3b;}
+.heart .dot._5 {transform: translate(-50%,-50%) rotate(205.6deg);}
+.heart .dot._5::before {background: #3f2336;}
+.heart .dot._5::after {background: #9a4b8a;}
+.heart .dot._6 {transform: translate(-50%,-50%) rotate(257deg);}
+.heart .dot._6::before {background: #3b7482;}
+.heart .dot._6::after {background: #bf3758;}
+.heart .dot._7 {transform: translate(-50%,-50%) rotate(308.4deg);}
+.heart .dot._7::before {background: #49d93d;}
+.heart .dot._7::after {background: #b08c42;}
+
+.heart.on .heart_figure {background:rgba(244,67,85,1);}
+.heart.on .heart_figure::before {background:rgba(244,67,85,1);}
+.heart.on .heart_figure::after {background:rgba(244,67,85,1);}
+.heart.on .heart_figure2 {background:rgba(244,67,85,1);display: block;position: absolute;width: 100px;height: 100px;right: 0;bottom: 0;}
+.heart.on .heart_figure2::before {background:rgba(244,67,85,1);display: block;position: absolute;width: 100px;height: 100px;border-radius: 50%;content: "";margin-left: -50px;}
+.heart.on .heart_figure2::after {background:rgba(244,67,85,1);display: block;position: absolute;width: 100px;height: 100px;border-radius: 50%;content: "";margin-top: -50px;}
+
+.heart.on .heart_figure {animation:heart_figure 0.4s step-end 0s forwards;}
+.heart.on .circle_1 span {animation:circle_1 0.4s ease-out 0s forwards;}
+.heart.on .circle_2 span {animation:circle_2 0.16s ease-out 0.24s forwards;}
+.heart.on .heart_figure2 {animation:heart_figure2 0.64s ease 0.35s forwards;transform: scale(0,0);}
+.heart.on .dot._1 {animation:dot1 0.8s ease 0.24s forwards;}
+.heart.on .dot._2 {animation:dot2 0.8s ease 0.24s forwards;}
+.heart.on .dot._3 {animation:dot3 0.8s ease 0.24s forwards;}
+.heart.on .dot._4 {animation:dot4 0.8s ease 0.24s forwards;}
+.heart.on .dot._5 {animation:dot5 0.8s ease 0.24s forwards;}
+.heart.on .dot._6 {animation:dot6 0.8s ease 0.24s forwards;}
+.heart.on .dot._7 {animation:dot7 0.8s ease 0.24s forwards;}
+.heart.on .dot::before {animation:dot_before 0.8s ease 0.24s forwards;}
+.heart.on .dot::after {animation:dot_after 0.8s ease 0.24s forwards;}
+
+@keyframes heart_figure {
+	0% {transform: scale(1);}
+	60% {transform: scale(0);}
+	100% {transform: scale(0);}
+}
+@keyframes circle_1 {
+	0% {width: 0;height: 0;background:rgba(244,67,85,1);}
+	60% {width: 160%;height: 160%;background:rgba(244,67,85,1);}
+	100% {width: 180%;height: 180%;background:rgba(244,67,85,0);}
+}
+@keyframes circle_2 {
+	0% {width: 0;height: 0;}
+	100% {width: 180%;height: 180%;}
+}
+@keyframes heart_figure2 {
+	0% {transform: scale(0);}
+	20% {transform: scale(1.2);}
+	40% {transform: scale(0.9);}
+	60% {transform: scale(1.02);}
+	80% {transform: scale(0.98);}
+	100% {transform: scale(1);}
+}
+@keyframes dot1 {
+	0% {width:0%;height:0;}
+	80% {width: 334%;height: 80%;transform: translate(-50%,-50%) rotate(30deg);}
+	100% {opacity:0;}
+}
+@keyframes dot2 {
+	0% {width:0%;height:0;}
+	80% {width: 334%;height: 80%;transform: translate(-50%,-50%) rotate(81.4deg);}
+	100% {opacity:0;}
+}
+@keyframes dot3 {
+	0% {width:0%;height:0;}
+	80% {width: 334%;height: 80%;transform: translate(-50%,-50%) rotate(132.8deg);}
+	100% {opacity:0;}
+}
+@keyframes dot4 {
+	0% {width:0%;height:0;}
+	80% {width: 334%;height: 80%;transform: translate(-50%,-50%) rotate(184.2deg);}
+	100% {opacity:0;}
+}
+@keyframes dot5 {
+	0% {width:0%;height:0;}
+	80% {width: 334%;height: 80%;transform: translate(-50%,-50%) rotate(235.6deg);}
+	100% {opacity:0;}
+}
+@keyframes dot6 {
+	0% {width:0%;height:0;}
+	80% {width: 334%;height: 80%;transform: translate(-50%,-50%) rotate(287deg);}
+	100% {opacity:0;}
+}
+@keyframes dot7 {
+	0% {width:0%;height:0;}
+	80% {width: 334%;height: 80%;transform: translate(-50%,-50%) rotate(338.4deg);}
+	100% {opacity:0;}
+}
+
+@keyframes dot_before {
+	0% {top:0;left:0;}
+	50% {width:20px;height:20px;}
+	100% {top:0;left:0;width:0;height:0;}
+}
+@keyframes dot_after {
+	0% {top:0;left:0;}
+	50% {width:10px;height:10px;}
+	100% {top:100px;left:70px;width:0;height:0;}
+}

@@ -1,0 +1,94 @@
+@charset "utf-8"; 
+/**
+폰트 정의
+**/
+@font-face {
+	font-family:'noto';
+	font-style:normal;
+	font-weight:400;
+	src: url('../../fonts/NotoSans-Regular.woff2') format('woff2'),
+		url('../../fonts/NotoSans-Regular.woff') format('woff'),
+		url('../../fonts/NotoSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:'noto';
+	font-style: normal;
+	font-weight:500;
+	src: url('../../fonts/NotoSans-Medium.woff2') format('woff2'),
+		url('../../fonts/NotoSans-Medium.woff') format('woff');
+}
+@font-face {
+	font-family:'noto';
+	font-style: normal;
+	font-weight:700;
+	src: url('../../fonts/NotoSans-Bold.woff2') format('woff2'),
+		url('../../fonts/NotoSans-Bold.woff') format('woff'),
+		url('../../fonts/NotoSans-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family:'notojp';
+    font-style:normal;
+    font-weight:400;
+    src:url('../../fonts/NotoSansJP-Regular.woff2') format('woff2'),
+    	url('../../fonts/NotoSansJP-Regular.woff') format('woff'),
+    	url('../../fonts/NotoSansJP-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family:'notojp';
+    font-style:normal;
+    font-weight:500;
+    src:url('../../fonts/NotoSansJP-Medium.woff2') format('woff2'),
+    	url('../../fonts/NotoSansJP-Medium.woff') format('woff'),
+    	url('../../fonts/NotoSansJP-Medium.otf') format('opentype');
+}
+@font-face {
+    font-family:'notojp';
+    font-style:normal;
+    font-weight:700;
+    src:url('../../fonts/NotoSansJP-Bold.woff2') format('woff2'),
+    	url('../../fonts/NotoSansJP-Bold.woff') format('woff'),
+    	url('../../fonts/NotoSansJP-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family:'raleway';
+	font-style:normal;
+	font-weight:400;
+	src: url('../../fonts/Raleway/Raleway-Regular.ttf') format('woff');
+	src: url('../../fonts/Raleway/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:'raleway';
+	font-style:Italic;
+	font-weight:400;
+	src: url('../../fonts/Raleway/Raleway-Italic.ttf') format('woff');
+	src: url('../../fonts/Raleway/Raleway-Italic.ttf') format('truetype');
+}
+@font-face {
+	font-family:'raleway';
+	font-style:normal;
+	font-weight:500;
+	src: url('../../fonts/Raleway/Raleway-Medium.ttf') format('woff');
+	src: url('../../fonts/Raleway/Raleway-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family:'raleway';
+	font-style:Italic;
+	font-weight:500;
+	src: url('../../fonts/Raleway/Raleway-MediumItalic.ttf') format('woff');
+	src: url('../../fonts/Raleway/Raleway-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+	font-family:'raleway';
+	font-style:normal;
+	font-weight:700;
+	src: url('../../fonts/Raleway/Raleway-Bold.ttf') format('woff');
+	src: url('../../fonts/Raleway/Raleway-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family:'raleway';
+	font-style:Italic;
+	font-weight:700;
+	src: url('../../fonts/Raleway/Raleway-BoldItalic.ttf') format('woff');
+	src: url('../../fonts/Raleway/Raleway-BoldItalic.ttf') format('truetype');
+}

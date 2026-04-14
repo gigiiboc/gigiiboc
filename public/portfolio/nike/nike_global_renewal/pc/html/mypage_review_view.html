@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Nike 나이키닷컴</title>
+	<link rel="stylesheet" type="text/css" href="http://www.nike.co.kr/com/css/common_pre.css">
+	<link rel="stylesheet" type="text/css" href="http://www.nike.co.kr/com/css/common.css">  
+ 	<link rel="stylesheet" type="text/css" media="all" href="http://www.nike.co.kr/com/css/display.css" title="display"> 
+	<script type="text/javascript" src="http://www.nike.co.kr/com/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/com/js/jquery-ui-1.10.2.custom.min.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/com/js/jquery-migrate-1.1.1.min.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/com/js/iframeSubmit.js"></script>
+
+<!-- phase2 - body 안에 중복 -->
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="imagetoolbar" content="no">
+    <title>Nike 나이키닷컴</title>
+	
+	<link rel="shortcut icon" href="http://www.nike.co.kr/NKS1/image/nike_favicon.ico">
+	
+	<link rel="stylesheet" type="text/css" href="http://www.nike.co.kr/NKS1/css/order.css">
+	<link rel="stylesheet" type="text/css" href="http://www.nike.co.kr/NKS1/css/display.css">
+	
+	<!-- //주문,결제 -->
+	
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/jcarousellite_1.0.1.min.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/jquery.currency.min.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/common.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/jquery.json-2.2.js"></script>	
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/validator.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/iframeSubmit.js"></script>	
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/lnb_layer_ipa.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/calendar.js"></script>
+	<script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/ajax.js"></script>
+    <script type="text/javascript" src="http://www.nike.co.kr/NKS1/js/jquery.form.js"></script>
+
+
+<!-- //phase2 - body 안에 중복 -->
+
+
+<!-- renewal phase2 -->
+	<link rel="stylesheet" type="text/css" href="../css/global_renewal_phase2.css" />
+
+
+</head>
+
+<body id="pop" style="min-width:640px; width:640px;">
+
+<iframe name="popSubmitFrame" style="width:0;height:0" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+
+
+
+
+<script language="javascript">
+//*****************************************************************************
+//png24
+//*****************************************************************************
+function setPng24(obj) {
+	obj.width=obj.height=1;
+	obj.className=obj.className.replace(/\bpng24\b/i,'');
+	obj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+ obj.src +"',sizingMethod='image');"
+	obj.src='';
+	return '';
+}
+
+	// 리뷰구독하기
+	function createReviewSubScription(deleteYn){
+		
+		var userMemberNo = "000000004288639";
+		
+		if(userMemberNo == ""){
+			alert("상품리뷰 구독하기는  로그인이 필요합니다. \n로그인 후  리뷰를  구독해주시기  바랍니다.");
+			//로그인 영역 show
+			$(opener.document).find('.global_login a').toggleClass('active');
+			
+			if ($(opener.document).find('.global_login a').hasClass('active')) {
+				$(opener.document).find('.global_login_modal').show();
+			}
+			self.close();
+			return;
+		} else {
+			if("000000001563132" == "000000004288639"){
+				alert("작성자의 상품리뷰 입니다. \nMy 쇼핑정보 > 상품리뷰내역 > 리뷰작성내역에서 작성리뷰를  확인하세요.");
+				return;
+			}else{
+				 $("#formSubscription").attr("action", "http://lecs.nike.co.kr//aws/goods/createReviewSubscribe.lecs");
+				 //$("#formSubscription").attr("action", "/goods/createReviewSubscribe.lecs");
+				 $("#formSubscription").attr("method", "post");
+				 $("#deleteYn").val(deleteYn);
+				 
+				 if(deleteYn=='Y'){
+				 	IframeSubmitter.submit(document.formSubscription,  "deleteReviewSubscribeCallback", "submitFrame", true);
+				 }else{
+				 	IframeSubmitter.submit(document.formSubscription,  "createReviewSubscribeCallback", "submitFrame", true);
+				 }
+			}
+		}
+	}
+	
+	// 리뷰구독하기 callback
+	function createReviewSubscribeCallback(result){
+		if(result.success){
+			if(result.SubscriptValue==1){
+				alert("상품리뷰 구독이 완료 되었습니다. \nMy 쇼핑정보 > 상품리뷰내역 > 구독내역에서 확인 하실 수 있습니다.");
+			}else{
+				alert("이미 구독하신 상품리뷰 입니다.");
+			}
+		}else{
+			alert(result.message);
+			return;
+		}
+	}
+	// 리뷰구독 해지 callback
+	function deleteReviewSubscribeCallback(result){
+		if(result.success){
+			alert("상품리뷰 구독이 해지되었습니다.");
+			document.location.href = "http://lecs.nike.co.kr/myshop/memberOtherReviewPopup.lecs";
+		}else{
+			alert(result.message);
+			return;
+		}
+	}	
+	
+	// 추천하기
+	function assmtRecommendation(assmtNo, subNum, rcmdCnt, memNo){
+		
+		var userMemberNo = "000000004288639";
+		
+		if(userMemberNo == ""){
+ 		 	alert("추천하기를 하려면  로그인이 필요합니다. \n로그인 후  추천하기를 해주시기  바랍니다.");
+	     	return;
+		} else {
+			
+	     	if(userMemberNo == memNo){
+				alert("작성자의 상품평입니다.");
+			}else{
+				 $("#formAssessmentPop").find("#assessmentNo").val(assmtNo);
+				  $("#subNum").val(subNum);
+				  $("#rcmdCnt").val(rcmdCnt);
+				  //$("#formAssessmentPop").attr("action", "updateAssessmentRecommendCount.lecs");
+				  $("#formAssessmentPop").attr("action", "http://lecs.nike.co.kr/goodsDetail/updateAssessmentRecommendCount.lecs");
+				  $("#formAssessmentPop").attr("method", "get");
+				  IframeSubmitter.submit(document.formAssessmentPop,  "assmtRecommendationCallback", "submitFrame", true);
+			}
+		}
+	}
+	
+	var valueT = Math.random(); //난수 생성
+	
+	function assmtRecommendationCallback(result){
+		if (result.success) {
+			if(result._updateCount == 0){
+				//이미 참여
+				alert("이미 참여해 주셨습니다.");
+			}else{
+				alert("추천하기가 완료되었습니다.");
+				var subNum = $("#formAssessmentPop").find("#subNum").val();
+				var rcmdCnt = parseInt($("#formAssessmentPop").find("#rcmdCnt").val()) + parseInt(result._updateCount);
+				document.getElementById("txt_recommendation" + subNum).innerHTML = rcmdCnt;
+			}
+		} else {
+		   alert(result.message);
+			return;
+		}
+	}
+
+	// 불량글 신고
+	function viewBadAssmtArea(assmtNo, memNo){
+		var userMemberNo = "000000004288639";
+		
+		if(userMemberNo == ""){
+			alert("불량글 신고하기를 하려면  로그인이 필요합니다. \n로그인 후  신고해주시기  바랍니다.");
+ 			return;
+		} else {
+			if(userMemberNo == memNo){
+				alert("작성자의 상품리뷰입니다.");
+			} else {
+				$('#badAssForm').find("#assessmentNo").val(assmtNo);
+				$("input:radio[name='declareAcceptType']").removeAttr("checked");
+				showBadAssmt();
+	 		}
+		}
+	}
+	
+	function createBadAssmt(){
+		$("#badAssForm").attr("action", "http://lecs.nike.co.kr/aws/goods/createBadAssessment.lecs");
+		
+		if($('input:radio[name=declareAcceptType]:checked').val() == "") {
+			alert("불량글 신고유형을 선택해주시기 바랍니다.");   
+			$("input[name='declareAcceptType']").get(0).focus();
+			return;
+		}
+		IframeSubmitter.submit(document.badAssForm,  "createBadAssmtCallback", "submitFrame", true);
+	}
+	
+	function createBadAssmtCallback(result){
+		
+		if (result.success) {
+			alert("해당 상품리뷰가 불량글로 신고되었습니다.");
+			hideBadAssmt();
+	   } else {
+		   alert(result.message);
+	    	return;
+	   }
+	}
+	
+	function showBadAssmt(){
+		$(".overLay").fadeIn(200);
+		$(".report-pop").slideDown(200);
+	}
+	
+	function hideBadAssmt(){
+		$(".overLay").fadeOut(200);
+		$(".report-pop").slideUp(200);
+	}
+	//불량글 End
+
+	//로그인창 이동
+	function goLogin(url){
+		if(url == null || typeof url == 'undefined') { 
+			var url1 = (parent.document.location).toString();
+			url = url1;
+		}
+		location.href="/member/showLogin.lecs?returnURL="+encodeURIComponent(url);
+	}
+
+	function goGoodsDetail(goodsNo, colorOptionValueCode){
+		opener.location.href="/goods/showGoodsDetail.lecs?goodsNo="+goodsNo+"&colorOptionValueCode="+colorOptionValueCode;
+	}
+
+	function popupClose(){
+		self.close(); 
+		return false;
+	}
+</script>
+
+
+
+
+
+
+
+
+    
+	<script type="text/javascript">
+		var secureRoot = "https://secure.nike.co.kr/";
+		var lecsRoot = "http://lecs.nike.co.kr/";
+		//도로검색팝업추가
+		function fn_rodAddr(no,mode) 
+		{
+			if(mode != "undefined" && mode != null && mode != "" ){
+				window.open('/mypage/popupRodAddr.lecs?display='+no+"&mode="+mode,'','scrollbars=yes,width=806,height=744');
+			}
+			else{
+				window.open('/mypage/popupRodAddr.lecs?display='+no,'','scrollbars=yes,width=806,height=744');
+			}
+		}
+	</script>
+    
+	
+
+
+
+
+
+<iframe title="submitFrame" name="submitFrame" style="display:none" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+<iframe title="downloadFrame" name="downloadFrame" style="display:none" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<form id="formPop" name="formPop">
+	<input type="hidden" name="memberNo" id="memberNo" value="000000001563132">
+	<input type="hidden" name="fromMypage" id="fromMypage" value="Y">
+</form>
+
+	<!-- 추천 -->
+	<form id="formAssessmentPop" name="formAssessmentPop">
+		<input type="hidden" name="assessmentNo" id="assessmentNo" value="">
+		<input type="hidden" name="storeNo" id="storeNo" value="2">
+		<input type="hidden" name="siteNo" id="siteNo" value="2">
+		<input type="hidden" name="orderType" id="orderType" value="">
+		<input type="hidden" name="subNum" id="subNum">
+		<input type="hidden" name="rcmdCnt" id="rcmdCnt">
+	</form>
+	
+	<!-- 구독하기 -->
+	<form id="formSubscription" name="formSubscription">
+		<input type="hidden" name="writerNo" id="writerNo" value="000000001563132">
+		<input type="hidden" name="writerName" id="writerName" value="이현주">
+		<input type="hidden" name="deleteYn" id="deleteYn" value="N">
+	</form>
+
+	<div id="popTop">
+		<img src="http://image.nike.co.kr/web/pre/pop_tit.gif " alt="nike">
+	</div>
+	
+	<div id="popContent01">
+		<div class="pop_reviewTex01">
+			<div class="tit">
+				<strong>reali***</strong> 님의 상품리뷰 (총 <span>3</span>건)
+				<!-- phase2 버튼 위치 변경 / str 변경 -->
+				<a class="lps_btn_type1" href="javascript:createReviewSubScription('Y');"><span>구독해지</span></a>
+			</div>
+
+			<div class="in_pop_reviewTex01">
+				<div class="lt">
+					<ul>
+						<!-- phase2 삭제
+						<li><span>적립된 마일</span> 414 MiLE</li>
+						<li><span>총 작성 리뷰</span> 3 건</li> -->
+						<li><span>최근 작성 리뷰</span>
+						2016.06.09
+						나이키 시티 ...
+							<!-- 나이키 시티 숏슬리브
+							2010.12.11 나이키 에어맥스...-->
+						</li>
+						<!-- phase2 삭제
+						<li><span>최초 작성 리뷰</span> 
+						2016.06.09
+						나이키 프리 ...
+						</li> -->
+					</ul>
+				</div>
+				<!-- phase2 삭제
+				<div class="rt">
+					<p>리뷰 구독하기를 신청하시면 작성자의 업데이트되는 리뷰를  My쇼핑정보에서 확인할 수 있어 작성자가 구매한 다른 상품정보를 쉽게 찾아볼 수 있습니다.</p>
+					<p class="btn">
+						<a class="lps_btn_type1" href="javascript:createReviewSubScription('Y');"><span>리뷰구독해지</span></a>
+					</p>
+				</div> -->
+			</div>
+		</div>
+		
+		<div class="pop_reviewList01" id="pop_reviewList">
+			<table>
+				<colgroup>
+					<col width="90">
+					<col width="*">
+				</colgroup>
+				
+				<tbody>
+				<!-- phase2 내역없음 -->
+				<tr>
+					<td colspan="2" style="padding:80px 0;border-bottom: 1px solid #ddd;text-align:center">등록하신 상품 리뷰가 없습니다.</td>
+				</tr>
+				<!-- phase2 내역없음 -->
+				<tr class="nobg">
+					<!-- phase2 인스타일 추가 -->
+					<td colspan="2" class="lns00" style="/*padding-left:100px;*/padding:16px 0 0 0">
+						<a href="javascript:goGoodsDetail('NK31066043', '719476-010');">나이키 시티 숏슬리브</a>
+						</td>
+				</tr>
+				<tr class="estimate">
+					<td class="lns01">
+						<!-- phase2 인스타일 추가 -->							
+						<div style="margin-top:0"><!-- 상품이미지 -->
+						<a href="javascript:goGoodsDetail('NK31066043','719476-010');">
+							<!-- phase2 img size 변경 55 > 80 -->
+							<img src="http://image.nike.co.kr/goods/31/06/60/43/719476_COL_719476-010_80.png" alt="상품 이미지" onerror="this.src='http://image.nike.co.kr/web/no-img/80x80.gif'">
+						</a>
+						</div>							
+					</td>
+					<!-- phase2 인스타일 추가 -->
+					<td class="lns02" style="position:relative;">
+						<ul>
+							<li><img src="http://image.nike.co.kr/web/pre/rec-s5-trans.png" class="png24" alt="별점"></li>
+							<li>2016.06.09</li>
+							
+						</ul>
+						<!-- phase2 제목 추가 -->
+						<p style="font-weight:bold;margin-bottom:15px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;width:482px;">너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.</p>
+						<!-- phase2 제목 추가 -->
+						<p>
+						운동할때 쪼이게 입는거 싫어해서 평소 85입는데, 후기에서 낙낙하대서 80으로 했는데 80도 낙낙해요~ 원래 핏되는 스타일로 나온 옷이 아닌가봐요. 가볍고 편해요. 보통은 80입으면 핏되고 85입으면 살짝 낙낙한 정도에요. 참고하세요
+						<!--	운동할때 쪼이게 입는거 싫어해서 평소 85입는데, 후기에서 낙낙하대서 80으로 했는데 80도 낙낙해요~ 원래 핏되는 스타일로 나온 옷이 아닌가봐요. 가볍고 편해요. 보통은 80입으면 핏되고 85입으면 살짝 낙낙한 정도에요. 참고하세요-->
+						</p>
+						<!-- phase2 인스타일 추가 -->
+						<div style="position:absolute;top:-25px;right:0;text-align:right">
+							<a href="javascript:assmtRecommendation('1031014', 1, 0, '000000001563132');">
+								<!-- phase2 img 변경
+								<img class="vm" src="http://image.nike.co.kr/web/pre/bn_best4.gif" alt="추천"> -->
+								<img src="../image/web/pre/myshop/icon02.gif" alt="추천">
+							</a>
+							<span id="txt_recommendation1">0</span>
+							<a href="javascript:viewBadAssmtArea('1031014','000000001563132');" class="access_btn_report" style="display:inline-block; cursor: pointer; background:url(/image/web/pre/bu_arrow4.gif) right 3px no-repeat; padding-right:10px;">
+								<!-- phase2 btn변경
+								불량글 신고하기  -->
+								<img src="../image/web/global/btn_dec_dim.gif" alt="불량리뷰 신고" />
+							</a>
+						</div>
+					</td>
+				</tr>
+			
+				<tr class="nobg">
+					<!-- phase2 인스타일 추가 -->
+					<td colspan="2" class="lns00" style="/*padding-left:100px;*/padding:16px 0 0 0">
+						<a href="javascript:goGoodsDetail('NK31065578', '719768-010');">나이키 임포시블리 라이트 후드재킷</a>
+						</td>
+				</tr>
+				<tr class="estimate">
+					<td class="lns01">
+						<!-- phase2 인스타일 추가 -->							
+						<div style="margin-top:0"><!-- 상품이미지 -->
+						<a href="javascript:goGoodsDetail('NK31065578','719768-010');">
+							<!-- phase2 img size 변경 55 > 80 -->
+							<img src="http://image.nike.co.kr/goods/31/06/55/78/719768_COL_719768-010_80.png" alt="상품 이미지" onerror="this.src='http://image.nike.co.kr/web/no-img/80x80.gif'">
+						</a>
+						</div>							
+					</td>
+					<!-- phase2 인스타일 추가 -->
+					<td class="lns02" style="position:relative;">
+						<ul>
+							<li><img src="http://image.nike.co.kr/web/pre/rec-s5-trans.png" class="png24" alt="별점"></li>
+							<li>2016.06.09</li>
+							
+						</ul>
+						<!-- phase2 제목 추가 -->
+						<p style="font-weight:bold;margin-bottom:15px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;width:482px;">너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.</p>
+						<!-- phase2 제목 추가 -->
+						<p>
+						주머니가 없는게 흠이긴 한데, 그거 빼곤 다 만족해요. 
+						<!--	주머니가 없는게 흠이긴 한데, 그거 빼곤 다 만족해요. -->
+						</p>
+						<!-- phase2 인스타일 추가 -->
+						<div style="position:absolute;top:-25px;right:0;text-align:right">
+							<a href="javascript:assmtRecommendation('1031013', 2, 0, '000000001563132');">
+								<!-- phase2 img 변경
+								<img class="vm" src="http://image.nike.co.kr/web/pre/bn_best4.gif" alt="추천"> -->
+								<img src="../image/web/pre/myshop/icon02.gif" alt="추천">
+							</a>
+							<span id="txt_recommendation2">0</span>
+							<a href="javascript:viewBadAssmtArea('1031013','000000001563132');" class="access_btn_report" style="display:inline-block; cursor: pointer; background:url(/image/web/pre/bu_arrow4.gif) right 3px no-repeat; padding-right:10px;">
+								<!-- phase2 btn변경
+								불량글 신고하기  -->
+								<img src="../image/web/global/btn_dec.gif" alt="불량리뷰 신고" /> 
+							</a>
+						</div>
+					</td>
+				</tr>
+			
+				<tr class="nobg">
+					<!-- phase2 인스타일 추가 -->
+					<td colspan="2" class="lns00" style="/*padding-left:100px;*/padding:16px 0 0 0">
+						<a href="javascript:goGoodsDetail('NK31068702', '843966-001');">나이키 프리 커넥트</a>
+						</td>
+				</tr>
+				<tr class="estimate">
+					<td class="lns01">
+						<!-- phase2 인스타일 추가 -->							
+						<div style="margin-top:0"><!-- 상품이미지 -->
+						<a href="javascript:goGoodsDetail('NK31068702','843966-001');">
+							<!-- phase2 img size 변경 55 > 80 -->
+							<img src="http://image.nike.co.kr/goods/31/06/87/02/843966_COL_843966-001_80.png" alt="상품 이미지" onerror="this.src='http://image.nike.co.kr/web/no-img/80x80.gif'">
+						</a>
+						</div>							
+					</td>
+					<!-- phase2 인스타일 추가 -->
+					<td class="lns02" style="position:relative;">
+						<ul>
+							<li><img src="http://image.nike.co.kr/web/pre/rec-s5-trans.png" class="png24" alt="별점"></li>
+							<li>2016.06.09</li>
+							
+						</ul>
+						<!-- phase2 제목 추가 -->
+						<p style="font-weight:bold;margin-bottom:15px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;width:482px;">너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.너무 작지 않게 딱 맞아요.</p>
+						<!-- phase2 제목 추가 -->
+						<p>
+						나이키신발 전부 230신는데, 이 슬립온도 230했더니 약간 작네요. 발볼 넓은 편도 아닌데 좀 쪼여요. 곧 늘어나겠지 하고 그냥 신어요. 발볼 넓으신 분들은 +5 하셔도 될듯해요. 
+						<!--	나이키신발 전부 230신는데, 이 슬립온도 230했더니 약간 작네요. 발볼 넓은 편도 아닌데 좀 쪼여요. 곧 늘어나겠지 하고 그냥 신어요. 발볼 넓으신 분들은 +5 하셔도 될듯해요. -->
+						</p>
+						<!-- phase2 인스타일 추가 -->
+						<div style="position:absolute;top:-25px;right:0;text-align:right">
+							<a href="javascript:assmtRecommendation('1031012', 3, 0, '000000001563132');">
+								<!-- phase2 img 변경
+								<img class="vm" src="http://image.nike.co.kr/web/pre/bn_best4.gif" alt="추천"> -->
+								<img src="../image/web/pre/myshop/icon02.gif" alt="추천">
+							</a>
+							<span id="txt_recommendation3">0</span>
+							<a href="javascript:viewBadAssmtArea('1031012','000000001563132');" class="access_btn_report" style="display:inline-block; cursor: pointer; background:url(/image/web/pre/bu_arrow4.gif) right 3px no-repeat; padding-right:10px;">
+								<!-- phase2 btn변경
+								불량글 신고하기  -->
+								<img src="../image/web/global/btn_dec.gif" alt="불량리뷰 신고" />
+							</a>
+						</div>
+					</td>
+				</tr>
+			
+			</tbody>
+			</table>
+			<div class="p2_paging">
+				<span><a href="#" onclick="return false;" class="no">1</a></span>
+				<span><a href="#" title="2페이지">2</a></span>
+				<span><a href="#" title="3페이지">3</a></span>
+				<span><a href="#" title="4페이지">4</a></span>
+				<span><a href="#" title="5페이지">5</a></span>
+				<span class="next1"><a href="#"><img src="http://lecs.nike.co.kr/NKS1//image/web/pre/category/btn_next.gif" alt="다음"></a></span>
+			</div>
+		</div>
+		<!-- phase2 버튼 삭제
+		<div class="pop_bn"><a href="javascript:popupClose();" class="lps_btn_type1"><span>닫기</span></a></div> -->
+	</div>
+	
+	
+	<div id="popFooter">
+		<img src="http://image.nike.co.kr/web/pre/pop_copy.gif" alt="© nike, all rights reserved">
+	</div>
+	
+	<div class="overLay" style="display:none;"></div>
+	
+	<!-- 불량글 신고하기 팝업 start -->
+	<div class="popLayer typeS report-pop" style="display:none; position:fixed; top:150px;">
+		<div class="layerBox clx">
+			<div class="contents">
+				<h4>불량리뷰 신고</h4> <!-- phase2 title 변경 -->
+				<div class="report">
+					<form id="badAssForm" name="badAssForm" method="post">
+						<input type="hidden" name="assessmentNo" id="assessmentNo" value="">
+						
+						<p class="txt08">상품평의 취지에 어긋나 공공성을 해치는 글을 신고하여 주십시오.</p>
+						<div class="radioSel">
+							<p><input name="declareAcceptType" value="1" type="radio" id="select01"><label for="select01">업체 및 상품에 대한 비방 내용</label></p>
+							<p><input name="declareAcceptType" value="2" type="radio" id="select02"><label for="select02">음란,욕설 등 부적절한 내용</label></p>
+							<p><input name="declareAcceptType" value="3" type="radio" id="select03"><label for="select03">상업적 홍보 및 과대선전</label></p>
+							<p><input name="declareAcceptType" value="4" type="radio" id="select04"><label for="select04">타 쇼핑몰 및 판매처 홍보</label></p>
+							<p><input name="declareAcceptType" value="6" type="radio" id="select05"><label for="select05">상품평의 취지에 어긋남(복사 글, 해당상품과 무관한 내용 등)</label></p>
+						</div>
+					</form>
+				</div>    
+				<div class="btnAlign">
+					<!-- phase2 btn style 변경 -->
+					<a href="javascript:createBadAssmt();" class=""><img src="../image/web/global/g_btn_dec.gif" alt="신고" /></a>
+					<a href="javascript:hideBadAssmt();" class="ml05"><img src="../image/web/global/g_btn_cancle2.gif" alt="취소" /></a>
+				</div>
+				<a href="javascript:hideBadAssmt();" class="close">레이어팝업 닫기</a>
+			</div><!-- // .content -->
+		</div><!-- // .layerBox -->
+	</div><!-- // .popLayer -->
+  	<!-- 불량글 신고하기 팝업 end -->
+	
+
+					
+
+		
+		
+
+
+</body>
+</html>

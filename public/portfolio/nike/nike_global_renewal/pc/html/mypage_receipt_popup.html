@@ -1,0 +1,235 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<link rel="shortcut icon" href="http://lecs.nike.co.kr/NKS1/image/nike_favicon.ico" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1/css/order.css" />
+	<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1/css/ie.css" />
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/lnb_layer_ipa.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/popup.js"></script>
+	<script>var s_account = "nikestorekoreadev";</script><!-- 운영과 개발용 설정이 달라서 config 이용 -->
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/s_code_nikestorekr.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1/js/iframeSubmit.js"></script>
+	
+	<!-- renewal phase2 -->
+	<link rel="stylesheet" type="text/css" href="../css/global_renewal_phase2.css" />
+	
+	<script type="text/javascript">
+	
+		
+		$(function(){
+			//[ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil Start 
+			s.manageVars("clearVars"); 
+			var chl = "Myshop>Receipt>PrintReceipt(P)";
+			var pgNm = "nikestorekr>" + chl;
+			s.currencyCode="KRW";	
+			s.linkInternalFilters+=",nike.co.kr";
+			s.pageName=pgNm;
+			s.channel="Myshop";
+			s.prop2="nikestorekr";
+			s.prop10="commerce";
+			s.prop14="kr";
+			s.prop15="ko";
+			s.prop17="nikestorekr:MyPage";	
+			 s.eVar4 = "logged in"; 
+			void(s.t());	
+			//[ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil End 
+			/*발행일자 세팅*/
+			var today = new Date();
+			var month = ((today.getMonth()+1<10)?'0':'')+(today.getMonth()+1);
+			var day = ((today.getDate()<10)?'0':'')+today.getDate();
+			var issueDate = '발행일자: '+today.getFullYear()+'년 '+month+'월 '+day+'일';
+			$('p.issue-date').text(issueDate);
+			/*사업자등록번호*/
+			var businessNo = '2208809068';
+			businessNo = businessNo.substring(0,3)+'-'+businessNo.substring(3,5)+'-'+businessNo.substring(5);
+			$('#businessNo').html("<span>사업자 등록번호 :</span>" + businessNo);
+			/*카드번호**처리*/
+			$('table#orderData').find('td:nth-child(3)').each(function(idx){
+				if ($('#payMeanCode'+idx).val() != '06') {
+					if($(this).text()!=''){
+						var cardNo = $(this).text().substring(0,$(this).text().length-8)+'********';
+						$(this).text(cardNo); 
+					}
+				}
+			});
+			/*프린트하기*/
+			$('#printList').click(function(){
+				window.print();
+				});
+			/*닫기*/
+			$('.pop-close').click(function(){
+				self.close();
+				});
+			/*인쇄하기*/
+			$('table.datatable2').find('td').children('img').each(function(){
+				var ordNo = $('#ordNo').text();
+				//카드전표 - 04/현금영수증구분 - 01, 02
+				$(this).click(function(){
+					var paySn = $(this).parent().siblings('td.mean').children('span.paySn').text();
+					var crsSn = '';//현금영수증신청일련번호
+					if($(this).parent().siblings('td.mean').children('span.meanCode').text()=='04'){//카드전표
+						showWindowsPopup('/mypage/printStatement.lecs?nolayout=yes&ordNo='+ordNo+'&paySn='+paySn, 400, 650, 'scrollbars=yes');
+					}else{//현금영수증
+						showWindowsPopup('/mypage/printDeduction.lecs?nolayout=yes&ordNo='+ordNo+'&crsSn'+crsSn, 400, 650, 'scrollbars=yes');
+					}
+					});
+				});
+			});
+	</script>
+</head>
+
+
+<body id="pop">
+	<div id="popTop">
+		<img src="http://lecs.nike.co.kr/NKS1/image/web/pre/category/pop_tit.gif" alt="nike" />
+	</div>
+	
+	<!--//{"date":"2013. 7. 18.","user":"jCompany","as-is":"","to-be":"style='background:#e1e5e6' 삭제"}//-->
+	<!-- Start -->
+
+
+	<!-- phase2 마크업 변경 / global_content class 추가 -->
+	<div id="popContent" class="global_content">
+	<!-- End -->
+			<div class="pop_cp"> 
+				<h2 class="tin">영수증 (공급받는자 보관용)</h2>
+				
+				<div class="tin_gm">
+					<p>주문하신 분 : <strong>빈정샘</strong> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 회원 ID : <strong>ruby17</strong></p>
+					<ul class="first">
+						<li><span>유한회사 나이키코리아 대표 :</span>여노빈류동강 (인)</li>
+						<li id="businessNo"><span>사업자 등록번호 :</span></li>
+						<li><span>사업장 주소 :</span>경기도 군포시 산본천로 13</li>
+					</ul>					
+					<ul class="second">
+						<li><span>업태 :</span>도소매</li>
+						<li><span>종목 :</span>스포츠용품</li>
+					</ul>
+				</div>
+				
+				<p class="tits" style="margin-top:30px;">주문번호 : <strong id="ordNo">1606230007369NK</strong></p>
+			</div>
+
+			<div class="orderList_b tdnt" style="margin-top:5px;">
+			 	<!--//{"date":"2013. 7. 16.","user":"jCompany","as-is":"","to-be":""}//-->
+				<table id="orderData" class="datatable2"summary="주문번호에 따른 결제수단, 결제금액, 카드번호, 승인번호, 전표출력 정보">
+		        	<caption>주문번호에 따른 정보</caption>
+					<colgroup>
+						<col style="width:20%;" />
+						<col style="width:20%;" />
+						<col style="width:20%;" />
+						<col style="width:20%;" />
+						<col style="width:20%;" />
+					</colgroup>
+          			<thead><!-- thead추가 #nike -->
+						<tr>
+							<th scope="col">결제수단</th>
+							<th scope="col">결제금액</th>
+							<th scope="col">카드번호</th>
+							<th scope="col">승인번호</th>
+							<th scope="col">전표출력</th>
+						</tr>
+          			</thead><!-- // thead추가 #nike -->
+					<tbody>
+					
+					
+					<input type="hidden" name="payMeanCode05" id="payMeanCode0" value="05" />
+						<tr>
+							<td class="mean">
+								<span style="display: none;" class="meanCode">05</span><span class="paySn" style="display: none;">355735690</span>
+								
+								고객예치금
+							</td>
+							<td><strong>32,000원</strong></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>	
+					
+					
+					</tbody>		
+				</table>
+			</div>
+
+			
+			<div class="pop_cp" style="margin-top:30px;"> 
+				<p class="tits">거래 상세내역</p>
+			</div>
+			<div class="orderList_b tdnt" style="margin-top:5px;">
+				<table summary="거래일자, 품목, 공급가액, 세액, 수량, 합계에 따른 거래 상세내역 정보">
+					<caption>거래 상세내역 정보</caption>
+					<colgroup>
+						<col style="width:15%;" />
+						<col style="width:30%;" />
+						<col style="width:15%;" />
+						<col style="width:15%;" />
+						<col style="width:10%;" />
+						<col style="width:15%;" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">거래일자</th>
+							<th scope="col">품목</th>
+							<th scope="col">공급가액</th>
+							<th scope="col">세액</th>
+							<th scope="col">수량</th>
+							<th scope="col">합계</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+					
+						<tr>
+							<td>2016-06-23</td>
+							<td><span style="display:block">코어 NSW JDI 티 유스</span><span>COLOR:다크 그레이 헤더/비비드 오렌지</span><span>SIZE:75(L)</span></td>
+							<td>26,364원</td>
+							<td>2,636원</td>
+							<td>1</td>
+							<td><strong>29,000원</strong></td>
+						</tr>	
+					
+					
+					</tbody>				
+				</table>
+				<div class="tatcon02">
+					<dl>
+						<dt>면제품가액</dt>
+						<dd>0원</dd>
+						<dt>과세물품가액</dt>
+						<dd>26,364원</dd>
+						<dt>부가세</dt>
+						<dd>2,636원</dd>
+						<dt>배송료</dt>
+						<dd>3,000원</dd>
+						<dt class="ts">총 합계</dt>
+						<dd class="ts"><strong>32,000</strong>원</dd>
+					</dl>
+				</div>
+			</div>
+			
+			<p class="txt01">본 영수증은 거래명세표로 사용할 수 있으며 신용카드, 현금영수증 전표가 필요하실 경우 본 영수증에서 각 전표를 별도 인쇄하셔야 합니다. <br />개별 전표가 필요하시면 전표출력의 인쇄버튼을 클릭하시면 됩니다.</p>
+			
+			<div class="pop_bn">
+				<a href="#" title="영수증"><img src="../image/web/pre/myshop/btn_lay_e07.gif" alt="인쇄하기" id="printList"/></a>
+				<a href="#"><img src="../image/web/pre/myshop/btn_lay_close.gif" alt="취소" class="pop-close"/></a>
+			</div>
+			
+	</div>
+	
+	<!-- <div id="popFooter">
+		<img src="http://lecs.nike.co.kr/NKS1/image/web/pre/category/pop_copy.gif" alt="&copy; nike, all rights reserved" />
+	</div> -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+.wrap {margin:20px}
+input.input {width:50px;}
+input.a {}
+input.b {}
+a.btn {}
+.ctt_box {margin-top:20px}
+.ctt {padding: 15px 0;border-bottom: 1px solid #f1f1f1;}
+.ttl {width: 20%;display: inline-block;vertical-align: middle;}
+.graph {position:relative;width: 65%;display: inline-block;vertical-align: middle;line-height: 30px;height: 30px;border: 1px solid #000;}
+.box {background: #000;line-height: 18px;height: 100%;display:block;width: 0;}
+.txt {width: 10%;display: inline-block;vertical-align: middle;text-align: right;}
+.a_box {}
+.a_txt {}
+.b_box {}
+.b_txt {}
+.c_box {}
+.c_txt {}
+.d_box {}
+.d_txt {}
+.e_box {}
+.e_txt {}

@@ -1,0 +1,3398 @@
+<!doctype html>
+<html lang="ko">
+
+<!-- Mirrored from www.banila.com/static/front/guide/style_guide.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 May 2022 07:18:13 GMT -->
+<head>
+<title>스타일 가이드 (Web) | 바닐라코 퍼블리싱 가이드</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<link rel="shortcut icon" type="image/x-icon" href="../resources/web/images/common/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../resources/web/css/fonts.css">
+<link rel="stylesheet" type="text/css" href="../resources/web/css/common.css">
+<link rel="stylesheet" type="text/css" href="../resources/web/css/contents.css">
+<link rel="stylesheet" type="text/css" href="css/guide.css">
+</head>
+<body>
+<div id="wrap">
+<div class="pagever">last update :<strong>2019.10.28.</strong></div>
+
+<div id="uiwrap" class="uiwrap">
+	<div class="uinav">
+		<a href="#font">font</a>
+		<a href="#color">color</a>
+		<a href="#button">button</a>
+		<a href="#icon">icon</a>
+		<a href="#paging">paging</a>
+		<a href="#form">form</a>
+		<a href="#tab">tab</a>
+		<a href="#title">title</a>
+		<a href="#noData">no data</a>
+		<a href="#table">table</a>
+		<a href="#list">list</a>
+		<a href="#reviewList">Review List</a>
+		<a href="#sorting">Sorting</a>
+		<a href="#rating">rating</a>
+		<a href="#infoList">infoList</a>
+		<a href="#Slide">Slide</a>
+		<a href="#HScroll">HScroll</a>
+		<a href="#imageCrop">imageCrop</a>
+		<a href="#datepicker">datepicker</a>
+	</div>
+
+	<div id="font" class="conP">
+		<h2>Font</h2>
+		<p class="note">
+			Noto Sans KR 폰트를 사용하며, 폰트 굵기는 font-weight로 구분한다. <br>
+			기본설정은{font-family:'noto','맑은고딕',sans-serif;font-weight:400;color:#222;}
+		</p>
+		<h3>Noto Sans KR</h3>
+		<div class="txt">
+			<p style="font-family:'noto';">
+				400 - Noto Sans KR Regular<br>
+				<span>
+					가나다라마바사아자차카타파하<br>
+					0123456789
+				</span>
+			</p>
+			<p style="font-family:'noto';font-weight:500;">
+				500 - Noto Sans KR Medium<br>
+				<span>
+					가나다라마바사아자차카타파하<br>
+					0123456789
+				</span>
+			</p>
+			<p style="font-family:'noto';font-weight:600;">
+				600 - Noto Sans KR Bold<br>
+				<span>
+					가나다라마바사아자차카타파하<br>
+					0123456789
+				</span>
+			</p>
+		</div>
+	</div>
+	<style>
+		#font .txt{padding:30px 20px; font-size:30px; line-height:30px; color:#222;}
+		#font .txt p span{display:block; font-size:20px; line-height:24px;}
+		#font .txt p{margin-top:20px;}
+		#font .txt p:first-child{margin-top:0;}
+	</style>
+
+	<div id="color" class="conP">
+		<h2>Color</h2>
+		<h3>Point Color</h3>
+		<div class="colorbox">
+			<div class="box">#FF65AF(.fcPink)</div>
+			<div class="box">#FF5B5D(.fcRed)</div>
+		</div>
+		<h3>Font Color</h3>
+		<div class="colorbox">
+			<div class="box">#222222(.fc22)</div>
+			<div class="box">#666666(.fc66)</div>
+			<div class="box">#888888(.fc88)</div>
+			<div class="box">#BFBFBF(.fcbf)</div>
+			<div class="box" style="color:#222222;border:1px solid #dcdcdc">#FFFFFF(.fcff)</div>
+		</div>
+		<h3>bg/line Color</h3>
+		<div class="colorbox">
+			<div class="box">#222222</div>
+			<div class="box">#888888</div>
+			<div class="box">#CCCCCC</div>
+			<div class="box" style="color:#222222;">#E8E8E8</div>
+			<div class="box" style="color:#222222;">#F8F8F8</div>
+			<div class="box" style="color:#222222;border:1px solid #dcdcdc">#FFFFFF</div>
+		</div>
+	</div>
+	<style>
+		.colorbox{}
+		.colorbox div{display:inline-block; width:200px; height:100px; text-align:center; line-height:100px; color:#fff; vertical-align:top; box-sizing:border-box;}
+		.color_list li{display:inline-block;}
+	</style>
+	
+	<div id="button" class="conP">
+		<h2>Button</h2>
+		<p class="note">기본 btn 기본 클래스에 필요한 요소의 클래스를 추가하여 사용.</p>
+		<h3>Type</h3>
+		<p class="note">
+			라운드형 버튼 :btnTypeR<br>
+			박스형 버튼 :btnTypeB
+		</p>
+		<div class="btn_wrap">
+			<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnTypeR</span></a>
+			<a href="#none" class="btn btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnTypeB</span></a>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="btn_wrap">
+					<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnTypeR</span></a>
+					<a href="#none" class="btn btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnTypeB</span></a>
+				</div>
+			</xmp>
+		</div>
+		<h3>Color</h3>
+		<p class="note">
+			흰색 버튼 :btnColorW<br>
+			검정 버튼 :btnColorB<br>
+			회색 버튼 :btnColorG<br>
+			핑크 버튼 :btnColorP<br>
+			흰색 투명 버튼 :btnColorWT<br>
+			흰색 배경 버튼 :btnColorWW
+		</p>
+		<div class="btn_wrap">
+			<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnColorW</span></a>
+			<a href="#none" class="btn btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnColorB</span></a>
+			<a href="#none" class="btn btnSizeL btnColorG btnTypeR" style="width:150px;"><span>btnColorG</span></a>
+			<a href="#none" class="btn btnSizeL btnColorP btnTypeB" style="width:150px;"><span>btnColorP</span></a>
+			<div style="display:inline-block;background:cyan;margin-left:4px;"><a href="#none" class="btn btnSizeL btnColorWT btnTypeR" style="width:150px;"><span>btnColorWT</span></a></div>
+			<a href="#none" class="btn btnSizeL btnColorWW btnTypeB" style="width:150px;"><span>btnColorWW</span></a>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="btn_wrap">
+					<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnColorW</span></a>
+					<a href="#none" class="btn btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnColorB</span></a>
+					<a href="#none" class="btn btnSizeL btnColorG btnTypeR" style="width:150px;"><span>btnColorG</span></a>
+					<a href="#none" class="btn btnSizeL btnColorP btnTypeB" style="width:150px;"><span>btnColorP</span></a>
+					<a href="#none" class="btn btnSizeL btnColorWT btnTypeR" style="width:150px;"><span>btnColorWT</span></a>
+					<a href="#none" class="btn btnSizeL btnColorWW btnTypeB" style="width:150px;"><span>btnColorWW</span></a>
+				</div>
+			</xmp>
+		</div>
+		<h3>Size</h3>
+		<p class="note">
+			높이 50px :btnSizeL<br>
+			높이 40px :btnSizeM<br>
+			높이 32px :btnSizeS<br>
+			높이 25px :btnSizeXS<br>
+			높이 20px :btnSizeXXS
+		</p>
+		<div class="btn_wrap">
+			<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnSizeL</span></a>
+			<a href="#none" class="btn btnSizeM btnColorB btnTypeB" style="width:150px;"><span>btnSizeM</span></a>
+			<a href="#none" class="btn btnSizeS btnColorG btnTypeR" style="width:150px;"><span>btnSizeS</span></a>
+			<a href="#none" class="btn btnSizeXS btnColorW btnTypeB" style="width:150px;"><span>btnSizeXS</span></a>
+			<a href="#none" class="btn btnSizeXXS btnColorW btnTypeB" style="width:150px;"><span>btnSizeXXS</span></a>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="btn_wrap">
+					<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnSizeL</span></a>
+					<a href="#none" class="btn btnSizeM btnColorB btnTypeB" style="width:150px;"><span>btnSizeM</span></a>
+					<a href="#none" class="btn btnSizeS btnColorG btnTypeR" style="width:150px;"><span>btnSizeS</span></a>
+					<a href="#none" class="btn btnSizeXS btnColorW btnTypeB" style="width:150px;"><span>btnSizeXS</span></a>
+					<a href="#none" class="btn btnSizeXXS btnColorW btnTypeB" style="width:150px;"><span>btnSizeXXS</span></a>
+				</div>
+			</xmp>
+		</div>
+		<h3>Disabled</h3>
+		<div class="btn_wrap">
+			<a href="#none" class="btn btnSizeL btnColorW btnTypeR disabled" style="width:150px;"><span>disabled</span></a>
+			<a href="#none" class="btn btnSizeL btnColorB btnTypeB disabled" style="width:150px;"><span>disabled</span></a>
+			<a href="#none" class="btn btnSizeL btnColorG btnTypeR disabled" style="width:150px;"><span>disabled</span></a>
+			<a href="#none" class="btn btnSizeL btnColorP btnTypeB disabled" style="width:150px;"><span>disabled</span></a>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="btn_wrap">
+					<a href="#none" class="btn btnSizeL btnColorW btnTypeR disabled" style="width:150px;"><span>disabled</span></a>
+					<a href="#none" class="btn btnSizeL btnColorB btnTypeB disabled" style="width:150px;"><span>disabled</span></a>
+					<a href="#none" class="btn btnSizeL btnColorG btnTypeR disabled" style="width:150px;"><span>disabled</span></a>
+					<a href="#none" class="btn btnSizeL btnColorP btnTypeB disabled" style="width:150px;"><span>disabled</span></a>
+				</div>
+			</xmp>
+		</div>
+		<h3>Arrow Type</h3>
+		<div class="btn_wrap">
+			<a href="#none" class="btn btnArr btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnArr</span></a>
+			<a href="#none" class="btn btnArr2 btnSizeXXS btnColorW btnTypeB" style="width:150px;"><span>btnArr2</span></a>
+			<a href="#none" class="btn btnArr2 btnSizeXXS btnColorB btnTypeB" style="width:150px;"><span>btnArr2</span></a>
+			<a href="#none" class="btn btnArr3 btnSizeM btnColorB btnTypeB" style="width:150px;"><span>btnArr3</span></a>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="btn_wrap">
+					<a href="#none" class="btn btnArr btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnArr</span></a>				
+					<a href="#none" class="btn btnArr2 btnSizeXXS btnColorW btnTypeB" style="width:150px;"><span>btnArr2</span></a>
+					<a href="#none" class="btn btnArr2 btnSizeXXS btnColorB btnTypeB" style="width:150px;"><span>btnArr2</span></a>
+				</div>
+			</xmp>
+		</div>
+		<h3>Line link</h3>
+		<a href="#none" class="btn_txt">라인 링크</a>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<a href="#none" class="btn_txt">라인 링크</a>
+			</xmp>
+		</div>
+		<h3>더보기</h3>
+		<a class="btnMore btnSpin"><span>더보기<br><em>1 <u>/</u> <i>3</i></em></span></a>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<a class="btnMore btnSpin"><span>더보기<br><em>1 <u>/</u> <i>3</i></em></span></a>
+			</xmp>
+		</div>
+		<h3>Etc</h3>
+		<a href="javascript:void(0);" onclick="showLayer('pdtFilter');" class="btn_filter"><span>맞춤필터</span></a>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<a href="javascript:void(0);" onclick="showLayer('pdtFilter');" class="btn_filter"><span>맞춤필터</span></a>
+			</xmp>
+		</div>
+		<a href="#none" class="btn_reset"><span>초기화</span>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<a href="#none" class="btn_reset"><span>초기화</span>
+			</xmp>
+		</div>
+		<h4>SIZE L</h4>
+		<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeL"><span class="hide">찜하기</span></A>
+		<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeL on"><span class="hide">찜하기</span></A>
+		<h4>SIZE M</h4>
+		<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></A>
+		<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeM on"><span class="hide">찜하기</span></A>
+		<h4>SIZE S</h4>
+		<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeS"><span class="hide">찜하기</span></A>
+		<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeS on"><span class="hide">찜하기</span></A>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				SIZE L
+				<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeL"><span class="hide">찜하기</span></A>
+				<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeL on"><span class="hide">찜하기</span></A>
+				SIZE M
+				<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></A>
+				<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeM on"><span class="hide">찜하기</span></A>
+				SIZE S
+				<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeS"><span class="hide">찜하기</span></A>
+				<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeS on"><span class="hide">찜하기</span></A>
+			</xmp>
+		</div>
+		<h4>SIZE M</h4>
+		<a href="javascript:void(0)" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span>장바구니</span></A>
+		<h4>SIZE S</h4>
+		<a href="javascript:void(0)" onclick="jsShopFloating('cart_floating');" class="btn_cart cartS"><span>장바구니</span></A>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				SIZE M
+				<a href="javascript:void(0)" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span>장바구니</span></A>
+				SIZE S
+				<a href="javascript:void(0)" onclick="jsShopFloating('cart_floating');" class="btn_cart cartS"><span>장바구니</span></A>
+			</xmp>
+		</div>
+	</div>
+	<style>
+		#button .btn_wrap{margin-top:10px;line-height:20px;text-align:left;}
+	</style>
+
+	<div id="icon" class="conP">
+		<h2>ICON</h2>
+		<h3>ICON</h3>
+		<!-- 기본등급 userLv1 ~ 최고등급 userLv4 -->
+		<span class="userRank userLv1">VIP1</span>
+		<span class="userRank userLv2">VIP2</span>
+		<span class="userRank userLv3">VIP3</span>
+		<span class="userRank userLv4">VIP4</span>
+		<span class="BestIco typeM">BEST</span>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				회원등급 VIP
+				<span class="userRank userLv1">VIP1</span>
+				<span class="userRank userLv2">VIP2</span>
+				<span class="userRank userLv3">VIP3</span>
+				<span class="userRank userLv4">VIP4</span>
+				베스트 아이콘
+				<span class="BestIco typeM">BEST</span>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="paging" class="conP">
+		<h2>Paging</h2>
+		<div class="paging">
+			<a href="#none" class="first"><span class="hide">첫페이지</span></a>
+			<a href="#none" class="prev"><span class="hide">이전페이지</span></a>
+			<a href="#none">1</a>
+			<a href="#none" class="active">2</a>
+			<a href="#none">3</a>
+			<a href="#none">4</a>
+			<a href="#none">5</a>
+			<a href="#none">6</a>
+			<a href="#none">7</a>
+			<a href="#none">8</a>
+			<a href="#none">9</a>
+			<a href="#none">10</a>
+			<a href="#none" class="next"><span class="hide">다음페이지</span></a>
+			<a href="#none" class="last"><span class="hide">마지막페이지</span></a>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="paging">
+					<a href="#none" class="first"><span class="hide">첫페이지</span></a>
+					<a href="#none" class="prev"><span class="hide">이전페이지</span></a>
+					<a href="#none">1</a>
+					<a href="#none" class="active">2</a>
+					<a href="#none">3</a>
+					<a href="#none">4</a>
+					<a href="#none">5</a>
+					<a href="#none">6</a>
+					<a href="#none">7</a>
+					<a href="#none">8</a>
+					<a href="#none">9</a>
+					<a href="#none">10</a>
+					<a href="#none" class="next"><span class="hide">다음페이지</span></a>
+					<a href="#none" class="last"><span class="hide">마지막페이지</span></a>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="form" class="conP">
+		<h2>Form</h2>
+		<h3>Input Text - BOX</h3>
+		<div>
+			<div class="inp_wrap">
+				<div class="inp_text">
+					<input type="text" name="" id="" placeholder="input text">
+					<button class="btn_clear"><span>clear</span></button>
+				</div>
+				<p class="error">잘못 입력했습니다</p>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_lab"><label for="ipt_label">LABEL</label></div>
+				<div class="inp_text">
+					<input type="text" name="" id="ipt_label" placeholder="input text">
+					<button class="btn_clear"><span>clear</span></button>
+				</div>
+				<p class="error">잘못 입력했습니다</p>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_text">
+					<input type="text" name="" id="" placeholder="input text" disabled>
+					<button class="btn_clear"><span>clear</span></button>
+				</div>
+				<p class="error">잘못 입력했습니다</p>
+			</div>
+			<div class="inp_wrap error">
+				<div class="inp_text">
+					<input type="text" name="" id="" placeholder="input text">
+					<button class="btn_clear"><span>clear</span></button>
+				</div>
+				<p class="error">잘못 입력했습니다</p>
+			</div>
+			sizeS
+			<div class="inp_wrap">
+				<div class="inp_text sizeS">
+					<input type="text" name="" id="" placeholder="input text">
+					<button class="btn_clear"><span>clear</span></button>
+				</div>
+				<p class="error">잘못 입력했습니다</p>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				basic
+				<div class="inp_wrap">
+					<div class="inp_text">
+						<input type="text" name="" id="" placeholder="input text">
+						<button class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+				label
+				<div class="inp_wrap">
+					<label class="inp_lab" for="ipt_label">LABEL</label>
+					<div class="inp_text">
+						<input type="text" name="" id="ipt_label" placeholder="input text">
+						<button class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+				비활성화
+				<div class="inp_wrap">
+					<div class="inp_text">
+						<input type="text" name="" id="" placeholder="input text" disabled>
+						<button class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+				error
+				<div class="inp_wrap error">
+					<div class="inp_text">
+						<input type="text" name="" id="" placeholder="input text">
+						<button class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+				sizeS
+				<div class="inp_wrap">
+					<div class="inp_text sizeS">
+						<input type="text" name="" id="" placeholder="input text">
+						<button class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Input Text - SEARCH</h3>
+		<div>
+			<div class="inp_wrap">
+				<div class="inp_text searchType">
+					<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+					<button type="button" class="btn_clear"><span>clear</span></button>
+					<button type="button" class="btn_search"><span>search</span></button>
+				</div>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_text sizeS searchType">
+					<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+					<button type="button" class="btn_clear"><span>clear</span></button>
+					<button type="button" class="btn_search"><span>search</span></button>
+				</div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap">
+					<div class="inp_text searchType">
+						<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+						<button type="button" class="btn_search"><span>search</span></button>
+					</div>
+				</div>
+				<div class="inp_wrap">
+					<div class="inp_text sizeS searchType">
+						<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+						<button type="button" class="btn_search"><span>search</span></button>
+					</div>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Input Text - SEARCH TYPE2</h3>
+		<div>
+			<div class="inp_wrap">
+				<div class="inp_text searchType2">
+					<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+					<button type="button" class="btn_clear"><span>clear</span></button>
+					<button type="button" class="btn_search"><span>search</span></button>
+				</div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap">
+					<div class="inp_text searchType2">
+						<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+						<button type="button" class="btn_search"><span>search</span></button>
+					</div>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Checkbox</h3>
+		<div>
+			<span class="inp_check">
+				<input type="checkbox" name="inp_check1_1" id="inp_check1_1">
+				<label for="inp_check1_1">check1</label>
+			</span>
+			<span class="inp_check">
+				<input type="checkbox" name="inp_check1_2" id="inp_check1_2" checked>
+				<label for="inp_check1_2">check2</label>
+			</span>
+			<span class="inp_check">
+				<input type="checkbox" name="inp_check1_3" id="inp_check1_3" disabled>
+				<label for="inp_check1_3">check3</label>
+			</span>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				basic
+				<span class="inp_check">
+					<input type="checkbox" name="inp_check1_1" id="inp_check1_1">
+					<label for="inp_check1_1">check1</label>
+				</span>
+				checked
+				<span class="inp_check">
+					<input type="checkbox" name="inp_check1_2" id="inp_check1_2" checked>
+					<label for="inp_check1_2">check2</label>
+				</span>
+				disabled
+				<span class="inp_check">
+					<input type="checkbox" name="inp_check1_3" id="inp_check1_3" disabled>
+					<label for="inp_check1_3">check3</label>
+				</span>
+			</xmp>
+		</div>
+
+		<h3>Radiobox</h3>
+		<div>
+			<span class="inp_radio">
+				<input type="radio" name="inp_radio1" id="inp_radio1_1">
+				<label for="inp_radio1_1">radio1</label>
+			</span>
+			<span class="inp_radio">
+				<input type="radio" name="inp_radio1" id="inp_radio1_2" checked>
+				<label for="inp_radio1_2">radio2</label>
+			</span>
+			<span class="inp_radio">
+				<input type="radio" name="inp_radio1" id="inp_radio1_3" disabled>
+				<label for="inp_radio1_3">radio3</label>
+			</span>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				basic
+				<span class="inp_radio">
+					<input type="radio" name="inp_radio1" id="inp_radio1_1">
+					<label for="inp_radio1_1">radio1</label>
+				</span>
+				checked
+				<span class="inp_radio">
+					<input type="radio" name="inp_radio1" id="inp_radio1_2" checked>
+					<label for="inp_radio1_2">radio2</label>
+				</span>
+				disabled
+				<span class="inp_radio">
+					<input type="radio" name="inp_radio1" id="inp_radio1_3" disabled>
+					<label for="inp_radio1_3">radio3</label>
+				</span>
+			</xmp>
+		</div>
+
+		<h3>Selectbox</h3>
+		<div>
+			<div class="inp_wrap">
+				<div class="inp_select">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1" checked>
+								<label for="select1_1">01. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">02. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_3" name="select1">
+								<label for="select1_3">03. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_4" name="select1">
+								<label for="select1_4">04. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_5" name="select1">
+								<label for="select1_5">05. 바닐라바닐라</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="inp_wrap error">
+				<div class="inp_select">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select2_1" name="select2">
+								<label for="select2_1">01. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_2" name="select2">
+								<label for="select2_2">02. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_3" name="select2">
+								<label for="select2_3">03. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_4" name="select2">
+								<label for="select2_4">04. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_5" name="select2">
+								<label for="select2_5">05. 바닐라바닐라</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="error">옵션을 선택해주세요.</p>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_select disabled">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select2_1" name="select2">
+								<label for="select2_1">01. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_2" name="select2">
+								<label for="select2_2">02. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_3" name="select2">
+								<label for="select2_3">03. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_4" name="select2">
+								<label for="select2_4">04. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_5" name="select2">
+								<label for="select2_5">05. 바닐라바닐라</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_select pdtSelect">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>
+									벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li class="soldOut">
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>
+									벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+								<span class="soldOutTxt">[일시품절]</span>
+								<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				활성화
+				<div class="inp_wrap">
+					<div class="inp_select">
+						<div class="selectBox">
+							<button class="title" type="button">옵션을 선택해주세요</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1">
+									<label for="select1_1">01. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">02. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_3" name="select1">
+									<label for="select1_3">03. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_4" name="select1">
+									<label for="select1_4">04. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_5" name="select1">
+									<label for="select1_5">05. 바닐라바닐라</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				에러
+				<div class="inp_wrap error">
+					<div class="inp_select">
+						<div class="selectBox">
+							<button class="title" type="button">옵션을 선택해주세요</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. 바닐라바닐라</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="error">옵션을 선택해주세요.</p>
+				</div>
+				비활성화
+				<div class="inp_wrap">
+					<div class="inp_select disabled">
+						<div class="selectBox">
+							<button class="title" type="button">옵션을 선택해주세요</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. 바닐라바닐라</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				쇼핑
+				<div class="inp_wrap">
+					<div class="inp_select pdtSelect">
+						<div class="selectBox">
+							<button class="title" type="button">옵션을 선택해주세요</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1">
+									<label for="select1_1">
+										<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>
+										벨벳 블러드 립-BE01 밀크티 필터
+									</label>
+								</li>
+								<li class="soldOut">
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">
+										<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>
+										벨벳 블러드 립-BE01 밀크티 필터
+									</label>
+									<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Selectbox - Type Up</h3>
+		<div>
+			<div class="inp_wrap">
+				<div class="inp_select typeUp">
+					<div class="selectBox">
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1" checked>
+								<label for="select1_1">01. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">02. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_3" name="select1">
+								<label for="select1_3">03. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_4" name="select1">
+								<label for="select1_4">04. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_5" name="select1">
+								<label for="select1_5">05. 바닐라바닐라</label>
+							</li>
+						</ul>
+						<button class="title" type="button">옵션을 선택해주세요</button>
+					</div>
+				</div>
+			</div>
+			<div class="inp_wrap error">
+				<div class="inp_select typeUp">
+					<div class="selectBox">
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select2_1" name="select2">
+								<label for="select2_1">01. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_2" name="select2">
+								<label for="select2_2">02. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_3" name="select2">
+								<label for="select2_3">03. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_4" name="select2">
+								<label for="select2_4">04. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_5" name="select2">
+								<label for="select2_5">05. 바닐라바닐라</label>
+							</li>
+						</ul>
+						<button class="title" type="button">옵션을 선택해주세요</button>
+					</div>
+				</div>
+				<p class="error">옵션을 선택해주세요.</p>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_select typeUp disabled">
+					<div class="selectBox">
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select2_1" name="select2">
+								<label for="select2_1">01. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_2" name="select2">
+								<label for="select2_2">02. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_3" name="select2">
+								<label for="select2_3">03. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_4" name="select2">
+								<label for="select2_4">04. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_5" name="select2">
+								<label for="select2_5">05. 바닐라바닐라</label>
+							</li>
+						</ul>
+						<button class="title" type="button">옵션을 선택해주세요</button>
+					</div>
+				</div>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_select typeUp pdtSelect">
+					<div class="selectBox">
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>
+									벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li class="soldOut">
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>
+									벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+								<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+							</li>
+						</ul>
+						<button class="title" type="button">옵션을 선택해주세요</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				활성화
+				<div class="inp_wrap">
+					<div class="inp_select typeUp">
+						<div class="selectBox">
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1">
+									<label for="select1_1">01. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">02. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_3" name="select1">
+									<label for="select1_3">03. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_4" name="select1">
+									<label for="select1_4">04. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_5" name="select1">
+									<label for="select1_5">05. 바닐라바닐라</label>
+								</li>
+							</ul>
+							<button class="title" type="button">옵션을 선택해주세요</button>
+						</div>
+					</div>
+				</div>
+				에러
+				<div class="inp_wrap error">
+					<div class="inp_select typeUp">
+						<div class="selectBox">
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. 바닐라바닐라</label>
+								</li>
+							</ul>
+							<button class="title" type="button">옵션을 선택해주세요</button>
+						</div>
+					</div>
+					<p class="error">옵션을 선택해주세요.</p>
+				</div>
+				비활성화
+				<div class="inp_wrap">
+					<div class="inp_select typeUp disabled">
+						<div class="selectBox">
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. 바닐라바닐라</label>
+								</li>
+							</ul>
+							<button class="title" type="button">옵션을 선택해주세요</button>
+						</div>
+					</div>
+				</div>
+				쇼핑
+				<div class="inp_wrap">
+					<div class="inp_select typeUp pdtSelect">
+						<div class="selectBox">
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1">
+									<label for="select1_1">
+										<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>
+										벨벳 블러드 립-BE01 밀크티 필터
+									</label>
+								</li>
+								<li class="soldOut">
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">
+										<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>
+										벨벳 블러드 립-BE01 밀크티 필터
+									</label>
+									<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+								</li>
+							</ul>
+							<button class="title" type="button">옵션을 선택해주세요</button>
+						</div>
+					</div>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Selectbox - sizeS</h3>
+		<div>
+			<div class="inp_wrap">
+				<div class="inp_select sizeS">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1" checked>
+								<label for="select1_1">01. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">02. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_3" name="select1">
+								<label for="select1_3">03. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_4" name="select1">
+								<label for="select1_4">04. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_5" name="select1">
+								<label for="select1_5">05. 바닐라바닐라</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="inp_wrap error">
+				<div class="inp_select sizeS">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select2_1" name="select2">
+								<label for="select2_1">01. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_2" name="select2">
+								<label for="select2_2">02. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_3" name="select2">
+								<label for="select2_3">03. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_4" name="select2">
+								<label for="select2_4">04. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_5" name="select2">
+								<label for="select2_5">05. 바닐라바닐라</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="error">옵션을 선택해주세요.</p>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_select sizeS disabled">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select2_1" name="select2">
+								<label for="select2_1">01. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_2" name="select2">
+								<label for="select2_2">02. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_3" name="select2">
+								<label for="select2_3">03. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_4" name="select2">
+								<label for="select2_4">04. 바닐라바닐라</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select2_5" name="select2">
+								<label for="select2_5">05. 바닐라바닐라</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_select sizeS pdtSelect">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>
+									벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li class="soldOut">
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>
+									벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+								<span class="soldOutTxt">[일시품절]</span>
+								<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				활성화
+				<div class="inp_wrap">
+					<div class="inp_select sizeS">
+						<div class="selectBox">
+							<button class="title" type="button">옵션을 선택해주세요</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1">
+									<label for="select1_1">01. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">02. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_3" name="select1">
+									<label for="select1_3">03. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_4" name="select1">
+									<label for="select1_4">04. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_5" name="select1">
+									<label for="select1_5">05. 바닐라바닐라</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				에러
+				<div class="inp_wrap error">
+					<div class="inp_select sizeS">
+						<div class="selectBox">
+							<button class="title" type="button">옵션을 선택해주세요</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. 바닐라바닐라</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="error">옵션을 선택해주세요.</p>
+				</div>
+				비활성화
+				<div class="inp_wrap">
+					<div class="inp_select disabled sizeS">
+						<div class="selectBox">
+							<button class="title" type="button">옵션을 선택해주세요</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. 바닐라바닐라</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. 바닐라바닐라</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				쇼핑
+				<div class="inp_wrap">
+					<div class="inp_select pdtSelect sizeS">
+						<div class="selectBox">
+							<button class="title" type="button">옵션을 선택해주세요</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1">
+									<label for="select1_1">
+										<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>
+										벨벳 블러드 립-BE01 밀크티 필터
+									</label>
+								</li>
+								<li class="soldOut">
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">
+										<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>
+										벨벳 블러드 립-BE01 밀크티 필터
+									</label>
+									<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Textarea</h3>
+		<div>
+			<div class="inp_wrap">
+				<div class="inp_textArea">
+					<textarea>Start typing...</textarea>
+					<div class="textarea-clone"></div>
+				</div>
+			</div>
+			<div class="inp_wrap error">
+				<div class="inp_textArea">
+					<textarea>Start typing...</textarea>
+					<div class="textarea-clone"></div>
+				</div>
+				<p class="error">error message</p>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_textArea lengthCheck">
+					<textarea>Start typing...</textarea>
+					<div class="textarea-clone"></div>
+				</div>
+				<span class="charCnt">(<em>0</em>/500)</span>
+				<p class="error">error message</p>
+			</div>
+			<div class="inp_wrap error">
+				<div class="inp_textArea lengthCheck">
+					<textarea>Start typing...</textarea>
+					<div class="textarea-clone"></div>
+				</div>
+				<span class="charCnt">(<em>0</em>/500)</span>
+				<p class="error">error message</p>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">			
+				basic
+				<div class="inp_wrap">
+					<div class="inp_textArea">
+						<textarea>Start typing...</textarea>
+						<div class="textarea-clone"></div>
+					</div>
+				</div>
+				error
+				<div class="inp_wrap error">
+					<div class="inp_textArea">
+						<textarea>Start typing...</textarea>
+						<div class="textarea-clone"></div>
+					</div>
+					<p class="error">error message</p>
+				</div>
+				lengthCheck
+				<div class="inp_wrap">
+					<div class="inp_textArea lengthCheck">
+						<textarea>Start typing...</textarea>
+						<div class="textarea-clone"></div>
+					</div>
+					<span class="charCnt">(<em>0</em>/500)</span>
+				</div>
+				lengthCheck error
+				<div class="inp_wrap error">
+					<div class="inp_textArea lengthCheck">
+						<textarea>Start typing...</textarea>
+						<div class="textarea-clone"></div>
+					</div>
+					<span class="charCnt">(<em>0</em>/500)</span>
+					<p class="error">error message</p>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Etc</h3>
+		<div>
+			<div class="inp_wrap inp_phone">
+				<div class="inp_lab"><label for="phone">휴대폰</label></div>
+				<div class="inp_select">
+					<div class="selectBox">
+						<button class="title" id="phone" type="button" title="">010</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">010</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">011</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inp_text">
+					<input type="text" title="휴대폰 가운대">
+				</div>
+				<div class="inp_text">
+					<input type="text" title="휴대폰 마지막">
+				</div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap inp_phone mgt30">
+					<div class="inp_lab"><label for="phone">휴대폰</label></div>
+					<div class="inp_select">
+						<div class="selectBox">
+							<button class="title" id="phone" type="button" title="">010</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1">
+									<label for="select1_1">010</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">011</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="inp_text">
+						<input type="text" title="휴대폰 가운대">
+					</div>
+					<div class="inp_text">
+						<input type="text" title="휴대폰 마지막">
+					</div>
+				</div>
+			</xmp>
+		</div>
+		<div>
+			<div class="inp_wrap inp_email">
+				<div class="inp_lab"><label for="join_email">이메일</label></div>
+				<div class="inp_text">
+					<input type="text" id="join_email" placeholder="이메일">
+				</div>
+				<span class="hyphen">@</span>
+				<div class="inp_select">
+					<div class="selectBox">
+						<button class="title" type="button" title=""></button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="join_email1" name="join_email" checked>
+								<label for="join_email1">naver.com</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="join_email2" name="join_email">
+								<label for="join_email2">google.com</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="join_email3" name="join_email">
+								<label for="join_email3">직접선택</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inp_text email_input">
+					<input type="text" title="이메일 직접입력">
+				</div>
+				<a href="#none" class="btn btnSizeL btnArr btnColorB btnTypeB"><span>중복확인</span></a>
+				<p class="error">이메일 형식을 확인해주세요.</p>
+				<p class="error">이미 사용중인 이메일입니다.</p>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap inp_email">
+					<div class="inp_lab"><label for="join_email">이메일</label></div>
+					<div class="inp_text">
+						<input type="text" id="join_email" placeholder="이메일">
+					</div>
+					<span class="hyphen">@</span>
+					<div class="inp_select">
+						<div class="selectBox">
+							<button class="title" type="button" title=""></button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="join_email1" name="join_email" checked>
+									<label for="join_email1">naver.com</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="join_email2" name="join_email">
+									<label for="join_email2">google.com</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="join_email3" name="join_email">
+									<label for="join_email3">직접선택</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="inp_text email_input">
+						<input type="text" title="이메일 직접입력">
+					</div>
+					<a href="#none" class="btn btnSizeL btnArr btnColorB btnTypeB"><span>중복확인</span></a>
+					<p class="error">이메일 형식을 확인해주세요.</p>
+					<p class="error">이미 사용중인 이메일입니다.</p>
+				</div>
+			</xmp>
+		</div>
+		<div>
+			<div class="inp_wrap inp_post">
+				<div class="inp_lab"><label for="join_post">주소 (선택)</label></div>
+				<div class="inp_text post_num">
+					<input type="text" id="join_post" readonly placeholder="우편번호를 입력해주세요.">
+				</div>
+				<a href="#none" class="btn btnSizeL btnArr btnColorB btnTypeB"><span>우편번호 찾기</span></a>
+				<div class="inp_text mgt10">
+					<input type="text" title="기본주소" readonly placeholder="기본주소를 선택해주세요.">
+				</div>
+				<div class="inp_text mgt10">
+					<input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
+				</div>
+				<p class="error">상세주소를 정확하게 입력해주세요.</p>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap inp_post">
+					<div class="inp_lab"><label for="join_post">주소 (선택)</label></div>
+					<div class="inp_text post_num">
+						<input type="text" id="join_post" readonly placeholder="우편번호를 입력해주세요.">
+					</div>
+					<a href="#none" class="btn btnSizeL btnArr btnColorB btnTypeB"><span>우편번호 찾기</span></a>
+					<div class="inp_text mgt10">
+						<input type="text" title="기본주소" readonly placeholder="기본주소를 선택해주세요.">
+					</div>
+					<div class="inp_text mgt10">
+						<input type="text" title="상세주소" placeholder="상세주소를 입력해주세요.">
+					</div>
+					<p class="error">상세주소를 정확하게 입력해주세요.</p>
+				</div>
+			</xmp>
+		</div>
+		<div>
+			<div class="inp_wrap inp_mesg">
+				<div class="inp_select sizeS">
+					<div class="selectBox">
+						<button class="title" type="button">메시지를 선택해주세요.</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="orderCard1" name="orderCard">
+								<label for="orderCard1">메시지 직집 입력하기</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="orderCard2" name="orderCard">
+								<label for="orderCard2">부재 시 경비실에 맡겨 주세요.</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="orderCard3" name="orderCard">
+								<label for="orderCard3">부재 시 문앞에 놔주세요.</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="orderCard4" name="orderCard">
+								<label for="orderCard4">배송 전에 미리 연락주세요.</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="orderCard5" name="orderCard">
+								<label for="orderCard5">배송 전에 전화주시거나 문자 남겨 주세요.</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inp_text mesg_input sizeS mgt10">
+					<input type="text" name="" id="order_name" placeholder="메시지를 입력해주세요." disabled>
+				</div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap inp_mesg">
+					<div class="inp_select sizeS">
+						<div class="selectBox">
+							<button class="title" type="button">메시지를 선택해주세요.</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="orderCard1" name="orderCard">
+									<label for="orderCard1">메시지 직집 입력하기</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="orderCard2" name="orderCard">
+									<label for="orderCard2">부재 시 경비실에 맡겨 주세요.</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="orderCard3" name="orderCard">
+									<label for="orderCard3">부재 시 문앞에 놔주세요.</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="orderCard4" name="orderCard">
+									<label for="orderCard4">배송 전에 미리 연락주세요.</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="orderCard5" name="orderCard">
+									<label for="orderCard5">배송 전에 전화주시거나 문자 남겨 주세요.</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="inp_text mesg_input sizeS mgt10">
+						<input type="text" name="" id="order_name" placeholder="메시지를 입력해주세요.">
+					</div>
+				</div>
+			</xmp>
+		</div>
+		<style>
+			.inp_wrap + .inp_wrap{margin-top:10px;}
+			.inp_textArea textarea{height:300px;}
+		</style>
+	</div>
+	<style>
+		#form > div{margin-top:20px;}
+	</style>
+
+	<div id="tab" class="conP">
+		<h2>Tab</h2>
+		<h3>tabStyle1</h3>
+		<p class="note">탭의 갯수 만큼 length갯수 클래스를 추가</p>
+		<div class="tabType tabType1 length3">
+			<ul>
+				<li><a href="#none" class="current"><span>TAB1</span></a></li>
+				<li><a href="#none"><span>TAB2</span></a></li>
+				<li><a href="#none"><span>TAB3</span></a></li>
+			</ul>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="tabType tabType1 length3">
+					<ul>
+						<li><a href="#none" class="current"><span>TAB1</span></a></li>
+						<li><a href="#none"><span>TAB2</span></a></li>
+						<li><a href="#none"><span>TAB3</span></a></li>
+					</ul>
+				</div>
+			</xmp>
+		</div>
+		<h3>tabStyle2</h3>		
+		<div class="tabType tabType2">
+			<ul>
+				<li><a href="#none"><span>고객센터</span></a></li>
+				<li><a href="#none" class="current"><span>공지사항</span></a></li>
+				<li><a href="#none"><span>FAQ</span></a></li>
+				<li><a href="#none"><span>1:1 문의</span></a></li>
+				<li><a href="#none"><span>매장안내</span></a></li>
+			</ul>
+		</div>
+		<div class="tabType tabType2 sizeL">
+			<ul>
+				<li><a href="#none"><span>고객센터</span></a></li>
+				<li><a href="#none" class="current"><span>공지사항</span></a></li>
+				<li><a href="#none"><span>FAQ</span></a></li>
+				<li><a href="#none"><span>1:1 문의</span></a></li>
+				<li><a href="#none"><span>매장안내</span></a></li>
+			</ul>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">		
+				<div class="tabType tabType2">
+					<ul>
+						<li><a href="#none"><span>고객센터</span></a></li>
+						<li><a href="#none" class="current"><span>공지사항</span></a></li>
+						<li><a href="#none"><span>FAQ</span></a></li>
+						<li><a href="#none"><span>1:1 문의</span></a></li>
+						<li><a href="#none"><span>매장안내</span></a></li>
+					</ul>
+				</div>
+				<div class="tabType tabType2 sizeL">
+					<ul>
+						<li><a href="#none"><span>고객센터</span></a></li>
+						<li><a href="#none" class="current"><span>공지사항</span></a></li>
+						<li><a href="#none"><span>FAQ</span></a></li>
+						<li><a href="#none"><span>1:1 문의</span></a></li>
+						<li><a href="#none"><span>매장안내</span></a></li>
+					</ul>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>tabStyle3</h3>	
+		<div class="tabType tabType3">
+			<ul>
+				<li>
+					<a href="#none" class="fc22 fs15 notoM">회원정보</a>
+					<ul class="subMenu">
+						<li><a href="#none" class="current">회원 정보</a></li>
+						<li><a href="#none">ID//PW 관련</a></li>
+						<li><a href="#none">회원정보변경</a></li>
+						<li><a href="#none">탈퇴/재가입</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#none" class="fc22 fs15 notoM">멤버십</a>
+					<ul class="subMenu">
+						<li><a href="#none">멤버십 등급</a></li>
+						<li><a href="#none">등급별 혜택</a></li>
+						<li><a href="#none">포인트 정책</a></li>
+						<li><a href="#none">쿠폰 정책</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#none" class="fc22 fs15 notoM">주문/입금/결제</a>
+					<ul class="subMenu">
+						<li><a href="#none">주문 문의</a></li>
+						<li><a href="#none">결제 문의</a></li>
+						<li><a href="#none">주문 취소</a></li>
+						<li><a href="#none">증빙서류 발급</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#none" class="fc22 fs15 notoM">이벤트</a>
+					<ul class="subMenu">
+						<li><a href="#none">이벤트 안내</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#none" class="fc22 fs15 notoM">배송</a>
+					<ul class="subMenu">
+						<li><a href="#none">배송 문의</a></li>
+						<li><a href="#none">배송 오류/지연</a></li>
+						<li><a href="#none">사은품 누락</a></li>
+						<li><a href="#none">배송비</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#none" class="fc22 fs15 notoM">취소/반품/교환</a>
+					<ul class="subMenu">
+						<li><a href="#none">교환 문의</a></li>
+						<li><a href="#none">반품 문의</a></li>
+						<li><a href="#none">취소 문의</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#none" class="fc22 fs15 notoM">상품문의</a>
+					<ul class="subMenu">
+						<li><a href="#none">AS 문의</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#none" class="fc22 fs15 notoM">오프라인매장</a>
+					<ul class="subMenu">
+						<li><a href="#none">매장 문의</a></li>
+						<li><a href="#none">사이트 이용</a></li>
+						<li><a href="#none">기타 문의</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#none" class="fc22 fs15 notoM">쿠폰/포인트</a>
+					<ul class="subMenu">
+						<li><a href="#none">쿠폰사용</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="tabType tabType3">
+					<ul>
+						<li>
+							<a href="#none" class="fc22 fs15 notoM">회원정보</a>
+							<ul class="subMenu">
+								<li><a href="#none" class="current">회원 정보</a></li>
+								<li><a href="#none">ID//PW 관련</a></li>
+								<li><a href="#none">회원정보변경</a></li>
+								<li><a href="#none">탈퇴/재가입</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none" class="fc22 fs15 notoM">멤버십</a>
+							<ul class="subMenu">
+								<li><a href="#none">멤버십 등급</a></li>
+								<li><a href="#none">등급별 혜택</a></li>
+								<li><a href="#none">포인트 정책</a></li>
+								<li><a href="#none">쿠폰 정책</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none" class="fc22 fs15 notoM">주문/입금/결제</a>
+							<ul class="subMenu">
+								<li><a href="#none">주문 문의</a></li>
+								<li><a href="#none">결제 문의</a></li>
+								<li><a href="#none">주문 취소</a></li>
+								<li><a href="#none">증빙서류 발급</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none" class="fc22 fs15 notoM">이벤트</a>
+							<ul class="subMenu">
+								<li><a href="#none">이벤트 안내</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none" class="fc22 fs15 notoM">배송</a>
+							<ul class="subMenu">
+								<li><a href="#none">배송 문의</a></li>
+								<li><a href="#none">배송 오류/지연</a></li>
+								<li><a href="#none">사은품 누락</a></li>
+								<li><a href="#none">배송비</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none" class="fc22 fs15 notoM">취소/반품/교환</a>
+							<ul class="subMenu">
+								<li><a href="#none">교환 문의</a></li>
+								<li><a href="#none">반품 문의</a></li>
+								<li><a href="#none">취소 문의</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none" class="fc22 fs15 notoM">상품문의</a>
+							<ul class="subMenu">
+								<li><a href="#none">AS 문의</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none" class="fc22 fs15 notoM">오프라인매장</a>
+							<ul class="subMenu">
+								<li><a href="#none">매장 문의</a></li>
+								<li><a href="#none">사이트 이용</a></li>
+								<li><a href="#none">기타 문의</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none" class="fc22 fs15 notoM">쿠폰/포인트</a>
+							<ul class="subMenu">
+								<li><a href="#none">쿠폰사용</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>tabStyle4</h3>
+		<div class="tabType tabType4">
+			<ul>
+				<li><a href="#none" class="current"><span>TAB1<span class="count">20</span></span></a></li>
+				<li><a href="#none"><span>TAB2<span class="count">20</span></span></a></li>
+				<li><a href="#none"><span>TAB3<span class="count">20</span></span></a></li>
+			</ul>
+			<p class="info_txt">info_txt</p>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="tabType tabType4">
+					<ul>
+						<li><a href="#none" class="current"><span>TAB1<span class="count">20</span></span></a></li>
+						<li><a href="#none"><span>TAB2<span class="count">20</span></span></a></li>
+						<li><a href="#none"><span>TAB3<span class="count">20</span></span></a></li>
+					</ul>
+					<p class="info_txt">info_txt</p>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>tabType :No Link</h3>
+		<div class="tabType tabType1 length3 no_link">
+			<ul>
+				<li><a href="#none" class="current"><span>TAB1</span></a></li>
+				<li><a href="#none"><span>TAB2</span></a></li>
+				<li><a href="#none"><span>TAB3</span></a></li>
+			</ul>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="tabType tabType1 length3 no_link">
+					<ul>
+						<li><a href="#none" class="current"><span>TAB1</span></a></li>
+						<li><a href="#none"><span>TAB2</span></a></li>
+						<li><a href="#none"><span>TAB3</span></a></li>
+					</ul>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>tabType :Switch</h3>
+		<div class="tabType tabType1 length4 switch" id="guideTab"><!-- id = 공통 VIEW CLASS -->
+			<ul>
+				<li><a href="#guideTab1" class="current"><span>TAB1</span></a></li>
+				<li><a href="#guideTab2"><span>TAB2</span></a></li>
+				<li><a href="#guideTab3"><span>TAB3</span></a></li>
+				<li><a href="#guideTab4"><span>TAB4</span></a></li>
+			</ul>
+		</div>
+		<div class="guideTab" id="guideTab1">
+			TAB1 CON
+		</div>
+		<div class="guideTab" id="guideTab2">
+			TAB2 CON
+		</div>
+		<div class="guideTab" id="guideTab3">
+			TAB3 CON
+		</div>
+		<div class="guideTab" id="guideTab4">
+			TAB4 CON
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="tabType tabType1 length4 switch" id="guideTab"><!-- id = 공통 VIEW CLASS -->
+					<ul>
+						<li><a href="#guideTab1" class="current"><span>TAB1</span></a></li>
+						<li><a href="#guideTab2"><span>TAB2</span></a></li>
+						<li><a href="#guideTab3"><span>TAB3</span></a></li>
+						<li><a href="#guideTab4"><span>TAB4</span></a></li>
+					</ul>
+				</div>
+				<div class="guideTab" id="guideTab1">
+					TAB1 CON
+				</div>
+				<div class="guideTab" id="guideTab2">
+					TAB2 CON
+				</div>
+				<div class="guideTab" id="guideTab3">
+					TAB3 CON
+				</div>
+				<div class="guideTab" id="guideTab4">
+					TAB4 CON
+				</div>
+			</xmp>
+		</div>
+
+		<h3>tabType :Scroll</h3>
+		<div class="tabType tabType1 length3 scroll">
+			<ul>
+				<li><a href="#guideTab5" class="current">Description</a></li>
+				<li><a href="#guideTab6">How to use</a></li>
+				<li><a href="#guideTab7">Ingredients</a></li>
+			</ul>
+		</div>
+		<div id="guideTab5">
+			Description
+		</div>
+		<div id="guideTab6">
+			How to use
+		</div>
+		<div id="guideTab7">
+			Ingredients
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="tabType tabType1 length3 scroll">
+					<ul>
+						<li><a href="#guideTab5" class="current">Description</a></li>
+						<li><a href="#guideTab6">How to use</a></li>
+						<li><a href="#guideTab7">Ingredients</a></li>
+					</ul>
+				</div>
+				<div id="guideTab5">
+					Description
+				</div>
+				<div id="guideTab6">
+					How to use
+				</div>
+				<div id="guideTab7">
+					Ingredients
+				</div>
+			</xmp>
+		</div>
+	</div>
+	<style type="text/css">
+		.guideTab{display:none; width:100%; line-height:300px; margin-top:10px; text-align:center; font-size:40px; color:#000;}
+		#guideTab1{border:3px solid #f6eee6; display:block;}
+		#guideTab2{border:3px solid #c2cabe;}
+		#guideTab3{border:3px solid #83a48a;}
+		#guideTab4{border:3px solid #41695e;}
+		#guideTab5{width:100%; margin-top:10px; text-align:center; font-size:40px; line-height:300px; color:#000; border:3px solid #767676;}
+		#guideTab6{width:100%; margin-top:10px; text-align:center; font-size:40px; line-height:300px; color:#000; border:3px solid #83a48a;}
+		#guideTab7{width:100%; margin-top:10px; text-align:center; font-size:40px; line-height:300px; color:#000; border:3px solid #024137;}
+	</style>
+
+	<div id="title" class="conP">
+		<h2>Title</h2>
+		<p class="note">페이지 타이틀 스타일</p>
+		<h3>PAGE TITLE</h3>
+		<div class="pageTitArea">
+			<h1>회원가입</h1>
+			<p>Welcome to BANILA.COM</p>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="pageTitArea">
+					<h1>회원가입</h1>
+					<p>Welcome to BANILA.COM</p>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="noData" class="conP">
+		<h2>No Data</h2>
+		<div class="noData">
+			<span>선택하신 속성에 대한 검색결과가 없습니다.<br> 다른 옵션을 선택해보세요.</span>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="noData">
+					<span>선택하신 속성에 대한 검색결과가 없습니다.<br> 다른 옵션을 선택해보세요.</span>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="table" class="conP">
+		<h2>Table</h2>
+		<h3>QnA TABLE</h3>
+		<div class="js_tblList">
+			<table class="tblType1" summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="200px"></col>
+					<col></col>
+					<col width="200px"></col>
+					<col width="100px"></col>
+					<col width="70px"></col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>제목</th>
+						<th>등록일</th>
+						<th>버튼</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>닫힘</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt">
+								<div>
+									<div class="questn">바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈</div>
+									<div class="aswr">바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.<span>답변일: 2019-09-01</span></div>
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>열림</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt">
+								<div>
+									<div class="questn">바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈</div>
+									<div class="aswr">바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.<span>답변일: 2019-09-01</span></div>
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="5" class="noData">
+							<span>등록된 게시물이 없습니다.</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="js_tblList">
+					<table class="tblType1" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="200px"></col>
+							<col></col>
+							<col width="200px"></col>
+							<col width="100px"></col>
+							<col width="70px"></col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>제목</th>
+								<th>등록일</th>
+								<th>버튼</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="fc88">이용안내</td>
+								<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+								<td class="fc88">2019-09-01</td>
+								<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+								<td><div class="js_arrow arrow"><span>닫힘</span></div></td>
+							</tr>
+							<tr class="js_ListCtt ListCtt">
+								<td></td>
+								<td>
+									<div class="ta_l js_replyCtt replyCtt">
+										<div>
+											<div class="questn">바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈</div>
+											<div class="aswr">바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.<span>답변일: 2019-09-01</span></div>
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="fc88">이용안내</td>
+								<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+								<td class="fc88">2019-09-01</td>
+								<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+								<td><div class="js_arrow arrow"><span>열림</span></div></td>
+							</tr>
+							<tr class="js_ListCtt ListCtt">
+								<td></td>
+								<td>
+									<div class="ta_l js_replyCtt replyCtt">
+										<div>
+											<div class="questn">바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈</div>
+											<div class="aswr">바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.<span>답변일: 2019-09-01</span></div>
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td colspan="5" class="noData">
+									<span>등록된 게시물이 없습니다.</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</xmp>
+		</div>
+		<h3>FAQ TABLE</h3>
+		<div class="tblBar mgt50">
+			<p class="tblList">회원정보변경 <span class="fcPink">7건</span></p>
+		</div>
+		<div class="js_tblList">
+			<table class="tblType1 fqaType" summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="200px"></col>
+					<col></col>
+					<col width="200px"></col>
+					<col width="100px"></col>
+					<col width="70px"></col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>제목</th>
+						<th>등록일</th>
+						<th>버튼</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>닫힘</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt fc66">
+								<div>
+									<div class="aswr">회원이 되시면 각종 이벤트와 상품정보, 추천상품등에 대한 정보를 받아 보실 수 있으며 <br>온라인 쇼핑몰에서 적립하신 구매 마일리지와 쇼핑몰 전용 활동 포인트를 확인하실 수 있습니다.<br><br>온라인 쇼핑몰에서 상품 구매 시 마일리지가 적립되며 이 마일리지는 쇼핑몰에서 현금처럼 사용하실 수 있습니다. <br>등급별 각종 쿠폰혜택을 받으실 수 있습니다.</div>
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>열림</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt fc66">
+								<div>
+									<div class="aswr">회원이 되시면 각종 이벤트와 상품정보, 추천상품등에 대한 정보를 받아 보실 수 있으며 <br>온라인 쇼핑몰에서 적립하신 구매 마일리지와 쇼핑몰 전용 활동 포인트를 확인하실 수 있습니다.<br><br>온라인 쇼핑몰에서 상품 구매 시 마일리지가 적립되며 이 마일리지는 쇼핑몰에서 현금처럼 사용하실 수 있습니다. <br>등급별 각종 쿠폰혜택을 받으실 수 있습니다.</div>
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="tblBar mgt50">
+					<p class="tblList">회원정보변경 <span class="fcPink">7건</span></p>
+				</div>
+				<div class="js_tblList">
+					<table class="tblType1 fqaType" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="200px"></col>
+							<col></col>
+							<col width="200px"></col>
+							<col width="100px"></col>
+							<col width="70px"></col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>제목</th>
+								<th>등록일</th>
+								<th>버튼</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="fc88">이용안내</td>
+								<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+								<td class="fc88">2019-09-01</td>
+								<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+								<td><div class="js_arrow arrow"><span>닫힘</span></div></td>
+							</tr>
+							<tr class="js_ListCtt ListCtt">
+								<td></td>
+								<td>
+									<div class="ta_l js_replyCtt replyCtt fc66">
+										<div>
+											<div class="aswr">회원이 되시면 각종 이벤트와 상품정보, 추천상품등에 대한 정보를 받아 보실 수 있으며 <br>온라인 쇼핑몰에서 적립하신 구매 마일리지와 쇼핑몰 전용 활동 포인트를 확인하실 수 있습니다.<br><br>온라인 쇼핑몰에서 상품 구매 시 마일리지가 적립되며 이 마일리지는 쇼핑몰에서 현금처럼 사용하실 수 있습니다. <br>등급별 각종 쿠폰혜택을 받으실 수 있습니다.</div>
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="fc88">이용안내</td>
+								<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+								<td class="fc88">2019-09-01</td>
+								<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+								<td><div class="js_arrow arrow"><span>열림</span></div></td>
+							</tr>
+							<tr class="js_ListCtt ListCtt">
+								<td></td>
+								<td>
+									<div class="ta_l js_replyCtt replyCtt fc66">
+										<div>
+											<div class="aswr">회원이 되시면 각종 이벤트와 상품정보, 추천상품등에 대한 정보를 받아 보실 수 있으며 <br>온라인 쇼핑몰에서 적립하신 구매 마일리지와 쇼핑몰 전용 활동 포인트를 확인하실 수 있습니다.<br><br>온라인 쇼핑몰에서 상품 구매 시 마일리지가 적립되며 이 마일리지는 쇼핑몰에서 현금처럼 사용하실 수 있습니다. <br>등급별 각종 쿠폰혜택을 받으실 수 있습니다.</div>
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</xmp>
+		</div>
+		<h3>SEARCH TABLE</h3>
+		<div class="tblBar mgt50">
+			<p class="tblList">총 <span>48개</span></p>
+			<div class="inp_wrap">
+				<div class="inp_select">
+					<div class="selectBox">
+						<button type="button" class="title" type="button" title="">전체</button>
+						<ul class="selList" style="display: none;">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1" checked="">
+								<label for="select1_1">전체</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">이용안내</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inp_text searchType">
+					<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+					<button type="button" class="btn_clear"><span>clear</span></button>
+					<button type="button" class="btn_search"><span>search</span></button>
+				</div>
+			</div>
+		</div>
+		<div class="js_tblList">
+			<table class="tblType1" summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="200px"></col>
+					<col></col>
+					<col width="200px"></col>
+					<col width="100px"></col>
+					<col width="70px"></col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>제목</th>
+						<th>등록일</th>
+						<th>버튼</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>닫힘</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt">
+								<div>
+									바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>열림</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt">
+								<div>
+									바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="tblBar mgt50">
+					<p class="tblList">총 <span>48개</span></p>
+					<div class="inp_wrap">
+						<div class="inp_select">
+							<div class="selectBox">
+								<button type="button" class="title" type="button" title="">전체</button>
+								<ul class="selList" style="display: none;">
+									<li>
+										<input type="radio" value="" class="option" id="select1_1" name="select1" checked="">
+										<label for="select1_1">전체</label>
+									</li>
+									<li>
+										<input type="radio" value="" class="option" id="select1_2" name="select1">
+										<label for="select1_2">이용안내</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="inp_text searchType">
+							<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+							<button type="button" class="btn_clear"><span>clear</span></button>
+							<button type="button" class="btn_search"><span>search</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="js_tblList">
+					<table class="tblType1" summary="">
+						<caption></caption>
+						<colgroup>
+							<col width="200px"></col>
+							<col></col>
+							<col width="200px"></col>
+							<col width="100px"></col>
+							<col width="70px"></col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>제목</th>
+								<th>등록일</th>
+								<th>버튼</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="fc88">이용안내</td>
+								<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+								<td class="fc88">2019-09-01</td>
+								<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+								<td><div class="js_arrow arrow"><span>닫힘</span></div></td>
+							</tr>
+							<tr class="js_ListCtt ListCtt">
+								<td></td>
+								<td>
+									<div class="ta_l js_replyCtt replyCtt">
+										<div>
+											바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="fc88">이용안내</td>
+								<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+								<td class="fc88">2019-09-01</td>
+								<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+								<td><div class="js_arrow arrow"><span>열림</span></div></td>
+							</tr>
+							<tr class="js_ListCtt ListCtt">
+								<td></td>
+								<td>
+									<div class="ta_l js_replyCtt replyCtt">
+										<div>
+											바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="list" class="conP">
+		<h2>Product List</h2>
+		<h3>pdt_list1</h3>
+		<div class="pdt_list1">
+			<ul class="list_box">
+				<li>
+					<div class="pdtImg">
+						<ul class="pdt_type">
+							<li class="bg_p">NEW</li>
+							<li class="bg_p">BEST</li>
+							<li class="bg_p">한정판</li>
+							<li class="bg_r">SALE</li>
+							<li class="bg_r">FREE</li>
+							<li class="bg_r">GIFT</li>
+						</ul>
+						<a href="#none" class="imgLink"><img src="../resources/web/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						<!-- 품절일경우 추가 -->
+						<div class="pdtState">
+							<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn btnSizeS btnColorWW btnTypeR"><span>입고알림</span></a>
+						</div>
+						<!-- //품절일경우 추가 -->
+					</div>
+					<div class="pdtTxt">
+						<p class="pdtHead" style="color:#4f8ffa;">2019 누적판매 15,591건!</p><!-- 문구가 없어도 태그삭제 X -->
+						<p class="pdtBrand">바닐라코</p>
+						<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+						<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+						<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+						<div class="pdtReview">
+							<div class="js_rating ratingS"><span style="width: 76.5px;">4.5</span></div>
+							4.5 <span class="count">(리뷰 18)</span>
+						</div>
+					</div>
+					<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+					<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+				</li>
+				<li class="promoType"><!-- 마케팅 이미지일 경우 -->
+					<div class="pdtImg">
+						<ul class="pdt_type">
+							<li class="bg_p">NEW</li>
+							<li class="bg_p">BEST</li>
+							<li class="bg_p">한정판</li>
+							<li class="bg_r">SALE</li>
+							<li class="bg_r">FREE</li>
+							<li class="bg_r">GIFT</li>
+						</ul>
+						<a href="#none" class="imgLink"><img src="../resources/web/images/temp/pdt_img2.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						<!-- 품절일경우 추가 -->
+						<div class="pdtState">
+							<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn btnSizeS btnColorWW btnTypeR"><span>입고알림</span></a>
+						</div>
+						<!-- //품절일경우 추가 -->
+					</div>
+					<div class="pdtTxt">
+						<p class="pdtHead" style="color:#4f8ffa;">2019 누적판매 15,591건!</p><!-- 문구가 없어도 태그삭제 X -->
+						<p class="pdtBrand">바닐라코</p>
+						<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+						<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+						<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+						<div class="pdtReview">
+							<div class="js_rating ratingS"><span style="width: 76.5px;">4.5</span></div>
+							4.5 <span class="count">(리뷰 18)</span>
+						</div>
+					</div>
+					<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+					<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+				</li>
+				<li>
+					<div class="pdtImg">
+						<ul class="pdt_type">
+							<li class="bg_p">NEW</li>
+							<li class="bg_p">BEST</li>
+							<li class="bg_p">한정판</li>
+							<li class="bg_r">SALE</li>
+							<li class="bg_r">FREE</li>
+							<li class="bg_r">GIFT</li>
+						</ul>
+						<a href="#none" class="imgLink"><img src="../resources/web/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						<!-- 품절일경우 추가 -->
+						<div class="pdtState">
+							<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn btnSizeS btnColorWW btnTypeR"><span>입고알림</span></a>
+						</div>
+						<!-- //품절일경우 추가 -->
+					</div>
+					<div class="pdtTxt">
+						<p class="pdtHead" style="color:#4f8ffa;">2019 누적판매 15,591건!</p><!-- 문구가 없어도 태그삭제 X -->
+						<p class="pdtBrand">바닐라코</p>
+						<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+						<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+						<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+						<div class="pdtReview">
+							<div class="js_rating ratingS"><span style="width: 76.5px;">4.5</span></div>
+							4.5 <span class="count">(리뷰 18)</span>
+						</div>
+					</div>
+					<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+					<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+				</li>
+				<li>
+					<div class="pdtImg">
+						<ul class="pdt_type">
+							<li class="bg_p">NEW</li>
+							<li class="bg_p">BEST</li>
+							<li class="bg_p">한정판</li>
+							<li class="bg_r">SALE</li>
+							<li class="bg_r">FREE</li>
+							<li class="bg_r">GIFT</li>
+						</ul>
+						<a href="#none" class="imgLink"><img src="../resources/web/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						<!-- 품절일경우 추가 -->
+						<div class="pdtState">
+							<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn btnSizeS btnColorWW btnTypeR"><span>입고알림</span></a>
+						</div>
+						<!-- //품절일경우 추가 -->
+					</div>
+					<div class="pdtTxt">
+						<p class="pdtHead" style="color:#4f8ffa;">2019 누적판매 15,591건!</p><!-- 문구가 없어도 태그삭제 X -->
+						<p class="pdtBrand">바닐라코</p>
+						<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+						<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+						<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+						<div class="pdtReview">
+							<div class="js_rating ratingS"><span style="width: 76.5px;">4.5</span></div>
+							4.5 <span class="count">(리뷰 18)</span>
+						</div>
+					</div>
+					<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+					<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+				</li>
+				<li class="noData">
+					<span>선택하신 속성에 대한 검색결과가 없습니다.<br> 다른 옵션을 선택해보세요.</span>
+				</li>
+			</ul>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="pdt_list1">
+					<ul class="list_box">
+						<li>
+							<div class="pdtImg">
+								<ul class="pdt_type">
+									<li class="bg_p">NEW</li>
+									<li class="bg_p">BEST</li>
+									<li class="bg_p">한정판</li>
+									<li class="bg_r">SALE</li>
+									<li class="bg_r">FREE</li>
+									<li class="bg_r">GIFT</li>
+								</ul>
+								<a href="#none" class="imgLink"><img src="../resources/web/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								<!-- 품절일경우 추가 -->
+								<div class="pdtState">
+									<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn btnSizeS btnColorWW btnTypeR"><span>입고알림</span></a>
+								</div>
+								<!-- //품절일경우 추가 -->
+							</div>
+							<div class="pdtTxt">
+								<p class="pdtHead" style="color:#4f8ffa;">2019 누적판매 15,591건!</p><!-- 문구가 없어도 태그삭제 X -->
+								<p class="pdtBrand">바닐라코</p>
+								<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+								<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+								<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+								<div class="pdtReview">
+									<div class="js_rating ratingS"><span style="width: 76.5px;">4.5</span></div>
+									4.5 <span class="count">(리뷰 18)</span>
+								</div>
+							</div>
+							<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+							<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+						</li>
+						<li class="promoType"><!-- 마케팅 이미지일 경우 -->
+							<div class="pdtImg">
+								<ul class="pdt_type">
+									<li class="bg_p">NEW</li>
+									<li class="bg_p">BEST</li>
+									<li class="bg_p">한정판</li>
+									<li class="bg_r">SALE</li>
+									<li class="bg_r">FREE</li>
+									<li class="bg_r">GIFT</li>
+								</ul>
+								<a href="#none" class="imgLink"><img src="../resources/web/images/temp/pdt_img2.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								<!-- 품절일경우 추가 -->
+								<div class="pdtState">
+									<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn btnSizeS btnColorWW btnTypeR"><span>입고알림</span></a>
+								</div>
+								<!-- //품절일경우 추가 -->
+							</div>
+							<div class="pdtTxt">
+								<p class="pdtHead" style="color:#4f8ffa;">2019 누적판매 15,591건!</p><!-- 문구가 없어도 태그삭제 X -->
+								<p class="pdtBrand">바닐라코</p>
+								<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+								<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+								<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+								<div class="pdtReview">
+									<div class="js_rating ratingS"><span style="width: 76.5px;">4.5</span></div>
+									4.5 <span class="count">(리뷰 18)</span>
+								</div>
+							</div>
+							<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+							<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+						</li>
+					</ul>
+				</div>
+			</xmp>
+		</div>
+		<h3>pdt_list1 - type02</h3>
+		<div class="pdt_list1 type02">
+			<ul class="list_box">
+				<li>
+					<div class="pdtImg">
+						<ul class="pdt_type">
+							<li class="bg_p">NEW</li>
+							<li class="bg_p">BEST</li>
+							<li class="bg_p">한정판</li>
+							<li class="bg_r">SALE</li>
+							<li class="bg_r">FREE</li>
+							<li class="bg_r">GIFT</li>
+						</ul>
+						<a href="#none" class="imgLink"><img src="../resources/web/images/temp/pdt_img3.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						<!-- 품절일경우 추가 -->
+						<div class="pdtState">
+							<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn btnSizeS btnColorWW btnTypeR"><span>입고알림</span></a>
+						</div>
+						<!-- //품절일경우 추가 -->
+					</div>
+					<div class="pdtTxt">
+						<p class="pdtHead" style="color:#4f8ffa;">2019 누적판매 15,591건!</p><!-- 문구가 없어도 태그삭제 X -->
+						<p class="pdtBrand">바닐라코</p>
+						<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+						<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+						<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+						<div class="pdtReview">
+							<div class="js_rating ratingS"><span style="width: 76.5px;">4.5</span></div>
+							4.5 <span class="count">(리뷰 18)</span>
+						</div>
+					</div>
+					<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+					<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+				</li>
+			</ul>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="pdt_list1 type02">
+					<ul class="list_box">
+						<li>
+							<div class="pdtImg">
+								<ul class="pdt_type">
+									<li class="bg_p">NEW</li>
+									<li class="bg_p">BEST</li>
+									<li class="bg_p">한정판</li>
+									<li class="bg_r">SALE</li>
+									<li class="bg_r">FREE</li>
+									<li class="bg_r">GIFT</li>
+								</ul>
+								<a href="#none" class="imgLink"><img src="../resources/web/images/temp/pdt_img3.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								<!-- 품절일경우 추가 -->
+								<div class="pdtState">
+									<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn btnSizeS btnColorWW btnTypeR"><span>입고알림</span></a>
+								</div>
+								<!-- //품절일경우 추가 -->
+							</div>
+							<div class="pdtTxt">
+								<p class="pdtHead" style="color:#4f8ffa;">2019 누적판매 15,591건!</p><!-- 문구가 없어도 태그삭제 X -->
+								<p class="pdtBrand">바닐라코</p>
+								<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+								<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+								<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+								<div class="pdtReview">
+									<div class="js_rating ratingS"><span style="width: 76.5px;">4.5</span></div>
+									4.5 <span class="count">(리뷰 18)</span>
+								</div>
+							</div>
+							<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+							<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+						</li>
+					</ul>
+				</div>
+			</xmp>
+		</div>
+		<h3>pdt_list1 - type03</h3>		
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+			</xmp>
+		</div>
+		<h3>pdt_list1 - type04</h3>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+			</xmp>
+		</div>
+		<h3>pdt_list1 - type05</h3>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+			</xmp>
+		</div>
+		<h3>pdt_list2</h3>
+		<div class="pdt_list2">
+			<ul class="list_box">
+				<li>
+					<a href="#none" class="pdtImg">
+						<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+						<div class="soldOut">일시품절</div>
+					</a>
+					<div class="pdtTxt">
+						<p class="pdtBrand">바닐라코</p>
+						<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+						<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+					</div>
+				</li>
+				<li>
+					<a href="#none" class="pdtImg">
+						<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+						<div class="soldOut">일시품절</div>
+					</a>
+					<div class="pdtTxt">
+						<p class="pdtBrand">바닐라코</p>
+						<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+						<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="pdt_list2">
+					<ul class="list_box">
+						<li>
+							<a href="#none" class="pdtImg">
+								<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+								<div class="soldOut">일시품절</div>
+							</a>
+							<div class="pdtTxt">
+								<p class="pdtBrand">바닐라코</p>
+								<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+								<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+							</div>
+						</li>
+						<li>
+							<a href="#none" class="pdtImg">
+								<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+								<div class="soldOut">일시품절</div>
+							</a>
+							<div class="pdtTxt">
+								<p class="pdtBrand">바닐라코</p>
+								<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+								<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="reviewList" class="conP">
+		<h2>Review List</h2>
+		<h3>pdt_list1</h3>
+		<div class="reviewListBox">
+			<ul>
+				<li>
+					<div class="reviewInfo">
+						<div class="gradeStar js_rating ratingM"><span>4.5</span></div>
+						<div class="userInfo">
+							<p class="userAcnt"><span class="userRank userLv1">VIP</span><!-- 기본등급 userLv1 ~ 최고등급 userLv4 --><span class="userName">ihkim****</span></p>
+							<p class="dftPoint"><span>30대</span><span>여성</span></p>
+							<p class="reviewDate">2019.05.05</p>
+						</div>
+						<div class="skinProfile">
+							<p>피부 프로필</p>
+							<div>
+								<span>복합성</span>
+								<span>어두운 노란톤</span>
+								<span>수분충전</span>
+								<span>영양공급</span>
+								<span>트러블 케어</span>
+								<span>복합성</span>
+								<span>어두운 노란톤</span>
+								<span>수분충전</span>
+								<span>영양공급</span>
+								<span>트러블 케어</span>
+							</div>
+						</div>
+					</div>
+					<div class="reviewBox">
+						<div class="reviewImg">
+							<ul>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg01.jpg" alt=""></a></li>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg02.jpg" alt=""></a></li>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg03.jpg" alt=""></a></li>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg04.jpg" alt=""></a></li>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg05.jpg" alt=""></a></li>
+							</ul>
+						</div>
+						<p class="reviewTtl"><span class="BestIco typeM">BEST</span>가을 피부관리에는 고민없이 늘 사용하던 클린 잇 제로!</p>
+						<p>벨벳 블러드 립-BE01 밀크티 필터</p>
+						<p class="reviewCtt">늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.</p>
+						<div class="userPoint">
+							<span>순해요</span><span>순해요</span><span>순해요</span><span>순해요</span>
+						</div>
+						<a href="javascript:void(0)" class="reviewMore">더보기</a>
+					</div>
+				</li>
+				<li>
+					<div class="reviewInfo">
+						<div class="gradeStar js_rating ratingM"><span>4.5</span></div>
+						<div class="userInfo">
+							<p class="userAcnt"><span class="userRank userLv1">VIP</span><!-- 기본등급 userLv1 ~ 최고등급 userLv4 --><span class="userName">ihkim****</span></p>
+							<p class="dftPoint"><span>30대</span><span>여성</span></p>
+							<p class="reviewDate">2019.05.05</p>
+						</div>
+						<div class="skinProfile">
+							<p>피부 프로필</p>
+							<div>
+								<span>복합성</span>
+								<span>어두운 노란톤</span>
+								<span>수분충전</span>
+								<span>영양공급</span>
+								<span>트러블 케어</span>
+								<span>복합성</span>
+								<span>어두운 노란톤</span>
+								<span>수분충전</span>
+								<span>영양공급</span>
+								<span>트러블 케어</span>
+							</div>
+						</div>
+					</div>
+					<div class="reviewBox">
+						<div class="reviewImg">
+							<ul>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg01.jpg" alt=""></a></li>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg02.jpg" alt=""></a></li>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg03.jpg" alt=""></a></li>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg04.jpg" alt=""></a></li>
+								<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg05.jpg" alt=""></a></li>
+							</ul>
+						</div>
+						<p class="reviewTtl"><span class="BestIco typeM">BEST</span>가을 피부관리에는 고민없이 늘 사용하던 클린 잇 제로!</p>
+						<p>벨벳 블러드 립-BE01 밀크티 필터</p>
+						<p class="reviewCtt">늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요!</p>
+						<div class="userPoint">
+							<span>순해요</span><span>순해요</span><span>순해요</span><span>순해요</span>
+						</div>
+						<a href="javascript:void(0)" class="reviewMore">더보기</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="reviewListBox">
+					<ul>
+						<li>
+							<div class="reviewInfo">
+								<div class="gradeStar js_rating ratingM"><span>4.5</span></div>
+								<div class="userInfo">
+									<p class="userAcnt"><span class="userRank userLv1">VIP</span><!-- 기본등급 userLv1 ~ 최고등급 userLv4 --><span class="userName">ihkim****</span></p>
+									<p class="dftPoint"><span>30대</span><span>여성</span></p>
+									<p class="reviewDate">2019.05.05</p>
+								</div>
+								<div class="skinProfile">
+									<p>피부 프로필</p>
+									<div>
+										<span>복합성</span>
+										<span>어두운 노란톤</span>
+										<span>수분충전</span>
+										<span>영양공급</span>
+										<span>트러블 케어</span>
+										<span>복합성</span>
+										<span>어두운 노란톤</span>
+										<span>수분충전</span>
+										<span>영양공급</span>
+										<span>트러블 케어</span>
+									</div>
+								</div>
+							</div>
+							<div class="reviewBox">
+								<div class="reviewImg">
+									<ul>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg01.jpg" alt=""></a></li>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg02.jpg" alt=""></a></li>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg03.jpg" alt=""></a></li>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg04.jpg" alt=""></a></li>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg05.jpg" alt=""></a></li>
+									</ul>
+								</div>
+								<p class="reviewTtl"><span class="BestIco typeM">BEST</span>가을 피부관리에는 고민없이 늘 사용하던 클린 잇 제로!</p>
+								<p>벨벳 블러드 립-BE01 밀크티 필터</p>
+								<p class="reviewCtt">늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.</p>
+								<div class="userPoint">
+									<span>순해요</span><span>순해요</span><span>순해요</span><span>순해요</span>
+								</div>
+								<a href="javascript:void(0)" class="reviewMore">더보기</a>
+							</div>
+						</li>
+						<li>
+							<div class="reviewInfo">
+								<div class="gradeStar js_rating ratingM"><span>4.5</span></div>
+								<div class="userInfo">
+									<p class="userAcnt"><span class="userRank userLv1">VIP</span><!-- 기본등급 userLv1 ~ 최고등급 userLv4 --><span class="userName">ihkim****</span></p>
+									<p class="dftPoint"><span>30대</span><span>여성</span></p>
+									<p class="reviewDate">2019.05.05</p>
+								</div>
+								<div class="skinProfile">
+									<p>피부 프로필</p>
+									<div>
+										<span>복합성</span>
+										<span>어두운 노란톤</span>
+										<span>수분충전</span>
+										<span>영양공급</span>
+										<span>트러블 케어</span>
+										<span>복합성</span>
+										<span>어두운 노란톤</span>
+										<span>수분충전</span>
+										<span>영양공급</span>
+										<span>트러블 케어</span>
+									</div>
+								</div>
+							</div>
+							<div class="reviewBox">
+								<div class="reviewImg">
+									<ul>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg01.jpg" alt=""></a></li>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg02.jpg" alt=""></a></li>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg03.jpg" alt=""></a></li>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg04.jpg" alt=""></a></li>
+										<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/photoReviewImg05.jpg" alt=""></a></li>
+									</ul>
+								</div>
+								<p class="reviewTtl"><span class="BestIco typeM">BEST</span>가을 피부관리에는 고민없이 늘 사용하던 클린 잇 제로!</p>
+								<p>벨벳 블러드 립-BE01 밀크티 필터</p>
+								<p class="reviewCtt">늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요!</p>
+								<div class="userPoint">
+									<span>순해요</span><span>순해요</span><span>순해요</span><span>순해요</span>
+								</div>
+								<a href="javascript:void(0)" class="reviewMore">더보기</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="sorting" class="conP">
+		<h2>Sorting</h2>
+		<h3>sorting1</h3>
+		<div class="sorting">
+			<ul>
+				<li><a href="javascript:void(0)" class="on">베스트순</a></li>
+				<li><a href="javascript:void(0)">등록순</a></li>
+				<li><a href="javascript:void(0)">높은평점순</a></li>
+				<li><a href="javascript:void(0)">낮은평점순</a></li>
+			</ul>
+			<a href="javascript:void(0);" onclick="showLayer('pdtFilter');" class="btn_filter fs14 va_m"><span>맞춤필터</span></a>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="sorting">
+					<ul>
+						<li><a href="javascript:void(0)" class="on">베스트순</a></li>
+						<li><a href="javascript:void(0)">등록순</a></li>
+						<li><a href="javascript:void(0)">높은평점순</a></li>
+						<li><a href="javascript:void(0)">낮은평점순</a></li>
+					</ul>
+					<a href="javascript:void(0);" onclick="showLayer('pdtFilter');" class="btn_filter fs14 va_m"><span>맞춤필터</span></a>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="rating" class="conP">
+		<h2>Rating</h2>
+		<h3>SIZE XL</h3>
+		<div class="js_rating ratingXL"><span>2</span></div>
+		<h3>SIZE L</h3>
+		<div class="js_rating ratingL"><span>2</span></div>
+		<h3>SIZE M</h3>
+		<div class="js_rating ratingM"><span>3.5</span></div>
+		<h3>SIZE S</h3>
+		<div class="js_rating ratingS"><span>4.5</span></div>
+		<h3>Write Rating SIZE XL</h3>
+		<div class="js_rating js_userRating ratingXL">
+			<span>2</span>
+			<div class="userRatingBox">
+				<button class="rating_1">1</button>
+				<button class="rating_2">2</button>
+				<button class="rating_3">3</button>
+				<button class="rating_4">4</button>
+				<button class="rating_5">5</button>
+			</div>
+		</div>
+
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				SIZE XL
+				<div class="js_rating ratingXL"><span>2</span></div>
+				SIZE L
+				<div class="js_rating ratingL"><span>2</span></div>
+				SIZE M
+				<div class="js_rating ratingM"><span>3.5</span></div>
+				SIZE S
+				<div class="js_rating ratingS"><span>4.5</span></div>
+				Write Rating SIZE XL
+				<div class="js_rating js_userRating ratingXL">
+					<span>2</span>
+					<div class="userRatingBox">
+						<button class="rating_1">1</button>
+						<button class="rating_2">2</button>
+						<button class="rating_3">3</button>
+						<button class="rating_4">4</button>
+						<button class="rating_5">5</button>
+					</div>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="infoList" class="conP">
+		<h2>Info list</h2>
+		<h3>Title</h3>
+		<p class="titInfo">유의사항</p>
+		<h3>Dot</h3>
+		<ul class="dotInfo">
+			<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+			<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+			<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+		</ul>
+		<h3>Star</h3>
+		<ul class="starInfo">
+			<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+			<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+			<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+		</ul>
+		<h3>Line</h3>
+		<ul class="lineInfo">
+			<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+			<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+			<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+		</ul>
+		<h3>colorB</h3>
+		<ul class="starInfo colorB">
+			<li><span class="fcRed">상품이 재입고 되어 판매가 시작될 때</span> 입력하신 휴대폰번호로 알림 메시지를 발송해 드립니다.</li>
+			<li>메시지 수신 후 즉시 구매하지 않으면 다시 품절이 발생할 수 있으며, 판매가 혹은 할인금액은<br> 재고 알림 신청 시점과 상이하게 변동될 수 있습니다.</li>
+		</ul>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				Title
+				<p class="titInfo">유의사항</p>
+				Dot
+				<ul class="dotInfo">
+					<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+					<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+					<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+				</ul>
+				Star
+				<ul class="starInfo">
+					<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+					<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+					<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+				</ul>
+				Line
+				<ul class="lineInfo">
+					<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+					<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+					<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+				</ul>
+				colorB
+				<ul class="starInfo colorB">
+					<li><span class="fcRed">상품이 재입고 되어 판매가 시작될 때</span> 입력하신 휴대폰번호로 알림 메시지를 발송해 드립니다.</li>
+					<li>메시지 수신 후 즉시 구매하지 않으면 다시 품절이 발생할 수 있으며, 판매가 혹은 할인금액은<br> 재고 알림 신청 시점과 상이하게 변동될 수 있습니다.</li>
+				</ul>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="Slide" class="conP">
+		<h2>Slide</h2>
+		<h3>Slide</h3>
+		<div class="pdtSlide js_pdtSlide">
+			<div class="pdtSlideImg js_pdtSlideImg">
+				<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+				<div class="pdtItem videoItem"><a href="javascript:void(0)"><img src="../resources/web/images/temp/proImg02.png" alt=""></a></div>
+				<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+				<div class="pdtItem"><img src="../resources/web/images/temp/proImg02.png" alt=""></div>
+				<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+			</div>					
+			<div class="pdtSlideImgThumb js_pdtSlideImgThumb">
+				<div class="pdtItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg01.png" alt=""></a></div>
+				<div class="pdtItem videoItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg02.png" alt=""></a></div>
+				<div class="pdtItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg01.png" alt=""></a></div>
+				<div class="pdtItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg02.png" alt=""></a></div>
+				<div class="pdtItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg01.png" alt=""></a></div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="pdtSlide js_pdtSlide">
+					<div class="pdtSlideImg js_pdtSlideImg">
+						<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+						<div class="pdtItem videoItem"><a href="javascript:void(0)"><img src="../resources/web/images/temp/proImg02.png" alt=""></a></div>
+						<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+						<div class="pdtItem"><img src="../resources/web/images/temp/proImg02.png" alt=""></div>
+						<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+					</div>					
+					<div class="pdtSlideImgThumb js_pdtSlideImgThumb">
+						<div class="pdtItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg01.png" alt=""></a></div>
+						<div class="pdtItem videoItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg02.png" alt=""></a></div>
+						<div class="pdtItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg01.png" alt=""></a></div>
+						<div class="pdtItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg02.png" alt=""></a></div>
+						<div class="pdtItem"><a href="javascript:void(0)" class="pdtLink"><img src="../resources/web/images/temp/proImg01.png" alt=""></a></div>
+					</div>
+				</div>
+			</xmp>
+		</div>
+	</div>
+	<div id="HScroll" class="conP">
+		<h2>HScroll</h2>
+		<h3>HScroll</h3>
+		<div class="pdt_list2 hScroll" style="width:500px">
+			<ul class="list_box">
+				<li>
+					<a href="#none" class="pdtImg">
+						<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+						<div class="soldOut">일시품절</div>
+					</a>
+					<div class="pdtTxt">
+						<p class="pdtBrand">바닐라코</p>
+						<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+						<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+					</div>
+				</li>
+				<li>
+					<a href="#none" class="pdtImg">
+						<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+						<div class="soldOut">일시품절</div>
+					</a>
+					<div class="pdtTxt">
+						<p class="pdtBrand">바닐라코</p>
+						<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+						<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating')" class="btn_cart cartM"><span>장바구니</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="hScroll" style="width:500px"><!-- width 지정 -->
+					<!-- 스크롤 될 내용 s -->
+					<div></div>
+					<!-- 스크롤 될 내용 e -->
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="imageCrop" class="conP">
+		<h2>image Crop</h2>
+		<h3>image Crop</h3>
+		<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></div>
+		<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></div>
+		<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<!-- width, padding-top 지정 -->
+				<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></div>
+				<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></div>
+				<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="fileUpload" class="conP">
+		<h2>file Upload</h2>
+		<h3>file Upload</h3>
+		<ul class="fileUploadArea">
+			<li><label for="imgUpload"><span class="hide">업로드</span></label><input type="file" class="hide" id="imgUpload"></li>
+			<li class="imgCutting">
+				<div class="imgBox">
+					<img src="../resources/web/images/temp/480X480.png" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+				</div>
+				<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+			</li>
+			<li class="imgCutting">
+				<div class="imgBox">
+					<img src="../resources/web/images/temp/280X480.png" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+				</div>
+				<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+			</li>
+			<li class="imgCutting">
+				<div class="imgBox">
+					<img src="../resources/web/images/temp/480X280.png" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+				</div>
+				<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+			</li>
+			<li class="imgCutting">
+				<div class="imgBox">
+					<img src="../resources/web/images/temp/photoReviewImg01.jpg" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+				</div>
+				<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+			</li>
+		</ul>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<ul class="fileUploadArea">
+					<li><label for="imgUpload"><span class="hide">업로드</span></label><input type="file" class="hide" id="imgUpload"></li>
+					<li class="imgCutting">
+						<div class="imgBox">
+							<img src="../resources/web/images/temp/480X480.png" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+						</div>
+						<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+					</li>
+					<li class="imgCutting">
+						<div class="imgBox">
+							<img src="../resources/web/images/temp/280X480.png" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+						</div>
+						<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+					</li>
+					<li class="imgCutting">
+						<div class="imgBox">
+							<img src="../resources/web/images/temp/480X280.png" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+						</div>
+						<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+					</li>
+					<li class="imgCutting">
+						<div class="imgBox">
+							<img src="../resources/web/images/temp/photoReviewImg01.jpg" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+						</div>
+						<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+					</li>
+				</ul>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="datepicker" class="conP">
+		<h3>datepicker</h3>
+		<div class="tabType tabType1 length4 datepicker">
+			<ul>
+				<li><a href="javascript:void(0)" class="current" data-target="#datepicker .js_datepicker" data-date="1"><span>1개월</span></a></li>
+				<li><a href="javascript:void(0)" data-target="#datepicker .js_datepicker" data-date="3"><span>3개월</span></a></li>
+				<li><a href="javascript:void(0)" data-target="#datepicker .js_datepicker" data-date="6"><span>6개월</span></a></li>
+				<li><a href="javascript:void(0)" data-target="#datepicker .js_datepicker" data-date="12"><span>12개월</span></a></li>
+			</ul>
+		</div>
+		<div class="inp_wrap">
+			<div class="inp_text datepicker">
+				<input type="text" name="" id="datepicker_1" class="js_datepicker" placeholder="날짜를 검색해주세요." readonly>
+				<label for="datepicker_1">일자</label>
+			</div>
+			<div class="inp_text datepicker">
+				<input type="text" name="" id="datepicker_2" class="js_datepicker" placeholder="날짜를 검색해주세요." readonly>
+				<label for="datepicker_2">일자</label>
+			</div>
+			<a href="#none" class="btn btnSizeM btnColorB btnTypeB" style="width:140px;"><span>검색</span></a>
+		</div>
+
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="tabType tabType1 length4 datepicker">
+					<ul>
+						<li><a href="javascript:void(0)" class="current" data-target=".js_datepicker" data-date="1"><span>1개월</span></a></li>
+						<li><a href="javascript:void(0)" data-target=".js_datepicker" data-date="3"><span>3개월</span></a></li>
+						<li><a href="javascript:void(0)" data-target=".js_datepicker" data-date="6"><span>6개월</span></a></li>
+						<li><a href="javascript:void(0)" data-target=".js_datepicker" data-date="12"><span>12개월</span></a></li>
+					</ul>
+				</div>
+				<div class="inp_wrap">
+					<div class="inp_text datepicker">
+						<input type="text" name="" id="datepicker_1" class="js_datepicker" placeholder="날짜를 검색해주세요." readonly>
+						<label for="datepicker_1">일자</label>
+					</div>
+					<div class="inp_text datepicker">
+						<input type="text" name="" id="datepicker_2" class="js_datepicker" placeholder="날짜를 검색해주세요." readonly>
+						<label for="datepicker_2">일자</label>
+					</div>
+					<a href="#none" class="btn btnSizeM btnColorB btnTypeB" style="width:140px;"><span>검색</span></a>
+				</div>
+			</xmp>
+		</div>
+	</div>				
+</div>
+
+<script type="text/javascript" src="../resources/web/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../resources/web/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resources/web/js/slick.min.js"></script>
+<script type="text/javascript" src="../resources/web/js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="../resources/web/js/ui.js"></script>
+<script type="text/javascript" src="js/guide.js"></script>
+<script type="text/javascript">
+$('.colorbox .box').each(function(){
+	var colorcode = $(this).text().substr(0,7);
+	$(this).css('background', colorcode);
+});
+</script>
+</body>
+
+<!-- Mirrored from www.banila.com/static/front/guide/style_guide.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 May 2022 07:18:19 GMT -->
+</html>

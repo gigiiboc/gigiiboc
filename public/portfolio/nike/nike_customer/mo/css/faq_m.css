@@ -1,0 +1,90 @@
+/* customer_renewal css 덮기 */
+.c_rnl_faq > ul > li {padding: 0 20px;border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;margin-top: -1px;}
+.c_rnl_faq > ul > li strong {color: inherit;font-size: inherit;font-weight: inherit;display: inherit;line-height:inherit}
+.c_rnl_faq > ul > li span {color: inherit;font-size: inherit;font-weight: inherit;display: inherit;margin: 0;}
+.c_rnl_faq > ul > li p {color: inherit;font-size: inherit;font-weight: inherit;display: inherit;margin: 0;line-height:inherit}
+.c_rnl_faq .page_history {padding: 20px;}
+
+/* faq 본문 */
+#anchor_wrap {}
+#anchor_wrap * {color:#545353;font-size: 12px;font-weight:400;line-height: 1.5;}
+#anchor_wrap .anchor {border-bottom:1px solid #111;margin-top:-1px;position:relative;z-index:1;}
+#anchor_wrap .anchor .anchor_ul {}
+#anchor_wrap .anchor .anchor_ul .anchor_li {border-top:1px solid #d1d1d1;}
+#anchor_wrap .anchor .anchor_ul .anchor_li .link {color:#222;font-size:14px;font-weight:600;display: block;padding: 15px 20px;background: url(../images/bullet_1.jpg) no-repeat 0px center;}
+#anchor_wrap .area_ctt {padding:30px 0;margin-bottom:-1px;border-bottom:1px solid #e5e5e5;position:relative;}
+#anchor_wrap .area_ctt .ttl {color:#222222;font-size:15px;font-weight:600;padding-bottom: 10px;display:block;}
+#anchor_wrap .area_ctt .ttl_2 {color:#222222;font-weight:600;padding-bottom:15px;display:block;}
+#anchor_wrap .area_ctt .sub_1 {margin:0;padding: 40px 0 5px;border-bottom:none;position:static;z-index:inherit;color:#000000;display:block;}
+#anchor_wrap .area_ctt .sub_pd_top10 {margin:0;padding: 10px 0 0;border-bottom:none;position:static;z-index:inherit;display:block;}
+#anchor_wrap .area_ctt .sub_pd_top20 {margin:0;padding: 20px 0 0;border-bottom:none;position:static;z-index:inherit;display:block;}
+#anchor_wrap .area_ctt .sub_pd_bottom10 {margin:0;padding: 0 0 10px;border-bottom:none;position:static;z-index:inherit;display:block;}
+#anchor_wrap .area_ctt .sub_pd_bottom20 {margin:0;padding: 0 0 20px;border-bottom:none;position:static;z-index:inherit;display:block;}
+#anchor_wrap .area_ctt .cmt {color:#c7282d}
+#anchor_wrap .area_ctt .info {}
+#anchor_wrap .area_ctt a {text-decoration:none;line-height:1.5;border-bottom:1px solid #545353}
+#anchor_wrap .area_ctt .link_a {text-decoration:none;line-height:1.5;border-bottom:1px solid #545353}
+#anchor_wrap .area_ctt .link01 {margin-top: 10px;margin-left:10px;display:inline-block;text-decoration:none;line-height:1.5;border-bottom:1px solid #545353;}
+#anchor_wrap .area_ctt .li_type_ttl {margin:0;padding: 0 0 5px;border-bottom:none;position:static;z-index:inherit;}
+#anchor_wrap .area_ctt ._type01 {padding-left:10px;}
+#anchor_wrap .area_ctt ._type01 > li {position:relative;padding-left:46px;}
+#anchor_wrap .area_ctt ._type01 > li > .ab {position:absolute;top:0;left:0;margin:0;}
+#anchor_wrap .area_ctt ._type02 {padding-left:10px;}
+#anchor_wrap .area_ctt ._type02 > li {position:relative;padding-left:10px;}
+#anchor_wrap .area_ctt ._type02 > li > .ab {position:absolute;top:0;left:0;margin:0;}
+#anchor_wrap .area_ctt ._type03 {padding-left:10px;}
+#anchor_wrap .area_ctt ._type03 > li {position:relative;padding-left:15px;}
+#anchor_wrap .area_ctt ._type03 > li > .ab {position:absolute;top:0;left:0;margin:0;}
+#anchor_wrap .area_ctt ._type04 {}
+#anchor_wrap .area_ctt ._type04 > li {}
+#anchor_wrap .area_ctt ._type04 > li > .ab {}
+#anchor_wrap .area_ctt ._type05 {}
+#anchor_wrap .area_ctt ._type05 > li {}
+#anchor_wrap .area_ctt ._type05 > li > .ab {}
+#anchor_wrap .area_ctt ._type09 {}
+#anchor_wrap .area_ctt ._type09 > dt {position: static;color: inherit;font-weight: inherit;letter-spacing: inherit;font-size: 13px;padding: 0;border-bottom: none;z-index: inherit;}
+#anchor_wrap .area_ctt ._type09 > dd {padding-left:10px;}
+
+#anchor_wrap .area_ctt #step01,
+#anchor_wrap .area_ctt #step02,
+#anchor_wrap .area_ctt #step03,
+#anchor_wrap .area_ctt #step04,
+#anchor_wrap .area_ctt #step05,
+#anchor_wrap .area_ctt #step06,
+#anchor_wrap .area_ctt #step07,
+#anchor_wrap .area_ctt #step08,
+#anchor_wrap .area_ctt #step09 {position:absolute;top:-99px;left:0;width:100%;height:0px;display:block;}
+
+@media all and (max-width:1000px){
+#anchor_wrap .anchor .anchor_ul .anchor_li .link {padding:10px 20px}
+#anchor_wrap .area_ctt #step01,
+#anchor_wrap .area_ctt #step02,
+#anchor_wrap .area_ctt #step03,
+#anchor_wrap .area_ctt #step04,
+#anchor_wrap .area_ctt #step05,
+#anchor_wrap .area_ctt #step06,
+#anchor_wrap .area_ctt #step07,
+#anchor_wrap .area_ctt #step08,
+#anchor_wrap .area_ctt #step09 {top:0px}
+}
+
+/* 사이즈차트 팝업 */
+.faq_size_popup {position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:1;overflow-x: hidden;overflow-y: auto;-webkit-overflow-scrolling:touch}
+.faq_size_popup .popup_close {position: absolute;top: 20px;right: 20px;background: url(https://msecure.nike.co.kr/NKS1/image/mobile/reservation/layer_close_black.png) no-repeat center;background-size: 21px auto;width: 21px;height: 21px;z-index:2;}
+.faq_size_popup .size_guide{margin:0 20px;padding: 40px 0 20px;text-align:left;color:#666;letter-spacing:-0.05em;border-top:1px solid #e5e5e5;}
+.faq_size_popup .size_guide:first-child{border-top:0 none;}
+.faq_size_popup .size_guide p{line-height:1.3em;color:#666;font-size: 13px;}
+.faq_size_popup .size_guide .size_txt span{color:#333;}
+.faq_size_popup .size_guide .ttl {border-bottom: 1px solid #333;font-size: 15px;padding: 15px 0;font-weight: 600;}
+.faq_size_popup .size_guide .ttl2 {font-size: 13px;padding: 20px 0 0;font-weight: 600;}
+.faq_size_popup .size_guide .size_guide_dl {padding: 15px 0;border-bottom:1px solid #e5e5e5;}
+.faq_size_popup .size_guide .size_guide_dt {margin:0 0 3px 0;font-size: 13px;font-weight: 600;}
+.faq_size_popup .size_guide .size_guide_dt span{color:#fa5400;display:inline}
+.faq_size_popup .size_guide .size_guide_dd {margin-top:10px;font-size: 12px;font-weight: 400;}
+.faq_size_popup .size_guide .m_size_table{margin-top:15px;}
+.faq_size_popup .size_guide .m_size_table table{width:100%; border-collapse:collapse; table-layout:fixed;}
+.faq_size_popup .size_guide .m_size_table table thead th{width:auto; padding:5px 0; background:#f8f8f8; font-size:11px; text-align:center;border:1px solid #e5e5e5}
+.faq_size_popup .size_guide .m_size_table table tbody td{width:auto; padding:5px 0; font-size:11px; text-align:center; border:1px solid #e5e5e5;}
+.faq_size_popup .size_guide .m_size_table table tbody tr:nth-child(even) td{background:#f8f8f8;}
+.faq_size_popup .size_guide .m_size_table table tbody tr:nth-child(odd) td{background:#fff;}
+.faq_size_popup .size_guide .size_guide_cmt {color:#fa6425 !important; margin:10px 0 0 0; font-size:11px}

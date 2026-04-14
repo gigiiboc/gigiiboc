@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+
+
+/*=================================
+reset
+=================================*/
+
+/*
+* {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body {font-size:12px;font-family:'NG';line-height:1;color:#333;word-break:break-all;-ms-word-break:break-all;background:#f7f7f7}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button {margin:0;padding:0;outline:none;}
+img, fieldset, iframe {border:0 none;}
+li {list-style:none;}
+a {color:#333;text-decoration:none;}
+a:hover,
+a:link,
+a:visited,
+a:active {text-decoration:none;}
+*/
+
+* {list-style:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0;margin:0;}
+html {font-size:0.875em;font-family:'NG';line-height:1;word-break:break-all;-ms-word-break:break-all;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button {outline:none;}
+input[type="radio"], input[type="image"], img, fieldset, iframe {border:0 none;vertical-align:middle}
+table {border-spacing:0;border-style:none;border-collapse:collapse;}
+input[type="text"], input[type="password"] {border:1px solid #d1d1d1;}
+a, a:hover, a:link, a:visited, a:active {color:inherit;text-decoration:none;}
+
+/* 사파리에서 인퓻박스에 글자 입력시 하얗게 처리되는 문제 해결 */
+input[type="text"], input[type="password"], input[type="tel"] {overflow:hidden}

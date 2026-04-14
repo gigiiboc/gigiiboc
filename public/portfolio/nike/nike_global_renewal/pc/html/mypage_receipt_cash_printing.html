@@ -1,0 +1,105 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<link rel="shortcut icon" href="http://lecs.nike.co.kr/NKS1/image/nike_favicon.ico" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1//css/common.css" />
+	<link rel="stylesheet" type="text/css" href="http://lecs.nike.co.kr/NKS1//css/print.css" />
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1//js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1//js/lnb_layer_ipa.js"></script>
+	<script type="text/javascript" src="http://lecs.nike.co.kr/NKS1//js/popup.js"></script>
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="/NKS1//css/ie.css" />
+	<![endif]--> 
+	<script type="text/javascript">
+	$(function(){
+		/*발행일자 세팅*/
+		var today = new Date();
+		var month = ((today.getMonth()+1<10)?'0':'')+(today.getMonth()+1);
+		var day = ((today.getDate()<10)?'0':'')+today.getDate();
+		$('span.reTxt22').text(today.getFullYear()+'/'+month+'/'+day);
+		/*개인인증**표시*/
+		if(''!=''){
+			var mean = '';
+			var code = '3';
+			if(code=='1'){
+				mean = mean.substring(0, mean.length-7)+'*******';
+				$('span#identifyNo').text(mean);
+			}else if(code=='3'||code=='4'){
+				mean = mean.substring(0, mean.length-4)+'****';
+				$('span#identifyNo').text(mean);
+			}else if(code=='2'){
+				$('span#identifyNo').text(mean);
+			}
+		}
+		});
+	</script>
+</head>
+
+
+<body id="pop">
+		<div id="popTop">
+		<img src="http://lecs.nike.co.kr/NKS1//image/web/pre/category/pop_tit.gif"  alt="nike" />
+	</div>
+	<!-- Contents -->
+	<div class="receipt">
+		<h2 class="title">현금 (소득공제)</h2>
+
+		<!--  영수증영역 -->
+		<div class="receiptCon receiptCash">
+			<span class="reTxt01"><strong>현금</strong></span>
+			<span class="reTxt02"><strong>노단늘</strong></span>
+			<span class="reTxt03" id="identifyNo"></span>
+			<span class="reTxt04"></span>
+			<span class="reTxt05"><strong></strong></span>
+			<span class="reTxt06"></span>
+			<span class="reTxt07"><strong>일시불</strong></span>
+			<span class="reTxt08"></span>
+			<span class="reTxt09"><strong></strong></span>
+			<span class="reTxt10"><strong>322700</strong></span>
+			<span class="reTxt11"><strong>32300</strong></span>
+			<span class="reTxt12"><strong>0</strong></span>
+			<span class="reTxt13"><strong>355000</strong></span>
+			
+			<span class="reTxt14">여노빈류동강</span>
+			<span class="reTxt15"><strong></strong></span>	
+			<span class="reTxt16">유한회사 나이키코리아</span>
+			<span class="reTxt17">나이키닷컴</span>
+			
+				
+					<span class="reTxt18">경기도 군포시 산본천로&nbsp;13</span>
+				
+				
+			
+			<span class="reTxt19"></span>
+			<span class="reTxt20">220-88-09068</span>
+			
+			<span class="reTxt21">080-022-0182</span>
+			<span class="reTxt22"></span>
+		</div>
+		<!-- //영수증영역 -->
+
+		<ul class="guideTxt">
+			<li>* 고객의 개인정보 보호를 위해 개인인증과 유효기간은 ** 처리 했습니다.</li>
+		</ul>
+		<!-- phase2 이미지 경로 변경 -->
+		<div class="printBtn">
+			<a href="#" title="현금 (소득공제) 영수증"  onclick="print();return false;"><img src="../image/web/global/btn_printing.gif"  alt="인쇄하기" /></a>
+			<a href="#" title="현금 (소득공제) 영수증 팝업"  onclick="self.close()"><img src="../image/web/global/btn_close.gif"  alt="닫기" /></a>
+		</div>
+		<!-- phase2 이미지 경로 변경 -->
+	</div>
+	<!-- //Centents -->
+
+	<div id="popFooter">
+		<img src="http://lecs.nike.co.kr/NKS1//image/web/pre/category/pop_copy.gif"  alt="&copy; nike, all rights reserved" />
+	</div>
+</body>
+</html>

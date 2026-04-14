@@ -1,0 +1,879 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>innisfree</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="title" content="innisfree">
+	<meta name="keywords" content="innisfree">
+	<meta name="description" content="innisfree">
+	<meta property="og:title" content="innisfree">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://www.innisfree.com/">
+	<meta property="og:site_name" content="innisfree">
+	<meta property="og:description" content="innisfree">
+	<script> 
+	var userAgent = navigator.userAgent.toLowerCase();
+	/*
+	// 모바일 홈페이지 바로가기 링크 생성 
+	if(userAgent.match('iphone')) { 
+		document.write('<link rel="apple-touch-icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('ipad')) { 
+		document.write('<link rel="apple-touch-icon" sizes="72*72" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('ipod')) { 
+		document.write('<link rel="apple-touch-icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/apple-touch-icon.png" />');
+	} else if(userAgent.match('android')) { 
+		document.write('<link rel="shortcut icon" href="http://192.168.11.165:8090/innisfree_jp/resources/mobile/images/common/android.png" />');
+	} */
+	</script>
+	<link rel="shortcut icon" type="image/x-icon" href="images/common/favicon.ico">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,500,700|Noto+Sans+JP:400,500,700"> -->
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/teaser.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header : S -->
+	<header id="header">
+		<div class="headerIn">
+			<div class="logo_wrap">
+				<h1 class="page_ttl"><a href="#">INNIST<span>A</span>R</a></h1>
+			</div>
+			<div class="headL">
+				<a href="#none" class="btn_gnbToggle" onclick="navi (this, '#sideNavi')">
+					<i class="ico">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</i>
+				</a>
+			</div>
+			<div class="headR">
+				<a href="#none" onclick="showLayerJp('productGuide');return false;"></a>
+			</div>
+			<!-- sideNavi : S -->
+			<aside id="sideNavi" class="sideNav">
+				<a href="#none" class="gnbClose" onclick="navi (this, '#sideNavi')">
+					<i class="ico">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</i>
+				</a>
+				<div class="loginDiv">
+					<!-- 로그아웃 -->
+					<div>Log out <span>sugasuga</span></div>
+					<!-- 로그인 -->
+					<div class="on">Log in</div>
+				</div>
+				<ul class="nav">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">MEMBERSHIP</a></li>
+					<li><a href="#">INGREDIENTS</a></li>
+					<li><a href="#">PRODUCT</a></li>
+					<li><a href="#" onclick="showLayerJp('guidePopup01');return false;">INNIST<span>A</span>R</a></li>
+				</ul>
+				<a href="#" class="link01">BRAND SITE</a>
+				<a href="#" class="link01">MY PAGE</a>
+				<ul class="sns">
+					<li class="twitter"><a href="#"><span>twitter</span></a></li>
+					<!-- <li class="facebook"><a href="#"><span>facebook</span></a></li> -->
+					<li class="instagram"><a href="#"><span>instagram</span></a></li>
+				</ul>
+			</aside>
+			<!-- sideNavi : e -->
+		</div>
+	</header>	
+	<!-- header : E -->
+	<!-- container : S -->
+	<div id="container">
+		<div class="product_wrap">
+			<ul class="js_menu_tabs">
+				<!-- 오픈시 open 클래스 추가 -->
+				<li class="js_ctt01 nosebum_bg open">
+					<a href="javascript:void(0)" class="menu" onclick="menuOnoff('.js_ctt01')">
+						NO-SEBUM
+						<span class="onoff">OPEN NOW</span>
+						<span class="plusMinus"><span class="span01"></span><span class="span02"></span></span>
+					</a>					
+					<div class="product_cttBox">
+						<div class="detailArea">
+							<div class="productSlide">
+								<div class="swiper-container js_productSlide slideBox">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image:url(images/temp/product_nosebum_slide01.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_nosebum_slide02.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_nosebum_slide03.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_nosebum_slide04.png)"></div>
+										<!-- <div class="swiper-slide" style="background-image:url(images/temp/product_nosebum_slide05.png)"></div> -->
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+						<div class="cttBox">
+							<p class="ttl">ノーセバムセット</p>
+							<div class="infoBox01">
+								<dl><dt>期間</dt><dd>06.10 09:00<br>06.16 23:59</dd></dl>
+								<dl><dt>現在の金額</dt><dd>¥ 1,800</dd></dl>
+							</div>
+							<div class="dataBox">
+								<p class="p01"><span>7</span>日後終了</p>
+								<p class="p02"><span><span>132</span>/300</span>名申込済</p>
+								<div class="div01"><span class=""><span style="width:50%"><span class="arw"></span></span></span></div>
+								<div class="div02">
+									<div class="first">
+										0
+									</div>
+									<div class="on" style="left:33%">
+										100
+										<span>
+											<span>
+												<span class="txt">¥1,800</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="" style="left:66%">
+										200
+										<span>
+											<span>
+												<span class="txt">¥1,600</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="last" style="left:100%">
+										300
+										<span>
+											<span>
+												<span class="txt">¥1,500</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="ctt">
+									<p class="topCmt"><span class="colorOn">ノーセバムミネラルパウダー</span><br>¥ 750 (税抜)</p>
+									<p class="cmt">赤ちゃんのようなすべすべ肌を演出する皮脂コントロールパウダー</p>
+									<ul style="margin:10px 0 0">
+										<li class="bulletli"><span>·</span>さらさら肌を保つ皮脂コントロールパウダー</li>
+										<li class="bulletli"><span>·</span>チェジュ島の天然ミネラル*1とミント*2配合</li>
+										<li class="bulletli"><span>·</span>過剰な皮脂を吸着して肌トーンを補正*3</li>
+									</ul>
+									<p class="subcmt">*1ミネラル塩(整肌成分)<br>*2メンタアルベンシス葉エキス(整肌成分)<br>*3メイクアップ効果</p>
+									<p class="topCmt"><span class="colorOn">ノーセバムミネラルパクト</span><br>¥ 1,200 (税抜)</p>
+									<p class="cmt">赤ちゃんのようなすべすべ肌を演出する皮脂コントロールパウダー</p>
+									<ul style="margin:10px 0 0">
+										<li class="bulletli"><span>·</span>さらさら肌を保つ皮脂コントロールパクト</li>
+										<li class="bulletli"><span>·</span>チェジュ島の天然ミネラル*1とミント*2配合</li>
+										<li class="bulletli"><span>·</span>過剰な皮脂を吸着して肌トーンを補正*3</li>
+									</ul>
+									<p class="subcmt">*1ミネラル塩(整肌成分)<br>*2メンタアルベンシスエキス(整肌成分)<br>*3メイクアップ効果</p>
+								</div>
+							</div>
+							<div class="videoBox"><a href="#none" onclick="videoPopOn('productVideo', '340855763');return false;"><img src="images/temp/product_nosebum_video.jpg" alt=""><span></span></a></div>
+							<div class="infoBox02">
+								<dl>
+									<dt>HOW-TO</dt>
+									<dd>
+										<p>付属のパフで軽く叩き込むように肌にのせます。皮脂やテカリの気になる部分にお使いください。</p>
+									</dd>
+								</dl>
+							</div>
+							<p class="commenBox">申込者数が定員に達したため、受付を終了しました。</p>
+							<div class="btnBox">
+								<div class="btn_wrap">
+									<a href="#" title="btnSizeL" class="btn fw700 btn_primary btnSizeL" onclick="showLayerJp('complePopup');return false;"><span>申込む</span></a>
+								</div>
+							</div>
+							<div class="snsBox">
+								<div class="snsBtn"><a href="#none" onclick="onoff(this, '.js_guidePopupSns01')"><span>友達とシェアする</span></a></div>
+								<ul class="sns js_guidePopupSns01">
+									<li class="twitter"><a href="#"><span>twitter</span></a></li>
+									<!-- <li class="facebook"><a href="#"><span>facebook</span></a></li> -->
+									<li class="sns01"><a href="#"><span>sns01</span></a></li>
+									<li class="url" id="copy" data-clipboard-action="copy" data-clipboard-target=".url a"><a href="#none">http://www.innisfree.com/</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cloBtn">
+							<a href="#none" onclick="menuOnoff('.js_ctt01')">CLOSE</a>
+						</div>
+					</div>
+				</li>
+				<li class="js_ctt02 greentea_bg open">
+					<a href="javascript:void(0)" onclick="menuOnoff('.js_ctt02')">
+						GREEN TEA
+						<span class="onoff">6/17 OPEN</span>
+						<span class="plusMinus"><span class="span01"></span><span class="span02"></span></span>
+					</a>
+					<div class="product_cttBox">
+						<div class="detailArea">
+							<div class="productSlide">
+								<div class="swiper-container js_productSlide slideBox">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image:url(images/temp/product_greentea_slide01.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_greentea_slide02.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_greentea_slide03.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_greentea_slide04.png)"></div>
+										<!-- <div class="swiper-slide" style="background-image:url(images/temp/product_greentea_slide05.png)"></div> -->
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+						<div class="cttBox">
+							<p class="ttl">グリーンティーセット</p>
+							<div class="infoBox01">
+								<dl><dt>期間</dt><dd>06.17 09:00~<br>06.16 23:59</dd></dl>
+								<dl><dt>現在の金額</dt><dd>¥ 1,800</dd></dl>
+							</div>
+							<div class="dataBox">
+								<p class="p01"><span>7</span>日後終了</p>
+								<p class="p02"><span><span>132</span>/300</span>名申込済</p>
+								<div class="div01"><span class=""><span style="width:50%"><span class="arw"></span></span></span></div>
+								<div class="div02">
+									<div class="first">
+										0
+									</div>
+									<div class="on" style="left:33%">
+										100
+										<span>
+											<span>
+												<span class="txt">¥1,800</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="" style="left:66%">
+										200
+										<span>
+											<span>
+												<span class="txt">¥1,600</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="last" style="left:100%">
+										300
+										<span>
+											<span>
+												<span class="txt">¥1,500</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="ctt">
+									<p class="topCmt"><span class="colorOn">グリーンティーシードセラム<br>販売名 : GTS セラム</span><br>¥ 2,900 (税抜)</p>
+									<p class="cmt">グリーンティー成分*1が肌の内側*2からしっとりと潤いをチャージし、みずみずしく弾む肌へと導くブースターセラム</p>
+									<ul style="margin:10px 0 0">
+										<li class="bulletli"><span>·</span>イニスフリーオリジナルの美容茶葉でみずみずしい理想の肌へ</li>
+										<li class="bulletli"><span>·</span>素早く潤いを満たすブースターセラム</li>
+										<li class="bulletli"><span>·</span>2種類のグリーンティー成分*1の相乗効果で潤いを与えます</li>
+									</ul>
+									<p class="subcmt">*1チャ葉エキス、チャ種子油<br>*2角質層</p>
+									<p class="topCmt"><span class="colorOn">グリーンティー スキンケア トライアルセット</span><br>¥ 2,000 (税抜)</p>
+									<p class="cmt">グリーンティー スキンケア トライアルセット</p>
+									<p class="cmt" style="margin:10px 0 0">緑茶の恵みを活かした、グリーンティーラインでしっとり潤うスキンケアを実感してください。</p>
+									<p class="cmt">＜セット内容＞</p>
+									<ul>
+										<li class="bulletli"><span>·</span>GT フォームクレンザー（洗顔料）20mL</li>
+										<li class="bulletli"><span>·</span>GTS セラム（美容液）30mL</li>
+										<li class="bulletli"><span>·</span>GTS トナー（化粧水）30mL</li>
+										<li class="bulletli"><span>·</span>GTS クリーム（クリーム）20mL</li>
+									</ul>
+								</div>
+							</div>
+							<div class="videoBox"><a href="#none" onclick="videoPopOn('productVideo', '340860518');return false;"><img src="images/temp/product_greentea_video.jpg" alt=""><span></span></a></div>
+							<div class="infoBox02">
+								<dl>
+									<dt>HOW-TO</dt>
+									<dd>
+										<p><strong>グリーンティーシード セラム</strong></p>
+										<p>洗顔後、適量を取り顔全体に優しくなじませます。</p>
+									</dd>
+									<dd style="margin:20px 0 0">
+										<p><strong>グリーンティーシード スキンケア トライアルセット</strong></p>
+										<ul>
+											<li class="normalli"><span>1. </span> 濡れた手に適量を取り、よく泡立ててから顔全体を優しくマッサージするように洗い、ぬるま湯でしっかりすすぎます。</li>
+											<li class="normalli"><span>2. </span>洗顔後、適量を取り顔全体に優しくなじませます。 </li>
+											<li class="normalli"><span>3. </span>美容液の後、適量を取り、顔全体に優しくなじませます。</li>
+											<li class="normalli"><span>4. </span>適量を取り、顔全体に優しく塗り広げます。</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<p class="commenBox">申込者数が定員に達したため、受付を終了しました。</p>
+							<div class="btnBox">
+								<div class="btn_wrap">
+									<a href="#" title="btnSizeL" class="btn fw700 btn_primary btnSizeL" onclick="showLayerJp('complePopup');return false;"><span>申込む</span></a>
+								</div>
+							</div>
+							<div class="snsBox">
+								<div class="snsBtn"><a href="#none" onclick="onoff(this, '.js_guidePopupSns02')"><span>友達とシェアする</span></a></div>
+								<ul class="sns js_guidePopupSns02">
+									<li class="twitter"><a href="#"><span>twitter</span></a></li>
+									<!-- <li class="facebook"><a href="#"><span>facebook</span></a></li> -->
+									<li class="sns01"><a href="#"><span>sns01</span></a></li>
+									<li class="url" id="copy" data-clipboard-action="copy" data-clipboard-target=".url a"><a href="#none">http://www.innisfree.com/</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cloBtn">
+							<a href="#none" onclick="menuOnoff('.js_ctt02')">CLOSE</a>
+						</div>
+					</div>
+				</li>
+				<li class="js_ctt03 vivid_bg open">
+					<a href="javascript:void(0)" onclick="menuOnoff('.js_ctt03')">
+						VIVID COTTON INK
+						<span class="onoff">6/24 OPEN</span>
+						<span class="plusMinus"><span class="span01"></span><span class="span02"></span></span>
+					</a>
+					<div class="product_cttBox">
+						<div class="detailArea">
+							<div class="productSlide">
+								<div class="swiper-container js_productSlide slideBox">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image:url(images/temp/product_vivid_slide01.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_vivid_slide02.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_vivid_slide03.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_vivid_slide04.png)"></div>
+										<!-- <div class="swiper-slide" style="background-image:url(images/temp/product_vivid_slide05.png)"></div> -->
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+						<div class="cttBox">
+							<p class="ttl">ティントセット</p>
+							<div class="infoBox01">
+								<dl><dt>期間</dt><dd>06.10 09:00~<br>06.16 23:59</dd></dl>
+								<dl><dt>現在の金額</dt><dd>¥ 1,800</dd></dl>
+							</div>
+							<div class="dataBox">
+								<p class="p01"><span>7</span>日後終了</p>
+								<p class="p02"><span><span>132</span>/300</span>名申込済</p>
+								<div class="div01"><span class=""><span style="width:50%"><span class="arw"></span></span></span></div>
+								<div class="div02">
+									<div class="first">
+										0
+									</div>
+									<div class="on" style="left:33%">
+										100
+										<span>
+											<span>
+												<span class="txt">¥1,800</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="" style="left:66%">
+										200
+										<span>
+											<span>
+												<span class="txt">¥1,600</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="last" style="left:100%">
+										300
+										<span>
+											<span>
+												<span class="txt">¥1,500</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="ctt">
+									<p class="topCmt"><span class="colorOn">ビビッドコットンインクティント 8, 10</span><br>¥ 2,160 (税抜)</p>
+									<p class="cmt">コットンのように軽くフィットするリップティント</p>
+									<ul style="margin:10px 0 0">
+										<li class="bulletli"><span>·</span>グロッシーな塗り心地なのに、マットな仕上がり</li>
+										<li class="bulletli"><span>·</span>カラー長持ち＆潤いキープ</li>
+										<li class="bulletli"><span>·</span>植物由来保湿成分*配合</li>
+									</ul>
+									<p class="subcmt">*マンゴー種子油、アボカド油、ツバキ種子油、シロバナワタ種子油</p>
+								</div>
+							</div>
+							<div class="videoBox"><a href="#none" onclick="videoPopOn('productVideo', '340892278');return false;"><img src="images/temp/product_vivid_video.jpg" alt=""><span></span></a></div>
+							<div class="infoBox02">
+								<dl>
+									<dt>HOW-TO</dt>
+									<dd><p>唇に適量を塗布します。</p></dd>
+								</dl>
+							</div>
+							<p class="commenBox">申込者数が定員に達したため、受付を終了しました。</p>
+							<div class="btnBox">
+								<div class="btn_wrap">
+									<a href="#" title="btnSizeL" class="btn fw700 btn_primary btnSizeL" onclick="showLayerJp('complePopup');return false;"><span>申込む</span></a>
+								</div>
+							</div>
+							<div class="snsBox">
+								<div class="snsBtn"><a href="#none" onclick="onoff(this, '.js_guidePopupSns03')"><span>友達とシェアする</span></a></div>
+								<ul class="sns js_guidePopupSns03">
+									<li class="twitter"><a href="#"><span>twitter</span></a></li>
+									<!-- <li class="facebook"><a href="#"><span>facebook</span></a></li> -->
+									<li class="sns01"><a href="#"><span>sns01</span></a></li>
+									<li class="url" id="copy" data-clipboard-action="copy" data-clipboard-target=".url a"><a href="#none">http://www.innisfree.com/</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cloBtn">
+							<a href="#none" onclick="menuOnoff('.js_ctt03')">CLOSE</a>
+						</div>
+					</div>
+				</li>
+				<li class="js_ctt04 bija_bg open">
+					<a href="javascript:void(0)" onclick="menuOnoff('.js_ctt04')">
+						BIJA
+						<span class="onoff">7/1 OPEN</span>
+						<span class="plusMinus"><span class="span01"></span><span class="span02"></span></span>
+					</a>
+					<div class="product_cttBox">
+						<div class="detailArea">
+							<div class="productSlide">
+								<div class="swiper-container js_productSlide slideBox">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image:url(images/temp/product_bija_slide01.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_bija_slide02.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_bija_slide03.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_bija_slide04.png)"></div>
+										<!-- <div class="swiper-slide" style="background-image:url(images/temp/product_bija_slide05.png)"></div> -->
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+						<div class="cttBox">
+							<p class="ttl">ビジャセット</p>
+							<div class="infoBox01">
+								<dl><dt>期間</dt><dd>06.10 09:00~<br>06.16 23:59</dd></dl>
+								<dl><dt>現在の金額</dt><dd>¥ 4,200</dd></dl>
+							</div>
+							<div class="dataBox">
+								<p class="p01"><span>7</span>日後終了</p>
+								<p class="p02"><span><span>132</span>/300</span>名申込済</p>
+								<div class="div01"><span class=""><span style="width:50%"><span class="arw"></span></span></span></div>
+								<div class="div02">
+									<div class="first">
+										0
+									</div>
+									<div class="on" style="left:33%">
+										100
+										<span>
+											<span>
+												<span class="txt">¥1,800</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="" style="left:66%">
+										200
+										<span>
+											<span>
+												<span class="txt">¥1,600</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="last" style="left:100%">
+										300
+										<span>
+											<span>
+												<span class="txt">¥1,500</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="ctt">
+									<p class="topCmt"><span class="colorOn">ビジャシカバーム<br>販売名 : BJ バーム</span><br>¥ 2,700 (税抜)</p>
+									<p class="cmt">すこやかな肌に導くセンテラアジアティカ4X*を配合。肌なじみがよく、さっぱりとしたクリームタイプの美容液</p>
+									<ul style="margin:10px 0 0">
+										<li class="bulletli"><span>·</span>センテラアジアティカ4X*配合</li>
+										<li class="bulletli"><span>·</span>肌を潤いバリアでプロテクト</li>
+										<li class="bulletli"><span>·</span>敏感肌にも使えるマイルドな処方</li>
+									</ul>
+									<p class="subcmt">*マデカッソシド、マデカシン酸、アシアチコシド、アシアチン酸（いずれも整肌成分）</p>
+									<p class="topCmt"><span class="colorOn">ビジャ スキンケア トライアルセット</span><br>¥ 1,500 (税抜)</p>
+									<p class="cmt">ビジャ スキンケア トライアルセット</p>
+									<p class="cmt" style="margin:10px 0 0">ビジャラインでトラブル*1を繰り返さな肌へ。カヤ*2の恵みを活かしたスキンケアを実感してください。</p>
+									<p class="cmt" style="margin:5px 0 0">＜セット内容＞</p>
+									<ul>
+										<li class="bulletli"><span>·</span>BJ フェイシャルフォーム（洗顔料）20mL</li>
+										<li class="bulletli"><span>·</span>BJ トナー（拭き取り化粧水）30mL</li>
+										<li class="bulletli"><span>·</span>BJ エマルジョン（乳液）20mL</li>
+										<li class="bulletli"><span>·</span>BJ シカバーム EX（美容液）10mL</li>
+									</ul>
+									<p class="subcmt">*1カヤ種子油(整肌成分)<br>*2乾燥による肌荒れ</p>
+								</div>
+							</div>
+							<div class="videoBox"><a href="#none" onclick="videoPopOn('productVideo', '340892300');return false;"><img src="images/temp/product_bija_video.jpg" alt=""><span></span></a></div>
+							<div class="infoBox02">
+								<dl>
+									<dt>HOW-TO</dt>
+									<dd>
+										<p><strong>ビジャ シカバーム</strong></p>
+										<p>顔全体に優しくなじませます。<br>気になる部分には重ねづけしてください。</p>
+									</dd>
+									<dd>
+										<p style="margin:20px 0 0"><strong>ビジャ スキンケア トライアルセットキット</strong></p>
+										<ul>
+											<li class="normalli"><span>1. </span>濡れた手に適量を取り、よく泡立ててから顔全体を優しくマッサージし、ぬるま湯でしっかりすすぎます。</li>
+											<li class="normalli"><span>2. </span>スキンをコットンにたっぷりと含ませ、顔の中心から外側に向かって優しく拭き取った後、残りの液をなじませます。</li>
+											<li class="normalli"><span>3. </span>ローションを顔全体に優しく伸ばします。</li>
+											<li class="normalli">
+												<span>4. </span>最後に、シカバームを顔全体に優しくなじませ、気になる部分には重ね付けします。
+												<ul><li class="normalli"><span>* </span>乾燥が気になる場合、お手持ちのクリーム、もしくはご希望の保湿レベルに応じて、イニスフリーのクリーム製品をシカバームの後に重ねてください。</li><ul>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<p class="commenBox">申込者数が定員に達したため、受付を終了しました。</p>
+							<div class="btnBox">
+								<div class="btn_wrap">
+									<a href="#" title="btnSizeL" class="btn fw700 btn_primary btnSizeL" onclick="showLayerJp('complePopup');return false;"><span>申込む</span></a>
+								</div>
+							</div>
+							<div class="snsBox">
+								<div class="snsBtn"><a href="#none" onclick="onoff(this, '.js_guidePopupSns04')"><span>友達とシェアする</span></a></div>
+								<ul class="sns js_guidePopupSns04">
+									<li class="twitter"><a href="#"><span>twitter</span></a></li>
+									<!-- <li class="facebook"><a href="#"><span>facebook</span></a></li> -->
+									<li class="sns01"><a href="#"><span>sns01</span></a></li>
+									<li class="url" id="copy" data-clipboard-action="copy" data-clipboard-target=".url a"><a href="#none">http://www.innisfree.com/</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cloBtn">
+							<a href="#none" onclick="menuOnoff('.js_ctt04')">CLOSE</a>
+						</div>
+					</div>
+				</li>
+				<li class="js_ctt05 volcanic_bg open">
+					<a href="javascript:void(0)" onclick="menuOnoff('.js_ctt05')">
+						VOLCANIC
+						<span class="onoff">7/8 OPEN</span>
+						<span class="plusMinus"><span class="span01"></span><span class="span02"></span></span>
+					</a>					
+					<div class="product_cttBox">
+						<div class="detailArea">
+							<div class="productSlide">
+								<div class="swiper-container js_productSlide slideBox">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image:url(images/temp/product_volcanic_slide01.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_volcanic_slide02.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_volcanic_slide03.png)"></div>
+										<div class="swiper-slide" style="background-image:url(images/temp/product_volcanic_slide04.png)"></div>
+										<!-- <div class="swiper-slide" style="background-image:url(images/temp/product_volcanic_slide05.png)"></div> -->
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+						<div class="cttBox">
+							<p class="ttl">ヴォルカニックセット</p>
+							<div class="infoBox01">
+								<dl><dt>期間</dt><dd>06.10 09:00~<br>06.16 23:59</dd></dl>
+								<dl><dt>現在の金額</dt><dd>¥ 1,800</dd></dl>
+							</div>
+							<div class="dataBox">
+								<p class="p01"><span>7</span>日後終了</p>
+								<p class="p02"><span><span>132</span>/300</span>名申込済</p>
+								<div class="div01"><span class=""><span style="width:50%"><span class="arw"></span></span></span></div>
+								<div class="div02">
+									<div class="first">
+										0
+									</div>
+									<div class="on" style="left:33%">
+										100
+										<span>
+											<span>
+												<span class="txt">¥1,800</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="" style="left:66%">
+										200
+										<span>
+											<span>
+												<span class="txt">¥1,600</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+									<div class="last" style="left:100%">
+										300
+										<span>
+											<span>
+												<span class="txt">¥1,500</span>
+												<span class="arw"></span>
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="ctt">
+									<p class="topCmt"><span class="colorOn">スーパーヴォルカニックポアクレイマスク 2X <br>販売名 : SVP クレイマスク2X</span><br>¥ 1,600 (税抜)</p>
+									<p class="cmt">皮脂吸着成分ヴォルカニック スフィア*1が毛穴の奥の汚れを取り除き、集中ケアするクレイマスク</p>
+									<ul style="margin:10px 0 0">
+										<li class="bulletli"><span>·</span>毛穴の悩みを多方面から集中ケアするクレイマスク</li>
+										<li class="bulletli"><span>·</span>3種の角質ケア成分*2がすべすべな肌に</li>
+										<li class="bulletli"><span>·</span>塗りやすいなめらかクリーミーなテクスチャー</li>
+									</ul>
+									<p class="subcmt">*1火山灰、(乳酸／グリコール酸)コポリマー <br>*2火山灰、テウチグルミ殻粒、 乳酸</p>
+									<p class="topCmt"><span class="colorOn">ヴォルカニック スキンケア トライアルセット</span><br>¥ 2,000 (税抜)</p>
+									<p class="cmt">ヴォルカニックスキンケア トライアルセットチェジュ島の火山の恵みを活かした、ヴォルカニックラインで毛穴のお掃除。古い角質、汚れや余分な皮脂のない、つるつる肌へ導きます。</p>
+									<p class="cmt" style="margin:10px 0 0">＜セット内容＞</p>
+									<ul>
+										<li class="bulletli"><span>·</span>VP クレンジングフォーム（洗顔料）20mL</li>
+										<li class="bulletli"><span>·</span>SVP クレイマスク 2X（パック）20mL</li>
+										<li class="bulletli"><span>·</span>VP クリアリングトナー 2X<br>(拭き取り化粧水）30mL</li>
+										<li class="bulletli"><span>·</span>GTS セラム（美容液）30mL</li>
+									</ul>
+								</div>
+							</div>
+							<div class="videoBox"><a href="#none" onclick="videoPopOn('productVideo', '340892136');return false;"><img src="images/temp/product_volcanic_video.jpg" alt=""><span></span></a></div>
+							<div class="infoBox02">
+								<dl>
+									<dt>HOW-TO</dt>
+									<dd>
+										<p><strong>スーパーヴォルカニック ポアクレイマスク 2X</strong></p>
+										<p>洗顔後、水気をとり、目・口の周りを避けて、適量を顔に伸ばします。</p>
+										<p style="margin:5px 0 0">10分約後、優しく指先でマッサージをしながら、ぬるま湯で洗い流します。</p>
+										<p style="margin:5px 0 0">* 1～2回週のご使用がおすすめです。</p>
+									</dd>
+									<dd style="margin:20px 0 0">
+										<p><strong>ヴォルカニック スキンケア トライアルセット</strong></p>
+										<ul>
+											<li class="normalli"><span>1. </span>濡れた手に適量を取り、よく泡立ててから顔全体を優しくマッサージし、ぬるま湯でしっかりすすぎます。</li>
+											<li class="normalli"><span>2. </span>洗顔後、水気をとり、目・口の周りを避けて、適量を顔に伸ばします。約10分後、優しく指先でマッサージをしながら、ぬるま湯で洗い流します。
+												<ul>
+													<li class="bulletli"><span>*</span>週1~2回のご使用がおすすめです。</li>
+												</ul>
+											</li>
+											<li class="normalli"><span>3. </span>洗顔後、コットンにたっぷり含ませ、顔の中心から外側に向かって優しく拭き取った後、残りの液をなじませます。
+												<ul>
+													<li class="bulletli"><span>*</span>使用前によく振ってからお使いください。</li>
+												</ul>
+											</li>
+											<li class="normalli"><span>4. </span>適量を取り顔全体に優しくなじませてください。</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<p class="commenBox">申込者数が定員に達したため、受付を終了しました。</p>
+							<div class="btnBox">
+								<div class="btn_wrap">
+									<a href="#" title="btnSizeL" class="btn fw700 btn_primary btnSizeL" onclick="showLayerJp('complePopup');return false;"><span>申込む</span></a>
+								</div>
+							</div>
+							<div class="snsBox">
+								<div class="snsBtn"><a href="#none" onclick="onoff(this, '.js_guidePopupSns05')"><span>友達とシェアする</span></a></div>
+								<ul class="sns js_guidePopupSns05">
+									<li class="twitter"><a href="#"><span>twitter</span></a></li>
+									<!-- <li class="facebook"><a href="#"><span>facebook</span></a></li> -->
+									<li class="sns01"><a href="#"><span>sns01</span></a></li>
+									<li class="url" id="copy" data-clipboard-action="copy" data-clipboard-target=".url a"><a href="#none">http://www.innisfree.com/</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="cloBtn">
+							<a href="#none" onclick="menuOnoff('.js_ctt05')">CLOSE</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="backHome">
+				<a href="#none">BACK TO HOME</a>
+			</div>
+		</div>
+	</div>
+	<!-- container : E -->
+	<!-- footer : S -->
+	<div id="quick"><a href="#" class="goTop" onclick="scrollSet('#wrap');return false;"><span class="arrow">TOP</span></a></div>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/swiper.jquery.js"></script>
+	<script type="text/javascript" src="js/clipboard.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<!-- footer : E -->
+	<!-- 가이드 팝업 : S -->
+	<div id="productGuide" class="lyPopArea productGuide">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02" style="font-weight:700">PRODUCT PAGE GUIDE</p>
+					<p class="popUp_p03">イニスフリーオンラインショップオープン記念</p>
+					<p class="popUp_p02">スペシャルセット割引<br>キャンペーン</p>
+					<p class="popUp_p03" style="font-size:13px">参加者が増えるほど(200~300名限定)割引率が アップ！</p>
+				</div>
+				<div class="slideBox">
+					<div class="ctt">							
+						<div class="swiper-container js_productGuideSlide productGuideSlide">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide01.png" alt=""></div>
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide02.png" alt=""></div>
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide03.png" alt=""></div>
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide04.png" alt=""></div>
+								<div class="swiper-slide"><img src="images/temp/product_guide_slide05.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="teaser_lyctt">
+					<div class="merit">
+						<p class="ttl">申込特典</p>
+						<div class="ctt">
+							<dl><dt><span>100名</span></dt><dd>スペシャルセット販売確定<br>+ 10%割引<!-- +メッシュバック --></dd></dl>
+							<dl><dt><span>200名</span></dt><dd>スペシャルセット販売確定<br>+ 20%割引<!-- +メッシュバック --></dd></dl>
+							<dl><dt><span>300名</span></dt><dd>スペシャルセット販売確定<br>+ 30%割引<!-- +メッシュバック --></dd></dl>
+							<!-- <img src="images/temp/merit_img.jpg" alt="" style="width:100%;display:block;margin: 17px 0 0;"> -->
+						</div>
+					</div>
+					<div class="StepBox">
+						<p class="ttl">申込方法</p>
+						<div class="ctt">
+							<ul>
+								<li class="step01"><span>Step 1</span>原料を選択</li>
+								<li class="step02"><span>Step 2</span>「申込む」<br>をタップ</li>
+								<li class="step03"><span>Step 3</span>申込み完了</li>
+							</ul>
+						</div>
+					</div>
+					<div class="textBox">
+						<p class="ttl">参加資格</p>
+						<ul>
+							<li><span></span>イニスフリー新規会員(2019.06. 10-2019.07.15の期間中に新規会員登録を行ったお客様）</li>
+							<li><span></span>旧イニスフリーブランドサイトの会員(2019. 06.10 ~ 07.15の期間中に利用規約への同意及び個人情報更新を行ったお客様)</li>
+						</ul>
+						<p class="ttl">キャンペーン期間</p>
+						<ul>
+							<li><span></span>2019.6.10–2019.7.15</li>
+						</ul>
+						<p class="ttl">申込結果</p>
+						<ul>
+							<li><span></span>7月15日のキャンペーン終了後、お申込み済みのお客様のみ、最終的に適用される週別キャンペーンの割引特典をメールでご案内致します。</li>
+						</ul>
+						<p class="ttl">商品の購入方法</p>
+						<ul class="ctt">
+							<li><span></span>8月5日の公式オンラインショップオープン後、キャンペーンページより商品を割引価格でご購入頂けます。</li>
+						</ul>
+						<p class="ttl">注意事項</p>
+						<ul class="ctt">
+							<li><span></span>お申込み期限前でも200~300名の定員に達し次第、受付終了となります。</li>
+							<li><span></span>8月5日～8月31日の期限内にご購入いただけます。
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 가이드 팝업 -->
+	<!-- 동영상 팝업 : S -->
+	<div id="productVideo" class="lyPopArea VideoLayer">
+		<div class="lyPop">			
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="videoPopOff('productVideo');"><span>CLOSED</span></button>
+				<div class="teaser_lyctt">
+					<div class="vodCon1"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 동영상 팝업 : E -->
+	<!-- 신청 완료 팝업 S -->
+	<div id="complePopup" class="lyPopArea complePopup">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">お申込みが完了しました。</p>
+				</div>
+				<div class="teaser_lyctt">
+					<p>最終的に確定された特典内容は各商品のキャンペーンが終 了してからメールでお知らせします。</p>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap">
+						<a href="#" class="btn btn_default btnSizeL"><span>確認</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 신청 완료 팝업 e -->
+	<!-- 신청 취소 팝업 S -->
+	<div id="cancelPopup" class="lyPopArea cancelPopup">
+		<div class="lyPop">
+			<div class="teaser_lyWrap">
+				<button class="lyClose" onclick="layerPopClose();"><span>CLOSED</span></button>
+				<div class="teaser_lyttl">
+					<p class="popUp_p02">お申込みをキャンセルしますか？</p>
+				</div>
+				<div class="teaser_lyctt">
+					<p>キャンセルは2回以上受け付けません。</p>
+				</div>
+				<div class="teaser_lyfoot">
+					<div class="btn_wrap bChild2">
+						<a href="#" class="btn btn_primary btnSizeL"><span>いいえ</span></a>
+						<a href="#" class="btn btn_default btnSizeL"><span>はい</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 신청 취소 팝업 e -->
+</div>
+<script type="text/javascript">
+    var swiper = new Swiper('.js_productSlide', {
+		pagination: '.js_productSlide > .swiper-pagination',
+		paginationClickable: true,
+    });	
+
+    // var initialNum;
+    var swiper = new Swiper('.js_productGuideSlide', {
+    	// initialSlide: initialNum,
+		grabCursor: true,
+		loop:true,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		pagination: '.js_productGuideSlide > .swiper-pagination',
+		paginationClickable: true,
+    });
+	function menuOnoff(e){
+		if ($(e).hasClass("active")){
+			$(e).removeClass("active");
+		} else {
+			$('.js_menu_tabs > li').removeClass("active");
+			$(e).addClass("active");
+			$('html, body').animate({'scrollTop' : $(e).offset().top - 61},200);
+		}
+	}
+	$(function(){
+		var clipboard = new Clipboard('#copy');
+		clipboard.on('success', function(e){
+			alert('클립보드에 복사되었어요!')
+		});
+		clipboard.on('error', function(e){
+			alert('선택된 영역을 복사해 주세요!')
+		});
+	})
+	showLayerJp('productGuide');
+</script>
+</body>
+</html>

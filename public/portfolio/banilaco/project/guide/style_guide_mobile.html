@@ -1,0 +1,2641 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Mirrored from www.banila.com/static/front/guide/style_guide_mobile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 May 2022 07:50:47 GMT -->
+<head>
+<title>스타일 가이드 (Mobile) | 바닐라코 퍼블리싱 가이드</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<link rel="shortcut icon" type="image/x-icon" href="https://www.banila.com/static/front/resources/mobile/images/common/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../resources/mobile/css/fonts.css">
+<link rel="stylesheet" type="text/css" href="../resources/mobile/css/common.css">
+<link rel="stylesheet" type="text/css" href="../resources/mobile/css/contents.css">
+<link rel="stylesheet" type="text/css" href="css/guide.css">
+<style>
+	hr {display:block;margin:40px 0;}
+	.mCon {max-width:750px;}
+</style>
+</head>
+<body>
+<div id="wrap">
+<div class="pagever">last update : <strong>2019.09.23.</strong></div>
+
+<div id="uiwrap" class="uiwrap">
+	<div class="uinav">
+		<a href="#font">font</a>
+		<a href="#color">color</a>
+		<a href="#headerType">header type</a>
+		<a href="#button">button</a>
+		<a href="#form">form</a>
+		<a href="#tab">tab</a>
+		<a href="#title">title</a>
+		<a href="#noData">no data</a>
+		<a href="#table">table</a>
+		<a href="#list">list</a>
+		<a href="#rating">rating</a>
+		<a href="#slide">slide</a>
+		<a href="#imageCrop">imageCrop</a>
+		<a href="#paging">paging</a>
+		<a href="#icon">icon</a>
+		<a href="#infoList">infoList</a>
+		<a href="#fileUpload">fileUpload</a>
+		<a href="#cttMore">cttMore</a>
+		<a href="#brandCategory">brandCategory</a>
+	</div>
+
+	<div class="mCon">
+		<div id="font" class="conP">
+			<h2>Font</h2>
+				<p class="note">
+				Noto Sans KR 폰트를 사용하며, 폰트 굵기는 font-weight로 구분한다. <br>
+				기본설정은{font-family:'noto','맑은고딕',sans-serif;font-weight:400;color:#222;}
+			</p>
+			<h3>Noto Sans KR</h3>
+			<div class="txt">
+				<p style="font-family:'noto';">
+					400 - Noto Sans KR Regular<br>
+					<span>
+						가나다라마바사아자차카타파하<br>
+						0123456789
+					</span>
+				</p>
+				<p style="font-family:'noto';font-weight:500;">
+					500 - Noto Sans KR Medium<br>
+					<span>
+						가나다라마바사아자차카타파하<br>
+						0123456789
+					</span>
+				</p>
+				<p style="font-family:'noto';font-weight:600;">
+					600 - Noto Sans KR Bold<br>
+					<span>
+						가나다라마바사아자차카타파하<br>
+						0123456789
+					</span>
+				</p>
+			</div>
+		</div>
+		<style>
+			#font .txt {padding:30px 20px; font-size:30px; line-height:30px; color:#222;}
+			#font .txt p span {display:block; font-size:20px; line-height:24px;}
+			#font .txt p {margin-top:20px;}
+			#font .txt p:first-child {margin-top:0;}
+		</style>
+
+		<div id="color" class="conP">
+			<h2>Color</h2>
+			<h3>Point Color</h3>
+			<div class="colorbox">
+				<div class="box">#FF65AF(.fcPink)</div>
+				<div class="box">#FF5B5D(.fcRed)</div>
+			</div>
+			<h3>Font Color</h3>
+			<div class="colorbox">
+				<div class="box">#222222(.fc22)</div>
+				<div class="box">#888888(.fc88)</div>
+				<div class="box">#BFBFBF(.fcbf)</div>
+				<div class="box" style="color:#222222;border:1px solid #dcdcdc">#FFFFFF(.fcff)</div>
+			</div>
+			<h3>bg/line Color</h3>
+			<div class="colorbox">
+				<div class="box">#222222</div>
+				<div class="box" style="color:#222222;">#E8E8E8</div>
+				<div class="box" style="color:#222222;">#F3F3F3</div>
+				<div class="box" style="color:#222222;">#F8F8F8</div>
+				<div class="box" style="color:#222222;border:1px solid #dcdcdc">#FFFFFF</div>
+			</div>
+		</div>
+		<style>
+			.colorbox{}
+			.colorbox div{display:inline-block; width:200px; height:100px; text-align:center; line-height:100px; color:#fff; vertical-align:top; box-sizing:border-box;}
+			.color_list li{display:inline-block;}
+		</style>
+
+		<div id="headerType" class="conP">
+			<h2>Header type</h2>
+			<p class="note">
+				basic : 로고X, 페이지 타이틀O, 뒤로가기O, 장바구니O, 검색O, 홈X<br>
+				&lt;div id="wrap" class="h_noUtil"&gt; : 로고X, 페이지 타이틀O, 뒤로가기X, 장바구니O, 검색O, 홈X<br>
+				&lt;div id="wrap" class="h_noShop"&gt; : 로고X, 페이지 타이틀O, 뒤로가기O, 장바구니X, 검색O, 홈X<br>
+				&lt;div id="wrap" class="h_addHome"&gt; : 로고O, 페이지 타이틀X, 뒤로가기X, 장바구니O, 검색O, 홈O<br>
+				&lt;div id="wrap" class="h_main"&gt; : 로고O, 페이지 타이틀X, 뒤로가기X, 장바구니O, 검색O, 홈X<br>
+			</p>
+		</div>
+
+		<div id="button" class="conP">
+			<h2>Button</h2>
+			<p class="note">기본 btn 기본 클래스에 필요한 요소의 클래스를 추가하여 사용.</p>
+			<h3>Type</h3>
+			<p class="note">
+				라운드형 버튼 :btnTypeR<br>
+				박스형 버튼 :btnTypeB
+			</p>
+			<div class="btn_wrap">
+				<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnTypeR</span></a>
+				<a href="#none" class="btn btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnTypeB</span></a>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="btn_wrap">
+						<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnTypeR</span></a>
+						<a href="#none" class="btn btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnTypeB</span></a>
+					</div>
+				</xmp>
+			</div>
+			<h3>Color</h3>
+			<p class="note">
+				흰색 버튼 :btnColorW<br>
+				검정 버튼 :btnColorB<br>
+				핑크 버튼 :btnColorP
+			</p>
+			<div class="btn_wrap">
+				<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnColorW</span></a>
+				<a href="#none" class="btn btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnColorB</span></a>
+				<a href="#none" class="btn btnSizeL btnColorP btnTypeR" style="width:150px;"><span>btnColorP</span></a>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="btn_wrap">
+						<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnColorW</span></a>
+						<a href="#none" class="btn btnSizeL btnColorB btnTypeB" style="width:150px;"><span>btnColorB</span></a>
+						<a href="#none" class="btn btnSizeL btnColorP btnTypeR" style="width:150px;"><span>btnColorP</span></a>
+					</div>
+				</xmp>
+			</div>
+			<h3>Size</h3>
+			<p class="note">
+				높이 50px :btnSizeL<br>
+				높이 45px :btnSizeM<br>
+				높이 30px :btnSizeS<br>
+			</p>
+			<div class="btn_wrap">
+				<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnSizeL</span></a>
+				<a href="#none" class="btn btnSizeM btnColorB btnTypeB" style="width:150px;"><span>btnSizeM</span></a>
+				<a href="#none" class="btn btnSizeS btnColorP btnTypeR" style="width:150px;"><span>btnSizeS</span></a>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="btn_wrap">
+						<a href="#none" class="btn btnSizeL btnColorW btnTypeR" style="width:150px;"><span>btnSizeL</span></a>
+						<a href="#none" class="btn btnSizeM btnColorB btnTypeB" style="width:150px;"><span>btnSizeM</span></a>
+						<a href="#none" class="btn btnSizeS btnColorP btnTypeR" style="width:150px;"><span>btnSizeS</span></a>
+					</div>
+				</xmp>
+			</div>
+			<h3>Disabled</h3>
+			<div class="btn_wrap">
+				<a href="#none" class="btn btnSizeL btnColorW disabled btnTypeR" style="width:150px;"><span>disabled</span></a>
+				<a href="#none" class="btn btnSizeL btnColorB disabled btnTypeB" style="width:150px;"><span>disabled</span></a>
+				<a href="#none" class="btn btnSizeL btnColorP disabled btnTypeR" style="width:150px;"><span>disabled</span></a>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="btn_wrap">
+						<a href="#none" class="btn btnSizeL btnColorW disabled btnTypeR" style="width:150px;"><span>disabled</span></a>
+						<a href="#none" class="btn btnSizeL btnColorB disabled btnTypeB" style="width:150px;"><span>disabled</span></a>
+						<a href="#none" class="btn btnSizeL btnColorP disabled btnTypeR" style="width:150px;"><span>disabled</span></a>
+					</div>
+				</xmp>
+			</div>
+			<h3>Line link</h3>
+			<a href="#none" class="btn_txt">라인 링크</a>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<a href="#none" class="btn_txt">라인 링크</a>
+				</xmp>
+			</div>
+			<h3>더보기</h3>
+			<div class="btn_wrap">
+				<a href="#none" class="btnMore"><span>더보기 1<em>/3</em></span></a>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="btn_wrap">
+						<a href="#none" class="btnMore"><span>더보기 1<em>/3</em></span></a>
+					</div>
+				</xmp>
+			</div>
+			<h3>Etc</h3>
+			<a href="javascript:void(0);" onclick="showLayer('pdtFilter');" class="btn_filter"><span>맞춤필터</span></a>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<a href="javascript:void(0);" onclick="showLayer('pdtFilter');" class="btn_filter"><span>맞춤필터</span></a>
+				</xmp>
+			</div>
+			<a href="#none" class="btn_reset"><span>초기화</span>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<a href="#none" class="btn_reset"><span>초기화</span>
+				</xmp>
+			</div>
+		</div>
+		<style>
+			#button .btn_wrap{margin-top:10px;line-height:20px;text-align:left;}
+			#button .btn_wrap .btn{margin:0 0 0 4px;}
+			#button .btn_wrap .btn:first-child{margin:0;}
+		</style>
+
+		<div id="form" class="conP">
+			<h2>Form</h2>
+			<h3>Input Text - BOX</h3>
+			<div>
+				<div class="inp_wrap">
+					<div class="inp_text">
+						<label class="inp_lab" for="inp_text">inp text</label>
+						<input type="text" name="" id="inp_text">
+					</div>
+				</div>
+				<div class="inp_wrap error">
+					<div class="inp_text">
+						<label class="inp_lab" for="inp_text_error">inp text</label>
+						<input type="text" name="" id="inp_text_error">
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+				<div class="inp_wrap">
+					<label class="inp_lab" for="labelType"><span class="fcRed">*</span>Label</label>
+					<div class="inp_text">
+						<input type="text" name="" id="labelType" placeholder="LABEL TYPE">
+					</div>
+				</div>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					basic
+					<div class="inp_wrap">
+						<div class="inp_text">
+							<label class="inp_lab" for="inp_text">inp text</label>
+							<input type="text" name="" id="inp_text">
+						</div>
+					</div>
+					error
+					<div class="inp_wrap error">
+						<div class="inp_text">
+							<label class="inp_lab" for="inp_text_error">inp text</label>
+							<input type="text" name="" id="inp_text_error">
+						</div>
+						<p class="error">잘못 입력했습니다</p>
+					</div>
+					label type
+					<div class="inp_wrap">
+						<label class="inp_lab" for="labelType"><span class="fcRed">*</span>Label</label>
+						<div class="inp_text">
+							<input type="text" name="" id="labelType" placeholder="LABEL TYPE">
+						</div>
+					</div>
+				</xmp>
+			</div>
+			<style>
+				.inp_wrap + .inp_wrap {margin-top:10px;}
+			</style>
+			<h3>Input Text - SEARCH</h3>
+			<div>
+				<div class="inp_wrap">
+					<div class="inp_text searchType">
+						<input type="text" name="" id="inp_text" title="우편번호 검색">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+						<button type="button" class="btn_search"><span>search</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="inp_wrap">
+						<div class="inp_text searchType">
+							<input type="text" name="" id="inp_text" title="우편번호 검색">
+							<button type="button" class="btn_clear"><span>clear</span></button>
+							<button type="button" class="btn_search"><span>search</span></button>
+						</div>
+					</div>
+				</xmp>
+			</div>
+			<h3>Checkbox</h3>
+			<div>
+				<span class="inp_check">
+					<input type="checkbox" name="inp_check" id="inp_check1_1">
+					<label for="inp_check1_1">check1</label>
+				</span>
+				<span class="inp_check">
+					<input type="checkbox" name="cate_chk" id="inp_check1_2" checked>
+					<label for="inp_check1_2">check2</label>
+				</span>
+				<span class="inp_check">
+					<input type="checkbox" name="inp_radio1" id="inp_check1_3" disabled>
+					<label for="inp_check1_3">check3</label>
+				</span>
+				<span class="inp_check type02">
+					<input type="checkbox" name="inp_customer" id="inp_customer">
+					<label for="inp_customer">내 문의 보기<span class="checkDsgn"><span></span></span></label>
+				</span>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					basic
+					<span class="inp_check">
+						<input type="checkbox" name="inp_check" id="inp_check1_1">
+						<label for="inp_check1_1">check1</label>
+					</span>
+					checked
+					<span class="inp_check">
+						<input type="checkbox" name="cate_chk" id="inp_check1_2" checked>
+						<label for="inp_check1_2">check2</label>
+					</span>
+					disabled
+					<span class="inp_check">
+						<input type="checkbox" name="inp_radio1" id="inp_check1_3" disabled>
+						<label for="inp_check1_3">check3</label>
+					</span>
+					type02
+					<span class="inp_check type02">
+						<input type="checkbox" name="inp_customer" id="inp_customer">
+						<label for="inp_customer">내 문의 보기<span class="checkDsgn"><span></span></span></label>
+					</span>
+				</xmp>
+			</div>
+
+
+
+			<h3>Radiobox</h3>
+			<div>
+				<span class="inp_radio">
+					<input type="radio" name="inp_radio1" id="inp_radio1_1">
+					<label for="inp_radio1_1">radio1</label>
+				</span>
+				<span class="inp_radio">
+					<input type="radio" name="inp_radio1" id="inp_radio1_2" checked>
+					<label for="inp_radio1_2">radio2</label>
+				</span>
+				<span class="inp_radio">
+					<input type="radio" name="inp_radio1" id="inp_radio1_3" disabled>
+					<label for="inp_radio1_3">radio3</label>
+				</span>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					basic
+					<span class="inp_radio">
+						<input type="radio" name="inp_radio1" id="inp_radio1_1">
+						<label for="inp_radio1_1">radio1</label>
+					</span>
+					checked
+					<span class="inp_radio">
+						<input type="radio" name="inp_radio1" id="inp_radio1_2" checked>
+						<label for="inp_radio1_2">radio2</label>
+					</span>
+					disabled
+					<span class="inp_radio">
+						<input type="radio" name="inp_radio1" id="inp_radio1_3" disabled>
+						<label for="inp_radio1_3">radio3</label>
+					</span>
+				</xmp>
+			</div>
+			
+			<h3>Selectbox</h3>
+			<div class="inp_wrap">
+				<div class="inp_select">
+					<select name="" id="">
+						<option value="">naver.com</option>
+						<option value="">nate.com</option>
+						<option value="">직접입력</option>
+					</select>
+				</div>
+			</div>
+			<div class="inp_wrap error">
+				<div class="inp_select">
+					<select name="" id="">
+						<option value="">naver.com</option>
+						<option value="">nate.com</option>
+						<option value="">직접입력</option>
+					</select>
+				</div>
+				<p class="error">선택해주세요</p>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_select borderType">
+					<select name="" id="">
+						<option value="">naver.com</option>
+						<option value="">nate.com</option>
+						<option value="">직접입력</option>
+					</select>
+				</div>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_select2 pdtSelect disabled">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li class="soldOut">
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+								<span class="soldOutTxt">[일시품절]</span>
+								<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_select2 pdtSelect">
+					<div class="selectBox">
+						<button class="title" type="button">옵션을 선택해주세요</button>
+						<ul class="selList">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1">
+								<label for="select1_1">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+							</li>
+							<li class="soldOut">
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">
+									<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+								</label>
+								<span class="soldOutTxt">[일시품절]</span>
+								<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					basic
+					<div class="inp_wrap">
+						<div class="inp_select">
+							<select name="" id="">
+								<option value="">並び替え</option>
+								<option value="">並び替え2</option>
+								<option value="">並び替え3</option>
+							</select>
+						</div>
+					</div>
+					error
+					<div class="inp_wrap error">
+						<div class="inp_select">
+							<select name="" id="">
+								<option value="">並び替え</option>
+								<option value="">並び替え2</option>
+								<option value="">並び替え3</option>
+							</select>
+						</div>
+						<div class="help">
+							<p class="error">電子メールまたはパスワード間違い</p>
+						</div>
+					</div>
+					borderType
+					<div class="inp_wrap">
+						<div class="inp_select borderType">
+							<select name="" id="">
+								<option value="">naver.com</option>
+								<option value="">nate.com</option>
+								<option value="">직접입력</option>
+							</select>
+						</div>
+					</div>
+					shopping disabled
+					<div class="inp_wrap">
+						<div class="inp_select2 pdtSelect disabled">
+							<div class="selectBox">
+								<button class="title" type="button">옵션을 선택해주세요</button>
+								<ul class="selList">
+									<li>
+										<input type="radio" value="" class="option" id="select1_1" name="select1">
+										<label for="select1_1">
+											<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+										</label>
+									</li>
+									<li class="soldOut">
+										<input type="radio" value="" class="option" id="select1_2" name="select1">
+										<label for="select1_2">
+											<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+										</label>
+										<span class="soldOutTxt">[일시품절]</span>
+										<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					shopping
+					<div class="inp_wrap">
+						<div class="inp_select2 pdtSelect">
+							<div class="selectBox">
+								<button class="title" type="button">옵션을 선택해주세요</button>
+								<ul class="selList">
+									<li>
+										<input type="radio" value="" class="option" id="select1_1" name="select1">
+										<label for="select1_1">
+											<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip03.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+										</label>
+									</li>
+									<li class="soldOut">
+										<input type="radio" value="" class="option" id="select1_2" name="select1">
+										<label for="select1_2">
+											<span class="selectColor colorShipM"><img src="../resources/web/images/temp/colorChip04.jpg"></span>벨벳 블러드 립-BE01 밀크티 필터
+										</label>
+										<span class="soldOutTxt">[일시품절]</span>
+										<button class="soldOutBtn btn_txt" type="button">입고알림신청</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</xmp>
+			</div>
+
+			<h3>Textarea</h3>
+			<div class="inp_wrap">
+				<div class="inp_textArea noCharCnt">
+					<textarea>Start typing...</textarea>
+				</div>
+				<p class="error">error message</p>
+			</div>
+			<div class="inp_wrap error">
+				<div class="inp_textArea noCharCnt">
+					<textarea>Start typing...</textarea>
+				</div>
+				<p class="error">error message</p>
+			</div>
+			<div class="inp_wrap">
+				<div class="inp_textArea">
+					<textarea>Start typing...</textarea>
+					<span class="charCnt">(<em>0</em>/500)</span>
+				</div>
+				<p class="error">error message</p>
+			</div>
+			<div class="inp_wrap error">
+				<div class="inp_textArea">
+					<textarea>Start typing...</textarea>
+					<span class="charCnt">(<em>0</em>/500)</span>
+				</div>
+				<p class="error">error message</p>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					basic
+					<div class="inp_wrap">
+						<div class="inp_textArea noCharCnt">
+							<textarea>Start typing...</textarea>
+						</div>
+						<p class="error">error message</p>
+					</div>
+					error
+					<div class="inp_wrap error">
+						<div class="inp_textArea noCharCnt">
+							<textarea>Start typing...</textarea>
+						</div>
+						<p class="error">error message</p>
+					</div>
+					lengthCheck
+					<div class="inp_wrap">
+						<div class="inp_textArea">
+							<textarea>Start typing...</textarea>
+							<span class="charCnt">(<em>0</em>/500)</span>
+						</div>
+						<p class="error">error message</p>
+					</div>
+					lengthCheck error
+					<div class="inp_wrap error">
+						<div class="inp_textArea">
+							<textarea>Start typing...</textarea>
+							<span class="charCnt">(<em>0</em>/500)</span>
+						</div>
+						<p class="error">error message</p>
+					</div>
+				</xmp>
+			</div>
+
+			<h3>etc</h3>
+			<div class="inp_wrap inp_email">
+				<div class="inp_text">
+					<label class="inp_lab" for="user_email">이메일</label>
+					<input type="email" name="" id="user_email">
+				</div>
+				<span class="hyphen">@</span>
+				<div class="inp_select">
+					<select name="" id="">
+						<option value="">naver.com</option>
+						<option value="">nate.com</option>
+						<option value="">직접입력</option>
+					</select>
+				</div>
+				<div class="inp_text email_input">
+					<input type="email" title="이메일 직접입력">
+				</div>
+				<a href="#none" class="btn btnSizeM btnColorB btnTypeB"><span class="fs13">중복확인</span></a>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="inp_wrap inp_email">
+						<div class="inp_text">
+							<label class="inp_lab" for="user_email">이메일</label>
+							<input type="email" name="" id="user_email">
+						</div>
+						<span class="hyphen">@</span>
+						<div class="inp_select">
+							<select name="" id="">
+								<option value="">naver.com</option>
+								<option value="">nate.com</option>
+								<option value="">직접입력</option>
+							</select>
+						</div>
+						<div class="inp_text email_input">
+							<input type="email" title="이메일 직접입력">
+						</div>
+						<a href="#none" class="btn btnSizeM btnColorB btnTypeB"><span class="fs13">중복확인</span></a>
+					</div>					
+				</xmp>
+			</div>
+			<div class="inp_wrap inp_post">
+				<div class="inp_text post_num"><!-- 우편번호 입력후 active 추가 -->
+					<label class="inp_lab" for="user_addr1">(선택) 우편번호 입력</label>
+					<input type="number" name="" id="user_addr1" disabled>
+					<a href="#none" class="btn btnSizeM btnColorB btnTypeB"><span class="fs13">우편번호 찾기</span></a>
+				</div>
+				<div class="inp_text mgt21"><!-- 기본주소 입력후 active 추가 -->
+					<label class="inp_lab" for="user_addr2">기본주소 선택</label>
+					<input type="email" name="" id="user_addr2" disabled>
+				</div>
+				<div class="inp_text mgt21">
+					<label class="inp_lab" for="user_addr3">상세주소 입력</label>
+					<input type="text" name="" id="user_addr3">
+				</div>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">					
+					<div class="inp_wrap inp_post">
+						<div class="inp_text"><!-- 우편번호 입력후 active 추가 -->
+							<label class="inp_lab" for="user_addr1">(선택) 우편번호 입력</label>
+							<input type="number" name="" id="user_addr1" disabled>
+						</div>
+						<a href="#none" class="btn btnSizeM btnColorB btnTypeB"><span class="fs13">우편번호 찾기</span></a>
+						<div class="inp_text mgt21"><!-- 기본주소 입력후 active 추가 -->
+							<label class="inp_lab" for="user_addr2">기본주소 선택</label>
+							<input type="email" name="" id="user_addr2" disabled>
+						</div>
+						<div class="inp_text mgt21">
+							<label class="inp_lab" for="user_addr3">상세주소 입력</label>
+							<input type="text" name="" id="user_addr3">
+						</div>
+					</div>
+				</xmp>
+			</div>
+		</div>
+		<style>
+			#form > div {margin-top:20px;}
+		</style>
+
+		<div id="tab" class="conP">
+			<h2>Tab</h2>
+			<h3>tabStyle1</h3>
+			<p class="note">탭의 갯수 만큼 length갯수 클래스를 추가</p>
+			<div class="tabType tabType1 length3">
+				<ul>
+					<li><a href="#none" class="current"><span>TAB1</span></a></li>
+					<li><a href="#none"><span>TAB2</span></a></li>
+					<li><a href="#none"><span>TAB3</span></a></li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="tabType tabType1 length3">
+						<ul>
+							<li><a href="#none" class="current"><span>TAB1</span></a></li>
+							<li><a href="#none"><span>TAB2</span></a></li>
+							<li><a href="#none"><span>TAB3</span></a></li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+			<h3>tabStyle2</h3>
+			<div class="tabType tabType2">
+				<ul>
+					<li><a href="#none" class="current">클렌징</a></li>
+					<li><a href="#none">스킨케어</a></li>
+					<li><a href="#none">마스크/팩</a></li>
+					<li><a href="#none">선케어</a></li>
+					<li><a href="#none">베이스 메이크업</a></li>
+					<li><a href="#none">아이 메이크업</a></li>
+					<li><a href="#none">베이스 메이크업</a></li>
+					<li><a href="#none">바디케어</a></li>
+					<li><a href="#none">미용소품</a></li>
+					<li><a href="#none">온라인 전용 세트</a></li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="tabType tabType2">
+						<ul>
+							<li><a href="#none" class="current">클렌징</a></li>
+							<li><a href="#none">스킨케어</a></li>
+							<li><a href="#none">마스크/팩</a></li>
+							<li><a href="#none">선케어</a></li>
+							<li><a href="#none">베이스 메이크업</a></li>
+							<li><a href="#none">아이 메이크업</a></li>
+							<li><a href="#none">베이스 메이크업</a></li>
+							<li><a href="#none">바디케어</a></li>
+							<li><a href="#none">미용소품</a></li>
+							<li><a href="#none">온라인 전용 세트</a></li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+
+			<h3>tabType :No Link</h3>
+			<div class="tabType tabType1 length3 no_link">
+				<ul>
+					<li><a href="#none" class="current"><span>TAB1</span></a></li>
+					<li><a href="#none"><span>TAB2</span></a></li>
+					<li><a href="#none"><span>TAB3</span></a></li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="tabType tabType1 length3 no_link">
+						<ul>
+							<li><a href="#none" class="current"><span>TAB1</span></a></li>
+							<li><a href="#none"><span>TAB2</span></a></li>
+							<li><a href="#none"><span>TAB3</span></a></li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+
+			<h3>tabType :Switch</h3>
+			<div class="tabType tabType1 length4 switch" id="guideTab"><!-- id = 공통 VIEW CLASS -->
+				<ul>
+					<li><a href="#guideTab1" class="current"><span>TAB1</span></a></li>
+					<li><a href="#guideTab2"><span>TAB2</span></a></li>
+					<li><a href="#guideTab3"><span>TAB3</span></a></li>
+					<li><a href="#guideTab4"><span>TAB4</span></a></li>
+				</ul>
+			</div>
+			<div class="guideTab" id="guideTab1">
+				TAB1 CON
+			</div>
+			<div class="guideTab" id="guideTab2">
+				TAB2 CON
+			</div>
+			<div class="guideTab" id="guideTab3">
+				TAB3 CON
+			</div>
+			<div class="guideTab" id="guideTab4">
+				TAB4 CON
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="tabType tabType1 length4 switch" id="guideTab"><!-- id = 공통 VIEW CLASS -->
+						<ul>
+							<li><a href="#guideTab1" class="current"><span>TAB1</span></a></li>
+							<li><a href="#guideTab2"><span>TAB2</span></a></li>
+							<li><a href="#guideTab3"><span>TAB3</span></a></li>
+							<li><a href="#guideTab4"><span>TAB4</span></a></li>
+						</ul>
+					</div>
+					<div class="guideTab" id="guideTab1">
+						TAB1 CON
+					</div>
+					<div class="guideTab" id="guideTab2">
+						TAB2 CON
+					</div>
+					<div class="guideTab" id="guideTab3">
+						TAB3 CON
+					</div>
+					<div class="guideTab" id="guideTab4">
+						TAB4 CON
+					</div>
+				</xmp>
+			</div>
+
+			<h3>tabType :Scroll</h3>
+			<div class="tabType tabType1 length3 scroll">
+				<ul>
+					<li><a href="#guideTab5" class="current">Description</a></li>
+					<li><a href="#guideTab6">How to use</a></li>
+					<li><a href="#guideTab7">Ingredients</a></li>
+				</ul>
+			</div>
+			<div id="guideTab5">
+				Description
+			</div>
+			<div id="guideTab6">
+				How to use
+			</div>
+			<div id="guideTab7">
+				Ingredients
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="tabType tabType1 length3 scroll">
+						<ul>
+							<li><a href="#guideTab5" class="current">Description</a></li>
+							<li><a href="#guideTab6">How to use</a></li>
+							<li><a href="#guideTab7">Ingredients</a></li>
+						</ul>
+					</div>
+					<div id="guideTab5">
+						Description
+					</div>
+					<div id="guideTab6">
+						How to use
+					</div>
+					<div id="guideTab7">
+						Ingredients
+					</div>
+				</xmp>
+			</div>
+		</div>
+		<style type="text/css">
+			.guideTab{display:none; width:100%; line-height:300px; margin-top:10px; text-align:center; font-size:40px; color:#000;}
+			#guideTab1{border:3px solid #f6eee6; display:block;}
+			#guideTab2{border:3px solid #c2cabe;}
+			#guideTab3{border:3px solid #83a48a;}
+			#guideTab4{border:3px solid #41695e;}
+			#guideTab5{width:100%; margin-top:10px; text-align:center; font-size:40px; line-height:300px; color:#000; border:3px solid #767676;}
+			#guideTab6{width:100%; margin-top:10px; text-align:center; font-size:40px; line-height:300px; color:#000; border:3px solid #83a48a;}
+			#guideTab7{width:100%; margin-top:10px; text-align:center; font-size:40px; line-height:300px; color:#000; border:3px solid #024137;}
+		</style>
+
+		<div id="title" class="conP">
+			<h2>Title</h2>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+				</xmp>
+			</div>			
+		</div>
+
+		<div id="noData" class="conP">
+			<h2>No Data</h2>
+			<div class="noData">
+				<span>선택하신 속성에 대한 검색결과가 없습니다.<br> 다른 옵션을 선택해보세요.</span>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="noData">
+						<span>선택하신 속성에 대한 검색결과가 없습니다.<br> 다른 옵션을 선택해보세요.</span>
+					</div>
+				</xmp>
+			</div>
+		</div>
+
+		<div id="table" class="conP">
+			<h2>table - type1</h2>
+			<ul class="tbl_tpye01 js_acoBox">
+				<li class="js_acoList">
+					<dl>
+						<dt>
+							<span class="cmt mgb5">회원정보</span>
+							<p class="ttl"><a href="javascript:void(0)" class="js_acoLink">개인정보 변경은 어떻게 하나요?</a></p>
+						</dt>
+						<dd>
+							<div class="ctt js_acoCon"><div>비회원으로도 구매가 가능합니다. 하지만 비회원 구매 시 쇼핑몰 각종 이벤트 혜택을 받으실 수 없습니다. 추후 적립도 불가합니다. 참고부탁드립니다.</div></div>
+						</dd>
+					</dl>
+				</li>
+				<li class="js_acoList">
+					<dl>
+						<dt>
+							<span class="cmt mgb5">회원정보</span>
+							<p class="ttl"><a href="javascript:void(0)" class="js_acoLink">개인정보 변경은 어떻게 하나요?</a></p>
+						</dt>
+						<dd>
+							<div class="ctt js_acoCon"><div>비회원으로도 구매가 가능합니다. 하지만 비회원 구매 시 쇼핑몰 각종 이벤트 혜택을 받으실 수 없습니다. 추후 적립도 불가합니다. 참고부탁드립니다.</div></div>
+						</dd>
+					</dl>
+				</li>
+				<li class="js_acoList">
+					<div class="noData">
+						<span>검색된 결과가 없습니다.</span>
+					</div>
+				</li>
+			</ul>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<ul class="tbl_tpye01 js_acoBox">
+						<li class="js_acoList">
+							<dl>
+								<dt>
+									<span class="cmt mgb5">회원정보</span>
+									<p class="ttl"><a href="javascript:void(0)" class="js_acoLink">개인정보 변경은 어떻게 하나요?</a></p>
+								</dt>
+								<dd>
+									<div class="ctt js_acoCon"><div>비회원으로도 구매가 가능합니다. 하지만 비회원 구매 시 쇼핑몰 각종 이벤트 혜택을 받으실 수 없습니다. 추후 적립도 불가합니다. 참고부탁드립니다.</div></div>
+								</dd>
+							</dl>
+						</li>
+						<li class="js_acoList">
+							<dl>
+								<dt>
+									<span class="cmt mgb5">회원정보</span>
+									<p class="ttl"><a href="javascript:void(0)" class="js_acoLink">개인정보 변경은 어떻게 하나요?</a></p>
+								</dt>
+								<dd>
+									<div class="ctt js_acoCon"><div>비회원으로도 구매가 가능합니다. 하지만 비회원 구매 시 쇼핑몰 각종 이벤트 혜택을 받으실 수 없습니다. 추후 적립도 불가합니다. 참고부탁드립니다.</div></div>
+								</dd>
+							</dl>
+						</li>
+						<li class="js_acoList">
+							<div class="noData">
+								<span>검색된 결과가 없습니다.</span>
+							</div>
+						</li>
+					</ul>
+				</xmp>
+			</div>
+			<h2>table - type2</h2>
+			<ul class="tbl_tpye02 js_acoBox">
+				<li class="js_acoList">
+					<dl>
+						<dt>
+							<p class="cate">이벤트/사은품/할인 문의</p>
+							<p class="ttl"><a href="javascript:void(0)" class="js_acoLink userOn lock">비밀글 입니다.</a></p><!-- 내가 작성한 게시물일 경우 userOn 클래스 추가, 비밀글일 경우 클래스 lock 클래스 추가 -->
+							<div class="userData">
+								<span class="name">sun****</span>
+								<span class="date">2019.10.25</span>
+								<span class="reply">답변대기</span>
+							</div>
+							<!-- 내가 작성한 게시물일 경우 추가 s -->
+							<div class="editOn"><a href="javascript:boid(0)">수정</a>	<a href="javascript:boid(0)">삭제</a></div>
+							<!-- 내가 작성한 게시물일 경우 추가 e -->
+							<div class="arrow"><span class="hide">닫힘</span></div>
+						</dt>
+						<dd>
+							<div class="ctt js_acoCon">
+								<div>
+									<div class="userCtt"><span>질문</span>[기타문의] 주문했습니다. 최근에 만들어진 제품으로 부탁드립니다 감사합니다</div>
+									<div class="replyCtt">
+										<div><span>답변</span>2019.10.22</div>
+										<p>고객님 안녕하세요. 네 아침 저녁으로 사용해주셔도 됩니다. 저녁엔 두번 덧발라 수면팩으로도 사용해주시면 좋습니다. 감사합니다.</p>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+				</li>
+				<li class="js_acoList">
+					<dl>
+						<dt>
+							<p class="cate">이벤트/사은품/할인 문의</p>
+							<p class="ttl"><a href="javascript:void(0)" class="js_acoLink">비밀글 입니다.</a></p>
+							<div class="userData">
+								<span class="name">sun****</span>
+								<span class="date">2019.10.25</span>
+								<span class="reply off">답변처리중</span>
+							</div>
+							<div class="arrow"><span class="hide">닫힘</span></div>
+						</dt>
+						<dd>
+							<div class="ctt js_acoCon">
+								<div>
+									<div class="userCtt"><span>질문</span>[기타문의] 주문했습니다. 최근에 만들어진 제품으로 부탁드립니다 감사합니다</div>
+									<div class="replyCtt">
+										<div><span>답변</span>2019.10.22</div>
+										<p>고객님 안녕하세요. 네 아침 저녁으로 사용해주셔도 됩니다. 저녁엔 두번 덧발라 수면팩으로도 사용해주시면 좋습니다. 감사합니다.</p>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+				</li>
+				<li class="js_acoList">
+					<dl>
+						<dt>
+							<p class="cate">이벤트/사은품/할인 문의</p>
+							<p class="ttl"><a href="javascript:void(0)" class="js_acoLink">비밀글 입니다.</a></p>
+							<div class="userData">
+								<span class="name">sun****</span>
+								<span class="date">2019.10.25</span>
+								<span class="reply on">답변완료</span>
+							</div>
+							<div class="arrow"><span class="hide">닫힘</span></div>
+						</dt>
+						<dd>
+							<div class="ctt js_acoCon">
+								<div>
+									<div class="userCtt"><span>질문</span>[기타문의] 주문했습니다. 최근에 만들어진 제품으로 부탁드립니다 감사합니다</div>
+									<div class="replyCtt">
+										<div><span>답변</span>2019.10.22</div>
+										<p>고객님 안녕하세요. 네 아침 저녁으로 사용해주셔도 됩니다. 저녁엔 두번 덧발라 수면팩으로도 사용해주시면 좋습니다. 감사합니다.</p>
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+				</li>
+				<li class="js_acoList">
+					<div class="noData">
+						<span>검색된 결과가 없습니다.</span>
+					</div>
+				</li>
+			</ul>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<ul class="tbl_tpye02 js_acoBox">
+						<li class="js_acoList">
+							<dl>
+								<dt>
+									<p class="cate">이벤트/사은품/할인 문의</p>
+									<p class="ttl"><a href="javascript:void(0)" class="js_acoLink userOn lock">비밀글 입니다.</a></p><!-- 내가 작성한 게시물일 경우 userOn 클래스 추가, 비밀글일 경우 클래스 lock 클래스 추가 -->
+									<div class="userData">
+										<span class="name">sun****</span>
+										<span class="date">2019.10.25</span>
+										<span class="reply">답변대기</span>
+									</div>
+									<!-- 내가 작성한 게시물일 경우 추가 s -->
+									<div class="editOn"><a href="javascript:boid(0)">수정</a>	<a href="javascript:boid(0)">삭제</a></div>
+									<!-- 내가 작성한 게시물일 경우 추가 e -->
+									<div class="arrow"><span class="hide">닫힘</span></div>
+								</dt>
+								<dd>
+									<div class="ctt js_acoCon">
+										<div>
+											<div class="userCtt"><span>질문</span>[기타문의] 주문했습니다. 최근에 만들어진 제품으로 부탁드립니다 감사합니다</div>
+											<div class="replyCtt">
+												<div><span>답변</span>2019.10.22</div>
+												<p>고객님 안녕하세요. 네 아침 저녁으로 사용해주셔도 됩니다. 저녁엔 두번 덧발라 수면팩으로도 사용해주시면 좋습니다. 감사합니다.</p>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="js_acoList">
+							<dl>
+								<dt>
+									<p class="cate">이벤트/사은품/할인 문의</p>
+									<p class="ttl"><a href="javascript:void(0)" class="js_acoLink">비밀글 입니다.</a></p>
+									<div class="userData">
+										<span class="name">sun****</span>
+										<span class="date">2019.10.25</span>
+										<span class="reply off">답변처리중</span>
+									</div>
+									<div class="arrow"><span class="hide">닫힘</span></div>
+								</dt>
+								<dd>
+									<div class="ctt js_acoCon">
+										<div>
+											<div class="userCtt"><span>질문</span>[기타문의] 주문했습니다. 최근에 만들어진 제품으로 부탁드립니다 감사합니다</div>
+											<div class="replyCtt">
+												<div><span>답변</span>2019.10.22</div>
+												<p>고객님 안녕하세요. 네 아침 저녁으로 사용해주셔도 됩니다. 저녁엔 두번 덧발라 수면팩으로도 사용해주시면 좋습니다. 감사합니다.</p>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="js_acoList">
+							<dl>
+								<dt>
+									<p class="cate">이벤트/사은품/할인 문의</p>
+									<p class="ttl"><a href="javascript:void(0)" class="js_acoLink">비밀글 입니다.</a></p>
+									<div class="userData">
+										<span class="name">sun****</span>
+										<span class="date">2019.10.25</span>
+										<span class="reply on">답변완료</span>
+									</div>
+									<div class="arrow"><span class="hide">닫힘</span></div>
+								</dt>
+								<dd>
+									<div class="ctt js_acoCon">
+										<div>
+											<div class="userCtt"><span>질문</span>[기타문의] 주문했습니다. 최근에 만들어진 제품으로 부탁드립니다 감사합니다</div>
+											<div class="replyCtt">
+												<div><span>답변</span>2019.10.22</div>
+												<p>고객님 안녕하세요. 네 아침 저녁으로 사용해주셔도 됩니다. 저녁엔 두번 덧발라 수면팩으로도 사용해주시면 좋습니다. 감사합니다.</p>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li class="js_acoList">
+							<div class="noData">
+								<span>검색된 결과가 없습니다.</span>
+							</div>
+						</li>
+					</ul>
+				</xmp>
+			</div>
+
+
+		</div>
+
+		<div id="list" class="conP">
+			<h2>Product List</h2>
+			<h3>pdt_list1</h3>
+			<div class="pdt_list1">
+				<ul class="list_box">
+					<li>
+						<div class="pdtImg">
+							<ul class="pdt_type">
+								<li class="bg_p">NEW</li>
+								<li class="bg_p">BEST</li>
+								<li class="bg_p">한정판</li>
+								<li class="bg_r">SALE</li>
+								<li class="bg_r">FREE</li>
+								<li class="bg_r">GIFT</li>
+							</ul>
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+							<!-- 품절일경우 추가 -->
+							<div class="pdtState">
+								<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn_stock"><span>입고알림</span></a>
+							</div>
+							<!-- //품절일경우 추가 -->
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtBrand">바닐라코</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+							<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+					</li>
+					<li class="promoType">
+						<div class="pdtImg">
+							<ul class="pdt_type">
+								<li class="bg_p">NEW</li>
+								<li class="bg_p">BEST</li>
+								<li class="bg_p">한정판</li>
+								<li class="bg_r">SALE</li>
+								<li class="bg_r">FREE</li>
+								<li class="bg_r">GIFT</li>
+							</ul>
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img2.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+							<!-- 품절일경우 추가 -->
+							<div class="pdtState">
+								<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn_stock"><span>입고알림</span></a>
+							</div>
+							<!-- //품절일경우 추가 -->
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtBrand">바닐라코</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+							<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+				<div class="pdt_list1">
+					<ul class="list_box">
+						<li>
+							<div class="pdtImg">
+								<ul class="pdt_type">
+									<li class="bg_p">NEW</li>
+									<li class="bg_p">BEST</li>
+									<li class="bg_p">한정판</li>
+									<li class="bg_r">SALE</li>
+									<li class="bg_r">FREE</li>
+									<li class="bg_r">GIFT</li>
+								</ul>
+								<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								<!-- 품절일경우 추가 -->
+								<div class="pdtState">
+									<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn_stock"><span>입고알림</span></a>
+								</div>
+								<!-- //품절일경우 추가 -->
+							</div>
+							<div class="pdtTxt">
+								<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+								<p class="pdtBrand">바닐라코</p>
+								<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+								<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+								<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+								<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+							</div>
+							<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+							<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+						</li>
+						<li class="promoType">
+							<div class="pdtImg">
+								<ul class="pdt_type">
+									<li class="bg_p">NEW</li>
+									<li class="bg_p">BEST</li>
+									<li class="bg_p">한정판</li>
+									<li class="bg_r">SALE</li>
+									<li class="bg_r">FREE</li>
+									<li class="bg_r">GIFT</li>
+								</ul>
+								<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img2.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								<!-- 품절일경우 추가 -->
+								<div class="pdtState">
+									<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn_stock"><span>입고알림</span></a>
+								</div>
+								<!-- //품절일경우 추가 -->
+							</div>
+							<div class="pdtTxt">
+								<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+								<p class="pdtBrand">바닐라코</p>
+								<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+								<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+								<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+								<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+							</div>
+							<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+							<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+						</li>
+					</ul>
+				</div>
+				</xmp>
+			</div>
+			<h3>pdt_list1 - type02</h3>			
+			<div class="pdt_list1 type02">
+				<ul class="list_box">
+					<li>
+						<div class="pdtImg">
+							<ul class="pdt_type">
+								<li class="bg_p">NEW</li>
+								<li class="bg_p">BEST</li>
+								<li class="bg_p">한정판</li>
+								<li class="bg_r">SALE</li>
+								<li class="bg_r">FREE</li>
+								<li class="bg_r">GIFT</li>
+							</ul>
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img3.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+							<!-- 품절일경우 추가 -->
+							<div class="pdtState">
+								<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn_stock"><span>입고알림</span></a>
+							</div>
+							<!-- //품절일경우 추가 -->
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtBrand">바닐라코</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+							<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img3.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtBrand">바닐라코</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+							<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img3.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtBrand">바닐라코</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+							<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					pdt_list1 - type02
+					<div class="pdt_list1 type02">
+						<ul class="list_box">
+							<li>
+								<div class="pdtImg">
+									<ul class="pdt_type">
+										<li class="bg_p">NEW</li>
+										<li class="bg_p">BEST</li>
+										<li class="bg_p">한정판</li>
+										<li class="bg_r">SALE</li>
+										<li class="bg_r">FREE</li>
+										<li class="bg_r">GIFT</li>
+									</ul>
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img3.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+									<!-- 품절일경우 추가 -->
+									<div class="pdtState">
+										<a href="javascript:void(0);" onclick="showLayer('stockAlt');" class="btn_stock"><span>입고알림</span></a>
+									</div>
+									<!-- //품절일경우 추가 -->
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtBrand">바닐라코</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+									<!-- <p class="pdtPrice"><span class="soldOut">일시품절</span></p> -->
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+							</li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+			<h3>pdt_list1 - bestTtl</h3>
+			<div class="pdt_bestTtl"><p>모두의 취향 TOP 11</p><span>최근 한주간 가장 많이 판매된 제품입니다.</span></div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="pdt_bestTtl"><p>모두의 취향 TOP 11</p><span>최근 한주간 가장 많이 판매된 제품입니다.</span></div>
+				</xmp>
+			</div>
+			<h3>pdt_list1 - type03</h3>
+			<div class="pdt_list1 type03">
+				<ul class="list_box">
+					<li>
+						<div class="bestMark"><span>BEST <span>1</span></span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<div class="pdtReview"><div class="js_rating ratingM"><span>4.5</span></div><span class="text">4.5</span> <span class="count">/ 18개의 리뷰</span></div>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="bestMark"><span>BEST <span>2</span></span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="bestMark"><span>BEST <span>3</span></span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="pdt_list1 type03">
+						<ul class="list_box">
+							<li>
+								<div class="bestMark"><span>BEST <span>1</span></span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<div class="pdtReview"><div class="js_rating ratingM"><span>4.5</span></div><span class="text">4.5</span> <span class="count">/ 18개의 리뷰</span></div>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="bestMark"><span>BEST <span>2</span></span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="bestMark"><span>BEST <span>3</span></span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+							</li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+			<h3>pdt_list1 - type04</h3>
+			<div class="pdt_list1 tpye04">
+				<ul class="list_box">
+					<li>
+						<div class="cateMark cleansing"><span>클렌징</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark skinCare"><span>스킨케어</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark maskPack"><span>마스크/팩</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark SunCare"><span>썬케어</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark Base"><span>베이스 메이크업</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark Lip"><span>립 메이크업</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark Eye"><span>아이 메이크업</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark face"><span>페이스 메이크업</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark bodyCare"><span>바디케어</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark BeautyAcces"><span>미용소품</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li>
+						<div class="cateMark onlineOnly"><span>온라인 전용세트</span></div>
+						<div class="pdtImg">
+							<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+						</div>
+						<div class="pdtTxt">
+							<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+							<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+						</div>
+						<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+						<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+					</li>
+					<li class="notPdt"><a href="javascript:void(0)" style="background-image:url('../resources/mobile/images/temp/bestpdt_banner.jpg')"></a></li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="pdt_list1 tpye04">
+						<ul class="list_box">
+							<li>
+								<div class="cateMark cleansing"><span>클렌징</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark skinCare"><span>스킨케어</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark maskPack"><span>마스크/팩</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark SunCare"><span>썬케어</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark Base"><span>베이스 메이크업</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark Lip"><span>립 메이크업</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark Eye"><span>아이 메이크업</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark face"><span>페이스 메이크업</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark bodyCare"><span>바디케어</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark BeautyAcces"><span>미용소품</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li>
+								<div class="cateMark onlineOnly"><span>온라인 전용세트</span></div>
+								<div class="pdtImg">
+									<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+								</div>
+								<div class="pdtTxt">
+									<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+									<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<div class="pdtReview">4.5 <span class="count">(리뷰 18)</span></div>
+								</div>
+								<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+								<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+							</li>
+							<li class="notPdt"><a href="javascript:void(0)" style="background-image:url('../resources/mobile/images/temp/bestpdt_banner.jpg')"></a></li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+			<h3>pdt_list1 - type05</h3>
+			<div class="pdt_list1 tpye05">
+				<ul class="list_box">
+					<li>
+						<div class="awardPdt">
+							<div class="bestMark"><span>클렌징 부분 위너 8관왕</span></div>
+							<div class="pdtImg">
+								<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+							</div>
+							<div class="pdtTxt">
+								<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+								<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+								<div class="pdtReview"><div class="js_rating ratingM"><span>4.5</span></div><span class="text">4.5</span> <span class="count">/ 18개의 리뷰</span></div>
+								<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							</div>
+							<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+							<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+						</div>
+						<ul class="awardsCtt">
+							<li><img src="../resources/mobile/images/shopping/Awards_logo01.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo02.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo03.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo04.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo05.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo06.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo07.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo08.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo09.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo10.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+							<li><img src="../resources/mobile/images/shopping/Awards_logo11.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="awardPdt">
+							<div class="bestMark"><span>클렌징 부분 위너 8관왕</span></div>
+							<div class="pdtImg">
+								<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+							</div>
+							<div class="pdtTxt">
+								<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+								<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+								<div class="pdtReview"><div class="js_rating ratingM"><span>4.5</span></div><span class="text">4.5</span> <span class="count">/ 18개의 리뷰</span></div>
+								<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							</div>
+							<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+							<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="pdt_list1 tpye05">
+						<ul class="list_box">
+							<li>
+								<div class="awardPdt">
+									<div class="bestMark"><span>클렌징 부분 위너 8관왕</span></div>
+									<div class="pdtImg">
+										<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+									</div>
+									<div class="pdtTxt">
+										<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+										<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+										<div class="pdtReview"><div class="js_rating ratingM"><span>4.5</span></div><span class="text">4.5</span> <span class="count">/ 18개의 리뷰</span></div>
+										<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									</div>
+									<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+									<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+								</div>
+								<ul class="awardsCtt">
+									<li><img src="../resources/mobile/images/shopping/Awards_logo01.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo02.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo03.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo04.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo05.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo06.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo07.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo08.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo09.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo10.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+									<li><img src="../resources/mobile/images/shopping/Awards_logo11.png" alt=""><p>2019 화해 신제품 어워드 파운데이션 부문 1위</p></li>
+								</ul>
+							</li>
+							<li>
+								<div class="awardPdt">
+									<div class="bestMark"><span>클렌징 부분 위너 8관왕</span></div>
+									<div class="pdtImg">
+										<a href="#none" class="imgLink"><img src="../resources/mobile/images/temp/pdt_img1.png" alt="바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널"></a>
+									</div>
+									<div class="pdtTxt">
+										<p class="pdtHead" style="color:#4f8ffa;">10% OFF</p>
+										<p class="pdtName"><a href="#none">바닐라 바닐라 바닐라클린 잇 제로 클렌징 밤 오리지널</a></p>
+										<div class="pdtReview"><div class="js_rating ratingM"><span>4.5</span></div><span class="text">4.5</span> <span class="count">/ 18개의 리뷰</span></div>
+										<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									</div>
+									<a href="javascript:void(0);" onclick="jsShopFloating('like_floating');" class="btn_like likeM"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+									<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart cartM"><span class="hide">장바구니</span></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+
+
+
+
+			<h3>pdt_list2</h3>
+			<div class="pdt_list2">
+				<ul class="list_box">
+					<li>
+						<a href="#none" class="pdtImg">
+							<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+							<div class="soldOut">일시품절</div>
+						</a>
+						<div class="pdtTxt">
+							<p class="pdtBrand">비바이바닐라</p>
+							<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like on"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+							<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+						</div>
+					</li>
+					<li>
+						<a href="#none" class="pdtImg">
+							<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+							<div class="soldOut">일시품절</div>
+						</a>
+						<div class="pdtTxt">
+							<p class="pdtBrand">비바이바닐라</p>
+							<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+							<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+							<a href="javascript:void(0);" onclick="jsShopFloating('like_floating', this)" class="btn_like"><span class="hide">찜하기</span></a><!-- 좋아요 선택시 class on 추가 -->
+							<a href="javascript:void(0);" onclick="jsShopFloating('cart_floating');" class="btn_cart"><span class="hide">장바구니</span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="pdt_list2 mgt20">
+						<ul class="list_box">
+							<li>
+								<a href="#none" class="pdtImg">
+									<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+									<div class="soldOut">일시품절</div>
+								</a>
+								<div class="pdtTxt">
+									<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em></p>
+									<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeS"><span class="hide">찜하기</span></a>
+									<a href="javascript:void(0)" onclick="jsShopFloating('cart_floating');" class="btn_cart cartS"><span class="hide">장바구니</span></a>
+								</div>
+							</li>
+							<li>
+								<a href="#none" class="pdtImg">
+									<img src="../resources/web/images/temp/pdt_img1.png" alt="클린 잇 제로 클렌징 밤 오리지널">
+								</a>
+								<div class="pdtTxt">
+									<p class="pdtName"><a href="#none">클린 잇 제로 클렌징 밤 오리지널</a></p>
+									<p class="pdtPrice">25,200<em>원</em></p>
+									<a href="javascript:void(0)" onclick="jsShopFloating('like_floating');" class="btn_like likeS"><span class="hide">찜하기</span></a>
+									<a href="javascript:void(0)" onclick="jsShopFloating('cart_floating');" class="btn_cart cartS"><span class="hide">장바구니</span></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+			<h3>review list 1</h3>
+			<div class="reviewListBox">
+				<ul>
+					<li>
+						<div class="reviewInfo">
+							<div class="userInfo">
+								<p class="userAcnt"><span class="userName">ihkim****</span><span class="userRank userLv1">VIP</span><!-- 기본등급 userLv1 ~ 최고등급 userLv4 --></p>
+								<p class="dftPoint"><span>30대</span><span>여성</span></p>
+							</div>
+							<div class="gradeStar js_rating ratingL"><span>4.5</span></div>
+						</div>
+						<div class="reviewBox">
+							<div class="reviewImg">
+								<ul>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></li>
+								</ul>
+							</div>
+							<p class="reviewTtl"><span class="BestIco typeM">BEST</span>가을 피부관리에는 고민없이 늘 사용하던 클린 잇 제로!</p>
+							<div class="js_acoCtt" data-line="3"><div>늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.</div></div>
+							<a href="javascript:void(0)" class="js_acoMore">더보기</a>
+							<div class="userPointBox">
+								<div class="userPoint">
+									<span>순해요</span><span>순해요</span><span>순해요</span><span>순해요</span>											
+								</div>
+								<div class="reviewDate">2019.05.05</div>
+							</div>
+							<div class="skinProfile">
+								<em>피부 프로필</em>
+								<span>복합성</span>
+								<span>어두운 노란톤</span>
+								<span>수분충전</span>
+								<span>영양공급</span>
+								<span>트러블 케어</span>
+								<span>복합성</span>
+								<span>어두운 노란톤</span>
+								<span>수분충전</span>
+								<span>영양공급</span>
+								<span>트러블 케어</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="reviewInfo">
+							<div class="userInfo">
+								<p class="userAcnt"><span class="userName">ihkim****</span><span class="userRank userLv1">VIP</span><!-- 기본등급 userLv1 ~ 최고등급 userLv4 --></p>
+								<p class="dftPoint"><span>30대</span><span>여성</span></p>
+							</div>
+							<div class="gradeStar js_rating ratingL"><span>4.5</span></div>
+						</div>
+						<div class="reviewBox">
+							<div class="reviewImg">
+								<ul>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></li>
+									<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></li>
+								</ul>
+							</div>
+							<p class="reviewTtl"><span class="BestIco typeM">BEST</span>가을 피부관리에는 고민없이 늘 사용하던 클린 잇 제로!</p>
+							<div class="js_acoCtt" data-line="3"><div>늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.</div></div>
+							<a href="javascript:void(0)" class="js_acoMore">더보기</a>
+							<div class="userPointBox">
+								<div class="userPoint">
+									<span>순해요</span><span>순해요</span><span>순해요</span><span>순해요</span>											
+								</div>
+								<div class="reviewDate">2019.05.05</div>
+							</div>
+							<div class="skinProfile">
+								<em>피부 프로필</em>
+								<span>복합성</span>
+								<span>어두운 노란톤</span>
+								<span>수분충전</span>
+								<span>영양공급</span>
+								<span>트러블 케어</span>
+								<span>복합성</span>
+								<span>어두운 노란톤</span>
+								<span>수분충전</span>
+								<span>영양공급</span>
+								<span>트러블 케어</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="reviewListBox">
+						<ul>
+							<li>
+								<div class="reviewInfo">
+									<div class="userInfo">
+										<p class="userAcnt"><span class="userName">ihkim****</span><span class="userRank userLv1">VIP</span><!-- 기본등급 userLv1 ~ 최고등급 userLv4 --></p>
+										<p class="dftPoint"><span>30대</span><span>여성</span></p>
+									</div>
+									<div class="gradeStar js_rating ratingL"><span>4.5</span></div>
+								</div>
+								<div class="reviewBox">
+									<div class="reviewImg">
+										<ul>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></li>
+										</ul>
+									</div>
+									<p class="reviewTtl"><span class="BestIco typeM">BEST</span>가을 피부관리에는 고민없이 늘 사용하던 클린 잇 제로!</p>
+									<div class="js_acoCtt" data-line="3"><div>늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.</div></div>
+									<a href="javascript:void(0)" class="js_acoMore">더보기</a>
+									<div class="userPointBox">
+										<div class="userPoint">
+											<span>순해요</span><span>순해요</span><span>순해요</span><span>순해요</span>											
+										</div>
+										<div class="reviewDate">2019.05.05</div>
+									</div>
+									<div class="skinProfile">
+										<em>피부 프로필</em>
+										<span>복합성</span>
+										<span>어두운 노란톤</span>
+										<span>수분충전</span>
+										<span>영양공급</span>
+										<span>트러블 케어</span>
+										<span>복합성</span>
+										<span>어두운 노란톤</span>
+										<span>수분충전</span>
+										<span>영양공급</span>
+										<span>트러블 케어</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="reviewInfo">
+									<div class="userInfo">
+										<p class="userAcnt"><span class="userName">ihkim****</span><span class="userRank userLv1">VIP</span><!-- 기본등급 userLv1 ~ 최고등급 userLv4 --></p>
+										<p class="dftPoint"><span>30대</span><span>여성</span></p>
+									</div>
+									<div class="gradeStar js_rating ratingL"><span>4.5</span></div>
+								</div>
+								<div class="reviewBox">
+									<div class="reviewImg">
+										<ul>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></li>
+											<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></li>
+										</ul>
+									</div>
+									<p class="reviewTtl"><span class="BestIco typeM">BEST</span>가을 피부관리에는 고민없이 늘 사용하던 클린 잇 제로!</p>
+									<div class="js_acoCtt" data-line="3"><div>늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.</div></div>
+									<a href="javascript:void(0)" class="js_acoMore">더보기</a>
+									<div class="userPointBox">
+										<div class="userPoint">
+											<span>순해요</span><span>순해요</span><span>순해요</span><span>순해요</span>											
+										</div>
+										<div class="reviewDate">2019.05.05</div>
+									</div>
+									<div class="skinProfile">
+										<em>피부 프로필</em>
+										<span>복합성</span>
+										<span>어두운 노란톤</span>
+										<span>수분충전</span>
+										<span>영양공급</span>
+										<span>트러블 케어</span>
+										<span>복합성</span>
+										<span>어두운 노란톤</span>
+										<span>수분충전</span>
+										<span>영양공급</span>
+										<span>트러블 케어</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+		</div>
+
+		<div id="rating" class="conP">
+			<h2>Rating</h2>
+			<h3>SIZE M</h3>
+			<div class="js_rating ratingM"><span>3.5</span></div>
+			<h3>SIZE L</h3>
+			<div class="js_rating ratingL"><span>3.5</span></div>
+			<h3>Write Rating</h3>
+			<div class="js_rating js_userRating ratingL">
+				<span>2</span>
+				<div class="userRatingBox">
+					<button class="rating_1">1</button>
+					<button class="rating_2">2</button>
+					<button class="rating_3">3</button>
+					<button class="rating_4">4</button>
+					<button class="rating_5">5</button>
+				</div>
+			</div>
+
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					SIZE M
+					<div class="js_rating ratingM"><span>3.5</span></div>
+					SIZE L
+					<div class="js_rating ratingL"><span>3.5</span></div>
+					Write Rating
+					<div class="js_rating js_userRating ratingL">
+						<span>2</span>
+						<div class="userRatingBox">
+							<button class="rating_1">1</button>
+							<button class="rating_2">2</button>
+							<button class="rating_3">3</button>
+							<button class="rating_4">4</button>
+							<button class="rating_5">5</button>
+						</div>
+					</div>
+				</xmp>
+			</div>
+		</div>
+
+		<div id="slide" class="conP">
+			<h2>Slide</h2>
+			<h3>Slide</h3>
+			<div class="pdtSlide js_pdtSlide">
+				<div class="pdtSlideImg js_pdtSlideImg">
+					<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+
+
+					
+							<div class="pdtItem videoItem">
+								<!-- 200910 비디오 속성 muted autoplay playsinline 추가 -->
+								<video class="videoCtt" poster="https://www.banila.com/static/upload/product/product/165_ID0106_0.png" muted autoplay playsinline><source src="https://player.vimeo.com/external/403530205.sd.mp4?s=696a2cd1b279991660b618532f1f3a5c98f8a8fe&profile_id=165" type="video/mp4"></video>
+								<a href="javascript:void(0)" onclick="videoPlay(this)" class="playBtn"></a>
+								<!-- 200422 div 태그 추가 --><div class="pauseBtnBox"><a href="javascript:void(0)" onclick="videoPause(this)" class="pauseBtn"></a></div><!-- 200422 div 태그 추가 -->
+							</div>
+
+					<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+					<div class="pdtItem"><img src="../resources/web/images/temp/proImg02.png" alt=""></div>
+					<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+				</div>
+				<div class="pdtSlideDot js_pdtSlideDot">
+					<div><span class="currentSlide">1</span> / <span>5</span></div>
+				</div>
+			</div>
+
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+				<div class="pdtSlide js_pdtSlide">
+					<div class="pdtSlideImg js_pdtSlideImg">
+						<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+						<div class="pdtItem videoItem"><a href="javascript:void(0)"><img src="../resources/web/images/temp/proImg02.png" alt=""></a></div>
+						<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+						<div class="pdtItem"><img src="../resources/web/images/temp/proImg02.png" alt=""></div>
+						<div class="pdtItem"><img src="../resources/web/images/temp/proImg01.png" alt=""></div>
+					</div>
+					<div class="pdtSlideDot js_pdtSlideDot">
+						<div><span class="currentSlide">1</span> / <span>5</span></div>
+					</div>
+				</div>
+				</xmp>
+			</div>
+		</div>
+
+		<div id="imageCrop" class="conP">
+			<h2>Image Crop</h2>
+			<h3>Image Crop</h3>
+			<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></div>
+			<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></div>
+			<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<!-- width, padding-top 지정 -->
+					<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X480.png" alt=""></a></div>
+					<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/480X280.png" alt=""></a></div>
+					<div class="imgCutting" style="width:110px;padding-top:110px;"><a href="javascript:void(0)" class="imgBox"><img src="../resources/web/images/temp/280X480.png" alt=""></a></div>
+				</xmp>
+			</div>
+		</div>
+
+		<div id="paging" class="conP">
+			<h2>Paging</h2>
+			<h3>Paging</h3>
+			<div class="pagingBox">
+				<div class="paging">
+					<a href="javascript:void(0)" class="prev"><span class="hide">이전페이지</span></a>
+					<a href="javascript:void(0)" class="active">1</a>
+					<a href="javascript:void(0)">2</a>
+					<a href="javascript:void(0)">3</a>
+					<a href="javascript:void(0)">4</a>
+					<a href="javascript:void(0)">5</a>
+					<a href="javascript:void(0)" class="next"><span class="hide">다음페이지</span></a>
+				</div>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="pagingBox">
+						<div class="paging">
+							<a href="javascript:void(0)" class="prev"><span class="hide">이전페이지</span></a>
+							<a href="javascript:void(0)" class="active">1</a>
+							<a href="javascript:void(0)">2</a>
+							<a href="javascript:void(0)">3</a>
+							<a href="javascript:void(0)">4</a>
+							<a href="javascript:void(0)">5</a>
+							<a href="javascript:void(0)" class="next"><span class="hide">다음페이지</span></a>
+						</div>
+					</div>
+				</xmp>
+			</div>
+		</div>
+
+		<div id="icon" class="conP">
+			<h2>Icon</h2>
+			<h3>Icon</h3>
+			<!-- 기본등급 userLv1 ~ 최고등급 userLv4 -->
+			<span class="userRank userLv1">VIP1</span>
+			<span class="userRank userLv2">VIP2</span>
+			<span class="userRank userLv3">VIP3</span>
+			<span class="userRank userLv4">VIP4</span>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<span class="userRank userLv1">VIP1</span>
+					<span class="userRank userLv2">VIP2</span>
+					<span class="userRank userLv3">VIP3</span>
+					<span class="userRank userLv4">VIP4</span>
+				</xmp>
+			</div>
+		</div>
+
+		<div id="infoList" class="conP">
+			<h2>Info list</h2>
+			<h3>Title</h3>
+			<p class="titInfo">유의사항</p>
+			<h3>Dot</h3>
+			<ul class="dotInfo">
+				<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+				<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+				<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+			</ul>
+			<h3>Star</h3>
+			<ul class="starInfo">
+				<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+				<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+				<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+			</ul>
+			<h3>Line</h3>
+			<ul class="lineInfo">
+				<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+				<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+				<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+			</ul>
+			<h3>colorB</h3>
+			<ul class="starInfo colorB">
+				<li><span class="fcRed">상품이 재입고 되어 판매가 시작될 때</span> 입력하신 휴대폰번호로 알림 메시지를 발송해 드립니다.</li>
+				<li>메시지 수신 후 즉시 구매하지 않으면 다시 품절이 발생할 수 있으며, 판매가 혹은 할인금액은<br> 재고 알림 신청 시점과 상이하게 변동될 수 있습니다.</li>
+			</ul>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					Title
+					<p class="titInfo">유의사항</p>
+					Dot
+					<ul class="dotInfo">
+						<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+						<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+						<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+					</ul>
+					Star
+					<ul class="starInfo">
+						<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+						<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+						<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+					</ul>
+					Line
+					<ul class="lineInfo">
+						<li>핫딜 상품은 한정수량인 경우 조기 품절될 수 있습니다.</li>
+						<li>조기 품절시 정상가로 구매가 가능합니다.</li>
+						<li>핫딜 상품은 장바구니 담아놨더라도 지정된 서비스 시간외에 구매<br> 하실 경우 가격변동이 있을수 있습니다.</li>
+					</ul>
+					colorB
+					<ul class="starInfo colorB">
+						<li><span class="fcRed">상품이 재입고 되어 판매가 시작될 때</span> 입력하신 휴대폰번호로 알림 메시지를 발송해 드립니다.</li>
+						<li>메시지 수신 후 즉시 구매하지 않으면 다시 품절이 발생할 수 있으며, 판매가 혹은 할인금액은<br> 재고 알림 신청 시점과 상이하게 변동될 수 있습니다.</li>
+					</ul>
+				</xmp>
+			</div>
+		</div>
+
+
+		<div id="fileUpload" class="conP">
+			<h2>fileUpload</h2>
+			<h3>fileUpload</h3>
+			<p class="lh1 fs13 notoB">상품 사용 사진을 등록해주세요</p>
+			<div class="fileUploadBtn mgt12">
+				<label for="imgUpload">
+					<p class="fs13 fc22 notoB">파일첨부(최대5개)</p>
+					<p class="fs12 fcbf">3MB 미만 jpg,gif,png 파일 가능</p>
+				</label>
+				<input type="file" class="hide" id="imgUpload">
+			</div>
+			<div class="fileUploadArea">
+				<p class="lh1 fs12 notoB mgt21">총 3장의 사진 등록</p>
+				<ul>
+					<li class="imgCutting">
+						<div class="imgBox">
+							<img src="../resources/web/images/temp/480X480.png" alt="">
+						</div>
+						<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+					</li>
+					<li class="imgCutting">
+						<div class="imgBox">
+							<img src="../resources/web/images/temp/280X480.png" alt="">
+						</div>
+						<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+					</li>
+					<li class="imgCutting">
+						<div class="imgBox">
+							<img src="../resources/web/images/temp/480X280.png" alt="">
+						</div>
+						<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+					</li>
+					<li class="imgCutting">
+						<div class="imgBox">
+							<img src="../resources/web/images/temp/photoReviewImg01.jpg" alt="">
+						</div>
+						<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<p class="lh1 fs14 notoB">상품 사용 사진을 등록해주세요</p>
+					<div class="fileUploadBtn mgt15">
+						<label for="imgUpload">
+							<p class="fs13 fc22 notoB">파일첨부(최대5개)</p>
+							<p class="fs12 fcbf">3MB 미만 jpg,gif,png 파일 가능</p>
+						</label>
+						<input type="file" class="hide" id="imgUpload">
+					</div>
+					<div class="fileUploadArea">
+						<p class="lh1 fs14 notoB mgt24">총 3장의 사진 등록</p>
+						<ul>
+							<li class="imgCutting">
+								<div class="imgBox">
+									<img src="../resources/web/images/temp/480X480.png" alt="">
+								</div>
+								<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+							</li>
+							<li class="imgCutting">
+								<div class="imgBox">
+									<img src="../resources/web/images/temp/280X480.png" alt="">
+								</div>
+								<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+							</li>
+							<li class="imgCutting">
+								<div class="imgBox">
+									<img src="../resources/web/images/temp/480X280.png" alt="">
+								</div>
+								<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+							</li>
+							<li class="imgCutting">
+								<div class="imgBox">
+									<img src="../resources/web/images/temp/photoReviewImg01.jpg" alt="">
+								</div>
+								<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+							</li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+		</div>
+
+
+		<div id="cttMore" class="conP">
+			<h2>contents More</h2>
+			<h3>contents More</h3>
+			<div class="js_acoCtt" data-line="3"><div>늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.</div></div>
+			<a href="javascript:void(0)" class="js_acoMore">더보기</a>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="js_acoCtt" data-line="3"><div>늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다. 최근에 50% 세일해서 잔뜩 쟁여두었어요! 클렌징을 하면 늘 잔여물이 남거나 건조하다는 느낌이 있었는데 부드러운 샤벳 제형이라 촉촉하고 세정력도 늘 사용하고 있는 클렌저입니다.</div></div>
+					<a href="javascript:void(0)" class="js_acoMore">더보기</a>
+				</xmp>
+			</div>
+		</div>
+			
+
+		<div id="brandCategory" class="conP">
+			<h2>brandCategory</h2>
+			<div class="brandCategory">
+				<ul>
+					<li>
+						<a href="#none" class="current">
+							<div class="brandVisual">
+								<img src="../resources/mobile/images/temp/search_cateImg01.jpg" alt="">
+							</div>
+							<div class="brandName">바닐라닷컴</div>
+							<span class="count">112</span>
+						</a>
+					</li>
+					<li>
+						<a href="#none" class="current">
+							<div class="brandVisual">
+								<img src="../resources/mobile/images/temp/search_cateImg02.jpg" alt="">
+							</div>
+							<div class="brandName">바닐라코</div>
+							<span class="count">3</span>
+						</a>
+					</li>
+					<li>
+						<a href="#none" class="current">
+							<div class="brandVisual">
+								<img src="../resources/mobile/images/temp/search_cateImg03.jpg" alt="">
+							</div>
+							<div class="brandName">비바이바닐라</div>
+							<span class="count">0</span>
+						</a>
+					</li>
+					<li>
+						<a href="#none" class="current">
+							<div class="brandVisual">
+								<img src="../resources/mobile/images/temp/search_cateImg04.jpg" alt="">
+							</div>
+							<div class="brandName">라라랩</div>
+							<span class="count">22</span>
+						</a>
+					</li>
+					<li>
+						<a href="#none" class="current">
+							<div class="brandVisual">
+								<img src="../resources/mobile/images/temp/search_cateImg05.jpg" alt="">
+							</div>
+							<div class="brandName">컬리스튜디오</div>
+							<span class="count">1111</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="moreBox">
+				<a href="#none" class="btn_more">소스보기</a>
+				<xmp class="code">
+					<div class="brandCategory">
+						<ul>
+							<li>
+								<a href="#none" class="current">
+									<div class="brandVisual">
+										<img src="../resources/mobile/images/temp/search_cateImg01.jpg" alt="">
+									</div>
+									<div class="brandName">바닐라닷컴</div>
+									<span class="count">112</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none" class="current">
+									<div class="brandVisual">
+										<img src="../resources/mobile/images/temp/search_cateImg02.jpg" alt="">
+									</div>
+									<div class="brandName">바닐라코</div>
+									<span class="count">3</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none" class="current">
+									<div class="brandVisual">
+										<img src="../resources/mobile/images/temp/search_cateImg03.jpg" alt="">
+									</div>
+									<div class="brandName">비바이바닐라</div>
+									<span class="count">0</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none" class="current">
+									<div class="brandVisual">
+										<img src="../resources/mobile/images/temp/search_cateImg04.jpg" alt="">
+									</div>
+									<div class="brandName">라라랩</div>
+									<span class="count">22</span>
+								</a>
+							</li>
+							<li>
+								<a href="#none" class="current">
+									<div class="brandVisual">
+										<img src="../resources/mobile/images/temp/search_cateImg05.jpg" alt="">
+									</div>
+									<div class="brandName">컬리스튜디오</div>
+									<span class="count">1111</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</xmp>
+			</div>
+		</div>
+	</div><!-- //mCon -->
+</div>
+<script type="text/javascript" src="../resources/mobile/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../resources/mobile/js/slick.min.js"></script>
+<script type="text/javascript" src="../resources/mobile/js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="../resources/mobile/js/ui.js"></script>
+<script type="text/javascript" src="js/guide.js"></script>
+<script type="text/javascript">
+$('.colorbox .box').each(function(){
+	var colorcode = $(this).text().substr(0,7);
+	$(this).css('background', colorcode);
+});
+</script>
+</body>
+
+<!-- Mirrored from www.banila.com/static/front/guide/style_guide_mobile.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 May 2022 07:50:56 GMT -->
+</html>
