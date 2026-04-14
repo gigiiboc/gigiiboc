@@ -1,0 +1,229 @@
+/* ========== [마이팔레트] ========== */
+#myPalette .myPaletteGate .gateTop{text-align:center;border-bottom:4px solid #000;}
+#myPalette .myPaletteGate .gateCon{background:#f8f7f6;text-align:center;position:relative;}
+#myPalette .myPaletteGate .gateCon a{position:absolute;left:50%;top:2791px;width:377px;height:64px;margin-left:-188px;}
+
+#myPalette .paletteStep2{display:none;}
+
+#myPalette .myPaletteCon{display:none;}
+#myPalette .paletteStep{background:#e45151;border:1px solid #f9edd7;min-width:998px;}
+#myPalette .paletteStep ol{overflow:hidden;margin:0 auto;width:998px;}
+#myPalette .paletteStep li{float:left;width:50%;margin:0;}
+#myPalette .paletteStep li em{border:none;padding:0;font-size:22px;line-height:58px;color:#fff;display:block;text-align:center;text-decoration:none;}
+#myPalette .paletteStep li em span{*zoom:1;width:45px;height:30px;background:url('/kr/ko/resources/web/images/shopping/iconPaletteStep.png') left center no-repeat;vertical-align:middle;display:none;}
+#myPalette .paletteStep li.on em{color:#d34747;background:#fff;}
+#myPalette .paletteStep li.on em span{display:inline-block;}
+
+#myPalette .conBox{background:#f8f7f6;margin-top:-1px;}
+#myPalette .conBox .paletteCon{width:960px;margin:0 auto;padding:95px 20px 0 20px;background:#fff;overflow:hidden;}
+#myPalette .conBox .paletteCon.paletteStep2 .ui-draggable-dragging{height:85px;z-index:1000;}
+#myPalette .conBox .paletteCon.paletteStep2 .ui-draggable-dragging img{height:100%;}
+
+#myPalette .conBox .paletteCon .leftCon{float:left;background:#f5f5f5;padding:43px 28px 40px 28px;width:489px;}
+#myPalette .conBox .paletteCon .leftCon .tit{border-bottom:1px solid #d7d7d7;padding-bottom:15px;}
+#myPalette .conBox .paletteCon .leftCon .tit p{text-align:center;line-height:34px;font-family:'ngB';font-size:16px;color:#fff;background:url('/kr/ko/resources/web/images/shopping/bgPaletteTit.png') center center no-repeat;}
+#myPalette .conBox .paletteCon .leftCon .paletteCaseOption{font-size:16px;line-height:24px;color:#222;text-align:center;padding:33px 0;}
+#myPalette .conBox .paletteCon .leftCon .paletteInfo{font-size:16px;line-height:24px;color:#222;text-align:center;padding:21px 0;}
+#myPalette .conBox .paletteCon .leftCon .paletteCaseImg{padding-bottom:20px;text-align:center;}
+#myPalette .conBox .paletteCon .leftCon .paletteCaseImg img{max-width:100%;}
+#myPalette .conBox .paletteCon .leftCon .confirmBtn{background:#222;color:#fff;font-family:'ngB';font-size:16px;text-decoration:none;text-align:center;line-height:50px;width:200px;margin:0 auto;display:block;border-radius: 3px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng{padding-bottom:20px;text-align:center;position:relative;display:none;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng.show{display:block;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng8, #myPalette .conBox .paletteCon .leftCon .paletteLeng18{display:none;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng .paletteCartSizeB{position:relative;width:170px;height:85px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng .paletteCartSizeB a.btnDel{position:absolute;right:18px;top:10px;z-index:50;display:none;width:23px;height:20px;background:url('/kr/ko/resources/web/images/shopping/btnDel2.png') no-repeat;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng .paletteCartSizeB.btnShow:hover > a.btnDel{display:block;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng .paletteCartSizeS.btnShow:hover > a.btnDel{display:block;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng .paletteCartSizeS{position:absolute;right:0;top:0;width:50%;height:100%;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng .paletteCartSizeS:first-child{left:0;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng img{position:relative;z-index:3;height:100%;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng .paletteCart{position:absolute;z-index:5;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng4 .paletteCart{left:161px;top:33px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng8 .paletteCart{top:33px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng8 .paletteCart.paletteCart1{left:70px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng8 .paletteCart.paletteCart2{left:253px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng18 .paletteCartSizeB{width:146px;height:73px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng18 .paletteCart{top:27px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng18 .paletteCart.paletteCart1{left:20px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng18 .paletteCart.paletteCart2{left:172px;}
+#myPalette .conBox .paletteCon .leftCon .paletteLeng18 .paletteCart.paletteCart3{left:323px;}
+#myPalette .conBox .paletteCon .leftCon .addColorBtn{background:#ccc;color:#fff;font-family:'ngB';font-size:16px;text-decoration:none;text-align:center;line-height:50px;width:200px;margin:0 auto;display:block;border-radius: 3px;}
+#myPalette .conBox .paletteCon .leftCon .addColorBtn.active{background:#222;}
+#myPalette .conBox .paletteCon .leftCon .addColor{position:relative;display:none;}
+#myPalette .conBox .paletteCon .leftCon .addColor .txt{margin-top:10px;text-align:center;font-size:16px;color:#222;line-height:40px;}
+#myPalette .conBox .paletteCon .leftCon .addColor .addColorList{border-top:1px solid #d7d7d7;padding:5px 0;max-height:90px;min-height:60px;overflow:hidden;}
+#myPalette .conBox .paletteCon .leftCon .addColor.open .addColorList{max-height:100%;}
+#myPalette .conBox .paletteCon .leftCon .addColor .addColorList li{overflow:hidden;padding:0 10px;}
+#myPalette .conBox .paletteCon .leftCon .addColor .addColorList li .img{float:left;width:14px;height:14px;overflow:hidden;padding:8px 0;}
+#myPalette .conBox .paletteCon .leftCon .addColor .addColorList li .img img{height:100%;vertical-align:top;}
+#myPalette .conBox .paletteCon .leftCon .addColor .addColorList li .colorName{float:left;margin-left:10px;width:255px;line-height:30px;font-size:15px;color:#222;}
+#myPalette .conBox .paletteCon .leftCon .addColor .addColorList li .count{overflow:hidden;width:102px;float:left;}
+#myPalette .conBox .paletteCon .leftCon .addColor .addColorList li .count .btnMinus, #myPalette .conBox .orderList .list li .count .btnPlus{float:left;}
+#myPalette .conBox .paletteCon .leftCon .addColor .addColorList li .count p{float:left;width:42px;line-height:30px;font-size:14px;font-family:'ngB';text-align:center;}
+#myPalette .conBox .paletteCon .leftCon .addColor .addColorList li .btnDel{float:right;width:30px;height:30px;}
+#myPalette .conBox .paletteCon .leftCon .addColor .btnSpread{position:absolute;left:0;bottom:-30px;width:100%;height:30px;background:url('/kr/ko/resources/web/images/shopping/paletteAddBtn.png') center bottom no-repeat;}
+#myPalette .conBox .paletteCon .leftCon .addColor.open .btnSpread{background-position:center top;}
+
+#myPalette .conBox .paletteCon .rightCon{margin-left:574px;}
+#myPalette .conBox .paletteCon .rightCon .selectStyle{position:relative;height:32px;padding-bottom:2px;}
+#myPalette .conBox .paletteCon .rightCon .selectStyle .selTit{font-size:16px;line-height:32px;color:#e45151;display:block;font-family:'ngB';padding:0 30px 0 10px;text-align:left;width:386px;background:url('/kr/ko/resources/web/images/shopping/paletteSelectBg.png') 360px bottom no-repeat;letter-spacing:-0.5px;}
+#myPalette .conBox .paletteCon .rightCon .selectStyle.open .selTit{background-position:360px top;}
+#myPalette .conBox .paletteCon .rightCon .selectStyle .selList{border-bottom:2px solid #e45151;position:absolute;left:0;top:32px;width:100%;background:#fff;z-index:3;}
+#myPalette .conBox .paletteCon .rightCon .selectStyle .selList ul{border-top:1px solid #f1a8a8;padding:10px 0;display:none;}
+#myPalette .conBox .paletteCon .rightCon .selectStyle .selList ul li{position:relative;}
+#myPalette .conBox .paletteCon .rightCon .selectStyle .selList ul li:hover{background:#fff5f5;}
+#myPalette .conBox .paletteCon .rightCon .selectStyle .selList ul li input{position:absolute;visibility:hidden;left:-50000px;top:0;}
+#myPalette .conBox .paletteCon .rightCon .selectStyle .selList ul li label{display:block;line-height:30px;font-size:14px;font-family:'ngB';color:#e45151;padding:0 10px;}
+#myPalette .conBox .paletteCon .rightCon .caseOption{overflow:hidden;width:400px;padding-top:10px;}
+#myPalette .conBox .paletteCon .rightCon .caseOption li{float:left;margin:14px 14px 0 0;}
+
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep1{overflow:hidden;padding-top:10px;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep1 li{float:left;min-width:95px;margin:7px 10px 0 0;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep1 li a{display:block;border:1px solid #e45151;color:#e45151;font-size:14px;line-height:32px;text-align:center;padding:0 10px;font-family:'ngB';text-decoration:none;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep1 li a:hover, #myPalette .conBox .paletteCon .rightCon .paletteInnerDep1 li a.on{background:#e45151;color:#fff;}
+
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2{margin-top:10px;width:400px;overflow:hidden;padding-bottom:60px;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 .cont{}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 ul{width:400px;float:left;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li{position:relative;width:86px;height:86px;margin:14px 14px 0 0;float:left;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li .dragCon{overflow:hidden;width:100%;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li span.borderLT:before{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:#000;display:none;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li span.borderLT:after{content:'';position:absolute;left:0;top:0;width:100%;height:3px;background:#000;display:none;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li span.borderRB:before{content:'';position:absolute;right:0;bottom:0;width:3px;height:100%;background:#000;display:none;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li span.borderRB:after{content:'';position:absolute;right:0;bottom:0;width:100%;height:3px;background:#000;display:none;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li:hover span.borderLT:before, #myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li:hover span.borderLT:after, #myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li:hover span.borderRB:before, #myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li:hover span.borderRB:after{display:block;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li .colorInfo{width:162px;position:absolute;left:42px;top:42px;background:url('/kr/ko/resources/web/images/shopping/hoverBgL.png') left top no-repeat;padding-top:22px;z-index:5;display:none;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li:hover .colorInfo{display:block;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li.last .colorInfo{background-image:url('/kr/ko/resources/web/images/shopping/hoverBgR.png');left:-118px;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li .colorInfo p{background:url('/kr/ko/resources/web/images/shopping/hoverBgB.png') left bottom no-repeat;padding:0 10px 15px 10px;color:#fff;text-align:center;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 li .colorInfo p span{display:block;padding-top:5px;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 .btn{font-size:0;text-align:center;margin-top:15px;width:386px;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 .btn a{display:inline-block;*zoom:1;width:50px;height:50px;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 .btn .prev{background:url('/kr/ko/resources/web/images/shopping/btnPalettePrev.png') center bottom no-repeat;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 .btn .next{background:url('/kr/ko/resources/web/images/shopping/btnPaletteNext.png') center bottom no-repeat;margin-left:15px;}
+#myPalette .conBox .paletteCon .rightCon .paletteInnerDep2 .btn a:hover{background-position:center top;}
+
+
+#myPalette .conBox .orderList{width:880px;padding:70px 60px 90px 60px;background:#fff;margin:0 auto;}
+#myPalette .conBox .orderList .tit{font-size:24px;font-family:'ngB';line-height:1;color:#222;padding-bottom:25px;border-bottom:4px solid #000;}
+#myPalette .conBox .orderList .sTit{font-size:20px;line-height:59px;color:#222;background:#f8f8f8;padding:0 10px;border-bottom:1px solid #dbdbdb;}
+#myPalette .conBox .orderList .sTit.borderT{border-top:1px solid #dbdbdb;}
+#myPalette .conBox .orderList .list{padding:15px 20px 15px 30px;position:relative;}
+#myPalette .conBox .orderList .list ul{max-height:170px;overflow:hidden;}
+#myPalette .conBox .orderList .list ul.all{max-height:100%;}
+#myPalette .conBox .orderList .list li{overflow:hidden;padding:2px 0;}
+#myPalette .conBox .orderList .list li .optionName{float:left;width:475px;font-size:16px;line-height:30px;color:#e45151;}
+#myPalette .conBox .orderList .list li.case .optionName{font-family:'ngB';}
+#myPalette .conBox .orderList .list li .count{overflow:hidden;width:102px;float:left;}
+#myPalette .conBox .orderList .list li .count .btnMinus, #myPalette .conBox .orderList .list li .count .btnPlus{float:left;}
+#myPalette .conBox .orderList .list li .count p{float:left;width:42px;line-height:30px;font-size:14px;font-family:'ngB';text-align:center;}
+#myPalette .conBox .orderList .list li .price{float:left;width:155px;text-align:right;font-size:16px;font-family:'ngB';line-height:30px;color:#222;}
+#myPalette .conBox .orderList .list li .btnDel{float:right;}
+#myPalette .conBox .orderList .totalPrice{border-top:2px solid #575757;border-bottom:4px solid #000;padding:55px 35px 15px 0;text-align:right;font-size:0;position:relative;}
+#myPalette .conBox .orderList .totalPrice .btnSpread{position:absolute;right:30px;top:-2px;border:2px solid #575757;border-top:none;line-height:28px;width:94px;text-align:center;color:#575757;font-family:'ngB';background:#fff;}
+#myPalette .conBox .orderList .totalPrice .btnSpread span{display:inline-block;*zoom:1;font-size:14px;padding-right:18px;background:url('/kr/ko/resources/web/images/shopping/btnSpread.png') right top no-repeat}
+#myPalette .conBox .orderList .totalPrice .btnSpread span.last{display:none;background-position:right bottom;}
+#myPalette .conBox .orderList .totalPrice .btnSpread.spread span.first{display:none;}
+#myPalette .conBox .orderList .totalPrice .btnSpread.spread span.last{display:inline-block;}
+#myPalette .conBox .orderList .totalPrice dt{display:inline-block;*zoom:1;*display:inline;font-size:18px;line-height:30px;font-family:'ngB';color:#222;}
+#myPalette .conBox .orderList .totalPrice dd{display:inline-block;*zoom:1;*display:inline;margin-left:25px;font-size:20px;line-height:30px;font-family:'ngB';color:#e45151;font-style:italic;}
+#myPalette .conBox .orderList .totalPrice dd span{font-size:30px;}
+
+#myPalette .conBox .btnArea{padding-top:18px;}
+#myPalette .conBox .btnArea ul{overflow:hidden;}
+#myPalette .conBox .btnArea ul li{float:right;width:250px;}
+#myPalette .conBox .btnArea ul li a{display:block;background:#e45151;text-align:center;border:1px solid #e45151;}
+#myPalette .conBox .btnArea ul li a span{display:inline-block;*zoom:1;padding:0 25px 0 0;background:url('/kr/ko/resources/web/images/shopping/btnAreaBg.png') right bottom no-repeat;color:#fff;line-height:48px;font-size:16px;font-family:'ngB';}
+#myPalette .conBox .btnArea ul li:first-child{float:left;}
+#myPalette .conBox .btnArea ul li:first-child a{background:#fff;}
+#myPalette .conBox .btnArea ul li:first-child a span{padding:0 0 0 25px;background-position:left top;color:#e45151;}
+
+#palettePop{width:460px;}
+#palettePop .errorType{text-align:center;padding:40px 0;font-size:14px;line-height:18px;}
+#palettePop .popBtn .btnType{margin:0 auto;width:198px;}
+
+#myPalette .paletteDetail{padding:20px 0 100px;background:#f8f7f6;}
+#myPalette .paletteDetail .detailCon{width:940px;margin:0 auto;background:#fff;padding:65px 30px;}
+#myPalette .paletteDetail .detailCon .visual ul{margin-top:40px;overflow:hidden;}
+#myPalette .paletteDetail .detailCon .visual ul li{float:left;width:33%;text-align:center;}
+#myPalette .paletteDetail .detailCon .visual ul li .tit{font-size:21px;line-height:28px;color:#222;font-family:'ngB';}
+#myPalette .paletteDetail .detailCon .visual ul li .txt{font-size:14px;line-height:24px;margin-top:25px;}
+
+#myPalette .paletteSlider{border:1px solid #e5e5e5;position:relative;margin-top:80px;}
+#myPalette .paletteSlider .slick-arrow{width:79px;height:100px;position:absolute;top:50%;margin-top:-50px;z-index:10;font-size:0;line-height:0;text-indent:-5000px;}
+#myPalette .paletteSlider .slick-prev{background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/makeup/color/myPalette/common02_btnL.png') no-repeat center center;left:0;}
+#myPalette .paletteSlider .slick-next{background:url('https://images.innisfree.co.kr/kr/ko/upload/pdtDetail/makeup/color/myPalette/common02_btnR.png') no-repeat center center;right:0;}
+#myPalette .paletteSlider .slick-slide{overflow:hidden;position:relative;}
+#myPalette .paletteSlider .imgWrap{width:500px;float:left;text-align:left;}
+#myPalette .paletteSlider .imgWrap img{margin:0;width:100%}
+#myPalette .paletteSlider .descWrap{width:392px;float:right;clear:right;}
+#myPalette .paletteSlider .descWrap .colorTit{font-size:18px;color:#666;position:absolute;top:20px;right:20px;margin-top:0;}
+#myPalette .paletteSlider .descWrap .tit{font-size:24px;color:#222;font-family:'ngB';}
+#myPalette .paletteSlider .descWrap .sTit{font-size:24px;line-height:32px;color:#222;margin-top:15px;letter-spacing:-3px;}
+#myPalette .paletteSlider .descWrap p{font-size:13px;color:#444;line-height:22px;margin-top:22px;}
+#myPalette .paletteSlider .descWrap p span{font-size:15px;color:#222;}
+#myPalette .paletteSlider .descWrap .personalColorLink{display:block;width:310px;margin-top:25px;font-size:22px;font-family:'ngB';color:#222;line-height:65px;text-align:center;border:1px solid #959595;background:#f0f0f0;text-decoration:none;box-sizing:border-box;}
+
+#myPalette .paletteYoutube .youtubeCon{position: relative;padding-bottom: 56.25%;height: 0;margin:150px auto 0 auto;width:874px;}
+#myPalette .paletteYoutube .youtubeCon iframe{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+#myPalette .paletteYoutube .personalColorLink{display:block;width:396px;margin:50px auto 0 auto;font-size:22px;font-family:'ngB';color:#222;line-height:65px;text-align:center;border:1px solid #959595;background:#f0f0f0;text-decoration:none;box-sizing:border-box;}
+
+#myPalette .paletteDetail .personalColor{max-width:1000px;margin:60px auto 0 auto;background:#fff url('/kr/ko/resources/event/201705/0528/personalColor/con2Bg.png') no-repeat center top;;padding:14px 0 160px 0;}
+#myPalette .paletteDetail .personalColor .tit{font-size:17px;line-height:35px;font-family:'ngB';color:#b2325e;letter-spacing:5px;text-align:center;}
+
+#myPalette .paletteDetail .imgArea{margin:44px auto 0 auto;max-width:929px;position:relative;}
+#myPalette .paletteDetail .imgArea img{width:100%;}
+#myPalette .paletteDetail .imgArea .eventLink{width:19.5%;height:8%;position:absolute;}
+#myPalette .paletteDetail .imgArea .eventLink1{left:80.7%;top:84.2%;}
+#myPalette .paletteDetail .imgArea .eventLink2{left:4.7%;top:51.1%;}
+#myPalette .paletteDetail .imgArea .eventLink3{left:53%;top:73.7%;}
+#myPalette .paletteDetail .imgArea .eventLink4{left:5%;top:84.7%;}
+#myPalette .paletteDetail .imgArea .eventLink5{left:5%;top:61.1%;}
+#myPalette .paletteDetail .imgArea .eventLink6{left:80.7%;top:48.7%;}
+#myPalette .paletteDetail .imgArea .eventLink7{left:53%;top:61%;}
+
+#myPalette .paletteDetail .eventPop{position:absolute;top:50%;left:50%;background:#fff;margin-left:-303px;display:none;}
+#myPalette .paletteDetail .eventPop .popCon{padding:18px;overflow:hidden;width:568px;height:321px;border:1px solid #feb6ac;text-align:left;display:none;}
+#myPalette .paletteDetail .eventPop .popCon .popImg{float:left;width:282px;}
+#myPalette .paletteDetail .eventPop .popCon .eventPopWrap{margin-left:308px;padding-top:60px;}
+#myPalette .paletteDetail .eventPop .popCon .eventPopWrap .popTit{font-family:'ngB';font-size:21px;line-height:1;padding-bottom:23px;position:relative;}
+#myPalette .paletteDetail .eventPop .popCon .eventPopWrap .popTit:after{content:'';position:absolute;left:0;bottom:0;width:37px;height:3px;}
+#myPalette .paletteDetail .eventPop .popCon .eventPopWrap .popTxt{margin-top:20px;font-size:18px;line-height:26px;color:#8c8c8c;font-family:'ngB';letter-spacing:-1px;}
+#myPalette .paletteDetail .eventPop .popCon .eventPopWrap .popTxt span{color:#222;}
+#myPalette .paletteDetail .eventPop .popCon .eventPopWrap a{display:block;width:240px;font-size:16px;line-height:22px;font-family:'ngB';color:#fff;padding:10px 0;margin-top:80px;text-align:center;border-radius:10px;letter-spacing:-1px;text-decoration:none;}
+#myPalette .paletteDetail .eventPop .close{width:45px;height:45px;position:absolute;right:7px;top:13px;}
+#myPalette .paletteDetail .eventPop .popCon1{border-color:#feb6ac;}
+#myPalette .paletteDetail .eventPop .popCon1 .eventPopWrap .popTit{color:#feb6ac;}
+#myPalette .paletteDetail .eventPop .popCon1 .eventPopWrap .popTit:after{background:#feb6ac;}
+#myPalette .paletteDetail .eventPop .popCon1 .eventPopWrap a{background:#feb6ac;}
+#myPalette .paletteDetail .eventPop .popCon2{border-color:#f1766b;}
+#myPalette .paletteDetail .eventPop .popCon2 .eventPopWrap .popTit{color:#f1766b;}
+#myPalette .paletteDetail .eventPop .popCon2 .eventPopWrap .popTit:after{background:#f1766b;}
+#myPalette .paletteDetail .eventPop .popCon2 .eventPopWrap a{background:#f1766b;}
+#myPalette .paletteDetail .eventPop .popCon3{border-color:#e88ec6;}
+#myPalette .paletteDetail .eventPop .popCon3 .eventPopWrap .popTit{color:#e88ec6;}
+#myPalette .paletteDetail .eventPop .popCon3 .eventPopWrap .popTit:after{background:#e88ec6;}
+#myPalette .paletteDetail .eventPop .popCon3 .eventPopWrap a{background:#e88ec6;}
+#myPalette .paletteDetail .eventPop .popCon4{border-color:#b26f91;}
+#myPalette .paletteDetail .eventPop .popCon4 .eventPopWrap .popTit{color:#b26f91;}
+#myPalette .paletteDetail .eventPop .popCon4 .eventPopWrap .popTit:after{background:#b26f91;}
+#myPalette .paletteDetail .eventPop .popCon4 .eventPopWrap a{background:#b26f91;}
+#myPalette .paletteDetail .eventPop .popCon5{border-color:#b48d79;}
+#myPalette .paletteDetail .eventPop .popCon5 .eventPopWrap .popTit{color:#b48d79;}
+#myPalette .paletteDetail .eventPop .popCon5 .eventPopWrap .popTit:after{background:#b48d79;}
+#myPalette .paletteDetail .eventPop .popCon5 .eventPopWrap a{background:#b48d79;}
+#myPalette .paletteDetail .eventPop .popCon6{border-color:#5e3326;}
+#myPalette .paletteDetail .eventPop .popCon6 .eventPopWrap .popTit{color:#5e3326;}
+#myPalette .paletteDetail .eventPop .popCon6 .eventPopWrap .popTit:after{background:#5e3326;}
+#myPalette .paletteDetail .eventPop .popCon6 .eventPopWrap a{background:#5e3326;}
+#myPalette .paletteDetail .eventPop .popCon7{border-color:#736773;}
+#myPalette .paletteDetail .eventPop .popCon7 .eventPopWrap .popTit{color:#736773;}
+#myPalette .paletteDetail .eventPop .popCon7 .eventPopWrap .popTit:after{background:#736773;}
+#myPalette .paletteDetail .eventPop .popCon7 .eventPopWrap a{background:#736773;}
+
+#myPalette .paletteLink{margin-top:90px;} 
+#myPalette .paletteLink .tit{font-size:24px;font-family:'ngB';line-height:1;color:#222;padding-bottom:20px;border-bottom:1px solid #333;}
+#myPalette .paletteLink .txt{margin-top:20px;}
+#myPalette .paletteLink ul{margin-top:17px;font-size:0;overflow:hidden;}
+#myPalette .paletteLink ul li{margin:8px 10px 0 0;background:#fcfcfc;border:1px solid #ddd;float:left;}
+#myPalette .paletteLink ul li a{font-size:12px;color:#666;line-height:22px;text-decoration:none;display:inline-block;*zoom:1;padding:0 20px;}

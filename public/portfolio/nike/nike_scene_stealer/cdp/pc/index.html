@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>2018 JUST DO IT: '나의 #미친존재감'을 발견하라</title>
+    <link rel="shortcut icon" href="http://image.nike.co.kr//nike_favicon.ico" />
+    <script type="text/javascript" src="images/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<!-- 180108 응모 페이지 // s -->
+    <link href="pc_intro.css" rel="stylesheet" />
+	<!-- whpark 예약 타이머 -->
+	<style>
+		.ctt {display:none}
+	</style>
+
+	<script>
+		var nowTime = new Date(), // 현재 한국시간
+			aTime = new Date(2018, 0, 23, 0, 0, 0), // 한국 2018년 1월 23일 0시 0분 0초
+			bTime = new Date(2018, 0, 30, 18, 0, 0), // 한국 2018년 1월 30일 18시 0분 0초
+			cTime = new Date(2018, 1, 1, 10, 0, 0), // 한국 2018년 2월 1일 10시 0분 0초
+			dTime = new Date(2018, 1, 2, 18, 0, 0), // 한국 2018년 2월 2일 18시 0분 0초
+			eTime = new Date(2018, 1, 6, 18, 0, 0), // 한국 2018년 2월 6일 18시 0분 0초
+			fTime = new Date(2018, 1, 12, 10, 0, 0), // 한국 2018년 2월 12일 10시 0분 0초
+			gTime = new Date(2018, 1, 18, 18, 0, 0), // 한국 2018년 2월 18일 18시 0분 0초
+			hTime = new Date(2018, 1, 21, 10, 0, 0), // 한국 2018년 2월 21일 10시 0분 0초
+			iTime = new Date(2018, 1, 25, 18, 0, 0), // 한국 2018년 2월 25일 18시 0분 0초
+
+			get_aTime = aTime.getTime(),
+			get_bTime = bTime.getTime(),
+			get_cTime = cTime.getTime(),
+			get_dTime = dTime.getTime(),
+			get_eTime = eTime.getTime(),
+			get_fTime = fTime.getTime(),
+			get_gTime = gTime.getTime(),
+			get_hTime = hTime.getTime(),
+			get_iTime = iTime.getTime();
+
+		$(document).ready(function(){
+			$(".ctt").css("display","block")
+
+			if (nowTime >= get_iTime){ // 한국 2018년 2월 25일 18시 0분 0초
+				$('.dep1').addClass('off')
+				$('.dep2').addClass('off')
+				$('.dep3').addClass('off')
+				$('.dep4').addClass('off')
+
+			} else if (nowTime >= get_hTime){ // 한국 2018년 2월 21일 10시 0분 0초
+				$('.dep1').addClass('off')
+				$('.dep2').addClass('off')
+				$('.dep3').addClass('off')
+				$('.dep4').addClass('on')
+
+			} else if (nowTime >= get_gTime){ // 한국 2018년 2월 15일 18시 0분 0초
+				$('.dep1').addClass('off')
+				$('.dep2').addClass('off')
+				$('.dep3').addClass('off')
+				$('.dep4').addClass('def')
+
+			} else if (nowTime >= get_fTime){ // 한국 2018년 2월 12일 10시 0분 0초
+				$('.dep1').addClass('off')
+				$('.dep2').addClass('off')
+				$('.dep3').addClass('on')
+				$('.dep4').addClass('def')
+
+			} else if (nowTime >= get_eTime){ // 한국 2018년 2월 6일 18시 0분 0초
+				$('.dep1').addClass('off')
+				$('.dep2').addClass('off')
+				$('.dep3').addClass('def')
+				$('.dep4').addClass('def')
+
+			} else if (nowTime >= get_dTime){ // 한국 2018년 2월 2일 18시 0분 0초
+				$('.dep1').addClass('off')
+				$('.dep2').addClass('off_first')
+				$('.dep3').addClass('def')
+				$('.dep4').addClass('def')
+
+			} else if (nowTime >= get_cTime){ // 한국 2018년 2월 1일 10시 0분 0초
+				$('.dep1').addClass('off')
+				$('.dep2').addClass('on')
+				$('.dep3').addClass('def')
+				$('.dep4').addClass('def')
+
+			} else if (nowTime >= get_bTime){ // 한국 2018년 1월 30일 18시 0분 0초
+				$('.dep1').addClass('off')
+				$('.dep2').addClass('def')
+				$('.dep3').addClass('def')
+				$('.dep4').addClass('def')
+
+			} else if (nowTime >= get_aTime){ // 한국 2018년 1월 23일 0시 0분 0초
+				$('.dep1').addClass('on')
+				$('.dep2').addClass('def')
+				$('.dep3').addClass('def')
+				$('.dep4').addClass('def')
+			} else {
+
+			}
+		})
+	</script>
+	<!-- // whpark 예약 타이머 -->
+	<div>
+		<div class="ctt">
+			<img src="images/180119_bg.jpg" alt="" style="width: 100%;display:block;">
+			<h1 class="ttl">
+				<img src="images/180119_ttl.jpg" alt="">
+			</h1>
+			<ul>
+
+				<!-- 2/3 dep1  -->
+				<li class="dep1">
+					<h2 class="dep1_ttl"></h2>
+					<div class="img_box">
+						<span class="flag"></span>
+						<img src="images/180119_dep1_img.jpg" alt="">
+					</div>
+					<a class="submit def" title="참여하기" href="http://gonike.me/BoxingxDanceNTC_rb_pc"></a>
+					<a class="submit on" title="참여하기" href="http://gonike.me/BoxingxDanceNTC_rb_pc"></a>
+					<a class="submit off" title="참여하기" href="#none" onclick="openAlert('참여 응모기간이 종료되었습니다.')"></a>
+					<a class="submit off_first" title="참여하기" href="#none" onclick="openAlert('이벤트 등록은 선착순 마감되었습니다. 등록 관련 문의 사항은 나이키풋볼 사무국(02-413-1444)으로 연락 부탁 드립니다.\n\n(사무국 운영 시간: 월요일~금요일, 11:00~19:00)')"></a>
+				</li>
+
+				<!-- 2/11 dep2  -->
+				<li class="dep2">
+					<h2 class="dep2_ttl"></h2>
+					<div class="img_box">
+						<span class="flag"></span>
+						<img src="images/180119_dep2_img.jpg" alt="">
+					</div>
+					<a class="submit def" title="참여하기" href="http://gonike.me/SnowFootball_rb_pc"></a>
+					<a class="submit on" title="참여하기" href="http://gonike.me/SnowFootball_rb_pc"></a>
+					<a class="submit off" title="참여하기" href="#none" onclick="openAlert('참여 응모기간이 종료되었습니다.')"></a>
+					<a class="submit off_first" title="참여하기" href="#none" onclick="openAlert('이벤트 등록은 선착순 마감되었습니다. 등록 관련 문의 사항은 나이키풋볼 사무국(02-413-1444)으로 연락 부탁 드립니다.\n\n(사무국 운영 시간: 월요일~금요일, 11:00~19:00)')"></a>
+				</li>
+
+				<!-- 2/24 dep3  -->
+				<li class="dep3">
+					<h2 class="dep3_ttl"></h2>
+					<div class="img_box">
+						<span class="flag"></span>
+						<img src="images/180119_dep3_img2.jpg" alt="">
+					</div>
+					<a class="submit def" title="참여하기" href="http://gonike.me/InstantGoRun_rb_pc"></a>
+					<a class="submit on" title="참여하기" href="http://gonike.me/InstantGoRun_rb_pc"></a>
+					<a class="submit off" title="참여하기" href="#none" onclick="openAlert('참여 응모기간이 종료되었습니다.')"></a>
+					<a class="submit off_first" title="참여하기" href="#none" onclick="openAlert('이벤트 등록은 선착순 마감되었습니다. 등록 관련 문의 사항은 운영 사무국(1666-6453)으로 연락 부탁드립니다.\n\n(사무국 운영 시간: 월요일~금요일, 11:00~19:00)')"></a>
+				</li>
+
+				<!-- 3/3 dep4  -->
+				<li class="dep4">
+					<h2 class="dep4_ttl"></h2>
+					<div class="img_box">
+						<span class="flag"></span>
+						<img src="images/180119_dep4_img3.jpg" alt="">
+					</div>
+					<a class="submit def" title="참여하기" href="http://gonike.me/SportsFestival_rb_pc"></a>
+					<a class="submit on" title="참여하기" href="http://gonike.me/SportsFestival_rb_pc"></a>
+					<a class="submit off" title="참여하기" href="#none" onclick="openAlert('참여 응모기간이 종료되었습니다.')"></a>
+					<a class="submit off_first" title="참여하기" href="#none" onclick="openAlert('이벤트 등록은 선착순 마감되었습니다. 등록 관련 문의 사항은 운영 사무국(1666-6453)으로 연락 부탁드립니다.\n\n(사무국 운영 시간: 월요일~금요일, 11:00~19:00)')"></a>
+				</li>
+
+				<!-- 임시
+				<li>
+					<h2 class="dep1_ttl"></h2>
+					<img src="images/180119_dep1_img.jpg" alt="">
+					<a href="javascript:popup_onoff('.dep1_popup')" title="자세히보기" class="view"></a>
+					<div class="dep1_popup">
+						<a href="javascript:popup_onoff('.dep1_popup')" class="close" title="닫기"></a>
+					</div>
+				</li>
+				-->
+			</ul>
+			<!--
+			<div class="banner"><div>
+					<img src="images/180119_banner.jpg" alt="">
+					<a href="" class="video_link btn_vod"></a>
+					<a href="https://www.nike.com/kr/ko_kr/c/2018_korea_jdi_lyric_video" target="_blank" class="link"></a>
+			</div></div>
+			-->
+		</div>
+		<div class="notice">
+			<img src="images/180205_notice.jpg" alt="">
+		</div> 
+	</div>
+	<!--
+	<div class="videoWrap2">
+		<div class="video_file2"></div>
+		<div class="video_overlay2"></div>
+	</div>
+	-->
+	<script>
+		function openAlert(e){
+			alert(e)
+		}
+		function popup_onoff (e){
+			if ($(e).css('display') == 'none'){
+				$('.dep1_popup, .dep2_popup, .dep3_popup, .dep4_popup').hide();
+				$(e).fadeIn(200);
+			} else {		
+				$(e).fadeOut(200);
+			}
+		}
+		/*
+		$(function(){
+			var openVod = false;
+				$(".btn_vod").on('click', function(){
+					$(".videoWrap2").show();
+					$(".video_overlay2").show();
+					var tx = ($(window).width()-$(".videoWrap2 .video_file2").width())/2;
+					var ty = ($(window).height()-$(".videoWrap2 .video_file2").height())/2;
+					$(".video_file2").html('<iframe src="https://players.brightcove.net/72451143001/7d94af1f-58b1-49e0-a708-0dd15458039d_default/index.html?videoId=5731266442001&autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe><a class="btn_close_video" href="#none" title="닫기"> </a>');
+					$(".video_file2").css({left:tx+"px", top:ty+"px"});
+					openVod = true;
+					$("a.btn_close_video").on('click', function(){
+						$(".videoWrap2, .video_overlay2").hide();		
+						$(".video_file2").html('');	
+						return false;
+					});
+					return false;
+				});	
+			$(".bnr_item").on('mouseleave', function(){
+				if(openVod){
+					return false;
+				}
+			});
+		});
+		$(document).on("contextmenu",function(e){
+			return false;
+		});
+		
+		function openNewWindow(url, name) {
+			var specs = "left=10,top=10,width=720,height=790";
+			specs += ",toolbar=no,menubar=no,status=no,scrollbars=no,resizable=no";
+			window.open(url, name, specs);
+		}
+		*/
+	</script>
+	<!-- 180108 응모 페이지 // e -->
+</body>
+</html>

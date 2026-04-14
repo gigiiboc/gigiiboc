@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">	
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/wxe3deg.css">
+    <title>ibank</title>
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index,nofollow">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            background-color: #0f0f0f;
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            color: #fff;
+        }
+
+        main {
+            height: 100%;
+            padding: 4.4vw 6.6667vw 7.3333vw;
+            box-sizing: border-box;
+        }
+
+        .title .logo_wrap {
+            display: inline;
+        }
+
+        .title .logo {
+            width: 19.6vw;
+        }
+
+        .top_line {
+            position: relative;
+            font-size: 5.8667vw;
+            font-weight: 500;
+            letter-spacing:-0.03em;
+            color: #757575;
+            margin-top: 11px;
+        }
+
+        .top_line > span {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .top_line > span > span {
+            display: inline-block;
+            transition: .5s;
+            transform: translateY(100%);
+            line-height: 1.2;
+        }
+
+        .top_line > span > span.slideUp {
+            transform: translateY(0);
+        }
+        
+        .top_line .circle {
+            padding-left: 1.6vw;
+        }
+
+        .top_line .ellipse {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-48%, -40%);
+            width: 5.8667vw;
+            height: 5.8667vw;
+            border: 2px solid #757575;
+            border-radius: 100px;
+            box-sizing: border-box;
+        }
+
+        .top_line span {
+            position: relative;
+        }
+
+        .box {
+            display: block;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 3.0667vw;
+            text-decoration-line: none;
+        }
+
+        .box_1 {
+            margin-top: 6.9333vw;
+            padding-bottom: 7.7333vw;
+        }
+        .box .small_txt {
+            font-size: 1.6vw;
+            color: #969595;
+            text-align: left;
+        }
+
+        .box .txt_wrap {
+            display: inline-block;
+            text-align: left;
+            padding-left: 24%;
+        }
+
+        .box .btn_dir {
+            display: inline-block;
+            padding: 1.2vw 4vw;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 100px;
+            background-color: #0f0f0f;
+        }
+
+        .box .btn_dir .dir_img {
+            display: block;
+            width: 5.8667vw;
+            height: 1.8667vw;
+            background-image: url('/assets/front/web/images/gate/dir.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .box_1 .txt_wrap {
+            margin-top: 7.6vw;
+        }
+
+        .box_1 .logo_digitalworks {
+            width: 35.0667vw;
+        }
+
+        .box_1 .txt_con {
+            margin-top: 6.4vw;
+            font-size: 6.1333vw;
+            font-weight: 600;
+            line-height: 1.25;
+            color: #fff;
+        }
+
+
+        .box_1 .txt_con .txt_everything, .box_1 .txt_con .italic, .box_1 .txt_con .txt_disitalworks {
+            background: -webkit-linear-gradient(142deg, #3fbbfe, #a541ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .box_1 .txt_con .txt_everything span, .box_1 .txt_con .italic span, .box_1 .txt_con .txt_disitalworks span {
+            display: none;
+        }
+
+        .box_1 .txt_con .italic{
+            font-family: "mixta-pro", serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .box_1 .txt_con .txt_digit {
+            color: #fff;
+            font-size: 6.4vw;
+        }
+
+        .box_1 .btn_dir {
+            margin-top: 4vw;
+        }
+
+        .box_2 {
+            margin-top: 4vw;
+            padding-bottom: 6.9333vw;
+            background-image: url('/assets/front/web/images/gate/bg_line.png');
+            background-size: cover;
+        }
+
+        .box_2 .txt_wrap {
+            margin-top: 6.6667vw;
+        }
+
+        .box_2 .txt_wrap .line_1 .img_ibank {
+            width: 15.6vw;
+            /* height: 4.1333vw; */
+        }
+
+        .box_2 .txt_wrap .line_1 .txt_sol {
+            font-size: 3.6vw;
+            font-family: "urbane", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            color: #fff;
+        }
+
+        .box_2 .txt_wrap .line_2 {
+            color: #7077c5;
+            font-size: 7.0667vw;
+            line-height: 1.132;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            margin-top: 4vw;
+        }
+
+        .box_2 .txt_wrap .line_3 {
+            font-size: 3.3333vw;
+            color: #7077c5;
+        }
+
+        .box_2 .btn_dir {
+            margin-top: 6.1333vw;
+        }
+        
+
+        @media screen and (min-width: 1024px){
+            main {
+                padding: 0.75vw;
+            }
+
+            .title {
+                margin-top: .8vw;
+            }
+
+            .title .top_line {
+                display: inline-block;
+                font-size: 2.6vw;
+                margin-top: 0;
+                line-height: 3vw;
+            }
+
+            .title .top_line .circle {
+                padding-left: .6vw;
+            }
+
+            .top_line .ellipse {
+                width: 2.5vw;
+                height: 2.5vw;
+            }
+
+            .title .logo {  
+                width: 147px;
+                transform: translateY(-30%);
+                margin-left: 15px;
+            }
+
+            .br-pc {
+                display: none;
+            }
+
+            .flex-wrap {
+                display: flex;
+                gap: 0.7vw;
+                margin-top: 2.5vw;
+                height: calc(100% - 14.0919vh);
+            }
+
+            .box {
+                padding: 1.4vw 2.15vw;
+                transition: .5s ease-in-out;
+            }
+
+            .box:hover {
+                border-color: #fff;
+            }
+
+            
+            .box:hover .btn_dir {
+                border-color: #fff;
+            }
+
+            .box:hover .btn_dir .dir_img {
+                background-position: 100%;
+                transition: .5s;
+            }
+
+            .box_1, .box_2 {
+                margin-top: 0;
+                flex: calc(50% - 0.35vw);
+                padding-bottom: 12.5vw;
+            }
+
+            .box .small_txt {
+                font-size: 0.6vw;
+            }
+
+            .box_1 {
+                background-image: url('/assets/front/web/images/gate/bg_box_1.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .box_1 .txt_wrap {
+                margin-top: 10vw;
+            }
+
+            .box_1 .logo_digitalworks {
+                width: 13.15vw;
+            }
+
+            .box_1 .txt_con {
+                font-size: 2.3vw;
+                margin-top: 2.9vw;
+                transition: .5s;
+            }
+            
+
+            .box_1 .txt_con .txt_everything, .box_1 .txt_con .italic, .box_1 .txt_con .txt_disitalworks {
+                position: relative;
+                background: -webkit-linear-gradient(142deg, #3f71f0, #3f71f0);
+                background-clip:text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: background .5s ease-in-out;
+                
+            }
+
+            .box_1 .txt_con .txt_everything span, .box_1  .txt_con .italic span, .box_1 .txt_con .txt_disitalworks span {
+                display: block;
+                opacity:0;
+                background: -webkit-linear-gradient(142deg, #3fbbfe, #a541ff);
+                background-clip:text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: .5s ease-in-out;
+            }
+            
+            .box_1:hover .txt_con .txt_everything span, .box_1:hover .txt_con .italic span, .box_1:hover .txt_con .txt_disitalworks span {
+                opacity: 1;
+            }
+
+            .txt_everything::after {
+                content:'';
+                display: block;
+                background-image: url('/assets/front/web/images/gate/txt_bottom.png');
+                width: 7.55vw;
+                height: 1.25vw;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                bottom: -0.55vw;
+                left: -1.05vw;
+            }
+
+            .box_1 .txt_con .txt_digit {
+                font-size: 2.4vw;
+            }
+
+            .box_1 .btn_dir {
+                margin-top: 1.5vw;
+            }
+
+            .box .btn_dir {
+                padding: 0.45vw 1.5vw;
+                transition: .2s ease-in-out;
+            }
+
+            .box .btn_dir .dir_img {
+                width: 2.5vw;
+                height: 0.7vw;
+                background-image: url('/assets/front/web/images/gate/dir_pc.png');
+                background-size: 200%;
+                background-repeat: repeat;
+                background-position: 200%;
+            }
+            .box_2 {
+                background-image: url('/assets/front/web/images/gate/bg_line_pc.png');
+                background-position: bottom;
+            }
+
+            .box_2:hover {
+                background-image: url('/assets/front/web/images/gate/bg_line_pc_hover.png');
+            }
+
+            .box_2 .txt_wrap {
+                margin-top: 10vw;
+            }
+
+            .box_2 .txt_wrap .line_1 .img_ibank {
+                width: 5.8vw;
+                /* height: 1.55vw; */
+            }
+
+            .box_2 .txt_wrap .line_1 .txt_sol {
+                font-size: 1.35vw;
+            }
+
+            .box_2 .txt_wrap .line_2 {
+                font-size: 2.65vw;
+                margin-top: 2.25vw;
+            }
+
+            .box_2 .txt_wrap .line_3 {
+                font-size: 1.25vw;
+                margin-top: .4vw;
+            }
+
+            .box_2 .btn_dir {
+                margin-top: 2.9vw;
+            }
+        }
+    </style>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+    <div class="container">
+		<div class="logo"><div class="hide">ibank</div></div>
+        <!-- ibank section -->
+        <div class="section ibank-section">
+            <div class="content">
+                <div class="content-logo">
+                	<div class="content-logo-bg"><span class="hide">Data Marketing & Solution Consultancy ibank SOLUTION</span></div>
+                </div>
+				<a class="arrow-button" href="https://www.digitalworks.co.kr/" target="_blank"></a>
+            </div>
+        </div>
+
+        <!-- Digitalworks section -->
+        <div class="section digitalworks-section">
+            <div class="content">
+                <div class="content-logo">
+                	<div class="content-logo-bg"><span class="hide">Digital Consultancy DIGITALWORKS</span></div>
+                </div>
+                <div class="arrow-button">
+                </div>
+				<a class="arrow-button" href="https://www.digitalworks.co.kr/" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

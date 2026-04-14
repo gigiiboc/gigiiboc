@@ -1,0 +1,105 @@
+@charset "utf-8"; 
+/*=================================
+reset
+=================================*/
+* {list-style: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 0;margin: 0;}
+html {font-size: 0.875em;font-family: 'NG';line-height: 1;word-break: break-all;-ms-word-break: break-all;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button {outline: none;}
+input[type="radio"], input[type="image"], img, fieldset, iframe {border: 0 none;vertical-align: middle;}
+table {border-spacing: 0;border-style: none;border-collapse: collapse;}
+input[type="text"], input[type="password"] {border: 1px solid #d1d1d1;}
+a, a:hover, a:link, a:visited, a:active {color: inherit;text-decoration: none;}
+input[type="text"], input[type="password"], input[type="tel"] {overflow: hidden;}
+
+/*=================================
+common
+=================================*/
+.hide {visibility: hidden;overflow: hidden;position: absolute;top: 0;left: 0;width: 1px;height: 1px;font-size: 0;line-height: 0;}
+
+/*=================================
+main
+=================================*/
+.promotion_page {position: relative;overflow: hidden;}
+.promotion_page .top {position: relative;padding-top: 186%;height: 0;}
+.promotion_page .top .videoItem {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.promotion_page .top .videoItem .videoCtt {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.promotion_page .section01 {position: relative;background: url(../images/promotion/promo_ctt01_bg.jpg) no-repeat center top / 100% auto;padding-top: 181.5%;height: 0;}
+.promotion_page .section01 .aniBox {position: absolute;top: 0;left: 0;width: 100%;height: 0;padding-top: 81.53%;margin-top: 18.6%;}
+.promotion_page .section01 .ani01 {position: absolute;top: 0;left: 0;width: 200%;height: 0;padding-top: 25.33%;margin-top: 0;background-image: url(../images/promotion/promo_ctt01_bgAni01.png);background-repeat: repeat-x;background-position-x: -426%;background-position-y: top;background-size: auto 100%;transition: 0.5s ease-in;opacity: 0;}
+.promotion_page .section01 .ani02 {position: absolute;top: 0;left: 0;width: 200%;height: 0;padding-top: 25.33%;margin-top: 21.3%;background-image: url(../images/promotion/promo_ctt01_bgAni02.png);background-repeat: repeat-x;background-position-x: 403%;background-position-y: top;background-size: auto 100%;transition: 0.5s ease-in;opacity: 0;}
+.promotion_page .section01 .ani03 {position: absolute;top: 0;left: 0;width: 200%;height: 0;padding-top: 25.33%;margin-top: 42.5%;background-image: url(../images/promotion/promo_ctt01_bgAni03.png);background-repeat: repeat-x;background-position-x: -405%;background-position-y: top;background-size: auto 100%;transition: 0.5s ease-in;opacity: 0;}
+.promotion_page .section01 .ani04 {position: absolute;top: 0;left: 0;width: 200%;height: 0;padding-top: 25.33%;margin-top: 63.2%;background-image: url(../images/promotion/promo_ctt01_bgAni04.png);background-repeat: repeat-x;background-position-x: 376%;background-position-y: top;background-size: auto 100%;transition: 0.5s ease-in;opacity: 0;}
+.promotion_page .section02 {position: relative;background: url(../images/promotion/promo_ctt02_bg.jpg) no-repeat center top / 100% auto;padding-top: 285%;height: 0;}
+.promotion_page .section02 .ani01 {position: absolute;top: 0;left: 24.4%;width: 7.73%;height: 0;padding-top: 8.2%;margin-top: 30.1%;background: url(../images/promotion/promo_ctt02_ani01.png) no-repeat center top / 100% auto;}
+.promotion_page .section02 .ani02 {position: absolute;top: 0;left: 32%;width: 8%;height: 0;padding-top: 8.2%;margin-top: 30.1%;background: url(../images/promotion/promo_ctt02_ani02.png) no-repeat center top / 100% auto;}
+.promotion_page .section02 .ani03 {position: absolute;top: 0;left: 40%;width: 1.33%;height: 0;padding-top: 8.2%;margin-top: 30.1%;background: url(../images/promotion/promo_ctt02_ani03.png) no-repeat center bottom / 100% auto;}
+.promotion_page .section02 .aniBox {position: absolute;top: 0;left: 0;width: 100%;height: 0;padding-top: 66.53%;margin-top: 164.5%;}
+.promotion_page .section02 .ani04 {position: absolute;top: 0;left: 16.7%;width: 18.1%;height: 0;padding-top: 8%;margin-top: 0;background: url(../images/promotion/promo_ctt02_ani04.png) no-repeat center top / 100% auto;}
+.promotion_page .section02 .ani05 {position: absolute;top: 0;left: 16.7%;width: 18.1%;height: 0;padding-top: 8%;margin-top: 17.3%;background: url(../images/promotion/promo_ctt02_ani05.png) no-repeat center top / 100% auto;}
+.promotion_page .section02 .ani06 {position: absolute;top: 0;left: 16.7%;width: 14.4%;height: 0;padding-top: 8%;margin-top: 32.4%;background: url(../images/promotion/promo_ctt02_ani06.png) no-repeat center top / 100% auto;}
+.promotion_page .section02 .ani07 {position: absolute;top: 0;left: 16.7%;width: 14.4%;height: 0;padding-top: 8%;margin-top: 58.8%;background: url(../images/promotion/promo_ctt02_ani07.png) no-repeat center top / 100% auto;}
+.promotion_page .section03 {position: relative;background: url(../images/promotion/promo_ctt03_bg.jpg) no-repeat center top / 100% auto;padding-top: 242%;height: 0;}
+.promotion_page .section03 .ani01 {position: absolute;top: 0;left: 24.4%;width: 7.73%;height: 0;padding-top: 8.2%;margin-top: 30.8%;background: url(../images/promotion/promo_ctt03_ani01.png) no-repeat center top / 100% auto;}
+.promotion_page .section03 .ani02 {position: absolute;top: 0;left: 32%;width: 8%;height: 0;padding-top: 8.2%;margin-top: 30.8%;background: url(../images/promotion/promo_ctt03_ani02.png) no-repeat center top / 100% auto;}
+.promotion_page .section03 .ani03 {position: absolute;top: 0;left: 40%;width: 1.33%;height: 0;padding-top: 8.2%;margin-top: 30.8%;background: url(../images/promotion/promo_ctt03_ani03.png) no-repeat center bottom / 100% auto;}
+.promotion_page .section03 .aniBox {position: absolute;top: 0;left: 0;width: 100%;height: 0;padding-top: 100.53%;margin-top: 56%;}
+.promotion_page .section03 .ani04 {position: absolute;top: 0;left: 9.8%;width: 80.4%;height: 0;padding-top: 18.9%;margin-top: 0;background: url(../images/promotion/promo_ctt03_ani04.png) no-repeat center top / 100% auto;}
+.promotion_page .section03 .ani05 {position: absolute;top: 0;left: 9.8%;width: 80.4%;height: 0;padding-top: 30.8%;margin-top: 21.9%;background: url(../images/promotion/promo_ctt03_ani05.png) no-repeat center top / 100% auto;}
+.promotion_page .section03 .ani06 {position: absolute;top: 0;left: 9.8%;width: 80.4%;height: 0;padding-top: 25.2%;margin-top: 55.8%;background: url(../images/promotion/promo_ctt03_ani06.png) no-repeat center top / 100% auto;}
+.promotion_page .section03 .ani07 {position: absolute;top: 0;left: 9.8%;width: 80.4%;height: 0;padding-top: 31%;margin-top: 84.1%;background: url(../images/promotion/promo_ctt03_ani07.png) no-repeat center top / 100% auto;}
+.promotion_page .section03 .link01 {position: absolute;top: 0;left: 11.4%;width: 77.73%;height: 0;padding-top: 10.5%;margin-top: 176%;background: #000;opacity: 0;}
+.promotion_page .section03 .link02 {position: absolute;top: 0;left: 11.4%;width: 77.73%;height: 0;padding-top: 10.5%;margin-top: 189.6%;background: #000;opacity: 0;}
+.promotion_page .section04 {position: relative;background: url(../images/promotion/promo_ctt04_bg.jpg) no-repeat center top / 100% auto;padding-top: 58.5%;padding-bottom: 12.5%;}
+.promotion_page .section04 .ani01 {position: absolute;top: 0;left: 24.4%;width: 7.73%;height: 0;padding-top: 8.2%;margin-top: 31.7%;background: url(../images/promotion/promo_ctt04_ani01.png) no-repeat center top / 100% auto;}
+.promotion_page .section04 .ani02 {position: absolute;top: 0;left: 32%;width: 8%;height: 0;padding-top: 8.2%;margin-top: 31.7%;background: url(../images/promotion/promo_ctt04_ani02.png) no-repeat center top / 100% auto;}
+.promotion_page .section04 .ani03 {position: absolute;top: 0;left: 40%;width: 1.33%;height: 0;padding-top: 8.2%;margin-top: 31.7%;background: url(../images/promotion/promo_ctt04_ani03.png) no-repeat center bottom / 100% auto;}
+.promotion_page .section04 .listStyle01 {}
+.promotion_page .section04 .listStyle01 ul {width: 82.6%;margin: 0 auto;display: flex;flex-direction: row;gap: 3%;flex-wrap: wrap;}
+.promotion_page .section04 .listStyle01 li {position: relative;width: 48.5%;margin-top: 3%;}
+.promotion_page .section04 .listStyle01 img {width: 100%;}
+.promotion_page .section04 .listStyle01 .rank {position: absolute;top: 0;left: 0;width: 28.5%;height: 0;padding-top: 28.5%;margin: 8% 0 0 8%;}
+.promotion_page .section04 .listStyle01 .rank01 {background: url(../images/promotion/promo_ctt04_rank01.png) no-repeat center top / 100% auto;}
+.promotion_page .section04 .listStyle01 .rank02 {background: url(../images/promotion/promo_ctt04_rank02.png) no-repeat center top / 100% auto;}
+.promotion_page .section04 .listStyle01 .rank03 {background: url(../images/promotion/promo_ctt04_rank03.png) no-repeat center top / 100% auto;}
+.promotion_page .section04 .listStyle01 .like {position: absolute;top: 0;right: 0;width: 8.4%;height: 0;padding-top: 8.4%;margin: 8% 8% 0 0;background: url(../images/promotion/promo_ctt04_like.png) no-repeat center top / 100% auto;border: none;}
+.promotion_page .section04 .listStyle01 .like.on {background: url(../images/promotion/promo_ctt04_likeOn.png) no-repeat center top / 100% auto;}
+.promotion_page .section04 .moreBtn {display: block;width: 82.6%;height: 0;padding-top: 10.6%;margin: 4% auto 0;background: url(../images/promotion/promo_ctt04_moreBtn.png) no-repeat center top / 100% auto;}
+.promotion_page .banner {display: block;position: relative;background: url(../images/promotion/promo_banner.jpg) no-repeat center top / 100% auto;padding-top: 51.5%;height: 0;overflow: hidden;}
+.promotion_page .gif {position: absolute;top: 0;right: 4%;width: 27%;height: 0;padding-top: 75%;margin-top: 879%;background: url(../images/promotion/promo_gif.gif) no-repeat center top / auto 100%;}
+.promotion_page .deco01 {position: absolute;top: 0;left: -27.8%;width: 59%;height: 0;padding-top: 88%;margin-top: 348%;background: url(../images/promotion/deco01.png) no-repeat center top / 100% auto;animation: deco2 1.5s infinite ease-in-out alternate;}
+.promotion_page .deco02 {position: absolute;top: 0;right: -24%;width: 67.8%;height: 0;padding-top: 83%;margin-top: 598%;background: url(../images/promotion/deco02.png) no-repeat center top / 100% auto;animation: deco 1.5s infinite ease-in-out alternate;}
+.promotion_page .deco03 {position: absolute;top: 0;right: -19%;width: 65.6%;height: 0;padding-top: 57.2%;margin-top: 850.8%;background: url(../images/promotion/deco03.png) no-repeat center top / auto 100%;animation: deco 1.5s infinite ease-in-out alternate;}
+.popLayer {display: none;position: fixed;top: 0;bottom: 0;left: 0;right: 0;background: rgba(0,0,0,0.8);text-align: center;}
+.popLayer:after {content: '';height: 100%;vertical-align: middle;display: inline-block;}
+.popLayer .popBox {position: relative;display: inline-block;width: 82.8%;}
+.popLayer .popBox .img {width: 100%;}
+.popLayer .popBox .popClose {position: absolute;top: 0;right: 2.8%;width: 7%;height: 0;padding-top: 8%;margin-top: 4%;background: #000;opacity: 0;}
+.popLayer .popBox .btn01 {position: absolute;bottom: 0;right: 5.8%;width: 87%;height: 0;padding-top: 15%;margin-bottom: 7%;background: #000;opacity: 0;}
+.popLayer .popBox .btn02 {position: absolute;bottom: 0;right: 5.8%;width: 10%;height: 0;padding-top: 8%;margin-bottom: 58%;background: #000;opacity: 0;}
+.promotion_page .section02 .ani01.on, .section03 .ani01.on, .section04 .ani01.on {animation: ani 0.4s linear 0s;}
+.promotion_page .section02 .ani02.on, .section03 .ani02.on, .section04 .ani02.on {animation: ani 0.4s linear 0.05s;}
+.promotion_page .section02 .ani03.on, .section03 .ani03.on, .section04 .ani03.on {animation: ani 0.4s linear 0.1s;}
+.promotion_page .section01 .aniBox.on .ani01 {opacity: 1;background-position-x: -26%;}
+.promotion_page .section01 .aniBox.on .ani02 {opacity: 1;background-position-x: 3%;transition-delay: 0.5s;}
+.promotion_page .section01 .aniBox.on .ani03 {opacity: 1;background-position-x: -5%;transition-delay: 1s;}
+.promotion_page .section01 .aniBox.on .ani04 {opacity: 1;background-position-x: -24%;transition-delay: 1.5s;}
+.promotion_page .section02 .aniBox.on .ani04, .promotion_page .section03 .aniBox.on .ani04 {animation: ani 0.4s linear 0s;}
+.promotion_page .section02 .aniBox.on .ani05, .promotion_page .section03 .aniBox.on .ani05 {animation: ani 0.4s linear 0.05s;}
+.promotion_page .section02 .aniBox.on .ani06, .promotion_page .section03 .aniBox.on .ani06 {animation: ani 0.4s linear 0.1s;}
+.promotion_page .section02 .aniBox.on .ani07, .promotion_page .section03 .aniBox.on .ani07 {animation: ani 0.4s linear 0.15s;}
+
+@keyframes ani {
+	50% {transform: translate(0, 10px);}
+    100% {transform: translate(0, 0);}
+}
+@keyframes deco {
+	0% {transform: translate(0, 5px) rotate(0deg);}
+    100% {transform: translate(0, 0px) rotate(1deg);}
+}
+@keyframes deco2 {
+	0% {transform: translate(0, 20px) rotate(0deg);}
+    100% {transform: translate(0, 0px) rotate(2deg);}
+}
+
+@media all and (min-width: 1024px) {
+}

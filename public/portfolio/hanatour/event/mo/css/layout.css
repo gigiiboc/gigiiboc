@@ -1,0 +1,310 @@
+@charset "utf-8";
+/*
+<UPLEAT> UI Dev Team
+{Oh Young Ju}, {An Se Jung}, {Lee Yun Hee}, Hwang Mi Ae, Kim So Young, Cho Han Sol, {Kang Young Sun}
+commnet : mobile layout
+ */
+
+html {display:block}
+body.js_left_view, body.js_right_view, html.layer_open, html.layer_open body{overflow-y:hidden;-webkit-user-select:none;-webkit-touch-callout:none;}
+#wrap{overflow:hidden}
+body.js_left_view #wrap:before, body.js_right_view #wrap:before{display:block;position:fixed;left:0;width:100%;height:100%;content:'';background-color:rgba(0, 0, 0, 0.4);z-index:110}
+.progressbar{position:fixed;width:0;height:1px;top:0;left:0;background:#f63d8b;-webkit-transition:width .3s ease;-moz-transition:width .3s ease;transition:width .3s ease;z-index:20}
+.header_wrap{position:fixed;top:0;left:0;right:0;z-index:1000;-webkit-transition:top .2s ease-in-out;-moz-transition:top .2s ease-in-out;transition:top .2s ease-in-out}
+
+/* =header */
+#header{background-color:rgba(255,255,255,1);height:5rem;position:relative;text-align:center;z-index:100}
+#header.mainType{height:9.2rem;overflow:hidden}
+#header.type{background-color:rgba(255,255,255,0);-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;transition:all .3s ease-out}
+.srch_top.scrolled #header.type{background-color:rgba(255,255,255,1)}
+#header.type h1.title{color:#fff}
+#header h1{position:relative}
+#header h1.title{display:inline-block;font-size:1.7rem;font-weight:600;color:#111;margin:1.35rem auto 0;text-align:center}
+#header h1.logo{display:inline-block;position:absolute;top:1.5rem;left:2rem;width:11.5rem;height:2rem}
+#header h1.logo a{display:block;height:2rem;font-size:0;position:relative}
+#header h1.logo a:before{width:11.5rem;height:2rem;position:absolute;top:0;left:0;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/logo.png')}
+
+#header>a, .slide .lypop_header>a{display:inline-block;position:absolute;top:1rem;width:3rem;height:3rem;white-space:nowrap;z-index:10}
+#header>a:after, .slide .lypop_header>a:after{position:absolute;top:.5rem;left:.5rem;width:2rem;height:2rem}
+#header>a>span:not(.alarm),.btn_share>span, .slide .lypop_header>a>span {text-indent:-999rem;display:inline-block}
+
+#header.mainType .js_tabs{margin-top:6rem}
+
+#header .btn_prev, .lypop_header .btn_prev{left:1.5rem}
+#header .btn_prev:after, .slide .lypop_header .btn_prev:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-gnb-arrow-back-40.png')}
+#header.type:not(.black) .btn_prev:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-gnb-arrow-back-40-w.png')}
+.srch_top.scrolled #header.type .btn_prev:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-gnb-arrow-back-40.png')}
+#header .btn_search{right:5.2rem}
+.srch_top.scrolled #header .btn_search{z-index:100;}
+#header .searchform_com .btn_search{right:0}
+#header .btn_search:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-gnb-search-40.png')}
+#header.type:not(.black) .btn_search:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico_gnb_search_40_white.png')}
+.srch_top.scrolled #header.type .btn_search:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-gnb-search-40.png')}
+#header .btn_right_menu{right:1.5rem}
+.srch_top.scrolled #header .btn_right_menu{z-index:100;}
+#header .btn_right_menu:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/icn-gnb-menu-40.png')}
+#header.type:not(.black) .btn_right_menu:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/icn_gnb_menu_40_white.png')}
+.srch_top.scrolled #header.type .btn_right_menu:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/icn-gnb-menu-40.png')}
+#header .btn_cart{right:5.3rem}
+#header .btn_cart:after{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/btn_header_cart.png')}
+.btn_share{display:inline-block;position:relative;width:3rem;height:3rem;white-space:nowrap;z-index:10}
+.right_cont .btn_share{vertical-align:top}
+#header .btn_share{position:absolute;right:1.5rem;background-color:transparent}
+.btn_share:after{position:absolute;top:.5rem;left:.5rem;width:2rem;height:2rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-gnb-share-40.png')}
+.right_cont .btn_share:after{top:.5rem;left:.5rem;width:2rem;height:2rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-share-bk-40.png')}
+#header .alarm, #footer .alarm{position:absolute;top:-.2rem;right:-.8rem;color:#fff;background-color:#e81e6f;width:auto;height:auto;border-radius:10rem;line-height:1;font-size:1.1rem;font-weight:400 !important;letter-spacing:-.1rem;text-align:center;cursor:pointer;padding:.2rem .4rem;z-index:10}
+.ribbon_popup{height:6rem;position:relative;-webkit-transition:all .2s ease-out;-moz-transition:all .2s ease-out;transition:all .2s ease-out;background-color:#fdf4f7;z-index:100}
+.ribbon_popup.off{height:0;padding:0;overflow:hidden}
+.ribbon_popup span{display:inline-block;font-size:1.3rem;line-height:1.6rem;color:#111;position:relative;padding:0 0 0 5rem;margin:1.2rem 0 0 2rem}
+.ribbon_popup span:before{width:3.6rem;height:3.6rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/app-logo.png');position:absolute;top:0;left:0}
+.ribbon_popup span strong{font-size:1.4rem;line-height:2rem;color:#111;display:block}
+.ribbon_popup a{display:inline-block;position:absolute;top:.5rem;font-size:1.3rem}
+.ribbon_popup .btn{right:4.4rem;top:50%;margin-top:-1.65rem;}
+.ribbon_popup .btn.sml.em{background-color:transparent !important}
+.ribbon_popup a.btn_cls{right:.6rem;top:.5rem;width:3.5rem;height:4rem;font-size:0}
+.ribbon_popup a.btn_cls:before{width:1.5rem;height:1.5rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-close-pk.png');position:absolute;top:1rem;left:1rem}
+
+.co_brand{background-color:#f4f5f9;height:6.8rem;border-bottom:.2rem solid #fff;padding:1.4rem 0 0 2.5rem;position:relative;-webkit-transition:all .4s ease-out;-moz-transition:all .4s ease-out;transition:all .4s ease-out;z-index:100}
+.co_brand>strong{display:block;float:left;font-weight:600;width:30%;color:#111}
+.co_brand>p{width:70%;float:right;display:block;flex:3;justify-content:center;align-items:start;font-size:1.3rem;line-height:1.9rem;}
+.co_brand>p>em{color:#111}
+
+/* .header_wrap .gnb{height:3.5rem;padding:.8rem 2rem 0 0;background-color:#fff;position:relative;-webkit-transition:all .2s ease-out;-moz-transition:all .2s ease-out;transition:all .2s ease-out;z-index:100;overflow:hidden}
+.header_wrap .gnb.on{height:10.5rem;border-bottom:1px solid #ddd}
+.header_wrap .gnb.cuc{text-align:center}
+.header_wrap .gnb ul{margin-top:-1rem} */
+/* .header_wrap .gnb ul li{display:inline-block;margin-top:1rem;margin-left:2rem}
+.header_wrap .gnb ul li a{font-size:1.5rem;line-height:2.3rem;color:#111}
+.header_wrap .gnb .btn_show{width:2.4rem;height:2.4rem;position:absolute;top:.7rem;right:2rem;font-size:0;border:1px solid #c2c2c2;background-color:rgba(255, 255, 255, 0.9);border-radius:.3rem;}
+.header_wrap .gnb .btn_show:before{display:block;content:'';background-position:center center;background-repeat:no-repeat;background-size:cover;width:1.2rem;height:1.2rem;position:relative;left:.5rem;top:.6rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico_arrow_down_26.png')}
+.header_wrap .gnb.on .btn_show:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-arrow-up-26.png')} */
+
+.btn_bell{position:absolute;bottom:4rem;right:2rem;display:inline-block;background:rgba(255, 255, 255, 0.15);height:2.5rem;line-height:2.5rem;padding:0 1rem 0 3.1rem;color:#fff;border-radius:1.2rem;-webkit-transition:all .1s ease-out;-moz-transition:all .1s ease-out;transition:all .1s ease-out;z-index:1001}
+.scrolled .btn_bell{z-index:1;}
+.btn_bell:before{content:'';position:absolute;left:0;top:0;background-repeat:no-repeat;background-position:0 50%;width:2.5rem;height:2.5rem;background-size:100%;}
+.htl .btn_bell:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico_bell_50.png')}
+.air .btn_bell:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico_bell_bl_50.png')}
+
+/* .contents */
+.gnb{background-color:#fff;min-height:2.3rem;width:100%;-webkit-transition:all .2s ease-out;-moz-transition:all .2s ease-out;transition:all .2s ease-out;white-space:nowrap;padding:2rem 2rem 0;top:0;z-index:10;border-radius:1.5rem 1.5rem 0 0}
+.header_wrap .gnb{margin-top:-1rem}
+.gnb .tit{display:none}
+.gnb ul{height:2.3rem;overflow:hidden}
+.gnb ul li{display:inline-block;}
+.gnb ul li + li{margin-left:2rem;}
+.gnb ul li a{font-size:1.5rem;line-height:2.1rem;color:#111}
+.gnb .btn_show{width:2.4rem;height:2.4rem;position:absolute;top:1.8rem;right:2rem;font-size:0;border:1px solid #c2c2c2;background-color:rgba(255, 255, 255, 0.9);border-radius:.3rem;}
+.gnb .btn_show:before{display:block;content:'';background-position:center center;background-repeat:no-repeat;background-size:cover;width:1.2rem;height:1.2rem;position:relative;left:.5rem;top:.6rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico_arrow_down_26.png')}
+
+.gnb.on{position:absolute;box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.08);border-radius:1.5rem;padding-bottom:1.3rem;height:auto;min-height:2.3rem;}
+.gnb.on .btn_show:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-arrow-up-26.png')}
+.gnb.on .tit{display:inline-block;font-size:1.5rem;color:#111;}
+.gnb.on ul{height:auto;overflow:auto;flex-wrap:wrap;display:flex;flex:1;margin-top:1.5rem}
+.gnb.on ul li{width:49%;border:1px solid #ddd;border-radius:.3rem;text-align:center;margin-bottom:.7rem;height:4rem;line-height:4rem}
+.gnb.on ul li + li{margin-left:2%;}
+.gnb.on ul li a{font-size:1.4rem;}
+.gnb.on ul li:nth-child(2n+1){margin-left:0;}
+
+.gnb_wrap{position:relative;height:2.3rem;border-radius:0;margin-bottom:1.5rem;}
+.header_wrap .gnb_wrap{height:4.3rem}
+.contents.type .top_visual.zeus ~ .gnb_wrap{height:4.3rem;}
+.contents.type .top_visual.zeus ~ .gnb .btn_show{top:2.7rem}
+
+.visual.pkg ~ .gnb_wrap{margin-top:-1.5rem;border-radius:1.5rem 1.5rem 0 0;height:4.3rem;}
+.small .visual.pkg ~ .gnb_wrap{margin-top:-3rem}
+
+
+
+.srch_top #header{text-align:left}
+.srch_top #header h1.title{position:relative;font-size:1.7rem;font-weight:600;color:#111;margin:5rem 0 0;padding-left:2rem;text-align:left;width:100%;z-index:99;/*line-height:5rem*/-webkit-transition:all .2s ease-out;-moz-transition:all .2s ease-out;transition:all .2s ease-out}
+.srch_top #header.type h1.title{color:#fff;font-size:2.6rem;line-height:3.2rem;margin-top:6rem}
+.srch_top #header.type.no_tit h1.title{text-indent:-999rem}
+.srch_top #header.type.black h1.title{color:#111}
+.srch_top.scrolled #header h1.title{margin:1.35rem 0 0 4.5rem;font-size:1.7rem;line-height:1.4;padding-left:0}/* width:calc(100% - 12.7rem); */
+.srch_top.scrolled #header.type h1.title{color:#111}
+.srch_top.scrolled #header.type.no_tit h1.title{text-indent:0}
+.srch_top #header h1.title>a{position:relative;font-size:2.6rem;max-width:calc(100% - 6rem);font-weight:600;color:#111;display:inline-block;margin:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-webkit-transition:font-size .2s ease-out;-moz-transition:font-size .2s ease-out;transition:font-size .2s ease-out}
+.srch_top.scrolled #header h1.title>a{position:relative;font-size:1.7rem;;white-space:normal}
+.srch_top #header h1.title i{position:absolute;top:.8rem;display:inline-block;width:1.3rem;height:1.3rem;background:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-arrow-dropdown-26.png') no-repeat right top;background-size:100%;margin-left:.5rem}
+.srch_top.scrolled #header h1.title i{top:.3rem}
+.srch_top .header_srch_wrap{text-align:left;margin-top:8.6rem;padding:0;background-color:#fff;z-index:100;/*-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;transition:all .2s ease-in-out*/}
+.srch_top.scrolled .header_srch_wrap{position:fixed;left:0;right:0;margin-top:5rem;}
+.srch_top .header_srch_wrap .btn_wrap{margin-top:0;padding:1.5rem 2rem 0;height:3.6rem;opacity:1;text-align:left;/*-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;transition:all .2s ease-in-out;*/}
+.srch_top.scrolled .header_srch_wrap .btn_wrap{height:0;padding:0;opacity:0}
+.srch_top.scrolled .header_srch_wrap .btn_wrap.block{display:block}
+.srch_top .header_srch_wrap .btn_wrap a{display:inline-block;font-size:1.5rem;color:#111}
+.srch_top .header_srch_wrap .btn_wrap a:not(:first-child){margin-left:2rem}
+.srch_top .header_srch_wrap .btn_wrap a span{display:inline;position:relative;padding-left:1.9rem}
+.srch_top .header_srch_wrap .btn_wrap a span.bl{padding-left:.6rem}
+.srch_top .header_srch_wrap .btn_wrap a span:before{display:block;content:'';background-position:center center;background-repeat:no-repeat;background-size:cover;width:1.5rem;height:1.5rem;position:absolute;left:0;top:0}
+.srch_top .header_srch_wrap .btn_wrap a span.pos:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-location-30.png')}
+.srch_top .header_srch_wrap .btn_wrap a span.cal:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-calandar-30.png')}
+.srch_top .header_srch_wrap .btn_wrap a span.person:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-2-person-30.png')}
+.filter_top_wrap{overflow:hidden;margin:2.2rem 0 0 2rem;vertical-align:top}
+.scrolled .filter_top_wrap{margin-top:0}
+.panels .filter_top_wrap{margin-left:0;margin-right:-2rem;margin-top:1.5rem}
+.filter_top_wrap:after{content:'';display:table;clear:both}
+.filter_top_wrap .inr{float:left;width:7.5rem;padding-top:.3rem}
+.scrolled .filter_top_wrap .inr, .filter_top_wrap.type .inr{width:auto}
+.filter_top_wrap .inr.right{float:right;width:calc(100% - 7.5rem);overflow:hidden;overflow-x:scroll;white-space:nowrap}
+.filter_top_wrap .inr.right::-webkit-scrollbar{display:none}
+.scrolled .filter_top_wrap .inr.right{display:flex;white-space:normal}
+.scrolled .filter_top_wrap .inr.right, .filter_top_wrap.type .inr.right{width:calc(100% - 7.5rem);}
+.filter_top_wrap .right > span,
+.filter_top_wrap .inr>a{display:inline-block;position:relative;vertical-align:top;padding-top:6.8rem;width:6rem;text-align:center;color:#111}
+.scrolled .filter_top_wrap .right > span{padding-top:0;width:auto}
+.scrolled .filter_top_wrap .right > span > a,
+.scrolled .filter_top_wrap .inr>a,
+.filter_top_wrap.type .right > span,
+.filter_top_wrap.type .inr>a{display:inline-block;position:relative;vertical-align:top;padding-top:0;width:auto;text-align:center}
+.filter_top_wrap .right > span:before,
+.filter_top_wrap .inr>a:before{display:inline-block;content:'';width:6rem;height:6rem;border-radius:1rem;border-top-right-radius:0;vertical-align:top;position:absolute;top:0;left:0}
+.scrolled .filter_top_wrap .right > span:before,
+.scrolled .filter_top_wrap .inr>a:before,
+.filter_top_wrap.type .right > span:before,
+.filter_top_wrap.type .inr>a:before {display:none}
+.filter_top_wrap .right > span{flex:none;position:relative;white-space:normal;font-size:1.3rem}
+.filter_top_wrap.type .right > span a{display:block;z-index:10;position:absolute;top:0;left:0;right:0;bottom:0;padding-top:0;padding-right:1.9rem;color:#111}
+.filter_top_wrap .right > span:not(:first-child){margin-left:1rem}
+.filter_top_wrap .right > span:last-child, .scrolled .filter_top_wrap .right > span:last-child a.cls{margin-right:2rem}
+.filter_top_wrap .inr .btn_filter:before{background:#e5236d url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-70.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem;/*-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;transition:all .2s ease-in-out*/}
+
+.filter_top_wrap .right > span.item01_1:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-01-1.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item01_2:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-01-2.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item01_3:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-01-1.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item01_4:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-01-1.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item02:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-02.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item03:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-03.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item04:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-04.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item05:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-05.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item06:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-06.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+
+.filter_top_wrap .right > span.item07_1:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-07-1.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item07_2:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-07-2.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item07_3:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-07-3.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item07_4:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-07-4.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item07_5:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-07-5.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item07_6:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-07-6.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+
+.filter_top_wrap .right > span.item08:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-08.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+
+.filter_top_wrap .right > span.item09_1:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-09-1.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item09_2:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-09-2.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item09_3:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-09-3.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item09_4:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-09-4.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item09_5:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-09-5.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item09_6:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-09-6.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item09_7:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-09-7.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item09_8:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-09-8.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item09_9:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-09-9.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+
+.filter_top_wrap .right > span.item10:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-10.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item11:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-11.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item12:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-12.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item13:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-13.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item14:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-14.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item15:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-15.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+.filter_top_wrap .right > span.item16:before{background:#f4f5f9 url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-16.png') no-repeat 1.25rem 1.25rem;background-size:3.5rem 3.5rem}
+
+
+.filter_top_wrap .right > span.filter_no{width:77%;padding:1.3rem 0 0;text-align:left;white-space:normal}
+.filter_top_wrap .alarm, .option_wrap .right_cont .alarm{display:inline-block;color:#fff;background-color:#e81e6f;width:1.9rem;height:1.9rem;border-radius:50%;line-height:2rem;font-size:1.1rem;font-weight:400;letter-spacing:-.1rem;text-align:center;cursor:pointer;z-index:10;margin-left:.3rem}
+.filter_top_wrap .alarm{vertical-align:top}
+.scrolled .filter_top_wrap, .filter_top_wrap.type{margin-bottom:1.2rem !important}
+.panels .scrolled .filter_top_wrap{margin-bottom:0 !important}
+.scrolled .filter_top_wrap .alarm, .filter_top_wrap.type .alarm{position:relative;top:-1px}
+.filter_top_wrap .right span a.cls:after{display:block;content:''}
+.filter_top_wrap .right span a.cls:after{display:inline-block;font-size:1.3rem;width:13px;height:13px;position:absolute;top:-.3rem;right:-.3rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-close-circle-lg-26.png');background-repeat:no-repeat;background-size:13px auto}
+.filter_top_wrap.type .right span a.cls:after{top:.1rem;right:0}
+.scrolled .filter_top_wrap .right span a.cls, .filter_top_wrap.type .right span a.cls{position:relative;margin-left:.5rem;vertical-align:top;left:0;top:0}
+.scrolled .filter_top_wrap .inr .btn_filter, .filter_top_wrap.type .inr .btn_filter{position:relative;padding-left:2.1rem}
+.scrolled .filter_top_wrap .inr .btn_filter:before, .filter_top_wrap.type .inr .btn_filter:before, .option_wrap .right_cont .btn_filter:before{display:inline-block;content:'';width:1.5rem;height:1.5rem;background:#fff url('https://image.hanatour.com/usr/static/img/mobile/pkg/ico-filter-30.png');background-size:cover;margin-top:2px}
+.scrolled .prod_selected>span, .filter_top_wrap.type .prod_selected>span{font-size:1.3rem;line-height:1.9rem;padding-left:1.9rem;position:relative;color:#666;margin-top:.5rem}
+.scrolled .prod_selected>span:last-child, .filter_top_wrap.type .prod_selected>span:last-child{margin-left:1.5rem}
+.scrolled .prod_selected>span:before,
+.filter_top_wrap.type .prod_selected>span:before{display:block;content:'';width:1.3rem;height:1.3rem;position:absolute;top:0;left:0;background:url('https://image.hanatour.com/usr/static/img/mobile/com/ico_list_check_disable.png') no-repeat 0 0;background-size:1.3rem}
+.scrolled .prod_selected>span.clk,.filter_top_wrap.type .prod_selected>span.clk{color:#e5236d}
+.scrolled .prod_selected>span.clk:before,
+.filter_top_wrap.type .prod_selected>span.clk:before{display:block;content:'';width:1.3rem;height:1.3rem;position:absolute;top:0;left:0;background:url('https://image.hanatour.com/usr/static/img/mobile/com/ico_list_check.png') no-repeat 0 0;background-size:1.3rem;color:#e5236d}
+.scrolled .filter_top_wrap .right span a.cls{display:inline-block;padding-right:1.9rem;position:relative;color:#111} /* 190620 sejung font color modify */
+.scrolled .filter_top_wrap .right span a.cls:after{width:13px;height:13px;background-position:100% 40%;background-size:13px;position:absolute;top:.1rem;right:0}
+.scrolled .filter_top_wrap .right > span.filter_no{width:auto;padding:0 2rem 0 0}
+
+/* =left_menu */
+.left_menu{overflow-y:scroll;position:fixed;top:0;left:-80%;width:80%;height:100%;-webkit-transition:all .4s ease-out;transition:all .4s ease-out;-webkit-overflow-scrolling:touch;background-color:pink;z-index:20}
+body.js_left_view .left_menu {left:0}
+.left_menu .inr{position:relative;padding:1rem}
+.left_menu .btn_left_menu_close{display:block;position:absolute;top:1rem;right:1rem;width:3rem;height:3rem;padding:1rem;text-indent:-999rem;white-space:nowrap}
+.left_menu .btn_left_menu_close:after{position:absolute;top:0;left:0;width:3rem;height:3rem;background-color:hotpink}
+
+/* =right_menu */
+.right_menu{overflow-y:scroll;position:fixed;top:0;right:-100%;width:100%;height:100%;-webkit-transition:all .4s ease-out;transition:all .4s ease-out;-webkit-overflow-scrolling:touch;background-color:#fff;z-index:5000;padding:0 2rem 2rem}
+body.js_right_view .right_menu {right:0}
+.right_menu .inr{position:relative;padding:1rem}
+.right_menu .btn_right_menu_close{display:block;width:4rem;height:4rem;position:absolute;top:1.2rem;right:1rem;z-index:5000;font-size:0}
+.right_menu .btn_right_menu_close:after{position:absolute;top:1rem;left:1rem;width:2rem;height:2rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico_close.png')}
+.right_menu .cont_unit{margin-top:0}
+
+/* =footer */
+#footer{position:relative;background-color:#fff;z-index:2000}
+#footer small{display:block;font-size:1.1rem;line-height:1.9rem;margin-top:1rem}
+#footer .quick_menu{overflow:hidden;position:fixed;height:6.5rem;bottom:0;left:0;right:0;z-index:10;background-color:#fff;-webkit-transition:all .4s ease-out;transition:all .4s ease-out}
+#footer .quick_menu.off{height:0}
+#footer .quick_menu ul{overflow:hidden;display:flex;height:6.5rem}
+#footer .quick_menu li{display:flex;flex:1;position:relative}
+#footer .quick_menu li:nth-child(3){flex:1.1}
+#footer .quick_menu li:nth-child(4){flex:1.05}
+#footer .quick_menu li:nth-child(5){flex:1.2}
+#footer .quick_menu li a{display:flex;height:6.5rem;flex:1;justify-content:center;align-items:center;font-size:1.3rem;line-height:1.9rem;padding-top:3.6rem;padding-bottom:1rem;color:#111}
+#footer .quick_menu li a:before{width:2rem;height:2rem;position:absolute;top:1.1rem;left:50%;margin-left:-1rem}
+#footer .quick_menu li a.btn_home:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-tabbar-home-40.png')}
+#footer .quick_menu li a.btn_totalmenu:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-tabbar-menu-40.png')}
+#footer .quick_menu li a.btn_basket:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-tabbar-shopping-basket.png')}
+#footer .quick_menu li a.btn_my:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-tabbar-mypage-40.png')}
+#footer .quick_menu li a.btn_recent:before{background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-tabbar-lastproduct-40.png')}
+#footer .btn_top{display:none;position:fixed;right:2rem;bottom:12.5rem;width:4rem;height:4rem;border-radius:50%;border:1px solid #ddd;background-color:#fff;font-size:0;z-index:4000}
+#footer .btn_top:after{width:1.5rem;height:1.5rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-fab-top-30.png');position:absolute;top:50%;left:50%;margin:-.75rem 0 0 -.75rem}
+#footer .btn_top>span{display:inline-block;text-indent:-999rem;white-space:nowrap}
+
+#footer .alarm{top:.3rem;left:calc(50% + .5rem);right:auto}
+#footer .global_link{border-top:1px solid #666;border-bottom:1px solid #ddd;height:4rem;overflow:hidden}
+#footer .global_link li{width:33.3%;float:left;text-align:center;border-left:1px solid #ddd}
+#footer .global_link li:first-child{border-left:none}
+#footer .global_link li:nth-child(2){width:33.4%}
+#footer .global_link li a{display:block;height:4rem;line-height:4.2rem;text-align:center;font-size:1.3rem;color:#111}
+#footer .global_link li a.tel{display:inline-block}
+#footer .global_link li a.tel:before{display:inline-block;content:'';clear:both;width:1.3rem;height:1.3rem;background-image:url('https://image.hanatour.com/usr/static/img/mobile/com/ico-tel-26.png');position:relative;top:.2rem}
+#footer .office_info_wrap{padding:2rem 2rem 1rem}
+#footer .office_info_wrap + .office_info_wrap{border-top:1px solid #ddd;padding-top:1rem;padding-bottom:8rem}
+#footer .office_info_wrap.type{padding-bottom:7rem}
+#footer .office_info_wrap address{font-size:1.1rem;line-height:1.7rem}
+#footer .office_info_wrap address strong{font-weight:600;display:block}
+#footer .office_info_wrap address span{display:block}
+#footer .office_info li{font-size:1.1rem;line-height:1.7rem}
+#footer .office_info li a{text-decoration:underline;color:#e5236d;display:inline-block}
+#footer .link_etc{overflow:hidden}
+#footer .link_etc li{float:left;position:relative;padding-left:.9rem;margin-right:.6rem}
+#footer .link_etc li:first-child, #footer .link_etc li:nth-child(5){padding-left:0}
+#footer .link_etc li:before{display:block;content:'';clear:both;width:.3rem;height:.3rem;border-radius:50%;background-color:#c2c2c2;position:absolute;top:50%;left:0;margin-top:-.2rem}
+#footer .link_etc li:first-child:before, #footer .link_etc li:nth-child(5):before{display:none}
+#footer .link_etc li a{font-size:1.3rem;line-height:1.9rem;}
+#footer .link_etc li a strong{color:#111;font-weight:600}
+
+/* =contents */
+.contents{padding-top:6rem;padding-bottom:6rem;-webkit-transition:all .4s ease-out;transition:all .4s ease-out}
+.preview .contents{padding-top:2rem}
+/* .contents.air, .contents.htl{padding-bottom:0} */
+.ribbon .contents{padding-top:12rem}
+.coBrand.ribbon .contents{padding-top:22rem} /* 18.8rem */
+.coBrand .contents{padding-top:16.1rem}/* 12.8rem */
+.coBrand.showGnb .contents{padding-top:16.3rem}
+.coBrand.ribbon.showGnb .contents{padding-top:22.3rem}
+.contents.type{padding-top:5rem;}
+.ribbon .contents.type{padding-top:11rem}
+.coBrand.ribbon .contents.type{padding-top:17.8rem}
+.coBrand .contents.type{padding-top:11.8rem}
+.coBrand.showGnb .contents.type{padding-top:15.3rem}
+.coBrand.ribbon.showGnb .contents.type{padding-top:21.3rem}
+.contents.main{padding-bottom:9rem}
+.srch_top .contents{padding-top:0}
+.gnbInsert .contents{padding-top:9.5rem}

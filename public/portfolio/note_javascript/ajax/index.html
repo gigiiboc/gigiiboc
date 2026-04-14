@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Jquery Ajax </title>
+	<style>
+		#console {
+			border: 2px solid #afe;
+			margin-top:10px;
+			height:150px;
+			padding:5px;
+			font-size:11px;
+
+		}
+		.ret {
+			margin-top:5px;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+		$(document).ready(function(){
+			var $console = $('#console');
+			var loadingbar;
+
+			//로딩바 적용
+			loadingbar = $('<img src="ajax-loader.gif" border="0" alt="loader" />').appendTo(document.body).hide();
+			loadingbar.css('position','absolute').centerScreen();
+
+			//btn1 클릭 시 sample.html 로딩 하기
+			$("#btn1").click(function(){
+				$console.load('sample.html');
+			});
+
+			//btn2 클릭 시 sample.jaon 로딩 하고 console 에 출력하기
+			// * .getJSON 에서 대소문자 주의하세요.
+			$('#btn2').click(function(){
+				$.getJSON('sample.json', function(data){
+					$console.empty();
+					$.each(data , function( index, att ) {
+						var html = "<div class='ret' id='identity_" + att['idx']  + "'>";
+						html += "<span class='name'>" + att['name'] + "</span>";
+						html += "<span class='age'> " +  att['age'] + "세 </span>";
+						html += "<span class='created'>" +  att['created'] + "</span>";
+						if (att['habit']) {
+							$.each(att['habit'] , function( hIndex, h ) {
+								html += "<span class='habit'> " + h + " </span>";
+							});
+						}
+						html +="</div>";
+						$console.append(html);
+					});
+				});
+			});
+
+			//btn3 클릭 시 sample.xml 로딩 하고 console 에 출력하기
+			$('#btn3').click(function(){
+				$.get('sample.xml', function(data) {
+					$console.empty();
+					$(data).find('row').each(function(index) {
+						var $row = $(this);
+						var html = "<div id='row_" +index + "'>";
+						$row.find('column').each(function(){
+							var $column = $(this);
+							html += "<span id='" + $column.attr('name') + "'>" + $.trim($column.text()) + "</span>";
+						});
+						html += "</div>";
+						$console.append(html);
+					});
+				});
+			});
+
+			$('#btn4').click(function(){
+				$console.empty();
+				if($("input[name=method]:checked").val() == "post")	{
+					//post
+					$.post('http://jq.localhost/sample.php', $('#form').serialize(), function(data) {
+						$console.html(data);
+					});
+				}else {
+					//get
+					$.get('http://jq.localhost/sample.php', $('#form').serialize(), function(data) {
+						$console.html(data);
+					});
+				}
+			});
+
+			$(document).ajaxStart(function() {
+				$(loadingbar).fadeIn("fast");
+			});
+
+			$(document).ajaxStop(function() {
+				$(loadingbar).fadeOut("fast");
+			});
+
+		});
+
+		// 엘리먼트를 윈도우 중앙에 위치 시키기
+        jQuery.fn.centerScreen = function()
+		{
+			var obj = this;
+			obj.css('top',  $(window).height()/2-this.height()/2);
+			obj.css('left', $(window).width()/2-this.width()/2);
+			$(window).resize(function(){obj.centerScreen(); });
+        }
+
+	//-->
+	</SCRIPT>
+
+</head>
+<body>
+
+	<button id="btn1" />sample.html 요청하기</button> <br/>
+
+	<button id="btn2" />sample.json 요청하기</button> <br/>
+
+	<button id="btn3" />sample.xml  요청하기</button><br/>
+
+	<br/>
+	<form id="form">
+		<input type="radio" value="get" name="method"  chekced />get&nbsp;<input type="radio" value="post" name="method" />post <br/>
+		이름 : <input type="text" name="name" value="" id="name" /><br/>
+		나이 : <input type="text" name="age" value=""  id="age" /><br/>
+		<input type="button" name="btn4" value=" sample.php" id="btn4" />
+	</form>
+
+	<br/>
+	<div id="console" >
+
+	</div>
+
+
+
+</body>
+</html>

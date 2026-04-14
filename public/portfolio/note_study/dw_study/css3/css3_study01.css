@@ -1,0 +1,95 @@
+.type-it-box {margin:10% auto;text-align:center;}
+.type-it {position:relative;width:100%;display:inline;}
+.type-it:after {content: "|";color: #555;margin-left: 4px;-webkit-animation: typePoint 1s infinite linear;animation: typePoint 1s infinite linear;}
+.type-it > span {position:fixed;top:0;left:-100%}
+.type-it > span._1 {animation:text_ani 0s linear 0.25s forwards;}
+.type-it > span._2 {animation:text_ani 0s linear 0.5s forwards;}
+.type-it > span._3 {animation:text_ani 0s linear 0.75s forwards;}
+.type-it > span._4 {animation:text_ani 0s linear 1s forwards;}
+.type-it > span._5 {animation:text_ani 0s linear 1.25s forwards;}
+.type-it > span._6 {animation:text_ani 0s linear 1.5s forwards;}
+.type-it > span._7 {animation:text_ani 0s linear 1.75s forwards;}
+.type-it > span._8 {animation:text_ani_del1 5s linear 2s forwards;}
+.type-it > span._9 {animation:text_ani_del2 5s linear 2.25s forwards;}
+.type-it > span._10 {animation:text_ani_del3 5s linear 2.5s forwards;}
+.type-it > span._11 {animation:text_ani_del4 5s linear 2.75s forwards;}
+.type-it > span._12 {animation:text_ani_del5 5s linear 3s forwards;}
+.type-it > span._18 {animation:text_ani 0s linear 4.5s forwards;}
+.type-it > span._19 {animation:text_ani 0s linear 4.75s forwards;}
+.type-it > span._20 {animation:text_ani 0s linear 5s forwards;}
+.type-it > span._21 {animation:text_ani 0s linear 5.25s forwards;}
+.type-it > span._22 {animation:text_ani 0s linear 5.5s forwards;}
+.type-it > span._23 {animation:text_ani 0s linear 5.75s forwards;}
+.type-it > span._24 {animation:text_ani 0s linear 6s forwards;}
+.type-it > span._25 {animation:text_ani 0s linear 6.25s forwards;}
+.type-it > span._26 {animation:text_ani 0s linear 6.5s forwards;}
+.type-it > span._27 {animation:text_ani 0s linear 6.75s forwards;}
+.type-it > span._28 {animation:text_ani 0s linear 7s forwards;}
+.type-it > span._29 {animation:text_ani 0s linear 7.25s forwards;}
+.type-it > span._30 {animation:text_ani 0s linear 7.5s forwards;}
+.type-it > span._31 {animation:text_ani 0s linear 7.75s forwards;}
+span._2, span._5, span._7, span._18, span._22 {display:inline;margin:0 5px;}
+
+@keyframes typePoint {
+	0% {opacity:0;}
+	100% {opacity:100;}
+}
+
+/* 나타나는거 */
+@keyframes text_ani {
+	0% {position:fixed;top:0;left:-100%}
+	100% {position:static}
+}
+
+/* 휴먼 */
+@keyframes text_ani_del1 {
+	0% {position:static}
+	100% {position:fixed;top:0;left:-100%}
+}
+@keyframes text_ani_del2 {
+	0% {position:static}
+	80% {position:fixed;top:0;left:-100%}
+	100% {position:fixed;top:0;left:-100%}
+}
+@keyframes text_ani_del3 {
+	0% {position:static}
+	60% {position:fixed;top:0;left:-100%}
+	100% {position:fixed;top:0;left:-100%}
+}
+@keyframes text_ani_del4 {
+	0% {position:static}
+	40% {position:fixed;top:0;left:-100%}
+	100% {position:fixed;top:0;left:-100%}
+}
+@keyframes text_ani_del5 {
+	0% {position:static}
+	20% {position:fixed;top:0;left:-100%}
+	100% {position:fixed;top:0;left:-100%}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes text_ani {
+	100% {
+	}
+}
+@-moz-keyframes text_ani {
+	100% {
+	}
+}
+@-o-keyframes text_ani {
+	100% {
+	}
+}

@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "patch:public-paths": "node scripts/patch-public-portfolio-paths.mjs",
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
