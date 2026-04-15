@@ -1,0 +1,457 @@
+@charset "utf-8";
+
+/*btn*/
+.g-btn-area {text-align: center;}
+.g-btn-type {display: block;width: 100%;height: 38px;line-height: 38px;color: #111 !important;border: 1px solid #666;border-radius: 3px;white-space: nowrap;}
+.g-btn-type.gray {color: #fff !important;background: #666;}
+.g-btn-type.black {color: #fff !important;border: 1px solid #111;background: #111;}
+
+/*input*/
+.join_page .login_area .place_input {position:relative;top:0;left:0;}
+.join_page .login_area .i_label2 {display: block;position: absolute;top: -9999px;left: 15px;overflow: hidden;line-height: 14px;color: #858585;}
+.join_page .login_area .i_label2 span {display: inline-block;margin-left: 7px;font-size: 11px;color: #a6a6a6;}
+.join_page .login_area .cert-form {width: 100%;margin-bottom: 10px;}
+.join_page .login_area .cert-form:after {content: '';display: block;clear: both;}
+.join_page .login_area .cert-form .alertTxt {float: left;width: 63%;margin-bottom: 0;}
+.join_page .login_area .cert-form .i_text2 {margin-bottom: 0;}
+.join_page .login_area .cert-form .g-btn-type {float: right;width: 30%;}
+.join_page .login_area .cert-form .i_text2 {padding: 12px 4% 11px;}
+.join_page .login_area .cert-form.line-3 .alertTxt {width: 45%;}
+.join_page .login_area .cert-form.line-3 .g-btn-type {float: left;width: 22%;margin-left: 3%;}
+.join_page .login_area .cert-form.line-3 .g-btn-type.gray {float: right;width: 27%;margin-left: 0;}
+
+/*.join_page .login_area {padding: 0 8%;}*/
+.join_page .login_area .i_text2 {width:92%; padding:17px 4%;margin-bottom:20px;border: 1px solid #ddd;border-radius:3px;color:#111;text-align:left;}
+.join_page .login_area .i_text2.error {border:1px solid #fa5500;}
+.join_page .login_area .i_text2.textAlert {border:1px solid #fa5500;}
+.join_page .login_area dl dt {text-align: left;font-size: 13px;font-weight: bold;color: #111;font-family: 'Malgun Gothic', '맑은 고딕', Helvetica, Apple-Gothic, Sans-serif !important;}
+.join_page .login_area dl dd {margin-top: 10px;}
+.join_page .login_area .error_alert {margin: -10px 0 20px;color:#fa5500;text-align:left;}
+.join_page .login_area .login_btn {display: inline-block;padding: 17px 60px;margin-top: 20px;background-color: #000;color: #fff;border-radius: 3px;font-weight: 600;font-size: 1.1em;}
+.join_page .login_area ::-webkit-input-placeholder {color: #999;}
+.join_page .login_area  input:focus::-webkit-input-placeholder {color: #ccc;}
+
+/*.join_page .login_area .i_label2 + input {margin-bottom:9px;padding:10px 15px;width:100%;height:42px;line-height:42px;display:block;box-sizing:border-box;border:1px solid rgba(163, 163, 163, .3);background:0 0;font-size:13px;font-family:'Malgun Gothic', 'NanumGothic', Apple Gothic, sans-serif;line-height:20px;border-radius:2px;}
+.join_page .login_area .i_label2 + input.error {border: 1px solid #fa5500;}*/
+.join_page .i_label2 {}
+
+.section-header {}
+.section-header .title {padding: 40px 0 40px;font-size:1.6em;font-weight:600;text-align:center;line-height: 1.3;color:#000;}
+.section-header .title.size-s {padding: 40px 0 20px;font-size: 1.2em;height: auto;line-height: 1.3;}
+
+/* 로그인 영역*/
+.login_page *{font-size:13px;letter-spacing:-1px;text-align:center;}
+.login_page input {letter-spacing:0}
+.login_page {margin-bottom:50px;}
+.login_page .i_label2 {display:none;}
+.login_page .login_area {text-align:center;margin:0 10%;}
+.login_page .login_area .i_text2 {width:92%;padding:17px 4%;margin-bottom:20px;border: 1px solid #ddd;border-radius:3px;color:#111;text-align:left;}
+.login_page .login_area .i_text2.error {border: 1px solid #fa5500}
+
+.login_page ::-webkit-input-placeholder {color: #999;}
+.login_page  input:focus::-webkit-input-placeholder {color: #ccc;}
+
+.login_page .login_area .options {position: relative;width:100%;margin:0 auto;}
+.login_page .login_area .options:after {display:block;clear:both;content:"";}
+.login_page .login_area .options li {float:left;width:50%;text-align:left;}
+.login_page .login_area .options input[type="checkbox"] { /* 실제 체크박스는 화면에서 숨김 */ 
+	position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0 }
+.login_page .login_area .options input[type="checkbox"] + label {
+	display: inline-block;
+	position: relative;
+	padding-left: 22px; /* 글자와 체크박스 사이의 간격을 변경 */
+	color:#111;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	}
+.login_page .login_area .options input[type="checkbox"] + label:before { /* 가짜 체크박스 */
+	content: '';
+	position: absolute;
+	left: 0;
+	top:0; /* 이 값을 변경해서 글자와의 정렬 */
+	width: 15px; /* 체크박스의 너비를 지정 */
+	height: 15px; /* 체크박스의 높이를 지정 */
+	line-height: 15px; /* 세로정렬을 위해 높이값과 일치 */
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius :2px;
+	}
+.login_page .login_area .options input[type="checkbox"]:checked + label:before { /* 체크박스를 체크했을때 */
+	 /* 체크표시 유니코드 사용 */
+	 background: url(../images/chk_label2.png) no-repeat center;
+	 background-size: 10.5px;
+	}
+.login_page .login_area .error_alert {margin: -10px 0 20px;color:#fa5500;text-align:left;}
+.login_page .login_area .error_alert .link {text-decoration: underline;color: #111;}
+
+.login_page .login_btn {display:block;width:100%;padding:17px 0;margin-top:20px;background-color:#000;color:#fff;border-radius:3px;font-weight:600;font-size:1.1em;}
+.login_page .login_btn.marT5 {margin-top:5px;}
+.login_page .login_btn.padding20 {padding:20px 0;}
+.login_page .forgetArea {text-align:center;margin:0 10%;}
+.login_page .forgetArea .btn_area{padding:20px 0 25px;}
+.login_page .forgetArea .btn_area:after {display:block;clear:both;content:"";}
+.login_page .forgetArea .btn_area a{display:block;float:left;width:50%;padding:5px 0;box-sizing:border-box;}
+.login_page .forgetArea .btn_area a.first{border-right:1px solid #ddd;}
+.login_page .forgetArea .btn_area a span{color:#111;border-bottom:1px solid #111;}
+.login_page .joinArea {text-align:center;margin:0 10%;}
+.login_page .joinArea .btn_area {width:100%;padding:0;margin: 0;}
+.login_page .joinArea .btn_area a{display:block;width:100%;margin-bottom:20px;padding:12px 0;border:1px solid #666;border-radius:3px;font-size:1.1em;font-weight:600;color:#111;}
+.login_page .joinArea .btn_area a.join_btn{background-color:#aaa;color:#fff;border:1px solid #aaa;}
+
+/* 로그인 팝업 영역*/
+.dimLayer {position: fixed;top: 0; left: 0;width: 100%; height: 100%;background: #000;opacity: 0.65;filter: opacity(65);z-index:999;display: none;}
+.alert_view {position:absolute;top:15%; left:50%; width:80%;height:auto;margin-left:-40%;background-color:#fff;z-index:1000;}
+.alert_view .textArea{width:80%;padding:15% 10%;text-align:center;}
+.alert_view .textArea .tit{font-size:1em;color:#111;margin-bottom:20px;}
+.alert_view .textArea .btn_close{display:block;width:100%;padding:13px 0;background-color:#000;color:#fff;text-align:center;border-radius:3px;}
+
+/* 회원가입 영역*/
+.join_page *{font-size:13px;letter-spacing:-1px;}
+.join_page input {letter-spacing:0}
+.join_page {margin-bottom:50px;}
+.join_page .i_label2 {display:none;}
+.join_page .login_area {text-align:center;margin:0 5%;}
+.join_page .login_area .i_text2 {width:92%; padding:17px 4%;margin-bottom:10px;border: 1px solid #ddd;border-radius:3px;color:#111;text-align:left;}
+.join_page .login_area .i_text2.error {border:1px solid #fa5500;}
+.join_page .login_area .i_text2.check {background:url(../images/input_check.png) no-repeat 95% center}
+.join_page .login_area .i_text2.textAlert {border:1px solid #fa5500;}
+.join_page .login_area .alertTxt {margin-bottom:10px;text-align:left;color:#fa5500;font-size:0.95em;}
+.join_page .login_area .alertTxt .time-counter {float: right;padding-right: 5px;font-weight: bold;color: #2e2e2e;}
+
+.join_page .login_area .options {position: relative;width:100%;margin:0 auto;}
+.join_page .login_area .options:after {display:block;clear:both;content:"";}
+.join_page .login_area .options li {float:left;width:50%;text-align:left;}
+.join_page .login_area .options input[type="checkbox"] { /* 실제 체크박스는 화면에서 숨김 */ 
+	position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0 }
+.join_page .login_area .options input[type="checkbox"] + label { 
+	display: inline-block; position: relative;padding-left: 30px; /* 글자와 체크박스 사이의 간격을 변경 */
+	color:#111;
+	cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
+.join_page .login_area .options input[type="checkbox"] + label:before { /* 가짜 체크박스 */ 
+	content: ''; position: absolute; left: 0; top:0; /* 이 값을 변경해서 글자와의 정렬 */ 
+	width: 16px; /* 체크박스의 너비를 지정 */ 
+	height: 16px; /* 체크박스의 높이를 지정 */ 
+	line-height: 16px; /* 세로정렬을 위해 높이값과 일치 */ 
+	text-align: center; background: #fff; border: 1px solid #ddd;border-radius :2px;}
+.join_page .login_area .options input[type="checkbox"]:checked + label:before { /* 체크박스를 체크했을때 */ 
+	content: '\2714'; /* 체크표시 유니코드 사용 */
+	color: #111; font-weight:bold;}
+
+.join_page .agreeArea {width:90%;margin:0 auto;}
+.join_page .agreeArea dl {}
+.join_page .agreeArea dl dt{padding:15px 4%;background-color:#e5e5e5;text-align:left;font-size:1.15em;color:#111;font-weight:600;}
+.join_page .agreeArea dl dt:after{display:block;clear:both;content:"";}
+.join_page .agreeArea dl dt span{float:right;font-size:1.15em;color:#111;font-weight:600;}
+.join_page .agreeArea dl dd{display:none;padding:20px 5% 20px 9%;border:1px solid #e5e5e5;}
+.join_page .agreeArea dl dd ul {}
+.join_page .agreeArea dl dd ul li{list-style-type:disc;font-size:0.95em;text-align:left;color:#111;word-break:keep-all;}
+.join_page .agreeArea dl dd ul li span{font-size:0.95em;color:#111;letter-spacing:0px;}
+.join_page .agreeArea .termArea {padding: 0 0 30px;}
+.join_page .agreeArea .termArea ul{}
+.join_page .agreeArea .termArea ul:after{display:block;clear:both;content:"";}
+.join_page .agreeArea .termArea ul li {position: relative;float: left;width: 32%;margin-left: 2%;}
+.join_page .agreeArea .termArea ul li:first-child {margin-left: 0;}
+.join_page .agreeArea .termArea ul li input[type="radio"] {overflow: hidden;width: 0;height: 0;opacity: 0;}
+.join_page .agreeArea .termArea ul li label {display: block;width: 100%;height: 40px;line-height: 40px;text-align: center;border: 1px solid #666;border-radius: 3px;}
+.join_page .agreeArea .termArea .g-period-chk {margin: 8px 0 0 -2%;}
+.join_page .agreeArea .termArea .g-period-chk:after {content: '';display: block;clear: both;}
+.join_page .agreeArea .termArea .g-period-chk input {display: block;overflow: hidden;width: 0;height: 0;opacity: 0;}
+.join_page .agreeArea .termArea .g-period-chk label {display: block;float: left;width: 29%;height: 40px;margin-left: 2%;padding: 0;line-height: 40px;text-align: center;color: #999;border: 1px solid #e5e5e5;border-radius: 3px;box-sizing: border-box;}
+.join_page .agreeArea .termArea .g-period-chk label.first {width: 36%;padding: 0;}
+.join_page .agreeArea .termArea .g-period-chk input:checked + label {color: #111;border: 1px solid #111;}
+.join_page .agreeArea .termArea .g-period-chk input:checked + label span {display: inline-block;padding-left: 12px;background: url(../images/chk_label.png) no-repeat left center;-webkit-background-size: 9px auto;background-size: 9px auto;}
+
+.join_page .agreeArea .termArea ul li input[type="radio"]:checked + label {color: #fff;background: #666;}
+.join_page .agreeArea .g-agreeCheck input {display: block;overflow: hidden;width: 0;height: 0;opacity: 0;}
+.join_page .agreeArea .g-agreeCheck label {display: block;padding-left: 23px;font-size: 12px;color: #111;background: url(../images/g_bg_checkbox.png) no-repeat left top;-webkit-background-size: 15px;background-size: 15px;}
+.join_page .agreeArea .g-agreeCheck input:checked + label {background-position: 0 -100px;}
+.join_page .agreeArea .g-agreeCheck li.title label {background: url(../images/g_bg_checkbox.png) no-repeat 11px 13px;-webkit-background-size: 17px;background-size: 17px;padding: 13px 13px 10px 36px;}
+.join_page .agreeArea .g-agreeCheck li.title input:checked + label {background-position: 11px -100px;}
+.join_page .agreeArea .g-agreeCheck label .title {display: block;font-size: 15px;font-weight: bold;margin-bottom: 3px;}
+.join_page .agreeArea .g-agreeCheck ul {border: 1px solid #e5e5e5;}
+.join_page .agreeArea .g-agreeCheck ul li {text-align: left;padding: 13px 13px 10px;}
+.join_page .agreeArea .g-agreeCheck ul li.title {background: #e5e5e5;padding: 0;}
+.join_page .agreeArea .g-agreeCheck ul li p {margin-top: 7px;}
+.join_page .agreeArea .g-agreeCheck ul li p span {color: #111;}
+.join_page .agreeArea .g-agreeCheck ul li p a {display: inline-block;margin-left: 10px;text-decoration: underline;color: #111;}
+.join_page .agreeArea .g-agreeCheck ul li .agreeChk-etc {margin-top: -5px;padding-top: 15px;border-top: 1px solid #e5e5e5;}
+.join_page .agreeArea .g-agreeCheck ul li .agreeChk-etc:after {content: '';display: block;clear: both;}
+.join_page .agreeArea .g-agreeCheck ul li .agreeChk-etc .unit {width: 100%;margin-bottom: 5px;}
+.join_page .agreeArea .g-agreeCheck ul li .agreeChk-etc .unit_last {line-height: 1.4;color: #999;}
+.join_page .agreeArea .g-agreeCheck .unit label span {display: inline-block;margin-left: 11px;}
+.join_page .agreeArea .alertTxt {margin-top: 10px;line-height: 1.5;text-align:center;color:#fa5500;font-size:0.95em;}
+.join_page .agreeArea .btn_area {width: 100%;margin-top: 10px;padding-bottom: 0;margin: 0;}
+.join_page .agreeArea .btn_area a.g-btn-type {display: inline-block;width: 43%;margin: 0 1%;}
+
+/* ID 찾기 영역*/
+.completeArea *{font-size:13px;letter-spacing:-1px;text-align:center;}
+.completeArea input {letter-spacing:0;}
+.completeArea {margin:0 auto 50px;}
+.completeArea .txtArea {padding: 0 20px;line-height:1.5em;font-size:1.1em;color:#111;}
+.completeArea .txtArea .nameTxt{color:#fa5500;font-size:1em;}
+.completeArea .txtArea .idTxt{color:#fa5500;font-size:1em;}
+.completeArea .txtArea.gray {color: #666;}
+.completeArea .header {}
+.completeArea .header h1 {padding:40px 0;font-size:1.8em;font-weight:600;text-align:center;color:#000;}
+.completeArea .login_btn {display:block;margin: 0 20px;padding:17px 0;margin-top:50px;background-color:#000;color:#fff;border-radius:3px;font-weight:600;font-size:1.1em;}
+.completeArea .login_btn.padding20 {padding:20px 0;}
+.completeArea .login_btn.line {padding:10px 0;color: #111;border: 1px solid #111;background: #fff;}
+.completeArea .login_btn + .login_btn {margin-top: 15px;}
+.completeArea .search_btn {display:block;width:100%;padding:15px 0;margin-top:20px;border:1px solid #000;margin-right:2%;color:#111;border-radius:3px;font-weight:600;font-size:1.1em;}
+.completeArea .login_btn + .search_btn {display:block;width:auto;padding:15px 0;margin:20px 20px 0 20px;border:1px solid #000;color:#111;border-radius:3px;font-weight:600;font-size:1.1em;}
+.completeArea .id-list{overflow:hidden;margin: 25px 20px 0 20px;}
+.completeArea .id-list li{position:relative;display: inline-block;vertical-align: top;text-align: left;margin:0 5px}
+.completeArea .id-list li span{float: none;width: auto;display: inline-block;text-align: left;position: relative;margin: 5px 0;}
+.completeArea .id-list li span *{display: inline-block;vertical-align: middle;}
+.completeArea .id-list input[name=id-list]{margin-right: 5px;}
+.completeArea .id-list input[name=id-list]:checked + label{color:#fa5500;text-decoration:underline;}
+
+/* 패스워드 찾기 영역 */
+.id_search_page {text-align:center;margin-bottom:50px;background: #fff;}
+.id_search_page .subTit{width:84%;margin:0 auto 20px;font-size:1.15em;font-weight:600;color:#111;text-align:left;}
+.id_search_page .certifyArea{}
+.id_search_page .certifyArea dl {}
+.id_search_page .certifyArea dl dt {position:relative;padding:15px 8%;margin-bottom:5px;text-align:left;background-color:#f7f7f7;color:#111;}
+.id_search_page .certifyArea dl dt input[type="radio"] {vertical-align:middle;}
+.id_search_page .certifyArea dl dd {position: relative;display: none;margin: 10px 0 30px;z-index: 2;}
+.id_search_page .certifyArea dl dd .message_alert p {margin-top: 20px;line-height: 1.5;color:#111;font-size: 1.1em;}
+.id_search_page .certifyArea dl dd .message_alert p span.emailTxt {color:#fa5500;font-size:1em;}
+.id_search_page .certifyArea dl dd.active {display: block;}
+.id_search_page .certifyArea dl dd ul {}
+.id_search_page .certifyArea dl dd ul li {padding-top:5px;list-style:disc;margin:0 8% 0 12%;text-align:left;color:#111;}
+.id_search_page .certifyArea dl dd label {display:none;}
+.id_search_page .certifyArea dl dd div.certify {position:relative}
+.id_search_page .certifyArea dl dd div.certify input {padding: 17px 14% 17px 4%;width: 66%;}
+.id_search_page .certifyArea dl dd div.certify .time-counter {padding-right: 5px;font-weight: bold;color: #2e2e2e;position: absolute;top: 0;right: 10%;padding: 17px 0;}
+.id_search_page .certifyArea dl dd input {display:block;width:76%;margin:10px auto 0;padding: 17px 4%;font-size: 13px;border: 1px solid #ddd;border-radius:3px;}
+.id_search_page .certifyArea dl dd input.error {border:1px solid #fa5500}
+.id_search_page .certifyArea dl dd input#phone_1 {display:inline-block;width:48%;}
+.id_search_page .certifyArea dl dd input#email_1 {display:inline-block;width:48%;}
+.id_search_page .certifyArea dl dd a#phone_certify_btn {display: inline-block;margin-left: 2.4%;width: 25%;font-size:11px;background-color: #666;padding: 17px 0;color: #fff;border-radius: 3px;}
+.id_search_page .certifyArea .error_alert {margin: 10px 8% 0;text-align: left;color: #fa5500;}
+.id_search_page .certifyArea .btnArea {width:85%;margin:30px auto;}
+.id_search_page .certifyArea .btnArea2 {width:85%;margin:30px auto;}
+.id_search_page .certifyArea .btnArea:after {display:block;clear:both;content:"";}
+.id_search_page .certifyArea .btnArea a {display:block;width:48%;float:left;box-sizing:border-box;padding:12px 0;border-radius:3px;font-size:1.1em;}
+.id_search_page .certifyArea .btnArea2 a {display:block;width:100%;margin:0 auto;box-sizing:border-box;padding:20px 0;border-radius:3px;font-size:1.1em;}
+.id_search_page .certifyArea .btnArea2 .notice {margin-top:10px;font-size:0.9em;color:#858585;}
+.id_search_page .certifyArea .btnArea a.btn_white {border:1px solid #000;margin-right:2%;color:#111;}
+.id_search_page .certifyArea .btnArea2 a.btn_white {border:1px solid #000;color:#111;}
+.id_search_page .certifyArea .btnArea a.btn_black {background-color:#000;border:1px solid #000;color:#fff;margin-left:2%;}
+.id_search_page .certifyArea .btnArea2 a.btn_black {background-color:#000;border:1px solid #000;color:#fff;}
+.id_search_page ul.certify-noti li {padding-top: 7px;line-height: 1.5;list-style: disc;margin: 0 8% 0 11%;text-align: left;color: #111;}
+.id_search_page ul.certify-noti li a {text-decoration: underline;}
+
+.change-password-form {padding: 0 8%;}
+.change-password-form .i_text2 {width:92%; padding:17px 4%;margin-bottom:20px;border: 1px solid #ddd;border-radius:3px;color:#111;text-align:left;}
+.change-password-form .i_text2.error {border:1px solid #fa5500}
+.change-password-form .i_text2.textAlert {border:1px solid #fa5500;}
+.change-password-form dl dt {text-align: left;font-size: 13px;font-weight: 600;color: #111;}
+.change-password-form dl dd {margin-top: 10px;}
+.change-password-form .error_alert {margin: -10px 0 20px;color:#fa5500;text-align:left;}
+.change-password-form .login_btn {display: inline-block;padding: 17px 60px;margin-top: 20px;background-color: #000;color: #fff;border-radius: 3px;font-weight: 600;font-size: 1.1em;}
+.change-password-form ::-webkit-input-placeholder {color: #999;}
+.change-password-form  input:focus::-webkit-input-placeholder {color: #ccc;}
+
+/*회원관리*/
+.ico_help.gray {background: url(../images/ico_caution_gray.png) no-repeat left 1px;-webkit-background-size: 13px;background-size: 13px;}
+/*.member_info .input_e.pr93 {padding-right: 93px;}*/
+.global_container .btn_passcheck,
+.global_container .btn_emailcheck,
+.global_container .btn_order_cancel,
+.global_container .btn_counsel02,
+.global_container .btn_dev_tra,
+.global_container .btn_review02 {}
+.global_container .g-join-forms .btn_emailcheck {background: #666;}
+.global_container .g-join-forms .btn_passcheck {width: 100%;background: #666;}
+
+.g-join-forms .g-agreeCheck input {display: block;overflow: hidden;width: 0;height: 0;opacity: 0;}
+.g-join-forms .g-agreeCheck label {display: inline-block;padding-left: 23px;background: url(../images/g_bg_checkbox.png) no-repeat left top;-webkit-background-size: 15px;background-size: 15px;}
+.g-join-forms .g-agreeCheck input:checked + label {background-position: 0 -100px;}
+
+.g-join-forms .g-line2-chk {margin-left: -2%;}
+.g-join-forms .g-line2-chk:after {content: '';display: block;clear: both;}
+.g-join-forms .g-line2-chk input {display: block;overflow: hidden;width: 0;height: 0;opacity: 0;}
+.g-join-forms .g-line2-chk label {display: block;float: left;width: 48%;height: 29px;margin-left: 2%;line-height: 29px;text-align: center;color: #999;border: 1px solid #e5e5e5;border-radius: 3px;box-sizing: border-box;}
+.g-join-forms .g-line2-chk input:checked + label {color: #111;border: 1px solid #111;}
+.g-join-forms .g-line2-chk input:checked + label span {display: inline-block;padding: 0 12px;background: url(../images/chk_label.png) no-repeat left center;-webkit-background-size: 9px auto;background-size: 9px auto;}
+
+.g-join-forms .g-period-chk {margin-left: -2%;}
+.g-join-forms .g-period-chk:after {content: '';display: block;clear: both;}
+.g-join-forms .g-period-chk input {display: block;overflow: hidden;width: 0;height: 0;opacity: 0;}
+.g-join-forms .g-period-chk label {display: block;float: left;width: 27%;height: 29px;margin-left: 2%;padding: 0;line-height: 29px;text-align: center;color: #999;border: 1px solid #e5e5e5;border-radius: 3px;box-sizing: border-box;}
+.g-join-forms .g-period-chk label.first {width: 40%;padding: 0;}
+.g-join-forms .g-period-chk input:checked + label {color: #111;border: 1px solid #111;}
+.g-join-forms .g-period-chk input:checked + label span {display: inline-block;padding-left: 12px;background: url(../images/chk_label.png) no-repeat left center;-webkit-background-size: 9px auto;background-size: 9px auto;}
+
+.g-join-forms dl dd {padding-right: 15px;}
+.member_info .g-join-forms .inputArea dl dd.btn-add-type .inp {display: block;padding-right: 90px;padding-bottom: 13px;margin: 0;}
+.member_info .g-join-forms .inputArea dl dd.btn-add-type .txt {display: block;padding-right: 90px;padding-bottom: 13px;margin: 0;}
+.member_info .g-join-forms .inputArea dl dd.btn-add-type .btn_emailcheck {position: absolute;top: 10px;right: 10px;}
+.member_info .g-join-forms .inputArea .btn_passcheck {width: 100%;box-sizing: border-box;}
+.member_info .g-join-forms .inputArea .btn_emailcheck.full {width: 100%;margin-top: 10px;padding: 0 50px;box-sizing: border-box;}
+.g-join-forms dl dd input.input_e {min-width: 100%;height: 29px;line-height: 29px;box-sizing: border-box;}
+.g-join-forms .inputArea dl .txt_mem_info {margin-top: 5px;color: #111;}
+
+.global_container .g-join-forms .btn_ok {color: #fff;background: #111;box-sizing: border-box;width: 48%;padding: 0 1%;margin: 0 1%;float: left;}
+.global_container .g-join-forms .btn_cancel {color: #111;border: 1px solid #111;background: #fff;box-sizing: border-box;width: 48%;padding: 0 1%;margin: 0 1%;float: left;}
+.global_container .g-join-forms .btn_cancel .hide {color: #111;}
+.global_container .g-join-forms .btn_leave {display: inline-block;width: 96%;height: 38px;padding: 0 1%;letter-spacing: -1px;color: #fff;border-radius: 2px;background: #bbb;margin-top: 10px;}
+.global_container .g-join-forms .btn_leave .hide {display: block;overflow: visible;visibility: visible;width: auto;height: 38px;line-height: 38px;text-align: center;font-size: 13px;color: #fff;}
+
+.g-layer-pop .error_alert {margin-top: 5px;font-size: 12px;color: #fa5500;}
+.g-layer-pop .error_alert .time-counter {float: right;padding-right: 5px;font-weight: bold;color: #2e2e2e;}
+
+.g-layer-pop .error_alert.g-btn-question {position: relative;}
+.g-layer-pop .error_alert.g-btn-question a.question {display: inline-block;height: 16px;line-height: 16px;padding-left: 20px;color: #444;background: url(../images/ico_question_gray.png) no-repeat left center;-webkit-background-size: 14px;background-size: 14px;}
+.g-layer-pop .g-btn-question .g-tool-tip {display: none;position: absolute;top: -35px;left: 23px;width: 240px;font-size: 12px;letter-spacing: -1px;color: #666;border: 1px solid #7f7f7f;background: #fff;}
+.g-layer-pop .g-btn-question .g-tool-tip p {font-size: 12px;}
+.g-layer-pop .g-btn-question .g-tool-tip .arr {position: absolute;top: 50%;left: -7px;width: 7px;height: 15px;margin-top: -7px;}
+.g-layer-pop .g-btn-question .g-tool-tip .arr img {width: 7px;}
+.g-layer-pop .g-btn-question .g-tool-tip .g-btn-close {display: inline-block;position: absolute;top: 5px;right: 5px;padding: 5px;}
+.g-layer-pop .g-btn-question .g-tool-tip .con {padding: 15px;line-height: 1.5;}
+
+.g-layer-pop input.error {border: 1px solid #fa5500 !important;}
+.g-layer-pop.idPassCheck .inputArea {padding-top: 0;}
+.g-layer-pop.idPassCheck .inputArea dl dd input.error {border: 1px solid #fa5500;}
+.g-layer-pop.idPassCheck .pop_login h1 {height: 60px;line-height: 60px;color: #000;border-bottom: 1px solid #e5e5e5;background: #fff;}
+.global_container .g-layer-pop .pop_login .header .btn_pop_close {width: 60px;height: 60px;background:url(http://mimage.nike.co.kr/mobile/global/btn_x.png) no-repeat center;-webkit-background-size:20px;background-size:20px;}
+.g-layer-pop.idPassCheck .inputArea dl {margin-top: 20px;}
+.g-layer-pop.idPassCheck .inputArea dl dt {font-size: 13px;}
+.g-layer-pop.idPassCheck ::-webkit-input-placeholder {font-size: 12px;color: #999;}
+.g-layer-pop.idPassCheck input:focus::-webkit-input-placeholder {color: #ccc;}
+.g-layer-pop.idPassCheck .inputArea dl dd input {width: 100% !important;border: 1px solid #ddd;box-sizing: border-box;}
+.global_container .g-layer-pop .btn_area {margin: 0 15px;}
+.global_container .g-layer-pop .btn_area:after {content: '';display: block;clear: both;}
+.global_container .g-layer-pop .btn_ok {float: right;width: 49%;margin: 0;box-sizing: border-box;background: #111;}
+.global_container .g-layer-pop .btn_ok.gray {background: #666;}
+.global_container .g-layer-pop .btn_cancel {float: left;width: 49%;margin: 0;color: #111;border: 1px solid #111;box-sizing: border-box;background: #fff;}
+.global_container .g-layer-pop .btn_cancel .hide {color: #111;}
+.global_container .g-layer-pop .btn_area.full > a {float: none;width: 100% !important;}
+.global_container .g-layer-pop .btn_area.full > a + a {margin-top: 5px;}
+.global_container .g-layer-pop .btn_area .btn_area {margin: 5px 0 0;padding: 0 !important;}
+
+.g-layer-pop.idDuplCheck .inputArea dl dd input.error {border: 1px solid #fa5500;}
+.global_container .g-layer-pop .pop_login .header {height: 60px;}
+.global_container .g-layer-pop.idDuplCheck .pop_login h1 {height: 60px;line-height: 60px;color: #000;border-bottom: 1px solid #e5e5e5;background: #fff;}
+.g-layer-pop.idDuplCheck .inputArea dl {margin-top: 20px;}
+.g-layer-pop.idDuplCheck .inputArea dl dt {font-size: 13px;}
+.g-layer-pop.idDuplCheck ::-webkit-input-placeholder {font-size: 12px;color: #999;}
+.g-layer-pop.idDuplCheck input:focus::-webkit-input-placeholder {color: #ccc;}
+.g-layer-pop.idDuplCheck .inputArea dl dd input {width: 100% !important;border: 1px solid #ddd;box-sizing: border-box;}
+.g-layer-pop .pop_login .contents .idcheck {margin: 5px 15px 0;}
+.global_container .g-layer-pop .pop_login .contents .idcheck {padding-bottom: 10px;}
+.g-layer-pop .pop_login .contents .conBox .idpw_dsc {padding: 20px 15px 0;}
+.global_container .g-layer-pop .confirm_alert {margin-top: 5px;font-size: 12px;color: #858585;}
+
+/* 휴대폰번호popup */
+.global_container .chgPhoneNumberPop .pop_login .header {height: 60px;}
+.chgPhoneNumberPop {background:url(http://mimage.nike.co.kr/mobile/global/g_bg_cover.png) repeat}
+.chgPhoneNumberPop .g-message {margin: 20px 15px 0;font-size: 13px;color: #111;}
+.chgPhoneNumberPop .g-btn-type {height: 30px;line-height: 30px;text-align: center;box-sizing: border-box;}
+.chgPhoneNumberPop .pop_login {float:right;width:90%;height: 100%;min-height:auto;background: #fff;}
+.chgPhoneNumberPop .pop_login h1 {height: 60px;line-height: 60px;font-size:16px;color: #000;border-bottom: 1px solid #e5e5e5;background: #fff;}
+.chgPhoneNumberPop .pop_login .contents {background:#fff;}
+.chgPhoneNumberPop .pop_login .contents .conBox {border:none;}
+.chgPhoneNumberPop .pop_login .contents .conBox .idpw_dsc {padding-bottom:0;text-align:left;font-size:13px;color:#333;}
+.chgPhoneNumberPop .inputArea {border:none;}
+.chgPhoneNumberPop .inputArea dl {border:none;}
+.chgPhoneNumberPop .inputArea dl dt {position:static;width:100%;padding:10px 0 0;}
+.chgPhoneNumberPop .inputArea dl dd {margin:0;padding:10px 0 0;}
+.chgPhoneNumberPop .inputArea dl dd input {width: 100%;height:30px;line-height:30px;padding:0;text-indent:5px;border-radius:0;border: 1px solid #ddd;box-sizing: border-box;}
+.chgPhoneNumberPop .inputArea dl dd input + p {margin-top:5px;font-size:12px;}
+.chgPhoneNumberPop .inputArea dl dd p + p {margin-top:5px;font-size:12px;}
+.chgPhoneNumberPop .inputArea .clear:after {content: '';display: block;clear: both;}
+.chgPhoneNumberPop .inputArea .clear .inp {display: block;float: left;width: 65%;}
+.chgPhoneNumberPop .inputArea .clear .btn {display: block;float: right;width: 33%;}
+.g-layer-pop.chgPhoneNumberPop ::-webkit-input-placeholder {font-size: 12px;color: #999;}
+.g-layer-pop.chgPhoneNumberPop input:focus::-webkit-input-placeholder {color: #ccc;}
+
+/* 본인인증 layer */
+.layerPop_certi {display: none;position: fixed;top: 50%;left: 5%;width: 90%;background: #fff;z-index: 100;margin-top: -175px;}
+.layerPop_certi .popInner {padding: 30px 15px;}
+.layerPop_certi .title {text-align: center;font-size: 21px;font-weight: bold;color: #111;}
+.layerPop_certi .desc {margin-top: 20px;line-height: 1.5;text-align: center;font-size: 13px;color: #111;}
+.layerPop_certi .btn-area {margin-top: 30px;}
+.layerPop_certi .login_btn {display:block;margin: 10px 20px 0;padding:17px 0;text-align: center;color:#fff;font-weight:600;font-size:1.1em;border-radius:3px;background-color:#000;}
+.layerPop_certi .login_btn.c-gray {background: #aaa;}
+.g-bg-cover {position:fixed; top:0; left:0; width:100%; height:100%; opacity:0; filter:alpha(Opacity=0); visibility:hidden; background-color:#000; transition:opacity 300ms ease; -moz-transition:opacity 300ms ease; -o-transition:opacity 300ms ease; -webkit-transition:opacity 300ms ease; touch-action:pan-y; -webkit-user-select:none; -webkit-user-drag:none; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); z-index:-1;}
+.g-bg-cover.is_active {visibility:visible; filter:alpha(Opacity=80); opacity:.8; z-index:90;}
+
+.id_search_page .certifyArea .error_alert.g-btn-question {position: relative;}
+.id_search_page .certifyArea .error_alert.g-btn-question a.question {display: inline-block;height: 16px;line-height: 16px;padding-left: 20px;color: #444;background: url(../images/ico_question_gray.png) no-repeat left center;-webkit-background-size: 14px;background-size: 14px;}
+.id_search_page .certifyArea .g-btn-question .g-tool-tip {display: none;position: absolute;top: 50%;left: 23px;margin-top: -43px;width: 265px;font-size: 12px;color: #666;border: 1px solid #7f7f7f;background: #fff;}
+.id_search_page .certifyArea .g-btn-question .g-tool-tip .arr {position: absolute;top: 50%;left: -7px;width: 7px;height: 15px;margin-top: -7px;}
+.id_search_page .certifyArea .g-btn-question .g-tool-tip .arr img {width: 7px;}
+.id_search_page .certifyArea .g-btn-question .g-tool-tip .g-btn-close {display: inline-block;position: absolute;top: 5px;right: 5px;padding: 5px;}
+.id_search_page .certifyArea .g-btn-question .g-tool-tip .con {padding: 15px;line-height: 1.5;}
+
+
+
+
+
+
+
+
+
+
+
+/*========== whpark_20170320 ==========*/
+
+/* 휴대폰변경popup */
+.global_container .chgPhoneNumberPop.g-layer-pop {display:none;position: fixed;z-index: 1100000;width: 100%;height: 100%;top: 0px;left:0;overflow:hidden;background:url(http://mimage.nike.co.kr/mobile/global/g_bg_cover.png) repeat}
+.global_container .chgPhoneNumberPop.g-layer-pop .pop_login {float:none;width:90%;margin-left:10%;height: 100%;min-height:auto;background: #fff;max-height: 100%;overflow-y: auto;overflow-x: hidden;}
+
+/* 패스워드변경popup */
+.global_container .idPassCheck.g-layer-pop {display:none;position: fixed;z-index: 1100000;width: 100%;height: 100%;top: 0px;left:0;overflow:hidden;background:url(http://mimage.nike.co.kr/mobile/global/g_bg_cover.png) repeat}
+.global_container .idPassCheck.g-layer-pop .pop_login {float:none;width:90%;margin-left:10%;height: 100%;min-height:auto;background: #fff;max-height: 100%;overflow-y: auto;}
+
+/* 이메일변경popup */
+.global_container .idDuplCheck.g-layer-pop {display:none;position: fixed;z-index: 1100000;width: 100%;height: 100%;top: 0px;left:0;overflow:hidden;background:url(http://mimage.nike.co.kr/mobile/global/g_bg_cover.png) repeat}
+.global_container .idDuplCheck.g-layer-pop .pop_login {float:none;width:90%;margin-left:10%;height: 100%;min-height:auto;background: #fff;max-height: 100%;overflow-y: auto;}
+
+/* 회원기본정보 > 확인/취소버튼 간격조절 */
+.global_container .btn_area {margin:0 20px;}
+
+/* 회원기본정보 > 회원탈퇴 추가 */
+.global_container .member_leave,
+.global_container .member_leave_complete {display:none;position: fixed;z-index: 1100000;width: 100%;height: 100%;top: 0px;left: 0;overflow: hidden;background: url(http://mimage.nike.co.kr/mobile/global/g_bg_cover.png) repeat;text-align: center;}
+.global_container .member_leave section,
+.global_container .member_leave_complete section {max-width: 380px;margin: 0 auto;height: 100%;min-height: auto;background: #fff;max-height: 100%;overflow-y: auto;position: relative;}
+.global_container .member_leave_complete h1,
+.global_container .member_leave h1 {padding: 40px 0;font-size: 1.6em;font-weight: 600;text-align: center;line-height: 1.2;color: #000;}
+.global_container .member_leave .Leave_cmt {padding: 0 20px;line-height: 1.5em;font-size: 14px;color: #111;text-align: left;}
+.global_container .member_leave_complete .Leave_btn_box,
+.global_container .member_leave .Leave_btn_box {margin: 30px 20px 20px;overflow: hidden;}
+.global_container .member_leave_complete .Leave_btn_box .Leave_btn1,
+.global_container .member_leave .Leave_btn_box .Leave_btn1 {color: #fff;border: 1px solid #111;background: #111;box-sizing: border-box;width: 48%;padding: 0 1%;margin: 0 1%;float: left;line-height: 38px;height: auto;}
+.global_container .member_leave_complete .Leave_btn_box .Leave_btn2,
+.global_container .member_leave .Leave_btn_box .Leave_btn2 {color: #111;border: 1px solid #111;background: #fff;box-sizing: border-box;width: 48%;padding: 0 1%;margin: 0 1%;float: left;line-height: 38px;height: auto;} 
+.global_container .member_leave_complete .Leave_info,
+.global_container .member_leave .Leave_info {text-align: left;margin: 30px 20px 0;}
+.global_container .member_leave_complete .Leave_info li,
+.global_container .member_leave .Leave_info li {font-size: 12px;letter-spacing: -1px;padding-left: 8px;background: url(http://image.nike.co.kr/web/ico/bl_dot.png) no-repeat left 6px;line-height: 1.6;margin: 6px 0;}
+.global_container .member_leave_complete .btn_pop_close,
+.global_container .member_leave .btn_pop_close {display: block;position: absolute;top: 0;right: 0;margin: 0;width: 60px;height: 60px;background: url(http://mimage.nike.co.kr/mobile/global/btn_x.png) no-repeat center;-webkit-background-size: 20px;background-size: 20px;}
+.global_container .member_leave_complete .Leave_cmt_big {padding: 0 20px;line-height: 1.5em;font-size: 14px;color: #111;}
+.global_container .member_leave_complete .Leave_btn_box .Leave_btn3 {color: #fff;border: 1px solid #111;background: #111;box-sizing: border-box;width: 100%;padding: 0;margin: 0;float: left;line-height: 38px;height: 38px;}
+
+/* 170428 단발성 페이지 닫기 버튼 추가 */
+.page_close {position: absolute;top: 0;right: 0;margin: 20px;overflow: hidden;}
+.page_close img {width: 20px;float: right;}
+
+/* 170428 회원가입페이지 타이틀 여백 수정 */
+#container.global_container h2 {font-size: 19px;font-weight: bold;color: #111;background: none;}
+
+/* 170502 서울신용평가정보 레이어 */
+/* .layerPop_certi_iframe .ifm_box {position: fixed;top: 0;left: 0;background: #fff;width: 100%;height: 100%;padding-top: 60px;box-sizing: border-box;z-index: 101;} */
+/* .layerPop_certi_iframe .ifm_box > a.close {display: block;position: absolute;top: 0;left: 0;width: 100%;height: 60px;background: #fff url(../images/btn_x.png) no-repeat 95% center;background-size: 20px;} */
+/* .layerPop_certi_iframe .ifm_box > iframe.ifm {background: #fff;width: 100%;height: 100%;border: none;overflow-y:auto} */
+
+/* 170511 서울신용평가정보 레이어 */
+body.certi_iframe {overflow:hidden !important;position:relative !important}
+body.certi_iframe .layerPop_certi_iframe .ifm_box {position: fixed;top: 0;left: 0;background: #fff;padding-top: 60px;box-sizing: border-box;z-index: 101;overflow:auto;-webkit-overflow-scrolling:touch;width:100%;height:100%}
+body.certi_iframe .layerPop_certi_iframe .ifm_box > a.close {display: block;position: absolute;top: 0;left: 0;width: 100%;height: 60px;background: #fff url(../images/btn_x.png) no-repeat 95% center;background-size: 20px;}
+body.certi_iframe .layerPop_certi_iframe .ifm_box > iframe.ifm {background: #fff;width: 100%;border: none;}

@@ -1,0 +1,130 @@
+/* ------------------------------------------------------
+COMMON
+------------------------------------------------------ */
+.hidden { position: absolute; overflow: hidden; top: 0; left: 0; width: 1px; height: 1px; text-indent: -9999em; }
+
+/* ------------------------------------------------------
+gift main
+------------------------------------------------------ */
+.dwrk_event3_202107{width: 1240px;margin: 0 auto;position: relative;text-align: center;font-size: 0;line-height: 0;}
+.dwrk_event3_202107 #dwrk_ttlArea{position: relative;width: 100%;max-width: 1240px;height: 695px;margin: 0 auto;background: url(./images/dwrk_event3_202107_ttlArea_210709.jpg) no-repeat center top;overflow: hidden;}/*  */
+.dwrk_event3_202107 #dwrk_ttlArea .dwrk_ttlLogo{position: absolute;top: 40px;left: 50%;width: 147px;height: 34px;margin-left: -74px;background: url(./images/rental02_ttlLogo.png) no-repeat left top;}
+.dwrk_event3_202107 #dwrk_ttlArea .dwrk_ttlText01{position: absolute;top: 210px;left: 97px;width: 318px;height: 29px;}
+.dwrk_event3_202107 #dwrk_ttlArea .dwrk_ttlText01:after{content:'';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url(./images/dwrk_event3_202107_ttlText01.png) no-repeat left top;opacity:0;-webkit-transform: translateY(20px);-moz-transform: translateY(20px);-ms-transform: translateY(20px);transform: translateY(20px);-webkit-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-moz-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-o-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-webkit-transition-delay: 0s;-moz-transition-delay: 0s;-o-transition-delay: 0s;transition-delay: 0s;}
+.dwrk_event3_202107 #dwrk_ttlArea .dwrk_ttlText02{position: absolute;top: 286px;left: 97px;width: 468px;height: 161px;}
+.dwrk_event3_202107 #dwrk_ttlArea .dwrk_ttlText02:after{content:'';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url(./images/dwrk_event3_202107_ttlText02.png) no-repeat left top;opacity:0;-webkit-transform: translateY(20px);-moz-transform: translateY(20px);-ms-transform: translateY(20px);transform: translateY(20px);-webkit-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-moz-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-o-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-webkit-transition-delay: 0.5s;-moz-transition-delay: 0.5s;-o-transition-delay: 0.5s;transition-delay: 0.5s;}
+.dwrk_event3_202107 .dwrk_cttBox02{background:#ebe9fd;}
+.dwrk_event3_202107 .dwrk_cttBox02 .dwrk_menuTab{vertical-align: middle;text-align: center;line-height: 0;font-size: 0;}
+.dwrk_event3_202107 .dwrk_cttBox02 .dwrk_menuTab li{display: inline-block;width: 560px;height: 80px;}
+.dwrk_event3_202107 .dwrk_cttBox02 .dwrk_menuTab li a{display: block;width: 100%;height: 100%;}
+.dwrk_event3_202107 .dwrk_cttBox02 .dwrk_menuTab li.menuTab01{background: url(./images/rental02_ctt2_menuTab01.jpg) no-repeat left top;}
+.dwrk_event3_202107 .dwrk_cttBox02 .dwrk_menuTab li.menuTab02{background: url(./images/rental02_ctt2_menuTab02.jpg) no-repeat left top;}
+.dwrk_event3_202107 .dwrk_cttBox02 .dwrk_menuTab li.menuTab01.active{background: url(./images/rental02_ctt2_menuTab01_on.jpg) no-repeat left top;}
+.dwrk_event3_202107 .dwrk_cttBox02 .dwrk_menuTab li.menuTab02.active{background: url(./images/rental02_ctt2_menuTab02_on.jpg) no-repeat left top;}
+.dwrk_event3_202107 .dwrk_cttBox02 .dwrk_cttTab li{display:none;position: relative;}
+.dwrk_event3_202107 .dwrk_cttBox02 .dwrk_cttTab li.active{display:block;}
+
+.dwrk_event3_202107 #dwrk_ttlArea.on .dwrk_ttlText01:after,
+.dwrk_event3_202107 #dwrk_ttlArea.on .dwrk_ttlText02:after,
+.dwrk_event3_202107 #dwrk_ttlArea.on .dwrk_ttlText03:after{opacity:1;-moz-transform: translateY(0px);-webkit-transform: translateY(0px);-ms-transform: translateY(0px);transform: translateY(0px);}
+
+.dwrk_event3_202107 .animeBox{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.dwrk_event3_202107 .anime_line{position: absolute;left: 50%;top: 0;width: 2px;height: 0;padding-top: 180px;margin-left: 0;overflow:hidden;}
+.dwrk_event3_202107 .anime_line .line_inner{position: absolute;left: 0;top: 100%;width: 100%;height: 100%;border-radius: 5px;background: linear-gradient(0deg, rgba(140, 121, 200, 1), rgba(140, 121, 200, 1), rgba(192, 179, 224, 1));}
+.dwrk_event3_202107 .anime_Particle{position: absolute;left: 50%;bottom: 0;width: 2px;height: 0;padding-top: 70px;margin-left: 0;}
+.dwrk_event3_202107 .anime_Particle .particle_line{position: absolute;bottom: 0;left: 0;width: 100%;height: 100%;transform-origin: center bottom;}
+.dwrk_event3_202107 .anime_Particle .particle_line01{transform: rotate(0deg);}
+.dwrk_event3_202107 .anime_Particle .particle_line02{transform: rotate(45deg);}
+.dwrk_event3_202107 .anime_Particle .particle_line03{transform: rotate(90deg);}
+.dwrk_event3_202107 .anime_Particle .particle_line04{transform: rotate(135deg);}
+.dwrk_event3_202107 .anime_Particle .particle_line05{transform: rotate(180deg);}
+.dwrk_event3_202107 .anime_Particle .particle_line06{transform: rotate(225deg);}
+.dwrk_event3_202107 .anime_Particle .particle_line07{transform: rotate(270deg);}
+.dwrk_event3_202107 .anime_Particle .particle_line08{transform: rotate(315deg);}
+.dwrk_event3_202107 .anime_Particle .Particle_inner{position: absolute;bottom: 0%;left: 0;width: 100%;height: 100%;overflow: hidden;}
+.dwrk_event3_202107 .anime_Particle .Particle_inner span{position: absolute;bottom: -100%;left: 0;width: 100%;height: 100%;background: #c0b3e0;border-radius: 5px;}
+
+.dwrk_event3_202107 .animeBox0 .anime_Particle{bottom: 185px;padding-top: 17px;margin-left: -507px;}
+.dwrk_event3_202107 .animeBox1 .anime_Particle{bottom: 87px;padding-top: 36px;margin-left: -225px;}
+.dwrk_event3_202107 .animeBox2 .anime_Particle{bottom: 125px;padding-top: 27px;margin-left: 523px;}
+.dwrk_event3_202107 .animeBox3 .anime_Particle{bottom: 280px;padding-top: 22px;margin-left: 586px;}
+.dwrk_event3_202107 .animeBox4 .anime_Particle{bottom: 576px;padding-top: 36px;margin-left: -247px;}
+.dwrk_event3_202107 .animeBox5 .anime_Particle{bottom: 581px;padding-top: 19px;margin-left: -7px;}
+.dwrk_event3_202107 .animeBox6 .anime_Particle{bottom: 515px;padding-top: 28px;margin-left: 112px;}
+.dwrk_event3_202107 .animeBox7 .anime_Particle{bottom: 620px;padding-top: 17px;margin-left: 340px;}
+.dwrk_event3_202107 .animeBox8 .anime_Particle{bottom: 504px;padding-top: 23px;margin-left: 415px;}
+
+.dwrk_event3_202107 .animeBox0 .anime_line{top: 536px;padding-top: 120px;margin-left: -507px;}
+.dwrk_event3_202107 .animeBox1 .anime_line{top: 674px;padding-top: 21px;margin-left: -225px;}
+.dwrk_event3_202107 .animeBox2 .anime_line{top: 631px;padding-top: 64px;margin-left: 523px;}
+.dwrk_event3_202107 .animeBox3 .anime_line{top: 485px;padding-top: 210px;margin-left: 586px;}
+.dwrk_event3_202107 .animeBox4 .anime_line{visibility: hidden;}
+.dwrk_event3_202107 .animeBox5 .anime_line{top: 166px;padding-top: 127px;margin-left: -7px;}
+.dwrk_event3_202107 .animeBox6 .anime_line{visibility: hidden;}
+.dwrk_event3_202107 .animeBox7 .anime_line{top: 100px;padding-top: 121px;margin-left: 340px;}
+.dwrk_event3_202107 .animeBox8 .anime_line{visibility: hidden;}
+
+.dwrk_event3_202107 .animeBox0 .anime_Particle .Particle_inner{bottom: 6px;}
+.dwrk_event3_202107 .animeBox0 .anime_Particle .particle_line01 .Particle_inner,
+.dwrk_event3_202107 .animeBox0 .anime_Particle .particle_line03 .Particle_inner,
+.dwrk_event3_202107 .animeBox0 .anime_Particle .particle_line05 .Particle_inner,
+.dwrk_event3_202107 .animeBox0 .anime_Particle .particle_line07 .Particle_inner{}
+.dwrk_event3_202107 .animeBox1 .anime_Particle .Particle_inner{bottom: 9px;}
+.dwrk_event3_202107 .animeBox1 .anime_Particle .particle_line01 .Particle_inner,
+.dwrk_event3_202107 .animeBox1 .anime_Particle .particle_line03 .Particle_inner,
+.dwrk_event3_202107 .animeBox1 .anime_Particle .particle_line05 .Particle_inner,
+.dwrk_event3_202107 .animeBox1 .anime_Particle .particle_line07 .Particle_inner{}
+.dwrk_event3_202107 .animeBox2 .anime_Particle .Particle_inner{bottom: 9px;}
+.dwrk_event3_202107 .animeBox2 .anime_Particle .particle_line01 .Particle_inner,
+.dwrk_event3_202107 .animeBox2 .anime_Particle .particle_line03 .Particle_inner,
+.dwrk_event3_202107 .animeBox2 .anime_Particle .particle_line05 .Particle_inner,
+.dwrk_event3_202107 .animeBox2 .anime_Particle .particle_line07 .Particle_inner{}
+.dwrk_event3_202107 .animeBox3 .anime_Particle .Particle_inner{bottom: 8px;}
+.dwrk_event3_202107 .animeBox3 .anime_Particle .particle_line01 .Particle_inner,
+.dwrk_event3_202107 .animeBox3 .anime_Particle .particle_line03 .Particle_inner,
+.dwrk_event3_202107 .animeBox3 .anime_Particle .particle_line05 .Particle_inner,
+.dwrk_event3_202107 .animeBox3 .anime_Particle .particle_line07 .Particle_inner{bottom: 14px;height: 184%;}
+.dwrk_event3_202107 .animeBox4 .anime_Particle .Particle_inner{bottom: 9px;}
+.dwrk_event3_202107 .animeBox4 .anime_Particle .particle_line01 .Particle_inner,
+.dwrk_event3_202107 .animeBox4 .anime_Particle .particle_line03 .Particle_inner,
+.dwrk_event3_202107 .animeBox4 .anime_Particle .particle_line05 .Particle_inner,
+.dwrk_event3_202107 .animeBox4 .anime_Particle .particle_line07 .Particle_inner{}
+.dwrk_event3_202107 .animeBox5 .anime_Particle .Particle_inner{bottom: 6px;}
+.dwrk_event3_202107 .animeBox5 .anime_Particle .particle_line01 .Particle_inner,
+.dwrk_event3_202107 .animeBox5 .anime_Particle .particle_line03 .Particle_inner,
+.dwrk_event3_202107 .animeBox5 .anime_Particle .particle_line05 .Particle_inner,
+.dwrk_event3_202107 .animeBox5 .anime_Particle .particle_line07 .Particle_inner{bottom: 10px;height: 200%;}
+.dwrk_event3_202107 .animeBox6 .anime_Particle .Particle_inner{bottom: 9px;}
+.dwrk_event3_202107 .animeBox6 .anime_Particle .particle_line01 .Particle_inner,
+.dwrk_event3_202107 .animeBox6 .anime_Particle .particle_line03 .Particle_inner,
+.dwrk_event3_202107 .animeBox6 .anime_Particle .particle_line05 .Particle_inner,
+.dwrk_event3_202107 .animeBox6 .anime_Particle .particle_line07 .Particle_inner{}
+.dwrk_event3_202107 .animeBox7 .anime_Particle .Particle_inner{bottom: 6px;}
+.dwrk_event3_202107 .animeBox7 .anime_Particle .particle_line01 .Particle_inner,
+.dwrk_event3_202107 .animeBox7 .anime_Particle .particle_line03 .Particle_inner,
+.dwrk_event3_202107 .animeBox7 .anime_Particle .particle_line05 .Particle_inner,
+.dwrk_event3_202107 .animeBox7 .anime_Particle .particle_line07 .Particle_inner{}
+.dwrk_event3_202107 .animeBox8 .anime_Particle .Particle_inner{bottom: 8px;}
+.dwrk_event3_202107 .animeBox8 .anime_Particle .particle_line01 .Particle_inner,
+.dwrk_event3_202107 .animeBox8 .anime_Particle .particle_line03 .Particle_inner,
+.dwrk_event3_202107 .animeBox8 .anime_Particle .particle_line05 .Particle_inner,
+.dwrk_event3_202107 .animeBox8 .anime_Particle .particle_line07 .Particle_inner{bottom: 13px;height: 173%;}
+
+
+.dwrk_event3_202107 .aniStrat .anime_line .line_inner{animation: ani01 1s ease-in-out backwards}
+.dwrk_event3_202107 .aniStrat .anime_Particle .Particle_inner span{animation: ani02 0.5s ease-in-out 1s backwards}
+.dwrk_event3_202107 .animeBox4.aniStrat .anime_Particle .Particle_inner span,
+.dwrk_event3_202107 .animeBox6.aniStrat .anime_Particle .Particle_inner span,
+.dwrk_event3_202107 .animeBox8.aniStrat .anime_Particle .Particle_inner span{animation: ani02 0.5s ease-in-out backwards}
+
+@keyframes ani01 {
+	0% {top: 100%;height: 100%;}
+	100% {top: 0%;height: 0;}
+}
+@keyframes ani02 {
+	0% {bottom: -100%;}
+	100% {bottom: 100%;}
+}
+/*
+.dwrk_event3_202107 .anime_line .line_inner{top: 0%;height: 100%;}
+.dwrk_event3_202107 .anime_Particle .Particle_inner span{bottom: 0;}*/

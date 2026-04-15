@@ -1,0 +1,3198 @@
+@charset "utf-8";
+/*
+<UPLEAT> UI Dev Team
+{Oh Young Ju}, {An Se Jung}, {Lee Yun Hee}, Hwang Mi Ae, Kim So Young, Cho Han Sol, {Kang Young Sun}
+commnet : mobile layout
+ */
+
+html {
+  display: block;
+}
+body.js_left_view,
+body.js_right_view,
+html.layer_open,
+html.layer_open body {
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+#wrap {
+  overflow: hidden;
+}
+body.js_left_view #wrap:before,
+body.js_right_view #wrap:before {
+  display: block;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 110;
+}
+.progressbar {
+  position: fixed;
+  width: 0;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background: #f63d8b;
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  z-index: 20;
+}
+.header_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /*-webkit-transition:top .2s ease-in-out;-moz-transition:top .2s ease-in-out;transition:top .2s ease-in-out;*/
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.header_wrap.cobrand + #container .contents{padding-top:12rem}
+.header_wrap > div:not(.ribbon_popup) {
+  background: #fff;
+}
+#wrap #header::before{content: "";position:fixed;left:0;right:0;top:0;background:#fff;min-height:5.6rem}
+#wrap #header.type::before{background:transparent}
+/* .hn_mainTop.mainHeader .header_wrap{background-color: #fff;}
+.hn_mainTop.mainHeader .header_wrap #header{position:fixed;left:0;right:0;top:0;} */
+
+/* sticky 동작 구현 변경(호텔:검색리스트, 상세, 패키지:검색리스트) */
+.pkg #wrap.no_hidden_y,
+.htl #wrap.no_hidden_y {
+  overflow: unset;
+}
+.pkg #wrap.no_hidden_y.srch_top .header_wrap,
+.htl #wrap.no_hidden_y.srch_top .header_wrap {
+  position: relative;
+} /* Product_Detail - htl(fixed 적용), pkg(제외) */
+.pkg #wrap.no_hidden_y:not(.srch_top) #header,
+.htl #wrap.no_hidden_y:not(.srch_top) #header {
+  background-color: transparent;
+}
+.pkg #wrap.no_hidden_y:not(.srch_top).scrolled #header,
+.htl #wrap.no_hidden_y:not(.srch_top).scrolled #header {
+  background-color: #fff;
+}
+.pkg #wrap.no_hidden_y.srch_top #header a.btn_prev,
+.htl #wrap.no_hidden_y.srch_top #header a.btn_prev {
+  position: fixed;
+}
+/* .pkg #wrap.no_hidden_y.srch_top #header a.btn_prev:before,
+.htl #wrap.no_hidden_y.srch_top #header a.btn_prev:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5.6rem;
+  background-color: #fff;
+} */
+.pkg #wrap.no_hidden_y.srch_top #header h1.title,
+.htl #wrap.no_hidden_y.srch_top #header h1.title {
+  z-index: 10;
+} /* pkg, htl - Search_Product_List */
+.pkg #wrap.no_hidden_y.srch_top.scrolled #header h1.title,
+.htl #wrap.no_hidden_y.srch_top.scrolled #header h1.title {
+  position: fixed;
+  z-index: 10;
+  width: calc(100% - 5rem);
+  margin: 1.3rem 0 0 4.8rem;
+  transform: none;
+}
+.pkg #wrap.no_hidden_y.srch_top.scrolled #header > a:not(.btn_prev),
+.htl #wrap.no_hidden_y.srch_top.scrolled #header > a:not(.btn_prev) {
+  position: fixed;
+}
+
+.coBrand.pkg #wrap.no_hidden_y.srch_top #header a.btn_prev {
+  position:absolute;
+}
+.coBrand.pkg #wrap.no_hidden_y.srch_top.scrolled #header a.btn_prev {
+  position:fixed;
+}
+
+.coBrand.pkg #wrap.no_hidden_y.srch_top #header h1.title {
+  position:absolute;
+}
+.coBrand.pkg #wrap.no_hidden_y.srch_top.scrolled #header h1.title {
+  position:fixed;
+  top: 0.2rem;
+}
+
+.coBrand.pkg #wrap.no_hidden_y.srch_top #header .top_btn_bundle {
+  position:absolute;
+}
+.coBrand.pkg #wrap.no_hidden_y.srch_top.scrolled #header .top_btn_bundle {
+  position:fixed;
+}
+
+@media (min-width: 600px) {
+  /* max-width 적용 */
+  /*#wrap.no_hidden_y.srch_top #header a.btn_prev {
+    left: calc(50% - 512px + 2.1rem);
+  } 폴드 대응 header 버튼 사라지는 문제 값이 잘못 들어간것으로 보여 주석처리. */
+  #wrap.no_hidden_y.srch_top #header a.btn_prev:before {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  #wrap.no_hidden_y.srch_top.scrolled #header h1.title {
+    max-width: calc(1024px - 5rem);
+  }
+}
+
+/* main_search */
+/*.main_search {position:fixed;top:0;left:0;right:0;z-index:1000;/*-webkit-transition:top .2s ease-in-out;-moz-transition:top .2s ease-in-out;transition:top .2s ease-in-out;max-width:1024px; margin:0 auto}*/
+.main_search > div:not(.ribbon_popup) {
+  background: #fff;
+}
+
+#m_search h1.logo a:before,
+#m_search h1.logo span:before {
+  width: 10.1rem;
+  height: 1.9rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/hnt_logo.png');
+}
+#m_search {
+  background-color: rgba(255, 255, 255, 1);
+  height: 5rem;
+  position: relative;
+  text-align: center;
+  z-index: 100;
+}
+#m_search.mainType {
+  height: 5.6rem;
+}
+#m_search.type h1.title {
+  color: #fff;
+}
+#m_search h1 {
+  position: relative;
+}
+#m_search h1.title {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #111;
+  margin: 1.4rem auto 0;
+  text-align: center;
+}
+#m_search h1.logo {
+  display: inline-block;
+  position: absolute;
+  top: 2.5rem;
+  left: 1.6rem;
+  width: 11.5rem;
+  height: 3rem;
+}
+#m_search h1.logo a,
+#m_search h1.logo span {
+  display: block;
+  height: 3rem;
+  font-size: 0;
+  position: relative;
+  cursor: default;
+}
+/* =header */
+#header {
+  background-color: rgba(255, 255, 255, 1);
+  height: 5.6rem;
+  position: relative;
+  text-align: left;
+  z-index: 100;
+}
+#header.mainType {
+  height: 9.2rem;
+  overflow: hidden;
+}
+#header.type {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.srch_top.scrolled #header.type {
+  background-color: rgb(134, 83, 83);
+}
+#header.type h1.title {
+  color: #fff;
+}
+#header h1 {
+  position: relative;
+}
+#header.bg_trans {
+  background-color: transparent;
+}
+/*#header h1.title{display:inline-block;font-size:1.6rem;font-weight:600;color:#111;margin:1.4rem auto 0;text-align:left}*/
+#header h1.title {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.1rem;
+  margin: 1.5rem auto 0;
+  text-align: left;
+  overflow: hidden;
+  width: 100%; /*width:calc(100% - 10.5rem);*/
+  height: 2.8rem;
+  padding-left: 5.8rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  line-height: 1.6;
+  position: relative;
+  padding-right: 10rem;
+}
+#header h1.title > a {
+  position: relative;
+  font-size: 1.7rem;
+  max-width: calc(100% - 12rem);
+  font-weight: 700;
+  color: #111;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /*-webkit-transition:font-size .2s ease-out;-moz-transition:font-size .2s ease-out;transition:font-size .2s ease-out*/
+}
+#header h1.title i {
+  position: absolute;
+  top: 0.7rem;
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-arrow-dropdown-26.png')
+    no-repeat right top;
+  background-size: 100%;
+  margin-left: 0.5rem;
+}
+
+/*iOS #header h1.title {height:2.6rem;line-height:17.3}*/
+.gnbInsert #header h1.title {
+  width: 100%;
+  padding-left: 0;
+  text-align: center;
+}
+.gnbInsert #header .js_act.btn_prev ~ h1.title, .cuc .gnbInsert #header .js_act ~ h1.title{
+  padding-left: 5.6rem;
+  text-align: left;
+}
+#header h1.logo {
+  display: inline-block;
+  position: absolute;
+  top: 1.8rem;
+  left: 2rem;
+  width: 11.5rem;
+  height: 3rem;
+}
+#header h1.logo a,
+#header h1.logo span {
+  display: block;
+  height: 3rem;
+  font-size: 0;
+  position: relative;
+}
+#header h1.logo a:before,
+#header h1.logo span:before {
+  width: 10rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0; /*background-image:url('https://image.hanatour.com/usr/static/img2/mobile/com/logo.png')*/
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/logo_01.png');
+}
+
+#header > a,
+.slide .lypop_header > a {
+  display: inline-block;
+  position: absolute;
+  top: 1.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+#header > a:after,
+.slide .lypop_header > a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.header_logo {
+  display: inline-block;
+  position: absolute;
+  top: 1.5rem;
+  width: 8.1rem;
+  height: 2.4rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+#header .header_logo::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8.1rem;
+  height: 2.4rem;
+}
+#header > a > span:not(.alarm),
+.btn_share > span,
+.slide .lypop_header > a > span {
+  text-indent: -999rem;
+  display: inline-block;
+}
+
+#header.mainType .js_tabs {
+  margin-top: 6rem;
+}
+
+#header .btn_prev,
+.lypop_header .btn_prev {
+  left: 2.6rem;
+}
+#header .btn_prev:after,
+.slide .lypop_header .btn_prev:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_back_24.png');
+}
+#header.type:not(.black) .btn_prev:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_back_w24.png');
+}
+.srch_top.scrolled #header.type .btn_prev:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_back_24.png');
+}
+
+#header .btn_home:after,
+.slide .lypop_header .btn_home:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_home_24.png');
+}
+#header.type:not(.black) .btn_home:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_home_w24.png');
+}
+#header .btn_share:after,
+.slide .lypop_header .btn_share:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_share_24.png');
+}
+#header.type:not(.black) .btn_share:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_share_w24.png');
+}
+#header .btn_cart:after,
+.slide .lypop_header .btn_cart:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_like_24.png');
+}
+#header.type:not(.black) .btn_cart:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_like_w24.png');
+}
+#wrap.scrolled #header {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.08);
+} 
+#wrap.scrolled #header.type {
+  background-color: rgba(255, 255, 255, 1);
+}
+#wrap.scrolled #header .btn_prev:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_back_24.png');
+}
+#wrap.scrolled #header .btn_home:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_home_24.png');
+}
+#wrap.scrolled #header .btn_cart:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_like_24.png');
+}
+#wrap.scrolled #header .btn_share:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_share_24.png');
+}
+#wrap.scrolled #header.type .title {
+  color: #111;
+}
+#header h1.title.btn_v {
+  position: relative;
+  display: none;
+  transition: all 0.3s ease-out;
+}
+#wrap.scrolled #header h1.title.btn_v {
+  display: block;
+  transition: all 0.3s ease-out;
+  margin: 0 13.6rem 0 0;
+  height: 5.2rem;
+  line-height: 5.2rem;
+}
+#wrap.scrolled #header h1.title.btn_v a {
+  position: relative;
+  display: block;
+}
+#wrap.scrolled #header h1.title.btn_v a span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  display: block;
+  padding-right: 2.5rem;
+}
+#wrap.scrolled #header h1.title.btn_v a span::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-top: -0.8rem;
+  background: url(https://image.hanatour.com/usr/static/img2/mobile/com/btn_open_20.png) no-repeat 0
+    0/100% auto;
+}
+
+/*#header .btn_search{right:4.8rem}*/
+.srch_top.scrolled #header .btn_search {
+  z-index: 100;
+}
+#header .searchform_com .btn_search {
+  right: 0;
+}
+/* #header .btn_search:after{background-image:url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-gnb-search-40.png')} */
+#header.type:not(.black) .btn_search:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_gnb_search_40_white.png');
+}
+.srch_top.scrolled #header.type .btn_search:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_gnb_search_40.png');
+}
+#header .btn_right_menu {
+  left: 2.6rem;
+}
+.srch_top.scrolled #header .btn_right_menu {
+  z-index: 100;
+}
+#header .btn_right_menu:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_menu_24.png');
+}
+#header.type:not(.black) .btn_right_menu:after,
+.hn_mainTop #header.type .btn_right_menu:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_menu_w24.png');
+}
+.srch_top.scrolled #header.type .btn_right_menu:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_menu_24.png');
+}
+#header .btn_right_menu .label_add {
+  position: absolute;
+  right: -0.4rem;
+  top: -0.2rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #5e2bb8;
+  border-radius: 100%;
+}
+#header .header_logo{position:absolute;left:6.2rem;font-size:0}
+#header .header_logo::before{background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/logo-24-hnt.png')}
+#header .header_logo.type02::before{background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/logo-24-hnt-wh.png')}
+#header .btn_notice {
+  right: 1.3rem;
+}
+#header .btn_notice:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/btn_header_notice.png');
+}
+#header .btn_cart {
+  right: auto;
+}
+#header .btn_cart:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_like_24.png');
+}
+/*#header .btn_home{right:4.4rem}*/
+#header .btn_home:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_home_24.png');
+}
+#header .btn_close {
+  right: 1.5rem;
+}
+#header .btn_close:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_close_24.png');
+} 
+
+/* header btn:bundle 추가*/
+.top_btn_bundle {
+  position: absolute;
+  right: 2.6rem;
+  top: 1.6rem;
+  min-height: 2.4rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  z-index: 10;
+}
+.top_btn_bundle.srch_result {
+  position: fixed;
+}
+.top_btn_bundle a {
+  margin-left: 1.3rem;
+  position: relative;
+  font-size: 0;
+  text-indent: -5000rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.top_btn_bundle a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-size: 100% auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+#header .btn_search::after,
+.slide .lypop_header .btn_search::after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_search_24.png');
+}
+#header.type:not(.black) .btn_search:after,
+.hn_mainTop #header.type .btn_search:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_search_w24.png');
+}
+.top_btn_bundle a.btn_all {
+  font-size: 1rem;
+  margin-top: -0.2rem;
+  text-indent: 0;
+  width: auto;
+  height: 2.5rem;
+}
+.top_btn_bundle a.btn_all span {
+  display: block;
+  padding-top: 1.8rem;
+  line-height: 1;
+  letter-spacing: -0.08rem;
+  color: #111;
+  font-weight: 500;
+}
+#header.type:not(.black) .top_btn_bundle a.btn_all span,
+.hn_mainTop #header.type .top_btn_bundle a.btn_all span {
+  color: #fff;
+}
+#header .btn_all::after,
+.slide .lypop_header .btn_all::after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_city_24.png');
+  width: 1.4rem;
+  height: 1.4rem;
+  left: 50%;
+  margin-left: -0.7rem;
+}
+#header.type:not(.black) .btn_all:after,
+.hn_mainTop #header.type .btn_all:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_city_w24.png');
+}
+/*지역전문:header*/
+#header.bg_trans .btn_right_menu:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_menu_w24.png');
+}
+#header.bg_trans .btn_search::after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_search_w24.png');
+}
+#header.bg_trans .btn_all::after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_city_w24.png');
+  width: 1.4rem;
+  height: 1.4rem;
+  left: 50%;
+  margin-left: -0.7rem;
+}
+#header.bg_trans .top_btn_bundle a.btn_all {
+  color: #fff;
+}
+/*라이브커머스:header*/
+#header.bg_black, #wrap #header.bg_black::before {
+  background: #302f31;
+} 
+#header.bg_black .btn_prev:after,
+#wrap.scrolled #header.bg_black .btn_prev:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_back_w24.png');
+}
+#header.bg_black h1.title {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+#header.bg_black .btn_search::after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_search_w24.png');
+}
+#wrap.scrolled #header.bg_black .btn_home:after,
+#header.bg_black .btn_home:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_home_w24.png');
+}
+#wrap.scrolled #header.bg_black .btn_cart:after,
+#header.bg_black .btn_cart:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_like_w24.png');
+}
+
+.btn_share {
+  display: inline-block;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+.right_cont .btn_share {
+  vertical-align: top;
+}
+#header .btn_share {
+  /*position:absolute;right:1.3rem;*/
+  background-color: transparent;
+}
+.btn_share:after {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_share_24.png');
+}
+.btn_share.type01:after {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_share_w24.png');
+}
+
+.right_cont .btn_share:after {
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_share_24.png');
+}
+#header .alarm,
+#footer .alarm {
+  position: absolute;
+  top: -0.2rem;
+  right: -0.8rem;
+  color: #fff;
+  background-color: #5e2bb8;
+  width: auto;
+  height: auto;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 10rem;
+  line-height: 1;
+  font-size: 1.1rem;
+  font-weight: 400 !important;
+  letter-spacing: -0.1rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  z-index: 10;
+  text-indent: 0;
+}
+.iOS #header .alarm,
+.iOS #footer .alarm {
+  padding: 0.3rem 0.4rem 0.1rem;
+}
+.ribbon_popup {
+  height: 6rem;
+  position: relative;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background-color: #fdf4f7;
+  z-index: 150;
+}
+.ribbon_popup.off {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.ribbon_popup span {
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: #111;
+  position: relative;
+  padding: 0.22rem 0 0 5rem;
+  margin: 1.2rem 0 0 2rem;
+}
+.ribbon_popup span:before {
+  width: 3.6rem;
+  height: 3.6rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/app-logo.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ribbon_popup span strong {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #111;
+  display: block;
+}
+.ribbon_popup a {
+  display: inline-block;
+  position: absolute;
+  top: 0.5rem;
+  font-size: 1.3rem;
+}
+.ribbon_popup .btn {
+  right: 4.4rem;
+  top: 50%;
+  margin-top: -1.65rem;
+}
+.ribbon_popup .btn.sml.em {
+  background-color: transparent !important;
+}
+.ribbon_popup a.btn_cls {
+  right: 0.6rem;
+  top: 1.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 0;
+}
+.ribbon_popup a.btn_cls:before {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-close-pk.png');
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.Android .ribbon_popup .btn.sml.em {
+  line-height: 3rem;
+}
+.Android .ribbon_popup span {
+  padding-top: 0.1rem;
+}
+
+.co_brand {
+  background-color: #f4f5f9;
+  height: 6.8rem;
+  border-bottom: 0.2rem solid #fff;
+  padding: 1.4rem 0 0 2.5rem;
+  position: relative;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  z-index: 200;
+}
+.co_brand.html {
+  overflow: hidden;
+}
+.co_brand > strong {
+  display: block;
+  float: left;
+  font-weight: 600;
+  width: 30%;
+  color: #111;
+}
+.co_brand > p {
+  width: 70%;
+  float: right;
+  display: block;
+  flex: 3;
+  justify-content: center;
+  align-items: start;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+}
+.co_brand > p > em {
+  color: #111;
+}
+
+.page_pop_header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding: 0 2rem;
+  height: 5rem;
+  left: 0;
+  background: #fff;
+  top: 0;
+  z-index: 999;
+}
+.page_pop_header .tit {
+  margin-top: 1.8rem;
+  font-size: 1.6rem;
+  color: #111;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.page_pop_header button.btn_cls {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 5000;
+}
+.page_pop_header button.btn_cls:before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_close_24.png')
+    no-repeat 50% 50% / 100% auto;
+}
+.page_pop_header button.btn_cls span {
+  display: block;
+  font-size: 0.1rem;
+  text-indent: -999rem;
+}
+
+/* .header_wrap .gnb{height:3.5rem;padding:.8rem 2rem 0 0;background-color:#fff;position:relative;-webkit-transition:all .2s ease-out;-moz-transition:all .2s ease-out;transition:all .2s ease-out;z-index:100;overflow:hidden}
+.header_wrap .gnb.on{height:10.5rem;border-bottom:1px solid #ddd}
+.header_wrap .gnb.cuc{text-align:center}
+.header_wrap .gnb ul{margin-top:-1rem} */
+/* .header_wrap .gnb ul li{display:inline-block;margin-top:1rem;margin-left:2rem}
+.header_wrap .gnb ul li a{font-size:1.5rem;line-height:2.3rem;color:#111}
+.header_wrap .gnb .btn_show{width:2.4rem;height:2.4rem;position:absolute;top:.7rem;right:2rem;font-size:0;border:1px solid #c2c2c2;background-color:rgba(255, 255, 255, 0.9);border-radius:.3rem;}
+.header_wrap .gnb .btn_show:before{display:block;content:'';background-position:center center;background-repeat:no-repeat;background-size:cover;width:1.2rem;height:1.2rem;position:relative;left:.5rem;top:.6rem;background-image:url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_arrow_down_26.png')}
+.header_wrap .gnb.on .btn_show:before{background-image:url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-arrow-up-26.png')} */
+
+.btn_bell {
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1rem 0 3.1rem;
+  color: #fff;
+  border-radius: 1.2rem;
+  z-index: 999;
+}
+.htl .btn_bell,
+.air .btn_bell {
+  z-index: 1001;
+}
+.scrolled .btn_bell {
+  z-index: 1;
+}
+.btn_bell:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: 100%;
+}
+.htl .btn_bell:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_bell_50.png');
+}
+.air .btn_bell:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_bell_bl_50.png');
+}
+
+/* .contents */
+.main_container.contents.type {
+  padding-top: 0;
+}
+.main_container .main_visual {
+  padding-top: 0;
+}
+.gnb {
+  background-color: #fff;
+  min-height: 2.3rem;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  white-space: nowrap;
+  padding: 2rem 2rem 0;
+  top: 0;
+  z-index: 10;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.header_wrap .gnb {
+  margin-top: -1rem;
+}
+.gnb .tit {
+  display: none;
+}
+.gnb ul {
+  height: 2.3rem;
+  overflow: hidden;
+}
+.gnb ul li {
+  display: inline-block;
+}
+.gnb ul li + li {
+  margin-left: 2rem;
+}
+.gnb ul li a {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  color: #111;
+}
+.gnb .btn_show {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 1.8rem;
+  right: 2rem;
+  font-size: 0;
+  border: 1px solid #c2c2c2;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+.gnb .btn_show:before {
+  display: block;
+  content: '';
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1.2rem;
+  height: 1.2rem;
+  position: relative;
+  left: 0.5rem;
+  top: 0.6rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_arrow_down_26.png');
+}
+
+.gnb.on {
+  position: absolute;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 1.5rem;
+  padding-bottom: 1.3rem;
+  height: auto;
+  min-height: 2.3rem;
+}
+.gnb.on .btn_show:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-arrow-up-26.png');
+}
+.gnb.on .tit {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #111;
+}
+.gnb.on ul {
+  height: auto;
+  overflow: auto;
+  flex-wrap: wrap;
+  display: flex;
+  flex: 1;
+  margin-top: 1.5rem;
+}
+.gnb.on ul li {
+  width: 49%;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.7rem;
+  height: 4rem;
+  line-height: 4rem;
+}
+.gnb.on ul li + li {
+  margin-left: 2%;
+}
+.gnb.on ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: inherit;
+  font-size: 1.4rem;
+}
+.gnb.on ul li:nth-child(2n + 1) {
+  margin-left: 0;
+}
+
+.gnb_wrap {
+  position: relative;
+  height: 2.3rem;
+  border-radius: 0;
+  margin-bottom: 1.5rem;
+}
+.gnb_wrap .gnb ul {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+}
+.gnb_wrap .gnb ul::-webkit-scrollbar {
+  display: none !important;
+}
+.gnb_wrap .gnb ul li:last-child {
+  padding-right: 3rem;
+}
+.gnb_wrap .gnb.on ul li:last-child {
+  padding-right: 0;
+}
+
+.header_wrap .gnb_wrap {
+  height: 4.3rem;
+}
+.contents.type .top_visual.zeus ~ .gnb_wrap {
+   /*height: 6rem;*/
+}
+.contents.type .top_visual.zeus ~ .gnb .btn_show {
+  top: 2.7rem;
+}
+
+.visual.pkg ~ .gnb_wrap {
+  margin-top: -1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  height: 4.3rem;
+}
+.small .visual.pkg ~ .gnb_wrap {
+  margin-top: -3rem;
+}
+
+.srch_top #header {
+  text-align: left;
+}
+.srch_top #header h1.title {
+  position: fixed;
+  font-size: 1.5rem;
+  margin: 1.3rem 0 0 4.8rem;
+  padding-left: 0.6rem;
+  text-align: left;
+  width: calc(100% - 5rem);
+  z-index: 99;
+  transform: none; /*transform: translate(4.5rem, -3.4rem); line-height:5rem;-webkit-transition:all .2s ease-out;-moz-transition:all .2s ease-out;transition:all .2s ease-out*/
+}
+.iOS .srch_top #header h1.title {
+  margin: 1.5rem 0 0 4.8rem;
+}
+.srch_top #header.type h1.title {
+  color: #fff;
+  font-size: 2.4rem;
+  margin-top: 6.4rem;
+  margin-left:2.6rem;
+  padding-left: 0;
+  line-height: 1;
+}
+.srch_top #header.type.no_tit h1.title {
+  text-indent: -999rem;
+}
+.srch_top #header.type.black h1.title {
+  color: #111;
+}
+.srch_top #header h1.title > a {
+  position: relative;
+  font-size: 1.7rem;
+  max-width: calc(100% - 5rem);
+  font-weight: 600;
+  color: #111;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /*-webkit-transition:font-size .2s ease-out;-moz-transition:font-size .2s ease-out;transition:font-size .2s ease-out*/
+}
+.srch_top #header h1.title > a.btn_dest_name {
+  padding-right: 2.5rem;
+}
+.srch_top #header h1.title i {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: 0rem;
+  background: url(https://image.hanatour.com/usr/static/img2/mobile/com/ic_down_arrow@3x.png)
+    no-repeat 50% / 0.8rem 0.4rem;
+  border: 1px solid #e5e5e5;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  margin-top: -0.4rem;
+}
+.iOS .srch_top #header h1.title i {
+  margin-top: -0.7rem;
+}
+.srch_top.scrolled #header h1.title {
+  margin: 1.6rem 0 0 5.1rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  padding-left: 0.6rem;
+} /* width:calc(100% - 12.7rem); */
+.srch_top.scrolled #header h1.title > a {
+  padding-left: 0;
+}
+.srch_top.scrolled #header.type h1.title {
+  color: #111;
+  font-size: 1.6rem;
+  padding-left: 0.5rem;
+  line-height: 1.4;
+}
+.srch_top.scrolled #header.type.no_tit h1.title {
+  text-indent: 0;
+}
+.Android .srch_top.scrolled #header h1.title {
+  margin-top: 1.8rem;
+}
+.srch_top .header_srch_wrap {
+  z-index: 100;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8.4rem; /*margin-top:1.4rem;*/
+  padding: 0;
+  background-color: #fff;
+  text-align: left; /*-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;transition:all .2s ease-in-out*/
+}
+.pkg #wrap.no_hidden_y.srch_top .header_srch_wrap,
+.htl #wrap.no_hidden_y.srch_top .header_srch_wrap {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5.6rem;
+  z-index: 55;
+  width: 100%;
+  height: 4.6rem;
+  margin-top: 0;
+  background-color: #fff;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: 0px -1px #fff;
+}
+.srch_top.scrolled .header_srch_wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-top: 5.4rem;
+}
+.srch_top .header_srch_wrap .btn_wrap {
+  margin-top: 0;
+  padding: 0 2rem 0; /*height:3rem;*/
+  opacity: 1;
+  text-align: left; /*-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;transition:all .2s ease-in-out;*/
+}
+.srch_top.scrolled .header_srch_wrap .btn_wrap {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+.srch_top.scrolled .header_srch_wrap .btn_wrap.block {
+  display: block;
+}
+.srch_top .header_srch_wrap .btn_wrap a {
+  display: inline-block; /*padding:0.5rem 0.5rem 1rem;border:1px solid #dadada;border-radius:0.3rem;*/
+  font-size: 1.3rem;
+  color: #111;
+}
+.srch_top .header_srch_wrap.htl_type .btn_wrap a {
+  width: 50%;
+}
+.srch_top .header_srch_wrap .btn_wrap a:not(:first-child) {
+  margin-left: 2rem;
+}
+.srch_top .header_srch_wrap .btn_wrap a span {
+  display: inline;
+  position: relative;
+  padding-left: 1.9rem;
+}
+.srch_top .header_srch_wrap .btn_wrap a span.bl {
+  padding-left: 0.6rem;
+}
+.srch_top .header_srch_wrap .btn_wrap a span:before {
+  display: block;
+  content: '';
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.srch_top .header_srch_wrap .btn_wrap a span.pos:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-location-30.png');
+}
+.srch_top .header_srch_wrap .btn_wrap a span.cal:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-calandar-30.png');
+}
+.srch_top .header_srch_wrap .btn_wrap a span.person:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-2-person-30.png');
+}
+.srch_top.scrolled .header_srch_wrap + #container {
+  padding-top: 10rem;
+}
+.srch_top hr.shape {
+  height: 6rem;
+}
+.srch_top hr.shape:before {
+  height: 2.5rem;
+}
+hr.shape.halfdown {
+  height: calc(4.2rem - 1.6rem);
+  margin-top: 1.6rem;
+}
+hr.shape.halfdown::before {
+  height: 1.6rem;
+  background-color: transparent;
+  margin-top: -1.6rem;
+  box-shadow: -1.5rem 0 0 #f4f5f9, 1.5rem 0 0 #f4f5f9;
+}
+.pkg #wrap.no_hidden_y hr.shape.halfdown,
+.htl #wrap.no_hidden_y hr.shape.halfdown {
+  margin-top: 0.4rem;
+}
+.pkg #wrap.no_hidden_y hr.shape.halfdown::before,
+.htl #wrap.no_hidden_y hr.shape.halfdown::before {
+  background-color: #fff;
+}
+
+.filter_top_wrap {
+  overflow: hidden;
+  margin: 0.7rem 0 0 2rem;
+  vertical-align: top;
+}
+.scrolled .filter_top_wrap {
+  margin-top: 0;
+}
+.panels .filter_top_wrap {
+  margin-left: 0;
+  margin-right: -2rem;
+  margin-top: 1.5rem;
+}
+.filter_top_wrap:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.filter_top_wrap .inr {
+  float: left;
+  width: 5.2rem;
+  padding-top: 0.3rem;
+  position: relative;
+}
+.filter_top_wrap .inr:first-child:after {
+  content: '';
+  width: 1.7rem;
+  height: 9.3rem;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, #fff),
+    color-stop(100%, rgba(255, 255, 255, 0))
+  );
+  z-index: 1;
+}
+.scrolled .filter_top_wrap .inr,
+.filter_top_wrap.type .inr {
+  width: auto;
+}
+.filter_top_wrap .inr.right {
+  float: right;
+  width: calc(100% - 5.2rem);
+  overflow: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-left: 1.5rem;
+}
+.filter_top_wrap .inr.right::-webkit-scrollbar {
+  display: none;
+}
+.scrolled .filter_top_wrap .inr.right {
+  display: flex;
+  white-space: normal;
+}
+.scrolled .filter_top_wrap .inr.right,
+.filter_top_wrap.type .inr.right {
+  width: calc(100% - 6.7rem);
+}
+.filter_top_wrap .right > span,
+.filter_top_wrap .inr > a {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  padding-top: 6rem;
+  width: 5.2rem;
+  text-align: center;
+  color: #111;
+  font-size: 1.2rem;
+}
+.scrolled .filter_top_wrap .right > span {
+  padding-top: 0;
+  width: auto;
+}
+.scrolled .filter_top_wrap .right > span > a,
+.scrolled .filter_top_wrap .inr > a,
+.filter_top_wrap.type .right > span,
+.filter_top_wrap.type .inr > a {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  padding-top: 0;
+  width: auto;
+  text-align: center;
+}
+.filter_top_wrap .right > span:before,
+.filter_top_wrap .inr > a:before {
+  display: inline-block;
+  content: '';
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+.scrolled .filter_top_wrap .right > span:before,
+.scrolled .filter_top_wrap .inr > a:before,
+.filter_top_wrap.type .right > span:before,
+.filter_top_wrap.type .inr > a:before {
+  display: none;
+}
+.filter_top_wrap .right > span {
+  flex: none;
+  position: relative;
+  white-space: normal;
+  font-size: 1.3rem;
+  padding-top: 6.2rem;
+}
+.filter_top_wrap.type .right > span a {
+  display: block;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 0;
+  padding-right: 1.9rem;
+  color: #111;
+}
+.filter_top_wrap .right > span:not(:first-child) {
+  margin-left: 1rem;
+}
+.filter_top_wrap .right > span:last-child,
+.scrolled .filter_top_wrap .right > span:last-child a.cls {
+  margin-right: 2rem;
+}
+
+.filter_top_wrap .inr .btn_filter {
+  width: 5.2rem;
+}
+.filter_top_wrap .inr .btn_filter:before {
+  background: #f4f5f9 url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-64.png)
+    no-repeat 50% 50% / 3.2rem 3.2rem; /*-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;transition:all .2s ease-in-out*/
+}
+
+.filter_top_wrap .right > span a {
+  color: #111;
+  min-height: 3rem;
+  font-size: 1.2rem;
+  margin: 0 -0.2rem;
+  line-height: 1.45rem;
+  letter-spacing: -0.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.scrolled .filter_top_wrap .right > span a {
+  line-height: inherit;
+  margin: 0;
+  min-height: inherit;
+}
+.scrolled .filter_top_wrap .right > span a.tg_btn {
+  color: #ccc;
+}
+.filter_top_wrap .right > span.on a.tg_btn {
+  color: #5e2bb8;
+}
+.filter_top_wrap .right > span a.tg_btn:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.filter_top_wrap .right > span:before {
+  background: #f4f5f9 no-repeat 50% 50% / 3.2rem 3.2rem;
+}
+.filter_top_wrap .tg_item01:before,
+.filter_top_wrap .tg_item02:before,
+.filter_top_wrap .tg_item03:before,
+.filter_top_wrap .tg_item04:before {
+  background-color: #fff !important;
+  border: 1px solid #eaeaea;
+}
+.filter_top_wrap .right > span.on:before {
+  background-color: #5e2bb8 !important;
+  border: none !important;
+}
+.filter_top_wrap .right > span.filter_no:before {
+  content: none;
+}
+
+.filter_top_wrap .right > span.tg_item01:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-tg01-off.png);
+}
+.filter_top_wrap .right > span.tg_item01.on:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-tg01-on.png);
+}
+.filter_top_wrap .right > span.tg_item02:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-tg02-off.png);
+}
+.filter_top_wrap .right > span.tg_item02.on:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-tg02-on.png);
+}
+.filter_top_wrap .right > span.tg_item03:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-tg03-off.png);
+}
+.filter_top_wrap .right > span.tg_item03.on:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-tg03-on.png);
+}
+.filter_top_wrap .right > span.tg_item04:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-tg04-off.png);
+}
+.filter_top_wrap .right > span.tg_item04.on:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-tg04-on.png);
+}
+.filter_top_wrap .right > span.item01_1:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-01-1.png);
+}
+.filter_top_wrap .right > span.item01_2:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-01-2.png);
+}
+.filter_top_wrap .right > span.item01_3:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-01-1.png);
+}
+.filter_top_wrap .right > span.item01_4:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-01-1.png);
+}
+.filter_top_wrap .right > span.item02:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-02.png);
+}
+.filter_top_wrap .right > span.item03:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-03.png);
+}
+.filter_top_wrap .right > span.item04:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-04.png);
+}
+.filter_top_wrap .right > span.item05:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-05.png);
+}
+.filter_top_wrap .right > span.item06:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-06.png);
+}
+.filter_top_wrap .right > span.item07_1:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-07-1.png);
+}
+.filter_top_wrap .right > span.item07_2:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-07-2.png);
+}
+.filter_top_wrap .right > span.item07_3:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-07-3.png);
+}
+.filter_top_wrap .right > span.item07_4:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-07-4.png);
+}
+.filter_top_wrap .right > span.item07_5:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-07-5.png);
+}
+.filter_top_wrap .right > span.item07_6:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-07-6.png);
+}
+.filter_top_wrap .right > span.item08:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-08.png);
+}
+.filter_top_wrap .right > span.item09_1:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-09-1.png);
+}
+.filter_top_wrap .right > span.item09_2:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-09-2.png);
+}
+.filter_top_wrap .right > span.item09_3:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-09-3.png);
+}
+.filter_top_wrap .right > span.item09_4:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-09-4.png);
+}
+.filter_top_wrap .right > span.item09_5:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-09-5.png);
+}
+.filter_top_wrap .right > span.item09_6:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-09-6.png);
+}
+.filter_top_wrap .right > span.item09_7:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-09-7.png);
+}
+.filter_top_wrap .right > span.item09_8:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-09-8.png);
+}
+.filter_top_wrap .right > span.item09_9:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-09-9.png);
+}
+.filter_top_wrap .right > span.item10:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-10.png);
+}
+.filter_top_wrap .right > span.item11:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-11.png);
+}
+.filter_top_wrap .right > span.item12:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-12.png);
+}
+.filter_top_wrap .right > span.item13:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-13.png);
+}
+.filter_top_wrap .right > span.item14:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-14.png);
+}
+.filter_top_wrap .right > span.item15:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-15.png);
+}
+.filter_top_wrap .right > span.item16:before {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico-filter-16.png);
+}
+
+.filter_top_wrap .right > span.filter_no {
+  width: 77%;
+  padding: 0 2rem 0 0;
+  text-align: left;
+  white-space: normal;
+  font-size: 1.2rem;
+  height: 5.2rem;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  z-index: 2;
+}
+.filter_top_wrap .alarm,
+.option_wrap .right_cont .alarm {
+  display: inline-block;
+  color: #fff;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  margin-left: -0.3rem;
+  margin-top: .2rem;
+  vertical-align: text-top;
+}
+.iOS .filter_top_wrap .alarm,
+.iOS .option_wrap .right_cont .alarm {
+  margin-top: -0.1rem;
+  line-height: 1.5rem;
+  vertical-align: middle;
+}
+.filter_top_wrap .alarm {
+  vertical-align: top;
+  position: relative;
+  top: -2px;
+  line-height: 2.2rem;
+  letter-spacing: 0;
+}
+.pkg .filter_top_wrap .alarm,
+.pkg .option_wrap .right_cont .alarm {
+  background-color: #5e2bb8;
+}
+/*.iOS.pkg .filter_top_wrap .alarm, .pkg .option_wrap .right_cont .alarm {margin-top:0.1rem}*/
+.htl .htl_contents .option_wrap .right_cont .alarm {
+  background-color: #5E2BB8;
+}
+.Android .filter_top_wrap .alarm {
+  line-height: 1.85rem;
+}
+
+.scrolled .filter_top_wrap,
+.filter_top_wrap.type {
+  margin-bottom: 1.2rem !important;
+}
+.panels .scrolled .filter_top_wrap {
+  margin-bottom: 0 !important;
+}
+.filter_top_wrap .right span a.cls:after {
+  display: block;
+  content: '';
+}
+.filter_top_wrap .right span a.cls:after {
+  display: inline-block;
+  font-size: 1.3rem;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: -0.3rem;
+  right: -0.3rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-close-circle-lg-26.png');
+  background-repeat: no-repeat;
+  background-size: 13px auto;
+}
+.filter_top_wrap.type .right span a.cls:after {
+  top: 0.1rem;
+  right: 0;
+}
+.scrolled .filter_top_wrap .right span a.cls,
+.filter_top_wrap.type .right span a.cls {
+  position: relative;
+  margin-left: 0.5rem;
+  vertical-align: top;
+  left: 0;
+  top: 0;
+}
+.scrolled .filter_top_wrap .inr .btn_filter,
+.filter_top_wrap.type .inr .btn_filter {
+  position: relative;
+  padding-left: 2.1rem;
+}
+/*.scrolled .filter_top_wrap .inr .btn_filter:before, .filter_top_wrap.type .inr .btn_filter:before, .option_wrap .right_cont .btn_filter:before{display:inline-block;content:'';width:1.5rem;height:1.5rem;background:#fff url('https://image.hanatour.com/usr/static/img2/mobile/pkg/ico_sort.png');background-size:cover;margin-top:1px; border-radius:0}*/
+.scrolled .filter_top_wrap .inr .btn_filter:after,
+.filter_top_wrap.type .inr .btn_filter:after,
+.option_wrap .right_cont .btn_filter:after {
+  display: inline-block;
+  content: '';
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-bottom: 0.3rem;
+  margin-left: 0.3rem;
+  background: #fff url('https://image.hanatour.com/usr/static/img2/mobile/htl/ico_filter_26.png')
+    no-repeat 0 0 / 1.4rem 1.4rem;
+  border-radius: 0;
+  vertical-align: middle;
+}
+.scrolled .prod_selected > span,
+.filter_top_wrap.type .prod_selected > span {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  padding-left: 1.9rem;
+  position: relative;
+  color: #666;
+  margin-top: 0.5rem;
+}
+.scrolled .prod_selected > span:last-child,
+.filter_top_wrap.type .prod_selected > span:last-child {
+  margin-left: 1.5rem;
+}
+.scrolled .prod_selected > span:before,
+.filter_top_wrap.type .prod_selected > span:before {
+  display: block;
+  content: '';
+  width: 1.3rem;
+  height: 1.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_list_check_disable.png')
+    no-repeat 0 0;
+  background-size: 1.3rem;
+}
+.scrolled .prod_selected > span.clk,
+.filter_top_wrap.type .prod_selected > span.clk {
+  color: #5e2bb8;
+}
+.scrolled .prod_selected > span.clk:before,
+.filter_top_wrap.type .prod_selected > span.clk:before {
+  display: block;
+  content: '';
+  width: 1.3rem;
+  height: 1.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_list_check.png')
+    no-repeat 0 0;
+  background-size: 1.3rem;
+  color: #5e2bb8;
+}
+.scrolled .filter_top_wrap .right span a.cls {
+  display: inline-block;
+  padding-right: 1.9rem;
+  position: relative;
+  color: #111;
+} /* 190620 sejung font color modify */
+.scrolled .filter_top_wrap .right span a.cls:after {
+  width: 13px;
+  height: 13px;
+  background-position: 100% 40%;
+  background-size: 13px;
+  position: absolute;
+  top: 0.15rem;
+  right: 0.3rem;
+}
+.scrolled .filter_top_wrap .right > span.filter_no {
+  width: auto;
+  padding: 0 2rem 0 0;
+  height: auto;
+}
+
+.progressBox {
+  position: relative;
+  margin-bottom: 4rem;
+}
+.progressBox .header {
+  margin-bottom: 2rem;
+  display: block;
+  font-size: 1.5rem;
+  color: #111;
+  font-weight: 600;
+}
+/* end 20200122 수정 */
+
+/* =left_menu */
+.left_menu {
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: -80%;
+  width: 80%;
+  height: 100%;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-overflow-scrolling: touch;
+  background-color: pink;
+  z-index: 20;
+}
+body.js_left_view .left_menu {
+  left: 0;
+}
+.left_menu .inr {
+  position: relative;
+  padding: 1rem;
+}
+.left_menu .btn_left_menu_close {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  text-indent: -999rem;
+  white-space: nowrap;
+}
+.left_menu .btn_left_menu_close:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: hotpink;
+}
+
+/* =right_menu */
+.right_menu {
+  overflow-y: scroll;
+  position: fixed;
+  top: 100vh;
+  margin-top: 100vh;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  z-index: 5000;
+  padding: 0 2rem 2rem;
+  transform: translateY(110%);
+}
+body.js_right_view .right_menu {
+  top: 0%;
+  margin-top: 0;
+  transform: translateY(0);
+}
+.right_menu .inr {
+  position: relative;
+  padding: 1rem;
+}
+.right_menu .btn_right_menu_close {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 1.6rem;
+  right: 2.6rem;
+  z-index: 5000;
+  font-size: 0;
+}
+.right_menu .btn_right_menu_close:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_close_24.png');
+}
+.right_menu .cont_unit {
+  margin-top: 0;
+}
+.right_menu .text_wrap:first-child {
+  margin: 4rem 0 -1rem;
+}
+.right_menu hr.shape:before,
+.right_menu hr.shape:after {
+  border-radius: 0;
+}
+.right_menu .tbl table {
+  border-top: none;
+}
+.right_menu .tbl {
+  border-top: 1px solid #111;
+}
+.right_menu .text_wrap strong.tit {
+  font-size: 1.9rem;
+}
+
+.all_right_menu {
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  z-index: 5000;
+  padding: 0 2rem 2rem;
+}
+body.js_right_view .all_right_menu {
+  right: 0;
+}
+
+/* =footer */
+#footer {
+  position: relative;
+  background-color: #fff;
+  z-index: 1000;
+} /* 2000에서 999로 수정. 문제시 원복  MGTT-3920 항공 플로팅 팝업 haeder =< footer z-index 맞추기위해 수정 */
+#footer small {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+  margin-top: 1rem;
+}
+#footer .quick_menu {
+  position: fixed;
+  height: 7.5rem;
+  bottom: -1.5rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  max-width: 1024px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -5px 15px 0 rgba(17, 17, 17, 0.1);
+  height: calc(env(safe-area-inset-bottom) + 7.5rem); 
+  height: calc(constant(safe-area-inset-bottom) + 7.5rem); 
+}
+/* .iOS #footer .quick_menu{height:10.2rem} */
+#footer .quick_menu.off {
+  height: 0;
+  bottom: calc(env(safe-area-inset-bottom) + 0); 
+  bottom: calc(constant(safe-area-inset-bottom) + 0); 
+}
+#footer .quick_menu ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+  min-width: inherit;
+}
+#footer .quick_menu li {
+  position: relative;
+  flex: 1;
+}
+#footer .quick_menu li:nth-child(3) {
+  margin-top: -1.5rem;
+  flex: 0.8;
+}
+#footer .quick_menu li a {
+  display: block;
+  font-size: 1rem;
+  padding: 1rem 0 0;
+  color: #111;
+  text-align: center;
+  letter-spacing: -0.04rem;
+}
+#footer .quick_menu li:nth-child(3) a {
+  padding: 0 0;
+}
+#footer .quick_menu li .ico_lottie {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+  margin: 0 auto;
+}
+#footer .quick_menu li:nth-child(3) .ico_lottie {
+  width: 6rem;
+  height: 6rem;
+}
+#footer .quick_menu li .sr_name {
+  display: block;
+  margin-top: 0.3rem;
+  letter-spacing: -0.04rem;
+  line-height: 1;
+}
+#footer .quick_menu li.on .sr_name {
+  color: #5e2bb8;
+  font-weight: 700;
+}
+#footer .quick_menu li .like_thumb {
+  width: 33px;
+  height: 33px;
+  margin: 0 auto;
+  position: relative;
+}
+#footer .quick_menu li .like_thumb::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: 33px;
+  height: 33px;
+  background: rgba(94, 43, 184, 0.3);
+  border-radius: 7px;
+  z-index: 1;
+  animation: ani1 1s ease-in 1 alternate;
+}
+@keyframes ani1 {
+  0% {
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 6px;
+    top: 6px;
+    opacity: 1;
+  }
+}
+#footer .quick_menu li .like_thumb img {
+  border-radius: 7px;
+  border: solid 0.5px #707070;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+#footer .quick_menu li .like_thumb .sr_name {
+  display: none;
+}
+#footer .quick_menu.partner ul {
+  padding: 0 1rem;
+}
+#footer .quick_menu.partner li:nth-child(2) {
+  margin-top: -1.5rem;
+  flex: 0.8;
+}
+#footer .quick_menu.partner li:nth-child(2) a {
+  padding: 0 0;
+}
+#footer .quick_menu.partner li:nth-child(2) .ico_lottie {
+  width: 6rem;
+  height: 6rem;
+}
+#footer .quick_menu.partner li:nth-child(3) {
+  margin: 0;
+  flex: 1;
+}
+#footer .quick_menu.partner li:nth-child(3) a {
+  padding: 0.7rem 0 0;
+}
+#footer .quick_menu.partner li:nth-child(3) .ico_lottie {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+/*항공&호텔gnb*/
+#footer .quick_menu.type02 li {
+  margin: 0;
+}
+#footer .quick_menu.type02 li:nth-child(3) {
+  flex: 1;
+}
+#footer .quick_menu.type02 li a {
+  padding-top: 3.4rem;
+}
+#footer .quick_menu.type02 li a:before {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  margin-left: -1.2rem;
+}
+#footer .quick_menu.type02 li a.home:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_gnbHome.png');
+}
+#footer .quick_menu.type02 li a.menuAll:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_gnbAllmenu.png');
+}
+#footer .quick_menu.type02 li a.my:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_gnbMy.png');
+}
+#footer .quick_menu.type02 li a:hover.home:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_gnbHome_on.png');
+}
+#footer .quick_menu.type02 li a:hover.menuAll:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_gnbAllmenu_on.png');
+}
+#footer .quick_menu.type02 li a:hover.my:before {
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_gnbMy_on.png');
+}
+#footer .quick_menu.type02 li a:hover .sr_name {
+  color: #5e2bb8;
+  font-weight: 700;
+}
+
+#footer .btn_top {
+  display: none;
+  position: fixed;
+  right: 2.6rem;
+  bottom: 8.5rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 0;
+  z-index: 4000;
+  box-shadow: 1.1px 1.6px 7.5px 0 rgba(0, 0, 0, 0.2);
+  /* transition: all 0.4s ease-out; */
+  bottom: calc(env(safe-area-inset-bottom) + 8.5rem);
+  bottom: calc(constant(safe-area-inset-bottom) + 8.5rem); 
+} 
+.smn #footer .btn_top {
+  transition: all 0.4s ease-out;
+}
+.smn #footer .btn_top.off{
+  bottom: 4rem;
+  bottom: calc(env(safe-area-inset-bottom) + 4rem);
+  bottom: calc(constant(safe-area-inset-bottom) + 4rem);
+} 
+.iOS #footer .btn_top {
+  border: 0 none;
+  box-shadow: 0 2px 5px 0 rgba(17, 17, 17, 0.2);
+}
+#footer .btn_top:after {
+  width: 2rem;
+  height: 2rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/pkg-floating-top-42.png');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1rem;
+}
+#footer .btn_top > span {
+  display: inline-block;
+  text-indent: -999rem;
+  white-space: nowrap;
+}
+
+#footer .btn_top.btn_hlive:after {
+  width: 2.7rem;
+  height: 2.7rem;
+  margin-top: -1.2rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_play_white.png');
+}
+#footer .btn_top.btn_hlive {
+  bottom: 16rem;
+  display: inline;
+  border: 2px solid #0fbfc7;
+}
+#footer .btn_top.btn_hlive .hlive_thumb {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+#footer .btn_top.btn_hlive img {
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  object-fit: cover;
+}
+#footer .btn_top.btn_hlive .box_equalizer {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #0fbfc7;
+  border-radius: 50%;
+  text-align: center;
+}
+#footer .btn_top.btn_hlive .box_equalize .svg {
+  flex: 1;
+  align-self: center;
+}
+
+/* .btn_top.in_lypop - LayerPopup(Dialog) 추가 [공통영역 분기 X] */
+.q-dialog.fx-dialog .btn_top.in_lypop {
+  display: none;
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #fff;
+  font-size:0;
+  z-index:4000;
+  box-shadow: 1.1px 1.6px 7.5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.q-dialog.fx-dialog .btn_top.in_lypop::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin: -1rem;
+  background: url('https://image.hanatour.com/usr/static/img2/mobile/com/pkg-floating-top-42.png') center center / 100% auto no-repeat;
+}
+
+.q-dialog.fx-dialog .btn_top.in_lypop > span {
+  display: inline-block;
+  text-indent: -999rem;
+  white-space: nowrap;
+}
+
+#footer .alarm {
+  width: 0.4rem;
+  height: 0.4rem;
+  min-width: 0.4rem;
+  min-height: 0.4rem;
+  background-color: #ef2986;
+  top: 0.6rem;
+  left: calc(50% + 0.5rem);
+  right: auto;
+}
+#footer .global_link {
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #ddd;
+  height: 4rem;
+  overflow: hidden;
+}
+#footer .global_link li {
+  width: 33.3%;
+  float: left;
+  text-align: center;
+  border-left: 1px solid #ddd;
+}
+#footer .global_link li:first-child {
+  border-left: none;
+}
+#footer .global_link li:nth-child(2) {
+  width: 33.4%;
+}
+#footer .global_link li a {
+  display: block;
+  height: 4rem;
+  line-height: 4.2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #111;
+}
+#footer .global_link li a.tel {
+  display: inline-block;
+}
+#footer .global_link li a.tel:before {
+  display: inline-block;
+  content: '';
+  clear: both;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-image: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico-tel-26.png');
+  position: relative;
+  top: 0.2rem;
+}
+#footer .office_info_wrap {
+  padding: 2rem 2rem 1rem;
+}
+#footer .office_info_wrap + .office_info_wrap {
+  padding-top: 1rem;
+  padding-bottom: 8rem;
+}
+#footer .office_info_wrap > .office_info_wrap {
+  padding: 0;
+}
+#footer .office_info_wrap.type {
+  padding-bottom: 7rem;
+}
+#footer .office_info_wrap address {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+#footer .office_info_wrap address strong {
+  font-weight: 600;
+  display: block;
+}
+#footer .office_info_wrap address span {
+  display: block;
+}
+#footer .office_info li {
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+}
+#footer .office_info li a {
+  text-decoration: underline;
+  color: #111;
+  display: inline-block;
+}
+#footer .link_etc {
+  overflow: hidden;
+}
+#footer .link_etc li {
+  float: left;
+  position: relative;
+  padding-left: 0.9rem;
+  margin-right: 0.6rem;
+}
+#footer .link_etc li:first-child {
+  padding-left: 0;
+}
+#footer .link_etc li:before {
+  display: block;
+  content: '';
+  clear: both;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: #c2c2c2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -0.2rem;
+}
+#footer .link_etc li:first-child:before {
+  display: none;
+}
+#footer .link_etc li a {
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+}
+#footer .link_etc li a strong {
+  color: #111;
+  font-weight: 600;
+}
+
+#footer .office_info_wrap.js_acc {
+  border-top: 0;
+}
+#footer .office_info_wrap.js_acc .header {
+  font-size: 1.2rem;
+  padding: 0 2rem 0 0;
+  display: inline-block;
+  background-size: 1.3rem auto;
+  border-bottom: 0;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 2rem;
+}
+#footer .office_info_wrap.js_acc .header.active {
+  margin-bottom: 0;
+}
+#footer .office_info_wrap.js_acc .view {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* iphoneX */
+/* @media only screen and (-webkit-device-pixel-ratio: 3) and (device-height: 812px) and (device-width: 375px) {
+  #footer .quick_menu {
+    height: 9rem;
+  } 
+  #footer .btn_top{bottom:10rem}
+} */
+/* iphoneXs Max , iphoneXr */
+/* @media only screen and (device-width: 414px) and (device-height: 896px) {
+  #footer .quick_menu {
+    height: 9rem;
+  }
+  #footer .btn_top{bottom:10rem}
+} */
+
+/* =contents */
+#container {
+  min-height: 100vh;
+}
+.header_srch_wrap.htl_type + #container {
+  min-height: initial;
+}
+.contents {
+  padding-top: 5.6rem;
+  margin-bottom: 4rem;
+}
+.fet .contents{margin-bottom:0}
+.preview .contents {
+  padding-top: 2rem;
+}
+/* .contents.air, .contents.htl{padding-bottom:0} */
+.ribbon .contents {
+  padding-top: 12rem;
+}
+.coBrand.ribbon .contents {
+  padding-top: 22.1rem;
+} /* 18.8rem */
+.coBrand .contents {
+  padding-top: 12.8rem;
+} /* 12.8rem */
+.coBrand.showGnb .contents {
+  padding-top: 16.3rem;
+}
+.coBrand.ribbon.showGnb .contents {
+  padding-top: 22.3rem;
+}
+.contents.type {
+  padding-top: 5.4rem;
+}
+/*.ribbon .contents.type{padding-top:11rem}
+.coBrand.ribbon .contents.type{padding-top:17.8rem} 코브랜드 상단간격생김으로 주석처리 */
+.coBrand .contents.type {
+  padding-top: 12.4rem;
+}
+.coBrand.pmt .contents.type,
+.coBrand.mpg .contents.type {
+  padding-top: 12.4rem;
+}
+.coBrand.showGnb .contents.type {
+  padding-top: 11.8rem;
+}
+.coBrand.ribbon.showGnb .contents.type {
+  padding-top: 17.8rem;
+}
+.contents.main {
+  padding-bottom: 9rem;
+}
+.srch_top .contents {
+  padding-top: 0;
+}
+.gnbInsert .contents {
+  padding-top: 6.8rem;
+}
+.admin_br {
+  white-space: pre-line;
+}
+
+/* 20200107 메인 개편 */
+.hn_mainTop .js_tabs.link.scroll {
+  position: relative;
+  z-index: 2;
+  padding: 0;
+  height: 3.2rem;
+}
+.hn_mainTop .js_tabs.link.scroll > .scroll_wrap .tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #fff;
+  overflow: visible;
+  border-bottom: none;
+  padding: 0 2rem;
+}
+.hn_mainTop .js_tabs.link.scroll:after {
+  content: '';
+  position: absolute;
+  right: 1.5rem;
+  top: -0.5rem;
+  bottom: 0;
+  width: 2rem;
+  height: 3.5rem;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.7), #fff);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), #fff);
+  z-index: 110;
+  display: none;
+}
+.hn_mainTop .js_tabs.link.scroll > .scroll_wrap {
+  position: relative;
+  top: -33px;
+  z-index: 100;
+  background: #fff;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  border-bottom: none;
+  transition: top 0.4s ease-out;
+  -webkit-transition: top 0.4s ease-out;
+}
+.hn_mainTop .js_tabs.link.scroll > .scroll_wrap.on {
+  top: 0;
+  border-bottom: 1px solid #eaeaea;
+  margin-top: -0.1rem;
+}
+.Android .hn_mainTop .js_tabs.link.scroll > .scroll_wrap.on {
+  margin-top: -0.2rem;
+}
+.hn_mainTop .js_tabs.scroll.sticky_add .tabs.box {
+  margin: 0 !important;
+}
+.hn_mainTop .js_tabs.scroll.sticky_add li {
+  margin: 0 0 0 1rem !important;
+}
+.hn_mainTop .js_tabs.scroll.sticky_add li:first-child {
+  margin-left: 0 !important;
+}
+.hn_mainTop .js_tabs.scroll.prevShadow:before {
+  display: none;
+}
+.hn_mainTop .scroll_wrap_x .sp_list_wrap .item_unit.box {
+  min-height: 19.4rem;
+}
+/*.hn_mainTop .tabs li a:not(.btn_tooltip) {line-height:2.2rem}*/
+.hn_mainTop .text_wrap {
+  margin-top: 7rem;
+}
+.hn_mainTop .hn_travel_event .text_wrap {
+  margin-top: 0;
+}
+.hn_mainTop #header {
+  background: none;
+  height: 5.6rem;
+  background: #fff;
+}
+.hn_mainTop.scrolled #header {
+  height: 5.6rem;
+  background: #fff;
+}
+.hn_mainTop #header.type {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.hn_mainTop .contents {
+  padding-top: 5.6rem;
+  padding-bottom: 0;
+}
+.ribbon .hn_mainTop .contents {
+  padding-top: 11.6rem;
+}
+/*.hn_mainTop .main_visual{padding-top:2rem !important; background:no-repeat right top / auto 25.5rem;background-color:#fff}*/
+.hn_mainTop .sp_list_wrap .scroll_wrap .sc_item .item_text {
+  letter-spacing: -0.03rem;
+}
+
+/* 20200818 메인변경 : 수정 - 2020-11-18  */
+.hn_mainTop_quick02 ul:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.hn_mainTop_quick02 {
+  margin: 0 -0.5rem 0.5rem;
+}
+.hn_mainTop_quick02 li.bg_ico_n01,
+.hn_mainTop_quick02 li.bg_ico_n02,
+.hn_mainTop_quick02 li.bg_ico_n03,
+.hn_mainTop_quick02 li.bg_ico_n04,
+.hn_mainTop_quick02 li.bg_ico_n05,
+.hn_mainTop_quick02 li.bg_ico_n06,
+.hn_mainTop_quick02 li.bg_ico_n07,
+.hn_mainTop_quick02 li.bg_ico_n08,
+.hn_mainTop_quick02 li.bg_ico_n09,
+.hn_mainTop_quick02 li.bg_ico_n10 {
+  width: 20%;
+}
+.hn_mainTop_quick02 li {
+  float: left;
+  width: 25%;
+}
+.hn_mainTop_quick02 li.bg_ico_n01 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_01.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n01 a:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  width: 47px;
+  height: 17px;
+  background: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_01_label.png)
+    0 0 / 47px 17px no-repeat;
+  transform: translate(-50%, 0);
+}
+.hn_mainTop_quick02 li.bg_ico_n02 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_02.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n03 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_03.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n04 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_04.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n05 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_05.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n06 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_06.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n07 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_07.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n08 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_08.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n09 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_09.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n10 a {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/main/ico_newtop_quick05_10.png);
+}
+.hn_mainTop_quick02 li.bg_ico_n04 {
+  margin: 0;
+}
+.hn_mainTop_quick02 li.bg_ico_n05 {
+  margin-bottom: 2rem;
+}
+.hn_mainTop_quick02 li a {
+  display: block;
+  font-size: 1.2rem;
+  background: center 0 / 32px 32px no-repeat;
+  text-align: center;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.hn_mainTop_quick02 li a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hn_mainTop_quick03 {
+  display: none;
+  overflow: hidden;
+  padding-top: 3rem;
+  background: #fff;
+}
+.hn_mainTop_quick03 li {
+  float: left;
+  width: 50%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.hn_mainTop_quick03 li:nth-child(odd) {
+  padding-right: 0.6rem;
+}
+.hn_mainTop_quick03 li:nth-child(even) {
+  padding-left: 0.6rem;
+}
+.hn_mainTop_quick03 li a {
+  display: block;
+  background: no-repeat 0 0 / 100% 100%;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 1.8rem 1rem 0 1.8rem;
+  height: 16.4rem;
+  font-size: 1.3rem;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.hn_mainTop_quick03 li a strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+/* 20200818 메인변경 : 수정 */
+
+/* 2020-12-09 메인:통합검색/퀵메뉴/기획전 UI변경 */
+.search_visual_section .main_search {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+.search_visual_section .main_search #m_search.mainType {
+  background-color: inherit;
+}
+/*.hn_mainTop .search_visual_section .cont_unit.type.hn_travel_event {margin-top:0; margin-bottom:0; padding:0; box-shadow:none;overflow:hidden;height:26.4rem;}*/
+.hn_mainTop .search_visual_section .cont_unit.type.hn_travel_event .swiper-container.control.main {
+  height: 26.4rem;
+}
+@media all and (min-width: 768px) {
+  /* 상단비쥬얼 ipad 대응 768이상 */
+  #wrap .search_visual_section .cont_unit.type.hn_travel_event {
+    height: 56.4rem;
+  }
+}
+@media all and (min-width: 768px) {
+  /* 상단비쥬얼 ipad 대응 768이상 */
+  #wrap .search_visual_section .cont_unit.type.hn_travel_event .swiper-container.control.main {
+    height: 56.4rem;
+  }
+}
+
+.hn_mainTop .search_visual_section .cont_unit.type.hn_travel_event .swiper-container.control.main a,
+.hn_mainTop
+  .search_visual_section
+  .cont_unit.type.hn_travel_event
+  .swiper-container.control.main
+  img {
+  border-radius: 0;
+}
+
+/*.hn_mainTop .cont_unit.type.submain[data-component="@theme-mComTab4"] {margin-top:0; padding-top:0; padding-bottom:0; box-shadow:inherit;}*/
+.hn_mainTop .cont_unit.type.submain[data-component='@theme-CHPC0MAN0001S115'] {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: inherit;
+}
+.js_tabs.tab_theme {
+  padding-top: 1.1rem;
+}
+.js_tabs.tab_theme .tabs li.selected:after {
+  background: #111;
+}
+.js_tabs.tab_theme .tabs li.selected > a {
+  color: #111;
+}
+.hn_mainTop_quick02 li {
+  position: relative;
+  padding-top: 2.8rem;
+  width: 20%;
+}
+/*.hn_mainTop_quick02 li:nth-child(-n + 5) {margin-bottom:2rem}*/
+.hn_mainTop_quick02.img_insert img {
+  width: 3.2rem;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+.hn_mainTop_quick02 li span.label {
+  display: block;
+  position: absolute;
+  top: 0.7rem;
+  left: 50%;
+  max-width: 100%;
+  padding: 0.1rem 0.5rem 0.1rem;
+  background-color: #ed4a61;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  white-space: nowrap;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+}
+.iOS .hn_mainTop_quick02 li span.label {
+  padding: 0.3rem 0.5rem 0.1rem;
+  line-height: 1.2rem;
+}
+.hn_mainTop_quick02 li span.label:after {
+  content: '';
+  position: absolute;
+  bottom: -0.4rem;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border-top: 0.4rem solid #ed4a61;
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+}
+.iOS .hn_mainTop_quick02 li span.label:after {
+  bottom: -0.3rem;
+}
+
+.hn_mainTop .cont_unit.type.submain.pdt_hot,
+.hn_mainTop .text_wrap.type.submain.pdt_hot {
+  padding: 2.5rem 1.6rem;
+}
+.submain .sp_list_wrap .default_wrap .sc_list.type1 {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.submain .sp_list_wrap .default_wrap .sc_list.type1 .sc_item {
+  width: 48.6%;
+  margin-bottom: 2.5rem;
+}
+.submain .sp_list_wrap .default_wrap .sc_list.type1 .sc_item:last-child {
+  width: 48.6%;
+}
+.submain .sp_list_wrap .default_wrap .sc_item + .sc_item {
+  margin: 0 0 0 0;
+}
+.submain .sp_list_wrap .default_wrap .sc_item:nth-child(2n + 2) {
+  margin-left: 0.8rem;
+}
+.submain .sp_list_wrap .default_wrap .sc_item:last-child {
+  padding-right: 0;
+}
+.submain .sp_list_wrap .default_wrap .sc_item.repre_tit .sc_list.type1 .thumbnail {
+  height: 20rem;
+}
+.submain .sp_list_wrap .default_wrap .sc_list .sc_item.repre_tit .item_unit .thumbnail {
+  height: 20.5rem;
+}
+.submain .sp_list_wrap .default_wrap .sc_list .sc_item.repre_tit .item_unit .thumbnail .tit {
+  position: absolute;
+  left: 1.3rem;
+  top: 1.3rem;
+  width: 80%;
+  font-weight: 600;
+  text-align: left;
+}
+.submain .sp_list_wrap .default_wrap .sc_list .sc_item.repre_tit .item_unit .thumbnail .tit .sub {
+  display: block;
+}
+/* //2020-12-09 메인:통합검색/퀵메뉴/기획전 UI변경 */
+
+.hn_mainTop .right_cont .btn.txt.line {
+  font-size: 1.3rem;
+}
+.hn_mainTop .js_banner_wrap .banner_tit {
+  font-size: 1.7rem;
+}
+.hn_mainTop .sp_list_wrap .thumbnail img {
+  border-radius: 0.7rem;
+}
+.hn_mainTop .sp_list_wrap.box_shadow .thumbnail img {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+/* 20200812 메인변경 : 수정 */
+@media all and (min-width: 768px) {
+  /* 768이상 */
+  .hn_mainTop_quick03 li a {
+    background: no-repeat 0 -10rem / 100% 190%;
+    height: 20rem;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* 1024이상 */
+  .hn_mainTop_quick02 {
+    min-height: 18rem;
+  } /*20200730 퀵서치영역 변경*/
+}
+/* // 20200812 메인변경 : 수정f */
+
+/* 닷컴1.5 지금가장핫해! */
+.hot_product:after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  width: 0;
+}
+.hot_product li {
+  position: relative;
+}
+.hot_product li .thumbnail {
+  height: 16rem;
+}
+.hot_product li .hash_group {
+  position: absolute;
+  left: 1.6rem;
+  bottom: 4.6rem;
+}
+.hot_product li .hash_group .hashtag {
+  padding: 0.2rem 0.3rem 0.3rem;
+  background-color: #00448f;
+  color: #fff;
+}
+.hot_product li .title {
+  position: absolute;
+  left: 1.6rem;
+  bottom: 1.5rem;
+  padding: 0 0.3rem 0.1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background-color: #010101;
+  color: #fff;
+}
+.hot_product li:nth-child(2) {
+  float: left;
+  width: 48%;
+  height: 16rem;
+  margin-right: 0.8rem;
+}
+.hot_product li:nth-child(2) .hash_group .hashtag {
+  background-color: #1c7b26;
+}
+.hot_product li:nth-child(3) {
+  float: right;
+  width: 48%;
+  height: 16rem;
+}
+.hot_product li:nth-child(3) .hash_group .hashtag {
+  background-color: #27848b;
+}
+.more_tour {
+  margin-top: 2rem;
+  border: 1px solid #eaeaea;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.more_tour button {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+}
+.more_tour button:before {
+  content: '';
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.3rem;
+  background-size: 1.6rem;
+  background: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_refresh_01.png')
+    no-repeat 0 0.1rem / 100% 100%;
+  vertical-align: top;
+}
+.more_tour button em {
+  font-weight: 600;
+  color: #111;
+}
+
+/* 닷컴1.5 하나투어PICK */
+.sp_list_wrap .pick_product .thumbnail {
+  height: 13rem;
+}
+.pick_product li {
+  position: relative;
+}
+.pick_product .title {
+  position: absolute;
+  left: 2rem;
+  top: 1.5rem;
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: -1px;
+  text-align: left;
+  line-height: 2rem;
+}
+.pick_product .tag_group_01 {
+  position: absolute;
+  left: 2rem;
+  top: 6rem;
+}
+
+/* 안드로이드 폰트 굵기적용 */
+.Android #header h1.title,
+.Android .co_brand > strong,
+.Android .srch_top #header h1.title,
+.Android .srch_top #header h1.title > a,
+.Android #footer .office_info_wrap address strong,
+.Android #footer .link_etc li a strong {
+  font-weight: bold;
+}
+
+/* 20200818 헤더 검색버튼 고정 : 추가 */
+#m_search.mainType .srch_find_wrap {
+  overflow: hidden;
+  position: absolute;
+  left: 12.4rem;
+  top: calc(1px + 0.6rem);
+  width: calc(100% - 16rem);
+  margin: 0 2.6rem;
+}
+#m_search.mainType .srch_find {
+  display: block;
+  box-sizing: border-box;
+  width: 90%;
+  height: 4rem;
+  line-height: 4rem;
+  padding-left: 2rem;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+  background-color: #f8f8f8;
+  color: #aaa;
+  border-color: #eaeaea;
+  font-weight: 400;
+  text-align: left;
+}
+#m_search.mainType .srch_find_wrap .rcm_find {
+  position: absolute;
+  right: -1rem;
+  top: -0.1rem;
+  width: 4.8rem;
+  height: 100%;
+  background: url('https://image.hanatour.com/usr/static/img2/mobile/com/ico_search_24.png')
+    no-repeat 1rem center / 1.7rem 1.7rem;
+}
+#m_search.mainType .srch_find_wrap ~ .srch_find_wrap .rcm_find {
+  right: 1rem;
+}
+/* // 20200818 헤더 검색버튼 고정 : 추가 */
+
+/* 알럿 아코디언 대응 */
+.js_acc.alert_acc {
+  border: 0;
+  margin-top: 1.5rem;
+}
+.js_acc.alert_acc .main_search {
+  font-size: 1.4rem;
+  padding: 0 2rem 0 0;
+  display: inline-block;
+  background-size: 1.3rem auto;
+  border-bottom: 0;
+  color: #666;
+}
+#m_search.mainType .srch_find_wrap.sch_01 {
+  position: fixed;
+  left: -2rem;
+  top: -7.3rem;
+  width: calc(100% - 0rem);
+  padding: 1.6rem;
+  background-color: #fff;
+  transition: top 1s;
+  height: 0;
+}
+#m_search.mainType .srch_find_wrap.sch_01.show {
+  top: 0rem;
+}
+.js_acc.alert_acc .main_search .imagine_tit:before {
+  content: '자세히보기';
+  font-weight: normal;
+}
+.js_acc.alert_acc .main_search.active {
+  margin-bottom: 1rem;
+}
+.js_acc.alert_acc .main_search.active .imagine_tit:before {
+  content: '닫기';
+}
+.js_acc.alert_acc .view {
+  border: 0;
+  padding: 0;
+}
+.js_acc.alert_acc .view .message_code {
+  font-size: 1.2rem;
+  color: #666;
+  background-color: #f4f5f9;
+  padding: 2rem;
+  max-height: 7rem;
+  overflow-y: auto;
+}
+
+/* 패키지검색 */
+.pkg_list.srch_top hr.shape {
+  height: 4rem;
+}
+.pkg_list.srch_top hr.shape:before {
+  height: 1.5rem;
+}
+.pkg_list.srch_top hr.shape:after {
+  height: 1rem;
+}
+.pkg_list.srch_top #header h1.title > span {
+  position: relative;
+  font-size: 1.8rem;
+  max-width: calc(100% - 6rem);
+  font-weight: 600;
+  color: #111;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /*-webkit-transition:font-size .2s ease-out;-moz-transition:font-size .2s ease-out;transition:font-size .2s ease-out*/
+}
+
+/* 상단공통 header:2020-09-29 */
+#wrap.srch_top.com_result {
+  padding-top: 4.6rem;
+}
+#wrap.srch_top.com_result.scrolled {
+  padding-top: 3rem;
+}
+#wrap.srch_top.com_result.scrolled #container {
+  margin-top: 0;
+}
+#wrap.srch_top.com_result #header_cont {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#wrap.srch_top.com_result .header_wrap {
+  position: static;
+}
+#wrap.srch_top.com_result .header_srch_wrap {
+  margin-top: 3.5rem;
+}
+#wrap.srch_top.com_result #container {
+  margin-top: 5.5rem;
+}
+
+#wrap.srch_top.com_result.scrolled.scroll_up .header_srch_wrap {
+  margin-top: 0;
+}
+#wrap.srch_top.com_result.scrolled.scroll_up .header_srch_wrap .btn_wrap {
+  height: 3rem;
+  padding: 0 2rem 0;
+  opacity: 1;
+}
+#wrap.srch_top.com_result.srch_top.scroll_up .header_srch_wrap .btn_wrap .btn_filter {
+  display: block;
+}
+#wrap.srch_top.com_result.scrolled.scroll_up #container {
+  margin-top: 2.8rem;
+}
+
+#wrap.srch_top.com_result.srch_top .header_srch_wrap .btn_wrap .btn_filter {
+  display: none;
+  margin-left: 1rem;
+  padding: 0.5rem 0 0 0;
+  border: 0;
+  color: #111;
+  vertical-align: middle;
+}
+#wrap.srch_top.com_result.srch_top .header_srch_wrap .btn_wrap .btn_filter:before {
+  display: inline-block;
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff url(https://image.hanatour.com/usr/static/img2/mobile/pkg/ico_sort.png);
+  background-size: cover;
+  margin-top: 1px;
+  border-radius: 0;
+}
+#wrap.srch_top.com_result.srch_top .header_srch_wrap .btn_wrap .btn_filter .alarm {
+  display: inline-block;
+  position: static;
+  padding: 0;
+  background-color: #5e2bb8;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: -0.1rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  margin-left: 0.3rem;
+}
+
+/* 결제완료 헤더 검색추가 */
+#header .pay_complete.btn_search {
+  display: block !important;
+  right: 3.2rem;
+  top: 0.5rem;
+}
+#header .pay_complete.btn_search:after {
+  background-image: url(https://image.hanatour.com/usr/static/img2/mobile/com/btn_header_search_srch.png);
+  top: 1rem !important;
+}
+#header .pay_complete.title {
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center;
+}
+
+/* 로딩 v2.0 */
+.loading_wrap {
+  z-index: 5000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 !important;
+  max-width: 100vw !important;
+  width: 100%;
+  max-height: 100vh;
+}
+.loading_wrap .dix_fix {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 85%;
+}
+.loading_wrap .loading_cont {
+  display: flex;
+  height: 100vh;
+}
+.loading_wrap .loading_cont .content {
+  flex: 1;
+  align-self: center;
+}
+.loading_wrap .loading_cont .content .sort_tit {
+  text-align: center;
+}
+.loading_wrap .loading_cont .content .sort_tit em {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #111;
+  letter-spacing: -0.84px;
+  line-height: 2.2rem;
+}
+.loading_wrap .loading_cont .content .sort_tit.comm em {
+  color: #522bb8;
+}
+.loading_wrap .loading_cont .content .wait_txt {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #666;
+  letter-spacing: -0.48px;
+  line-height: 1.7rem;
+}
+
+.list_loading_wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.list_loading_wrap .content {
+  flex: 1;
+  padding: 1rem 0 4rem;
+  background-color: #fff;
+  align-self: flex-end;
+}
+.list_loading_wrap .content .more_txt {
+  font-size: 1.4rem;
+  color: #666;
+  text-align: center;
+  letter-spacing: -0.84px;
+  line-height: 2.2rem;
+}
+.list_loading_wrap.v2{position:relative}
+.list_loading_wrap.v2 .content{padding:0.4rem 0 2rem}
+.list_loading_wrap.v2 .content .more_txt strong{display:block;color:#5e2bb8}
+
+/* 항공 플로팅 메뉴 추가 220628 Ljh */
+#wrap.scrolled #footer .air_menu{display:inline}
+#footer .air_menu.open + .air_menu_pop {display:inline}
+#footer .air_menu + .air_menu_pop + .air_menu_dimmd {display:none;position: fixed;left: 0;top: 0;width: 100%;height: 100%;background-color: #000;opacity: 0.4;}
+#footer .air_menu.open + .air_menu_pop + .air_menu_dimmd {display:block}
+#wrap:not(.scrolled) #footer .air_menu.open + .air_menu_pop {/* display:none; */}
+#footer .air_menu {transition: all .4s ease-out;position: fixed;right: 2.6rem;bottom: 9rem;width: 4.2rem;height: 4.2rem;border-radius: 50%;background: #5e2bb8 url(https://image.hanatour.com/usr/static/img2/mobile/com/ic_add_line.png) no-repeat 50% / 50%;font-size: 0;z-index: 4000;box-shadow: 1.1px 1.6px 7.5px 0 rgba(0, 0, 0, 0.2)} 
+#footer .air_menu.open {
+    transition: all .4s ease-out;
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.scrolled #footer .btn_top + div .air_menu {bottom: 14rem;}
+.scrolled #footer .btn_top + div .air_menu + .air_menu_pop {bottom:19rem}
+#footer .air_menu + .air_menu_pop { display:none;transition: all .4s ease-out;position: fixed;bottom: 14rem;right: 2.6rem;width: max-content;background-color: #fff;font-size: 1.4rem;box-shadow: 0 3px 13px 0 rgba(17, 17, 17, 0.1);padding: 1.6rem;border-radius: 8px;z-index:100;}
+#footer .air_menu + .air_menu_pop ul li {border-top: 1px solid #ddd;padding: 1.2rem 0 .8rem 0;}
+#footer .air_menu + .air_menu_pop ul li:first-child{padding-top:0;border-top:none}
+#footer .air_menu + .air_menu_pop ul li:last-child{padding-bottom:0;}
+#footer .air_menu + .air_menu_pop ul li a {color: #111;font-size: 1.3rem;letter-spacing: -.52px;font-weight:600;}
+#footer .air_menu + .air_menu_pop ul li a span {display: inline-block;width: 1.3rem;height: 1.3rem;margin: 0 .5rem 0 0;vertical-align: middle;}
+#footer .air_menu + .air_menu_pop ul li a span.ico01 {background: url(https://image.hanatour.com/usr/static/img2/mobile/com/ic_chatting.png) no-repeat 50% 50% / 100%}
+#footer .air_menu + .air_menu_pop ul li a span.ico02 {background: url(https://image.hanatour.com/usr/static/img2/mobile/com/ic_help_line.png) no-repeat 50% / 100%;}
+#footer .air_menu + .air_menu_pop ul li a span.ico03 {background: url(https://image.hanatour.com/usr/static/img2/mobile/com/ic_air_map_line.png) no-repeat 50% / 100%;}
+#footer .js_act.btn_top.off + div .air_menu {bottom:9rem}
+#footer .js_act.btn_top.off + div .air_menu + .air_menu_pop {bottom:14rem;}

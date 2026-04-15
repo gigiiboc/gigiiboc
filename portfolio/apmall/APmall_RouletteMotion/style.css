@@ -1,0 +1,68 @@
+/* reset */
+.event_image button {bottom:auto;left:auto;margin-left:0;}
+.event.detail .event_image button {bottom: auto;left: auto;}
+
+/* default */
+#event {position:relative;width:100%;margin:0px auto;overflow:hidden;}
+#event .pc {display: block !important;}
+#event .mo {display: none !important;}
+#event .section01,
+#event .section02,
+#event .section03,
+#event .section04 {position:relative;width:100%;overflow:hidden}
+#event .section_img {width:100%;display:block;}
+
+/* popup */
+#event .popup_link {text-indent: -9999px;display: block;position: absolute;bottom: 0%;left: 0%;width: 100%;height: 0;padding-top: 5%;background: #000;opacity: 0;filter: alpha(opacity:'0');}
+#event .popup {display:none;position: fixed;top: 0;bottom: 0;left: 0;right: 0;width: 100%;height: 100%;text-align: center;z-index: 1;}
+#event .popup:after {content:'';display: inline-block;vertical-align: middle;height: 100%;}
+#event .popup > span {position:absolute;bottom:0;left:0;width:100%;height:100%;display:block;background:#000;opacity:0.65;filter:alpha(opacity:'65');z-index:99999}
+#event .popup > div {position: relative;display: inline-block;vertical-align: middle;width: 412px;z-index:99999;}
+#event .popup > div > img {width:100%;}
+#event .popup > div > a {position:absolute;top:0;right:0;display:block;width: 17%;height: 0;padding-top: 17%;background:#000;opacity:0;filter:alpha(opacity:'0');z-index:1;}
+#event #popup01 {}
+#event #popup01 > span {}
+#event #popup01 > div {}
+#event #popup01 > div > img {}
+#event #popup01 > div > a {}
+
+/* roulette */
+.roulette {position: absolute;top: 829px;left: 50%;margin: 0 0 0 -373.5px;width: 727px;height:747px;background: url(./images/bg.png) no-repeat center / 100% auto;}
+.roulette .rouletteCtt {transform:rotate(22.5deg) scale(1, 1);position: absolute;top: 0;left:0;width:100%;height:100%;background: url(./images/prd.png) no-repeat center / 100% auto;}
+.roulette .rouletteDimmed {display:none;position: absolute;top: 0;left:0;width:100%;height:100%;background: url(./images/dimmed.png) no-repeat center / 100% auto;}
+.roulette .rouletteArrow {position:absolute;top: 0;right: 50%;margin: -0.2% -6.359% 0 0;display:block;width: 12.718%;height: 0;padding-top: 18.073%;z-index:1;background: url(./images/arrow.png) no-repeat center / 100% auto;}
+.roulette .rouletteStart {position: absolute;top: 50%;left: 50%;margin: -123px 0 0 -123px;display: block;width: 246px;height: 0;padding-top: 246px;border-radius: 50%;z-index: 1;background: url(./images/startBtn.png) no-repeat center / 100% auto;text-indent: -9999px;overflow: hidden;}
+
+@media all and (max-width:750px){
+
+	/* default */
+	#event {background:none;}
+	#event .pc {display: none !important;}
+	#event .mo {display: block !important;}
+	#event .section01,
+	#event .section02,
+	#event .section03,
+	#event .section04 {}
+	#event .section_img {}
+
+	/* popup */
+	#event .popup_link {}
+	#event .popup {}
+	#event .popup > span {}
+	#event .popup > div {width: 54.934%;max-width: 412px;}
+	#event .popup > div > img {}
+	#event .popup > div > a {}
+	#event #popup01 {}
+	#event #popup01 > span {}
+	#event #popup01 > div {}
+	#event #popup01 > div > img {}
+	#event #popup01 > div > a {}
+
+	/* roulette */
+	.roulette {top: 35%;left: 1.535%;margin: 0;width: 96.934%;height: 0;padding-top: 96.934%;}
+	.roulette .rouletteCtt {}
+	.roulette .rouletteDimmed {}
+	.roulette .rouletteArrow {}
+	.roulette .rouletteStart {margin: 0;margin: -16.919% 0 0 -16.919%;display: block;width: 33.838%;height: 0;padding-top: 33.838%;}
+
+}

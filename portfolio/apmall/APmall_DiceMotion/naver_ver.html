@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>::: note :::</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"> <!-- width=1150, width=device-width, initial-scale=1.0 -->
+	<link rel="stylesheet" type="text/css" href="/gigiiboc/portfolio/resource/css/style.css">
+	<script src="/gigiiboc/portfolio/resource/js/jquery-1.11.3.min.js"></script>
+	<script src="/gigiiboc/portfolio/resource/js/jquery.easings.min.js"></script>
+	<script src="/gigiiboc/portfolio/resource/js/TweenMax.min.js"></script>
+	<script src="/gigiiboc/portfolio/resource/js/prefixfree.min.js"></script>
+</head>
+<body>
+
+
+<!-- 시작 -->
+	<link rel="stylesheet" type="text/css" href="./naver_ver.css">
+	<div id="event">
+		<div class="main_section">
+			<div class="pc" style="height:866px;background:url(./images/mainTop_pc.jpg) no-repeat center top"></div>
+			<div class="mo"><img src="./images/mainTop_mo.jpg" class="section_img" alt=""></div>
+			<div class="quickMenu js-quickMenu">
+				<div class="nav">
+					<ul>
+						<li class="nav01"><a href="javascript:void(0)" data-target="js-target01"></a></li>
+						<li class="nav02"><a href="javascript:void(0)" data-target="js-target02"></a></li>
+						<li class="nav03"><a href="javascript:void(0)" data-target="js-target03"></a></li>
+						<li class="nav04"><a href="javascript:void(0)" data-target="js-target04"></a></li>
+						<li class="nav05"><a href="javascript:void(0)" data-target="js-target05"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		<div class="section01 js-target01">
+			<div class="pc" style="height:1318px;background:url(./images/luckyDrawNaver_bg.jpg) no-repeat center top"></div>
+			<div class="mo"><img src="./images/luckyDrawNaver_bg.jpg" class="section_img" alt=""></div>
+			<div class="luckyDraw_count">
+				<div><span>0000</span></div>
+			</div>
+			<div class="ctt">
+				<ul class="menu-tabs"> 
+					<li><a href="#none" data-target="ctt1_box"></a></li> 
+					<li><a href="#none" data-target="ctt2_box"></a></li> 
+					<li><a href="#none" data-target="ctt3_box"></a></li> 
+				</ul>
+				<ul class="ctt-tabs">
+					<li class="ctt1_box">
+						<a href="#none" class="section01_link01" onclick="onoff('#luckyDrawPopup02')">응모하기</a>
+						<a href="https://www.amorepacificmall.com/kr/ko/cs/notice" class="section01_link02">당첨자 보러가기</a>
+						<span class="luckyDraw_dim"><span>이벤트 종료</span></span>
+					</li>
+					<li class="ctt2_box">
+						<a href="#none" class="section01_link01" onclick="onoff('#luckyDrawPopup02')">응모하기</a>
+						<a href="https://www.amorepacificmall.com/kr/ko/cs/notice" class="section01_link02">당첨자 보러가기</a>
+						<span class="luckyDraw_dim"><span>이벤트 종료</span></span>
+					</li>
+					<li class="ctt3_box">
+						<a href="#none" class="section01_link01" onclick="onoff('#luckyDrawPopup02')">응모하기</a>
+						<a href="https://www.amorepacificmall.com/kr/ko/cs/notice" class="section01_link02">당첨자 보러가기</a>
+						<span class="luckyDraw_dim"><span>이벤트 종료</span></span>
+					</li>
+				</ul>
+			</div>
+			<a href="#none" class="luckyDraw_noticeBtn" onclick="onoff('#luckyDraw_notice_Popup')">알려드립니다</a>
+
+			<!-- 알려드립니다 -->
+			<div class="popup" id="luckyDraw_notice_Popup">
+				<span></span>
+				<div>
+					<img src="./images/luckyDraw_notice_Popup.png" alt="" />
+					<a href="#none" onclick="onoff('#luckyDraw_notice_Popup')"></a>
+				</div>
+			</div>
+			<!-- 당첨팝업 -->
+			<div class="popup" id="luckyDrawPopup01">
+				<span></span>
+				<div>
+					<img src="./images/luckyDraw_Popup01.png" alt="" />
+					<a href="#none" onclick="onoff('#luckyDrawPopup01')"></a>
+					<a href="#none" class="luckyDraw_popupLink"></a>
+				</div>
+			</div>
+			<!-- 응모완료팝업 -->
+			<div class="popup" id="luckyDrawPopup02">
+				<span></span>
+				<div>
+					<img src="./images/luckyDraw_Popup02.png" alt="" />
+					<a href="#none" onclick="onoff('#luckyDrawPopup02')"></a>
+				</div>
+			</div>
+			<!-- 이미 응모됐을 경우 팝업 -->
+			<div class="popup" id="luckyDrawPopup03">
+				<span></span>
+				<div>
+					<img src="./images/luckyDraw_Popup03.png" alt="" />
+					<a href="#none" onclick="onoff('#luckyDrawPopup03')"></a>
+				</div>
+			</div>
+		</div>	
+		<div class="section02 js-target02">
+			<div class="pc" style="height:969px;background:url(./images/section02_pc_naver.jpg) no-repeat center top"></div>
+			<div class="mo"><img src="./images/section02_mo_naver.jpg" class="section_img" alt=""></div>
+			<a href="https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2484" class="section02_link">주사위 굴리러 GO GO!</a>
+		</div>	
+		<div class="section03 js-target03">
+			<div class="pc" style="height:1550px;background:url(./images/section03_pc.jpg) no-repeat center top"></div>
+			<div class="mo"><img src="./images/section03_mo.jpg" class="section_img" alt=""></div>
+			<a href="https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2390" class="section03_link">오늘의 브랜드 보러가기</a> 
+			<img src="" class="section03_img">
+		</div>
+		<div class="section04 js-target04">
+			<div class="pc" style="height:1147px;background:url(./images/section04.png) no-repeat center top"></div>
+			<div class="mo"><img src="./images/section04.png" class="section_img" alt=""></div>
+			<a href="https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2481" class="section04_link">회원혜택 이벤트 보러가기</a> 
+		</div>
+		<div class="section05 js-target05">
+			<div class="pc" style="height:1007px;background:url(./images/section05.jpg) no-repeat center top"></div>
+			<div class="mo"><img src="./images/section05.jpg" class="section_img" alt=""></div>
+			<a href="https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2425" class="section05_link">앱 다운로드 이벤트 보러가기</a>
+		</div>
+		<div class="dim"></div>
+	</div>
+
+	<script type="text/javascript">
+	
+		/* 타이머 */
+		var Time_10_28_00_00 = new Date(2022, 9, 28, 00, 00, 0).getTime(), // 10월 28일 00시 00분
+			Time_10_28_10_00 = new Date(2022, 9, 28, 10, 00, 0).getTime(), // 10월 28일 10시 00분
+			Time_10_28_13_00 = new Date(2022, 9, 28, 13, 00, 0).getTime(), // 10월 28일 13시 00분
+			Time_10_28_15_00 = new Date(2022, 9, 28, 15, 00, 0).getTime(), // 10월 28일 15시 00분
+			Time_10_29_00_00 = new Date(2022, 9, 29, 00, 00, 0).getTime(), // 10월 29일 00시 00분
+			Time_10_30_00_00 = new Date(2022, 9, 30, 00, 00, 0).getTime(), // 10월 30일 00시 00분
+			Time_10_31_00_00 = new Date(2022, 9, 31, 00, 00, 0).getTime(), // 10월 31일 00시 00분
+			Time_11_01_00_00 = new Date(2022, 10, 1, 00, 00, 0).getTime(), // 11월 01일 00시 00분
+			Time_11_02_00_00 = new Date(2022, 10, 2, 00, 00, 0).getTime(), // 11월 02일 00시 00분
+			Time_11_03_00_00 = new Date(2022, 10, 3, 00, 00, 0).getTime(), // 11월 03일 00시 00분
+			Time_11_04_00_00 = new Date(2022, 10, 4, 00, 00, 0).getTime(), // 11월 04일 00시 00분
+			Time_11_04_10_00 = new Date(2022, 10, 4, 10, 00, 0).getTime(), // 11월 04일 10시 00분
+			Time_11_04_12_00 = new Date(2022, 10, 4, 12, 00, 0).getTime(), // 11월 04일 12시 00분
+			Time_11_04_15_00 = new Date(2022, 10, 4, 15, 00, 0).getTime(), // 11월 04일 15시 00분
+			Time_11_05_00_00 = new Date(2022, 10, 5, 00, 00, 0).getTime(), // 11월 05일 00시 00분
+			Time_11_06_00_00 = new Date(2022, 10, 6, 00, 00, 0).getTime(), // 11월 06일 00시 00분
+			Time_11_07_00_00 = new Date(2022, 10, 7, 00, 00, 0).getTime(), // 11월 07일 00시 00분
+			Time_11_08_00_00 = new Date(2022, 10, 8, 00, 00, 0).getTime(), // 11월 08일 00시 00분
+			Time_11_09_00_00 = new Date(2022, 10, 9, 00, 00, 0).getTime(), // 11월 09일 00시 00분
+			Time_11_10_00_00 = new Date(2022, 10, 10, 00, 00, 0).getTime(), // 11월 10일 00시 00분
+			Time_11_11_00_00 = new Date(2022, 10, 11, 00, 00, 0).getTime(), // 11월 11일 00시 00분
+			Time_11_11_10_00 = new Date(2022, 10, 11, 10, 00, 0).getTime(), // 11월 11일 10시 00분
+			Time_11_11_12_00 = new Date(2022, 10, 11, 12, 00, 0).getTime(), // 11월 11일 12시 00분
+			Time_11_11_15_00 = new Date(2022, 10, 11, 15, 00, 0).getTime(), // 11월 11일 15시 00분
+			Time_11_12_00_00 = new Date(2022, 10, 12, 00, 00, 0).getTime(), // 11월 12일 00시 00분
+			Time_11_13_00_00 = new Date(2022, 10, 13, 00, 00, 0).getTime(), // 11월 13일 00시 00분
+			Time_11_14_00_00 = new Date(2022, 10, 14, 00, 00, 0).getTime(), // 11월 14일 00시 00분
+			Time_11_15_00_00 = new Date(2022, 10, 15, 00, 00, 0).getTime(), // 11월 15일 00시 00분
+			Time_11_16_00_00 = new Date(2022, 10, 16, 00, 00, 0).getTime(), // 11월 16일 00시 00분
+			Time_11_17_00_00 = new Date(2022, 10, 17, 00, 00, 0).getTime(), // 11월 17일 00시 00분
+			nowTime = new Date().getTime(); // 현재 한국시간
+
+		$(document).ready(function(){
+
+			// 원데이브랜드
+			if (nowTime >= Time_11_17_00_00){
+			$('.section03_img').attr('src', '')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=')
+			} else if (nowTime >= Time_11_16_00_00){
+			$('.section03_img').attr('src', '')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=')
+			} else if (nowTime >= Time_11_15_00_00){
+			$('.section03_img').attr('src', '')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2418')
+			} else if (nowTime >= Time_11_14_00_00){
+			$('.section03_img').attr('src', './images/section03_1114.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2417')
+			} else if (nowTime >= Time_11_13_00_00){
+			$('.section03_img').attr('src', './images/section03_1113.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2416')
+			} else if (nowTime >= Time_11_12_00_00){
+			$('.section03_img').attr('src', './images/section03_1112.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2415')
+			} else if (nowTime >= Time_11_11_00_00){
+			$('.section03_img').attr('src', './images/section03_1111.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2413')
+			} else if (nowTime >= Time_11_10_00_00){
+			$('.section03_img').attr('src', './images/section03_1110.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2412')
+			} else if (nowTime >= Time_11_09_00_00){
+			$('.section03_img').attr('src', './images/section03_1109.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2412')
+			} else if (nowTime >= Time_11_08_00_00){
+			$('.section03_img').attr('src', './images/section03_1108.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2412')
+			} else if (nowTime >= Time_11_07_00_00){
+			$('.section03_img').attr('src', './images/section03_1107.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2414')
+			} else if (nowTime >= Time_11_06_00_00){
+			$('.section03_img').attr('src', './images/section03_1106.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2410')
+			} else if (nowTime >= Time_11_05_00_00){
+			$('.section03_img').attr('src', './images/section03_1105.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2409')
+			} else if (nowTime >= Time_11_04_00_00){
+			$('.section03_img').attr('src', './images/section03_1104.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2408')
+			} else if (nowTime >= Time_11_03_00_00){
+			$('.section03_img').attr('src', './images/section03_1103.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2349')
+			} else if (nowTime >= Time_11_02_00_00){
+			$('.section03_img').attr('src', './images/section03_1102.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2349')
+			} else if (nowTime >= Time_11_01_00_00){
+			$('.section03_img').attr('src', './images/section03_1101.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2349')
+			} else if (nowTime >= Time_10_31_00_00){
+			$('.section03_img').attr('src', './images/section03_1031.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2362')
+			} else if (nowTime >= Time_10_30_00_00){
+			$('.section03_img').attr('src', './images/section03_1030.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2419')
+			} else if (nowTime >= Time_10_29_00_00){
+			$('.section03_img').attr('src', './images/section03_1029.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2506')
+			} else if (nowTime >= Time_10_28_00_00){
+			$('.section03_img').attr('src', './images/section03_1028.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2390')
+			} else {
+			$('.section03_img').attr('src', './images/section03_1028.jpg')
+			$('.section03_link').attr('href', 'https://www.amorepacificmall.com/kr/ko/display/event_detail?planDisplaySn=2390')
+			}
+
+			// 럭키드로우
+			if (nowTime >= Time_11_11_12_00){
+				$('.luckyDraw_count').addClass('comple')
+				$('.ctt1_box').addClass('comple')
+				$('.ctt2_box').addClass('comple')
+				$('.ctt3_box').addClass('active off')
+				$(window).load(function(){
+					$('.nav02 a').trigger('click')
+				})
+			} else if (nowTime >= Time_11_11_10_00){
+				$('.ctt1_box').addClass('comple')
+				$('.ctt2_box').addClass('comple')
+				$('.ctt3_box').addClass('active')
+			} else if (nowTime >= Time_11_04_15_00){
+				$('.luckyDraw_count').addClass('comple')
+				$('.ctt1_box').addClass('comple')
+				$('.ctt2_box').addClass('active off')
+				$('.ctt3_box').addClass('comingsoon')
+			} else if (nowTime >= Time_11_04_12_00){
+				$('.luckyDraw_count').addClass('comple')
+				$('.ctt1_box').addClass('comple')
+				$('.ctt2_box').addClass('active off')
+				$('.ctt3_box').addClass('comingsoon')
+			} else if (nowTime >= Time_11_04_10_00){
+				$('.ctt1_box').addClass('comple')
+				$('.ctt2_box').addClass('active')
+				$('.ctt3_box').addClass('comingsoon')
+			} else if (nowTime >= Time_10_28_15_00){
+				$('.luckyDraw_count').addClass('comple')
+				$('.ctt1_box').addClass('active off')
+				$('.ctt2_box').addClass('comingsoon')
+				$('.ctt3_box').addClass('comingsoon')
+			} else if (nowTime >= Time_10_28_13_00){
+				$('.luckyDraw_count').addClass('comple')
+				$('.ctt1_box').addClass('active off')
+				$('.ctt2_box').addClass('comingsoon')
+				$('.ctt3_box').addClass('comingsoon')
+			} else if (nowTime >= Time_10_28_10_00){
+				$('.ctt1_box').addClass('active')
+				$('.ctt2_box').addClass('comingsoon')
+				$('.ctt3_box').addClass('comingsoon')
+			} else {
+				$('.ctt1_box').addClass('active')
+				$('.ctt2_box').addClass('comingsoon')
+				$('.ctt3_box').addClass('comingsoon')				
+			}
+
+		})
+
+		// gnb
+		var	tab = $('.nav'),
+			ratio = window.devicePixelRatio,
+			tabHeight = tab.outerHeight(true),
+			offsetTop1 = $('.js-target01'),
+			offsetTop2 = $('.js-target02'),
+			offsetTop3 = $('.js-target03'),
+			offsetTop4 = $('.js-target04'),
+			offsetTop5 = $('.js-target05');
+
+		$(window).scroll(function(){
+			tab.find('li').removeClass('on')
+			if ($(this).scrollTop() > offsetTop5.offset().top - tabHeight){
+				tab.find('.nav05').addClass('on')
+			}  else if ($(this).scrollTop() > offsetTop4.offset().top - tabHeight){
+				tab.find('.nav04').addClass('on')
+			}  else if ($(this).scrollTop() > offsetTop3.offset().top - tabHeight){
+				tab.find('.nav03').addClass('on')
+			}  else if ($(this).scrollTop() > offsetTop2.offset().top - tabHeight){
+				tab.find('.nav02').addClass('on')
+			} else {
+				tab.find('.nav01').addClass('on')
+			}
+			if ($(this).scrollTop() >= offsetTop1.offset().top - tabHeight && $(this).scrollTop() <= $('#event').height() - tabHeight){
+				$('.js-quickMenu').addClass('fixed')
+				$('.header_common .header_top').hide()
+			} else {
+				$('.js-quickMenu').removeClass('fixed')
+				$('.header_common .header_top').show()
+			}
+			return false;
+		});
+
+		$('.js-quickMenu a').click(function(){
+			var target = $("." + $(this).attr("data-target")).offset().top
+			TweenMax.to('body,html', 0.5, {
+				scrollTop:target - tabHeight + 1,
+				ease: Power3.easeInOut
+			});
+			return false;
+		});
+
+		$('.js-quickMenu a').click(function(){
+			var target = $("." + $(this).attr("data-target")).offset().top
+			TweenMax.to('body,html', 0.5, {
+				scrollTop:target - tabHeight + 1,
+				ease: Power3.easeInOut
+			});
+			return false;
+		});
+	
+		// popup
+		function onoff (e){
+			if ($(e).css('display') == 'none'){
+				$(e).show()
+				$('.dim').addClass('on')
+			} else {
+				$(e).hide()	
+				$('.dim').removeClass('on')
+			}
+		}
+
+		// 럭키드로우
+		$(".menu-tabs a").click(function(e) {
+			$(".menu-tabs li").removeClass("active");
+			$(this).parent("li").addClass("active");
+			$(".ctt-tabs li").removeClass("active")
+			$("." + $(this).attr("data-target")).addClass("active")
+			e.preventDefault();
+		});
+	</script>
+<!-- 끝 -->
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+</html>

@@ -1,0 +1,6228 @@
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no">
+<!--2016.03.23 google webmaster 트래킹 코드 -->
+<meta name="google-site-verification" content="hpYYbkgRb5gmGIkjC87ieaJQ70JUoydDKN1YFlOnZ6k" />
+<link rel="apple-touch-icon-precomposed" href="https://msimage.nike.co.kr/mobile/icon/ico_home.png">
+<link rel="shortcut icon" href="https://msimage.nike.co.kr/mobile/icon/favicon.ico">
+<!-- //자동 전화걸기 태그 방지 -->
+<title>나이키닷컴</title>
+<link rel="stylesheet" type="text/css" href="https://msecure.nike.co.kr/NKS1/mobile/css/import.css">
+
+<link rel="stylesheet" type="text/css" href="https://msecure.nike.co.kr/NKS1/mobile/css/new_gnb.css">
+
+
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/mobile/js/jquery-1.7.2.min.js" ></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/mobile/js/common.js" ></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/mobile/js/navi.js" ></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/mobile/js/jquery.mobile-1.1.0.min.js"></script>
+
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/mobile/js/display.js"></script>
+
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/util.js" ></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/common.js"></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/validator.js" ></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/iframeSubmit.js" ></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/lnb_layer_ipa.js" ></script>
+
+
+<link rel="stylesheet" type="text/css" href="https://msecure.nike.co.kr/NKS1/mobile/css/global_renewal.css">
+<link rel="stylesheet" type="text/css" href="https://msecure.nike.co.kr/NKS1/mobile/css/global_renewal_phase2.css">
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/mobile/js/global_renewal.js"></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/mobile/js/new/global_renewal_phase2.js"></script>
+<!-- script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/mobile/js/order/mobileOrder.js"></script-->
+
+<!-- 2017 회원가입변경 - 추가 css -->
+<link rel="stylesheet" type="text/css" href="css/global_join_renewal.css">
+
+<script type="text/javascript">
+	var secureRoot = 'https://msecure.nike.co.kr/';
+	var lecsRoot = 'http://mlecs.nike.co.kr/';
+	var wwwRoot = 'http://m.nike.co.kr/';
+	var jdata = null;
+</script>
+
+
+<script type="text/javascript">
+//로그인처리
+function goLogin(url) {
+	if(url == null || typeof url == 'undefined') { 
+		var url = ((document.location).toString());
+	}				
+	
+	document.location = "https://msecure.nike.co.kr/mobile/member/showLogin.lecs?returnUrl="+encodeURIComponent(url);		
+}
+</script>
+
+
+
+
+
+
+<!-- 공통 적용 스크립트, 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 -->
+</head>
+
+<body class="main">
+<!-- <div data-role="page"> --><!-- ceres-6347 : [나이키모바일] GNB 변경건 : 신규퍼블리싱에서 삭제함. Raymon -->
+<!-- header s -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 20160503 자동 검색 쿠키 -->
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/jquery.json-2.2.js"></script>
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/cookie.js"></script>
+<!-- 20160503 자동 검색 쿠키 -->
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+	
+	//최근검색어 ON/OFF 상태
+	if(!$.isEmptyObject($.cookie('goodsSchCookieStatus'))){
+		$("#freq_btn_fn_off_01").hide();
+		if($.cookie('goodsSchCookieStatus') == "ON"){
+			$(".freq_lst ul").show();
+			$("#freq_btn_on").show();
+			$("#freq_btn_off").hide();
+			if($.isEmptyObject($.cookie('goodsSchCookie'))){
+				$("#freq_btn_fn_off_01").show();
+			}
+		}
+		if($.cookie('goodsSchCookieStatus') == "OFF"){
+			$("#freq_btn_on").hide();
+			$("#freq_btn_off").show();
+		}
+	}
+	if($.isEmptyObject($.cookie('goodsSchCookieStatus'))){
+		$.cookie('goodsSchCookieStatus',"ON",{ expires: 10, path: '/', domain: '.nike.co.kr' });
+	};
+	
+	if(!$.isEmptyObject($.cookie('goodsSchCookie'))){
+		fn_cookieSchArray(false);
+	}
+});
+
+//20160503 자동 검색 script 추가
+$(function(){
+	$('.global_search_box input').keyup(function(event){
+		 fn_autoSch();
+	});
+
+	$('.search_hidden_btn .global_layer_delete').on('click', function(e){
+		$(this).parents('.global_search_area').find('input').val('').focus();
+		$('.global_search_box').find('.global_search_list').hide();
+		$('.global_search_freq').removeClass('off');
+		$(this).hide();
+		e.preventDefault();
+	});
+	$('.search_hidden_btn .global_layer_close').on('click', function(e){
+		$('.global_search_box').find('.global_search_list').hide();
+		$('.global_search_freq').removeClass('remove off');
+		e.preventDefault();
+	});
+	
+	// 닫기
+	$('.global_search_freq').find('.g_layer_delete').on('click', function(e){
+		$(this).parents('.global_search_freq').addClass('remove');
+
+		e.preventDefault();
+	});
+	
+	$('.global_search_freq').bind('touchstart', function(e) {
+		$("#research").blur();
+	});
+	
+	// 20160620 인기 검색어 탭 스크립트 추가
+	$('.global_search_freq').find('.freq_tab li a.bt_tab').click(function(){
+		var curr = $(this).attr('data-link');
+
+		$('.freq_tab li').removeClass('active');
+		$(this).parent('li').addClass('active');
+
+		$('.global_search_freq').find('.freq_lst').hide();
+		$(curr).show();
+
+		return false;
+	});
+	
+	$(".global_header_menu_area .global_search").on("click",function(e){
+		//인기검색어조회
+		fn_trendsSch();
+		if($.cookie('goodsSchCookieStatus') == "ON"){
+			if($.isEmptyObject($.cookie('goodsSchCookie'))){
+				$('.global_search_freq').removeClass('off');
+				$("#bt_tab_01").removeClass('active');
+				$("#bt_tab_02").addClass('active');
+
+				$('.global_search_freq').find('.freq_lst').hide();
+				$("#freq_02").show();
+			}
+		}
+		if($.cookie('goodsSchCookieStatus') == "OFF"){
+			$('.global_search_freq').removeClass('off');
+			$("#bt_tab_01").removeClass('active');
+			$("#bt_tab_02").addClass('active');
+
+			$('.global_search_freq').find('.freq_lst').hide();
+			$("#freq_02").show();
+		}
+		
+	});
+});
+
+//자동완성 레이어
+function fn_autoSch(){
+	var thisLeng = $("#research").val().length;
+	var val = $("#research").val();
+	var liList = "";
+	
+	if (thisLeng > 0) {
+		//자동완성 검색어 조회
+		$.ajax({
+			type: 'post',
+			url: '/aws/mobile/display/getAutocompleteAjax.lecs',
+			data: "research=" + val,
+			dataType: 'json',
+			cache: false,
+			success: function(result) {
+				var cnt = 0;
+				$('.global_search_box').find('.global_search_list').show();
+				$('.global_search_box').find('.global_search_freq').addClass('off');
+				
+				liList += "<ul>";
+				if(result.result.length > 0){
+					$.each(result.result, function(index, value){
+						if(value.totalcount > 0){
+							$.each(value.items, function(index, value){
+								// 10개만 
+								if(10 > cnt ){
+									var result = value.hkeyword.replace("<font style='color:#111'>","<em>").replace("</font>","</em>");
+									liList += "<li><a href=\"javascript:fn_schArrayListClick('"+value.keyword+"')\">"+result+"</a></li>";
+									cnt++;
+								}
+							});
+						}
+					});
+				}
+				liList += "</ul>";
+				$(".global_search_list").html(liList);
+				
+				if("" == $("#research").val()){
+					$('.global_search_box').find('.global_layer_delete').hide();
+					$('.global_search_box').find('.global_search_list').hide();
+					$('.global_search_box').find('.global_search_freq').removeClass('off');
+				}
+			}
+		});
+	}else {
+		$('.global_search_box').find('.global_layer_delete').hide();
+		$('.global_search_box').find('.global_search_list').hide();
+		$('.global_search_box').find('.global_search_freq').removeClass('off');
+	}
+}
+
+//최근검색어 cookie배열
+function fn_cookieSchArray(status){
+	var research = $("#research").val();
+	var liList = "";
+	
+	//최초 클릭이 아닌 경우 
+	if(status){
+		//검색 쿠기 없을시 쿠기 생성
+		if($.isEmptyObject($.cookie('goodsSchCookie'))){
+			$.cookie('goodsSchCookie',research,{ expires: 10, path: '/', domain: '.nike.co.kr' });
+		}else{
+			
+			var removeSch = "";
+			var schlength = $.fn.cookieList("goodsSchCookie").length();
+			// 10개 넘어갔을때 삭제
+			if(schlength > 9){
+				var temp = true;
+				$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+					if(research == value){
+						removeSch = value;
+						temp = false;
+					}
+				});
+				if(temp){
+					$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+						if(index == 0){
+							removeSch = value;
+						}
+					});
+				}
+				$.fn.cookieList("goodsSchCookie").remove(removeSch);
+			}
+			
+			if(9 >= schlength && schlength > 1){
+				$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+					if(research == value){
+						$.fn.cookieList("goodsSchCookie").remove(value);
+					}
+				});
+			}
+			$.fn.cookieList("goodsSchCookie").add(research);
+		}
+	}
+	
+	var list = $.fn.cookieList("goodsSchCookie").items();
+	
+	//생성된 배열 역순
+	list.reverse();
+	
+	//태그생성
+	$.each(list, function(index, value){
+		liList +="<li>";
+		liList +="<a href=\"javascript:fn_schArrayListClick('"+value+"')\" class='em'>"+value+"</a>";
+		liList +="<a href=\"javascript:fn_cookieSchRemove('"+value+"')\" class='icon icon--close'><span class='hidden'>삭제</span></a>";
+		liList +="</li>";
+	});
+	
+	$("#freq_01 ul").html(liList);
+}
+
+//저장된 최근검색어,자동완성 검색
+function fn_schArrayListClick(schName){
+	if ($.trim(schName).length <= 0) {
+		alert("검색어를 입력해 주세요") ;
+		return;
+	}
+	$("#research").val(schName);
+	if($.cookie('goodsSchCookieStatus') == "ON"){
+		fn_cookieSchArray(true);
+	}
+
+	// 2016.07.14. [smartchecker - 1866] 리다이렉트 검색어
+	// search.submit();
+	if (chkRedirectSearchWord(schName)) {
+		search.submit();
+	} else {
+		return;
+	}
+}
+
+//최근검색어 쿠키 전체 삭제
+function fn_cookieSchArrayRemove(){
+	//쿠키가 존재할때만 클리어
+	if(!$.isEmptyObject($.cookie('goodsSchCookie'))){
+		
+		$.fn.cookieList("goodsSchCookie").clear();
+	}
+	
+	//ul 하위요소 삭제
+	$("#freq_01 ul").empty();
+	
+	//최근 검색어 없음
+	if($.cookie('goodsSchCookieStatus') == "ON"){
+		$("#freq_btn_fn_off_01").show();
+	}else{
+		$("#freq_btn_fn_off_01").hide();
+	}
+}
+
+//최근검색어 쿠키 부분 삭제
+function fn_cookieSchRemove(schName){
+	//쿠키가 존재할때
+	if(!$.isEmptyObject($.cookie('goodsSchCookie'))){
+		var removeSch = schName;
+		//배열안에 해당 검색어 찾기
+		$.each($.fn.cookieList("goodsSchCookie").items(), function(index, value){
+			if(value == schName){
+				removeSch = value;
+			}
+		});
+		
+		if($.fn.cookieList("goodsSchCookie").length() > 1){
+			$.fn.cookieList("goodsSchCookie").remove(removeSch);
+			fn_cookieSchArray(false);
+		}else{
+			$.fn.cookieList("goodsSchCookie").clear();
+			$("#freq_01 ul").empty();
+			$("#freq_btn_fn_off_01").show();
+		}
+	}
+	
+}
+
+//최근검색어 저장 끄기,켜기
+function fn_cookieSchOnOff(status){
+	//켜기 freq_btn_status
+	if(status){
+		$.cookie('goodsSchCookieStatus',"ON",{ expires: 10, path: '/', domain: '.nike.co.kr' });
+		$(".freq_lst ul").show();
+		$("#freq_btn_on").show();
+		$("#freq_btn_off").hide();
+		$("#freq_btn_fn_off_01").show();
+	//끄기
+	}else{
+		$.cookie('goodsSchCookieStatus',"OFF",{ expires: 10, path: '/', domain: '.nike.co.kr' });
+		fn_cookieSchArrayRemove();
+		$("#freq_btn_on").hide();
+		$("#freq_btn_off").show();
+	}
+}
+
+function fn_submitSearch(){
+	var keyword = $("input:text[name='research']").val();
+	if ($.trim(keyword) == "") {
+		alert("검색어를 입력해 주세요") ;
+		return false;
+	}else{
+		if($.cookie('goodsSchCookieStatus') == "ON"){
+			fn_cookieSchArray(true);
+		}
+		
+		// 2016.07.14. [smartchecker - 1866] 리다이렉트 검색어
+		if (!chkRedirectSearchWord(keyword)) {
+			return false;
+		}
+		
+	}
+}
+
+//인기검색어
+function fn_trendsSch(){
+	
+	//자동완성 검색어 조회
+	$.ajax({
+		type: 'post',
+		url: "/aws/mobile/display/getBestKeywordAjax.lecs",
+		dataType: 'json',
+		cache: false,
+		success: function(result) {
+			var temp = "";
+			if(result.length > 0){
+				$.each(result, function(index, value){
+					temp += "<li><a href=\"javascript:fn_schArrayListClick('"+value.kwd_nm+"')\" class='em'><em>"+(index+1)+". "+value.kwd_nm+"</em></a></li>";
+				});
+			}else{
+				temp = "<li><em>인기검색어가 없습니다.</em></li>";
+			}
+			$("#freq_02").find("ul").html(temp);
+		}
+	});
+}
+</script>
+
+<!-- global_header -->
+<div class="global_header" id="globalHeader">
+	<ul class="global_header_menu">
+		<li class="global_home_area"><a href="http://m.nike.co.kr/mobile/display/displayShop.lecs" class="global_home"><span class="icon icon--swoosh"></span></a></li>
+		<li class="global_header_menu_area">
+			<a href="#" class="global_search" data-target=".global_search_box"><span class="icon icon--search" onclick="javascript:search.research.value='';"></span></a>
+			<a href="#" class="global_nav_menu"><span class="icon icon--menu"></span></a>
+		</li>
+	</ul>
+</div>
+<!-- //global_header -->
+            
+<!-- global_search_box -->
+<form id="search" name="search" class="search-form" action="http://m.nike.co.kr/mobile/search/showSearch.lecs" method="get" onsubmit="javasciprt:return fn_submitSearch();">
+
+	<input type="hidden" id="memberIdForGen" value="shine1092" />
+		
+	<div class="global_search_box">
+		<div class="global_search_inner">
+			<div class="global_search_area">
+				<label for="global_search_label01" class="hidden">검색</label>
+				<input type="text" id="research" name="research" placeholder="검색어를 입력하세요" autocomplete="off">
+				<div class="search_hidden_btn">
+					<a href="#" class="global_layer_delete">검색어 지우기</a>
+					<a href="#" class="global_layer_close icon icon--close"><span class="hidden">닫기</span></a>
+				</div>
+			</div>
+			<!-- 20160513 자동 검색 추가 -->
+			<div class="global_search_list"></div>
+			<div class="global_search_freq">
+				<div class="freq_tab">
+					<ul>
+						<li class="active" id="bt_tab_01"><a href="#" data-link="#freq_01" class="bt_tab">최근 검색어</a></li>
+						<li id="bt_tab_02"><a href="#" data-link="#freq_02" class="bt_tab">인기 검색어</a></li>
+					</ul>
+				</div>
+				<div id="freq_01" class="freq_lst active">
+					<ul></ul>
+					<div class="freq_btn fn_off" id="freq_btn_fn_off_01">
+						<p class="t">최근 검색어가 없습니다.</p>
+					</div>
+					<div class="freq_btn" id="freq_btn_on">
+						<a href="javascript:fn_cookieSchArrayRemove();">전체삭제</a>
+						<a href="javascript:fn_cookieSchOnOff(false)">검색어저장 끄기</a>
+					</div>
+
+					<div class="freq_btn fn_off" id="freq_btn_off" style="display: none;">
+						<p class="t">검색어 저장 기능이 꺼져있습니다.</p>
+						<a href="javascript:fn_cookieSchOnOff(true)">검색어저장 켜기</a>
+					</div>
+				</div>
+				<!-- 20160620 인기검색어 list 추가 -->
+				<div id="freq_02" class="freq_lst">
+					<ul></ul>
+				</div>
+				<div class="btn_bottom"><a href="#" class="g_layer_delete">닫기</a></div>
+			</div>
+			<!-- //20160513 자동 검색 추가 -->
+		</div>
+	</div>
+</form>
+<!-- //global_search_box -->
+
+<!-- global_menu_type1 -->
+<div class="global_menu_type1">
+	
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function fn_setTracking(tracking,linkUrl){
+	var goUrl ='';
+	setTclick(tracking);
+	if(linkUrl !=''){
+		goUrl = linkUrl+'?tracking='+tracking;
+		window.open(goUrl);
+	}
+}
+</script>
+<!-- 햄버거메뉴 클릭시 출력 start -->
+<div class="global_menu_inner">
+<!-- 2015-12-04 sign_in 수정 시작 -->
+	
+	<div id="headerForGen"  class=" icon global_category_tit global_sign_in" >
+		
+				<a href="#" class="gb_nav_btn_style global_login_btn" style="display:block" data-target=".gb_sign_depth1">
+					<img src="https://msecure.nike.co.kr/NKS1/image/mobile/global/btn_login.png" alt="로그인" style="vertical-align: middle;display: inline-block;"/>
+					<span style="vertical-align: middle;display: inline-block;margin-left:5px;font-size:12px;color:#111">
+						<span style="font-weight:bold;">조유성</span> 님
+					</span>
+				</a> <!-- 2015.11.26 - 로그인 되었을 때 display:block 되어야 합니다. -->
+		
+		<a class="global_cart icon icon--cart" href="http://mlecs.nike.co.kr/mobile/cart/list.lecs" id="forGenCartCount">
+			
+
+
+
+
+
+
+
+
+
+
+
+		</a>
+	</div>
+<!--// 2015-12-04 sign_in 수정 끝 -->
+	
+		
+			
+			
+		
+	
+		
+			
+			 
+			
+			
+			
+			
+				
+			
+				
+			
+			
+				
+					
+					
+						<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A37_depth1">Men</div>
+					
+				
+			
+						
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			 
+			
+			
+			
+			
+				
+			
+				
+			
+			
+				
+					
+					
+						<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A34_depth1">Women</div>
+					
+				
+			
+						
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			 
+			
+			
+			
+			
+				
+			
+				
+			
+			
+				
+					
+					
+						<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A35_depth1">Boys</div>
+					
+				
+			
+						
+			
+		
+	
+		
+			
+			 
+			
+			
+			
+			
+				
+			
+				
+			
+			
+				
+					
+					
+						<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A36_depth1">Girls</div>
+					
+				
+			
+						
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			 
+			
+			
+			
+			
+				
+			
+				
+			
+			
+				
+					 <!-- Nike+ -->
+						<div class="gb_nav_btn_style icon icon--arrow-right" onclick="javascript:fn_setTracking('mo_brandbar_05','');" data-target=".gb_NK2A42_depth1">Nike+</div>
+					
+					
+				
+			
+						
+			
+		
+	
+		
+			
+			 
+			
+			
+			
+			
+				
+					<!-- 타이틀일 경우 -->
+					 
+						<div class="global_category_tit">브랜드</div>
+						
+					
+					
+					
+				
+			
+				
+			
+			
+						
+			
+		
+	
+		
+			
+			 
+			
+			
+			
+			
+				
+					<!-- 타이틀일 경우 -->
+					
+					
+					
+										
+							
+								
+								
+									
+									
+									
+										
+											
+											
+												<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A21A01&tracking=mo_brandbar_01" target="_self" class="gb_nav_btn_style">Nike Sportswear</a>
+											
+										
+									
+									
+									
+									
+								
+							
+										
+							
+								
+								
+									
+									
+									
+										
+											
+											
+												<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A48&tracking=Mo_brandbar_02" target="_self" class="gb_nav_btn_style">NikeLab</a>
+											
+										
+									
+									
+									
+									
+								
+							
+										
+							
+								
+								
+									
+									
+									
+										
+											
+											
+												<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A05A02&tracking=Mo_brandbar_03" target="_self" class="gb_nav_btn_style">Jordan</a>
+											
+										
+									
+									
+									
+									
+								
+							
+										
+							
+								
+								
+									
+									
+									
+										
+											 <!-- Converse -->
+												<a href="#" onclick="javascript:fn_setTracking('mo_brandbar_04','https://www.converse.co.kr/landing/nike');" class="gb_nav_btn_style">Converse</a>
+											
+											
+										
+									
+									
+									
+									
+								
+							
+						 
+						
+					
+				
+			
+				
+			
+			
+						
+			
+		
+	
+		
+			
+			 
+			
+			
+			
+			
+				
+			
+				
+					<!-- 타이틀일 경우 -->
+					 
+						<div class="global_category_tit">서포트</div>
+						
+					
+					
+					
+				
+			
+			
+						
+			
+		
+	
+		
+			
+			 
+			
+			
+			
+			
+				
+			
+				
+					<!-- 타이틀일 경우 -->
+					
+					
+					
+										
+							
+								
+								
+									
+									
+									
+										
+											
+											
+												<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A14A13" target="_self" class="gb_nav_btn_style">전 제품 교환/반품 무료 배송 서비스</a>
+											
+										
+									
+									
+									
+									
+								
+							
+										
+							
+								
+									<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A46_NK2A46A01">고객센터</div>
+								
+								
+							
+						 
+						
+					
+				
+			
+			
+						
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+		
+	
+</div>
+<!-- //햄버거메뉴 클릭시 출력 end -->
+
+</div>
+<!-- global_menu_type1 -->
+            
+<!-- global_menu_slide -->
+<div class="global_menu_slide">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 2015-12-04 sign in 1depth -->
+<div class="global_slide gb_sign_depth1">
+    <div class="scroll">
+
+		<!-- 2015-12-24 sign in 1depth (로그인 후)  수정 시작 -->
+                <!--  <div class="global_category_tit center slide">
+                    <a href="#" class="global_sign_btn">ACCOUNT</a>
+                    <a href="#" class="global_back icon icon--arrow-left"></a>
+                </div> -->
+        
+        <div class="gb_nav_btn_style"><a href="http://mlecs.nike.co.kr/mobile/mypage/mypage.lecs">마이페이지</a></div>
+		<div class="gb_nav_btn_style"><a href="http://mlecs.nike.co.kr/mobile/mypage/order/list.lecs">주문배송조회</a></div>
+		<div class="gb_nav_btn_style"><a href="http://mlecs.nike.co.kr/mobile/mypage/reservationList.lecs">매장재고 예약 서비스</a></div>
+		<div class="gb_nav_btn_style"><a href="https://msecure.nike.co.kr/mobile/member/information.lecs">회원정보관리</a></div>
+		<div class="gb_nav_btn_style"><a href="http://mlecs.nike.co.kr/mobile/helpdesk/mainCustomer.lecs">고객센터</a></div>
+		<div class="gb_nav_btn_style"><a href="http://mlecs.nike.co.kr/mobile/member/showLogout.lecs">로그아웃</a></div>
+        <!-- 2015-12-24 sign in 1depth (로그인 후)  수정 끝 -->
+
+    </div>
+</div>
+
+
+	
+		
+			<div class="global_slide gb_NK2A02A07A10_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">보호대</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A37_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">Men</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A37_NK2A37A02">What‘s New</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A37_NK2A37A01">신발</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A37_NK2A37A03">의류</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A37_NK2A37A04">스포츠</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A37_NK2A37A05">브랜드</div>
+							
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A21A27&intpromo=Clearance_men_all" target="_self" class="gb_nav_btn_style last_btn">가격인하</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A10" class="gb_nav_btn_style last_btn">남성 홈페이지</a>
+								
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A51A01_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">신발</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A51A01A01" class="gb_nav_btn_style last_btn">러닝</a>
+								
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A01_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">신발 (120-160mm)</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A02_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">남아</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A02A01" class="gb_nav_btn_style last_btn">베이스 레이어 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A02A02" class="gb_nav_btn_style last_btn">탑 & 티셔츠 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A02A03" class="gb_nav_btn_style last_btn">재킷 & 베스트 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A02A04" class="gb_nav_btn_style last_btn">후디 & 풀오버 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A02A05" class="gb_nav_btn_style last_btn">팬츠 & 타이츠 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A02A06" class="gb_nav_btn_style last_btn">숏 팬츠 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A02A07" class="gb_nav_btn_style last_btn">세트 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A02A08" class="gb_nav_btn_style last_btn">양말</a>
+								
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A03_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">여아</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A03A01" class="gb_nav_btn_style last_btn">베이스 레이어 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A03A02" class="gb_nav_btn_style last_btn">탑 & 티셔츠 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A03A03" class="gb_nav_btn_style last_btn">재킷 & 베스트 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A03A04" class="gb_nav_btn_style last_btn">후디 & 풀오버 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A03A05" class="gb_nav_btn_style last_btn">팬츠 & 타이츠 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A03A06" class="gb_nav_btn_style last_btn">숏 팬츠 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A03A07" class="gb_nav_btn_style last_btn">세트 (65-80)</a>
+								
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A56A03A08" class="gb_nav_btn_style last_btn">양말 </a>
+								
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A04_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">베이스 레이어 (65-80)</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A05_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">탑 & 티셔츠 (65-80)</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A06_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">재킷 & 베스트 (65-80)</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A07_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">후디 & 풀오버 (65-80)</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A08_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">팬츠 & 타이츠 (65-80)</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A09_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">숏 팬츠 (65-80)</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A10_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">세트 (65-80)</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A56A11_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">양말</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A01A07_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">용품</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A34_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">Women</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A34_NK2A34A01">What‘s New</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A34_NK2A34A02">신발</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A34_NK2A34A03">의류</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A34_NK2A34A04">스포츠</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A34_NK2A34A06">브랜드</div>
+							
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A11A56&intpromo=Clearance_women_all" target="_self" class="gb_nav_btn_style last_btn">가격인하</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A08" class="gb_nav_btn_style last_btn">여성 홈페이지</a>
+								
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A35_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">Boys</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A35_NK2A35A01">What‘s New</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A35_NK2A35A07">사이즈별</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A35_NK2A35A02">신발</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A35_NK2A35A03">의류</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A35_NK2A35A04">스포츠</div>
+							
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A10A07&intpromo=Clearance_boys" target="_self" class="gb_nav_btn_style last_btn">가격인하</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A11" class="gb_nav_btn_style last_btn">BOYS 홈페이지</a>
+								
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A36_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">Girls</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A36_NK2A36A01">What‘s New</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A36_NK2A36A07">사이즈별</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A36_NK2A36A02">신발</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A36_NK2A36A03">의류</div>
+							
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A36_NK2A36A04">스포츠</div>
+							
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A10A08&intpromo=Clearance_girls" target="_self" class="gb_nav_btn_style last_btn">가격인하</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A10" class="gb_nav_btn_style last_btn">GIRLS 홈페이지</a>
+								
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A42_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">Nike+</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A01A03B75" target="_self" class="gb_nav_btn_style last_btn">나이키+ 서울</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A01A03B31" target="_self" class="gb_nav_btn_style last_btn">나이키+ 러닝</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A01A03B30" target="_self" class="gb_nav_btn_style last_btn">나이키+ 트레이닝 클럽</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A02A03B89&mdmLnkYn=Y" target="_self" class="gb_nav_btn_style last_btn">풋볼</a>
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A43_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">브랜드</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A44_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">브랜드</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A21A01&tracking=mo_brandbar_01" target="_self" class="gb_nav_btn_style last_btn">Nike Sportswear</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A48&tracking=Mo_brandbar_02" target="_self" class="gb_nav_btn_style last_btn">NikeLab</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A05A02&tracking=Mo_brandbar_03" target="_self" class="gb_nav_btn_style last_btn">Jordan</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="https://www.converse.co.kr/landing/nike" target="_blank" class="gb_nav_btn_style last_btn">Converse</a>
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A45_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">서포트</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A46_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">서포트</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A14A13" target="_self" class="gb_nav_btn_style last_btn">전 제품 교환/반품 무료 배송 서비스</a>
+								
+								
+								
+							
+						
+									
+						
+							
+								<div class="gb_nav_btn_style icon icon--arrow-right" data-target=".gb_NK2A46_NK2A46A01">고객센터</div>
+							
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A08A40A06_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">마지스타</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A08A87A01_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">남성 테크 하이퍼퓨즈</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A08A87A02_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">여성 테크 하이퍼퓨즈</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A08B31A02_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">nlimited unleashed</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A08B31A05_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">nlimited korea_0808</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A08B31A06_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">nlimited korea_0810</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A08B05_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">남성 나이키 프로</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A25A01_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">기프트 가이드</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+									
+						
+							
+							
+								
+								
+								<a href="http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A20A08B58" target="_self" class="gb_nav_btn_style last_btn">남성</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A01A03B81A01" target="_self" class="gb_nav_btn_style last_btn">여성</a>
+								
+								
+								
+							
+						
+									
+						
+							
+							
+								
+								
+								<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A03A03A21" target="_self" class="gb_nav_btn_style last_btn">키즈</a>
+								
+								
+								
+							
+						
+					
+				</div>
+			</div>
+		
+	
+
+	
+		
+			<div class="global_slide gb_NK2A10A14_depth1">
+				<div class="scroll">
+					<div class="global_category_tit center slide">
+						<a href="#" class="global_sign_btn">0606_wlp_test</a>
+						<a href="#" class="global_back icon icon--arrow-left"></a>
+					</div>
+					
+				</div>
+			</div>
+		
+	
+
+
+
+	
+		
+			
+		
+	
+
+	
+		
+							
+				
+					
+						<div class="global_slide gb_NK2A37_NK2A37A02">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">What‘s New</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									
+									<a href="http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A07" target="_self" class="gb_nav_btn_style">신상품</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A13" target="_self" class="gb_nav_btn_style">런칭 캘린더</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A09A02A26A02" target="_self" class="gb_nav_btn_style">베스트셀러</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A20A02" target="_self" class="gb_nav_btn_style">Everyday Comfort</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A20A03" target="_self" class="gb_nav_btn_style">삭다트 컬렉션</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A21A72&intpromo=2017newstart_men_all" target="_self" class="gb_nav_btn_style">2017 새로운 시작</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A44A01A01A65" target="_self" class="gb_nav_btn_style">테크 니트 컬렉션</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A21A27&intpromo=Clearance_men_all" target="_self" class="gb_nav_btn_style">가격인하</a>
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A37_NK2A37A01">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">신발</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A01A10" class="gb_nav_btn_style">전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A01A01" class="gb_nav_btn_style">라이프스타일</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A01A02" class="gb_nav_btn_style">러닝</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A01A03" class="gb_nav_btn_style">트레이닝 & 짐</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A01A04" class="gb_nav_btn_style">농구</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A01A05" class="gb_nav_btn_style">축구</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A01A06" class="gb_nav_btn_style">스케이트보딩</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A01A07" class="gb_nav_btn_style">골프</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A01A08" class="gb_nav_btn_style">테니스</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A37_NK2A37A03">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">의류</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A09" class="gb_nav_btn_style">전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A04" class="gb_nav_btn_style">다운 & 재킷</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A03" class="gb_nav_btn_style">후디 ＆ 크루</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A01" class="gb_nav_btn_style">하이퍼웜</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A05" class="gb_nav_btn_style">팬츠 ＆ 타이츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A02" class="gb_nav_btn_style">탑 ＆ 티셔츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A06" class="gb_nav_btn_style">숏 팬츠</a>
+									
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A21A04" target="_self" class="gb_nav_btn_style">가방</a>
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A07" class="gb_nav_btn_style">양말</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A03A08" class="gb_nav_btn_style">액세서리 ＆ 용품</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A37_NK2A37A04">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">스포츠</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A04A09" class="gb_nav_btn_style">러닝</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A04A05" class="gb_nav_btn_style">트레이닝 & 짐</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A04A02" class="gb_nav_btn_style">농구</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A04A03" class="gb_nav_btn_style">축구</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A04A04" class="gb_nav_btn_style">스케이트보딩</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A04A06" class="gb_nav_btn_style">골프</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A04A08" class="gb_nav_btn_style">테니스</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A37_NK2A37A05">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">브랜드</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A21A03" target="_self" class="gb_nav_btn_style">Nike Sportswear</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A48" target="_self" class="gb_nav_btn_style">NikeLab</a>
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A05A02" class="gb_nav_btn_style">Jordan</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+							
+				
+					
+						<div class="global_slide gb_NK2A34_NK2A34A01">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">What‘s New</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A05" target="_self" class="gb_nav_btn_style">신상품</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A11A07A02" target="_self" class="gb_nav_btn_style">베스트셀러</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A16A02" target="_self" class="gb_nav_btn_style">Everyday Comfort</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A16A03" target="_self" class="gb_nav_btn_style">삭다트 컬렉션</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A11A91&intpromo=2017newstart_women_all" target="_self" class="gb_nav_btn_style">2017 새로운 시작</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A44A01A01A68" target="_self" class="gb_nav_btn_style">테크 니트 컬렉션</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A07A02A14&mdmLnkYn=Y" target="_self" class="gb_nav_btn_style">나이키우먼 시즌 컬렉션 </a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A11A56&intpromo=Clearance_women_all" target="_self" class="gb_nav_btn_style">가격인하</a>
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A34_NK2A34A02">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">신발</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A02A04" class="gb_nav_btn_style">전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A02A01" class="gb_nav_btn_style">라이프스타일</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A02A02" class="gb_nav_btn_style">러닝</a>
+									
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A02A03A04" target="_self" class="gb_nav_btn_style">트레이닝 & 짐</a>
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A02A05" class="gb_nav_btn_style">골프</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A02A06" class="gb_nav_btn_style">테니스</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A34_NK2A34A03">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">의류</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A11" class="gb_nav_btn_style">전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A05" class="gb_nav_btn_style">다운 & 재킷</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A04" class="gb_nav_btn_style">후디 ＆ 크루</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A01" class="gb_nav_btn_style">스포츠 브라</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A02" class="gb_nav_btn_style">하이퍼웜</a>
+									
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A06A04" target="_self" class="gb_nav_btn_style">팬츠 ＆ 타이츠</a>
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A03" class="gb_nav_btn_style">탑 ＆ 티셔츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A07" class="gb_nav_btn_style">숏 팬츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A08" class="gb_nav_btn_style">스커트 ＆ 드레스</a>
+									
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A17A04" target="_self" class="gb_nav_btn_style">가방</a>
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A09" class="gb_nav_btn_style">양말</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A03A10" class="gb_nav_btn_style">액세서리 ＆ 용품</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A34_NK2A34A04">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">스포츠</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A04A01" class="gb_nav_btn_style">러닝</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A04A02" class="gb_nav_btn_style">트레이닝 & 짐</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A04A03" class="gb_nav_btn_style">골프</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A04A04" class="gb_nav_btn_style">테니스</a>
+									
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A34A11A81" target="_self" class="gb_nav_btn_style">요가</a>
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A34_NK2A34A06">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">브랜드</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A21A02" target="_self" class="gb_nav_btn_style">Nike Sportswear</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A48" target="_self" class="gb_nav_btn_style">NikeLab</a>
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+	
+
+	
+		
+							
+				
+					
+						<div class="global_slide gb_NK2A35_NK2A35A01">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">What‘s New</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A05" target="_self" class="gb_nav_btn_style">신상품</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A10A05&mdmLnkYn=Y" target="_self" class="gb_nav_btn_style">키즈 추천</a>
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A01A14" class="gb_nav_btn_style">베스트셀러</a>
+									
+									
+									
+																				
+								
+									
+									
+									<a href="http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A51A09A04&intpromo=2017newstart_boys" target="_self" class="gb_nav_btn_style">2017 새로운 시작</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A19A04" target="_self" class="gb_nav_btn_style">블랙&화이트 컬렉션</a>
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A01A15" class="gb_nav_btn_style">키즈 조던</a>
+									
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A04A03" target="_self" class="gb_nav_btn_style">주니어 축구 컬렉션</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A02A02" target="_self" class="gb_nav_btn_style">키즈 러닝화</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A10A07&intpromo=Clearance_boys" target="_self" class="gb_nav_btn_style">가격인하</a>
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A35_NK2A35A07">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">사이즈별</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A07A04" class="gb_nav_btn_style">신발 전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A07A06" class="gb_nav_btn_style">베이비 (160mm 이하)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A07A07" class="gb_nav_btn_style">리틀키즈 (165-220mm)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A07A08" class="gb_nav_btn_style">주니어 (225-250mm)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A07A09" class="gb_nav_btn_style">의류 전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A07A10" class="gb_nav_btn_style">베이비 (65-80)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A07A11" class="gb_nav_btn_style">리틀키즈 (105-125)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A07A12" class="gb_nav_btn_style">주니어 (XS-XL)</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A35_NK2A35A02">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">신발</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A02A09" class="gb_nav_btn_style">전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A02A01" class="gb_nav_btn_style">라이프스타일</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A02A02" class="gb_nav_btn_style">러닝</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A02A04" class="gb_nav_btn_style">축구</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A02A03" class="gb_nav_btn_style">농구</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A35_NK2A35A03">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">의류</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A03A09" class="gb_nav_btn_style">전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A03A03" class="gb_nav_btn_style">후디 & 크루</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A03A05" class="gb_nav_btn_style">팬츠 & 타이츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A03A01" class="gb_nav_btn_style">베이스 레이어</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A03A02" class="gb_nav_btn_style">탑 & 티셔츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A03A04" class="gb_nav_btn_style">재킷 & 베스트</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A03A06" class="gb_nav_btn_style">숏 팬츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A03A07" class="gb_nav_btn_style">양말</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A03A08" class="gb_nav_btn_style">액세서리 & 용품</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A35_NK2A35A04">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">스포츠</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A04A01" class="gb_nav_btn_style">러닝</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A04A03" class="gb_nav_btn_style">축구</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A04A02" class="gb_nav_btn_style">농구</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A04A05" class="gb_nav_btn_style">트레이닝 & 짐</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+							
+				
+					
+						<div class="global_slide gb_NK2A36_NK2A36A01">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">What‘s New</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A05" target="_self" class="gb_nav_btn_style">신상품</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A09A05" target="_self" class="gb_nav_btn_style">키즈 추천</a>
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A01A13" class="gb_nav_btn_style">베스트셀러</a>
+									
+									
+									
+																				
+								
+									
+									
+									<a href="http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A52A08A01&intpromo=2017newstart_girls" target="_self" class="gb_nav_btn_style">2017 새로운 시작</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A37A19A04" target="_self" class="gb_nav_btn_style">블랙&화이트 컬렉션</a>
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A01A14" class="gb_nav_btn_style">키즈 조던</a>
+									
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A02A02" target="_self" class="gb_nav_btn_style">키즈 러닝화</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A35A10A08&intpromo=Clearance_girls" target="_self" class="gb_nav_btn_style">가격인하</a>
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A36_NK2A36A07">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">사이즈별</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A07A04" class="gb_nav_btn_style">신발 전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A07A05" class="gb_nav_btn_style">베이비 (160mm 이하)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A07A06" class="gb_nav_btn_style">리틀키즈 (165-220mm)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A07A07" class="gb_nav_btn_style">주니어 (225-250mm)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A07A08" class="gb_nav_btn_style">의류 전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A07A09" class="gb_nav_btn_style">베이비 (60-80)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A07A10" class="gb_nav_btn_style">리틀키즈 (105-125)</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A07A11" class="gb_nav_btn_style">주니어 (XS-XL)</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A36_NK2A36A02">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">신발</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A02A09" class="gb_nav_btn_style">전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A02A01" class="gb_nav_btn_style">라이프스타일</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A02A02" class="gb_nav_btn_style">러닝</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A02A03" class="gb_nav_btn_style">농구</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A36_NK2A36A03">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">의류</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A11" class="gb_nav_btn_style">전체보기</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A02" class="gb_nav_btn_style">베이스 레이어</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A04" class="gb_nav_btn_style">후디 & 크루</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A01" class="gb_nav_btn_style">스포츠 브라</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A03" class="gb_nav_btn_style">탑 & 티셔츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A06" class="gb_nav_btn_style">팬츠 & 타이츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A05" class="gb_nav_btn_style">재킷 & 베스트</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A07" class="gb_nav_btn_style">숏 팬츠</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A09" class="gb_nav_btn_style">양말</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A03A10" class="gb_nav_btn_style">액세서리 & 용품</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A36_NK2A36A04">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">스포츠</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A04A01" class="gb_nav_btn_style">러닝</a>
+									
+									
+									
+																				
+								
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayGoodsList.lecs?displayNo=NK2A36A04A02" class="gb_nav_btn_style">트레이닝 & 짐</a>
+									
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+							
+				
+					
+				
+							
+				
+					
+						<div class="global_slide gb_NK2A46_NK2A46A01">
+							<div class="scroll">
+								<div class="global_category_tit center slide">
+									<a href="#" class="global_sign_btn">고객센터</a>
+									<a href="#" class="global_back icon icon--arrow-left"></a>
+								</div>
+								
+									
+									
+									<a href="http://mlecs.nike.co.kr/mobile/voc/viewNikeOneonone.lecs" target="_self" class="gb_nav_btn_style">1:1 E-Mail 문의하기</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://mlecs.nike.co.kr/mobile/myshop/include/emailCounselList.lecs" target="_self" class="gb_nav_btn_style">1:1 E-Mail 답변확인</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayShop.lecs?displayNo=NK2A32" target="_self" class="gb_nav_btn_style">A/S 안내</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayShop.lecs?displayNo=NK2A33" target="_self" class="gb_nav_btn_style">취소/교환/반품 안내</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/displayShop.lecs?displayNo=NK2A30A03&catalystPgName=&pgType=Main+Display" target="_self" class="gb_nav_btn_style">THE DRAW 안내</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/rules.lecs?tach=1" target="_self" class="gb_nav_btn_style">이용약관</a>
+									
+									
+																				
+								
+									
+									
+									<a href="http://m.nike.co.kr/mobile/display/rules.lecs?tach=2" target="_self" class="gb_nav_btn_style">개인정보취급(처리)방침</a>
+									
+									
+																				
+								
+							</div>
+						</div>
+					
+				
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+							
+				
+					
+				
+							
+				
+					
+				
+							
+				
+					
+				
+			
+		
+	
+
+	
+		
+			
+		
+	
+
+
+
+
+</div> 
+<!-- //global_menu_slide -->
+
+<!-- global_menu_overlay -->
+<div class="global_menu_overlay"></div>
+<!-- //global_menu_overlay -->
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+	<!-- 150127 : str -->
+	<script type="text/javascript" charset="utf-8">
+		var research_arr = [
+
+
+	
+		
+			"에어맥스",
+		
+		
+	
+		
+			"에어포스",
+		
+		
+	
+		
+			"허라치",
+		
+		
+	
+		
+			"루나에픽",
+		
+		
+	
+		
+			"플라이니트",
+		
+		
+	
+		
+			"스포츠브라",
+		
+		
+	
+		
+			"타이츠",
+		
+		
+	
+		
+			"조던",
+		
+		
+	
+		
+		
+			"풋살화"
+		
+	
+
+	
+		];
+		
+		//5000은 5초 입니다.
+		var research_timer = 5000;
+		$(window)
+			.data("research_value", research_arr)
+			.data("research_timer", research_timer);
+		
+		//검색어입력란의 돋보기 클릭시
+		function searchPopWrdBtn() {
+			document.location.href = "http://m.nike.co.kr/mobile/search/showSearch.lecs?research="+$("#research").val();
+		}
+	</script>
+	<!-- //150127 : end -->
+	
+	
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+
+
+function chkRedirectSearchWord(keyword) {
+
+	
+		var chkWord = false;
+		
+			var redirectWord	= "Draw";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "NikeLab";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A60";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "Tech";
+			var redirectUrl		= "http://www.nike.co.kr/search/showSearch.lecs?research=%ED%85%8C%ED%81%AC%ED%8C%A9";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "The draw";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "YOGA";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A50A09A80";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "draw";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "jordarn";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A05A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "launch";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A41";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "tech";
+			var redirectUrl		= "http://www.nike.co.kr/search/showSearch.lecs?research=%ED%85%8C%ED%81%AC%ED%8C%A9";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "the draw";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "yoga";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A50A09A80";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "골프 클럽 컬렉션";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A20  ";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "골프 프로모션";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A06A02A57A08";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "골프클럽";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A20  ";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "골프할인";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A06A02A57A08";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "골프행사";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A06A02A57A08";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "나이키랩";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A60";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "나이키에어맥스95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "더 드로우";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "더드로우";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "드로우";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "런칭";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A41";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "런칭캘린더";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A41";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "로얄티";
+			var redirectUrl		= "http://www.nike.co.kr/goods/showGoodsDetail.lecs?goodsNo=NK00068214&colorOptionValueCode=308497-032";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "로열티";
+			var redirectUrl		= "http://www.nike.co.kr/goods/showGoodsDetail.lecs?goodsNo=NK00068214&colorOptionValueCode=308497-032";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "맥스 95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "맥스95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "맥스97";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "머큐리얼 슈퍼플라이";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B59";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "베이비";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A51A04A05";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "볼캡";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A03A08A04";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어 조던 5 레트로 PRM";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?storeNo=2&siteNo=14218&displayMallNo=NK1&displayNo=NK1A80A30&intpromo=LC_Airjordan5retroprmTAKEFLIGHT_IMG_170206";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어맥스";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A56A01B24&listSortCode=11&currentPage=1&lastPage=3&autoPageIndex=0&imgSize=180&allYn=";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어맥스 95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어맥스95";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어맥스97";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A01A01A02";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어조던 XXXI";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B70";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어조던 xxxi";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B70";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "에어조던31";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B70";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "요가";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A50A09A80";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "응모";
+			var redirectUrl		= "http://www.nike.co.kr/event/thedraw/main.lecs";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "이벤트";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A62A01A01";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "테크";
+			var redirectUrl		= "http://www.nike.co.kr/search/showSearch.lecs?research=%ED%85%8C%ED%81%AC%ED%8C%A9";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "트레이닝바지";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A49A03A05";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "티엠포 레전드";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B60";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "티엠포 피를로";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A40B60";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "프리 런 디스턴스 2";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A22";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "프리런 디스턴스2";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A22";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "플라이니트 레이서";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A28 ";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+			var redirectWord	= "플라이니트레이서";
+			var redirectUrl		= "http://www.nike.co.kr/display/displayShop.lecs?displayNo=NK1A80A28 ";
+			var redirectTarget	= "_self";
+
+			if (keyword == redirectWord) {
+				if (redirectTarget == "_blank" ) {
+					window.open(redirectUrl);
+				} else {
+					location.href = redirectUrl;
+				}
+				return false;
+			} else {
+				chkWord = true;
+			}
+		
+		if (chkWord) return true;
+	
+	
+	
+	
+}
+
+</script>
+
+		
+<!-- //header e -->
+
+<!-- container s -->
+<div id="container" class="global_container">
+	
+
+
+
+
+
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/ajax.js"></script>
+<script>var s_account = "nikestorekoreaprod";</script><!-- 운영과 개발용 설정이 달라서 config 이용 -->
+<script type="text/javascript" src="https://msecure.nike.co.kr/NKS1/js/s_code_nikestorekr.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://msecure.nike.co.kr/NKS1/mobile/css/global_renewal_phase2.css">
+
+<script type="text/javascript">
+
+	var prop4='';	//회원 정보 변경 항목을 담을 변수........사이트 카탈리스트  
+	$(document).ready(function(){
+		
+		$("body").data("setEmailYn",('N'=='Y')?true:false );
+	    $("body").data("setSmsYn",('N'=='Y')?true:false );
+	    
+		if($("#EmailReceiveYN").val() == "Y"){
+			$("#receptionCheck").attr("checked", "checked");
+		}
+
+		if("02"==""){
+			$("#region02").attr("selected","selected");
+		}else{
+			$("#region"+"02").prop("selected","selected");
+		}
+
+		jQuery('#select_email').on('change', function(){
+			var email = jQuery(':selected', this).get(0).innerText;
+			jQuery('#Address').val(email);
+			if(email == '직접입력') {
+				jQuery('#Address').val('').removeAttr('readonly').focus();
+				//jQuery('#Address').removeAttr('disabled');
+			} else {
+				jQuery('#Address').attr('readonly', 'readonly');
+				//jQuery('#Address').attr('disabled', true);
+			}
+		});
+		
+		//나이키 사이트 카탈리스트 연락처, 휴대폰 정보 변경시 이벤트.....2013.12.05..Cesil...start
+		$("#cableTelephoneRegionNo").change(function(){	
+			chgPhoneNumber("cable");
+		});
+		$("#cableTelephoneTelephoneExchangeNo").change(function(){	
+			chgPhoneNumber("cable");
+		});
+		$("#cableTelephoneEndNo").change(function(){	
+			chgPhoneNumber("cable");
+		});
+		$("#cellSectionNo").change(function(){
+			chgPhoneNumber("mobile");
+		});
+		$("#cellTelephoneExchangeNo").change(function(){
+			chgPhoneNumber("mobile");
+		});
+		$("#cellEndNo").change(function(){
+			chgPhoneNumber("mobile");
+		});
+	});
+
+ 	function setEmail(chgEmail){
+ 		$("#email1Address").val(chgEmail);
+ 		$("#viewEmail").val(chgEmail);
+ 		//layerClose();
+ 		fnCloseEmail();
+ 	}
+
+ 	function layerClose(){
+ 		$("#emailDuplCheck").hide();
+ 	}
+
+	function checkEmailType(emailAddress) {
+		re = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+		
+		if (!re.test(emailAddress)) {
+			//alert("정확한 이메일을 입력해 주세요.");
+			$("#dupMsg").html("정확한 이메일 주소를 입력해 주세요.");
+			$('#chkEmailAddr').val('');
+			$('#chkEmailAddr').focus();
+			return false
+		}
+		
+		return true;
+	}
+	
+	/*정보수정*/
+	function InfomationUpdate(){
+		var cell1 = jQuery("#cellTelephoneExchangeNo");
+		var cell2 = jQuery("#cellEndNo");
+		var tel1 = jQuery("#cableTelephoneTelephoneExchangeNo");
+		var tel2 = jQuery("#cableTelephoneEndNo");
+		var email = jQuery('#Address').val();
+		var isValid = 0;
+
+		var birthday = "";
+		var yearType = 'normal';
+		var year = $('#birthdayDurationTimeYear').val();
+		var month = $('#birthdayDurationTimeMonth').val();
+		var day = $('#birthdayDurationTimeDay').val();
+		
+		if(year == "" || month == "" || day == "") {
+			alert("생년월일을 입력해 주세요");
+			return false;
+		} 
+		
+		if ((parseInt(year) % 4 == 0) && (parseInt(year) % 100 != 0) || (parseInt(year) % 400 == 0)) {
+			yearType = 'leap';
+		}
+		
+		if (month == "1" || month == "3" || month == "5" || month == "7" || month == "8" || month == "10" || month == "12") {
+			if (parseInt(day) > 31) {
+				alert("올바르지 않은 ‘일’정보입니다. 다시 확인해 주세요.");
+				return false;
+			}
+		} else {
+			if (month == "2") {
+				if (yearType === 'normal' && parseInt(day) > 28) {
+					alert("올바르지 않은 ‘일’정보입니다. 다시 확인해 주세요.");
+					return false;
+				} else if (yearType === 'leap' && parseInt(day) > 29) {
+					alert("올바르지 않은 ‘일’정보입니다. 다시 확인해 주세요.");
+					return false;
+				}
+			} else {
+				if (parseInt(day) > 30) {
+					alert("올바르지 않은 ‘일’정보입니다. 다시 확인해 주세요.");
+					return false;
+				}
+			}
+		} 
+
+		birthday = year;
+
+		if(month.length == 1){
+			birthday += "0" + month;
+		} else {
+			birthday += month;
+		}
+		
+		if(day.length == 1){
+			birthday += "0" + day;
+		} else {
+			birthday += day;
+		}
+
+		$("#birthdayDurationTime").val(birthday);
+		
+		if ($('#cellSectionNo').val() === '') {
+			alert("휴대폰 정보를 입력해 주세요.");
+			$('#cellSectionNo').focus();
+			return false;
+		}
+		
+		if ($('#cellTelephoneExchangeNo').val() === '') {
+			alert("휴대폰 정보를 입력해 주세요.");
+			$('#cellTelephoneExchangeNo').focus();
+			return false;
+		}
+		
+		if ($('#cellEndNo').val() === '') {
+			alert("휴대폰 정보를 입력해 주세요.");
+			$('#cellEndNo').focus();
+			return false;
+		}
+		
+		if(	(
+//				jQuery("#cellSectionNo").val() == "" ||
+				cell1.val() == "" ||
+				cell2.val() == "" ) && (
+//				jQuery("#cableTelephoneRegionNo").val() == "" ||
+				tel1.val() == "" ||
+				tel2.val() == "") ) {
+			alert("휴대폰 또는 연락처를 입력해 주세요.");
+		    return;
+		}
+		if(((cell1.val() != "") && (cell2.val() == ""))
+					||((cell1.val() == "") && (cell2.val() != ""))){
+			alert("휴대폰 번호를 정확히 입력해 주세요.");
+			return ;
+			
+		}
+		if(((tel1.val() != "") && (tel2.val() == ""))
+					||((tel1.val() == "") && (tel2.val() != ""))){
+			alert("연락처를 정확히 입력해 주세요.");
+			return ;
+			
+		}
+		if(!(cell1.val() == "" && cell2.val() == "")){ 
+			if(cell1.val().trim().length < 3){
+				alert("연락처를 3자리 이상 입력해 주세요");
+				cell1.focus();
+				return ;	
+			}else if(cell2.val().trim().length < 4) {
+				alert("연락처를 4자리 이상 입력해 주세요");
+				cell2.focus();
+				return ;
+			}
+		}
+		if(!(tel1.val() == "" && tel2.val() == "")){
+			if(tel1.val().trim().length < 3 ){
+				alert("연락처를 3자리 이상 입력해 주세요");
+				tel1.focus();
+				return ;			
+			}else if(tel2.val().trim().length < 4) {
+				alert("연락처를 4자리 이상 입력해 주세요");
+				tel2.focus();
+				return ;
+			}
+		}
+		
+		if(!checkDigitOnly(cell1.val(), true) || !checkDigitOnly(cell2.val(), true)) {
+			alert('휴대폰번호는 숫자만 가능합니다.');
+			return;
+		}
+		if(!checkDigitOnly(tel1.val(), true) || !checkDigitOnly(tel2.val(), true)) {
+			alert('연락처는 숫자만 가능합니다.');
+			return;
+		}
+		
+		
+		var emailTextVal = $("#receptionCheck").is(":checked")?"동의처리":"거부처리";
+        var smsTextVal =  $("#sms_agr").is(":checked")?"동의처리":"거부처리";
+        
+	    if($("body").data("setEmailYn")!=$("#receptionCheck").is(":checked")&&$("body").data("setSmsYn")!=$("#sms_agr").is(":checked")){
+			alert("NIKE.COM에서는 고객님께서 2017년02월17일 요청하신 SMS 수신 "+smsTextVal+" 와 E-mail 수신 "+emailTextVal+" 요청이 정상처리 되었음을 안내 드립니다.");
+	    }else if($("body").data("setEmailYn")!=$("#receptionCheck").is(":checked")){
+	    	alert("NIKE.COM에서는 고객님께서 2017년02월17일 요청하신 E-mail 수신 "+emailTextVal+" 요청이 정상처리 되었음을 안내 드립니다.");
+	    }else if($("body").data("setSmsYn")!=$("#sms_agr").is(":checked")){
+	    	alert("NIKE.COM에서는 고객님께서 2017년02월17일 요청하신 SMS 수신 "+smsTextVal+" 요청이 정상처리 되었음을 안내 드립니다.");
+	    }
+	    
+	    
+		doInformationUpdate();
+		
+	}
+
+	function doInformationUpdate(){
+		// 이메일 수신 여부 처리
+		if(($("#receptionCheck").attr("checked") == "checked" )){
+			$("#receptionCheckChange").val("Y");
+		} else {
+			$("#receptionCheckChange").val("N");
+		}
+		// SMS 수신 여부 처리
+		if(($("#sms_agr").attr("checked") == "checked" )){
+			$("#smsReceiveCheckChange").val("Y");
+		} else {
+			$("#smsReceiveCheckChange").val("N");
+		}
+		
+		document.frmInformation.informaionOrder.value = "1";
+		InformationFormSumit();
+	}
+
+	function InformationFormSumit(){
+		$("#prop4").val(prop4);
+		var frm = $('form#frmInformation');
+		frm.attr('action', '/mobile/member/informationSubmit.lecs');
+		IframeSubmitter.submit(frm.get(0), "InformationRefresh", "submitFrame");
+	}
+	function InformationRefresh(result){
+		//console.log(result)
+		if(result.message) {
+			alert(result.message);
+		}
+		
+		//location.reload();	
+		$("#prop4").val(result.prop4);
+		var form = document.frmInformation;
+		form.action = '/mobile/member/information.lecs';
+		form.method = 'post';
+		form.submit();	
+	}
+
+	function receptionCheckUpdate(){
+		if(($("#receptionCheck").attr("checked") == "checked" )){
+			$("#receptionCheckChange").val("Y");
+			//나이키 사이트 카탈리스트 2차...2013.11.27...Cesil..회원가입시 이메일 수신 동의 ...작성자가 클릭한 경우
+			s.linkTrackVars='events';
+			s.linkTrackEvents='event3';
+			s.events='event3';
+			s.tl(true,'o','Custom Clicks');
+		} else {
+			$("#receptionCheckChange").val("N");
+		}
+	}
+	function passwordCheck(){
+		var epw = $("#existingPassword");
+		var cpw = $("#changePassword");
+		var cpwc = $("#changePasswordCheck");
+		var f = document.frmInformation;
+		
+		$("#spexistingPassword").text("");
+		$("#spchangePassword").text("");
+		$("#spchangePasswordCheck").text("");
+		
+		if(epw.val() == ""){
+			//alert("기존 패스워드를 입력해 주세요.");
+			$("#spexistingPassword").text("기존 패스워드를 입력해 주세요.");
+			ewp.focus();
+			return false;
+		}
+		if(cpw.val() == ""){
+			//alert("변경 패스워드를 입력해 주세요.");
+			$("#spchangePassword").text("변경 패스워드를 입력해 주세요.");
+			cpw.focus();
+			return false;
+		}
+		if(cpw.val() == "" ){
+			//alert("변경 패스워드 확인를 입력해 주세요.");
+			$("#spchangePasswordCheck").text("변경 패스워드를 한번 더 입력해 주세요.");
+			$("#changePasswordCheck").focus();
+			return false;
+		}
+		if(cpw.val().length < 6 || cpw.val().length > 12) {
+			//alert("패스워드는 6~12 자리의 영문숫자를 조합하여야 사용이 가능합니다.");
+			$("#spchangePassword").text("패스워드는 6~12 자리의 영문,숫자의 조합으로 사용 가능합니다.");
+			cpw.focus();
+			return false;
+		} 
+		if(cpwc.val().length < 6 || cpwc.val().length > 12) {
+			//alert("패스워드는 6~12 자리의 영문숫자를 조합하여야 사용이 가능합니다.");
+			$("#spchangePassword").text("패스워드는 6~12 자리의 영문,숫자의 조합으로 사용 가능합니다.");
+			cpwc.focus();
+			return false;
+		} 
+		if(!wordCheck(epw)){
+			return false;
+		}
+		if(!wordCheck(cpw)) {
+			return false;
+		}
+		if(!wordCheck(cpwc)){
+			return false;
+		}
+		
+		if(checkDigitOnly((cpw.val()), true)) {
+			//alert("패스워드는 6~12 자리의 영문숫자를 조합하여야 사용이 가능합니다.");
+			$("#spchangePassword").text("패스워드는 6~12 자리의 영문,숫자의 조합으로 사용 가능합니다.");
+			cpw.focus();
+			return false;
+		}
+		if(checkDigitOnly((cpwc.val()), true)) {
+			//alert("패스워드는 6~12 자리의 영문숫자를 조합하여야 사용이 가능합니다.");
+			$("#spchangePassword").text("패스워드는 6~12 자리의 영문,숫자의 조합으로 사용 가능합니다.");
+			cpwc.focus();
+			return false;
+		}
+		if(duplWordCheck(cpw.val(),$("#loginId").val())){
+			//alert("패스워드는 아이디 및 이메일 주소와 같거나 포함할 수 없습니다.");
+			$("#spchangePassword").text("패스워드는 아이디 및 이메일 주소와 같거나 포함할 수 없습니다.");
+			cpw.focus();
+			return false;
+		}
+		if(duplWordCheck(cpw.val(),$("#email1Address").val())){
+			//alert("패스워드는 아이디 및 이메일 주소와 같거나 포함할 수 없습니다.");
+			$("#spchangePassword").text("패스워드는 아이디 및 이메일 주소와 같거나 포함할 수 없습니다.");
+			cpw.focus();
+			return false;
+		}
+		
+		var tempChar = "";
+		var cnt = 0;
+		for(var i = 0; i < cpw.val().length; i++){
+			if(tempChar ==  cpw.val().charAt(i) ){
+					cnt++;
+			}else{
+				tempChar =  cpw.val().charAt(i);
+				cnt = 1;
+			}
+				if(cnt >= 2){
+					//alert("패스워드에 연속된 3개 이상의 같은 문자, 숫자는 사용이 불가능합니다.");
+					$("#spchangePassword").text("패스워드에 연속된 3개 이상의 같은 문자, 숫자는 사용이 불가능합니다.");
+					cpw.focus();
+					return false;
+				}
+		}
+		if(cnt < 2){
+			var frm = $('form#frmInformation');
+			frm.attr('action', '/mobile/member/informationPasswordChange.lecs');
+			IframeSubmitter.submit(frm.get(0), "passwordCheckResult", "submitFrame");
+
+		}
+	}
+	
+	function passwordCheckResult(result){
+		var ch = new Object();
+		ch.bts = "1";
+		if(result.existingPasswordCheck == ch.bts){
+			//alert("기존 패스워드가 일치하지 않습니다.");
+			$("#spexistingPassword").text("기존 패스워드가 일치하지 않습니다.");
+			$("#existingPassword").focus();
+			return false;
+		}
+		if($("#existingPassword").val() == $("#changePassword").val() ){
+			//alert("기존 패스워드와 동일합니다.");
+			$("#spchangePassword").text("기존 패스워드와 동일합니다.");
+			return false;
+		}
+		if($("#changePassword").val() != $("#changePasswordCheck").val()){
+			//alert("패스워드가 일치하지 않습니다.");
+			$("#spchangePasswordCheck").text("변경 패스워드가 일치하지 않습니다.");
+			return false;
+		}
+
+		var frm = $('form#frmInformation');
+		frm.attr('action', '/mobile/member/informationPasswordUpdate.lecs');
+		IframeSubmitter.submit(frm.get(0), "passwordUpdate", "submitFrame");
+	}
+	function passwordUpdate(result){
+		var ch = new Object();
+		ch.bts = "Success";
+		if(result.existingPasswordUpdate == ch.bts){
+			alert('패스워드 변경이 완료되었습니다.');
+			location.href='http://mlecs.nike.co.kr/mobile/mypage/mypage.lecs';
+		} else if(result.existingPasswordUpdate == "Fail"){ //[1118]기존 비밀번호체크. 2016.01.04. 박소라
+        	alert(result.message);
+        	location.href='http://mlecs.nike.co.kr/mobile/mypage/mypage.lecs';
+		}
+		
+		if(prop4.length>0)	prop4 += ":";
+		prop4 += "password";
+	}
+
+	function checkDigitOnly(digitChar, space) {
+		if(!space){
+			if ( digitChar == null || digitChar=='' ){
+	    		return false ;
+	    	}
+		}
+	
+		for(var i=0;i<digitChar.length;i++){
+	    	var c=digitChar.charCodeAt(i);
+	       	if( !(  0x30 <= c && c <= 0x39 ) ) {
+	       		return false ;
+	       	}
+	     }
+	
+	    return true ;
+	}
+
+	function wordCheck(obj){
+		var pattKor = /[ㄱ-ㅎ가-힣]/gi;
+		var pattSpe = /[\~\!\@#$%\^\&\*\(\)\+\|\~\=\\\{\}\[\]\:\;\<\>\?\,\.\`\ \/]/gi;
+		
+		if(obj.val().match(pattSpe)!= null) {
+			alert('특수문자는 입력하실 수 없습니다.');
+			obj.focus();
+			//obj = "";
+			return false;
+		} else if(obj.val().match(pattKor)!= null) {//null이면 한글없음
+			alert('한글은 입력하실 수 없습니다.');
+			obj.focus();
+			//obj = "";
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
+	function emailCheck(mail){
+		var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
+		if(!regExp.test(mail)){
+			return false;
+		}
+		return true;
+		
+	}
+
+	//새로운 패스워드의 연속된 6자 이상이 이메일, 아이디에 포함되어 있는경우를 체크
+	function duplWordCheck(passwd, emailId){
+		if(passwd.length<6 || emailId.length<6){
+			return false;
+		}else{
+			for(i=0; i+5<passwd.length; i++){
+				var spliteStr = passwd.substr(i,6);
+				if(emailId.indexOf(spliteStr) > -1){
+					return true;
+				}
+			}
+			return false;
+		}
+	}
+
+	function changeEmail(){
+		//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil Start  --
+		// 2016.08.08. [smartchecker - 2256] pgName ':mobile' 추가
+			s.manageVars("clearVars"); 
+			var chl = "Member>ModifiInfo>EmailChange(L)";
+			var pgNm = "nikestorekr:mobile>" + chl;
+			s.currencyCode="KRW";	
+			s.linkInternalFilters+=",nike.co.kr";
+			s.pageName=pgNm;
+			s.channel="Member";
+			s.prop2="nikestorekr:mobile";
+			s.prop10="commerce";
+			s.prop14="kr";
+			s.prop15="ko";
+			s.prop17="nikestorekr:Member";	
+			s.eVar4 = "logged in";
+			void(s.t());	
+			if(prop4.indexOf("e-mail")==-1){
+				if(prop4.length>0)	prop4 += ":";
+					prop4 += "e-mail";
+			}
+			//-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.11.18... Cesil End  --
+			$.ajax({
+			type: 'POST',
+			url: '/mobile/member/changeInformationEmail.lecs?nolayout=yes',
+			cache: false,
+			success: function(data){
+				$("section.idDuplCheck").html(data).show();
+				
+				$("a[name=showDuplChkLayer]").unbind("click");
+				$("a[name=showDuplChkLayer]").bind("click", function(e){
+					if($("#chkEmailAddr").val() == '') {
+						//alert("이메일를 입력해 주세요.");
+						$("#dupMsg").html("이메일를 입력해 주세요.");
+						$("#chkEmailAddr").focus();
+						return false;
+					} else if (!checkEmailType($("#chkEmailAddr").val())) {
+						return false;
+					}
+					
+					var params = $("#chkEmailForm").serialize();
+					var innerHtml = "";
+					var chkEmailAddr = $("#chkEmailAddr").val();
+					
+			 		$.ajax({
+						type: 'POST',
+						url: '/mobile/member/emailDuplicationCheckAjax.lecs?'+params,
+						cache: false,
+						success: function(result){
+				 			if (result[0] == null || result[0] == '' || result[0] === 'AVAILABLE') {
+				 				innerHtml ='<div class="conBox">'
+					 						+ '		<p class="idpw_dsc ">입력하신 <strong class="t_ul">' + chkEmailAddr +'</strong> 은(는)사용 가능한 이메일입니다.<br /><br />사용하시겠습니까?</p>'
+					 						+ '</div>'
+					 						+ '		<div class="btn_area">'
+					 						+ ' 		<a href="javascript:setEmail(\''+chkEmailAddr+'\');" class="btn_use"><span class="hide">사용</span></a>'
+					 						+ ' 		<a href="javascript:fnCloseEmail();" class="btn_cancel"><span class="hide">취소</span></a>'
+					 						+ '</div>';
+								$("#dupEmailInfoArea").html(innerHtml);
+							} else {
+								innerHtml = '입력하신 <strong class="t_ul">'+$("#chkEmailAddr").val()+'</strong> 은(는) 사용중인 이메일입니다.<br />다른 이메일 주소를 입력해 주세요.</p>';
+								$("#dupMsg").html(innerHtml);
+								$("#chkEmailAddr").val("");
+							}
+						}
+					});
+				});
+				
+			}
+			});
+			
+	}
+
+	function checkAge(){
+		  
+		if($("#birthdayDurationTimeYear").val() != ""){
+			var today = new Date();
+			var nowYear = today.getFullYear();
+			var diffAge = parseInt(nowYear) - parseInt($("#birthdayDurationTimeYear").val());
+
+			if(diffAge < 14){
+			   alert("만 14세 미만의 미성년자는 회원가입을 하실 수 없습니다. 자세한 회원가입 정책은 이용약관에서 확인하실 수 있습니다.");
+			   $("#birthdayDurationTimeYear > option[value='']").attr("selected", "true");
+			}
+		}
+	}
+	
+	jQuery(document).ready(function(){
+		// 기본정보 변경 취소
+		jQuery('div.tabConArea:eq(0) div.btn_area a.btn_cancel').unbind('tap, click');
+		
+		jQuery('div.tabConArea:eq(0) div.btn_area a.btn_cancel').on('tap, click', function(e){
+			if(confirm('회원 정보 수정을 취소하시겠습니까?')) { // 2017 회원가입 알럿창 문구 변경
+				location.href='http://mlecs.nike.co.kr/mobile/mypage/mypage.lecs';
+			}
+		});
+
+		// 패스워드 변경 취소
+		jQuery('div.tabConArea:eq(1) div.btn_area a.btn_cancel').on('tap, click', function(e){
+			if(confirm('패스워드 변경을 취소하시겠습니까?')) {
+				location.href='http://mlecs.nike.co.kr/mobile/mypage/mypage.lecs';
+			}
+		});
+
+		//변경패스워드 인풋박스 이벤트
+		jQuery('#changePassword').on('keyup', function(e){
+			var pw = jQuery(this);
+			var pw_str = pw.val();
+			var caution_msg = jQuery('.idPassCheck dl dd p.fs12 span');
+			if(pw_str.length< 6 || pw_str.length >12) {
+				caution_msg.removeClass('pointBl').addClass('pointRe').text('사용불가');
+			} else {
+				caution_msg.removeClass('pointRe').addClass('pointBl').text('높음');
+			}
+			// 특수문자 한글 여부 체크
+			if(!wordCheck(pw)) {
+				caution_msg.removeClass('pointBl').addClass('pointRe').text('사용불가');
+				pw.val(pw.val().substr(0,pw.val().length-1));
+				return false;
+			}
+			// 숫자 체크
+			if(checkDigitOnly(pw_str, true)) {
+				caution_msg.removeClass('pointBl').addClass('pointRe').text('사용불가');
+				return false;
+			}
+			// 아이디와 중복 여부 체크
+			if(duplWordCheck(pw_str, jQuery('#loginId').val())) {
+				caution_msg.removeClass('pointBl').addClass('pointRe').text('사용불가');
+				return false;
+			}
+			// 이메일과 중복 여부 체크
+			if(duplWordCheck(pw_str, jQuery('#email1Address').val())) {
+				caution_msg.removeClass('pointBl').addClass('pointRe').text('사용불가');
+				return false;
+			}
+			
+			// 아이디와 중복 여부 체크
+//			if(jQuery('#loginId').val().indexOf(pw_str) > -1) {
+//				caution_msg.removeClass('pointBl').addClass('pointRe').text('사용불가');
+//				return false;
+//			}
+			// 이메일과 중복 여부 체크
+//			if(jQuery('#email1Address').val().indexOf(pw_str) > -1) {
+//				caution_msg.removeClass('pointBl').addClass('pointRe').text('사용불가');
+//				return false;
+//			}
+			
+			var tempChar = '';
+			var cnt = 0;
+			for(var i = 0; i < pw_str.length; i++){
+				if(tempChar ==  pw_str.charAt(i) ){
+					cnt++;
+				} else {
+					tempChar =  pw_str.charAt(i);
+					cnt = 1;
+				}
+				//console.log(i +':'+ tempChar + ':'+cnt)
+				if(cnt >= 3){
+					caution_msg.removeClass('pointBl').addClass('pointRe').text('사용불가');
+					return false;
+				}
+			}
+		});
+		
+		//기존패스워드 인풋박스 이벤트
+		jQuery('#existingPassword').on('keyup', function(e){
+			var pw = jQuery(this);
+			var pw_str = pw.val();
+			// 특수문자 한글 여부 체크
+			if(!wordCheck(pw)) {
+				pw.val(pw.val().substr(0,pw.val().length-1));
+				return false;
+			}
+			// 숫자 체크
+			if(checkDigitOnly(pw_str, true)) {
+				return false;
+			}
+			// 아이디와 중복 여부 체크
+			if(jQuery('#loginId').val().indexOf(pw_str) > -1) {
+				return false;
+			}
+			// 이메일과 중복 여부 체크
+			if(jQuery('#email1Address').val().indexOf(pw_str) > -1) {
+				return false;
+			}
+			
+		});
+
+		//변경패스워드 인풋박스 이벤트
+		jQuery('#changePasswordCheck').on('keyup', function(e){
+			var pw = jQuery(this);
+			var pw_str = pw.val();
+			// 특수문자 한글 여부 체크
+			if(!wordCheck(pw)) {
+				pw.val(pw.val().substr(0,pw.val().length-1));
+				return false;
+			}
+			// 숫자 체크
+			if(checkDigitOnly(pw_str, true)) {
+				return false;
+			}
+			// 아이디와 중복 여부 체크
+			if(jQuery('#loginId').val().indexOf(pw_str) > -1) {
+				return false;
+			}
+			// 이메일과 중복 여부 체크
+			if(jQuery('#email1Address').val().indexOf(pw_str) > -1) {
+				return false;
+			}
+			
+		});
+		
+		$('.idPassCheck').find('.btn_pop_close').click(function(){
+			fnClosePass();
+		});
+		
+		$('.idPassCheck').find('.btn_cancel').unbind('click');
+		
+		$('.idPassCheck').find('.btn_cancel').click(function(){
+			if(confirm('패스워드 변경을 취소하시겠습니까?')) {
+				fnClosePass();
+			}
+		});
+	})
+	
+	function chgPhoneNumber(type){
+		if(type=="cable"){	
+			if(prop4.indexOf("phone number")==-1){
+				if(prop4.length>0)	prop4 += ":";
+				prop4 += "phone number";
+				}
+		}else if(type="mobile"){
+			if(prop4.indexOf("mobile number")==-1){
+				if(prop4.length>0)	prop4 += ":";
+				prop4 += "mobile number";
+				}
+		}
+	}
+	
+	//나이키 사이트 카탈리스트 2차...2013.12.05 Cesil..생년월일 변경 이벤트
+	function checkProp4Birth(){
+		if(prop4.indexOf("date of birth")==-1){
+			if(prop4.length>0)	prop4 += ":";
+			prop4 += "date of birth";
+		}
+	}
+	//나이키 사이트 카탈리스트 연락처, 휴대폰 정보 변경시 이벤트.....2013.12.05..Cesil...end
+	
+	function changePass(){
+		$("#spexistingPassword").text("");
+		$("#spchangePassword").text("");
+		$("#spchangePasswordCheck").text("");
+		
+		$("#existingPassword").val("");
+		$("#changePassword").val("");
+		$("#changePasswordCheck").val("");
+		
+		$('.idPassCheck').show();
+		// 170510 수정 (배경 고정 스크립트 추가) - s
+		$('html,body').css("overflow","hidden")
+		// 170510 수정 (배경 고정 스크립트 추가) - e
+		return false;
+	}	
+	function fnClosePass(){
+		$('.idPassCheck').hide();
+		// 170510 수정 (배경 고정 스크립트 추가) - s
+		$('html,body').css("overflow","visible")
+		// 170510 수정 (배경 고정 스크립트 추가) - e
+		return false;
+	}
+	
+	// 2017 회원가입변경 - 휴대폰 번호 변경 pop
+	function changePhone(){
+		$('.chgPhoneNumberPop').show();
+		// 170510 수정 (배경 고정 스크립트 추가) - s
+		$('html,body').css("overflow","hidden")
+		// 170510 수정 (배경 고정 스크립트 추가) - e
+		return false;
+	}
+	$('.chgPhoneNumberPop').find('.btn_pop_close').click(function(){
+		$('.chgPhoneNumberPop').hide();
+		// 170510 수정 (배경 고정 스크립트 추가) - s
+		$('html,body').css("overflow","visible")
+		// 170510 수정 (배경 고정 스크립트 추가) - e
+	});
+
+	// 2017 회원가입변경 - 이메일 변경 pop
+	function changeEmailPop(){
+		$('.idDuplCheck').show();
+		// 170510 수정 (배경 고정 스크립트 추가) - s
+		$('html,body').css("overflow","hidden")
+		// 170510 수정 (배경 고정 스크립트 추가) - e
+		return false;
+	}	
+	function fnCloseEmail(){
+		$('.idDuplCheck').hide();
+		// 170510 수정 (배경 고정 스크립트 추가) - s
+		$('html,body').css("overflow","visible")
+		// 170510 수정 (배경 고정 스크립트 추가) - e
+		return false;
+	}
+
+	// 2017 회원가입변경 - 회원탈퇴 pop
+	function member_leave(){
+		$('.member_leave').show();
+		// 170510 수정 (배경 고정 스크립트 추가) - s
+		$('html,body').css("overflow","hidden")
+		// 170510 수정 (배경 고정 스크립트 추가) - e
+		return false;
+	}
+	$('.member_leave').find('.btn_pop_close').click(function(){
+		$('.member_leave').hide();
+		// 170510 수정 (배경 고정 스크립트 추가) - s
+		$('html,body').css("overflow","visible")
+		// 170510 수정 (배경 고정 스크립트 추가) - e
+	});
+
+	// 2017 회원가입변경 - 회원탈퇴완료 pop
+	function member_leave_complete(){
+		$('.member_leave').hide();
+		$('.member_leave_complete').show();
+		return false;
+	}
+	$('.member_leave_complete').find('.btn_pop_close').click(function(){
+		$('.member_leave_complete').hide();
+		// 170510 수정 (배경 고정 스크립트 추가) - s
+		$('html,body').css("overflow","visible")
+		// 170510 수정 (배경 고정 스크립트 추가) - e
+	});
+
+	$(function(){
+		// 2017 회원가입변경 - tool tip
+		$('.g-layer-pop').on('click', '.g-btn-question .question', function(){
+			$(this).next('.g-tool-tip').fadeIn();
+			return false;
+		});
+		$('.g-layer-pop').on('click', '.g-tool-tip .g-btn-close', function(){
+			$(this).parent('.g-tool-tip').fadeOut();
+			return false;
+		});
+	});
+	
+</script>
+<h2>회원정보 관리</h2>
+
+	<form method="post" name="frmInformation" id="frmInformation" action="/mobile/member/informationSubmit.lecs" onsubmit="return false">
+			<input type = "hidden" id="loginId" name="loginId" value="shine1092"/>
+			<input type = "hidden" id="informaionOrder" name="informaionOrder" value="0"/>
+			<input type = "hidden" id="runResult" name="runResult" value="1" />
+			<input type = "hidden" id="memberNo" name="memberNo" value="000000004288639" />
+			<input type = "hidden" id="EmailReceiveYN" name="EmailReceiveYN" value="N" />
+			<input type = "hidden" id="receptionCheckChange" name="receptionCheckChange" value="N" />
+			<input type = "hidden" id="EmailAddress" name="EmailAddress" value="shine1092@naver.com" />
+			<input type = "hidden" id="email1Address" name="email1Address" value="shine1092@naver.com" />
+			<input type = "hidden" id="smsReceiveYN" name="smsReceiveYN" value="N"/>
+			<input type = "hidden" id="smsReceiveCheckChange" name="smsReceiveCheckChange" value="N"/>
+			<input type = "hidden" id="cellphone" name="cellphone" value="01047629008" />
+			<input type = "hidden" id="PostNo" name="PostNo"/>
+			<input type = "hidden" id="deliverySerialNumber" name="deliverySerialNumber"/>
+			<input type = "hidden" id="adultSectionCode" name="adultSectionCode" value="19" />
+			<input type = "hidden" id="birthdayDurationTime" name="birthdayDurationTime" />
+			<input type="hidden" id="prop4" name="prop4" />
+<div class="member_info">
+	<!-- phase2 삭제
+	<div class="tabBtnArea">
+		<p><a href="#" class="tab01 on">기본정보</a><a href="#" class="tab02">패스워드</a></p>
+	</div>
+	-->	
+		<!-- 기본정보 s -->
+		<!-- 2017 회원가입변경 -->
+		<div class="tabConArea g-join-forms">
+			<div class="inputArea">
+				<dl>
+					<dt class="marL">아이디</dt>
+					<dd class="txt">mearinae</dd>
+				</dl>
+				<dl>
+					<dt class="marL">이름</dt>
+					<dd class="txt btn-add-type">
+						<!-- <span class="inp"><input type="text" id="" value="조유성" readonly="readonly" class="input_e w50p"></span> -->
+						<span class="txt">조유성</span>
+						<a href="#" class="btn_emailcheck"><span class="hide">본인 인증</span></a>
+						<p class="ico_help gray">이름 수정이 필요한 경우 본인 확인이 필요합니다.</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="marL">패스워드</dt>
+					<dd class="txt"><a href="#" class="btn_passcheck" onclick="changePass();"><span class="hide">패스워드 변경</span></a></dd>
+				</dl>
+				<dl>
+					<dt class="marL">휴대폰</dt>
+					<dd class="txt btn-add-type">
+						<span class="inp">010-3682-1336</span>
+						<a href="#" class="btn_emailcheck" onclick="changePhone();"><span class="hide">변경</span></a>
+						<p class="g-agreeCheck">
+							<input id="chk-agree-sms" name="" type="checkbox" class="check_area">
+							<label for="chk-agree-sms">쇼핑정보 SMS 수신 동의</label>
+						</p>
+					</dd>
+				</dl>
+				<dl>
+	                <dt class="marL">E-mail</dt>
+	                <dd>
+	                	<input type="email" id="viewEmail" value="shine1092@naver.com" readonly="readonly" class="input_e w50p">
+	                	<a href="#" onclick="changeEmailPop();" class="btn_emailcheck full"><span class="hide">변경</span></a> <!-- phase2 label 변경 -->
+	                    <p class="g-agreeCheck">
+							<input id="receptionCheck" name="receptionCheck" type="checkbox" class="check_area">
+							<label for="receptionCheck">쇼핑정보 E-mail 수신 동의</label>
+						</p>
+	                </dd>
+	            </dl>
+	            <dl>
+					<dt class="marL">생년월일</dt>
+					<dd class="txt">
+						<select id="birthdayDurationTimeYear" name="birthdayDurationTimeYear" onchange="checkAge(this.value);checkProp4Birth();">
+							<option value="" >년도</option>
+								<option value="2017" >2017</option>
+								<option value="2016" >2016</option>
+								<option value="2015" >2015</option>
+								<option value="2014" >2014</option>
+								<option value="2013" >2013</option>
+								<option value="2012" >2012</option>
+								<option value="2011" >2011</option>
+								<option value="2010" >2010</option>
+								<option value="2009" >2009</option>
+								<option value="2008" >2008</option>
+								<option value="2007" >2007</option>
+								<option value="2006" >2006</option>
+								<option value="2005" >2005</option>
+								<option value="2004" >2004</option>
+								<option value="2003" >2003</option>
+								<option value="2002" >2002</option>
+								<option value="2001" >2001</option>
+								<option value="2000" >2000</option>
+								<option value="1999" >1999</option>
+								<option value="1998" >1998</option>
+								<option value="1997" >1997</option>
+								<option value="1996" >1996</option>
+								<option value="1995" >1995</option>
+								<option value="1994" >1994</option>
+								<option value="1993" >1993</option>
+								<option value="1992" >1992</option>
+								<option value="1991" >1991</option>
+								<option value="1990" >1990</option>
+								<option value="1989" >1989</option>
+								<option value="1988" >1988</option>
+								<option value="1987" >1987</option>
+								<option value="1986" >1986</option>
+								<option value="1985" >1985</option>
+								<option value="1984" >1984</option>
+								<option value="1983" >1983</option>
+								<option value="1982" selected>1982</option>
+								<option value="1981" >1981</option>
+								<option value="1980" >1980</option>
+								<option value="1979" >1979</option>
+								<option value="1978" >1978</option>
+								<option value="1977" >1977</option>
+								<option value="1976" >1976</option>
+								<option value="1975" >1975</option>
+								<option value="1974" >1974</option>
+								<option value="1973" >1973</option>
+								<option value="1972" >1972</option>
+								<option value="1971" >1971</option>
+								<option value="1970" >1970</option>
+								<option value="1969" >1969</option>
+								<option value="1968" >1968</option>
+								<option value="1967" >1967</option>
+								<option value="1966" >1966</option>
+								<option value="1965" >1965</option>
+								<option value="1964" >1964</option>
+								<option value="1963" >1963</option>
+								<option value="1962" >1962</option>
+								<option value="1961" >1961</option>
+								<option value="1960" >1960</option>
+								<option value="1959" >1959</option>
+								<option value="1958" >1958</option>
+								<option value="1957" >1957</option>
+								<option value="1956" >1956</option>
+								<option value="1955" >1955</option>
+								<option value="1954" >1954</option>
+								<option value="1953" >1953</option>
+								<option value="1952" >1952</option>
+								<option value="1951" >1951</option>
+								<option value="1950" >1950</option>
+								<option value="1949" >1949</option>
+								<option value="1948" >1948</option>
+								<option value="1947" >1947</option>
+								<option value="1946" >1946</option>
+								<option value="1945" >1945</option>
+								<option value="1944" >1944</option>
+								<option value="1943" >1943</option>
+								<option value="1942" >1942</option>
+								<option value="1941" >1941</option>
+								<option value="1940" >1940</option>
+								<option value="1939" >1939</option>
+								<option value="1938" >1938</option>
+								<option value="1937" >1937</option>
+								<option value="1936" >1936</option>
+								<option value="1935" >1935</option>
+								<option value="1934" >1934</option>
+								<option value="1933" >1933</option>
+								<option value="1932" >1932</option>
+								<option value="1931" >1931</option>
+								<option value="1930" >1930</option>
+								<option value="1929" >1929</option>
+								<option value="1928" >1928</option>
+								<option value="1927" >1927</option>
+								<option value="1926" >1926</option>
+								<option value="1925" >1925</option>
+								<option value="1924" >1924</option>
+								<option value="1923" >1923</option>
+								<option value="1922" >1922</option>
+								<option value="1921" >1921</option>
+								<option value="1920" >1920</option>
+								<option value="1919" >1919</option>
+								<option value="1918" >1918</option>
+								<option value="1917" >1917</option>
+								<option value="1916" >1916</option>
+								<option value="1915" >1915</option>
+								<option value="1914" >1914</option>
+								<option value="1913" >1913</option>
+								<option value="1912" >1912</option>
+								<option value="1911" >1911</option>
+								<option value="1910" >1910</option>
+								<option value="1909" >1909</option>
+								<option value="1908" >1908</option>
+								<option value="1907" >1907</option>
+								<option value="1906" >1906</option>
+								<option value="1905" >1905</option>
+								<option value="1904" >1904</option>
+								<option value="1903" >1903</option>
+								<option value="1902" >1902</option>
+								<option value="1901" >1901</option>
+								<option value="1900" >1900</option>
+								 
+							
+						</select> 년 
+						<select id="birthdayDurationTimeMonth" name="birthdayDurationTimeMonth" onchange="checkProp4Birth();">
+							<option value="" >월</option>
+								<option value="1" > 1 </option>
+								<option value="2" > 2 </option>
+								<option value="3" > 3 </option>
+								<option value="4" > 4 </option>
+								<option value="5" > 5 </option>
+								<option value="6" selected> 6 </option>
+								<option value="7" > 7 </option>
+								<option value="8" > 8 </option>
+								<option value="9" > 9 </option>
+								<option value="10" > 10 </option>
+								<option value="11" > 11 </option>
+								<option value="12" > 12 </option>
+							
+						</select> 월 
+						<select id="birthdayDurationTimeDay" name="birthdayDurationTimeDay" onchange="checkProp4Birth();">
+							<option value="" >일</option>
+								<option value="1" > 1 </option>
+								<option value="2" > 2 </option>
+								<option value="3" > 3 </option>
+								<option value="4" > 4 </option>
+								<option value="5" > 5 </option>
+								<option value="6" > 6 </option>
+								<option value="7" > 7 </option>
+								<option value="8" > 8 </option>
+								<option value="9" > 9 </option>
+								<option value="10" > 10 </option>
+								<option value="11" > 11 </option>
+								<option value="12" > 12 </option>
+								<option value="13" > 13 </option>
+								<option value="14" > 14 </option>
+								<option value="15" > 15 </option>
+								<option value="16" > 16 </option>
+								<option value="17" > 17 </option>
+								<option value="18" > 18 </option>
+								<option value="19" > 19 </option>
+								<option value="20" > 20 </option>
+								<option value="21" > 21 </option>
+								<option value="22" selected> 22 </option>
+								<option value="23" > 23 </option>
+								<option value="24" > 24 </option>
+								<option value="25" > 25 </option>
+								<option value="26" > 26 </option>
+								<option value="27" > 27 </option>
+								<option value="28" > 28 </option>
+								<option value="29" > 29 </option>
+								<option value="30" > 30 </option>
+								<option value="31" > 31 </option>
+							
+						</select> 일
+						<p class="g-line2-chk">
+							<input type="radio" id="lunarAndSolarSectionCode_1" name="lunarAndSolarSectionCode" value="S" checked="checked"/>
+							<label for="lunarAndSolarSectionCode_1"><span>양력</span></label>
+
+							<input type="radio" id="lunarAndSolarSectionCode_2" name="lunarAndSolarSectionCode" value="L"  />
+							<label for="lunarAndSolarSectionCode_2"><span>음력</span></label>
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="marL">성별</dt>
+					<dd>
+						<div class="g-line2-chk">
+							<input type="radio" id="genderSectionCode_1" data-role="none" name="genderSectionCode" value="F" checked="checked" />
+							<label class="radioType first" for="genderSectionCode_1"><span>여성</span></label>
+							<input type="radio" id="genderSectionCode_2" data-role="none" name="genderSectionCode" value="M" />
+							<label class="radioType" for="genderSectionCode_2"><span>남성</span></label>
+
+							<!-- <input type="radio" id="genderSectionCode" name="genderSectionCode" value="F"  /> 여성
+							<input type="radio" id="genderSectionCode" name="genderSectionCode" value="M" checked="checked" /> 남성 -->
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="marL">개인정보<br>보관 기간</dt>
+					<dd>
+						<div class="g-period-chk">
+							<input type="radio" id="year01" data-role="none" name="prsnInfoAvalTermCode" value="01" checked="checked" />
+							<label class="radioType" for="year01"><span>1년</span></label>
+
+							<input type="radio" id="year02" data-role="none" name="prsnInfoAvalTermCode" value="02" />
+							<label class="radioType" for="year02"><span>3년</span></label>
+
+							<input type="radio" id="year03" data-role="none" name="prsnInfoAvalTermCode" value="03" />
+							<label class="radioType first" for="year03"><span>영구 보관</span></label>
+						</div>
+
+						<ul>
+						<li class="txt_mem_info">
+							정보통신망 이용촉진 및 정보 보호 등에 관한 법률 제29조 제2항에 따라 설정된 개인정보 보관 기간 동안 NIKE.COM의 사용 이력이 없는 경우 휴면계정으로 되며, 계정의 개인정보는 안전하게 분리 보관 처리됩니다.
+						</li>
+						<li class="txt_mem_info">개인정보 보관 기간 설정은 회원정보 관리에서 수정 가능합니다.</li>
+						<li class="txt_mem_info">NIKE.COM 사용 이력이 없어 휴면 계정이 된 경우 계정 활성화 요청에 의해 활성화 가능합니다.</li>
+						</ul>
+
+					</dd>
+				</dl>
+			</div>
+			<div class="btn_area">
+				<!-- phase2 버튼 순서 변경 label 변경 -->
+				<a href="#" class="btn_cancel ui-link"><span class="hide">취소</span></a>
+				<a href="#" class="btn_ok ui-link" onclick="InfomationUpdate();"><span class="hide">변경</span></a>
+				<a href="#" class="btn_leave ui-link" onclick="member_leave();"><span class="hide">회원 탈퇴</span></a>
+			</div>
+		</div>
+		</div>
+		<!--// 기본정보 e --> 
+
+
+<!-- 2017 회원가입변경 - 회원탈퇴 팝업 popup -->
+<section class="member_leave" id="">
+	<!-- section s -->
+	<section>
+		<h1>회원 탈퇴</h1>
+		<p class="Leave_cmt">NIKE.COM 회원 탈퇴 시 아래 안내 사항을 반드시 확인해 주세요.</p>
+		<ul class="Leave_info">
+			<li>회원 정보는 탈퇴 시 즉시 삭제됩니다.</li>
+			<li>회원 탈퇴 후 30일 간은 서비스 부정이용 방지를 위하여 재가입이 불가합니다.</li>
+			<li>전자상거래 이용 후 탈퇴 시 주문 정보는 교환/반품/환불 및 사후 처리(A/S) 등을 위하여 전자상거래 <br />등에서의 소비자 보호에 관한 법률에 의거, 일반 정보 보호 정책에 따라 관리됩니다.</li>
+			<li>탈퇴 후에는 어떠한 방법으로도 삭제된 회원 정보를 복원할 수 없습니다.</li>
+		</ul>
+		<div class="Leave_btn_box">
+			<a href="#" class="Leave_btn2 ui-link">취소</a>
+			<a href="#" class="Leave_btn1 ui-link" onclick="member_leave_complete();">탈퇴</a>
+		</div>
+		<a href="#" class="btn_pop_close"><span class="hide">닫기</span></a>
+	</section>
+</section>
+<!-- // 2017 회원가입변경 - 회원탈퇴 팝업 popup -->
+
+<!-- 2017 회원가입변경 - 회원탈퇴완료 팝업 popup -->
+<section class="member_leave_complete" id="">
+	<!-- section s -->
+	<section>
+		<h1>회원 탈퇴 완료</h1>
+		<p class="Leave_cmt_big">회원 탈퇴가 완료되었습니다. <br />NIKE.COM을 이용해 주셔서 감사합니다.</p>
+		<div class="Leave_btn_box">
+			<a href="#" class="Leave_btn3 ui-link">확인</a>
+		</div>
+		<a href="#" class="btn_pop_close"><span class="hide">닫기</span></a>
+	</section>
+</section>
+<!-- // 2017 회원가입변경 - 회원탈퇴완료  팝업 popup -->
+
+
+
+<!-- 2017 회원가입변경 - 휴대폰번호변경 popup -->
+<section class="chgPhoneNumberPop g-layer-pop" id="">
+	<!-- section s -->
+	<section class="pop_login">
+		<!-- header s -->
+		<div class="header">
+			<h1>휴대폰 번호 변경</h1>
+			<a href="#" class="btn_pop_close"><span class="hide">닫기</span></a>
+		</div>
+		<!-- //header e -->
+		<!-- contents s -->
+		<div class="contents pad00" >
+			<p class="g-message">휴대폰 번호를 변경하려면 휴대폰 인증이 필요 합니다.</p>
+			<div class="inputArea">
+				<dl>
+					<dd>
+						<div class="clear">
+							<span class="inp">
+								<!-- 170530 추가개선 : placeholder 수정 -->
+								<input id="" name="" type="text" class="input_e ui-input-text ui-body-c ui-corner-all ui-shadow-inset error" maxlength="" autocomplete="off" placeholder="‘-’ 표시 없이 입력해 주세요.">
+								<!-- // 170530 추가개선 : placeholder 수정 -->
+							</span>
+							<span class="btn"><a href="#" class="g-btn-type gray size-s">인증번호 받기</a></span>
+						</div>
+
+						<p class="error_alert">휴대폰 번호를 정확하게 입력해 주세요.</p>
+					</dd>
+				</dl>
+				<dl>
+					<dd>
+						<input type="password" id="changePassword" name="changePassword" class="input_e ui-input-text ui-body-c ui-corner-all ui-shadow-inset" maxlength="12" autocomplete="off" placeholder="인증번호 6자리를 입력해 주세요">
+						<p class="error_alert">인증번호를 정확히 입력해 주세요. <span class="time-counter">3:00</span></p>
+						<p class="error_alert">인증번호 입력 시간이 초과 되었습니다. <br>인증번호 받기 버튼을 클릭하여 다시 인증번호를 입력 해 주세요.</p>
+
+						<div class="error_alert g-btn-question">
+							<a href="#" class="question">인증번호가 오지 않나요?</a>
+							<div class="g-tool-tip">
+								<span class="arr"><img src="images/g_arr_tooltip.png" alt=""></span>
+								<p class="con">
+									스팸 메시지함을 확인해 주세요. <br>
+									스팸 문자로 등록되어 있지 않다면, 다시 <br>
+									한 번 ‘인증번호 받기’를 클릭 해주세요
+								</p>
+								<a href="#" class="g-btn-close"><img src="images/g_tooltip_close.gif" style="width: 12px" alt=""></a>
+							</div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="btn_area">
+				<a href="#" class="btn_cancel ui-link"><span class="hide">취소</span></a>
+				<a href="#" class="btn_ok ui-link"><span class="hide">변경</span></a>
+			</div>			
+		</div>
+		<!-- //contents e -->
+	</section>
+</section>
+<!-- //2017 회원가입변경 - 휴대폰번호변경 popup -->
+
+<!-- 2017 회원가입변경 - 패스워드변경 popup -->
+<!-- phase2 password 변경 popup -->
+<section class="idPassCheck g-layer-pop" id="emailDuplCheck">
+	<!-- section s -->
+	<section class="pop_login">
+		<!-- header s -->
+		<div class="header">
+			<h1>패스워드 변경</h1>
+			<a href="#" class="btn_pop_close"><span class="hide">닫기</span></a>
+		</div>
+		<!-- //header e -->
+		<!-- contents s -->
+		<div class="contents pad00" >
+			<div class="inputArea">
+				<dl>
+					<dt class="marL">기존 패스워드</dt>
+					<dd>
+						<input id="existingPassword" name="existingPassword" type="password" class="input_e w80p ui-input-text ui-body-c ui-corner-all ui-shadow-inset error" maxlength="12" autocomplete="off" placeholder="기존 패스워드 입력">
+						<p class="error_alert">패스워드가 맞지 않습니다. 다시 입력해 주세요.</p>
+						<!-- <p id="spexistingPassword"></p> -->
+					</dd>
+				</dl>
+				<dl>
+					<dt class="marL">신규 패스워드</dt>
+					<dd>
+						<input type="password" id="changePassword" name="changePassword" class="input_e w80p ui-input-text ui-body-c ui-corner-all ui-shadow-inset" maxlength="12" autocomplete="off" placeholder="영문 + 숫자 + 특수문자 조합 8~12자리 이내">
+						<p class="error_alert">패스워드는 영문+ 숫자+ 특수문자 조합 <br>8~12자리 이내로 입력해 주세요.</p>
+						<!-- <p class="fs12">보안등급 : <span class="pointRe"></span></p>
+						<p id="spchangePassword"></p> -->
+					</dd>
+				</dl>
+				<dl>
+					<dt class="marL">패스워드 확인</dt>
+					<dd>
+						<!-- 170530 추가개선 : 수정 '위에 > 위의' -->
+						<input type="password" id="changePasswordCheck" name="changePasswordCheck" class="input_e w80p ui-input-text ui-body-c ui-corner-all ui-shadow-inset" maxlength="12" autocomplete="off" placeholder="위의 패스워드를 다시 입력해 주세요.">
+						<!-- // 170530 추가개선 : 수정 '위에 > 위의' -->
+						<p class="error_alert">입력한 패스워드와 일치하지 않습니다.</p>
+						<!-- <p id="spchangePasswordCheck"></p> -->
+					</dd>
+				</dl>
+			</div>
+			<div class="btn_area">
+				<a href="#" class="btn_ok ui-link" onclick="passwordCheck();"><span class="hide">변경</span></a>
+				<a href="#" class="btn_cancel ui-link" ><span class="hide">취소</span></a>
+			</div>
+			
+		</div>
+		<!-- //contents e -->
+	</section>
+</section>
+<!-- //phase2 password 변경 popup -->
+
+	</form>
+<!-- //container e -->
+<form method="post" name="chkEmailForm" id="chkEmailForm" action="/mobile/member/informationSubmit.lecs" onsubmit="return false">
+
+	<!-- 2017 회원가입변경 - E-mail 중복체크 popup -->
+	<section class="idDuplCheck g-layer-pop" id="emailDuplCheck">
+
+		<section class="pop_login">
+			<!-- header s -->
+			<div class="header">
+				<h1>E-mail 주소 확인</h1> <!-- phase2 str 변경 -->
+				<a href="javascript:fnCloseEmail();" class="btn_pop_close"><span class="hide">닫기</span></a>
+			</div>
+			<!-- //header e --> 
+			
+			<!-- contents s -->
+			<div class="contents pad00" id="dupEmailInfoArea">
+				<div class="conBox">
+					<p id="dupMsg" class="idpw_dsc">새로운 E-mail 주소를 입력하신 후, 중복 확인 버튼을 클릭해 주세요.</p>
+				</div>
+				<div class="idcheck">
+					<dl>
+						<dt>E-mail 주소</dt>
+						<dd>
+							<!-- 170530 추가개선 : placeholder 수정 -->
+							<input id="chkEmailAddr" name="email1Address" type="text" class="input_e w100p error" placeholder="E-mail을 입력해 주세요.">
+							<!-- // 170530 추가개선 : placeholder 수정 -->
+							<p class="error_alert">사용중인 E-mail입니다.</p>
+							<p class="confirm_alert">다른 E-mail 주소를 입력해 주세요.</p>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="btn_area full">
+					<a href="#" class="btn_ok ui-link gray"><span class="hide">중복확인</span></a>
+					<a href="javascript:fnCloseEmail();" class="btn_cancel ui-link" ><span class="hide">취소</span></a>
+				</div>
+				<div class="idcheck">
+					<dl>
+						<dt>E-mail 주소</dt>
+						<dd>
+							<!-- 170530 추가개선 : placeholder 수정 -->
+							<input id="chkEmailAddr" name="email1Address" type="text" class="input_e w100p error" placeholder="E-mail을 입력해 주세요.">
+							<!-- // 170530 추가개선 : placeholder 수정 -->
+							<p class="error_alert">사용 가능한 E-mail입니다.</p>
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="btn_area full">
+					<a href="#" class="btn_ok ui-link gray"><span class="hide">중복확인</span></a>
+					<div class="btn_area">
+						<a href="javascript:fnCloseEmail();" class="btn_cancel ui-link"><span class="hide">취소</span></a>
+						<a href="javascript:fnCloseEmail();" class="btn_ok ui-link"><span class="hide">사용하기</span></a>
+					</div>
+				</div>
+
+			</div>
+			<!-- //contents e -->
+			
+		</section>
+		<!-- //section e -->
+	</section>
+</form>
+<iframe name="submitFrame" style="width:0;height:0" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+
+</div>
+<!-- //container e --> 
+
+<div id="popupLayer"></div> <!-- 환불받기 레이어, 카드결제레이어, 계좌변경 레이어 -->
+<div id="commonPaymentLayer" style="display: none; position:absolute; top:0; background:#fff; width:100%; z-index:10000;"></div>
+
+<!-- footer s -->
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- STORE FOOTER FROM BO START -->
+	<footer class="global_mo_footer">
+		<div class="global_footer_menu">
+	<div>
+		<ul id="footerMenuUL">
+			<li style="width: 33%">
+				<a href="http://mlecs.nike.co.kr/mobile/mypage/order/list.lecs" id="dev_login_3">주문배송</a></li>
+			<li style="width: 33%">
+				<a class="ui-link" href="javascript:nikeInfoShop();">매장안내</a></li>
+			<li style="width: 33%">
+				<a href="http://mlecs.nike.co.kr/mobile/helpdesk/mainCustomer.lecs">고객센터</a></li>
+		</ul>
+	</div>
+</div>
+<div class="global_footer_lang">
+	<p>
+		<img src="https://msimage.nike.co.kr/mobile/new/ico-flag.png" /><a href="http://www.nike.com/language_tunnel">대한민국</a></p>
+	<p>
+		ⓒ 2017&nbsp;Nike, Inc. All Rights Reserved</p>
+	<ul>
+		<li>
+			<a href="http://m.nike.co.kr/mobile/display/rules.lecs?tach=1">이용약관</a></li>
+		<li>
+			<a href="http://m.nike.co.kr/mobile/display/rules.lecs?tach=2"><strong>개인정보처리방침</strong></a></li>
+	</ul>
+</div>
+<div class="global_footer_info">
+	<div class="global_inner">
+		<div>
+			(유)나이키코리아</div>
+		<div>
+			서울시 강남구 테헤란로 152&nbsp;(역삼동, 강남파이낸스센터 31층)<br />
+			대표 : 데이빗욱환송<br />
+			통신판매업신고번호 : 2011-서울강남-03461<br />
+			사업자등록번호 : 220-88-09068<br />
+			고객센터 전화문의: <a href="tel:080-022-0182">080-022-0182</a><!-- 170112_수정 --><br />
+			E-mail : service@nike.co.kr<br />
+			호스팅 서비스 사업자 : (주)롯데닷컴<br />
+			개인정보관리책임자 : 정순호&nbsp;&nbsp;정보보호최고책임자 : 이희준</div>
+		<div>
+			나이키 공식 홈페이지는 롯데닷컴 LECS를 사용하고 있습니다.</div>
+	</div>
+</div>
+<div class="global_footer_info2">
+	<p>
+		<span><a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank">사업자정보확인</a></span><span><a href="http://www.nike.co.kr/dispop/popList.lecs?popUpNo=02" target="_blank">KSNET구매안전서비스안내</a></span></p>
+</div>
+	</footer>
+	<!-- STORE FOOTER FROM BO FINISH -->
+	
+
+	<input type="hidden" id="pgName" value="Member>RegiInfo>Modifi" />
+	<input type="hidden" id="pgType" value="Mypage" />
+	<input type="hidden" id="modiProp" value="" /> 
+	<input type="hidden" id="eventResult" value="" />
+<!-- 사스 스크립트 -->
+<!--웹로그 수집 스크립트 추가 -->
+
+<iframe name="submitFrame" style="display:none" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+<iframe name="downloadFrame" style="display:none" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+<iframe name="realNameFrame" style="display:none" src="about:blank" width="0" height="0" frameborder="0"></iframe>
+<!-- 웹로그 스크립트 시작 -->
+
+	
+	
+
+
+
+<!-- 구글 m_페이지별  클릭수 등 트래픽 관련 분석 코드 2013.10.15 by.Melody -->
+
+	
+
+<!-- Google Code for &#47532;&#47560;&#52992;&#54021; &#53468;&#44536; Remarketing List-->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<!-- [ceres:4767] 나이키 사이트 카탈리스트 추가...2013.10.29... Cesil Start  -->
+
+<!-- Ceres-id : 6552 : Visury Script 2014.11.13 by Choi, Jin-Hyoung -->
+ 
+
+<!-- 150820 : 리타켓팅 다음DDN -->
+<!-- //150820 : 리타켓팅 다음DDN -->
+
+<!--2016.03.23 TTD이용자 데이터 수집 스크립트  -->
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Mobile_리마케팅
+URL of the webpage where the tag is expected to be placed: http://www.nike.co.kr
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 01/01/2017
+-->
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+<!-- //footer e -->
+
+
+<!-- </div> --><!-- ceres-6347 : [나이키모바일] GNB 변경건 : 신규퍼블리싱에서 삭제함. Raymon -->
+
+</body>
+<!-- from: mlpswas2 -->
+</html>

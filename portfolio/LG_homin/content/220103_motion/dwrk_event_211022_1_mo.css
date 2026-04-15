@@ -1,0 +1,32 @@
+/* ------------------------------------------------------
+COMMON
+------------------------------------------------------ */
+.hidden { position: absolute; overflow: hidden; top: 0; left: 0; width: 1px; height: 1px; text-indent: -9999em; }
+
+/* ------------------------------------------------------
+rental care apply
+------------------------------------------------------ */
+.dwrk_event_211022_1{width: 100%;position: relative;overflow:hidden;}
+.dwrk_event_211022_1 #dwrk_ttlArea{position: absolute;top: 0;left: 0;width: 100%;}
+.dwrk_event_211022_1 #dwrk_ttlArea .dwrk_ttlText01{position: absolute;top: 0;left: 0;width: 100%;height: 0;padding-top: 5%;margin-top: 16.5%;}
+.dwrk_event_211022_1 #dwrk_ttlArea .dwrk_ttlText01:after{content:'';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url(./images/dwrk_event_211022_1_ttlText01_mo.png) no-repeat left top / 100% auto;-webkit-background-size:100% auto;-moz-background-size:100% auto;-o-background-size:100% auto;background-size:100% auto;opacity:0;-webkit-transform: translateY(20px);-moz-transform: translateY(20px);-ms-transform: translateY(20px);transform: translateY(20px);-webkit-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-moz-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-o-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-webkit-transition-delay: 0s;-moz-transition-delay: 0s;-o-transition-delay: 0s;transition-delay: 0s;}
+.dwrk_event_211022_1 #dwrk_ttlArea .dwrk_ttlText02{position: absolute;top: 0;left: 0;width: 100%;height: 0;padding-top: 13%;margin-top: 22%;}
+.dwrk_event_211022_1 #dwrk_ttlArea .dwrk_ttlText02:after{content:'';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url(./images/dwrk_event_211022_1_ttlText02_mo_b.png) no-repeat left top / 100% auto;-webkit-background-size:100% auto;-moz-background-size:100% auto;-o-background-size:100% auto;background-size:100% auto;opacity:0;-webkit-transform: translateY(20px);-moz-transform: translateY(20px);-ms-transform: translateY(20px);transform: translateY(20px);-webkit-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-moz-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-o-transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;transition: cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;-webkit-transition-delay: 0.5s;-moz-transition-delay: 0.5s;-o-transition-delay: 0.5s;transition-delay: 0.5s;}
+
+.dwrk_event_211022_1 #dwrk_ttlArea.on .dwrk_ttlText01:after,
+.dwrk_event_211022_1 #dwrk_ttlArea.on .dwrk_ttlText02:after{opacity:1;-moz-transform: translateY(0px);-webkit-transform: translateY(0px);-ms-transform: translateY(0px);transform: translateY(0px);}
+
+.dwrk_event_211022_1 .particle01{animation:particle 2s linear 1s infinite;position: absolute;top: 0;left: 0;width: 100%;height: 0;padding-top: 45%;z-index:1;background: url(./images/dwrk_event_211022_1_particle1_mo.png) no-repeat left top;opacity:0;}
+.dwrk_event_211022_1 .particle02{animation:particle 2s linear infinite;position: absolute;top: 0;left: 0;width: 100%;height: 0;padding-top: 45%;z-index:1;background: url(./images/dwrk_event_211022_1_particle2_mo.png) no-repeat left top;opacity:0;}
+.dwrk_event_211022_1 .dwrk_cttLink01{position: absolute;top: 0;left: 16%;width: 68%;height: 0;padding-top: 13%;margin: 395.2% 0 0 0;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+.dwrk_event_211022_1 .dwrk_cttLink02{position: absolute;top: 0;left: 5%;width: 44%;height: 0;padding-top: 12%;margin: 1017.5% 0 0 0;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+.dwrk_event_211022_1 .dwrk_cttLink03{position: absolute;top: 0;left: 51%;width: 44%;height: 0;padding-top: 12%;margin: 1017.5% 0 0 0;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+.dwrk_event_211022_1 .dwrk_cttLink04{position: absolute;top: 0;left: 16%;width: 68%;height: 0;padding-top: 13%;margin: 564.2% 0 0 0;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+.dwrk_event_211022_1 .dwrk_cttLink05{position: absolute;top: 0;left: 16%;width: 68%;height: 0;padding-top: 13%;margin: 583.2% 0 0 0;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+.dwrk_event_211022_1 .dwrk_cttLink06{position: absolute;top: 0;left: 16%;width: 68%;height: 0;padding-top: 13%;margin: 596.9% 0 0 0;cursor: pointer;z-index:1;background: #000;opacity:0;filter:alpha(opacity:'0');}
+
+@keyframes particle {
+	0% {opacity:0}
+	50% {opacity:1}
+	100% {opacity:0}
+}

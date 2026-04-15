@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+/* CSS Document */
+@font-face {font-family:'Roboto-Medium';
+src: url('https://www.linefriends.com/font/webfont/Roboto-Medium.eot');
+src: url('https://www.linefriends.com/font/webfont/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+url('https://www.linefriends.com/font/webfont/Roboto-Medium.woff') format('woff'),
+url('https://www.linefriends.com/font/webfont/Roboto-Medium.ttf') format('truetype')}
+
+@font-face {font-family:'Roboto-bold';
+src: url('https://www.linefriends.com/font/webfont/Roboto-bold.eot');
+src: url('https://www.linefriends.com/font/webfont/Roboto-bold.eot?#iefix') format('embedded-opentype'),
+url('https://www.linefriends.com/font/webfont/Roboto-bold.woff') format('woff'),
+url('https://www.linefriends.com/font/webfont/Roboto-bold.ttf') format('truetype')}
+
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button{margin:0;padding:0}
+body,input,textarea,select,table{font-family:'Roboto-Medium',helvetica,'맑은고딕',Malgun Gothic,Apple SD Gothic Neo,applegothic,'돋움',Dotum}
+img,fieldset{border:0}
+li{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:none}
+.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;text-indent:-10000px}
+
+html,body{height:100%}
+body{position:relative}
+
+#content{height:100%}
+#wrap{position:relative;width:100%;height:100%;text-align:center;overflow:hidden;}
+#container{width:100%;height:100%;min-width:1200px;overflow:auto}
+.content .movie_dim{position:fixed;top:0;left:0;z-index:10;width:100%;height:100%;background:url(../images/bg_dim.png) repeat 0 0}
+
+/*pagination*/
+.nav{display:none}
+.nav.on{display:block;position:fixed;right:45px;top:35px;;z-index:10}
+.nav li{width:11px;padding:9px 0}
+.nav a{display:block;cursor:pointer;text-decoration:none}
+.nav .nav_dot.on{height:31px}
+.nav .nav_dot a{display:block;position:relative;overflow:hidden;border-radius:6px;width:11px;height:11px;background:rgba(0, 0, 0, 0.2);}
+.nav .nav_dot:hover a{background-color:#fff}
+.nav .nav_dot.on a{width:31px;height:31px;top:50%;left:50%;margin:-15px 0 0 -17px;background:transparent url(../images/sp_burger_v5.png) 0 -350px}
+
+/* language exchange */
+.lang_share{display:block;position:absolute;top:40px;right:40px;z-index:15;width:87px;height:42px;font-size:16px;text-align:left}
+.lang_share .lang_select{display:block;position:relative;height:42px;background:url(../images/sp_burger_v5.png) no-repeat 0 0;color:#fff;opacity:0.8;filter:alpha(opacity=80);line-height:42px;text-align:center}
+.lang_share .lang_select:hover,.lang_share.on .dropbox li.on a{opacity:1;filter:alpha(opacity=100)}
+.lang_share.on .lang_select{display:none}
+.lang_share .dropbox{display:none}
+.lang_share.on .dropbox{display:block;height:72px;padding:10px 0 5px;background:url(../images/sp_burger_v5.png) no-repeat -331px 0}
+.lang_share.on .dropbox li{height:23px;text-align:center}
+.lang_share.on .dropbox li a{display:block;line-height:22px;color:#fff;opacity:0.8;filter:alpha(opacity=80)}
+
+.bind_cont{position:relative;height:100%}
+.content{overflow:hidden;position:absolute;top:0;left:0;right:0;width:100%;height:100%;z-index:1;background-color:#fff;-webkit-transition:-webkit-transform .45s ease,height .25s ease;transition:transform .45s ease,height .25s ease}
+.content.off{-webkit-transform:translateY(-100%);transform:translateY(-100%)}
+
+
+.content .btn_scoll_down{display:block;position:absolute;bottom:40px;left:50%;z-index:15;width:84px;height:80px;background:url(../images/sp_burger_v5.png) no-repeat 0 -150px;margin-left:-41px}
+.content .spot_content{position:absolute;top:50%;left:50%;z-index:15;width:500px;height:346px;margin:-173px 0 0 -250px}
+.content .spot_content .btn_play_link{display:block;width:100%;height:100%}
+.content .spot_content img{vertical-align:top;margin-bottom:28px}
+.content .spot_content .btn_text{position:relative;font-size:20px;font-weight:bold;color:#fff}
+.content .spot_content .btn_text:after{overflow:hidden;position:absolute;top:2px;right:-30px;width:22px;height:22px;content:'';background:url(../images/sp_burger_v5.png) no-repeat -331px -113px}
+.content .content_one{position:relative;width:100%;height:100%;text-align:center;background-size:cover;background-repeat:no-repeat;background-position:50% 50%}
+.content .content_sec{position:relative;width:100%;height:100%;text-align:center;background-color:#f99f53}
+
+
+.bg1{background:url(../images/1.jpg) 50% 50% no-repeat;background-size:cover}
+.bg2{background:url(../images/2.jpg) 50% 50% no-repeat;background-size:cover}
+.bg3{background:url(../images/3.jpg) 50% 50% no-repeat;background-size:cover}
+.bg_pack{background-image:url(../images/img1_v3.jpg) !important;background-position:50% 50%;background-size:cover}
+.bg_pack2{background-image:url(../images/img2_v3.jpg) !important;background-position:50% 50%;background-size:cover}
+.bg_pack3{background-image:url(../images/img3_v3.jpg) !important;background-position:50% 50%;background-size:cover}
+
+
+
+/*영어 일본어일 경우*/
+html[lang="en"] .bg1,html[lang="ja"] .bg1{background:url(../images/en1.jpg) 50% 50% no-repeat;background-size:cover}
+html[lang="en"] .bg2,html[lang="ja"] .bg2{background:url(../images/en2.jpg) 50% 50% no-repeat;background-size:cover}
+html[lang="en"] .bg3,html[lang="ja"] .bg3{background:url(../images/en3.jpg) 50% 50% no-repeat;background-size:cover}
+
+html[lang="en"] .bg_pack,html[lang="ja"] .bg_pack{background-image:url(../images/page5/img1_en_v3.jpg) !important;background-position:50% 50%;background-size:cover}
+html[lang="en"] .bg_pack2,html[lang="ja"] .bg_pack2{background-image:url(../images/page5/img2_en_v3.jpg) !important;background-position:50% 50%;background-size:cover}
+html[lang="en"] .bg_pack3,html[lang="ja"] .bg_pack3{background-image:url(../images/page5/img3_en_v3.jpg) !important;background-position:50% 50%;background-size:cover}
+
+
+/*중국어일 경우*/
+html[lang="zh"] .bg1,html[lang="zh-Hans"] .bg1,html[lang="zh-Hant"] .bg1{background:url(../images/ch1.jpg) 50% 50% no-repeat ;background-size:cover}
+html[lang="zh"] .bg2,html[lang="zh-Hans"] .bg2,html[lang="zh-Hant"] .bg2{background:url(../images/ch2.jpg) 50% 50% no-repeat;background-size:cover}
+html[lang="zh"] .bg3,html[lang="zh-Hans"] .bg3,html[lang="zh-Hant"] .bg3{background:url(../images/ch3.jpg) 50% 50% no-repeat;background-size:cover}
+
+html[lang="zh"] .bg_pack,html[lang="zh-Hans"] .bg_pack,html[lang="zh-Hant"] .bg_pack{background-image:url(../images/page5/img1_ch_v3.jpg) !important;background-position:50% 50%;background-size:cover}
+html[lang="zh"] .bg_pack2,html[lang="zh-Hans"] .bg_pack2,html[lang="zh-Hant"] .bg_pack2{background-image:url(../images/page5/img2_ch_v3.jpg) !important;background-position:50% 50%;background-size:cover}
+html[lang="zh"] .bg_pack3,html[lang="zh-Hans"] .bg_pack3,html[lang="zh-Hant"] .bg_pack3{background-image:url(../images/page5/img3_ch_v3.jpg) !important;background-position:50% 50%;background-size:cover}
+
+/*tab*/
+.buger_tab .box_tab,.buger_tab.on .tab_burger{display:none}
+.buger_tab.on .box_tab{display:block;position:absolute;top:0;left:0;z-index:20;width:440px;height:100%;min-height:550px;background:url(../images/bg_burger_tab_v2.png) repeat-y 0 0}
+.buger_tab .tab_burger{display:block;position:fixed;z-index:20;top:40px;left:30px;width:80px;height:80px;background:url(../images/sp_burger_v5.png) no-repeat 0 -49px;cursor:pointer}
+.buger_tab .tab_burger:after{position:absolute;top:0;left:0;width:80px;height:80px;background:url(../images/sp_burger_v5.png) no-repeat -101px -49px;content:'';
+-webkit-transition:-webkit-transform 0.25s  ease;transition:transform 0.25s  ease}
+.buger_tab .tab_burger:hover:after{-webkit-transform:scaleY(1.1);transform:scaleY(1.1)}
+.buger_tab.on .dim{display:block;position:fixed;top:0;left:0;z-index:15;width:100%;height:100%;background-color:#000;opacity:.7;filter:alpha(opacity=70);-moz-opacity:.7}
+.buger_tab.on .tab_list{display:block;width:380px;padding:90px 30px 0 30px}
+.box_tab .tab_list li{position:relative;padding:8px 0}
+.box_tab .tab_list li.line{margin-top:32px}
+.box_tab .tab_list li.line:before{position:absolute;overflow:hidden;top:-17px;left:20px;width:20px;height:2px;content:'';background-color:#fff}
+.box_tab .tab_list li a{display:block;padding-left:18px;color:#fff;font-size:36px;text-align:left;letter-spacing:-1px}
+.box_tab .tab_list li a:hover{color:#009ba6}
+.buger_tab.on .lk_bottom{display:block;position:absolute;bottom:50px;left:49px;width:260px;height:36px}
+.box_tab .lk_bottom em{display:inline-block;float:left;width:98px;padding-right:14px;color:#e69700;font-size:30px;font-weight:bold;line-height:36px}
+.box_tab .lk_bottom ul{overflow:hidden}
+.box_tab .lk_bottom li{float:left;width:36px;height:36px;margin:0 4px;background:url(../images/sp_burger_v5.png) no-repeat 0 -250px;overflow:hidden;line-height:1000px;color:transparent}
+.box_tab .lk_bottom li a{display:block;height:36px}
+.box_tab .lk_bottom li:nth-child(2){background-position:-44px -250px}
+.box_tab .lk_bottom li:nth-child(3){background-position:-88px -250px}
+.box_tab .lk_bottom li:nth-child(4){background-position:-132px -250px}
+.box_tab .lk_bottom li:hover{background-position:0 -302px}
+.box_tab .lk_bottom li:nth-child(2):hover{background-position:-44px -302px}
+.box_tab .lk_bottom li:nth-child(3):hover{background-position:-88px -302px}
+.box_tab .lk_bottom li:nth-child(4):hover{background-position:-132px -302px}
+.box_tab .lk_bottom.ch_lk{left:47px;width:320px}
+.box_tab .lk_bottom.ch_lk em{width:120px;letter-spacing:-1px}
+.buger_tab.on .buger_tab_close{display:block;overflow:hidden;position:absolute;top:16px;right:16px;width:60px;height:60px;background:url(../images/sp_burger_v5.png) no-repeat -186px -174px;line-height:1000px;color:transparent}
+.buger_tab.on .box_icon{display:block}
+.buger_tab.on .box_icon [class*=tab_icon]{position:absolute;top:33px;left:20px;width:86px;height:78px;background:url(../images/sp_burger_v5.png) no-repeat -202px -250px}
+.buger_tab.on .box_icon .tab_icon2{top:530px;left:302px;width:92px;height:73px;background-position:-202px -350px}
+[class*=intro_sec]{vertical-align:middle;text-align:center}
+[class*=intro_sec] .insta_area{position:absolute;overflow:hidden;width:100%;height:100%;top:0;left:0}
+[class*=intro_sec] .insta_area .img_cube{display:table;position:relative;float:left;table-layout:fixed;width:50%;height:100%;border-collapse:collapse;border-spacing:0}
+[class*=intro_sec] .insta_area .img_cube [class*=img]{background-repeat:no-repeat;background-position:50% 50%}
+[class*=intro_sec] .insta_area .img_cube ul,.intro_sec .insta_area .img_cube .bind_image{overflow:hidden;display:table-row}
+[class*=intro_sec] .insta_area .img_cube li{display:table-cell;position:relative;height:100%;background-size:cover !important;padding:0;background-position:50% 50%}
+[class*=intro_sec] .insta_area .img_cube .img2{float:left;position:relative;background-size:cover !important;padding:0;background-position:50% 50%;}
+[class*=intro_sec] .insta_area .img_cube .img{cursor:pointer}
+.intro_sec .insta_area .img_cube .img:hover{background-image:url(../images/img_page3_hover_v2.jpg) !important}
+.intro_sec2 .insta_area .img_cube .img:hover{background-image:url(../images/img_page4_hover_v2.jpg) !important}
+.intro_sec3 .insta_area .img_cube .img:hover{background-image:url(../images/img_page5_hover_v2.jpg) !important}
+
+.lower_text{position:absolute;bottom:24px;left:0;z-index:20;width:100%;color:#fff;font-size:18px;font-family:helvetica;line-height:25px}
+.lower_text .num_count{font-size:14px}
+
+.slick-prev,.slick-next{overflow:hidden;position:absolute;top:50%;z-index:9;width:40px;height:70px;margin-top:-35px;
+  background:url(../images/sp_burger_v5.png) no-repeat 0 0;line-height:1000px;color:transparent;outline:0;border:0;cursor:pointer}
+.slick-prev{left:0;background-position:-202px 0}
+.slick-prev:hover{background-position:-202px -86px}
+.slick-next{right:0;background-position:-261px 0}
+.slick-next:hover{background-position:-261px -86px}
+
+/* thumb_sec */
+.thumb_sec{overflow:hidden;vertical-align:middle;text-align:center}
+.thumb_image_area{overflow:hidden;min-width:1400px}
+.thumb_image_area li{position:relative;width:12.5%;height:25%;min-width:120px;float:left;box-sizing:border-box;border:3px solid #fff;background-size:cover;background-position:50% 50%}
+.thumb_image_area li a img{max-width:100%;height:100%;vertical-align:top}
+.thumb_image_area li a{display:block;overflow:hidden;width:100%;height:100%;line-height:1000px;color:transparent}
+.thumb_image_area li a:hover{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#000;opacity:0.6;filter:alpha(opacity=60)}
+
+
+.bottom_bar{overflow:hidden;position:absolute;bottom:0;left:0;width:100%;height:70px;background-color:#fafafa;border-top:1px solid #ececec;line-height:70px}
+
+.bottom_bar .lk_store{display:inline-block;float:left;width:179px;height:70px;border-right:1px solid #ececec;color:#666}
+.bottom_bar .lk_store:hover{color:#4c4c4c}
+.bottom_bar .box_lk{float:right}
+.bottom_bar .box_lk ul{float:left;overflow:hidden;width:156px;margin-top:17px}
+.bottom_bar .box_lk li{float:left;width:36px;height:36px;margin:0 4px;background:url(../images/sp_burger_v5.png) no-repeat 0 -401px;overflow:hidden;line-height:1000px;color:transparent}
+.bottom_bar .box_lk li a{display:block;height:36px}
+.bottom_bar .box_lk li:nth-child(2){background-position:-44px -401px}
+.bottom_bar .box_lk li:nth-child(3){background-position:-88px -401px}
+.bottom_bar .box_lk li:nth-child(4){background-position:-132px -401px}
+.bottom_bar .box_lk li:hover{background-position:0 -302px}
+.bottom_bar .box_lk li:nth-child(2):hover{background-position:-44px -302px}
+.bottom_bar .box_lk li:nth-child(3):hover{background-position:-88px -302px}
+.bottom_bar .box_lk li:nth-child(4):hover{background-position:-132px -302px}
+.bottom_bar .box_lk  p{float:left;padding:0 28px;font-size:14px;font-family:helvetica;color:#b3b3b3;border-left:1px solid #ececec;letter-spacing:-1px}
+
+.box_gallery .dim,.box_gallery .burger_layer{display:none}
+.box_gallery.on .dim{display:block;position:fixed;top:0;left:0;z-index:20;width:100%;height:100%;background-color:#000;opacity:.7;filter:alpha(opacity=70);-moz-opacity:.7}
+.box_gallery.on{display:block;}
+.box_gallery.on .burger_layer{display:block;position:absolute;top:2.22%;left:50%;bottom:2.22%;z-index:30;transform:translateX(-50%);-webkit-transform:translateX(-50%)}
+.box_gallery.on .burger_layer img{vertical-align:top}
+.box_gallery.on .burger_layer .btn_close_layer{overflow:hidden;position:absolute;top:0;right:-58px;width:40px;height:40px;background:url(../images/sp_burger_v5.png) no-repeat -331px -189px;line-height:1000px;color:transparent}
+
+/* Slider */
+.slick-slider{position:relative;display:block;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}
+.slick-list:focus{outline:none}
+.slick-list.dragging{cursor:pointer;cursor:hand}
+.slick-slider .slick-track,.slick-slider .slick-list{-webkit-transform:translate3d(0, 0, 0);-moz-transform:translate3d(0, 0, 0);-ms-transform:translate3d(0, 0, 0);-o-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)}
+.slick-track{position:relative;top:0;left:0;display:block}
+.wallpaper_view .slick-track{width:200000px !important}
+.slick-track:before,.slick-track:after{display:table;content:''}
+.slick-track:after{clear:both}
+.slick-loading .slick-track{visibility:hidden}
+.slick-slide{display:none;float:left;height:100%;min-height:1px}
+[dir='rtl'] .slick-slide{float:right}
+.slick-slide img{display:block}
+.slick-slide.slick-loading img{display:none}
+.slick-slide.dragging img{pointer-events:none}
+.slick-initialized .slick-slide{display:block}
+.wallpaper_view .slick-initialized .slick-slide{float:left}
+.slick-loading .slick-slide{visibility:hidden}
+.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}
+.slick-arrow.slick-hidden{display:none}
+
+/* video background */
+.video_box{overflow:hidden;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1}
+.video_box video{-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto}
+
+
+/* lypop */
+.lypop{position:relative;z-index:101}
+.lypop .btn_lypop_close{display:block;width:40px;height:40px;background:url(../images/popup_mv_close.png) no-repeat;position:absolute;top:0px;right:-40px;z-index:102;cursor:pointer}
+.lypop.mv_pop .mv_area{position:fixed;top:50%;left:50%;margin-top:-266px;margin-left:-474px;width:948px}
+.lypop.mv_pop .mv_area .mv_cnt{width:948px;height:532px;z-index:102}
+
+/* layer_loading */
+.layer_loading{display:block;position:absolute;top:0;left:0;right:0;width:100%;height:100%;z-index:30;background-color:#ffb836;-webkit-transition:-webkit-transform .45s ease,height .25s ease;transition:transform .45s ease,height .25s ease}
+.layer_loading.off{-webkit-transform: translateY(-100%);transform: translateY(-100%);}
+.layer_loading .box_loading{position:absolute;top:50%;left:50%;width:164px;height:110px;margin:-82px 0 0 -55px}
+.layer_loading .box_loading:before{display:block;width:66px;height:64px;margin:0 auto 12px;background:url(../images/sp_burger_v5.png) no-repeat -310px -250px;content:''}

@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="ko">
+
+<!-- Mirrored from www.banila.com/static/front/guide/style_guide.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 May 2022 07:18:13 GMT -->
+<head>
+<title>스타일 가이드 (Web) | 바닐라코 퍼블리싱 가이드</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<link rel="shortcut icon" type="image/x-icon" href="../resources/images/common/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../resources/css/fonts.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/common.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/contents.css">
+<link rel="stylesheet" type="text/css" href="css/guide.css">
+</head>
+<body>
+<div id="wrap">
+<div class="pagever">last update :<strong>2019.10.28.</strong></div>
+
+<div id="uiwrap" class="uiwrap">
+	<div class="uinav">
+		<a href="#font">font</a>
+		<a href="#color">color</a>
+		<a href="#button">button</a>
+		<a href="#paging">paging</a>
+		<a href="#form">form</a>
+		<a href="#siteLocation">site location</a>
+		<a href="#title">title</a>
+		<!-- 
+		<a href="#noData">no data</a>
+		<a href="#table">table</a>
+		<a href="#fileUpload">fileUpload</a> 
+		-->
+	</div>
+
+	<div id="font" class="conP">
+		<h2>Font</h2>
+		<p class="note">
+			기본 Pretendard, 폰트 굵기는 font-weight로 구분하거나 클래스 추가하여 사용.<br>
+			기본설정은 {font-family: 'Pretendard', '맑은고딕', sans-serif;font-weight: 400;color: #222;}
+		</p>
+		<h3>font-weight: 400 (.fw400)</h3>
+		<div class="txt">
+			<p style="font-family:'Pretendard';">
+				<span>
+					Pretendard Regular<br>
+					가나다라마바사아자차카타파하<br>
+					0123456789
+				</span>
+			</p>
+		</div>
+		<h3>font-weight: 600 (.fw600)</h3>
+		<div class="txt">
+			<p style="font-family:'Pretendard';font-weight:600;">
+				<span>
+					Pretendard Regular<br>
+					가나다라마바사아자차카타파하<br>
+					0123456789
+				</span>
+			</p>
+		</div>
+		<h3>font-weight: 800 (.fw800)</h3>
+		<div class="txt">
+			<p style="font-family:'Pretendard';font-weight:800;">
+				<span>
+					Pretendard Regular<br>
+					가나다라마바사아자차카타파하<br>
+					0123456789
+				</span>
+			</p>
+		</div>
+	</div>
+	<style>
+		#font .txt{padding:30px 20px; font-size:30px; line-height:30px; color:#222;}
+		#font .txt p span{display:block; font-size:20px; line-height:24px;}
+		#font .txt p{margin-top:20px;}
+		#font .txt p:first-child{margin-top:0;}
+	</style>
+
+	<div id="color" class="conP">
+		<h2>Color</h2>
+		<div class="colorbox">
+			<div class="box" style="color:#000">#ffffff(.cl_ff)</div>
+			<div class="box" style="color:#000">#f9f9f9(.cl_f9)</div>
+			<div class="box">#171717(.cl_17)</div>
+			<div class="box">#222222(.cl_22)</div>
+			<div class="box">#646464(.cl_64)</div>
+			<div class="box">#979797(.cl_97)</div>
+			<div class="box">#007DC5(.cl_bl)</div>
+			<div class="box">#00A651(.cl_gr)</div>
+			<div class="box">#CC1919(.cl_error)</div>
+		</div>
+	</div>
+	<style>
+		.colorbox{}
+		.colorbox div{display:inline-block; width:200px; height:100px; text-align:center; line-height:100px; color:#fff; vertical-align:top; box-sizing:border-box;}
+		.color_list li{display:inline-block;}
+	</style>
+	
+	<div id="button" class="conP">
+		<h2>Button</h2>
+		<p class="note">기본 btn 기본 클래스에 필요한 요소의 클래스를 추가하여 사용.</p>
+
+		<h3>Size</h3>
+		<p class="note">
+			사이즈 L : btnSizeL<br>
+			사이즈 M : btnSizeM<br>
+			사이즈 S : btnSizeS<br>
+		</p>
+		<a href="#none" class="btn btnColorBlu btnSizeL"><span>btnSizeL</span></a>
+		<a href="#none" class="btn btnColorBlu btnSizeM"><span>btnSizeM</span></a>
+		<a href="#none" class="btn btnColorBlu btnSizeS"><span>btnSizeS</span></a>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<a href="#none" class="btn btnColorBlu btnSizeL"><span>btnSizeL</span></a>
+				<a href="#none" class="btn btnColorBlu btnSizeM"><span>btnSizeM</span></a>
+				<a href="#none" class="btn btnColorBlu btnSizeS"><span>btnSizeS</span></a>
+			</xmp>
+		</div>
+
+		<h3>Color</h3>
+		<p class="note">
+			흰색 버튼 : btnColorWht<br>
+			파란 버튼 : btnColorBlu<br>
+			그라디언트 버튼 : btnColorGRD<br>
+		</p>
+		<a href="#none" class="btn btnSizeS btnColorWht"><span>btnColorWht</span></a>
+		<a href="#none" class="btn btnSizeS btnColorBlu"><span>btnColorBlu</span></a>
+		<a href="#none" class="btn btnSizeS btnColorGRD"><span>btnColorGRD</span></a>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<a href="#none" class="btn btnSizeS btnColorWht"><span>btnColorWht</span></a>
+				<a href="#none" class="btn btnSizeS btnColorBlu"><span>btnColorBlu</span></a>
+				<a href="#none" class="btn btnSizeS btnColorGRD"><span>btnColorGRD</span></a>
+			</xmp>
+		</div>
+
+		<h3>Arrow</h3>
+		<p class="note">
+			화살표 버튼1 : btnArrowA<br>
+			화살표 버튼2 : btnArrowB<br>
+			화살표 버튼3 : btnArrowC<br>
+		</p>
+		<div style="background: #000;padding: 20px;">
+			<a href="#none" class="btn btnArrowA"><span>btnArrowA</span></a>
+			<a href="#none" class="btn btnArrowB"><span>btnArrowB</span></a>
+			<a href="#none" class="btn btnArrowC"><span>btnArrowC</span></a>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<a href="#none" class="btn btnArrowA"><span>btnArrowA</span></a>
+				<a href="#none" class="btn btnArrowB"><span>btnArrowB</span></a>
+				<a href="#none" class="btn btnArrowC"><span>btnArrowC</span></a>
+			</xmp>
+		</div>
+	</div>
+	<style>
+		#button .btn_wrap{margin-top:10px;line-height:20px;text-align:left;}
+	</style>
+
+	<div id="paging" class="conP">
+		<h2>Paging</h2>
+		<div class="paging">
+			<a href="#none" class="first"><span class="hide">첫페이지</span></a>
+			<a href="#none" class="prev"><span class="hide">이전페이지</span></a>
+			<a href="#none">1</a>
+			<a href="#none" class="active">2</a>
+			<a href="#none">3</a>
+			<a href="#none">4</a>
+			<a href="#none">5</a>
+			<a href="#none">6</a>
+			<a href="#none">7</a>
+			<a href="#none">8</a>
+			<a href="#none">9</a>
+			<a href="#none">10</a>
+			<a href="#none" class="next"><span class="hide">다음페이지</span></a>
+			<a href="#none" class="last"><span class="hide">마지막페이지</span></a>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="paging">
+					<a href="#none" class="first"><span class="hide">첫페이지</span></a>
+					<a href="#none" class="prev"><span class="hide">이전페이지</span></a>
+					<a href="#none">1</a>
+					<a href="#none" class="active">2</a>
+					<a href="#none">3</a>
+					<a href="#none">4</a>
+					<a href="#none">5</a>
+					<a href="#none">6</a>
+					<a href="#none">7</a>
+					<a href="#none">8</a>
+					<a href="#none">9</a>
+					<a href="#none">10</a>
+					<a href="#none" class="next"><span class="hide">다음페이지</span></a>
+					<a href="#none" class="last"><span class="hide">마지막페이지</span></a>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="form" class="conP">
+		<h2>Form</h2>
+
+		<h3>Input Text - BOX</h3>
+		<div class="inp_wrap">
+			<div class="inp_text">
+				<input type="text" name="" id="" placeholder="회사명을 입력하세요.">
+				<button type="button" class="btn_clear"><span>clear</span></button>
+			</div>
+			<p class="error">잘못 입력했습니다</p>
+		</div>
+		<div class="inp_wrap error">
+			<div class="inp_text">
+				<input type="text" name="" id="" placeholder="회사명을 입력하세요.">
+				<button type="button" class="btn_clear"><span>clear</span></button>
+			</div>
+			<p class="error">잘못 입력했습니다</p>
+		</div>
+		<div class="inp_wrap">
+			<div class="inp_text">
+				<input type="text" name="" id="" placeholder="회사명을 입력하세요." disabled>
+				<button type="button" class="btn_clear"><span>clear</span></button>
+			</div>
+			<p class="error">잘못 입력했습니다</p>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap">
+					<div class="inp_text">
+						<input type="text" name="" id="" placeholder="회사명을 입력하세요.">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+				<div class="inp_wrap error">
+					<div class="inp_text">
+						<input type="text" name="" id="" placeholder="회사명을 입력하세요.">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+				<div class="inp_wrap">
+					<div class="inp_text">
+						<input type="text" name="" id="" placeholder="회사명을 입력하세요." disabled>
+						<button type="button" class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Input Text - LABEL TYPE</h3>
+		<div class="inp_wrap">
+			<div class="inp_text labelType">
+				<div class="inp_lab"><label for="ipt_label1"><span class="req">*</span>회사(소속)</label></div>
+				<input type="text" name="" id="ipt_label1" placeholder="회사명을 입력하세요.">
+				<button type="button" class="btn_clear"><span>clear</span></button>
+			</div>
+			<p class="error">잘못 입력했습니다</p>
+		</div>
+		<div class="inp_wrap error">
+			<div class="inp_text labelType">
+				<div class="inp_lab"><label for="ipt_label2">회사(소속)</label></div>
+				<input type="text" name="" id="ipt_label2" placeholder="회사명을 입력하세요.">
+				<button type="button" class="btn_clear"><span>clear</span></button>
+			</div>
+			<p class="error">잘못 입력했습니다</p>
+		</div>
+		<div class="inp_wrap disabled">
+			<div class="inp_text labelType">
+				<div class="inp_lab"><label for="ipt_label3">회사(소속)</label></div>
+				<input type="text" name="" id="ipt_label3" placeholder="회사명을 입력하세요." disabled>
+				<button type="button" class="btn_clear"><span>clear</span></button>
+			</div>
+			<p class="error">잘못 입력했습니다</p>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap">
+					<div class="inp_text labelType">
+						<div class="inp_lab"><label for="ipt_label1"><span class="req">*</span>회사(소속)</label></div>
+						<input type="text" name="" id="ipt_label1" placeholder="회사명을 입력하세요.">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+				<div class="inp_wrap error">
+					<div class="inp_text labelType">
+						<div class="inp_lab"><label for="ipt_label2">회사(소속)</label></div>
+						<input type="text" name="" id="ipt_label2" placeholder="회사명을 입력하세요.">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+				<div class="inp_wrap disabled">
+					<div class="inp_text labelType">
+						<div class="inp_lab"><label for="ipt_label3">회사(소속)</label></div>
+						<input type="text" name="" id="ipt_label3" placeholder="회사명을 입력하세요." disabled>
+						<button type="button" class="btn_clear"><span>clear</span></button>
+					</div>
+					<p class="error">잘못 입력했습니다</p>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Input Text - SEARCH TYPE1</h3>
+		<div class="inp_wrap">
+			<div class="inp_text searchType">
+				<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+				<button type="button" class="btn_clear"><span>clear</span></button>
+				<button type="button" class="btn_search"><span>search</span></button>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap">
+					<div class="inp_text searchType">
+						<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+						<button type="button" class="btn_search"><span>search</span></button>
+					</div>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Input Text - SEARCH TYPE2</h3>
+		<div class="inp_wrap">
+			<div class="inp_text searchType2">
+				<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+				<button type="button" class="btn_clear"><span>clear</span></button>
+				<button type="button" class="btn_search"><span>search</span></button>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap">
+					<div class="inp_text searchType2">
+						<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+						<button type="button" class="btn_clear"><span>clear</span></button>
+						<button type="button" class="btn_search"><span>search</span></button>
+					</div>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Checkbox</h3>
+		<span class="inp_check">
+			<input type="checkbox" name="inp_check1_1" id="inp_check1_1">
+			<label for="inp_check1_1">check1</label>
+		</span>
+		<span class="inp_check">
+			<input type="checkbox" name="inp_check1_2" id="inp_check1_2" checked>
+			<label for="inp_check1_2">check2</label>
+		</span>
+		<span class="inp_check">
+			<input type="checkbox" name="inp_check1_3" id="inp_check1_3" disabled>
+			<label for="inp_check1_3">check3</label>
+		</span>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+			</xmp>
+		</div>
+
+		<h3>Radiobox</h3>
+		<span class="inp_radio">
+			<input type="radio" name="inp_radio1" id="inp_radio1_1">
+			<label for="inp_radio1_1">radio1</label>
+		</span>
+		<span class="inp_radio">
+			<input type="radio" name="inp_radio1" id="inp_radio1_2" checked>
+			<label for="inp_radio1_2">radio2</label>
+		</span>
+		<span class="inp_radio">
+			<input type="radio" name="inp_radio1" id="inp_radio1_3" disabled>
+			<label for="inp_radio1_3">radio3</label>
+		</span>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<span class="inp_radio">
+					<input type="radio" name="inp_radio1" id="inp_radio1_1">
+					<label for="inp_radio1_1">radio1</label>
+				</span>
+				<span class="inp_radio">
+					<input type="radio" name="inp_radio1" id="inp_radio1_2" checked>
+					<label for="inp_radio1_2">radio2</label>
+				</span>
+				<span class="inp_radio">
+					<input type="radio" name="inp_radio1" id="inp_radio1_3" disabled>
+					<label for="inp_radio1_3">radio3</label>
+				</span>
+			</xmp>
+		</div>
+
+		<h3>Selectbox</h3>
+		<div class="inp_wrap">
+			<div class="inp_select">
+				<div class="selectBox">
+					<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+					<ul class="selList">
+						<li>
+							<input type="radio" value="" class="option" id="select1_1" name="select1" checked>
+							<label for="select1_1">01. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select1_2" name="select1">
+							<label for="select1_2">02. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select1_3" name="select1">
+							<label for="select1_3">03. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select1_4" name="select1">
+							<label for="select1_4">04. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select1_5" name="select1">
+							<label for="select1_5">05. option</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="inp_wrap error">
+			<div class="inp_select">
+				<div class="selectBox">
+					<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+					<ul class="selList">
+						<li>
+							<input type="radio" value="" class="option" id="select2_1" name="select2">
+							<label for="select2_1">01. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_2" name="select2">
+							<label for="select2_2">02. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_3" name="select2">
+							<label for="select2_3">03. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_4" name="select2">
+							<label for="select2_4">04. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_5" name="select2">
+							<label for="select2_5">05. option</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<p class="error">직급을 선택해주세요..</p>
+		</div>
+		<div class="inp_wrap">
+			<div class="inp_select disabled">
+				<div class="selectBox">
+					<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+					<ul class="selList">
+						<li>
+							<input type="radio" value="" class="option" id="select2_1" name="select2">
+							<label for="select2_1">01. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_2" name="select2">
+							<label for="select2_2">02. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_3" name="select2">
+							<label for="select2_3">03. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_4" name="select2">
+							<label for="select2_4">04. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_5" name="select2">
+							<label for="select2_5">05. option</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap">
+					<div class="inp_select">
+						<div class="selectBox">
+							<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1" checked>
+									<label for="select1_1">01. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">02. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_3" name="select1">
+									<label for="select1_3">03. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_4" name="select1">
+									<label for="select1_4">04. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_5" name="select1">
+									<label for="select1_5">05. option</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="inp_wrap error">
+					<div class="inp_select">
+						<div class="selectBox">
+							<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. option</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="error">직급을 선택해주세요..</p>
+				</div>
+				<div class="inp_wrap">
+					<div class="inp_select disabled">
+						<div class="selectBox">
+							<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. option</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Selectbox - Type Up</h3>
+		<div class="inp_wrap">
+			<div class="inp_select typeUp">
+				<div class="selectBox">
+					<ul class="selList">
+						<li>
+							<input type="radio" value="" class="option" id="select1_1" name="select1" checked>
+							<label for="select1_1">01. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select1_2" name="select1">
+							<label for="select1_2">02. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select1_3" name="select1">
+							<label for="select1_3">03. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select1_4" name="select1">
+							<label for="select1_4">04. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select1_5" name="select1">
+							<label for="select1_5">05. option</label>
+						</li>
+					</ul>
+					<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+				</div>
+			</div>
+		</div>
+		<div class="inp_wrap error">
+			<div class="inp_select typeUp">
+				<div class="selectBox">
+					<ul class="selList">
+						<li>
+							<input type="radio" value="" class="option" id="select2_1" name="select2">
+							<label for="select2_1">01. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_2" name="select2">
+							<label for="select2_2">02. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_3" name="select2">
+							<label for="select2_3">03. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_4" name="select2">
+							<label for="select2_4">04. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_5" name="select2">
+							<label for="select2_5">05. option</label>
+						</li>
+					</ul>
+					<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+				</div>
+			</div>
+			<p class="error">직급을 선택해주세요..</p>
+		</div>
+		<div class="inp_wrap">
+			<div class="inp_select typeUp disabled">
+				<div class="selectBox">
+					<ul class="selList">
+						<li>
+							<input type="radio" value="" class="option" id="select2_1" name="select2">
+							<label for="select2_1">01. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_2" name="select2">
+							<label for="select2_2">02. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_3" name="select2">
+							<label for="select2_3">03. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_4" name="select2">
+							<label for="select2_4">04. option</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select2_5" name="select2">
+							<label for="select2_5">05. option</label>
+						</li>
+					</ul>
+					<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+				</div>
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap">
+					<div class="inp_select typeUp">
+						<div class="selectBox">
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1" checked>
+									<label for="select1_1">01. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">02. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_3" name="select1">
+									<label for="select1_3">03. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_4" name="select1">
+									<label for="select1_4">04. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_5" name="select1">
+									<label for="select1_5">05. option</label>
+								</li>
+							</ul>
+							<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+						</div>
+					</div>
+				</div>
+				<div class="inp_wrap error">
+					<div class="inp_select typeUp">
+						<div class="selectBox">
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. option</label>
+								</li>
+							</ul>
+							<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+						</div>
+					</div>
+					<p class="error">직급을 선택해주세요..</p>
+				</div>
+				<div class="inp_wrap">
+					<div class="inp_select typeUp disabled">
+						<div class="selectBox">
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select2_1" name="select2">
+									<label for="select2_1">01. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_2" name="select2">
+									<label for="select2_2">02. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_3" name="select2">
+									<label for="select2_3">03. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_4" name="select2">
+									<label for="select2_4">04. option</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select2_5" name="select2">
+									<label for="select2_5">05. option</label>
+								</li>
+							</ul>
+							<button type="button" class="title" type="button">직급을 선택해주세요.</button>
+						</div>
+					</div>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Textarea</h3>
+		<div class="inp_wrap">
+			<div class="inp_textArea">
+				<textarea placeholder="내용을 입력해주세요."></textarea>
+			</div>
+		</div>
+		<div class="inp_wrap error">
+			<div class="inp_textArea">
+				<textarea placeholder="내용을 입력해주세요."></textarea>
+			</div>
+			<p class="error">error message</p>
+		</div>
+		<!-- 
+		<div class="inp_wrap">
+			<div class="inp_textArea">
+				<textarea placeholder="내용을 입력해주세요."></textarea>
+				<div class="textarea-clone"></div>
+			</div>
+		</div>
+		<div class="inp_wrap error">
+			<div class="inp_textArea">
+				<textarea placeholder="내용을 입력해주세요."></textarea>
+				<div class="textarea-clone"></div>
+			</div>
+			<p class="error">error message</p>
+		</div>
+		<div class="inp_wrap">
+			<div class="inp_textArea lengthCheck">
+				<textarea placeholder="내용을 입력해주세요."></textarea>
+				<div class="textarea-clone"></div>
+			</div>
+			<span class="charCnt">(<em>0</em>/500)</span>
+			<p class="error">error message</p>
+		</div>
+		<div class="inp_wrap error">
+			<div class="inp_textArea lengthCheck">
+				<textarea placeholder="내용을 입력해주세요."></textarea>
+				<div class="textarea-clone"></div>
+			</div>
+			<span class="charCnt">(<em>0</em>/500)</span>
+			<p class="error">error message</p>
+		</div>
+		-->
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap">
+					<div class="inp_textArea">
+						<textarea placeholder="내용을 입력해주세요."></textarea>
+					</div>
+				</div>
+				<div class="inp_wrap error">
+					<div class="inp_textArea">
+						<textarea placeholder="내용을 입력해주세요."></textarea>
+					</div>
+					<p class="error">error message</p>
+				</div>
+			</xmp>
+		</div>
+
+		<h3>Etc</h3>
+		<div class="inp_wrap inp_phone">
+			<div class="inp_select">
+				<div class="selectBox">
+					<button type="button" class="title" id="phone" type="button" title="">휴대폰 번호</button>
+					<ul class="selList">
+						<li>
+							<input type="radio" value="" class="option" id="select1_1" name="select1">
+							<label for="select1_1">010</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="select1_2" name="select1">
+							<label for="select1_2">011</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="inp_text">
+				<input type="text" title="휴대폰 가운대" placeholder="0000">
+			</div>
+			<div class="inp_text">
+				<input type="text" title="휴대폰 마지막" placeholder="0000">
+			</div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap inp_phone">
+					<div class="inp_select">
+						<div class="selectBox">
+							<button type="button" class="title" id="phone" type="button" title="">휴대폰 번호</button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="select1_1" name="select1">
+									<label for="select1_1">010</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="select1_2" name="select1">
+									<label for="select1_2">011</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="inp_text">
+						<input type="text" title="휴대폰 가운대" placeholder="0000">
+					</div>
+					<div class="inp_text">
+						<input type="text" title="휴대폰 마지막" placeholder="0000">
+					</div>
+				</div>
+			</xmp>
+		</div>
+		<div class="inp_wrap inp_email">
+			<div class="inp_text">
+				<input type="text" id="join_email" placeholder="이메일">
+			</div>
+			<span class="hyphen">@</span>
+			<div class="inp_select">
+				<div class="selectBox">
+					<button type="button" class="title" type="button" title=""></button>
+					<ul class="selList">
+						<li>
+							<input type="radio" value="" class="option" id="join_email1" name="join_email" checked>
+							<label for="join_email1">naver.com</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="join_email2" name="join_email">
+							<label for="join_email2">google.com</label>
+						</li>
+						<li>
+							<input type="radio" value="" class="option" id="join_email3" name="join_email">
+							<label for="join_email3">직접선택</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="inp_text email_input">
+				<input type="text" title="이메일 직접입력">
+			</div>
+			<p class="error">이메일 형식을 확인해주세요.</p>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="inp_wrap inp_email">
+					<div class="inp_text">
+						<input type="text" id="join_email" placeholder="이메일">
+					</div>
+					<span class="hyphen">@</span>
+					<div class="inp_select">
+						<div class="selectBox">
+							<button type="button" class="title" type="button" title=""></button>
+							<ul class="selList">
+								<li>
+									<input type="radio" value="" class="option" id="join_email1" name="join_email" checked>
+									<label for="join_email1">naver.com</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="join_email2" name="join_email">
+									<label for="join_email2">google.com</label>
+								</li>
+								<li>
+									<input type="radio" value="" class="option" id="join_email3" name="join_email">
+									<label for="join_email3">직접선택</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="inp_text email_input">
+						<input type="text" title="이메일 직접입력">
+					</div>
+					<p class="error">이메일 형식을 확인해주세요.</p>
+				</div>
+			</xmp>
+		</div>
+		<style>
+			.inp_wrap + .inp_wrap{margin-top:10px;}
+			.inp_textArea textarea{height:300px;}
+		</style>
+	</div>
+	<style>
+		#form > div{margin-top:20px;}
+	</style>
+
+	<div id="siteLocation" class="conP">
+		<h2>SITE LOCATION</h2>
+		<div class="site_location">
+			<span><a href="/" class="home">home</a></span><span><a href="/">문의하기</a></span>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="site_location">
+					<span><a href="/" class="home">home</a></span><span><a href="/">문의하기</a></span>
+				</div>
+			</xmp>
+		</div>
+	</div>
+
+	<div id="title" class="conP">
+		<h2>PAGE TITLE</h2>
+		<div class="pageTitArea">
+			<h2>문의하기</h2>
+			<p>아래 양식을 작성해 주시면 각 분야의 담당자가 곧바로 연락을 드리도록 하겠습니다.</p>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+				<div class="pageTitArea">
+					<h2>문의하기</h2>
+					<p>아래 양식을 작성해 주시면 각 분야의 담당자가 곧바로 연락을 드리도록 하겠습니다.</p>
+				</div>
+			</xmp>
+		</div>
+	</div>
+	<!--
+	<div id="noData" class="conP">
+		<h2>No Data</h2>
+		<div class="noData">
+			<span>선택하신 속성에 대한 검색결과가 없습니다.<br> 다른 옵션을 선택해보세요.</span>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+			</xmp>
+		</div>
+	</div>
+
+	<div id="table" class="conP">
+		<h2>Table</h2>
+		<h3>QnA TABLE</h3>
+		<div class="js_tblList">
+			<table class="tblType1" summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="200px"></col>
+					<col></col>
+					<col width="200px"></col>
+					<col width="100px"></col>
+					<col width="70px"></col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>제목</th>
+						<th>등록일</th>
+						<th>버튼</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>닫힘</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt">
+								<div>
+									<div class="questn">바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈</div>
+									<div class="aswr">바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.<span>답변일: 2019-09-01</span></div>
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>열림</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt">
+								<div>
+									<div class="questn">바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈바닐라닷컴 모바일 앱 서비스 오픈</div>
+									<div class="aswr">바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.<span>답변일: 2019-09-01</span></div>
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="5" class="noData">
+							<span>등록된 게시물이 없습니다.</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+			</xmp>
+		</div>
+		<h3>FAQ TABLE</h3>
+		<div class="tblBar mgt50">
+			<p class="tblList">회원정보변경 <span class="fcPink">7건</span></p>
+		</div>
+		<div class="js_tblList">
+			<table class="tblType1 fqaType" summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="200px"></col>
+					<col></col>
+					<col width="200px"></col>
+					<col width="100px"></col>
+					<col width="70px"></col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>제목</th>
+						<th>등록일</th>
+						<th>버튼</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>닫힘</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt fc66">
+								<div>
+									<div class="aswr">회원이 되시면 각종 이벤트와 상품정보, 추천상품등에 대한 정보를 받아 보실 수 있으며 <br>온라인 쇼핑몰에서 적립하신 구매 마일리지와 쇼핑몰 전용 활동 포인트를 확인하실 수 있습니다.<br><br>온라인 쇼핑몰에서 상품 구매 시 마일리지가 적립되며 이 마일리지는 쇼핑몰에서 현금처럼 사용하실 수 있습니다. <br>등급별 각종 쿠폰혜택을 받으실 수 있습니다.</div>
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>열림</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt fc66">
+								<div>
+									<div class="aswr">회원이 되시면 각종 이벤트와 상품정보, 추천상품등에 대한 정보를 받아 보실 수 있으며 <br>온라인 쇼핑몰에서 적립하신 구매 마일리지와 쇼핑몰 전용 활동 포인트를 확인하실 수 있습니다.<br><br>온라인 쇼핑몰에서 상품 구매 시 마일리지가 적립되며 이 마일리지는 쇼핑몰에서 현금처럼 사용하실 수 있습니다. <br>등급별 각종 쿠폰혜택을 받으실 수 있습니다.</div>
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+			</xmp>
+		</div>
+		<h3>SEARCH TABLE</h3>
+		<div class="tblBar mgt50">
+			<p class="tblList">총 <span>48개</span></p>
+			<div class="inp_wrap">
+				<div class="inp_select">
+					<div class="selectBox">
+						<button type="button" class="title" type="button" title="">전체</button>
+						<ul class="selList" style="display: none;">
+							<li>
+								<input type="radio" value="" class="option" id="select1_1" name="select1" checked="">
+								<label for="select1_1">전체</label>
+							</li>
+							<li>
+								<input type="radio" value="" class="option" id="select1_2" name="select1">
+								<label for="select1_2">이용안내</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inp_text searchType">
+					<input type="text" name="" id="" placeholder="검색어를 입력해주세요">
+					<button type="button" class="btn_clear"><span>clear</span></button>
+					<button type="button" class="btn_search"><span>search</span></button>
+				</div>
+			</div>
+		</div>
+		<div class="js_tblList">
+			<table class="tblType1" summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="200px"></col>
+					<col></col>
+					<col width="200px"></col>
+					<col width="100px"></col>
+					<col width="70px"></col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>제목</th>
+						<th>등록일</th>
+						<th>버튼</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>닫힘</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt">
+								<div>
+									바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="fc88">이용안내</td>
+						<td class="ta_l"><a href="javascript:void(0)" class="js_ListTtl ListTtl" title="바닐라닷컴 모바일 앱 서비스 오픈">바닐라닷컴 모바일 앱 서비스 오픈</a></td>
+						<td class="fc88">2019-09-01</td>
+						<td><a href="javascript:void(0)" class="btn btnSizeS btnColorG btnTypeR" style="width:70px;"><span>btnSizeS</span></a></td>
+						<td><div class="js_arrow arrow"><span>열림</span></div></td>
+					</tr>
+					<tr class="js_ListCtt ListCtt">
+						<td></td>
+						<td>
+							<div class="ta_l js_replyCtt replyCtt">
+								<div>
+									바닐라코 공식몰을 이용해주시는 고객님들꼐 양해 말씀드립니다.
+								</div>
+							</div>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+			</xmp>
+		</div>
+	</div>
+
+	<div id="fileUpload" class="conP">
+		<h2>file Upload</h2>
+		<h3>file Upload</h3>
+		<ul class="fileUploadArea">
+			<li><label for="imgUpload"><span class="hide">업로드</span></label><input type="file" class="hide" id="imgUpload"></li>
+			<li class="imgCutting">
+				<div class="imgBox">
+					<img src="../resources/images/temp/480X480.png" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+				</div>
+				<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+			</li>
+			<li class="imgCutting">
+				<div class="imgBox">
+					<img src="../resources/images/temp/280X480.png" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+				</div>
+				<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+			</li>
+			<li class="imgCutting">
+				<div class="imgBox">
+					<img src="../resources/images/temp/480X280.png" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+				</div>
+				<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+			</li>
+			<li class="imgCutting">
+				<div class="imgBox">
+					<img src="../resources/images/temp/photoReviewImg01.jpg" alt="" class="wh" style="margin-top: 0px; margin-left: 0px;">
+				</div>
+				<a href="javascript:void(0)" class="closeLink"><span class="hide">close</span></a>
+			</li>
+		</ul>
+		<div class="moreBox">
+			<a href="#none" class="btn_more">소스보기</a>
+			<xmp class="code">
+			</xmp>
+		</div>
+	</div>
+	-->
+</div>
+
+<script type="text/javascript" src="../resources/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resources/js/slick.min.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="../resources/js/ui.js"></script>
+<script type="text/javascript" src="js/guide.js"></script>
+<script type="text/javascript">
+$('.colorbox .box').each(function(){
+	var colorcode = $(this).text().substr(0,7);
+	$(this).css('background', colorcode);
+});
+</script>
+</body>
+
+<!-- Mirrored from www.banila.com/static/front/guide/style_guide.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 May 2022 07:18:19 GMT -->
+</html>

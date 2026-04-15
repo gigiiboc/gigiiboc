@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<row>
+		<column name="idx" >1</column>
+		<column name="name" >
+			<desc>김길동</desc>
+		</column>
+		<column name="age" >12</column>
+		<column name="habit" >
+			<habit>테니스</habit>
+			<habit>탁구</habit>
+		</column>
+		<column name="created">2009-11-07</column>
+	</row>
+	<row>
+		<column name="idx" >2</column>
+		<column name="name" >나상실	</column>
+		<column name="age" >23</column>
+		<column name="habit" >
+			<habit>배트민트</habit>
+			<habit>게임</habit>
+			<habit>독서</habit>
+		</column>
+		<column name="created">2009-11-07</column>
+	</row>
+	<row>
+		<column name="idx" >3</column>
+		<column name="name" >이병헌</column>
+		<column name="age" >31</column>
+		<column name="habit" >
+			<habit>조깅</habit>
+		</column>
+		<column name="created">2009-11-07</column>
+	</row>
+</data>

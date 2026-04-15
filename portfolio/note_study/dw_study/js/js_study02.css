@@ -1,0 +1,10 @@
+body {width:300px;height:300px;margin:10% auto;}
+#background {position:relative;width:100%;height:100%;overflow:hidden}
+#background div {width:100%;height:100%;position:absolute;top:0;left:0;}
+#background div.on {}
+#background div.bg01 {background:url(/img/intro_bg3.jpg) no-repeat center top;background-size:100% auto}
+#background div.bg02 {background:url(/img/intro_bg2.jpg) no-repeat center top;background-size:100% auto}
+#background div.bg03 {background:url(/img/intro_bg.jpg) no-repeat center top;background-size:100% auto}
+#background div.bg04 {background:url(/img/intro_bg3.jpg) no-repeat center top;background-size:100% auto}
+#background div.bg05 {background:url(/img/intro_bg2.jpg) no-repeat center top;background-size:100% auto}
+#background div.bg06 {background:url(/img/intro_bg.jpg) no-repeat center top;background-size:100% auto}

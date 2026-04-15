@@ -1,0 +1,21 @@
+html, body {margin:0; padding:0;}
+body, td {font:.9em "맑은 고딕",dotum, "돋움", Sans-Serif; color:#6b6b6b;}
+table {border-collapse: collapse; border-spacing: 0;}
+#g_header h1 {height:60px; line-height:60px;padding-left:28px;margin-top:0;color:#fff;background:#488fc3;}
+#g_body {padding:0 30px;}
+.guide_table {width:100%;}
+.guide_table thead th {background:#f1f1f1; padding:3px; border:solid 1px #dadada;}
+.guide_table tbody td {padding:3px; border:solid 1px #dadada;}
+.guide_table tbody td.filelink a {text-decoration:none; color:#0177bd;}
+.guide_table tr.dep01 td {border-top:solid 2px #dadada;}
+.guide_table td.filelink a {}
+.guide_table caption {height:30px;line-height:30px;font-weight:bold;color:#fff;background:#488fc3;}
+#g_footer {padding:30px; text-align:right;}
+td {text-align:left;}
+td.center {text-align:center;}
+tr.second {background: #fdff7c;}
+tr:hover {background: #ebebeb;}
+tr.second:hover {background: #fdff31;}
+tr td:last-child {font-size:11px;}
+.red {color:red}
+.contents {padding-bottom:100px}

@@ -1,0 +1,11 @@
+$(document).ready(function(){
+	$('img').draggable({
+		helper:'clone',
+		opacity:'0.3'
+	});
+	$('#div').droppable({
+		accept:'img',
+		hoverClass:'on',
+		tolerance:'intersect'
+	});
+})

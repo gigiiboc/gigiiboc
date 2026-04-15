@@ -1,0 +1,515 @@
+@charset "utf-8"; 
+
+/* ==========================
+제품 page
+========================== */
+.porduct-wrap .top_guide {display:block;}
+
+.product_wrap {width:100%;overflow:hidden}
+.product_wrap .product_cttBox {}
+.product_wrap .info01 {font-size: 0;}
+.No-Sebum .product_wrap .info01 {background:#8bd5cf;}
+.Green-Tea .product_wrap .info01 {background:#1a534a;}
+.V-Cotton .product_wrap .info01 {background:#c45453;}
+.Bija .product_wrap .info01 {background:#49aec4;}
+.Jeju .product_wrap .info01 {background:#7d4f3f;}
+.product_wrap .info01 .info_img {display: inline-block;vertical-align: middle;width: 50%;height: calc(100vh - 90px);min-height: 990px;}
+.product_wrap .info01 .infoBox01 {display: inline-block;vertical-align: top;width: 50%;font-size: 13px;}
+.product_wrap .info01 .alignBox {display:inline-block;width:100%;max-width:720px;padding:140px 10px 0 60px;text-align:left;box-sizing:border-box;}
+.product_wrap .info01 .onoff {display:inline-block;width:160px;height:40px;line-height:40px;font-size: 20px;font-weight: 700;text-align:center;background: #fff;border-radius:20px;}
+.No-Sebum .product_wrap .info01 .onoff {color:#8bd5cf;}
+.Green-Tea .product_wrap .info01 .onoff {color:#1a534a;}
+.V-Cotton .product_wrap .info01 .onoff {color:#c45453;}
+.Bija .product_wrap .info01 .onoff {color:#49aec4;}
+.Jeju .product_wrap .info01 .onoff {color:#7d4f3f;}
+.product_wrap .info01 .ttl {font-size: 70px;font-weight: 700;color: #fff;margin: 35px 0 0;}
+.product_wrap .info01 .ttl em {display: block;font-size: 62px;font-weight: 700;color: #fff;margin: 15px 0 0;}
+.product_wrap .info01 .btn_wrap {margin: 60px 0 0;}
+.No-Sebum .product_wrap .info01 .btn_wrap .btn_primary {width:300px;color:#008e95;background:#fff;border:3px solid #008e95;}
+.No-Sebum .product_wrap .info01 .btn_wrap .btn_primary:hover {color:#fff;background:#008e95;}
+.No-Sebum .product_wrap .info01 .btn_wrap .btn_primary:after {background:#008e95;}
+.No-Sebum .product_wrap .info01 .btn_wrap .btn_default {width:300px;color:#fff;background:#008e95;border:3px solid #008e95;}
+.No-Sebum .product_wrap .info01 .btn_wrap .btn_default:hover {color:#008e95;background:#008e95;}
+.Green-Tea .product_wrap .info01 .btn_wrap .btn_primary {width:300px;color:#316c5b;background:#fff;border:3px solid #316c5b;}
+.Green-Tea .product_wrap .info01 .btn_wrap .btn_primary:hover {color:#fff;background:#316c5b;}
+.Green-Tea .product_wrap .info01 .btn_wrap .btn_primary:after {background:#316c5b;}
+.Green-Tea .product_wrap .info01 .btn_wrap .btn_default {width:300px;color:#fff;background:#316c5b;border:3px solid #316c5b;}
+.Green-Tea .product_wrap .info01 .btn_wrap .btn_default:hover {color:#316c5b;background:#316c5b;}
+.V-Cotton .product_wrap .info01 .btn_wrap .btn_primary {width:300px;color:#a8151b;background:#fff;border:3px solid #a8151b;}
+.V-Cotton .product_wrap .info01 .btn_wrap .btn_primary:hover {color:#fff;background:#a8151b;}
+.V-Cotton .product_wrap .info01 .btn_wrap .btn_primary:after {background:#a8151b;}
+.V-Cotton .product_wrap .info01 .btn_wrap .btn_default {width:300px;color:#fff;background:#a8151b;border:3px solid #a8151b;}
+.V-Cotton .product_wrap .info01 .btn_wrap .btn_default:hover {color:#a8151b;background:#a8151b;}
+.Bija .product_wrap .info01 .btn_wrap .btn_primary {width:300px;color:#3183a4;background:#fff;border:3px solid #3183a4;}
+.Bija .product_wrap .info01 .btn_wrap .btn_primary:hover {color:#fff;background:#3183a4;}
+.Bija .product_wrap .info01 .btn_wrap .btn_primary:after {background:#3183a4;}
+.Bija .product_wrap .info01 .btn_wrap .btn_default {width:300px;color:#fff;background:#3183a4;border:3px solid #3183a4;}
+.Bija .product_wrap .info01 .btn_wrap .btn_default:hover {color:#3183a4;background:#3183a4;}
+.Jeju .product_wrap .info01 .btn_wrap .btn_primary {width:300px;color:#5a2713;background:#fff;border:3px solid #5a2713;}
+.Jeju .product_wrap .info01 .btn_wrap .btn_primary:hover {color:#fff;background:#5a2713;}
+.Jeju .product_wrap .info01 .btn_wrap .btn_primary:after {background:#5a2713;}
+.Jeju .product_wrap .info01 .btn_wrap .btn_default {width:300px;color:#fff;background:#5a2713;border:3px solid #5a2713;}
+.Jeju .product_wrap .info01 .btn_wrap .btn_default:hover {color:#5a2713;background:#5a2713;}
+.product_wrap .info01 .btn_wrap .btnSizeL {height:70px;border-radius:35px;}
+.product_wrap .info01 .btn_wrap .btnSizeL span {line-height:64px;}
+.product_wrap .info01 .btn_wrap .commenBox {line-height:100%;margin-bottom:20px;font-size:14px;color:#fff;}
+.product_wrap .info01 .dataBox {margin: 70px 0 0;}
+.product_wrap .info01 .dataBox .data00 {overflow:hidden;}
+.product_wrap .info01 .dataBox .data00 dl {overflow:hidden;float:left;margin-right:35px;}
+.product_wrap .info01 .dataBox .data00 dt {float:left;padding-right:20px;font-size:16px;color:#fff;}
+.product_wrap .info01 .dataBox .data00 dd {float:left;font-size:20px;font-weight:500;}
+.No-Sebum .product_wrap .info01 .dataBox .data00 dd {color:#008e95;}
+.Green-Tea .product_wrap .info01 .dataBox .data00 dd {color:#719e91;}
+.V-Cotton .product_wrap .info01 .dataBox .data00 dd {color:#860308;}
+.Bija .product_wrap .info01 .dataBox .data00 dd {color:#1d678d;}
+.Jeju .product_wrap .info01 .dataBox .data00 dd {color:#381507;}
+.product_wrap .info01 .dataBox .inner {/*width:100%;max-width:650px;*/}
+.product_wrap .info01 .dataBox .inner {height:218px;margin-top:20px;padding:50px 40px 35px 40px;background:#fff;box-sizing:border-box;border-radius:8px;}
+.product_wrap .info01 .dataBox .data01 {overflow:hidden;}
+.product_wrap .info01 .dataBox .data01 dl {float:left;position:relative}
+.product_wrap .info01 .dataBox .data01 dl:not(:first-child) {margin-left:15px;}
+/*.product_wrap .info01 .dataBox .data01 dl:not(:first-child):after {content:'';height: 19px;width:1px;position:absolute;top: 50%;left:0;margin-top: -9.5px;background: #dbdbdb;}*/
+.product_wrap .info01 .dataBox .data01 dl dt {display:inline-block;font-size:30px;font-weight:700;color:#dbdbdb;}
+.No-Sebum .product_wrap .info01 .dataBox .data01 dl dt span {color:#008e95;}
+.Green-Tea .product_wrap .info01 .dataBox .data01 dl dt span {color:#316c5b;}
+.V-Cotton .product_wrap .info01 .dataBox .data01 dl dt span {color:#a8151b;}
+.Bija .product_wrap .info01 .dataBox .data01 dl dt span {color:#3183a4;}
+.Jeju .product_wrap .info01 .dataBox .data01 dl dt span {color:#381507;}
+.product_wrap .info01 .dataBox .data01 dl dd {display:inline-block;margin-left:5px;font-size:16px;color:#646464;}
+.product_wrap .info01 .dataBox .data02 {margin: 28px 0 0;position: relative;height: 12px;}
+.No-Sebum .product_wrap .info01 .dataBox .data02 > span {position: absolute;top: 0;left: 0;width: 100%;height: 12px;border-radius: 12px;background: url(../images/layout/graph_nosebum_bg.png) no-repeat left center;}
+.Green-Tea .product_wrap .info01 .dataBox .data02 > span {position: absolute;top: 0;left: 0;width: 100%;height: 12px;border-radius: 12px;background: url(../images/layout/graph_greentea_bg.png) no-repeat left center;}
+.V-Cotton .product_wrap .info01 .dataBox .data02 > span {position: absolute;top: 0;left: 0;width: 100%;height: 12px;border-radius: 12px;background: url(../images/layout/graph_vcotton_bg.png) no-repeat left center;}
+.Bija .product_wrap .info01 .dataBox .data02 > span {position: absolute;top: 0;left: 0;width: 100%;height: 12px;border-radius: 12px;background: url(../images/layout/graph_bija_bg.png) no-repeat left center;}
+.Jeju .product_wrap .info01 .dataBox .data02 > span {position: absolute;top: 0;left: 0;width: 100%;height: 12px;border-radius: 12px;background: url(../images/layout/graph_jeju_bg.png) no-repeat left center;}
+.product_wrap .info01 .dataBox .data02 > span > span {position: absolute;top: 0;left: 0;height: 12px;border-radius: 12px;transition:all 0.6s;}
+.No-Sebum .product_wrap .info01 .dataBox .data02 > span > span {background: url(../images/layout/graph_nosebum.png) no-repeat left center;}
+.Green-Tea .product_wrap .info01 .dataBox .data02 > span > span {background: url(../images/layout/graph_greentea.png) no-repeat left center;}
+.V-Cotton .product_wrap .info01 .dataBox .data02 > span > span {background: url(../images/layout/graph_vcotton.png) no-repeat left center;}
+.Bija .product_wrap .info01 .dataBox .data02 > span > span {background: url(../images/layout/graph_bija.png) no-repeat left center;}
+.Jeju .product_wrap .info01 .dataBox .data02 > span > span {background: url(../images/layout/graph_jeju.png) no-repeat left center;}
+.No-Sebum .product_wrap .info01 .dataBox .data02 > span > span .arw {position:absolute;top:-3px;right:-10px;width:18px;height:18px;border-radius: 50%;background:#00ffeb;}
+.Green-Tea .product_wrap .info01 .dataBox .data02 > span > span .arw {position:absolute;top:-3px;right:-10px;width:18px;height:18px;border-radius: 50%;background:#46dc90;}
+.V-Cotton .product_wrap .info01 .dataBox .data02 > span > span .arw {position:absolute;top:-3px;right:-10px;width:18px;height:18px;border-radius: 50%;background:#ff4453;}
+.Bija .product_wrap .info01 .dataBox .data02 > span > span .arw {position:absolute;top:-3px;right:-10px;width:18px;height:18px;border-radius: 50%;background:#00eaff;}
+.Jeju .product_wrap .info01 .dataBox .data02 > span > span .arw {position:absolute;top:-3px;right:-10px;width:18px;height:18px;border-radius: 50%;background:#fc401d;}
+.product_wrap .info01 .dataBox .data03 {position: relative;top: 5px;left: 0;height: 50px;}
+.product_wrap .info01 .dataBox .data03 div {position:absolute;top:0;width:auto;transform:translateX(-50%);color:#999;font-size:16px;font-weight:500;}
+.product_wrap .info01 .dataBox .data03 div > span {position: absolute;top: 100%;left: 0;width: 100%;transform: translateX(50%);margin-top: 3px;}
+.product_wrap .info01 .dataBox .data03 div > span > span {position:absolute;top:0;left:0;transform:translateX(-50%);z-index:1;}
+.product_wrap .info01 .dataBox .data03 div > span > span .txt {display:inline-block;position:relative;width:68px;height:24px;line-height:24px;text-align:center;font-size:14px;font-weight:500;color:#fff;background:#999;border-radius:5px;z-index:1;box-sizing:border-box;}
+.product_wrap .info01 .dataBox .data03 div > span > span .arw {background: #999;position: absolute;top:-2px;left: 50%;width: 10px;height: 10px;margin: 0 0 0 -5px;transform: rotate(45deg);z-index: -1;}
+.product_wrap .info01 .dataBox .data03 .label:last-child {transform:translateX(-50%);}
+.product_wrap .info01 .dataBox .data03 .label:last-child > span {transform:translateX(-8%);}
+.product_wrap .info01 .dataBox .data03 .label:last-child > span > span .arw {left:unset;right:10px;}
+.No-Sebum .product_wrap .info01 .dataBox .data03 .label.on {color:#008e95;}
+.No-Sebum .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .txt {background:#08b4bc;}
+.No-Sebum .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .arw {background:#08b4bc;}
+.No-Sebum .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .txt {background:#008e95;}
+.No-Sebum .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .arw {background:#008e95;}
+.No-Sebum .product_wrap .info01 .dataBox .data03 .label.on:nth-child(4) > span > span .txt {background:#006b71;}
+.No-Sebum .product_wrap .info01 .dataBox .data03 .label.on:nth-child(4) > span > span .arw {background:#006b71;}
+.Green-Tea .product_wrap .info01 .dataBox .data03 .label.on {color:#537f6b;}
+.Green-Tea .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .txt {background:#537f6b;}
+.Green-Tea .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .arw {background:#537f6b;}
+.Green-Tea .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .txt {background:#316c5b;}
+.Green-Tea .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .arw {background:#316c5b;}
+.Green-Tea .product_wrap .info01 .dataBox .data03 .label.on:nth-child(4) > span > span .txt {background:#024137;}
+.Green-Tea .product_wrap .info01 .dataBox .data03 .label.on:nth-child(4) > span > span .arw {background:#024137;}
+.V-Cotton .product_wrap .info01 .dataBox .data03 .label.on {color:#a8151b;}
+.V-Cotton .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .txt {background:#a8151b;}
+.V-Cotton .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .arw {background:#a8151b;}
+.V-Cotton .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .txt {background:#860308;}
+.V-Cotton .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .arw {background:#860308;}
+.Bija .product_wrap .info01 .dataBox .data03 .label.on {color:#3183a4;}
+.Bija .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .txt {background:#3183a4;}
+.Bija .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .arw {background:#3183a4;}
+.Bija .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .txt {background:#1d678d;}
+.Bija .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .arw {background:#1d678d;}
+.Jeju .product_wrap .info01 .dataBox .data03 .label.on {color:#81432b;}
+.Jeju .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .txt {background:#81432b;}
+.Jeju .product_wrap .info01 .dataBox .data03 .label.on:nth-child(2) > span > span .arw {background:#81432b;}
+.Jeju .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .txt {background:#5a2713;}
+.Jeju .product_wrap .info01 .dataBox .data03 .label.on:nth-child(3) > span > span .arw {background:#5a2713;}
+.Jeju .product_wrap .info01 .dataBox .data03 .label.on:nth-child(4) > span > span .txt {background:#4f2210;}
+.Jeju .product_wrap .info01 .dataBox .data03 .label.on:nth-child(4) > span > span .arw {background:#4f2210;}
+
+.product_wrap .info01 .dataBox .data03 .label.active {font-weight:700;}
+
+.No-Sebum .product_wrap .videoBox {position:relative;width:100%;height:840px;background:#8bd5cf;}
+.Green-Tea .product_wrap .videoBox {position:relative;width:100%;height:840px;background:#1a534a;}
+.V-Cotton .product_wrap .videoBox {position:relative;width:100%;height:840px;background:#c45453;}
+.Bija .product_wrap .videoBox {position:relative;width:100%;height:840px;background:#49aec4;}
+.Jeju .product_wrap .videoBox {position:relative;width:100%;height:840px;background:#7d4f3f;}
+.Volcanic .product_wrap .videoBox {position:relative;width:100%;height:840px;background:#49aec4;}
+.product_wrap .videoBox .playerCover {position:absolute;left:50%;top: 139.5px;transform:translateX(-50%);z-index:2;width: 980px;height: 560px;z-index:2;}
+.No-Sebum .product_wrap .videoBox .playerCover {top: 100px;height: 620px;}
+.Green-Tea .product_wrap .videoBox .playerCover {top: 100px;height: 620px;}
+.product_wrap .videoBox .playerCover iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
+.No-Sebum .product_wrap .videoBox .playerCover .btnPlay {display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:url(../images/temp/product_video01.jpg) no-repeat left top;background-size:100% auto;}
+.Green-Tea .product_wrap .videoBox .playerCover .btnPlay {display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:url(../images/temp/product_video02.jpg) no-repeat left top;background-size:100% auto;}
+.V-Cotton .product_wrap .videoBox .playerCover .btnPlay {display:block;position:absolute;left:0;top:0;width:100%;height:100%;background: url(../images/temp/product_video03.jpg) no-repeat center;background-size: 100% auto;}
+.Bija .product_wrap .videoBox .playerCover .btnPlay {display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:url(../images/temp/product_video04.jpg) no-repeat left top;background-size:100% auto;}
+.Jeju .product_wrap .videoBox .playerCover .btnPlay {display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:url(../images/temp/product_video05.jpg) no-repeat left top;background-size:100% auto;}
+.product_wrap .videoBox .vodArea {position:absolute;left:50%;top: 139.5px;transform:translateX(-50%);z-index:1;width:980px;height: 561px;}
+.product_wrap .videoBox .vodArea.playing {z-index:100;}
+
+.product_wrap .info02 {overflow:hidden;}
+.No-Sebum .product_wrap .detailArea {float:left;width:50%;height:1080px;text-align:right;background:#e6f8f7;}
+.Green-Tea .product_wrap .detailArea {float:left;width:50%;height:1080px;text-align:right;background:#e3ece9;}
+.V-Cotton .product_wrap .detailArea {float:left;width:50%;height:1080px;text-align:right;background:#f9eeed;}
+.Bija .product_wrap .detailArea {float:left;width:50%;height:1080px;text-align:right;background:#dbeff3;}
+.Jeju .product_wrap .detailArea {float:left;width:50%;height:1080px;text-align:right;background:#e3dbd8;}
+.product_wrap .detailArea .productSlide {/*display:inline-block;width:600px;margin-right:180px;*/padding:230px 0 250px 0;}
+.product_wrap .detailArea .slide_item {float:left;width:600px;text-align:center;}
+.product_wrap .detailArea .slide_item a {display:inline-block;}
+.product_wrap .detailArea .slide_item img {display:inline-block;max-width:100%;}
+.No-Sebum .product_wrap .detailArea .slick-arrow {top:50%;width:16px;height:30px;margin-top:-15px;background:url(../images/common/arr_slick1.png) no-repeat 0 0;}
+.Green-Tea .product_wrap .detailArea .slick-arrow {top:50%;width:16px;height:30px;margin-top:-15px;background:url(../images/common/arr_slick1_2.png) no-repeat 0 0;}
+.V-Cotton .product_wrap .detailArea .slick-arrow {top:50%;width:16px;height:30px;margin-top:-15px;background:url(../images/common/arr_slick1_3.png) no-repeat 0 0;}
+.Bija .product_wrap .detailArea .slick-arrow {top:50%;width:16px;height:30px;margin-top:-15px;background:url(../images/common/arr_slick1_4.png) no-repeat 0 0;}
+.Jeju .product_wrap .detailArea .slick-arrow {top:50%;width:16px;height:30px;margin-top:-15px;background:url(../images/common/arr_slick1_5.png) no-repeat 0 0;}
+.product_wrap .detailArea .slick-prev {left:50px;background-position:0 -30px !important;}
+.product_wrap .detailArea .slick-next {right:50px;background-position:-45px -30px !important;}
+.product_wrap .detailArea .slick-prev:hover {background-position:0 0 !important;}
+.product_wrap .detailArea .slick-next:hover {background-position:-45px 0 !important;}
+.product_wrap .detailArea .slick-dots {position:absolute;left:0;bottom:60px;width:100%;text-align:center;}
+.No-Sebum .product_wrap .detailArea .slick-dots li {display:inline-block;margin:0 10px;width:12px;height:12px;vertical-align:middle;background:#c1eae7;border-radius:50%;box-sizing:border-box;}
+.No-Sebum .product_wrap .detailArea .slick-dots li.slick-active {width:20px;height:20px;border:3px solid #6bcbc3;background:#fff;}
+.Green-Tea .product_wrap .detailArea .slick-dots li {display:inline-block;margin:0 10px;width:12px;height:12px;vertical-align:middle;background:#adc5be;border-radius:50%;box-sizing:border-box;}
+.Green-Tea .product_wrap .detailArea .slick-dots li.slick-active {width:20px;height:20px;border:3px solid #316c5b;background:#fff;}
+.V-Cotton .product_wrap .detailArea .slick-dots li {display:inline-block;margin:0 10px;width:12px;height:12px;vertical-align:middle;background:#e9bfbe;border-radius:50%;box-sizing:border-box;}
+.V-Cotton .product_wrap .detailArea .slick-dots li.slick-active {width:20px;height:20px;border:3px solid #c45453;background:#fff;}
+.Bija .product_wrap .detailArea .slick-dots li {display:inline-block;margin:0 10px;width:12px;height:12px;vertical-align:middle;background:#afdbe5;border-radius:50%;box-sizing:border-box;}
+.Bija .product_wrap .detailArea .slick-dots li.slick-active {width:20px;height:20px;border:3px solid #49aec4;background:#fff;}
+.Jeju .product_wrap .detailArea .slick-dots li {display:inline-block;margin:0 10px;width:12px;height:12px;vertical-align:middle;background:#c4b1aa;border-radius:50%;box-sizing:border-box;}
+.Jeju .product_wrap .detailArea .slick-dots li.slick-active {width:20px;height:20px;border:3px solid #7d4f3f;background:#fff;}
+.product_wrap .detailArea .slick-dots button {font-size:0;line-height:0;}
+
+.product_wrap .infoBox02 {position:relative;float:left;width:50%;max-width:720px;height:1080px;padding:140px 10px 140px 60px;}
+.product_wrap .infoBox02 .inner {display:inline-block;width:100%;height:800px;vertical-align:middle;border-bottom: 1px solid #dbdbdb;}
+.V-Cotton .product_wrap .infoBox02 .inner {position:absolute;left:60px;top:50%;transform:translateY(-50%);width:90%;height:auto;}
+.V-Cotton .product_wrap .infoBox02 .inner .ctt {height:auto;}
+.No-Sebum .product_wrap .infoBox02 .sub {display:inline-block;width:auto;height:30px;line-height:30px;padding:0 20px;font-size:16px;font-weight:700;color:#fff;text-align:center;background:#008e95;border-radius:15px;}
+.Green-Tea .product_wrap .infoBox02 .sub {display:inline-block;width:auto;height:30px;line-height:30px;padding:0 20px;font-size:16px;font-weight:700;color:#fff;text-align:center;background:#1a534a;border-radius:15px;}
+.V-Cotton .product_wrap .infoBox02 .sub {display:inline-block;width:auto;height:30px;line-height:30px;padding:0 20px;font-size:16px;font-weight:700;color:#fff;text-align:center;background:#a8151b;border-radius:15px;}
+.Bija .product_wrap .infoBox02 .sub {display:inline-block;width:auto;height:30px;line-height:30px;padding:0 20px;font-size:16px;font-weight:700;color:#fff;text-align:center;background:#1d678d;border-radius:15px;}
+.Jeju .product_wrap .infoBox02 .sub {display:inline-block;width:auto;height:30px;line-height:30px;padding:0 20px;font-size:16px;font-weight:700;color:#fff;text-align:center;background:#4f2210;border-radius:15px;}
+.product_wrap .infoBox02 .tit_group {position:relative;margin-bottom:35px;padding-bottom:35px;border-bottom: 1px solid #dbdbdb;}
+.No-Sebum .product_wrap .infoBox02 .tit_group .ttl {margin-top:25px;font-size:40px;font-weight:700;color:#008e95;}
+.Green-Tea .product_wrap .infoBox02 .tit_group .ttl {margin-top:25px;font-size:40px;font-weight:700;color:#1a534a;}
+.V-Cotton .product_wrap .infoBox02 .tit_group .ttl {margin-top:25px;font-size:40px;font-weight:700;color:#a8151b;}
+.Bija .product_wrap .infoBox02 .tit_group .ttl {margin-top:25px;font-size:40px;font-weight:700;color:#1d678d;}
+.Jeju .product_wrap .infoBox02 .tit_group .ttl {margin-top:25px;font-size:40px;font-weight:700;color:#4f2210;}
+.product_wrap .infoBox02 .tit_group .sns_share {position:absolute;left:480px;bottom:45PX;overflow:hidden;}
+.product_wrap .infoBox02 .tit_group .sns_share li {float:left;}
+.No-Sebum .product_wrap .infoBox02 .tit_group .sns_share li .share {display:block;height:18px;background-image:url('../images/common/sns_bg.png');}
+.Green-Tea .product_wrap .infoBox02 .tit_group .sns_share li .share {display:block;height:18px;background-image:url('../images/common/sns_bg2.png');}
+.V-Cotton .product_wrap .infoBox02 .tit_group .sns_share li .share {display:block;height:18px;background-image:url('../images/common/sns_bg3.png');}
+.Bija .product_wrap .infoBox02 .tit_group .sns_share li .share {display:block;height:18px;background-image:url('../images/common/sns_bg4.png');}
+.Jeju .product_wrap .infoBox02 .tit_group .sns_share li .share {display:block;height:18px;background-image:url('../images/common/sns_bg5.png');}
+.product_wrap .infoBox02 .tit_group .sns_share li .sns1 {width:17px;background-position:0 0;margin-right:26px;}
+.product_wrap .infoBox02 .tit_group .sns_share li .sns2 {width:11px;background-position:-43px 0;margin-right:28px;}
+.product_wrap .infoBox02 .tit_group .sns_share li .sns3 {width:14px;background-position:-81px 0;margin-right:24px;}
+.product_wrap .infoBox02 .tit_group .sns_share li .sns4 {width:26px;background-position:-119px 0;font-size:0;line-height:0;}
+.product_wrap .infoBox02 .tit_group .sns_share li .sns1:hover {background-position:0 -40px;}
+.product_wrap .infoBox02 .tit_group .sns_share li .sns2:hover {background-position:-43px -40px;}
+.product_wrap .infoBox02 .tit_group .sns_share li .sns3:hover {background-position:-81px -40px;}
+.product_wrap .infoBox02 .tit_group .sns_share li .sns4:hover {background-position:-119px -40px;}
+
+.product_wrap .infoBox02 .ctt {overflow:hidden;width:100%;/*max-width:582px;*/max-width:643px;height:617px;}
+.Bija .product_wrap .infoBox02 .ctt {height:565px;}
+.No-Sebum .product_wrap .infoBox02 .ctt h4 {padding-top:35px;font-size:24px;font-weight:700;color:#008e95;}
+.Green-Tea .product_wrap .infoBox02 .ctt h4 {padding-top:35px;font-size:24px;font-weight:700;color:#316c5b;}
+.V-Cotton .product_wrap .infoBox02 .ctt h4 {padding-top:35px;font-size:24px;font-weight:700;color:#a8151b;}
+.Bija .product_wrap .infoBox02 .ctt h4 {padding-top:35px;font-size:24px;font-weight:700;color:#1d678d;}
+.Jeju .product_wrap .infoBox02 .ctt h4 {padding-top:35px;font-size:24px;font-weight:700;color:#4f2210;}
+.product_wrap .infoBox02 .ctt h4:first-child {padding-top:0;}
+.product_wrap .infoBox02 .ctt dl {margin-top:25px;}
+.product_wrap .infoBox02 .ctt dt {font-size:16px;font-weight:500;color:#646464;}
+.No-Sebum .product_wrap .infoBox02 .ctt dt strong {margin-right:10px;color:#08b4bc;}
+.Green-Tea .product_wrap .infoBox02 .ctt dt strong {margin-right:10px;color:#537f6b;}
+.Green-Tea .product_wrap .infoBox02 .ctt dt em {margin-right:10px;color:#537f6b;font-weight: 400;}
+.V-Cotton .product_wrap .infoBox02 .ctt dt strong {margin-right:10px;color:#c45453;}
+.Bija .product_wrap .infoBox02 .ctt dt strong {margin-right:10px;color:#3183a4;}
+.Bija .product_wrap .infoBox02 .ctt dt em {margin-right:10px;color:#3183a4;font-weight: 400;}
+.Jeju .product_wrap .infoBox02 .ctt dt strong {margin-right:10px;color:#7d4f3f;}
+.Jeju .product_wrap .infoBox02 .ctt dt em {margin-right:10px;color:#7d4f3f;font-weight: 400;}
+.product_wrap .infoBox02 .ctt dd {font-size:14px;color:#383838;}
+.product_wrap .infoBox02 .ctt dd p {margin-top:7px;}
+.product_wrap .infoBox02 .ctt dd ul {margin-top:10px;margin-left:10px;}
+.product_wrap .infoBox02 .ctt dd ul li {padding-left:12px;background: url('../images/common/dot_3x3.gif') no-repeat 0 center;}
+.product_wrap .infoBox02 .ctt dd ul li.no {padding-left:0;background:none;}
+.product_wrap .infoBox02 .ctt dd sup {font-size:14px;}
+.product_wrap .infoBox02 .ctt dd ol {margin-top:10px;margin-left:10px;}
+.product_wrap .infoBox02 .ctt dd ol li {padding-left:10px;text-indent:-9px;}
+.product_wrap .infoBox02 .ctt dd .sub_txt {font-size:12px;margin-top:15px;color:#999;margin-left:10px;}
+.No-Sebum .product_wrap .infoBox02 .ctt .mCSB_draggerRail {background-color: rgba(49,176,167,.1);}
+.No-Sebum .product_wrap .infoBox02 .ctt .mCSB_dragger_bar {background-color: rgba(49,176,167,1);}
+.No-Sebum .product_wrap .infoBox02 .ctt .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {background-color: rgba(49,176,167,1);}
+.No-Sebum .mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+.No-Sebum .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {background-color: rgba(49,176,167,1);}
+.Green-Tea .product_wrap .infoBox02 .ctt .mCSB_draggerRail {background-color: rgba(26,83,74,.1);}
+.Green-Tea .product_wrap .infoBox02 .ctt .mCSB_dragger_bar {background-color: rgba(26,83,74,1);}
+.Green-Tea .product_wrap .infoBox02 .ctt .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {background-color: rgba(26,83,74,1);}
+.Green-Tea .mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+.Green-Tea .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {background-color: rgba(26,83,74,1);}
+.Bija .product_wrap .infoBox02 .ctt .mCSB_draggerRail {background-color: rgba(73,174,196,.1);}
+.Bija .product_wrap .infoBox02 .ctt .mCSB_dragger_bar {background-color: rgba(73,174,196,1);}
+.Bija .product_wrap .infoBox02 .ctt .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {background-color: rgba(73,174,196,1);}
+.Bija .mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+.Bija .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {background-color: rgba(73,174,196,1);}
+.Jeju .product_wrap .infoBox02 .ctt .mCSB_draggerRail {background-color: rgba(125,79,63,.1);}
+.Jeju .product_wrap .infoBox02 .ctt .mCSB_dragger_bar {background-color: rgba(125,79,63,1);}
+.Jeju .product_wrap .infoBox02 .ctt .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {background-color: rgba(125,79,63,1);}
+.Jeju .mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+.Jeju .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {background-color: rgba(125,79,63,1);}
+@media all and (max-width:1599px) {
+	.product_wrap .info01 .ttl {font-size:50px;}
+	.product_wrap .info01 .ttl em {font-size:42px;}
+	.product_wrap .infoBox02 .tit_group .ttl {font-size:30px;}
+	.product_wrap .infoBox02 .tit_group .sns_share {left:0px;bottom:10px;}
+}
+@media all and (max-width:1500px) {
+	.product_wrap .infoBox02 .ctt dd li br {display:none;}
+}
+
+.product_wrap .nextWeekBox {padding:130px 0;}
+.product_wrap .nextWeekBox .ttl {margin-bottom:80px;text-align:center;font-size:60px;font-weight:700;color:#dbdbdb;}
+.product_wrap .nextWeekBox ul {overflow:hidden;max-width:1625px;margin:0 auto;padding:10px;}
+.product_wrap .nextWeekBox li {float:left;width:24%;max-width:380px;height:509px;margin-right:1.33%;padding:50px 60px;text-align:center;background: #fff;box-sizing:border-box;border-radius:8px;}
+.product_wrap .nextWeekBox li:last-child {margin-right:0;}
+.product_wrap .nextWeekBox li .date {display:inline-block;width:140px;height:36px;line-height:36px;font-size:14px;font-weight:700;color:#fff;border-radius:18px;}
+.product_wrap .nextWeekBox li.sebum .date {background:#008e95;}
+.product_wrap .nextWeekBox li.green .date {background:#1a534a;}
+.product_wrap .nextWeekBox li.vivid .date {background:#c45454;}
+.product_wrap .nextWeekBox li.bija .date {background:#49aec4;}
+.product_wrap .nextWeekBox li.jeju .date {background:#7c4f3e;}
+.product_wrap .nextWeekBox li .thumb {margin-top:6px;text-align:center;}
+.product_wrap .nextWeekBox li .thumb img {max-width:100%;}
+.product_wrap .nextWeekBox .subttl {font-size:14px;font-weight:700;}
+.product_wrap .nextWeekBox li.sebum .subttl {color:#008e95;}
+.product_wrap .nextWeekBox li.green .subttl {color:#024137;}
+.product_wrap .nextWeekBox li.vivid .subttl {color:#c45454;}
+.product_wrap .nextWeekBox li.bija .subttl {color:#49aec4;}
+.product_wrap .nextWeekBox li.jeju .subttl {color:#7c4f3e;}
+.product_wrap .nextWeekBox li .p01 {margin:5px -21px 0;font-size: 24px;font-weight: 500;color:#383838;}
+.product_wrap .nextWeekBox li .more {display:none;margin-top: 25px;font-size: 13px;font-weight: 700;color:#024137;}
+.product_wrap .nextWeekBox li .more em {display:inline-block;padding-right: 25px;background:url('../images/common/arr_right1.png') no-repeat right center;}
+.product_wrap .nextWeekBox li:hover {box-shadow:1px 1px 7px #d5d5d5;}
+.product_wrap .nextWeekBox li:hover .more {display:block;}
+@media all and (max-width:1599px) {
+	.product_wrap .nextWeekBox li .p01 {font-size:20px;}
+}
+@media all and (max-width:1280px) {
+	.product_wrap .nextWeekBox li {height:415px;}
+}
+
+/* 가이드 팝업 팝업 */
+/*#productGuide {display: block;position: absolute;z-index: -1;top: 0;left: -200%;}
+#productGuide.open {position: fixed;z-index: 7000;left: 0;top: 0;}*/
+#productGuide .lyPop {overflow:hidden;min-width:980px;border-radius:8px;background:#fff;}
+#productGuide .lyClose {border:2px solid #ffffff;border-radius:50%;}
+#productGuide .lyClose:before,
+#productGuide .lyClose:after {content:'';display:block;position:absolute;left:50%;top:50%;width:14px;height:2px;margin-left:-7px;background:#fff;}
+#productGuide .lyClose:before {transform:rotate(45deg);}
+#productGuide .lyClose:after {transform:rotate(-45deg);}
+#productGuide .teaser_lyWrap {}
+#productGuide .teaser_lyttl {height:574px;padding:110px 110px 0 110px;color:#fff;background:#024137;box-sizing:border-box;}
+#productGuide .teaser_lyttl .txt_box {padding-bottom:25px;color:#fff;border-bottom:1px solid #74948f;}
+#productGuide .teaser_lyttl .popUp_p01 {margin-bottom:20px;font-size:30px;font-weight:700;}
+#productGuide .teaser_lyttl .popUp_p02 {}
+#productGuide .teaser_lyttl .popUp_p03 {font-weight:600;}
+#productGuide .slideBox {position:relative;}
+#productGuide .slideBox .ttl {text-align:center;font-size:24px;font-weight:500;color:#fff;padding:30px 0 20px 0;}
+#productGuide .slideBox .productGuideSlide {position:relative;width:650px;height:260px;margin:0 auto;background:#fff;border-radius:8px;box-shadow:0px 3px 4px #d5d5d5;}
+#productGuide .slideBox .slide_item {overflow:hidden;padding:20px;}
+#productGuide .slideBox .slide_item .thumb {float:left;width:240px;margin-right:20px;}
+#productGuide .slideBox .slide_item .info_group {float:left;padding-top:20px;}
+#productGuide .slideBox .slide_item.s2 .info_group {padding-top:0px;}
+#productGuide .slideBox .slide_item.s4 .info_group {padding-top:0px;}
+#productGuide .slideBox .slide_item.s5 .info_group {padding-top:0px;}
+#productGuide .slideBox .slide_item .info_group .tit {font-size:28px;font-weight:700;}
+#productGuide .slideBox .slide_item.s1 .info_group .tit {color:#79cbc5;}
+#productGuide .slideBox .slide_item.s2 .info_group .tit {color:#024137;}
+#productGuide .slideBox .slide_item.s3 .info_group .tit {color:#c34a4f;}
+#productGuide .slideBox .slide_item.s4 .info_group .tit {color:#51b6cc;line-height:33px;}
+#productGuide .slideBox .slide_item.s5 .info_group .tit {color:#763e29;}
+#productGuide .slideBox .slide_item .info_group .date {margin-top:15px;font-size:16px;font-weight:500;color:#666;}
+#productGuide .slideBox .slide_item .info_group .list li {/*padding-left:10px;*/color:#666;/*background: url('../images/common/dot_3x3.gif') no-repeat 0 center;*/}
+#productGuide .slideBox .slide_item .info_group .txt {margin-top:30px;font-size:24px;font-weight:700;}
+#productGuide .slideBox .slide_item.s1 .info_group .txt {color:#79cbc5;}
+#productGuide .slideBox .slide_item.s2 .info_group .txt {color:#024137;}
+#productGuide .slideBox .slide_item.s3 .info_group .txt {color:#c34a4f;}
+#productGuide .slideBox .slide_item.s4 .info_group .txt {color:#51b6cc;}
+#productGuide .slideBox .slide_item.s5 .info_group .txt {color:#763e29;}
+#productGuide .slideBox .slick-arrow {top:50%;width:28px;height:51px;margin-top:-26px;background:url(../images/common/arr_slick2.png) no-repeat 0 0;}
+#productGuide .slideBox .slick-prev {left:-50px;background-position:0 0;}
+#productGuide .slideBox .slick-next {right:-50px;background-position:-72px 0;}
+#productGuide .slideBox .slick-dots {position:absolute;left:0;bottom:-52px;width:100%;text-align:center;}
+#productGuide .slideBox .slick-dots li {display:inline-block;margin:0 10px;width:10px;height:10px;vertical-align:middle;background:#678d87;border-radius:50%;box-sizing:border-box;}
+#productGuide .slideBox .slick-dots li.slick-active {width:22px;height:22px;border:4px solid #024137;background:#fff;}
+#productGuide .slideBox .slick-dots button {font-size:0;line-height:0;}
+#productGuide .teaser_lyctt {padding:95px 110px 0 110px;}
+/*
+#productGuide .teaser_lyctt .merit {}
+#productGuide .teaser_lyctt .merit .ttl {font-size: 18px;font-weight: 500;margin: 10px 0 0;}
+#productGuide .teaser_lyctt .merit .ctt {margin: 30px 0 0;}
+#productGuide .teaser_lyctt .merit .ctt dl {padding-left: 90px;position: relative;}
+#productGuide .teaser_lyctt .merit .ctt dt {position: absolute;top: 0;left: 0;}
+#productGuide .teaser_lyctt .merit .ctt dt span {font-size: 12px;font-weight: 700;color: #024137;}
+#productGuide .teaser_lyctt .merit .ctt dd {font-size: 12px;}
+#productGuide .teaser_lyctt .StepBox {margin: 30px 0 0;padding: 30px 0 0;border-top: 1px solid #e6e6e6;}
+#productGuide .teaser_lyctt .StepBox .ttl {font-size: 18px;font-weight: 500;}
+#productGuide .teaser_lyctt .StepBox .ctt {margin: 20px 0 0;overflow: hidden;}
+#productGuide .teaser_lyctt .StepBox .ctt ul {}
+#productGuide .teaser_lyctt .StepBox .ctt ul li {width: 33.33%;float: left;padding: 80px 0 0;text-align: center;font-size: 12px;color: #333;}
+#productGuide .teaser_lyctt .StepBox .ctt ul li.step01 {background: url(../images/temp/product_guide_img01.jpg) no-repeat center 9px / 60px auto;}
+#productGuide .teaser_lyctt .StepBox .ctt ul li.step02 {background: url(../images/temp/product_guide_img02.jpg) no-repeat center 9px / 65px auto;}
+#productGuide .teaser_lyctt .StepBox .ctt ul li.step03 {background: url(../images/temp/product_guide_img03.jpg) no-repeat center 8px / 62px auto;}
+#productGuide .teaser_lyctt .StepBox .ctt ul li span {display: block;color: #024137;font-weight: 700;}
+#productGuide .teaser_lyctt .textBox {margin: 20px 0 0;padding: 20px 0 0;border-top: 1px solid #e6e6e6;}
+#productGuide .teaser_lyctt .textBox .ttl {font-size: 12px;font-weight: 700;margin: 10px 0 0;}
+#productGuide .teaser_lyctt .textBox ul {font-size: 12px;line-height: 20px;color: #666;}
+#productGuide .teaser_lyctt .textBox ul li {margin: 0 0 5px;padding: 0 0 0 10px;position: relative;}
+#productGuide .teaser_lyctt .textBox ul li span {position: absolute;top: 0;left: 0;line-height: 23px;width: 4px;height: 23px;background: url(../images/common/bullet.png) no-repeat left center / 4px;}*/
+
+#event_complate .lyPop {overflow:hidden;width:560px;border-radius:8px;background:#fff;}
+#event_complate .lyClose {border: 2px solid #ffffff; border-radius: 50%;}
+#event_complate .lyClose:before,
+#event_complate .lyClose:after {content:'';display:block;position:absolute;left:50%;top:50%;width:14px;height:2px;margin-left:-7px;background:#fff;}
+#event_complate .lyClose:before {transform:rotate(45deg);}
+#event_complate .lyClose:after {transform:rotate(-45deg);}
+#event_complate .lyTop {padding:85px 70px 40px 70px;background:#024137;}
+#event_complate .lyTop .title {font-size:26px;font-weight:500;color:#fff;}
+#event_complate .lyBody {padding:35px 70px 80px 70px;font-size:14px;color:#646464;}
+#event_complate .btn_wrap {margin-top:50px;}
+#event_complate .btn_wrap a {width:100%;margin-top:10px;}
+#event_complate .btn_wrap a:first-child {margin-top:0px;}
+
+#event_cancel .lyPop {overflow:hidden;width:560px;border-radius:8px;background:#fff;}
+#event_cancel .lyClose {border: 2px solid #ffffff; border-radius: 50%;}
+#event_cancel .lyClose:before,
+#event_cancel .lyClose:after {content:'';display:block;position:absolute;left:50%;top:50%;width:14px;height:2px;margin-left:-7px;background:#fff;}
+#event_cancel .lyClose:before {transform:rotate(45deg);}
+#event_cancel .lyClose:after {transform:rotate(-45deg);}
+#event_cancel .lyTop {padding:85px 70px 40px 70px;background:#024137;}
+#event_cancel .lyTop .title {font-size:26px;font-weight:500;color:#fff;}
+#event_cancel .lyBody {padding:35px 70px 80px 70px;font-size:14px;color:#646464;}
+#event_cancel .btn_wrap {margin-top:50px;}
+#event_cancel .btn_wrap a {width:100%;margin:10px 0 0 0;}
+#event_cancel .btn_wrap a.btn_primary {border:2px solid #024137;}
+#event_cancel .btn_wrap a:first-child {margin:0px !important;}
+
+/* ==========================
+ingredients page
+========================== */
+.ing_wrap {overflow:hidden}
+/*.ing_wrap .section1 {padding-bottom:140px;font-size:0;}*/
+.ing_wrap .section1 {padding-bottom:140px;font-size:0;text-align:right;}
+.No-Sebum .ing_wrap .section1 {background:#8bd5cf;}
+.Green-Tea .ing_wrap .section1 {background:#1a534a;}
+.V-Cotton .ing_wrap .section1 {background:#c45453;}
+.Bija .ing_wrap .section1 {background:#49aec4;}
+.Jeju .ing_wrap .section1 {background:#7d4f3f;}
+
+/*.ing_wrap .section1 .info_img {display:inline-block;vertical-align:top;width:50%;height: calc(100vh - 90px);min-height:990px;}*/
+.ing_wrap .section1 .info_img {position:fixed;left:0;top:90px;width:50%;height: calc(100vh - 90px);}
+.ing_wrap .section1 .infoBox01 {display:inline-block;vertical-align:top;width:50%;font-size:14px;}
+.ing_wrap .section1 .alignBox.review {display:inline-block;width:100%;padding:140px 60px 0 60px;text-align:left;box-sizing:border-box;}
+.ing_wrap .section1 .ttl {font-size:70px;font-weight:700;color:#fff;}
+.ing_wrap .section1 .desc {margin-top:25px;font-size:14px;color:#fff;}
+.ing_wrap .section1 .desc strong {display:block;font-weight:700;margin-top:25px;}
+.ing_wrap .section1 .desc p {line-height:18px;margin-top:10px;font-size:12px;}
+.ing_wrap .section1 .desc div {margin-top:20px;}
+.ing_wrap .section1 .desc sup {font-size:13px;}
+.ing_wrap .section1 .desc a {display:inline-block;margin-top:25px;padding-right:25px;font-size:14px;font-weight:600;color:#fff;background:url('../images/common/arr_right2.png') no-repeat right center;}
+
+.ing_wrap .section1 .reviewBox {margin-top:70px;padding:75px 30px 60px 30px;border-top:1px solid #d1eeec;}
+.ing_wrap .section1 .reviewBox .review_slide {width:100%;max-width:780px;margin:0 auto;}
+.ing_wrap .section1 .reviewBox .r_item {/*wimdth:33.3%;*/width:240px;margin:0 10px;padding:14px 14px 26px;background:#fff;box-sizing:border-box;}
+.ing_wrap .section1 .reviewBox .r_item a {display:block;}
+.ing_wrap .section1 .reviewBox .r_item .thumb {width:212px;height:166px;}
+.ing_wrap .section1 .reviewBox .r_item .thumb img {display:block;width:auto;height:100%;margin:0 auto;}
+.ing_wrap .section1 .reviewBox .r_item .name {margin-top:10px;font-weight:700;color:#383838;}
+.ing_wrap .section1 .reviewBox .r_item .name .circle {display:inline-block;width:34px;height:34px;line-height:34px;margin-right:10px;text-align:center;font-size:21px;font-weight:700;color:#fff;border-radius:50%;}
+.ing_wrap .section1 .reviewBox .r_item .txt {overflow:hidden;height:66px;margin-top:10px;font-size:12px;color:#383838;line-height:22px;}
+.ing_wrap .section1 .review_slide .slick-arrow {top:50%;width:16px;height:30px;margin-top:-15px;background:url(../images/common/arr_slick1_6.png);}
+.ing_wrap .section1 .review_slide .slick-prev {left:-30px;background-position:0 -30px;}
+.ing_wrap .section1 .review_slide .slick-next {right:-30px;background-position:-45px -30px;}
+.ing_wrap .section1 .review_slide .slick-prev:hover {background-position:0 0;}
+.ing_wrap .section1 .review_slide .slick-next:hover {background-position:-45px 0;}
+
+.ing_wrap .section1 .review_area .tit {font-size:24px;font-weight:700;color:#fff;}
+.ing_wrap .section1 .review_area .desc {font-size:14px;color:#fff;}
+.ing_wrap .section1 .review_area .Btn {display:inline-block;margin-top:25px;padding-right:25px;font-size:14px;font-weight:600;color:#fff;background:url('../images/common/arr_right2.png') no-repeat right center;}
+
+.ing_wrap .section1 .alignBox.video {width:100%;max-width:660px;margin:0 auto;padding:140px 0 0 0;text-align:left;box-sizing:border-box;}
+.ing_wrap .videoGroup {position:relative;max-width:660px;padding-top:56.365%;margin:0 auto;border-radius:10px;}
+.ing_wrap .videoGroup .playerCover {position:absolute;left:0;top:0;z-index:2;width:100%;height:100%;}
+.ing_wrap .videoGroup .playerCover .btnPlay {position:absolute;left:0;top:0;z-index:5;width:100%;height:100%;}
+.ing_wrap .videoGroup .playerCover iframe {position:absolute;left:0;top:0;z-index:2;width:100%;height:100%;}
+.ing_wrap .videoGroup .cover {position:absolute;left:0;top:0;z-index:3;width:100%;height:100%;}
+/*.No-Sebum  .ing_wrap .videoGroup .cover {background:url('../images/product/ing_video01_bg.png') no-repeat right center /100%;}
+.Green-Tea .ing_wrap .videoGroup .cover {background:url('../images/product/ing_video01_bg.png') no-repeat right center /100%;}
+.V-Cotton  .ing_wrap .videoGroup .cover {background:url('../images/product/ing_video01_bg.png') no-repeat right center /100%;}
+.Bija .ing_wrap .videoGroup .cover {background:url('../images/product/ing_video01_bg.png') no-repeat right center /100%;}
+.Jeju .ing_wrap .videoGroup .cover {background:url('../images/product/ing_video01_bg.png') no-repeat right center /100%;}*/
+.ing_wrap .alignBox.video .ttl {margin-top:74px;font-size:70px;font-weight:700;color:#fff;}
+.ing_wrap .alignBox.video .desc {margin-top:25px;font-size:13px;color:#fff;}
+.ing_wrap .alignBox.video .desc strong {display:block;font-weight:700;margin-top:25px;}
+.ing_wrap .alignBox.video .desc p {line-height:18px;margin-top:10px;font-size:12px;font-weight:400;}
+.ing_wrap .alignBox.video .desc div {margin-top:20px;}
+.ing_wrap .alignBox.video .desc sup {font-size:13px;}
+.ing_wrap .alignBox.video .desc a {display:inline-block;margin-top:25px;padding-right:25px;font-size:14px;font-weight:600;color:#fff;background:url('../images/common/arr_right5.png') no-repeat right center;}
+@media all and (max-width:1700px) {
+	.ing_wrap .section1 .alignBox.video {padding:140px 50px 0 50px;}
+	.ing_wrap .alignBox .desc br {display:none;}
+}
+
+/* 원료 메인 */
+.ing_main_wrap #header {background:transparent;border-bottom:0;}
+.ing_main_wrap #container {padding-top:0;}
+.ing_main_wrap #container .title_wrap {height: 0;}
+
+.ing_gate_area {position:relative;height:100vh;}
+.ing_gate_area .gate_slide {height:100%;}
+.ing_gate_area .gate_slide .swiper-wrapper {height:100%;}
+.ing_gate_area .gate_slide .block_item {overflow:hidden;position:relative;width:600px;height:100%;border-right:1px solid #eee;box-sizing:border-box;}
+
+
+.gate_slide .block_item > div {display:block;position:absolute;top: 0;left: 0;width: 100%;height: 100%;opacity:1;filter:alpha(opacity=1);transition:all 0.5s;background: #fff;z-index: 2;}
+.gate_slide .block_item > div .title {position:absolute;left:60px;top:32%;font-size:52px;font-weight:700;color:#383838;line-height:56px;background:#fff;}
+.gate_slide .block_item > .inner {display:block;position:absolute;top: 0;left: 0;width: 100%;height: 100%;opacity:0;filter:alpha(opacity=0);transition:all 0.5s;z-index: 1;}
+.gate_slide .block_item.mouseOn > div {opacity:0;filter:alpha(opacity=0);z-index:1}
+.gate_slide .block_item.mouseOn > div .title {z-index:-1;opacity:0;filter:alpha(opacity=0);transition:all 0.3s;}
+.gate_slide .block_item.mouseOn > .inner {opacity:1;filter:alpha(opacity=1);z-index: 2;}
+
+.gate_slide .block_item .on_img {position:absolute;left:0;top:0;width:100%;height:100%;}
+.gate_slide .block_item .on_tGroup {position:absolute;left:60px;top:31.48%;opacity:0;filter:alpha(opacity=0);}
+.gate_slide .block_item .on_tGroup .on_title {position:relative;top:20px;font-size:56px;font-weight:700;color:#fff;line-height:58px;opacity:0;filter:alpha(opacity=0);}
+.gate_slide .block_item .on_tGroup .on_txt {position:relative;top:30px;margin-top:25px;font-size:18px;color:#fff;line-height:30px;opacity:0;filter:alpha(opacity=0);}
+.gate_slide .block_item .on_tGroup .on_btn {position:relative;top:40px;display:inline-block;margin-top:30px;opacity:0;filter:alpha(opacity=0);}
+
+.gate_slide .block_item.mouseOn .on_img {left:-3%;top:-3%;width:106%;height:106%;transition:all 0.6s linear;}
+.gate_slide .block_item.mouseOn .on_tGroup {opacity:1;filter:alpha(opacity=1);transition:all 0.3s;}
+.gate_slide .block_item.mouseOn .on_tGroup .on_title {top:0;transition:all 0.5s 0.3s;opacity:1;filter:alpha(opacity=1);}
+.gate_slide .block_item.mouseOn .on_tGroup .on_txt {top:0;transition:all 0.5s 0.4s;opacity:1;filter:alpha(opacity=1);}
+.gate_slide .block_item.mouseOn .on_tGroup .on_btn {top:0;transition:all 0.5s 0.5s;opacity:1;filter:alpha(opacity=1);}
+
+.gate_slide .block_item.firstOn .title {z-index:-1;opacity:0;filter:alpha(opacity=0);transition:all 0.3s;}
+.gate_slide .block_item.firstOn .inner {opacity:1;filter:alpha(opacity=1);transition:all 0.3s;}
+.gate_slide .block_item.firstOn .on_img {left:-3%;top:-3%;width:106%;height:106%;transition:all 0.5s linear;}
+.gate_slide .block_item.firstOn .on_tGroup {opacity:1;filter:alpha(opacity=1);transition:all 0.3s;}
+.gate_slide .block_item.firstOn .on_tGroup .on_title {top:0;transition:all 0.5s 0.3s;opacity:1;filter:alpha(opacity=1);}
+.gate_slide .block_item.firstOn .on_tGroup .on_txt {top:0;transition:all 0.5s 0.4s;opacity:1;filter:alpha(opacity=1);}
+.gate_slide .block_item.firstOn .on_tGroup .on_btn {top:0;transition:all 0.5s 0.5s;opacity:1;filter:alpha(opacity=1);}
+
+.ing_gate_area .more {position:fixed;right:2%;bottom:5%;z-index:100;width:120px;line-height:100%;font-size:12px;color:#383838;}
+.ing_gate_area .more .line {overflow:hidden;display:inline-block;position:relative;width:46px;height:1px;margin:0 0 0 10px;vertical-align:middle;}
+.ing_gate_area .more .line:before {content:'';display:block;position:relative;z-index:2;width:100%;height:100%;background-color:#383838;animation: 1.5s LINE_X cubic-bezier(0.79, 0.17, 0.15, 0.96) infinite;}
+.ing_gate_area .more .line:after {content:'';display:block;position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;background-color:rgba(219,219,219,1);}
+@keyframes LINE_X { 
+	0% { transform: translateX(-100%); }
+	100% { transform: translateX(100%); } 
+}

@@ -1,0 +1,72 @@
+
+		@font-face {
+		  font-family: "NG";
+		  font-style: normal;
+		  font-weight: 400;
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format("embedded-opentype"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format("woff2"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format("woff"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format("truetype");
+		}
+		@font-face {
+		  font-family: "NG";
+		  font-style: normal;
+		  font-weight: 700;
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot);
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format("embedded-opentype"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format("woff2"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format("woff"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format("truetype");
+		}
+		@font-face {
+		  font-family: "NG";
+		  font-style: normal;
+		  font-weight: 800;
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot);
+		  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot?#iefix) format("embedded-opentype"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff2) format("woff2"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff) format("woff"),
+			   url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.ttf) format("truetype");
+		 }
+		
+		
+		/*=================================
+		reset
+		=================================*/
+		* {list-style:none;padding:0;margin:0;}
+		html {font-size:12px;font-family:'NG';line-height:1;word-break:break-all;-ms-word-break:break-all;}
+		body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button {outline:none;}
+		input[type="radio"], input[type="image"], img, fieldset, iframe {border:0 none;vertical-align:middle}
+		table {border-spacing:0;border-style:none;border-collapse:collapse;}
+		input[type="text"], input[type="password"], input[type="file"], textarea {border:1px solid #d1d1d1;}
+		a, a:hover, a:link, a:visited, a:active {text-decoration:none;}
+		hr {display:none;}
+		h1, h2, h3, h4, h5, h6 {font-size:1em}
+		
+		
+		/*=================================
+		view
+		=================================*/
+		.texthidden {overflow:hidden; position:absolute; top:0; left:0; width:0; height:0; font-size:0; line-height:0;}
+		
+		.ctt {width:100%;max-width:640px;margin:0 auto;text-align:center;overflow: hidden;}
+		.ctt .ttl {}
+		.ctt .ttl img {width: 100%;display: block;} 
+		.ctt ul {margin-bottom: 36%;}
+		.ctt ul li {width: 100%;display: block;margin: 0.5% 0;}
+		.ctt ul li .box {display:none;position: relative}
+		.ctt ul li h2 {width: 100%;padding-top: 28.2%;display:block;cursor: pointer;}
+		.ctt ul li h2.dep1_ttl {background:url(images/intro/180119_m_dep1_ttl.jpg) no-repeat left top;background-size: 100% auto;}
+		.ctt ul li h2.dep2_ttl {background:url(images/intro/180119_m_dep2_ttl.jpg) no-repeat left top;background-size: 100% auto;}
+		.ctt ul li h2.dep3_ttl {background:url(images/intro/180119_m_dep3_ttl.jpg) no-repeat left top;background-size: 100% auto;}
+		.ctt ul li h2.dep4_ttl {background:url(images/intro/180119_m_dep4_ttl.jpg) no-repeat left top;background-size: 100% auto;}
+		.ctt ul li img {width:100%;display:block;}
+		.ctt ul li .submit {background: url(images/intro/180119_m_submit_on.png) no-repeat left top;background-size: 100% auto;width: 38.2%;padding-top: 11.3%;display: block;position: absolute;bottom: 5%;left: 30.9%;}
+		.notice {width: 100%;max-width: 640px;margin: 0 auto;text-align: center;overflow: hidden;}
+		.notice img {width:100%;display:block;}
+		.ctt ul li.on .box {display:block;}
+		.ctt ul li.on h2.dep1_ttl {background:url(images/intro/180119_m_dep1_ttl_on.jpg) no-repeat left top;background-size: 100% auto;}
+		.ctt ul li.on h2.dep2_ttl {background:url(images/intro/180119_m_dep2_ttl_on.jpg) no-repeat left top;background-size: 100% auto;}
+		.ctt ul li.on h2.dep3_ttl {background:url(images/intro/180119_m_dep3_ttl_on.jpg) no-repeat left top;background-size: 100% auto;}
+		.ctt ul li.on h2.dep4_ttl {background:url(images/intro/180119_m_dep4_ttl_on.jpg) no-repeat left top;background-size: 100% auto;}
