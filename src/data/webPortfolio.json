@@ -6,7 +6,8 @@
     "alt": "LG 유독 운영",
     "title": "LG 유독 운영",
     "date": "2024/11 ~ 2026/05",
-    "skill": "UI개발 & 유지보수",
+    "role": "UI개발",
+    "skill": "HTML / SCSS  / Vue / 웹표준 / 웹접근성",
     "links": [
       {
         "kind": "big-img",
@@ -28,7 +29,8 @@
     "alt": "디지털웍스 홈페이지 리뉴얼",
     "title": "디지털웍스 홈페이지 리뉴얼",
     "date": "2024/10 ~ 2024/10",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "home",
@@ -51,7 +53,8 @@
     "alt": "삼화페인트 뉴스레터",
     "title": "삼화페인트 뉴스레터",
     "date": "2024/06 ~ 2024/08",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -73,7 +76,8 @@
     "alt": "한솔PNS 구축 프로젝트",
     "title": "한솔PNS 구축 프로젝트",
     "date": "2024/01 ~ 2024/05",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -95,7 +99,8 @@
     "alt": "Innisfree KR ForU 컨텐츠",
     "title": "Innisfree KR ForU 컨텐츠",
     "date": "2022/07",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -117,7 +122,8 @@
     "alt": "LG hom'in 신규사업 운영업무",
     "title": "LG hom'in 신규사업 운영업무",
     "date": "2021/06 ~ 2022/06",
-    "skill": "UI개발, 고객사 커뮤니케이션",
+    "role": "UI개발, 고객사 커뮤니케이션",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -139,7 +145,8 @@
     "alt": "하나투어 프로모션 이벤트",
     "title": "하나투어 프로모션 이벤트",
     "date": "2021/05 ~ 2021/07",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -161,7 +168,8 @@
     "alt": "BANILA.COM 바닐라TV 모바일 전용 컨텐츠",
     "title": "BANILA.COM 바닐라TV 모바일 전용 컨텐츠",
     "date": "2020/07",
-    "skill": "UI개발(파견업무)",
+    "role": "UI개발(파견업무)",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -189,7 +197,8 @@
     "alt": "BANILA.COM bbyBanila 컨텐츠",
     "title": "BANILA.COM bbyBanila 컨텐츠",
     "date": "2020/07",
-    "skill": "UI개발(파견업무)",
+    "role": "UI개발(파견업무)",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -223,7 +232,8 @@
     "alt": "BANILA.COM culryStudio 컨텐츠",
     "title": "BANILA.COM culryStudio 컨텐츠",
     "date": "2020/07",
-    "skill": "UI개발(파견업무)",
+    "role": "UI개발(파견업무)",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -257,7 +267,8 @@
     "alt": "BANILA.COM 쇼핑몰 구축 프로젝트",
     "title": "BANILA.COM 쇼핑몰 구축 프로젝트",
     "date": "2019/08 ~ 2020/07",
-    "skill": "UI개발(파견업무)",
+    "role": "UI개발(파견업무)",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -291,7 +302,8 @@
     "alt": "APMALL 'HELLO APMALL' 코덕마블 이벤트",
     "title": "APMALL 'HELLO APMALL' 코덕마블 이벤트",
     "date": "2019/10",
-    "skill": "UI개발, 고객사 커뮤니케이션",
+    "role": "UI개발, 고객사 커뮤니케이션",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -313,7 +325,8 @@
     "alt": "APMALL '아몰렛' 룰렛 이벤트",
     "title": "APMALL '아몰렛' 룰렛 이벤트",
     "date": "2019/08",
-    "skill": "UI개발, 고객사 커뮤니케이션",
+    "role": "UI개발, 고객사 커뮤니케이션",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -335,7 +348,8 @@
     "alt": "innisfree JP 티저사이트 구축 프로젝트",
     "title": "innisfree JP 티저사이트 구축 프로젝트",
     "date": "2019/04 ~ 2019/08",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -357,6 +371,7 @@
     "alt": "APMALL '설화수 별이 빛나는 6월' 이벤트",
     "title": "APMALL '설화수 별이 빛나는 6월' 이벤트",
     "date": "2019/06",
+    "role": "UI개발, 고객사 커뮤니케이션",
     "skill": "UI개발, 고객사 커뮤니케이션",
     "links": [
       {
@@ -379,7 +394,8 @@
     "alt": "LANEIGE 시연용 사이트",
     "title": "LANEIGE 시연용 사이트",
     "date": "2019/03 ~ 2019/04",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -401,7 +417,8 @@
     "alt": "NIKE 'on-air' 프로모션",
     "title": "NIKE 'on-air' 프로모션",
     "date": "2018/12 ~ 2019/03",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -429,7 +446,8 @@
     "alt": "AESTURA 시연용 사이트",
     "title": "AESTURA 시연용 사이트",
     "date": "2018/06 ~ 2018/08",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -451,7 +469,8 @@
     "alt": "ETUDE HOUSE 'Quick And Easy' 프로모션",
     "title": "ETUDE HOUSE 'Quick And Easy' 프로모션",
     "date": "2018/08",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -479,7 +498,8 @@
     "alt": "ETUDE HOUSE 진주알 나눠갖기 채널에뛰드 퀴즈 이벤트",
     "title": "ETUDE HOUSE 진주알 나눠갖기 채널에뛰드 퀴즈 이벤트",
     "date": "2018/07",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -501,7 +521,8 @@
     "alt": "ETUDE HOUSE 히든신상 달달템 투표 이벤트",
     "title": "ETUDE HOUSE 히든신상 달달템 투표 이벤트",
     "date": "2018/07",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -523,7 +544,8 @@
     "alt": "NIKE '씬 스틸러' 프로모션",
     "title": "NIKE '씬 스틸러' 프로모션",
     "date": "2017/11 ~ 2018/03",
-    "skill": "UI개발",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -545,7 +567,8 @@
     "alt": "나이키",
     "title": "NIKE.COM (마이페이지/고객센터 리뉴얼)",
     "date": "2016/07",
-    "skill": "CSS / JQuery",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS",
     "links": [
       {
         "kind": "big-img",
@@ -573,7 +596,8 @@
     "alt": "우리정보통신",
     "title": "우리정보통신",
     "date": "2016/04",
-    "skill": "Total Design / HTML / CSS / JQuery / 웹표준",
+    "role": "UI개발",
+    "skill": "HTML / CSS / JS / 웹표준",
     "links": [
       {
         "kind": "big-img",
@@ -595,7 +619,8 @@
     "alt": "호텔 라미아",
     "title": "호텔 라미아",
     "date": "2016/01",
-    "skill": "design / HTML / CSS / JQuery",
+    "role": "UI개발",
+    "skill": "HTML / CSS",
     "links": [
       {
         "kind": "big-img",
@@ -617,6 +642,7 @@
     "alt": "플래져 RFID",
     "title": "플래져 RFID",
     "date": "2015/12",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -639,7 +665,8 @@
     "alt": "서원국제결혼",
     "title": "서원국제결혼",
     "date": "2015/12",
-    "skill": "design / HTML / CSS",
+    "role": "UI개발",
+    "skill": "HTML / CSS",
     "links": [
       {
         "kind": "big-img",
@@ -661,6 +688,7 @@
     "alt": "오필",
     "title": "오필",
     "date": "2015/11",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -683,6 +711,7 @@
     "alt": "행복네트워크",
     "title": "행복네트워크",
     "date": "2015/11",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -705,7 +734,8 @@
     "alt": "이텍티디에이",
     "title": "이텍티디에이",
     "date": "2015/11",
-    "skill": "design / HTML / CSS",
+    "role": "UI개발",
+    "skill": "HTML / CSS",
     "links": [
       {
         "kind": "big-img",
@@ -727,7 +757,8 @@
     "alt": "대전청호설비",
     "title": "대전청호설비",
     "date": "2015/09",
-    "skill": "design / HTML / CSS",
+    "role": "UI개발",
+    "skill": "HTML / CSS",
     "links": [
       {
         "kind": "big-img",
@@ -749,6 +780,7 @@
     "alt": "강경포구젓갈",
     "title": "강경포구젓갈",
     "date": "2015/09",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -771,6 +803,7 @@
     "alt": "비앤씨 쇼핑몰",
     "title": "비앤씨 쇼핑몰",
     "date": "2015/08",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -793,7 +826,8 @@
     "alt": "해피2020",
     "title": "해피2020",
     "date": "2015/08",
-    "skill": "Total Design / HTML / CSS",
+    "role": "UI개발",
+    "skill": "HTML / CSS",
     "links": [
       {
         "kind": "big-img",
@@ -815,7 +849,8 @@
     "alt": "비앤씨",
     "title": "비앤씨",
     "date": "2015/07",
-    "skill": "Total Design / HTML / CSS",
+    "role": "UI개발",
+    "skill": "HTML / CSS",
     "links": [
       {
         "kind": "big-img",
@@ -837,6 +872,7 @@
     "alt": "한스약품",
     "title": "한스약품",
     "date": "2015/07",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -859,6 +895,7 @@
     "alt": "피규어베이",
     "title": "피규어베이",
     "date": "2015/06",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -881,6 +918,7 @@
     "alt": "노블스(영문)",
     "title": "노블스(영문)",
     "date": "2015/05",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -903,6 +941,7 @@
     "alt": "종가집젓갈백화점",
     "title": "종가집젓갈백화점",
     "date": "2015/05",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -925,6 +964,7 @@
     "alt": "에너지관리협동조합",
     "title": "에너지관리협동조합",
     "date": "2015/04",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -947,6 +987,7 @@
     "alt": "삼전식품",
     "title": "삼전식품",
     "date": "2015/04",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {
@@ -969,7 +1010,8 @@
     "alt": "개인 홈페이지",
     "title": "개인 홈페이지",
     "date": "2015/03 ~",
-    "skill": "Design / HTML / CSS / JQuery / 웹표준",
+    "role": "UI개발",
+    "skill": "HTML / CSS  / Vue / 웹표준",
     "links": [
       {
         "kind": "big-img",
@@ -991,6 +1033,7 @@
     "alt": "헬러샵",
     "title": "헬러샵",
     "date": "2015/02",
+    "role": "UI개발",
     "skill": "HTML / CSS",
     "links": [
       {

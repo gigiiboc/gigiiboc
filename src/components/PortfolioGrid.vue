@@ -21,6 +21,7 @@
               <span class="texthidden">프로젝트 진행 : </span>{{ item.date }}
             </p>
             <p v-if="hasText(item.skill)" class="skill">{{ item.skill }}</p>
+            <p v-if="hasText(item.role)" class="role">{{ item.role }}</p>
             <ul v-if="item.links?.length">
               <li v-for="(link, i) in item.links" :key="i">
                 <a
@@ -83,6 +84,7 @@ type PortfolioItem = {
   title: string
   date: string
   skill: string
+  role: string
   links: PortfolioLink[]
 }
 
@@ -107,7 +109,9 @@ function linkAnchorClass(kind: PortfolioLinkKind): string {
   return map[kind]
 }
 
-const portfolioPool = (webPortfolio as PortfolioItem[]).filter((item) => item.category === props.category)
+const portfolioPool = (webPortfolio as PortfolioItem[]).filter(
+  (item) => item.category === props.category,
+)
 
 function hasText(value: string | null | undefined): boolean {
   return typeof value === 'string' && value.trim().length > 0
@@ -503,6 +507,10 @@ h1 {
 }
 
 .masonry-item .skill {
+  margin: 0 0 8px;
+}
+
+.masonry-item .role {
   margin: 0 0 8px;
 }
 
